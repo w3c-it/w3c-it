@@ -1,0 +1,53 @@
+---
+title: Archivio Talk
+layout: page
+---
+<div class="w3c_events_talks">
+    <div class="w3c_upcoming_talks">
+        <ul class="vevent_list">
+            {% assign sorted = (site.data.talks | sort: 'date') | reverse %}
+            {% for talk in sorted %}
+            <!-- EVENTO -->
+            <li class="vevent">
+                <p class="date">
+                    <span class="dtyear">{{talk.date | date: "%Y" }}</span>
+                    <span class="dtstart single">
+                        {{talk.date | date: "%d" }}
+                        {% assign m = talk.date | date: "%-m" %}
+                        {% case m %}
+                        {% when '1' %}GEN
+                        {% when '2' %}FEB
+                        {% when '3' %}MAR
+                        {% when '4' %}APR
+                        {% when '5' %}MAG
+                        {% when '6' %}GIU
+                        {% when '7' %}LUG
+                        {% when '8' %}AGO
+                        {% when '9' %}SET
+                        {% when '10' %}OTT
+                        {% when '11' %}NOV
+                        {% when '12' %}DIC
+                        {% endcase %}
+                    </span>
+                </p>
+                
+                <div class="info-wrap">
+                    <p class="summary">
+                        <a href="{{talk.url}}">{{talk.title}}</a>
+                    </p>
+                    
+                    <p class="source">{{talk.author}}</p>
+                    
+                    <p class="eventtitle">
+                        <a href="{{talk.event_url}}" class="uri">{{talk.event}}</a>
+                    </p>
+                    
+                    <p class="location">{{talk.location}}</p>
+                </div>
+            </li>
+            <!-- FINE EVENTO -->
+            {% endfor %}
+        </ul>                
+
+    </div>
+</div>

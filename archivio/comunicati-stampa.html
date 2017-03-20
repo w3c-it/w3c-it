@@ -1,0 +1,58 @@
+---
+title: Archivio Comunicati Stampa
+layout: page
+---
+<p>
+    Il testo in italiano rimanda alla traduzione in italiano (se disponibile) del comunicato stampa.
+    <br>
+    Il testo in inglese rimanda alla versione in inglese.
+    <br>
+    Sulla <a href="http://www.w3.org/Press/" hreflang="en" title="sito W3C: press releases">specifica sezione</a> del sito del W3C sono reperibili tutti i comunicati stampa, tradotti anche in altre lingue.
+</p>
+
+<div class="w3c_events_talks">
+    <div class="w3c_upcoming_events">
+        <ul class="vevent_list">
+            {% assign sorted = (site.categories.comunicati_stampa | sort: 'date') | reverse %}
+            {% for pr in sorted %}
+            <!-- EVENTO -->
+            <li class="vevent">
+                <p class="date">
+                    <span class="dtyear">{{pr.date | date: "%Y" }}</span>
+                    <span class="dtstart single">
+                        {{pr.date | date: "%d" }}
+                        {% assign m = pr.date | date: "%-m" %}
+                        {% case m %}
+                        {% when '1' %}GEN
+                        {% when '2' %}FEB
+                        {% when '3' %}MAR
+                        {% when '4' %}APR
+                        {% when '5' %}MAG
+                        {% when '6' %}GIU
+                        {% when '7' %}LUG
+                        {% when '8' %}AGO
+                        {% when '9' %}SET
+                        {% when '10' %}OTT
+                        {% when '11' %}NOV
+                        {% when '12' %}DIC
+                        {% endcase %}
+                    </span>
+                </p>
+                
+                <div class="info-wrap">
+                    <p class="summary">
+                        <a href="{{pr.url}}">{{pr.title}}</a>
+                    </p>
+                    <p><em>{{pr.description}}</em></p>
+                    
+                    <p class="eventtitle">
+                        <a href="{{pr.url}}" class="uri">{{pr.url}}</a>
+                    </p>
+                </div>
+            </li>
+            <!-- FINE EVENTO -->
+            {% endfor %}
+        </ul>                
+
+    </div>
+</div>

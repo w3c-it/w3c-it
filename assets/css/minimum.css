@@ -1,0 +1,482 @@
+@charset "UTF-8";/* CSS Document */
+/**
+* 
+*  A. LIBRARIES (reset.css et fonts.css)
+*
+*  B. PAGE LAYOUT 
+*
+*  C. GRIDS 
+*
+*  D. USEFUL CLASSES
+*
+*  E. CONTENT
+*
+*  F. BLOCK STRUCTURES
+*
+*  G. BLOCK SKINS 
+*
+*  H. JAVASCRIPT
+*
+*  I. TABLES
+*
+*  J. SPECIFICATIONS
+*
+*  K. BLOGS
+*
+*  L. FORMS
+*
+*  M. Home Page NEWS
+*
+*
+*  ACKNOWLEDGMENTS
+**/
+/* **************** A. LIBRARIES ***************** */
+/**{background-color:pink !important;}*/
+/* reset */
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+body {font-family: sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+/* **************** B. PAGE LAYOUT ***************** */
+body{font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Geneva,sans-serif;color: #333;}
+em { font-style: italic }
+strong { font-weight: bold }
+/* head */
+#w3c_mast h1{
+    background-color: #005A9C;
+    width:auto;
+    position: static;
+    text-align:left;
+    float:left;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+.w3c_member #w3c_mast h1 { background-color: #6D3792;}
+.w3c_team #w3c_mast  h1 { background-color: #A34425;}
+/* top nav */
+#w3c_nav{background-color:#eee; clear: both;}
+#w3c_mast { overflow:visible;}
+#w3c_mast img { display:inline;}
+#w3c_mast h1 a img{
+    padding:0;
+    margin:0;
+    float: left;
+    display: block;
+}
+.w3c_member #w3c_mast h1 a { 
+    background: url('../images/logo_member_mobile.gif') no-repeat top left;
+}
+.w3c_team #w3c_mast h1 a{
+    background: url('../images/logo_team_mobile.gif') no-repeat top left;
+}
+#search-form .text { background: white url(../images/google.gif) no-repeat center left; min-width:2em;}
+#search-form .text:focus { background: white;}
+
+@media screen { /* only apply to phones capable enough */
+
+.secondary_nav a {display:block; color: #000; text-decoration: none;}
+.secondary_nav a:link, .secondary_nav a:visited { color: #888;} 
+
+.secondary_nav { 		
+	padding:5px 20px 0 0; 
+	font-size: .85em;
+	margin-bottom: 10px;	
+}
+.secondary_nav li { padding-left: 5px ; margin:0; }
+}
+
+.secondary_nav li{ display: -moz-inline-stack; display: inline-block; vertical-align: top; zoom: 1; *display: inline; }
+
+.main_nav li { display: none; } /* Hide from top on all pages but home */
+.main_nav li.search-item { display: list-item; }
+.w3c_home .main_nav { display: block;} /* we show the nav bar at the top on home page */
+.main_nav a, .main_nav span{padding:0;padding-right: 1em; display:inline; }
+.main_nav { padding-top:0; padding-left:5px; float: none;}
+.main_nav li { display:inline ; float:none;margin:0; }
+#w3c_main, .w3c_tr #w3c_main { clear: both; background-image:none;}
+/* breadcrumb trail */
+#w3c_logo_shadow, #w3c_crumbs br { display:none;}
+.bct{padding: 5px 5px;}
+.bct li{display:inline}
+.bct li .cr { padding: 0;}
+/* Skip to content */
+.bct .skip { display:none;}
+/* foot */
+#w3c_footer{text-align:left;}
+#w3c_footer-inner{ padding: 5px;}
+
+.extra_nav, .alt-logo { display: none; }
+.w3c_home .extra_nav { display: block; }
+
+#footer-content{padding-bottom:20px;}
+/* footer nav */
+.footerNav { padding:0 5px;clear:left; }
+.footerNav li{display:inline; }
+.footerNav li a {padding: .25em 1em;}
+.bar { padding-left: .25em; padding-right: .25em }
+.w3c_footer-nav h3 {font-weight: bold; font-size: 1.18em; color: #17445F; text-transform: uppercase;}
+.w3c_footer-nav {margin-top: 20px;}
+/* columns */
+.w3c_leftCol{display:none;}
+.w3c_home .w3c_leftCol{display:none;}
+.w3c_member #w3c_footer-inner{background-image:none;}
+ .w3c_member #w3c_acl { text-transform: uppercase; letter-spacing: .2em; width: auto; text-align: right; padding: 5px 10px 0 5px; float: left; font-size: .83em;}
+.w3c_member_only{margin-top:-60px;}
+
+/* background colors, borders, width of left col */
+#w3c_crumbs{background: none;}
+.w3c_member #w3c_crumbs{background: none;}
+#w3c_footer { padding-left: 0;}
+.w3c_mainCol,#w3c_footer-inner,#w3c_crumbs_frame { border-left: none;}
+#w3c_crumbs_frame { margin-left: 0;}
+
+/* **************** C. GRIDS ***************** */
+.line{margin-bottom: 10px;}
+.w3c_javascript.w3c_handheld .line .size2on3 {margin: 0;}
+.size1on1,.size1on2,.size1on3,.size2on3,.size1on4,.size3on4,.size1on5,.size2on5,.size3on5,.size4on5 {float:none;width:auto;}
+.lastunit {float:none;_float:right;}
+/* **************** D. USEFUL CLASSES ***************** */
+/*.desc{font-size:123.1%}*/
+.intro{font-size: 1em;line-height:1.2em;}
+.feature{padding:7px;}
+.offscreen { position: absolute; left: -1000em; }
+
+/* ====== margins et paddings ====== */
+/* ----- block padding ----- */
+
+.vSpace{margin-top: 20px; margin-bottom:20px;}
+.tSpace{margin-top: 20px;}
+.bSpace{margin-bottom:20px;}
+/* ----- content padding ----- */
+.pdgStandard{padding:4px 8px}
+/* padding - classes to be used to adjust defaut padding in specific contexts */
+.padding0{padding:0 !important}
+.tPadding0{padding-top:0 !important}
+.rPadding0{padding-right:0 !important}
+.bPadding0{padding-bottom:0 !important}
+.lPadding0{padding-left:0 !important}
+.hPadding0{padding-left:0 !important;padding-right:0 !important}
+.vPadding0{padding-top:0 !important;padding-bottom:0 !important}
+/* default padding 20px */
+.padding{padding:20px !important}
+.tPadding{padding-top:20px !important}
+.rPadding{padding-right:20px !important}
+.bPadding{padding-bottom:20px !important}
+.lPadding{padding-left:20px !important}
+.hPadding{padding-left:20px !important;padding-right:20px !important}
+.vPadding{padding-top:20px !important;padding-bottom:20px !important}
+/* large padding for ian */
+.lPaddingLg{padding-left:40px !important}
+.hPaddingLg{padding-left:40px !important;padding-right:40px !important}
+.vPaddingLg{padding-top:40px !important;padding-bottom:40px !important}
+.tPaddingLg{padding-top:40px !important}
+.rPaddingLg{padding-right:40px !important}
+.bPaddingLg{padding-bottom:40px !important}
+/* ---- content margins (blocks) ----- */
+.margin0{margin:0 !important}
+.tMargin0{margin-top:0 !important}
+.rMargin0{margin-right:0 !important}
+.bMargin0{margin-bottom:0 !important}
+.lMargin0{margin-left:0 !important}
+.hMargin0{margin-left:0 !important;margin-right:0 !important}
+.vMargin0{margin-top:0 !important;margin-bottom:0 !important}
+/* margins */
+.margin{margin:20px !important}
+.tMargin{margin-top:20px !important}
+.rMargin{margin-right:20px !important}
+.bMargin{margin-bottom:20px !important}
+.lMargin{margin-left:20px !important}
+.hMargin{margin-left:20px !important;margin-right:20px !important}
+.vMargin{margin-top:20px !important;margin-bottom:20px !important}
+/* large margins */
+.tMarginLg{margin-top:40px !important}
+.rMarginLg{margin-right:40px !important}
+.bMarginLg{margin-bottom:40px !important}
+.lMarginLg{margin-left:40px !important}
+.hMarginLg{margin-left:40px !important;margin-right:40px !important}
+.vMarginLg{margin-top:40px !important;margin-bottom:40px !important}
+/* **************** E. CONTENT ***************** */
+h2, .h2  { margin-top: 20px }
+h1, h2, h3, h4, h5, h6, ul, ol, dl, p, pre, blockquote { padding:5px 5px 0; }
+table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol {padding:0;}
+ul ul, ol ol { padding: 0 20px }
+dt { padding:0 20px}
+dd { padding:0 20px 10px 20px}
+.block{margin:20px;}
+hr{border: 5px solid #BCBCBC; border-width: 0 0 5px 0; margin: 20px 20px 0 20px;}
+/* ====== Headings ====== */
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1, .h1 {font-size:1.3em;  font-weight:bold; font-style: normal; color:#025A9A;}
+.w3c_tr h1.title { font-size: 1.3em }
+h2, .h2{font-size:1.2em; font-weight:bold; font-style: normal; color:#036;}
+h3, .h3{font-size:1.1em; font-weight:normal; font-style: normal; color:#025A9A;}
+h4, .h4{font-size:1em; font-weight:bold; font-style: normal; color:#036;}
+h5, .h5{font-size:1em; font-weight:bold; font-style: normal; color:#993300;}
+h6, .h6{font-size:1em; font-weight:normal;  font-style: italic; color:#404040;}
+/* additional headings */
+.title { padding:0 5px;background: #DBE7F0;font-weight: normal;letter-spacing: -0.05em;text-transform: uppercase;color:#000;}
+.w3c_member .title { background: #F8EFFF; border-bottom: 1px solid #E2D1EF; }
+.w3c_team .title { background: #FFEADF; border-bottom: 1px solid #DFA999; }
+h1.title, .w3c_tr h1.title {letter-spacing: .01em;}
+.w3c_tr h1.title { padding: 0 0 0 5px; margin: 0; font-size: 1.3em; }
+h1.title img { display: none}
+.category a{color: #333; font-weight: normal;}
+.w3_topic a{font-weight:bold;}
+/* links */
+a { color: #036; }
+a img { cursor: pointer; }
+a:visited { color:#144B6F; }
+a:link, a:visited, a:hover {text-decoration: none;}
+/* could also try #DBE7F0 */
+a:link, a:visited { border-bottom: 2px solid #A8BFCF; padding-bottom: 1px;}
+a.no-border:link, a.no-border:visited,a.no-border:hover { border: none;}
+/* nav links */
+.menu a:link, .menu a:visited { color: #036; border-bottom: transparent 2px solid; _border: 0;}
+.w3c_leftCol a:link, .w3c_leftCol a:visited, 
+ul.theme li a:link, ul.theme li a:visited
+{ border-bottom: none; }
+.bct a:link, .bct a:visited { border-bottom: none; padding-bottom: 0;}
+/* heading links */
+h1 a:link, .h1 a:link, 
+h2 a:link, .h2 a:link,
+h3 a:link, .h3 a:link, 
+h4 a:link, .h4 a:link{font-weight:normal; border-bottom: transparent 2px solid; _border: 0;}
+h5 a:link, .h5 a:link{color:#993300; font-weight:normal; border-bottom: transparent 2px solid; _border: 0;}
+h6 a:link, .h6 a:link{color:#404040; font-weight:normal; border-bottom: transparent 2px solid; _border: 0;}
+
+
+.h1 a:visited, h1 a:visited,
+.h2 a:visited, h2 a:visited,
+.h3 a:visited, h3 a:visited,
+.h4 a:visited, h4 a:visited{font-weight:normal; color:#036;  border-bottom: transparent 2px solid; _border: 0;}
+.h5 a:visited, h5 a:visited{font-weight:normal; color:#993300; border-bottom: transparent 2px solid; _border: 0;}
+.h6 a:visited, h6 a:visited{font-weight:normal; color:#404040; border-bottom: transparent 2px solid; _border: 0;}
+/* other links to not underline except on hover */
+.w3c_toc a:link, .w3c_toc a:visited,
+.tech_list a:link, .tech_list a:visited,
+.data a:link, .data a:visited {  border-bottom: transparent 2px solid; _border: 0;}
+
+.w3c_leftCol a:link:after, .w3c_leftCol a:visited:after,
+table a:link:after, table a:visited:after,
+.expand_section a:link:after, .expand_section a:visited:after,
+a.permalink:link:after,  a.permalink:visited:after
+{ content: none; }
+/* All hovering things */
+a:hover,
+.main_nav a:hover, .menu a:hover, 
+h1 a:hover, .h1 a:hover, 
+h2 a:hover, .h2 a:hover,
+h3 a:hover, .h3 a:hover, 
+h4 a:hover, .h4 a:hover, 
+h5 a:hover, .h5 a:hover, h6 a:hover, .h6 a:hover,
+.w3c_toc a:hover, .data a:hover,
+.bct a:hover
+{ border-bottom: #005A9C 2px solid; }
+
+.w3c_leftCol a:hover {background-color: #fafafa;}
+/* ====== Media Blocks ======*/
+.media .media {  padding: 0 5px; margin: 20px 0 0 0; float: none;}
+/*.wrap .media{margin:10px !important;}*/
+.w3c_javascript.w3c_handheld .headline,
+.w3c_javascript.w3c_handheld .headline h3.h4 ,
+.w3c_javascript.w3c_handheld #w3c_most-recently h3 a{
+    border: none;
+    margin: 0;
+    background-color: #F1F7FB;
+    font-weight: bold;
+}
+/* ====== Lists ======*/
+ol.show_items li, .entry ol li {list-style-type: decimal;}
+ul.show_items li, .entry ul li {list-style-type:disc;}
+ol.show_items li, .entry ol li, ul.show_items li, .entry ul li { margin-left: 20px }
+/* event list */
+.vevent_list {padding:0;}
+.vevent_list .location,
+.vevent_list .eventtitle,
+.vevent_list .person{text-align:left; padding:0 5px;margin-left:0;}
+.vevent_list .summary{padding-bottom:0}
+
+.w3c_events_talks .vevent_list li {padding-bottom: 30px;}
+/* quick links */
+.quick-links{list-style-type: square; padding-left: 35px;}
+.quick-links li{list-style-type:square;}
+.theme_ext {padding: 0;}
+.theme_ext li.theme_ext_item {position: relative;padding-left: 0;min-height:0;}
+/*.theme_ext li.theme_ext_item h3 { padding-left: 0; }*/
+.theme_ext .icon { display: none}
+ /* tech list */
+.tech_list li{display:inline;}
+/* status list */
+h4.w3c_status_title { padding-bottom: 0; }
+p.rec_support_data {font-size: 75%; padding-bottom: 5px; padding-top: 0}
+p.rec_support_data a {display: inline; }
+/* ====== Blog Entry ====== */
+.date {margin: 0 20px 0 5px; padding:2px 0 0 0;}
+.w3c_events_talks .date{    
+    padding: 0;    
+    float: left;
+    text-align: right;
+}
+.w3c_events_talks .date .dtyear {float: right; margin-left: 5px;}
+.w3c_events_talks .info-wrap {clear: both;}
+
+.w3c_javascript.w3c_handheld .date {font-weight: bold;}
+.w3c_events_talks .date .date-separator {display: inline;}
+
+.entry .summary,.vevent .summary{padding-top:0;}
+/* The following three rules are here to ensure that imported news content
+   is left-aligned properly */
+#recentnews .entry {margin-bottom: 30px;}
+#recentnews .entry div {padding-left: 20px;}
+#recentnews .entry .date { margin-left: 0;padding-left: 20px; }
+
+/* ====== Tables ====== */
+.data{padding: 20px 0; position:relative; zoom:1;vertical-align: top;border-right:solid 1px transparent;/* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data table {width:100%; border-top: 3px solid #BCBCBC;}
+th, td{vertical-align:top}
+.txtC, .data .txtC td, .data .txtC th{text-align:center;}
+.txtL, .data .txtL td, .data .txtL th{text-align:left;}
+.txtR, .data .txtR td, .data .txtR th{text-align:right;}
+.txtT, .data .txtT td, .data .txtT th{vertical-align:top;}
+.txtB, .data .txtB td, .data .txtB th{vertical-align:bottom;}
+.txtM, .data .txtM td, .data .txtM th{vertical-align:middle;}
+.data th,.data td{border-right:1px solid #FFF; border-bottom:1px solid #FFF;padding:5px 20px}
+.data .lastColumn{border-right:none;}
+.data .lastRow td{border-bottom:none;}
+.data .even{background-color:#f8f8f8;}
+.data .odd{background-color:#E2E2E2;}
+.data th{color: #000; font-weight:bold}
+/* specification table - extends data table */
+.spec{padding:20px 20px;}
+.spec th, .spec td{border:1px solid #aaa; border-width: 1px 0; padding-left:0;}
+.spec .odd, .spec .even{background-color: #fff;}
+/* For tables showing specs listed by date */
+.data .table_datecol { width: 12%;}
+.data .table_labelcol { width: 20%; }
+.data .table_titlecol { width: 60%; }
+/* For summary page tables */
+.w3c_spec_summary_table td { padding: 3px 1em 0 1em; }
+.w3c_spec_summary_table td .expand_description { padding-bottom: 1em;}
+.w3c_spec_summary_table .table_datecol { width: 5.5em }
+.w3c_more_recent_status { font-size: 75%; margin-top: 0; margin-bottom: 5px; padding-top: 0;}
+.w3c_more_recent_status a { background-color: #FFEA6F; color: black; }
+
+/* **************** F. BLOCK STRUCTURES ***************** */
+/* **************** G. BLOCK SKINS ***************** */
+.testimonial{border: solid 10px #cadc8d;border-left:none; border-right:none;}
+.testimonialAlign { border-top: solid 10px transparent}
+/* ====== background blocks ====== */
+/* ---- block filled ---- */ 
+.bFilled .inner{background-color:#F0F0F0}
+/* ---- block filled Speed Freaks ---- */
+.bHighlight .inner{background-color:#dae7f0}
+/* ---- bFresh --- */
+.bMember{background-color:#e8f0ce;}
+.bMember .body{padding-bottom: 20px;}
+/* **************** H. JAVASCRIPT ***************** */
+
+/* **************** J. SPECIFICATIONS ***************** */
+/* Overridden in advanced */
+.w3c_tr #w3c_content_body { margin-left: 0; padding: 0 }
+/* Status table */
+.w3c_tr .w3c_tr_print { display: none }
+.w3c_tr .w3c_tr_screen { display: table-row }
+.w3c_tr #doc-status-table .status_first_col { width: 45% }
+.w3c_tr #doc-status-table { font-size: 85%; }
+.w3c_tr #doc-status-table dl, #doc-status-table dd, #doc-status-table ul { margin: 0; padding: 0; }
+/* Information about rewriting */
+.w3c_tr .w3c_tr_reformat { font-size: 65% }
+.w3c_tr #tr_rewrite_status { background-color: #EEE; margin: 20px; padding: 0 !important}
+/* Layout adjustments for included content */
+.w3c_tr #doc-core ol li {list-style-type: decimal; margin-left:20px;}
+.w3c_tr #doc-core ul li {list-style-type:disc; margin-left:20px;}
+.w3c_tr #doc-core table { margin-left: 20px }
+/* TR views */
+.tr_view_nav { margin-left: 0; }
+
+/* **************** K. BLOGS ***************** */
+/* To add: Blog Archive */
+/*
+Blog comments
+*/
+.w3c_blog_comments {border-top: 1px solid #D9D9D9;}
+.w3c_blog_comment  {padding-bottom: 1em;border-bottom: 1px solid #D9D9D9;}
+.w3c_blog_comment ul.info {list-style: none;padding-left: 0;margin: 0;}
+.w3c_blog_reply p {padding-left: 0;}
+/* **************** L. FORMS ***************** */
+input {font-size: inherit;font-family: inherit}
+.button {
+    border: 0;
+    -moz-border-radius:3px;
+    -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius:3px;
+    -webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
+    border-bottom:1px solid rgba(0, 0, 0, 0.25);
+    background-color:#555;
+    color:#FFF;
+    cursor:pointer;
+    font-size: .8em;
+    font-weight:bold;
+    left: 5px;
+    padding:2px 5px 2px;
+    position: relative;
+    text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+.button:hover {background-color: #3A80B3; color: #fff;}
+.button:active {top: 1px;}
+textarea, select {max-width: 100%;}
+.w3c_javascript.w3c_handheld input.text {width: 80%;}
+.w3c_javascript.w3c_handheld input.submit {font-size: .83em; padding: .2em .2em .2em .4em; position: relative; right: 35px; top: 5px;}
+#search-form button {font-size: .83em; padding: 0; position: relative; right: 35px; top: 5px; border-style: none; background: none;}
+/* **************** M. HOME PAGE NEWS ***************** */
+.permalink { display: inline; padding-left: .25em; position: absolute;}
+/* This will hide image in mobile view */
+/* .imageLink { display: none }*/
+#region_form select { width: 80%; font-size: .9em;}
+/* **************** N. Section Expansion *************** */
+/* For global toggle */
+.w3c_toggle_form { width: 15em; border: 1px #DBE7F0 solid; padding: 5px; }
+
+.w3c_javascript .expand_block h3 { padding-left: 5px;}
+.w3c_javascript.w3c_handheld .expand_block h3 { border-top: 1px #e2e2e2 solid;}
+.w3c_javascript .expand_block h4 { padding-left: 5px; font-weight: normal;}
+
+.w3c_javascript.w3c_handheld .expand_block .expand_description,
+.w3c_javascript .expand_block .expand_description{
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+    display: block;
+}
+.w3c_javascript.w3c_handheld .expand_block .expand_section,
+.w3c_javascript.w3c_handheld .expand_block.closed .expand_section {
+    background: none;
+    padding-left: 0;
+}
+/* Special case where using list for expand/collapse */
+.hierarchy {list-style: none;}
+
+li.top {clear: both;margin-left: 1em;}
+
+.trviewcat h3 { border-top: 1px #e2e2e2 solid; }
+
+
+
+/* **************** Menus ***************** */
+.menu {padding: 0 20px; }
+.menu.expand_block {padding-left: 20px;}
+.menu h2.h4 {font-size: 1em;color: #666;background: white;letter-spacing: 1.1px;padding-left: 0;border-bottom: 1px solid #ddd;}
+.menu.expand_block h2 {padding-top: 0; padding-left: 20px; margin-top: 20px; margin-left: 0;}
+.w3c_javascript.w3c_handheld .expand_block.menu .expand_description,
+.expand_block.menu .expand_description {margin-left: 0; padding-left: 0;}
+.menu ul {padding-top: .2em;padding-left:0; padding-right: 0}
+
+/* **************** ACKNOWLEDGMENTS ***************** */
+/* Many thanks to Sorin Stefan and Nicole Sullivan! */
+/*
+(Refers to section A. Libraries) 
+Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.2.1
+*/

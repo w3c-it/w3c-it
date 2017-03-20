@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Ufficio Italiano W3C</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <link rel="Help" href="/Help/" />
+
+        <!-- CSS LOCALI -->	
+        <link rel="stylesheet" href="/assets/css/minimum.css" type="text/css" media="handheld, all" />
+        <style type="text/css" media="print, screen and (min-width: 481px)">
+         /*<![CDATA[*/
+         @import url("/assets/css/advanced.css");
+         /*]]>*/
+        </style>
+        <link href="/assets/css/minimum.css" rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 480px)" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
+        <!-- FINE CSS LOCALI -->	
+        
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+        <meta name="description" content= "The World Wide Web Consortium (W3C) is an international community where Member organizations, a full-time staff, and the public work together to develop Web standards." />
+        <link rel="alternate" type="application/atom+xml" title="W3C News" href="http://www.w3.org/News/atom.xml" />
+    </head>
+    
+    <body id="www-w3-org" class="w3c_public w3c_home">
+        <div id="w3c_container">
+            <div id="w3c_mast">
+                <!-- HEADER PAGINA -->
+                <h1 class="logo">
+                    <a tabindex="2" accesskey="1" href="/"><img src="/assets/images/logo-w3c-mobile-lg.gif" width="90" height="53" alt="W3C" /></a> <span class="alt-logo">W3C</span>
+                </h1>
+                
+                <!-- BARRA NAVIGAZIONE -->
+                <div id="w3c_nav">
+                    <!-- UFFICI -->
+                    <form id="region_form" action="http://www.w3.org/Consortium/contact">
+                        <div>
+                            <select name="region" title="Region">
+                                <option selected="selected" value="W3C By Region">
+                                    W3C nei vari paesi
+                                </option>
+                                <option value="au">Australia</option>
+                                <option xml:lang="de" value="de" lang="de">Österreich
+                                    (Austria)</option>
+                                <option xml:lang="nl" value="nl" lang="nl">België
+                                    (Belgium)</option>
+                                <option value="za">Botswana</option>
+                                <option xml:lang="pt-br" value="br" lang="pt-br">Brasil
+                                    (Brazil)</option>
+                                <option xml:lang="zh-hans" value="cn" lang="zh-hans">中国
+                                    (China)</option>
+                                <option xml:lang="fi" value="fi" lang="fi">Suomi (Finland)</option>
+                                <option xml:lang="de" value="de" lang="de">Deutschland
+                                    (Germany)</option>
+                                <option xml:lang="el" value="gr" lang="el">Ελλάδα (Greece)</option>
+                                <option xml:lang="hu" value="hu" lang="hu">Magyarország
+                                    (Hungary)</option>
+                                <option xml:lang="hi" value="in" lang="hi">भारत (India)</option>
+                                <option xml:lang="ga" value="gb" lang="ga">Éire (Ireland)</option>
+                                <option xml:lang="he" value="il" lang="he">ישראל (Israel)</option>
+                                <option xml:lang="it" value="it" lang="it">Italia (Italy)</option>
+                                <option xml:lang="ko" value="kr" lang="ko">한국 (Korea)</option>
+                                <option value="za">Lesotho</option>
+                                <option xml:lang="lb" value="nl" lang="lb">Lëtzebuerg
+                                    (Luxembourg)</option>
+                                <option xml:lang="ar" value="ma" lang="ar">المغرب
+                                    (Morocco)</option>
+                                <option value="za">Namibia</option>
+                                <option xml:lang="nl" value="nl" lang="nl">Nederland
+                                    (Netherlands)</option>
+                                <option xml:lang="fr" value="sn" lang="fr">Sénégal</option>
+                                <option xml:lang="es" value="es" lang="es">España (Spain)</option>
+                                <option value="za">South Africa</option>
+                                <option xml:lang="ss" value="za" lang="ss">Swatini
+                                    (Swaziland)</option>
+                                <option xml:lang="sv" value="se" lang="sv">Sverige
+                                    (Sweden)</option>
+                                <option value="gb">United Kingdom</option>
+                            </select>
+                            <input class="button" type="submit" value="Cerca" />
+                        </div>
+                    </form>
+                    <!-- FINE UFFICI -->
+                    
+                    <form action="http://www.w3.org/Help/search" method="get" enctype="application/x-www-form-urlencoded">
+                        <!-- w3c_sec_nav is populated through js -->
+                        <div class="w3c_sec_nav">
+                        </div>
+                        
+                        <!-- MENU ORIZZONTALE -->
+                        <ul class="main_nav">
+                            {% for item in site.data.menu-top %}
+                            <li>
+                                <a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a>
+                            </li>
+                            {% endfor %}
+                            <!-- CERCA -->
+                            <li class="search-item">
+                                <div id="search-form">
+                                    <input tabindex="3" class="text" name="q" value="" title="Search" /> 
+                                    <button id="search-submit" name="search-submit" type="submit">
+                                        <img class="submit" src="/assets/images/search-button.gif" alt="Search" width="21" height="17" />
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- FINE CERCA -->
+                        </ul>
+                        <!-- FINE MENU ORIZZONTALE -->
+                    </form>
+                </div>
+                <!-- FINE BARRA NAVIGAZIONE -->
+                
+            </div>
+            <!-- FINE HEADER PAGINA -->      
+
+            <!-- MAIN -->
+            <div id="w3c_main">
+                <!-- LOGO -->
+                <div id="w3c_logo_shadow" class="w3c_leftCol">
+                    <img height="32" alt="" src="/assets/images/logo-shadow" />
+                </div>
+                <!-- FINE LOGO -->
+                
+                <div class="w3c_leftCol">
+                    <h2 class="offscreen">
+                        Site Navigation
+                    </h2>
+                    
+                    <!-- MENU DI SINISTRA -->
+                    {% for section in site.data.menu-sx %}
+                    <h3 class="category {% if forloop.index0 > 0 %}tMarginLg{% endif %}"><span class="ribbon"><a href="{{ section.url }}">{{ section.title }} <img src="/assets/images/header-link.gif" alt="Header link" class="header-link" height="13" width="13" /></a></span></h3>
+                    <ul class="theme">
+                        {% for item in section.menus %}
+                        <li class="design"><a href="{{ item.url }}" title="{{ item.description }}">
+                            {{ item.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                    <!-- FINE MENU DI SINISTRA -->
+                </div>
+                
+                <!-- COLONNA CENTRALE -->
+                <div class="w3c_mainCol">
+                    <!-- PERCORSO BRICIOLE DI PANE -->
+                    <div id="w3c_crumbs">
+                        <div id="w3c_crumbs_frame">
+                            {% include breadcrumbs %}
+                        </div>
+                        <!-- questo è inspiegabile... (da piu' di dieci anni) -->
+                        <br/>
+                    </div>
+                    <!-- FINE PERCORSO BRICIOLE DI PANE -->
+                    
+                    <!-- INIZIO MISTERIOSO DIV LINE -->
+                    <div class="line">
+                        <div class="unit size2on3">
+                            <!-- CONTENUTO PRINCIPALE -->
+                            <div class="main-content">
+                                {{content}}
+                            </div>
+                            <!-- FINE CONTENUTO PRINCIPALE -->
+                        </div>
+                        
+                        <!-- SPALLA DX -->
+                        <div class="unit size1on3 lastUnit">
+                            <p class="about">
+                                Il <a href="http://www.w3.org/">World Wide Web Consortium (W3C)</a> sviluppa tecnologie che garantiscono l'interoperabilit&agrave; (specifiche, guideline, software e applicazioni) per portare il World Wide Web al massimo del suo potenziale agendo da forum di informazioni, comunicazioni e attivit&agrave; comuni. L'Ufficio W3C Italiano (W3C-IT) &egrave; il punto di contatto nazionale per le attivit&agrave; W3C in Italia.</p>
+
+                            <ul>
+                                <li>Validatori: <a href="http://validator.w3.org/unicorn/">Unicorn</a>, <a title="HTML and XHTML Validator" href="http://validator.w3.org/">HTML</a>, <a title="CSS Validator" href="http://jigsaw.w3.org/css-validator/">CSS</a></li><li><a href="http://www.w3.org/2009/cheatsheet/">W3C cheatsheet</a></li><li><a href="http://www.w3.org/Status.html">Altro Software Open Source</a></li>
+                            </ul>
+            
+                            <h2 class="h4 category">Link Locali</h2>
+
+                            <ul class="theme right-list">
+                                {% for item in site.data.menu-rx %}
+     	     	                <li>
+                                    <a href="{{item.url}}" 
+                                       title="{{item.description}}" 
+                                       class="navlink">{{item.title}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- FINE SPALLA DX -->
+                    </div>
+                    <!-- FINE MISTERIOSO DIV LINE -->
+                </div>
+                <!-- FINE COLONNA CENTRALE -->
+            </div>
+            <!-- FINE MAIN -->
+        </div>
+        
+        <div id="w3c_footer">
+            <div id="w3c_footer-inner">
+                <h2 class="offscreen">
+                    Footer Navigation
+                </h2>
+                
+                <div class="w3c_footer-nav">
+                    <h3>Navigazione</h3>
+                    <ul class="footer_bottom_nav">
+                        {% for item in site.data.menu-top %}
+                        <li>
+                            <a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <div class="w3c_footer-nav">
+                    <h3>Contatti W3C.IT</h3>
+                    <ul class="footer_bottom_nav">
+                        {% for item in site.data.menu-bottom %}
+                        <li>
+                            <a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <div class="w3c_footer-nav">
+                    <h3>W3C Updates</h3>
+                    <ul class="footer_follow_nav">
+                        <li>
+                            <a href="http://twitter.com/W3C" title="Follow W3C on Twitter">
+                                <img src="/assets/images/twitter-bird" alt="Twitter"
+                                     class="social-icon" width="78" height="83"/>
+                            </a>
+                            <a href="http://identi.ca/w3c" title="See W3C on Identica">
+                                <img src="/assets/images/identica-logo" alt="Identica"
+                                     class="social-icon" width="91" height="83" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- #footer address / page signature -->
+                <p class="copyright">
+                    Copyright &copy; 2009 W3C<sup>&reg;</sup> 
+                    (
+                     <a href="http://www.csail.mit.edu/">
+                        <acronym title="Massachusetts Institute of Technology">MIT</acronym>
+                     </a>
+                    ,
+                     <a href="http://www.ercim.org/">
+                        <acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>
+                    , 
+                     <a href="http://www.keio.ac.jp/">Keio</a>
+                    ) 
+                    <a href="http://www.w3c.org/Consortium/Legal/2002/ipr-notice-20021231">Usage policies apply</a>.
+                    <br />
+                    powered by: Jekyll</a>
+                </p>
+            </div>
+        </div>
+        <!-- /end #footer -->    
+        
+        <div id="w3c_scripts">
+            <script type="text/javascript" src="/assets/js/main.js">//<![CDATA[
+             <!-- -->
+             //]]>
+            </script>
+        </div>
+
+        <!-- COOKIE POLICY -->
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+        <script>
+         window.addEventListener("load", function(){
+             window.cookieconsent.initialise({
+                 "palette": {
+                     "popup": {
+                         "background": "#237afc"
+                     },
+                     "button": {
+                         "background": "#fff",
+                         "text": "#237afc"
+                     }
+                 },
+                 "position": "bottom-left",
+                 "content": {
+                     "message": "Questo sito utilizza un cookie tecnico che scade al termine della sessione e cookies di terze parti (Google Analytics) per raccogliere informazioni statistiche. \nProseguendo la navigazione date il vostro consenso all'uso dei cookie.",
+                     "dismiss": "Chiudi",
+                     "link": "Maggiori Informazioni"
+                 }
+             })});
+        </script>
+        <!-- END COOKIE POLICY -->
+    </body>
+</html>

@@ -1,0 +1,49 @@
+- title: Standard
+  url: /standard.html
+  menus:
+    - title: Progettazione Web e Applicazioni
+      url: /standard.html#webDesign
+      description: HTML5, XHTML, CSS, Scripting e Ajax, Web Applications, Graphics, Accessibility
+    - title: Architettura del Web
+      url: /standard.html#webDesign
+      description: Principi architetturali, Identificatori, Protocolli, Meta Formati
+    - title: Web Semantico
+      url: /standard.html#semanticWeb
+      description: Dati, Ontologie, Query, Linked Data
+    - title: Tecnologia XML
+      url: /standard.html#xmlTechnology
+      description: XML Essentials, Semantic Additions to XML, Schema, Security
+    - title: Web di Servizi
+      url: /standard.html#webOfServices
+      description: Dati, Protocolli, Service Description, Security
+    - title: Web di Dispositivi
+      url: /standard.html#webOfDevices
+      description: Voice Browsing, Indipendenza dai dispositivi e Content Negotation, Accesso multimodale,  Stampa
+    - title: Browser e Strumenti di Authoring
+      url: /standard.html#browsers
+      description: Browser e User Agent, Authoring Tool, Web Servers
+- title: W3C.IT
+  url: /
+  menus:
+    - title: Accessibilit&agrave;
+      url: /accessibilita.html
+      description: Accessibilit&agrave;
+    - title: Comunicati Stampa
+      url: /archivio/comunicati-stampa.html
+      description: Comunicati stampa
+- title: Archivi
+  url: /archivio/index.html
+  menus:
+    - title: Archivio News Locali
+      url: /archivio/news-w3c-it.html
+      description: Archivio News Locali
+    - title: Archivio News W3C
+      url: /archivio/news-w3c.html
+      description: Archivio News W3C      
+    - title: Archivio Talks
+      url: /archivio/talks.html
+      description: Archivio Talks
+    - title: Archivio Eventi
+      url: /archivio/eventi.html
+      description: Archivio Eventi
+      

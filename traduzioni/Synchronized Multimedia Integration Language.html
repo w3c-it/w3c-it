@@ -1,0 +1,2517 @@
+I possibili errori presenti in questo documento, dovuti alla traduzione,
+sono di responsabilità del traduttore e non sono in alcun modo
+imputabili al W3C. Per qualsiasi commento riguardo la traduzione
+rivolgersi a patrizia.andronico@iat.cnr.it
+<mailto:patrizia.andronico@iat.cnr.it>.
+
+Nella traduzione italiana di queste specifiche ci potrebbero essere
+degli errori. L'unica versione ufficiale di questo documento è la
+versione originale in inglese: http://www.w3.org/TR/REC-smil
+
+------------------------------------------------------------------------
+
+ 
+
+
+        W3C <http://www.w3.org/> REC-smil-19980615
+
+
+  Synchronized Multimedia Integration Language (SMIL) 1.0:
+  Specifiche
+
+*W3C Recommendation 15-giugno-1998*
+
+Questa versione:
+    http://www.w3.org/TR/1998/REC-smil-19980615
+Ultima versione:
+    http://www.w3.org/TR/REC-smil
+Versione precedente:
+    http://www.w3.org/TR/1998/PR-smil-19980409
+
+Copyright <http://www.w3c.it/Consortium/Legal/ipr-notice#Copyright> ©
+1998 W3C <http://www.w3.org/> (MIT <http://www.lcs.mit.edu/>, INRIA
+<http://www.inria.fr/>, Keio <http://www.keio.ac.jp/>), Tutti i diritti
+riservati. A questo documento vengono applicate tutte le regole del W3C
+riguardanti la responsabilità,
+<http://www.w3c.it/Consortium/Legal/ipr-notice#Legal%20Disclaimer>il
+marchio
+<http://www.w3c.it/Consortium/Legal/ipr-notice#W3C%20Trademarks>, l'uso
+del documento  <http://www.w3c.it/Consortium/Legal/copyright-documents>e
+la licenza del software
+<http://www.w3c.it/Consortium/Legal/copyright-software>. Le vostre
+interazioni con questo sito sono conformi con le nostre dichiarazioni di
+privacy pubbliche
+<http://www.w3c.it/Consortium/Legal/privacy-statement#Public> e per i
+Membri <http://www.w3c.it/Consortium/Legal/privacy-statement#Members>.
+
+
+    Circa questo documento
+
+Questo documento è stato preparato dal Synchronized Multimedia Working
+Group (WG) del World Wide Web Consortium. Il gruppo WG era composto
+dalle seguenti persone:
+
+  * Stephan Bugaj, Lucent/Bell Labs
+  * Dick Bulterman, CWI
+  * Bruce Butterfield, RealNetworks
+  * Wo Chang, NIST
+  * Guy Fouquet, Alcatel
+  * Christian Gran, GMD
+  * Mark Hakkinen, The Productivity Works
+  * Lynda Hardman, CWI
+  * Peter Hoddie, Apple
+  * Klaus Hofrichter, GMD
+  * Philipp Hoschka, W3C
+  * Jack Jansen, CWI
+  * George Kerscher, DAISY Consortium
+  * Rob Lanphier, RealNetworks
+  * Nabil Layaïda, INRIA
+  * Stephanie Leif, RealNetworks
+  * Sjoerd Mullender, CWI
+  * Didier Pillet, CNET/DSM
+  * Anup Rao, Netscape
+  * Lloyd Rutledge, CWI
+  * Patrick Soquet, Havas
+  * Warner ten Kate, Philips
+  * Jacco van Ossenbruggen, CWI
+  * Michael Vernick, Lucent/Bell Labs
+  * Jin Yu, DEC
+
+*/Riconoscimenti:/* Oltre ai membri del Working Group, anche le seguenti
+persone hanno contributo allo sforzo per la creazione di SMIL: Bert Bos
+(W3C), Dan Connolly (W3C), Patrick Deunhouwer (Philips), Martin Dürst
+(W3C), Al  Gilman, Håkon Lie (W3C), Chris Lilley (W3C), Curtis Reynolds
+(RealNetworks), Michael Riesman, Curtis Reynolds (RealNetworks), Henning
+Schulzrinne (Columbia University) and Koga Youichirou (W3C).
+
+*/Editore: /*Philipp Hoschka, W3C (hoschka@w3.org <mailto:hoschka@w3.org>)
+
+
+    Riassunto
+
+Questo documento specifica la versione 1.0 del Synchronized Multimedia
+Integration Language (SMIL 1.0, pronuncia "smail"). SMIL permette
+l'integrazione di un insieme di oggetti multimediali indipendenti in una
+presentazione multimediale sincronizzata. Usando SMIL un autore può:
+
+ 1. descrivere il comportamento temporale di una presentazione
+ 2. descrivere il layoutdi una presentazione sullo schermo
+ 3. associare gli hyperlink ad oggetti multimediali
+
+Questa presentazione è strutturata come segue: la Sezione 1 presenta
+l'approccio alle specifiche. La Sezione 2 definisce l'elemento "smil".
+La Sezione 3 definisce gli elementi che possono essere contenuti nella
+intestazione (head part) di un documento SMIL. La Sezione 4 definisce
+gli elementi che possono essere contenuti all'interno del corpo (body
+part) di un documento SMIL. In particolare questa Sezione definisce il
+modello temporale usato in SMIL. La Sezione 5 descrive la DTD di SMIL.
+
+
+    Stato di questo documento
+
+Questo documento è stato revisionato dai membri del W3C e da altre parti
+interessate ed è stato approvato dal Direttore  come una Raccomandazione
+del W3C. E' un documento stabile e può essere usato come materiale di
+riferimento o citato come normativa di riferimento da un altro
+documento. Il ruolo del W3C nel fare la Raccomandazione è quello di
+attirare l'attenzione sulle specifiche e di promuovere la loro
+diffusione. Questo accresce la funzionalità e l'interoperabilità del Web.
+
+I commenti su queste Raccomandazioni possono essere inviati alla lista
+di discussione pubblica list
+<http://lists.w3.org/Archives/Public/www-smil/>www-smil@w3.org
+<mailto:www-smil@w3.org>.
+
+
+    Lingue disponibili
+
+La versione inglese di queste specifiche è l'unica versione a norma.
+Comunque, per le traduzioni in altre lingue, vedere alla URL
+http://www.w3.org/AudioVideo/SMIL/translations
+<http://www.w3c.it/AudioVideo/SMIL/translations>.
+
+
+    Errata
+
+La lista degli errori noti in questa specifica è disponibile
+all'indirizzo http://www.w3.org/AudioVideo/SMIL/errata
+<http://www.w3c.it/AudioVideo/SMIL/errata>.
+
+
+    Tabella dei contenuti
+
+  * 1 Approccio alla specifica <#specification>
+  * 2 L'elemento smil <#smil>
+  * 3 L'intestazione del documento (head) <#document-head>
+      o 3.1 L'elemento head <#head>
+      o 3.2 L'elemento layout <#layout>
+      o 3.3 Il linguaggio di layout di base di SMIL <#layout-elements>
+          + 3.3.1 L'elemento region <#region>
+          + 3.3.2 L'elemento root-layout <#root-layout>
+      o 3.4 L'elemento meta <#meta>
+  * 4 Il corpo del documento (body) <#document-body>
+      o 4.1 L'elemento body <#body>
+      o 4.2 Elementi di sincronizzazione <#synchronization-elements>
+          + 4.2.1 L'elemento par <#par>
+          + 4.2.2 L'elemento seq <#seq>
+          + 4.2.3 L'elemento oggetto multimediale <#media-object>:
+            elementi ref, animation, audio, img, video, text e textstream
+          + 4.2.4 Il modello di tempo di SMIL <#SMIL_Time_Model>
+              # 4.2.4.1 Valori del modello di tempo <#Time_Model_Variables>
+              # 4.2.4.2 Determinare i valori del modello di tempo per
+                gli elementi di SMIL 1.0 <#Determining_Values>
+      o 4.3 L'elemento switch <#switch>
+      o 4.4 Attributi di test <#test>
+      o 4.5 Elementi di hyperlink <#hyperlinking>
+          + 4.5.1 L'elemento a <#a>
+          + 4.5.2 L'elemento anchor <#anchor>
+  * 5 La DTD di SMIL <#smil-dtd>
+      o 5.1 Relazione con XML <#relation>
+      o 5.2 DTD <#dtd>
+  * Appendice <#Appendix>
+      o Estensioni di SMIL 1.0 <#handling-extensions>
+      o L'uso di SMIL 1.0 come estensione <#Using>
+
+
+    1 Approccio alla specifica
+
+I documenti SMIL sono documenti scritti in XML 1.0 [XML10] <#ref-XML10>.
+Si presuppone che il lettore abbia familiarità con concetti e termini
+definiti in XML 1.0.
+
+Queste specifiche non dipendono da particolari caratteristiche definite
+nelle URL che potenzialmente non possono essere espresse tramite URN.
+Quindi in questa specifica viene usato il termine più generico di URI
+[URI] <#ref-URI>.
+
+La sintassi dei documenti SMIL viene definita dalla DTD nella Sezione
+5.2 <#dtd>. La sintassi del valore di un attributo che non può essere
+definita usando la notazione DTD viene definita insieme al primo
+elemento usando un attributo che può contenere il valore dell'attributo
+stesso. La sintassi di tali valori viene definita usando la Extended
+Backus-Naur Form (EBNF) definita nella specifica di XML 1.0.
+
+La definizione di un elemento è strutturata come segue: primo, tutti gli
+attributi di un elemento sono definiti in ordine alfabetico. Un
+attributo viene definito nel seguente modo: se l'attributo viene usato
+da un elemento per la prima volta nella specifica, viene definita la
+semantica dell'attributo. Se l'attributo è stato già usato da un altro
+elemento, la specifica si riferisce alla definizione dell'attributo nel
+primo elemento che lo ha usato. La definizione degli attributi degli
+elementi è seguita dalla definizione di ogni valore dell'attributo la
+cui sintassi non può essere definita usando la notazione DTD. La sezione
+finale nella definizione di un elemento specifica il contenuto
+dell'elemento.
+
+
+    2 L'elemento smil
+
+*Attributi dell'elemento*
+
+L'elemento "smil" può avere il seguente attributo:
+
+id
+    Questo attributo identifica univocamente un elemento all'interno del
+    documento. Il suo valore è un identificativo XML.
+
+*Contenuto* *dell'elemento*
+
+L'elemento "smil" può contenere i seguenti figli:
+
+body
+    Definito nella Sezione 4.1 <#body>
+head
+    Definito nella Sezione 3.1 <#head>
+
+
+    3 L'intestazione del documento (head)
+
+
+      3.1 L'elemento head
+
+L'elemento "head" contiene informazioni che non sono legate
+all'andamento temporale della presentazione.
+
+*Attributi* *dell'elemento*
+
+L'elemento "head" può avere i seguenti attributi:
+
+id
+    Definito nella Sezione 2 <#smil>
+
+*Contenuto dell'elemento*
+
+L'elemento "head" può contenere i seguenti figli:
+
+layout
+    Definito nella Sezione 3.2 <#layout>
+meta
+    Definito nella Sezione 3.4 <#meta>
+switch
+    Definito nella Sezione 4.3 <#switch>
+
+L'elemento "head" può contenere un numero qualsiasi di elementi "meta" e
+sia l'elemento "layout" che l'elemento "switch".
+
+
+      3.2 L'elemento layout
+
+L'elemento "layout" determina come sono posizionati gli elementi del
+corpo (body) del documento su una superficie astratta di rendering (sia
+visuale che acustica).
+
+Se il documento non contiene un elemento layout, la posizione degli
+elementi del body è dipendente dall'implementazione.
+
+Un documento SMIL può contenere multipli layout alternativi includendo
+varii elementi di layout all'interno di un elemento "switch" (definito
+nella Sezione 4.3 <#switch>). Questo può essere usato per descrivere,
+per esempio, il layout del documento usando differenti linguaggi di layout.
+
+L'esempio seguente mostra come i CSS2 possono essere usati in
+alternativa al linguaggio di layout di base di SMIL (definito nella
+Sezione 3.3 <#layout-elements>):
+
+<smil>
+  <head>
+    <switch>
+     <layout type="text/css">
+        [region="r"] { top: 20px; left: 20px }
+     </layout>
+     <layout>
+       <region id="r" top="20" left="20" />
+     </layout>
+   </switch>
+   </head>
+   <body>
+     <seq>
+       <img region="r" src="http://www.w3.org/test" dur="10s" />
+     </seq>
+   </body>
+</smil>
+
+(nota che in questo esempio entrambe le alternative di layout risultano
+nello stesso layout)
+
+*Attributi dell'elemento*
+
+id
+    Definito nella Sezione 2 <#smil>
+type
+    Questo attributo specifica quale linguaggio di layout è usato
+    nell'elemento layout. Se il player non comprende questo linguaggio
+    allora deve saltare tutto il contenuto fino al successivo tag
+    "</layout>" . Il valore di default dell'attributo type è
+    "text/smil-basic-layout".
+
+*Contenuto dell'elemento*
+
+Se l'attributo type dell'elemento layout ha il valore
+"text/smil-basic-layout", allora può contenere i seguenti elementi:
+
+region
+    Definito nella Sezione 3.3.1 <#region>
+root-layout
+    Definito nella Sezione 3.3.2 <#root-layout>
+
+Se l'attributo type dell'elemento "layout" ha un altro valore,
+l'elemento contiene dati di carattere (character data).
+
+
+      3.3 Il linguaggio base di layout di SMIL
+
+Questa sezione definisce un linguaggio base di layout per SMIL. Il
+layout base di SMIL è in accordo con il modello di resa visiva definito
+nei CSS2, esso riutilizza le proprietà di formattazione definite dalle
+specifiche dei CSS2, e introduce in modo nuovo l'attributo "fit" [CSS2]
+<#ref-CSS2>. Si presume che il lettore abbia familiarità con i concetti
+e i termini definiti nei CSS2.
+
+Il layout base di SMIL controlla solo il layout degli elementi degli
+oggetti multimediali (definiti nella Sezione 4.2.3 <#media-object>). E'
+illegale usare il layout base di SMIL per altri elementi di SMIL.
+
+L'identificativo type per il layout base di SMIL è
+"text/smil-basic-layout".
+
+*Valori fissi per le proprietà*
+
+Il seguente foglio di stile definisce i valori "display" e "position"
+delle proprietà dei CSS2 che sono validi nel layout base di SMIL. Questi
+valori di proprietà sono fissati:
+
+a           {display:block}
+anchor      {display:block}
+animation   {display: block;
+             position: absolute}
+body        {display: block}
+head        {display: none}
+img         {display: block;
+             position: absolute}
+layout      {display: none}  
+meta        {display: none}
+par         {display: block}
+region      {display: none}
+ref         {display: block;
+             position: absolute}
+root-layout {display: none}
+seq         {display: block}
+smil        {display: block}
+switch      {display:block}
+text        {display: block;
+             position: absolute}
+textstream  {display: block;
+             position: absolute}
+video       {display: block;
+             position: absolute}
+
+Notare che come risultato di queste definizioni, tutti gli elementi con
+posizionamento assoluto (animation, img, ref, text, textstream e video)
+sono contenuti all'interno di un singolo blocco definito dal contenuto
+dell'elemento radice (smil).
+
+*Valori di default*
+
+Il layout di base di SMIL definisce i valori di default per tutti gli
+attributi relativi al layout. Questi sono consistenti con i valori
+iniziali delle proprietà corrispondenti nei CSS2.
+
+Se un autore vuole selezionare i valori di default per /tutti/ gli
+elementi degli oggetti multimediali del documento, il documento dovrà
+contenere un elemento di layout vuoto con attributo type
+"text/smil-basic-layout" come:
+
+<layout type="text/smil-basic-layout"></layout>
+
+
+        3.3.1 *L'elemento region*
+
+L'elemento region controlla la posizione, la dimensione e la misura di
+scala degli elementi oggetto multimediali.
+
+Nel seguente frammento di esempio la posizione di un elemento di testo è
+posta ad una distanza di 5 pixel dal bordo superiore della finestra di
+rendering:
+
+<smil>
+  <head>
+    <layout>
+      <region id="a" top="5" />
+    </layout>
+  </head>
+  <body>
+    <text region="a" src="text.html" dur="10s" />
+  </body>
+</smil>
+
+*Attributi dell'elemento*
+
+L'elemento "region" può avere i seguenti attributi:
+
+background-color
+    L'uso e la definizione di questo attributo sono identici alla
+    proprietà "background-color" nelle specifiche dei CSS2, ad eccezione
+    del fatto che il layout base di SMIL non richiede un supporto per
+    "system colors".
+Se l'attributo del colore di background è assente, il background è
+trasparente.
+fit
+    Questo attributo specifica il comportamento se l'altezza e la
+    larghezza intrinseca dell'oggetto visivo multimediale differiscono
+    dai valori specificati dagli attributi di altezza e di larghezza
+    nell'elemento "region". Questo attributo non ha una corrispondenza
+    1-1 nelle proprietà dei CSS2, ma può essere simulato con queste.
+Questo attributo può avere i seguenti valori:
+
+fill
+    Regola indipendentemente l'altezza e la larghezza dell'oggetto in
+    modo che il contenuto tocchi appena tutti gli angoli della scatola.
+hidden
+
+  * Se l'altezza intrinseca (larghezza) dell'elemento oggetto
+    multimediale è minore dell'altezza (larghezza) definita
+    nell'elemento "region", l'oggetto verrà visualizzato a partire
+    dall'angolo in alto (a sinistra) e la rimanente altezza (larghezza)
+    sarà riempita con il colore di background.
+  * Se l'altezza intrinseca (larghezza) dell'elemento oggetto
+    multimediale è maggiore dell'altezza (larghezza) definita
+    nell'elemento "region", l'oggetto verrà visualizzato a partire
+    dall'angolo in alto (a sinistra) fino a raggiungere l'altezza (o
+    larghezza) definita nell'elemento "region", e verrà tagliata la
+    parte inferiore (e a destra) dell'altezza (larghezza).
+
+meet
+    Regola l'oggetto visivo multimediale conservando le sue proporzioni
+    finchè l'altezza e la larghezza sono uguali ai valori specificati
+    dagli attributi di altezza e larghezza, il contenuto non viene
+    tagliato. L'angolo superiore sinistro dell'oggetto viene posizionato
+    alle coordinate superiori sinistre della scatola, e uno spazio
+    bianco a sinistra o in basso viene riempito con il colore di background.
+scroll
+    Quando i contenuti visualizzati dall'elemento superano i propri
+    confini dovrebbe essere posto un meccanismo di scrolling.
+slice
+    Regola l'oggetto visivo multimediale conservando le sue proporzioni
+    in modo che la sua altezza o larghezza sono uguali al valore
+    specificato dagli attributi di altezza e larghezza, mentre parte del
+    contenuto potrebbe venir tagliato. A seconda dell'esatta situazione,
+    viene visualizzata una parte orizzontale o una verticale
+    dell'oggetto visivo multimediale. La larghezza eccedente viene
+    tagliata dalla destra dell'oggetto multimediale. L'altezza eccedente
+    viene tagliata dalla parte inferiore dell'oggetto multimediale.
+
+Il valore di default di "fill" è "hidden".
+height
+    L'uso e la definizione di questo attributo sono identici alla
+    proprietà "height" delle specifiche dei CSS2. I valori
+    dell'attributo possono essere valori di "percentage", e una
+    variazione dei valori di "length" definiti nei CSS2. Per valori di
+    "length", il layout base di SMIL supporta solo l'unità di pixel come
+    definito nei CSS2. Questo permette di non scrivere l'identificativo
+    di unità "px" nei valori in pixel (l'identificativo "px" è invece
+    richiesto nei CSS2).
+id
+    Definito nella Sezione 2 <#smil>
+Un elemento region è applicato ad un elemento posizionabile settando
+l'attributo region <#loc> dell'elemento posizionabile al valore di id
+della region.
+Per gli elementi "region" è richiesto l'attributo "id".
+left
+    L'uso e la definizione di questo attributo sono identici alla
+    proprietà "left" delle specifiche dei CSS2. I valori dell'attributo
+    hanno le stesse restrizioni dei valori dell'attributo "height".
+Il valore di default è zero.
+skip-content
+    Questo attributo è introdotto per estensioni future di SMIL (vedere
+    Appendice <#Appendix>). Viene interpretato nei due casi seguenti:
+
+  * Se in una futura versione di SMIL viene introdotto un nuovo
+    elemento, e questo elemento fornisce elementi di SMIL 1.0 come
+    contenuto di elemento, l'attributo "skip-content" controlla se
+    questo contenuto viene processato da un player di SMIL 1.0.
+  * se un elemento vuoto nella versione SMIL 1.0 diventa un elemento
+    non-vuoto nelle future versioni di SMIL, l'attributo "skip-content"
+    controlla se questo contenuto viene ignorato da un player di SMIL
+    1.0 o se genera un errore di sintassi..
+
+Se il valore dell'attributo "skip-conten" è "true", e viene applicato
+uno dei casi sopra descritti, il contenuto dell'elemento viene ignorato.
+Se il valore è "false", il contenuto dell'elemento viene processato.
+Il valore di default per l'attributo "skip-content" è "true".
+title
+    Questo attributo offre ulteriori informazioni circa l'elemento per
+    il quale viene settato.Il valore dell'attributo title può essere
+    visualizzato da uno user agent in diversi modi. Per esempio i
+    browser grafici normalmente visualizzano il titolo come un "tool
+    tip" (un breve messaggio che appare quando la periferica di
+    puntamento si ferma sopra un oggetto).
+    Si raccomanda caldamente che tutti gli elementi "region" abbiano un
+    attributo "title" con una descrizione significativa. I programmi
+    autore dovrebbero assicurare che nessun elemento possa essere
+    introdotto in un documento SMIL senza questo attributo.
+top
+    L'uso e la definizione di questo attributo sono identiche alla
+    proprietà "top" nelle specifiche CSS2. I valori dell'attributo hanno
+    le stesse restrizioni dei valori dell'attributo "height".
+Il valore di default è zero.
+width
+    L'uso e la definizione di questo attributo sono identiche alla
+    proprietà "height" delle specifiche CSS2. I valori dell'attributo
+    hanno le stesse restrizioni dei valori dell'attributo "height".
+z-index
+    L'uso e la definizione di questo attributo sono identiche alla
+    proprietà "z-index" delle specifiche CSS2, con la seguente eccezione:
+
+  * Se due riquadri generati dagli elementi A e B hanno lo stesso
+    livello nella pila, allora
+     1. Se la visualizzazione di un elemento A inizia dopo la
+        visualizzazione di un elemento B, il riquadro di A viene
+        posizionato in cima alla pila dal riquadro di B (ordine temporale).
+     2. Se la visualizzazione degli elementi ha inizio nello stesso
+        momento, e in un documento SMIL di testo un elemento A occorre
+        più tardi rispetto ad un elemento B, il riquadro di A viene
+        posto sopra al riquadro di B (ordine dell'albero del documento
+        come definito nei CSS2)
+
+ 
+
+*Contenuto dell'elemento*
+
+"region" è un elemento vuoto
+
+
+        3.3.2 L'elemento root-layout
+
+L'elemento "root-layout" determina il valore delle proprietà di layout
+dell'elemento root, che a sua volta determina la dimensione dell'area di
+visualizzazione, per esempio la finestra in cui viene visualizzata la
+presentazione di SMIL.
+
+Se il documento contiene più di un elemento "root-layout" c'è un errore,
+e il documento non dovrebbe essere visualizzato.
+
+*Attributi dell'elemento*
+
+L'elemento "root-layout" può avere i seguenti attributi:
+
+background-color
+    Definito nella Sezione 3.3.1 <#region>
+height
+    Definito nella Sezione 3.3.1 <#region>
+Definisce l'altezza dell'elemento root. Sono permessi solo i valori
+della lunghezza.
+id
+    Definito nella Sezione 2 <#smil>
+skip-content
+    Definito nella Sezione 3.3.1 <#region>
+title
+    Definito nella Sezione 3.3.1 <#region>
+width
+    Definito nella Sezione 3.3.1
+    <#region>Definisce la larghezza dell'elemento root. Sono permessi
+    solo i valori della lunghezza.
+
+*Contenuto dell'elemento*
+
+"root-layout" è un elemento vuoto.
+
+
+      3.4 L'elemento meta
+
+L'elemento "meta" può essere usato per definire le proprietà di un
+documento (per es. autore, data di scadenza, una lista di parole chiavi,
+ecc.) e assegna i valori a queste proprietà. Ogni elemento "meta"
+specifica una singola coppia proprietà/valore.
+
+*Attributi dell'elemento*
+
+L'attributo "meta" può avere i seguenti attributi:
+
+content
+    Questo attributo specifica il valore della proprietà definita
+    nell'elemento meta.
+Per ogni elemento "meta" è richiesto l'attributo "content".
+id
+    Definito nella Sezione 2 <#smil>
+name
+    Questo attributo identifica la proprietà definita nell'elemento meta.
+    Per ogni attributo "meta" è richiesto l'attributo "name".
+skip-content
+    Definito nella Sezione 3.3.1 <#region>
+
+La lista delle proprietà è una lista aperta in qualsiasi direzione.
+Questa specifica definisce le seguenti proprietà:
+
+base
+    Il valore di questa proprietà definisce la URI di base per tutte le
+    URI relative usate nel documento.
+pics-label or PICS-Label
+    Il valore di questa proprietà specifica una etichetta di qualità per
+    il documento, come definito da [PICS] <#ref-PICS>.
+title
+    Il valore di questa proprietà contiene il titolo della presentazione.
+
+*Contenuto dell'elemento*
+
+"meta" è un elemento vuoto.
+
+
+    4 Il Corpo del documento (Body)
+
+
+      4.1 L'elemento body
+
+L'elemento "body" contiene informazioni relative al comportamento
+temporale e dei link del documento. Implicitamente definisce un elemento
+"seq" (definito nella Sezione 4.2.2, vedere Sezione 4.2.4 per una
+definizione della semantica temporale dell'elemento "body").
+
+*Attributi dell'elemento*
+
+L'elemento "body" può avere il seguente attributo:
+
+id
+    Definito nella Sezione 2 <#smil>
+
+*Contenuto dell'elemento*
+
+L'elemento "body" può contenere i seguenti elementi figli:
+
+a
+    Definito nella Sezione 4.5.1 <#a>
+animation
+    Definito nella Sezione 4.2.3 <#media-object>
+audio
+    Definito nella Sezione 4.2.3 <#media-object>
+img
+    Definito nella Sezione 4.2.3 <#media-object>
+par
+    Definito nella Sezione 4.2.1 <#par>
+ref
+    Definito nella Sezione 4.2.3 <#media-object>
+seq
+    Definito nella Sezione 4.2.2 <#seq>
+switch
+    Definito nella Sezione 4.3 <#switch>
+text
+    Definito nella Sezione 4.2.3 <#media-object>
+textstream
+    Definito nella Sezione 4.2.3 <#media-object>
+video
+    Definito nella Sezione 4.2.3 <#media-object>
+
+
+      4.2 Elementi di sincronizzazione
+
+
+        4.2.1 L'elemento par
+
+Gli elementi figli di un elemento par possono sovrapporsi nel tempo.
+L'ordine testuale dell'apparizione dei figli in par non è significativa
+per il tempo della presentazione.
+
+*Attributi dell'elemento*
+
+L'elento "par" può avere i seguenti attributi:
+
+abstract
+    Una breve descrizione del contenuto presente nell'elemento.
+author
+    Il nome dell'autore del contenuto presente nell'elemento.
+begin
+    Questo attributo specifica il tempo dell'inizio esplicito di un
+    elemento. Vedere Sezione 4.2.4 <#SMIL_Time_Model> per una
+    definizione della sua semantica.
+    Questo attributo può contenere i seguenti due tipi di valori: 
+
+delay-value
+    Un delay-value è un valore di tempo che misura la durata della
+    presentazione. La durata della presentazione procede alla velocità
+    della presentazione stessa. Essa si comporta come un codice di tempo
+    visualizzato in un contatore di un mangianastri. Può essere fermato,
+    diminuito o aumentato sia dalle azioni dell'utente sia dallo stesso
+    player.
+    Le semantiche di un valore di ritardo dipendono dal primo elemento
+    padre che è l'elemento di sincronizzazione (per es. gli antenati che
+    sono elementi "a" o "switch" vengono ignorati): 
+
+  * Se questo antenato è un elemento "par", il valore definisce un
+    ritardo dall' inizio effettivo di quell'elemento (vedere Figura 4.1).
+  * Se questo antenato è un elemento "seq" (Definito nella Sezione 4.2.2
+    <#seq>), il valore definisce un ritardo dalla fine effettiva del
+    primo predecessore lessicale che è un elemento di sincronizzazione
+    (vedere Figura 4.2).
+
+event-value
+    L'elemento inizia quando accade un certo evento (vedere Figura 4.3).
+    Il suo valore è un elemento-evento (vedere Definizione sotto).
+L'elemento che genera un evento deve essere "in scope". L'insieme degli
+elementi S "in scope" è determinato come segue:
+
+ 1. Prende tutti gli elementi figli dal primo elemento padre che è
+    l'elemento di sincronizzazione e li aggiunge a S
+ 2. Rimuovi tutti gli elementi "a" e "switch" da S. Aggiunge i figli di
+    tutti gli elementi "a" a S, a meno che essi non siano elementi "switch".
+
+L'insieme S ottenuto è l'insieme degli elementi "in scope".
+
+------------------------------------------------------------------------
+
+<par>
+  <audio id="a" begin="6s" src="audio" />
+</par>
+
+delay in 'par' elementD
+<http://www.w3c.it/traduzioni/ld#longdesc-par-delay>
+
+------------------------------------------------------------------------
+/Figura 4.1: Uso del valore di delay all'interno di un elemento "par"/
+------------------------------------------------------------------------
+
+<seq>
+  <audio src="audio1" />
+  <audio begin="5s" src="audio2" />
+</seq>
+
+delay in 'seq' elementD 
+------------------------------------------------------------------------
+<http://www.w3c.it/traduzioni/ld#longdesc-seq-delay>/Figura 4.2: Uso del
+valore di delay all'interno di un elemento "seq"/
+------------------------------------------------------------------------
+
+<par>
+  <audio id="a" begin="6s" ... />
+  <img  begin="id(a)(4s)" ... />
+</par>
+
+element with event valueD
+<http://www.w3c.it/traduzioni/ld#longdesc-event-value>
+
+------------------------------------------------------------------------
+/Figura 4.3: Attributo di sincronizzazione con il valore di evento
+dell'elemento/
+
+copyright
+    L'annotazione di copyright del contenuto presente nell'elemento.
+dur
+    Questo attributo specifica la durata esplicita di un elemento.
+    Vedere Sezione 4.2.4 <#SMIL_Time_Model> per una definizione della
+    sua semantica. Il valore dell'attributo può essere un valore di
+    clock, o la stringa "indefinite".
+end
+    Questo attributo specifica la fine esplicita di un elemento. Vedere
+    Sezione 4.2.4 <#SMIL_Time_Model> per una definizione della sua
+    semantica. L'attributo può contenere gli stessi tipi di valori
+    dell'attributo "begin".
+endsync
+    Per una definizione della semantica di questo valore vedere la
+    Sezione 4.2.4. Questo attributo può avere i seguenti valori:
+
+      o first
+        Per una definizione della semantica di questo attributo vedere
+        Sezione 4.2.4.
+      o id-ref
+        Il valore di questo attributo ha la seguente sintassi:
+
+        id-ref ::= "id(" id-value ")"
+        dove "id-value" deve essere un identificatore XML valido.
+        Per una definzione della semantica di questo valore vedere la
+        Sezione 4.2.4.
+
+      o last
+        Per una definizione della semantica di questo valore vedere la
+        Sezione 4.2.4.
+
+Il valore di default di "endsync" è "last".
+
+ 
+     
+id
+    Definito nella Sezione 2 <#smil>
+
+region
+    Questo attributo specifica una superficie di rendering astratta (sia
+    visiva che acustica) definita all'interno della sezione di layout
+    del documento. Il suo valore deve essere un identificatore XML
+    valido. Se nella sezione layout non è definita nessuna superficie di
+    rendering con questo id, i valori delle proprietà di formattazione
+    di questo elemento sono determinati dal layout di default.
+    L'attributo "region" negli elementi "par" non può essere usato dal
+    linguaggio di base della disposizione di SMIL definito in questa
+    specifica. E' aggiunto per completezza in quanto potrebbe essere
+    richiesto da altri linguaggi di layout. 
+repeat
+    Per una definizione della semantica di questo attributo vedere la
+    Sezione 4.2.4 <#SMIL_Time_Model>. Questo valore di attributo può
+    essere un intero o una stringa "indefinite". Il valore di default è 1.
+system-bitrate
+    Definito nella Sezione 4.4 <#test>
+system-captions
+    Definito nella Sezione 4.4 <#test>
+system-language
+    Definito nella Sezione 4.4 <#test>
+system-overdub-or-caption
+    Definito nella Sezione 4.4 <#test>
+system-required
+    Definito nella Sezione 4.4 <#test>
+system-screen-size
+    Definito nella Sezione 4.4 <#test>
+system-screen-depth
+    Definito nella Sezione 4.4 <#test>
+title
+    Definito nella Sezione 3.3.1 <#region>
+Si raccomanda caldamente che tutti gli elementi "par" abbiano un
+attributo "title" con una descrizione significativa. I programmi autore
+dovrebbero assicurare che nessun elemento possa essere introdotto in
+documento SMIL senza questo attributo.
+
+*Note sulla sincronizzazione tra figli*
+
+La precisione della sincronizzazione tra i figli in un gruppo parallelo
+è dipendente dalla implementazione. Prendete l'esempio della
+sincronizzazione nel caso di un ritardo nel playback, cioè il
+comportamento dell'elemento "par" quando contiene due o più tipi di
+media continui come un audio o un video, e uno di questi ha un ritardo.
+
+Un player può mostrare i seguenti comportamenti di sincronizzazione:
+
+sincronizzazione forte
+    Il player sincronizza i figli dell'elemento "par" ad un orologio
+    comune (vedere Figura 4.4 a). 
+ 
+sincronizzazione debole
+ 
+    Ogni figlio dell'elemento "par" ha il suo proprio orologio che gira
+    indipendentemente dall'orologio degli altri figli dell'elemento
+    "par" (vedere Figura 4.4 b).
+
+------------------------------------------------------------------------
+
+hard synchronizationD <http://www.w3c.it/traduzioni/ld#longdesc-sync-hard>
+
+/a) sincronizzazione forte: ritardo nel video: se l'audio viene bloccato
+o si abbassa qualche riquadro del video. Il comportamento esatto è
+dipendente dall'implementazione./
+
+ 
+
+soft synchronizationD <http://www.w3c.it/traduzioni/ld#longdesc-sync-soft>
+
+/b) sincronizzazione debole /
+
+------------------------------------------------------------------------
+
+/Figura 4.4: effetto del ritardo su una schedulazione di playout per
+players che usano diverse politiche di sincronizzazione/
+
+*Valori dell'attributo*
+
+clock value
+    I valori del clock hanno la seguente sintassi:
+
+Clock-val             ::= Full-clock-val | Partial-clock-val | Timecount-val
+Full-clock-val        ::= Hours ":" Minutes ":" Seconds ("." Fraction)?
+Partial-clock-val     ::= Minutes ":" Seconds ("." Fraction)?
+Timecount-val         ::= Timecount ("." Fraction)?
+                          ("h" | "min" | "s" | "ms")? ; default is "s"
+Hours                 ::= 2DIGIT; any positive number
+Minutes               ::= 2DIGIT; range from 00 to 59
+Seconds               ::= 2DIGIT; range from 00 to 59
+Fraction              ::= DIGIT+
+Timecount             ::= DIGIT+
+2DIGIT                ::= DIGIT DIGIT
+DIGIT                 ::= [0-9]
+
+Quelli che seguono sono esempi legali di valori di clock:
+
+  * Valore totale di clock: 02:30:03 = 2 ore, 30 minuti e 3 secondi
+  * Valore parziale di clock: 02:33 = 2 minuti e 33 secondi
+  * Valori di timecount:
+
+    3h = 3 ore
+    45min = 45 minuti
+    30s = 30 secondi
+    5ms = 5 millisecondi 
+
+Il valore seguente viene rappresentato da una frazione x con n cifre:
+
+x * 1/10**n
+
+Esempi:
+
+00.5s = 5 * 1/10 secondi = 500 millisecondi
+00:00.005 = 5 * 1/1000 secondi = 5 millisecondi
+
+element-event value
+    Un valore di un /elemento event/ specifica un particolare evento in
+    un elemento di sincronizzazione.
+    Un elemento event ha la seguente sintassi:
+
+    Element-event     ::= "id(" Event-source ")(" Event ")"
+    Event-source      ::= Id-value
+    Event             ::= "begin" | Clock-val | "end"
+
+    Vengono definiti i seguenti eventi:
+
+begin
+    Questo elemento viene generato all'effettivo inizio dell'elemento.
+    Esempio di utilizzo: begin="id(x)(begin)" 
+clock-val
+    Questo evento viene generato quando un clock associato ad un
+    elemento raggiunge un valore particolare. Il clock parte da 0
+    all'inizio effettivo dell'elemento. Per gli elementi "par" e "seq",
+    il clock fornisce il tempo mancante dall'effettivo inizio
+    dell'elemento. Per elementi di oggetti di tipo media la semantica è
+    dipendente dall'implementazione. Il clock può dare sia il tempo
+    trascorso dall'inizio effettivo, che il tempo medio dell'oggetto.
+    Quest'ultimo può differire dal tempo della presentazione che è
+    passato da quando è cominciato per esempio a causa del rendering o
+    del ritardo nella rete, ed è l'approccio raccomandato.
+    E' un errore usare un valore di clock che superi il valore
+    dell'effettiva durata dell'elemento che genera l'evento.
+
+    Esempio di uso: begin="id(x)(45s)"
+
+end
+    Questo evento viene generato al termine effettivo dell'elemento.
+    Esempio di uso: begin="id(x)(end)"
+
+*Contenuto dell'elemento*
+
+L'elemento par può contenere i seguenti figli:
+
+a
+    Definito nella Sezione 4.5.1 <#a>
+animation
+    Definito nella Sezione 4.2.3 <#media-object>
+audio
+    Definito nella Sezione 4.2.3 <#media-object>
+img
+    Definito nella Sezione 4.2.3 <#media-object>
+par
+    Definito nella Sezione 4.2.1 <#par>
+ref
+    Definito nella Sezione 4.2.3 <#media-object>
+seq
+    Definito nella Sezione 4.2.2 <#seq>
+switch
+    Definito nella Sezione 4.3 <#switch>
+text
+    Definito nella Sezione 4.2.3 <#media-object>
+textstream
+    Definito nella Sezione 4.2.3 <#media-object>
+video
+    Definito nella Sezione 4.2.3 <#media-object>
+
+Tutti questi elementi possono apparire in tempi multipli come figli
+diretti di un elemento par.
+
+
+        4.2.2 L'elemento seq
+
+I figli di un elemento "seq" formano una sequenza temporale.
+
+*Attributi*
+
+L'elemento seq può avere i seguenti attributi:
+
+abstract
+    Definito nella Sezione 4.2.1 <#par>
+author
+    Definito nella Sezione 4.2.1 <#par>
+begin
+    Definito nella Sezione 4.2.1 <#par>
+copyright
+    Definito nella Sezione 4.2.1 <#par>
+dur
+    Definito nella Sezione 4.2.1 <#par>
+end
+    Definito nella Sezione 4.2.1 <#par>
+id
+    Definito nella Sezione 2 <#smil>
+region
+    Definito nella Sezione 4.2.1 <#par>
+    L'attributo region degli elementi "seq" non può essere usato dal
+    linguaggio base di layout di SMIL definito in questa specifica.
+    Viene aggiunto per completezza, poichè potrebbe essere richiesto da
+    altri linguaggi di layout.
+repeat
+    Definito nella Sezione 4.2.1 <#par>
+system-bitrate
+    Definito nella Sezione 4.4 <#test>
+system-captions
+    Definito nella Sezione 4.4 <#test>
+system-language
+    Definito nella Sezione 4.4 <#test>
+system-overdub-or-caption
+    Definito nella Sezione 4.4 <#test>
+system-required
+    Definito nella Sezione 4.4 <#test>
+system-screen-size
+    Definito nella Sezione 4.4 <#test>
+system-screen-depth
+    Definito nella Sezione 4.4 <#test>
+title
+    Definito nella Sezione 3.3.1 <#region>
+Si raccomanda caldamente che tutti gli elementi "seq" hanno un attributo
+"title" con una descrizione significativa. I programmi autore dovrebbero
+assicurare che non venga introdotto nessun elemento in un documento SMIL
+senza questo attributo.
+
+*Contenuto dell'elemento*
+
+L'elemento seq può contenere i seguenti figli:
+
+a
+    Definito nella Sezione 4.5.1 <#a>
+animation
+    Definito nella Sezione 4.2.3 <#media-object>
+audio
+    Definito nella Sezione 4.2.3 <#media-object>
+img
+    Definito nella Sezione 4.2.3 <#media-object>
+par
+    Definito nella Sezione 4.2.1 <#par>
+ref
+    Definito nella Sezione 4.2.3 <#media-object>
+seq
+    Definito nella Sezione 4.2.2 <#seq>
+switch
+    Definito nella Sezione 4.3 <#switch>
+text
+    Definito nella Sezione 4.2.3 <#media-object>
+textstream
+    Definito nella Sezione 4.2.3 <#media-object>
+video
+    Definito nella Sezione 4.2.3 <#media-object>
+
+
+        4.2.3 Elementi Oggetto di tipo multimediale: gli elementi ref,
+        animation, audio,img, video,text e textstream
+
+Gli elementi oggetto di tipo multimediale permettono l'inclusione di
+oggetti di tipo multimediale in una presentazione SMIL. Gli oggetti di
+tipo multimediale sono inclusi con un riferimento (usando una URI).
+
+Ci sono due tipi di oggetti multimediale: quelli con una durata
+intrinseca (video, audio) (chiamati anche "media continui") e quelli
+senza una durata intrinseca (testo, immagini) (chiamati anche "media
+discreti").
+
+Le ancore e i link possono essere fissati ad oggetti di tipo media
+visivi, cioè gli oggetti media resi su una superficie di
+rappresentazione astratta visiva.
+
+Quando viene riavvolto**un oggetto multimediale, il player non deve
+derivare l'esatto tipo dell'oggetto multimediale dal nome dell'elemento
+dell'oggetto multimediale. Deve invece dipendere solamente da altre
+sorgenti del tipo, come l'informazione di tipo contenuta nell'attributo
+"type", o l'informazione di tipo comunicata da un server o dal sistema
+operativo.
+
+Gli autori, comunque, dovrebbero assicurarsi che il gruppo entro cui
+cade l'oggetto multimediale (animazione, audio, img, video, testo o
+teststream) viene riflesso nel nome dell'elemento. Questo per poter
+aumentare la leggibilità di un documento SMIL. Quando si è in dubbio sul
+gruppo dell'oggetto multimediale, gli autori dovrebbero usare un
+generico elemento "ref".
+
+*Attributi dell'elemento*
+
+Gli elementi dell'oggetto multimediale possono avere i seguenti attributi:
+
+abstract
+    Definito nella Sezione 4.2.1 <#par>
+alt
+    Questo attributo specifica il testo alternativo nel caso di user
+    agent che non possono visualizzare un particolare
+    oggetto-multimediale. E' fortemente raccomandato che tutti gli
+    elementi dell'oggetto multimediale abbiano un attributo "alt" con
+    una descrizione significativa. I tool autore dovrebbero assicurare
+    l'impossibilità di introdurre elementi in un documento SMIL che non
+    abbiano questo attributo.
+author
+    Definito nella Sezione 4.2.1 <#par>
+begin
+    Definito nella Sezione 4.2.1 <#par>
+clip-begin
+    L'attributo clip-begin specifica l'inizio di un sub-clip di un
+    oggetto multimediale continuo come offset dall'inizio dell'oggetto
+    multimediale.
+    La sintassi per i valori dell'attributo clip-begin è la seguente: 
+
+Clip-time-value   ::= Metric "=" ( Clock-val | Smpte-val )
+Metric            ::= Smpte-type | "npt"
+Smpte-type        ::= "smpte" | "smpte-30-drop" | "smpte-25"
+Smpte-val         ::= Hours ":" Minutes ":" Seconds 
+                      [ ":" Frames [ "." Subframes ]]
+Hours             ::= 2DIGIT
+Minutes           ::= 2DIGIT
+Seconds           ::= 2DIGIT
+Frames            ::= 2DIGIT
+Subframes         ::= 2DIGIT
+
+Il valore di questo attributo consiste di uno specificatore metrico,
+seguito da un valore di tempo la cui sintassi e semantica dipendono
+dallo specificatore metrico. Sono permessi i seguenti formati:
+
+SMPTE Timestamp
+    Per una definizione più accurata dei livelli di frame possono essere
+    usati i codici del tempo SMPTE [SMPTE <#ref-smpte>]. Lo
+    specificatore metrico può avere i seguenti valori:
+    smpte 
+
+smpte-30-drop
+    Questi valori indicano l'uso del formato "SMPTE 30 drop" con 29.97
+    frame per secondo. Il campo "frames" nel valore tempo può assumere
+    valori da 0 a 29. La differenza tra 30 e 29,97 frame per secondo
+    viene controllata abbassando il primo indice di frame di ogni minuto
+    (valori 00 e 01), eccetto ogni decimo di minuto.
+smpte-25
+    Il campo "frames" nella specifica di tempo può assumere valori da 0
+    a 24.
+
+Il formato per il valore tempo è ore:minuti:secondi:frame:sottoframe. Se
+il valore del frame è zero, può essere omesso. I sottoframe vengono
+misurati in un centesimo di un frame.
+Esempio:
+clip-begin="smpte=10:12:33:20"
+Normal Play Time
+    Normal Play Time esprime il tempo secondo i valori di clock di SMIL.
+    Lo specificatore metrico è "npt" e la sintassi per il valore di
+    tempo è identica alla sintassi per i valori di clock di SMIL.
+    Esempio:
+    clip-begin="npt=123.45s"
+    clip-begin="npt=12:05:35.3"
+
+clip-end
+    L'attributo clip-end specifica la fine di un sub-clip di un oggetto
+    multimediale continuo (come audio, video o altra presentazione) che
+    dovrebbe essere girato. Usa la stessa sintassi per il valore
+    dell'attributo come l'attributo clip-begin.
+    Se il valore dell'attributo "clip-end" supera la durata dell'oggetto
+    multimediale, il valore viene ignorato, e la clip-end viene settata
+    uguale alla fine effettiva dell'oggetto multimediale.
+copyright
+    Definito nella Sezione 4.2.1 <#par>
+dur
+    Definito nella Sezione 4.2.1 <#par>
+end
+    Definito nella Sezione 4.2.1 <#par>
+fill
+    Per una definizione della semantica di questo attributo, vedere la
+    Sezione 4.2.4. Questo attributo può avere i valori "remove" e "freeze".
+id
+    Definito nella Sezione 2 <#smil>
+longdesc
+    Questo attributo specifica un link (URI) ad una descrizione lunga di
+    un oggetto multimediale. Questa descrizione dovrebbe integrare la
+    descrizione breve fornita usando l'attributo alt. Quando un oggetto
+    multimediale viene associato ad un'ancora, queste attributo dovrebbe
+    fornire informazioni sui contenuti dell'ancora.
+region
+    Definito nella Sezione 4.2.1 <#par>
+src
+    Il valore dell'attributo src è la URI dell'oggetto multimediale.
+system-bitrate
+    Definito nella Sezione 4.4 <#test>
+system-captions
+    Definito nella Sezione 4.4 <#test>
+system-language
+    Definito nella Sezione 4.4 <#test>
+system-overdub-or-caption
+    Definito nella Sezione 4.4 <#test>
+system-required
+    Definito nella Sezione 4.4 <#test>
+system-screen-size
+    Definito nella Sezione 4.4 <#test>
+system-screen-depth
+    Definito nella Sezione 4.4 <#test>
+title
+    Definito nella Sezione 3.3.1 <#region>
+Si raccomanda caldamente che tutti gli elementi oggetto multimediale
+abbiano un attributo "title" con una descrizione significativa. I
+programmi autore dovrebbero assicurare che nessun elemento possa essere
+introdotto in un documento SMIL senza questo attributo.
+type
+    Il tipo MIME di un oggetto multimediale riferito all'attributo "src".
+
+*Contenuto dell'elemento*
+
+Gli elementi oggetto multimediale possono contenere il seguente elemento:
+
+anchor
+    Definito nella Sezione 4.5.2 <#anchor>
+
+
+        4.2.4 Il modello di tempo di SMIL
+
+
+          4.2.4.Valori del modello di tempo
+
+Nella seguente discussione il termine "elemento" si riferisce solo ad
+elementi di sincronizzazione.
+
+Per ciascun elemento definiamo l'inizio, la durata e la fine, implicita,
+esplicita, desiderata ed effettiva.
+
+L'effettivo inizio/durata/fine specifica quello che l'utente del
+documento percepirà.
+
+I valori impliciti, espliciti e desiderati sono valori ausiliari usati
+per definire i valori effettivi.
+
+Nella sezione seguente sono descritte le regole per il calcolo di
+ciascuno di questi valori per gli elementi definiti in SMIL 1.0.
+
+ 1. Ogni elemento in SMIL ha un inizio implicito.
+ 2. Ad ogni elemento può essere assegnato un inizio esplicito
+    aggiungendo un attributo "begin" all'elemento:
+
+        begin = "/value of explicit-begin/"
+
+    E' un errore se l'inizio esplicito precede l'inizio implicito di un
+ 3. elemento. Ogni elemento in SMIL ha una /fine implicita/.
+ 4. Ad ogni elemento può essere assegnata una /fine esplicita/
+    aggiungendo un attributo "end" all'elemento.
+
+        end = "/value of explicit-end/"
+
+ 5. La /durata implicita/ di un elemento è la differenza tra la fine e
+    l'inizio implicito.
+ 6. Ad ogni elemento di SMIL può essere assegnata una /durata esplicita/
+    aggiungendo un attributo "dur" all'elemento:
+
+        dur = "/value of explicit-duration/"
+
+ 7. L'/inizio desiderato/ di un elemento è uguale all'inizio esplicito,
+    se è stato assegnato, altrimenti è uguale all'inizio implicito.
+ 8. Ogni elemento ha una /fine desiderata/.
+ 9. La /durata desiderata/ di un elemento è la differenza tra la fine e
+    l'inizio desiderati.
+10. Ogni elemento ha un /inizio effettivo/.
+11. Ogni elemento ha una /fine effettiva/. (NOTA: la fine effettiva di
+    un elemento figlio non può mai seguire la fine effettiva del suo
+    genitore.)
+12. La /durata effettiva/ di un elemento è la differenza tra la fine e
+    l'inizio effettivi.
+
+
+          4.2.4.2 Determinare i valori del modello di tempo per gli
+          elementi di SMIL 1.0
+
+Questa sezione definisce come vengono calcolati i valori del modello di
+tempo per la sincronizzazione degli elementi di SMIL 1.0 nei casi non
+coperti dalle regole definite nella Sezione 4.2.4.1
+<#Time_Model_Variables>.
+
+
+        Determinazione dell'/inizio implicito/ di un elemento
+
+  * L'inizio implicito del primo figlio dell'elemento "body" avviene
+    quando il documento inizia a girare. Quando avviene questo si cade
+    fuori dallo scopo di questo documento.
+  * L'inizio implicito di un figlio di un elemento "par" è uguale
+    all'inizio effettivo di un elemento "par".
+  * L'inizio implicito del primo figlio di un elemento "seq" è uguale
+    all'inizio effettivo dell'elemento "seq".
+  * L'inizio implicito di ogni altro figlio dell'elemento "seq" è uguale
+    al tempo finale desiderato del figlio precedente dell'elemento "seq". 
+
+
+        Determinazione della /fine implicita/ di un elemento
+
+La prima descrizione corrispondente all'elemento è quella che deve
+essere usata:
+
+  * Un elemento con un attributo "repeat" con un valore "indefinite" ha
+    la fine implicita immediatamente dopo il suo inizio effettivo.
+  * Un elemento con un attributo "repeat" con un valore diverso da
+    "indefinite" ha una fine implicita uguale alla fine implicita di un
+    elemento seq con il numero dichiarato di copie dell'elemento senza
+    l'attributo "repeat" come figlio.
+  * Un elemento oggetto multimediale che si riferisce ad un oggetto
+    multimediale continuo ha una fine implicita uguale alla somma
+    dell'inizio effettivo dell'elemento e la durata intrinseca
+    dell'oggetto multimediale.
+  * Un elemento oggetto multimediale che si riferisce ad un oggetto
+    multimediale discreto, come testo o immagine, ha la fine implicita
+    immediatamente dopo il suo inizio effettivo. 
+  * Un elemento "seq" ha una fine inplicita uguale alla fine desiderata
+    del suo ultimo figlio.
+  * Un elemento "par" ha una fine implicita che dipende dal valore
+    dell'attributo "endsync". La fine implicita è uguale alla somma
+    dell'inizio effettivo dell'elemento "par" e della durata implicita
+    che viene derivata come segue:
+      o Se il valore dell'attributo "endsync" è "last", o se manca
+        l'attributo "endsync", la durata implicita dell'elemento "par" è
+        il massimo delle durate desiderate dei suoi figli.
+      o Se il valore dell'attributo "endsync" è "first", la durata
+        implicita dell'elemento "par" è il minimo delle durate
+        desiderate dei suoi figli.
+      o Se il valore dell'attributo "endsync" è un id-ref, la durata
+        implicita dell'elemento "par" è uguale alla durata desiderata
+        del figlio referenziato da "id-ref".
+
+
+        Determinazione della /fine desiderata/ di un elemento
+
+  * Se un elemento ha sia una durata esplicita che una fine esplicita,
+    la fine desiderata è il minimo di:
+      o la somma dell'inizio desiderato e della durata esplicita, e
+      o la fine esplicita.
+  * Se un elemento ha la durata esplicita ma non la fine esplicita, la
+    fine desiderata è la somma dell'inizio desiderato e della durata
+    esplicita.
+  * Se un elemento ha la fine esplicita ma non la durata esplicita, la
+    fine desiderata è uguale alla fine esplicita.
+  * Altrimenti, la fine desiderata è uguale alla fine implicita.
+
+*Determinazione dell'/inizio desiderato/ di un elemento*
+
+L'inizio desiderato di un elemento è determinato dall'uso delle regole 7
+nella Sezione 4.2.4.1 <#Time_Model_Variables>.
+
+
+        Determinazione dell'/inizio effettivo/ di un elemento
+
+L'inizio effettivo di un elemento è uguale all'inizio desiderato di un
+elemento, a meno che la fine effettiva di un elemento padre sia minore
+di questo tempo, nel qual caso l'elemento non viene mostrato per niente.
+
+
+        Determinazione della /fine effettiva/ di un elemento
+
+  * La fine effettiva dell'ultimo figlio di un elemento body è
+    dipendente dal player. La fine effettiva è ritardata almeno quanto
+    la fine desiderata, ma se è in ulteriore ritardo è dipendente
+    dall'implementazione.
+  * La fine effettiva di un un figlio di un elemento "par" può essere
+    derivata come segue:
+      o Se il figlio ha un attributo "fill" e il valore di questo
+        attributo è "freeze", la fine effettiva dell'elemento figlio è
+        uguale alla fine effettiva del padre.
+        L'ultimo stato dell'elemento viene mantenuto sullo schermo fino
+        alla fine effettiva dell'elemento.
+      o Se il figlio ha un attributo "fill", e il valore di questo
+        attributo è "remove", la fine effettiva dell'elemento figlio è
+        il minimo della fine effettiva del padre e la fine desiderata
+        dell'elemento figlio.
+      o Se il figlio non ha un attributo "fill", la fine effettiva del
+        figlio dipende dal fatto che il figlio abbia o meno una durata o
+        una fine esplicita .
+          + Se il figlio ha una durata o una fine esplicite, la fine
+            effettiva viene determinata come se l'elemento avesse un
+            attributo "fill" con valore "remove".
+          + Se il figlio non ha una durata esplicita e nemmeno una fine
+            esplicita, la fine effettiva viene determinata come se
+            l'elemento avesse un attributo "fill" con valore "freeze".
+  * La fine effettiva dell'ultimo figlio di un elemento "seq" viene
+    derivato nello stesso modo come la fine effettiva di un figlio di un
+    elemento "par".
+  * La fine effettiva di ogni altro figlio di un elemento "seq" può
+    essere derivato come segue:
+      o Se il figlio ha un attributo "fill" e il suo valore è "freeze",
+        la fine effettiva dell'elemento figlio è uguale all'inizio
+        effettivo dell'elemento successivo
+      o Se il figlio ha un attributo "fill" e il suo valore è "remove",
+        la fine effettiva dell'elemento figlio è il minimo dell'inizio
+        effettivo dell'elemento successivo e la fine desiderata
+        dell'elemento figlio successivo.
+      o Se l'elemento figlio non ha un attributo "fill", la fine
+        effettiva del figlio dipende dal fatto che il figlio abbia o
+        meno una durata o una fine esplicite
+          + Se il figlio ha una durata o una fine esplicite, la fine
+            effettiva viene determinata come se l'elemento avesse un
+            attributo "fill" con valore "remove"
+          + Se il figlio non ha nè una durata esplicita nè una fine
+            esplicita, la fine effettiva viene determinata come se
+            l'elemento avesse un attributo "fill" con valore "freeze".
+
+
+      4.3 L'elemento switch
+
+L'elemento switch permette all'autore di specificare un insieme di
+elementi alternativi fra i quali è possibile sceglierne uno solo
+accettabile. Un elemento è accettabile se è un elemento di SMIL 1.0, il
+tipo di media può essere codificato e tutti gli attributi di testo
+(vedere Sezione 4.4 <#test>) dell'elemento posti a "true".
+
+Un elemento viene selezionato come segue: il player valuta gli elementi
+nell'ordine in cui compaiono nell'elemento switch. Il primo elemento
+accettato viene selezionato ad esclusione di tutti gli altri elementi
+all'interno di switch. 
+
+Quindi, gli autori dovrebbero ordinare le alternative dalle più
+desiderabili alle meno desiderabili. Inoltre, gli autori dovrebbero
+porre una alternativa sicura come ultima scelta nello <switch> in modo
+che venga scelto almeno un oggetto all'interno dello <switch> (a meno
+che questo non sia esplicitamente non desiderato).
+
+Le implementazioni non dovrebbero selezionare arbitrariamente un oggetto
+all'interno di <switch> quando gli attibuti di test falliscono per tutti.
+
+Nota che gli http URI forniscono una opzione sul formato dei dati, che
+in alcuni casi potrebbe essere una alternativa all'uso dell'elemento
+"switch".
+
+*Attributes*
+
+L'elemento switch può avere i seguenti attributi:
+
+id
+    Definito nella Sezione 2 <#smil>
+title
+    Definito nella Sezione 3.3.1 <#region>
+Si raccomanda caldamente che tutti gli elementi switch abbiano un
+attributo "title" con una descrizione significativa. I tool autore
+dovrebbero assicurare che non possa essere introdotto nessun elemento in
+un documento SMIL senza questo attributo.
+
+*Contenuto dell'elemento*
+
+Se l'elemento "switch" viene usato come figlio diretto o indiretto di un
+elemento "body", allora può contenere i seguenti figli:
+
+a
+    Definito nella Sezione 4.5.1 <#a>
+animation
+    Definito nella Sezione 4.2.3 <#media-object>
+audio
+    Definito nella Sezione 4.2.3 <#media-object>
+img
+    Definito nella Sezione 4.2.3 <#media-object>
+par
+    Definito nella Sezione 4.2.1 <#par>
+ref
+    Definito nella Sezione 4.2.3 <#media-object>
+seq
+    Definito nella Sezione 4.2.2 <#seq>
+switch
+    Definito nella Sezione 4.3 <#switch>
+text
+    Definito nella Sezione 4.2.3 <#media-object>
+textstream
+    Definito nella Sezione 4.2.3 <#media-object>
+video
+    Definito nella Sezione 4.2.3 <#media-object>
+
+Tutti questi elementi possono comparire più volte come figli di un
+elemento "switch".
+
+Se l'elemento "switch" viene usato all'interno dell'elemento "head",
+allora può contenere il seguente figlio:
+
+layout
+    Definito nella Sezione 3.2 <#layout>
+All'interno dell'elemento switch possono essere presenti elementi
+multipli di layout.
+
+
+      4.4 Attributi di test
+
+Questa specifica definisce una lista di attributi di test che può essere
+aggiunta ad ogni elemento di sincronizzazione, e che verifica le
+capacità e i setting del sistema. Concettualmente questi attributi
+rappresentano test di tipo booleano. Quando uno degli attributi di test
+specificato per un elemento viene valutato come "false", l'elemento che
+porta questo attributo viene ignorato.
+
+All'interno della lista sottostante si può presentare il concetto di
+"preferenze per l'utente". Le preferenze per l'utente vengono
+normalmente definite dal motore di playback usando una box di dialogo
+per le preferenze, ma in questa specifica non si hanno restrizioni su
+come queste preferenze vengono comunicate dallo user al player di SMIL.
+
+In SMIL 1.0 sono definiti i seguenti attributi di testo:
+
+system-bitrate
+    Questo attributo specifica, in bit per secondo, l'ampiezza di banda
+    approssimativa disponibile sul sistema. La misura dell'ampiezza di
+    banda è una specifica dell'applicazione, cioè, l'applicazione può
+    usare misure sofisticate di connettività end-to-end o un semplice
+    settaggio statico controllato dall'utente. Nel secondo caso questo
+    potrebbe per esempio essere usato per fare una scelta sulla
+    connessione dell'utente alla rete. I valori tipici dei modem degli
+    utenti dovrebbero essere 14400, 28800, 56000 bit/s, e così via.
+    Viene posto a "true" se il sistema bitrate disponibile è uguale o
+    maggiore del valore dato. Viene posto a "false" se il sistema
+    bitrate disponibile è minore del valore dato.
+    Questo attributo può assumere qualsiasi valore intero più grande di
+    0. Se il valore eccede il valore di ampiezza di banda definito
+    dall'implementazione, l'attributo prende sempre il valore "false". 
+system-captions
+    Questo attributo permette agli autori di distinguere tra un testo
+    ridondante equivalente ad una porzione di audio della presentazione
+    (intesa per una platea di quelle con disabilità uditive o di quelle
+    che imparano a leggere e che vogliono o necessitano di questa
+    informazione) e testo inteso per una platea estesa. Questo attributo
+    può avere il valore "on" se l'utente ha indicato il desiderio di
+    vedere informazioni sottotitolate, ed ha valore "off" se l'utente ha
+    indicato che non vuole vedere questa informazione. Viene posto a
+    "true" se il valore è "on", e viene posto a "false" se il valore è
+    "off".
+system-language
+    Il valore di questo attributo è una lista di nomi di linguaggi
+    separati da virgole come definito nel [RFC1766].
+    Viene posto a "true" se uno dei linguaggi indicati dalle preferenze
+    dell'utente equivale esattamente a uno dei linguaggi dati nel valore
+    di questo parametro, o se uno dei linguaggi indicati dalle
+    preferenze dell'utente equivale esattamente al prefisso di uno dei
+    linguaggi dati in questo parametro in modo che il primo carattere di
+    tag che segue il prefisso sia "-".
+Altrimenti viene posto a "false".
+
+Nota: Questo utilizzo di una regola del prefisso non implica che i tag
+del linguaggio vengano assegnati ai linguaggi in modo tale che è sempre
+vero che se un utente comprende il linguaggio con un certo tag, allora
+l'utente comprenderà sempre tutti i linguaggi di tag per i quali questo
+tag è un prefisso.
+
+La regola del prefisso permette semplicemente l'uso dei tags di prefisso
+se questo è il caso.
+
+Note sull'implementazione: quando vengono scelte le preferenze
+linguistiche disponibili per l'utente, gli implementatori dovrebbero
+tener conto del fatto che gli utenti non sono familiari con i dettagli
+del matching di linguaggio come descritto sotto, e dovrebbero fornire
+una guida appropriata. Come esempio, l'utente può assumere che
+selezionando "en-gb" gli verrà fornito qualsiasi tipo di documento
+inglese se non è disponibile l'inglese britannico. L'interfaccia utente
+per la scelta delle preferenze dovrebbe guidare l'utente ad aggiungere
+"en" per ottenere il miglior comportamento di matching.
+
+POSSONO essere elencati diversi linguaggi per il contenuto che è
+destinato a differenti platee. Per esempio, l'interpretazione di "Treat
+of Waitangi", presentato contemporaneamnete in versione originale Maori
+e Inglese, verrebbe chiamata con:
+
+            <audio src="foo.rm" system-language="mi, en"/>
+
+In ogni caso, proprio perchè diversi linguaggi vengono presentati
+all'interno di oggetti che hanno l'attributo per il test sul linguaggio
+di sistema, non significa che è destinato a platee linguistiche diverse.
+Un esempio potrebbe essere un sillabario di lingua per principianti,
+come "A first lesson in Latin", che è chiaramente rivolto ad un pubblico
+che sa leggere e scrivere in inglese. In questo caso, l'attributo per il
+test del linguaggio di sistema dovrebbe esclusivamente includere "en".
+
+Note per gli autori: gli autori dovrebbero realizzare che, se in uno
+"switch" sono inclusi varii oggetti di linguaggi alternativi, e nessuno
+di questi corrisponde, questo può portare a situazioni come un video che
+viene mostrato senza traccia audio. Viene dunque raccomandato di
+includere una scelta di "catch-all" alla fine di questo tipo di switch
+che viene accettato in ogni caso.
+
+system-overdub-or-caption
+    Questo attributo determina se gli utenti preferiscono cambiare audio
+    o sottotitolare quando è disponibile l'opzione. L'attributo può
+    assumere i valori "caption" e "overdub". Viene posto a "true" se le
+    preferenze dell'utente corrispondono al valore di questo attributo.
+    Viene posto a "false" nel caso in cui non corrispondono.
+system-required
+    Questo attributo specifica il nome di una estensione. Viene posto a
+    "true" se l'estensione viene supportata dall'implementazione,
+    altrimenti viene posto a "false". In una futura versione di SMIL il
+    valore di questo attributo sarà un namespace di XML [NAMESPACES].
+system-screen-size
+    I valori dell'attributo hanno la seguente sintassi::
+screen-size-val ::= screen-height"X"screen-width
+Ciascuno di questi è il valore di un pixel e deve essere un valore
+intero maggiore di 0. Viene posto a "true" se il sistema di playback di
+SMIL è in grado di visualizzare una presentazione della dimensione data.
+Viene posto a "false" se il sistema di playback di SMIL è in grado di
+visualizzare solo una presentazione più piccola.
+system-screen-depth
+    Questo attributo specifica l'ampiezza in bit della palette di colori
+    dello schermo, richiesta per visualizzare l'elemento. Il valore deve
+    essere più grande di 0. Valori tipici sono 1, 8, 24 .... Viene posto
+    a "true" se il sistema di playback di SMIL è in grado di
+    visualizzare immagini o video con la profondità di colore data.
+    Viene posto a "false" se il sistema di playback di SMIL è in grado
+    di visualizzare solo immagini o video con una profondità di colore
+    minore.
+
+*Esempi*
+
+/1) Scegliere fra contenuto con diverso velocità di trasmissione/
+
+In una situazione comune, le implementazioni possono desiderare di
+permettere una selezione attraverso un parametro sugli elementi di
+"sistem-bitrate". Il player multimediale valuta ciascuna delle "scelte"
+(elementi all'interno di switch) una sola volta, cercando un bitrate
+accettabile date le caratteristiche conosciute del link tra il player
+multimediale e il server.
+
+...
+<par>
+  <text .../>
+  <switch>
+    <par system-bitrate="40000">
+    ...
+    </par>
+    <par system-bitrate="24000">
+    ...
+    </par>
+    <par system-bitrate="10000">
+    ........
+    </par>
+  </switch>
+</par>
+...
+
+/2) Scelta tra risorse audio con diversi bitrate/
+
+Gli elementi all'interno dello switch possono essere qualsiasi
+combinazione di elementi. Per esempio, uno potrebbe semplicemente
+specificare una traccia audio alternativa::
+
+...
+<switch>
+   <audio src="joe-audio-better-quality" system-bitrate="16000" />
+   <audio src="joe-audio" system-bitrate="8000" />
+</switch>
+...
+
+/3) Scelta tra risorse audio in diversi linguaggi/
+
+Nel seguente esempio, una risorsa audio è disponibile sia in inglese che
+in francese. Il player può scegliere una di queste risorse audio, basate
+sul linguaggio preferito dall'utente.
+
+...
+<switch>
+   <audio src="joe-audio-french" system-language="fr"/>
+   <audio src="joe-audio-english" system-language="en"/>
+</switch>
+...
+
+/4) Scelta tra contenuto scritto per diversi monitor/
+
+Nell'esempio seguente la presentazione contiene parti alternative
+disegnate per monitor con differenti risoluzioni e profondità di colore.
+A seconda delle caratteristiche particolari dello schermo, il player può
+scegliere una delle alternative.
+
+...
+<par>
+  <text .../>
+  <switch>
+    <par system-screen-size="1280X1024" system-screen-depth="16">
+    ........
+    </par>
+    <par system-screen-size="640X480" system-screen-depth="32">
+    ...
+    </par>
+    <par system-screen-size="640X480" system-screen-depth="16">
+    ...
+    </par>
+  </switch>
+</par>
+...
+
+/5) Distinguere tracce di sottotitolatura da telescrivente/
+
+Nell'esempio seguente le sottotitolature sono mostrate solo se l'utente
+le vuole attivate.
+
+...
+<seq>
+  <par>
+    <audio      src="audio.rm"/>
+    <video      src="video.rm"/>
+    <textstream src="stockticker.rtx"/>
+    <textstream src="closed-caps.rtx" system-captions="on"/>
+  </par>
+</seq>
+...
+
+/6) Scelta tra il linguaggio per il cambio di audio e le tracce di
+sottotitolatura/
+
+Nel seguente esempio è disponibile un film in lingua francese con cambio
+di audio e titoli in inglese, tedesco e olandese. Il segmento di SMIL
+che segue esprime proprio questo e si attiva le alternative che l'utente
+preferisce.
+
+...
+<par>
+  <switch>
+    <audio src="movie-aud-en.rm" system-language="en"
+                system-overdub-or-caption="overdub"/>
+    <audio src="movie-aud-de.rm" system-language="de"
+                system-overdub-or-caption="overdub"/>
+    <audio src="movie-aud-nl.rm" system-language="nl"
+                system-overdub-or-caption="overdub"/>
+     <!-- French for everyone else -->
+     <audio src="movie-aud-fr.rm"/>
+   </switch>
+   <video src="movie-vid.rm"/>
+   <switch>
+     <textstream src="movie-caps-en.rtx" system-language="en"
+                 system-overdub-or-caption="caption"/>
+     <textstream src="movie-caps-de.rtx" system-language="de"
+                system-overdub-or-caption="caption"/>
+     <textstream src="movie-caps-nl.rtx" system-language="nl"
+                 system-overdub-or-caption="caption"/>
+     <!-- French captions for those that really want them -->
+     <textstream src="movie-caps-fr.rtx" system-captions="on"/>
+   </switch>
+</par>
+...
+
+
+      4.5 Elementi di hyperlink
+
+Gli elementi per i link permettono una descrizione dei link di
+navigazione tra gli oggetti.
+
+SMIL si preoccupa solo degli elementi di link in-linea. I link sono
+limitati a link unidirezionali e con una singola testata. (cioè, tutti i
+link hanno esattamente una origine e una risorsa di destinazione). Tutti
+i link di SMIL sono attivati dall'utente.
+
+*Manipolare i link in documenti incapsulati*
+
+A causa della sua natura integrante, la presentazione di un documento di
+SMIL può implicare altre applicazioni o plug-in (non-SMIL). Per esempio,
+un browser SMIL può usare un plug-in HTML per visualizzare una pagina
+incapsulata HTML. Viceversa, un browser HTML può usare un plug-in SMIL
+per visualizzare un documento SMIL incapsulato in una pagina HTML.
+
+In presentazioni di questo tipo, i link possono essere definiti da
+documenti a livelli diversi e possono far sorgere dei conflitti. In
+questo caso, il link definito dal documento contenente dovrebbe avere la
+precedenza sul link definito dall'oggetto incapsulato. Nota che da
+quando questo potrebbe richiedere la comunicazione tra il browser e il
+plug-in, l'implementazione di SMIL può scegliere di non adeguarsi con
+questa raccomandazione.
+
+Se viene definito un link in un documento SMIL incapsulato, il link
+interessato agisce solo sul documento SMIL incapsulato.
+
+Se viene definito un link in un documento non-SMIL incapsulato in un
+documento SMIL, il link interessato può agire solo sulla presentazione
+del documento incapsulato e non sulla presentazione contenente il
+documento SMIL. Questa restrizione può essere eliminata in versioni
+future di SMIL.
+
+*Indirizzamento*
+
+SMIL supporta l'identificatore di fragmento di nome e il connettore '#'.
+Questo significa che SMIL supporta locators così come vengono usati
+abitualmente in HTML (per esempio usa il locator nella forma
+"http://foo.com/some/path#anchor1").
+
+*Link a frammenti SMIL*
+
+Un locator che punta ad un documento SMIL può contenere una parte
+frammento (per esempio: http://www.w3.org/test.smi#par1). La parte
+frammento è un valore di id che identifica uno degli elementi
+all'interno del documento SMIL referenziato. Se è seguito da un link
+contenente una parte di frammento, la presentazione dovrebbe iniziare
+come se l'utente avesse fatto uno scorrimento veloce in avanti.
+
+Possono capitare i seguenti casi speciali:
+
+ 1. L'elemento indirizzato dal link ha un attributo "repeat"
+     1. Se il valore dell'attributo "repeat" è N, vengono girate tutte
+        le ripetizioni N dell'elemento
+     2. Se il valore dell'attributo "repeat" è "indefinite", il playback
+        termina in accordo con le regole definite per il valore
+        "indefinite" di "repeat"
+ 2. L'elemento indirizzato dal link è contenuto all'interno di un altro
+    elemento che contiene un attributo "repeat"
+     1. Se il valore dell'attributo "repeat" è N, il playback parte
+        all'inizio dell'elemento indirizzato dal link, seguito da N-1
+        ripetizioni dell'elemento contenente l'attributo "repeat"
+     2. Se il valore dell'attributo "repeat" è "indefinite", il playback
+        parte all'inizio dell'elemento indirizzato dal link. Il playback
+        termina in accordo con le regole definite dal valore
+        "indefinite" di "repeat"
+ 3. L'elemento indirizzato dal link è contenuto nell'elemento "switch":
+    è proibito linkare a elementi che sono il contenuto degli elementi
+    "switch".
+
+
+        4.5.1 L'elemento a
+
+La funzionalità dell'elemento "a" è molto simile alla funzionalità
+dell'elemento "a" in HTML 4.0 [HTML40] <#ref-HTML40>. SMIL aggiunge un
+attributo "show" che controlla il comportamento temporale di un sorgente
+quando è seguito da un link. A scopi di sincronizzazione, l'elemento "a"
+è trasparente, cioè non influenza la sincronizzazione dei suoi elementi
+figli. Gli elementi "a" possono essere annidati. Un elemento "a" deve
+avere un attributo href. <#href>
+
+*Attributi*
+
+L'elemento "a" può avere i seguenti attributi:
+
+id
+    Definito nella Sezione 2 <#smil>
+href
+    Questo attributo contiene la URI di destinazione del link
+    E' richiesto l'attributo "href" per gli elementi "a".
+show <#show>
+    Questo attributo controlla il comportamento di un documento sorgente
+    contenente il link quando segue il link. Può avere uno dei seguenti
+    valori:
+
+  * "replace": La presentazione attuale è bloccata al suo stato corrente
+    e viene sostituita dalla risorsa di destinazione. Se il player offre
+    un meccanismo di storia passata, la presentazione sorgente riprende
+    dallo stato in cui era stata bloccata quando l'utente ritorna a questo.
+  * "new": La presentazione della risorsa di destinazione ha inizio in
+    un nuovo contesto che non influisce sulla risorsa sorgente.
+  * "pause": La presentazione sorgente viene messa in pausa al suo stato
+    attuale e la risorsa destinazione inizia in un nuovo contesto.
+    Quando termina la visualizzazione della risorsa destinazione, la
+    presentazione sorgente riprende dallo stato in cui era stata posta
+    in pausa.
+
+Il valore di default di "show" è "replace".
+title
+    Definito nella Sezione 3.3.1 <#region>
+Si raccomanda caldamente che tutti gli elementi "a" abbiano un attributo
+"title" con una descrizione significativa. I programmi autore dovrebbero
+assicurare che nessun elemento possa essere introdotto in un documento
+SMIL senza questo attributo.
+
+*Contenuto dell'elemento*
+
+L'elemento "a" può contenere i seguenti figli:
+
+animation
+    Definito nella Sezione 4.2.3 <#media-object>
+audio
+    Definito nella Sezione 4.2.3 <#media-object>
+img
+    Definito nella Sezione 4.2.3 <#media-object>
+par
+    Definito nella Sezione 4.2.1 <#par>
+ref
+    Definito nella Sezione 4.2.3 <#media-object>
+seq
+    Definito nella Sezione 4.2.2 <#seq>
+switch
+    Definito nella Sezione 4.3 <#switch>
+text
+    Definito nella Sezione 4.2.3 <#media-object>
+textstream
+    Definito nella Sezione 4.2.3 <#media-object>
+video
+    Definito nella Sezione 4.2.3 <#media-object>
+
+*Esempi*
+
+/Esempio 1/
+
+Il link da avvio alla nuova presentazione sostituendo la presentazione
+che stava girando.
+
+<a href="http://www.cwi.nl/somewhereelse.smi">
+     <video src="rtsp://foo.com/graph.imf" region="l_window"/>
+</a>
+
+Nell'esempio, la seconda linea può essere sostituita da un riferimento a
+qualsiasi sottoalbero valido di una presentazione SMIL.
+
+/Esempio 2/
+
+Il link da avvio alla nuova presentazione insieme alla presentazione che
+stava girando.
+
+<a href="http://www.cwi.nl/somewhereelse.smi" show="new">
+     <video src="rtsp://foo.com/graph.imf" region="l_window"/>
+</a>
+
+Per esempio, questo permette ad un player di SMIL di controllare un
+browser HTML.
+
+/Esempio 3/
+
+Il link da inizio alla nuova presentazione e mette in pausa la
+presentazione che stava girando.
+
+<a href="http://www.cwi.nl/somewhereelse.smi" show="pause">
+     <video src="rtsp://foo.com/graph.imf" region="l_window"/>
+</a>
+
+/Esempio 4/
+
+L'esempio seguente contiene un link da un elemento in una presentazione
+A alla metà di un'altra presentazione B. Questo dovrebbe far girare la
+presentazione B iniziando esattamente dall'inizio dell'elemento con id
+"next".
+
+Presentation A:
+
+     <a href="http://www.cwi.nl/presentationB#next">
+       <video src="rtsp://foo.com/graph.imf"/>
+     </a>
+
+
+Presentation B (http://www.cwi.nl/presentation):
+
+      ...
+      <seq>
+        <video src="rtsp://foo.com/graph.imf"/>
+        <par>
+          <video src="rtsp://foo.com/timbl.rm" region="l_window"/>
+          <video id="next" src="rtsp://foo.com/v1.rm" region="r_window"/>
+                 ^^^^^^^^^
+          <text src="rtsp://foo.com/caption1.html" region="l_2_title"/>
+          <text src="rtsp://foo.com/caption2.rtx" region="r_2_title"/>
+        </par>
+      </seq>
+      ...
+
+
+        4.5.2 L'elemento anchor
+
+La funzionalità di un elemento "a" è limitata dal fatto che permette di
+associare un link solo con oggetti multimediali completi. Le mappe
+sensibili di HTML hanno dimostrato che è utile associare dei link a
+sottoparti spaziali di un oggetto. L'elemento anchor realizza
+funzionalità simili per SMIL.
+
+ 1. L'elemento anchor permette di associare un link a sottoparti
+    spaziali e temporali di un oggetto multimediale, usando l'attributo
+    "href" (al contrario, l'elemento "a" permette solo di associare un
+    link ad un oggetto multimediale completo).
+ 2. L'elemento anchor permette ad una sottoparte di un oggetto
+    multimediale di diventare la destinazione di un link, usando
+    l'attributo "id".
+ 3. L'elemento anchor permette di dividere un oggetto in sottoparti
+    spaziali, usando l'attributo "coords"
+ 4. L'elemento anchor permette di dividere un oggetto in sottoparti
+    temporali, usando gli attributi "begin" e "end". I valori degli
+    attributi begin e end sono relativi all'effettivo inizio
+    dell'oggetto multimediale.
+
+*
+Attributi *
+
+L'elemento anchor può avere i seguenti attributi:
+
+begin
+    Definito nella Sezione 4.2.1 <#par>
+coords
+    Il valore di questo attributo specifica un rettangolo all'interno
+    dell'area di visualizzazione di un oggetto multimediale visivo. La
+    sintassi e la semantica di questo attributo sono simili a quelle
+    dell'attributo coords delle mappe sensibili in HTML, quando il link
+    è associato ad una figura rettangolare. Il rettangolo è specificato
+    da quattro valori di lunghezza: i primi due valori specificano le
+    coordinate dell'angolo superiore sinistro del rettangolo. I secondi
+    due valori specificano le coordinate dell'angolo inferiore destro
+    del rettangolo. Le coordinate sono relative all'angolo in alto a
+    sinistra dell'oggetto multimediale visivo (vedere figura 4.5). Se
+    una coordinata è specificata come valore in percentuale, questa è
+    relativa all'altezza e alla larghezza totali dell'area di
+    visualizzazione dell'oggetto multimediale.
+    Un attributo con un valore di coords errato viene ignorato (x-destro
+    minore o uguale di x-sinistro, y-inferiore minore o uguale di
+    y-superiore). Se il rettangolo definito dagli attributi di coords
+    supera l'area delimitata dall'oggetto multimediale, l'altezza e la
+    larghezza eccedenti vengono tagliate ai bordi dell'oggetto multimediale.
+    I valori dell'attributo di coords hanno la seguente sintassi:
+
+    coords-value ::= left-x "," top-y "," right-x "," bottom-y
+
+------------------------------------------------------------------------
+semantics of coords attributeD
+<http://www.w3c.it/traduzioni/ld#longdesc-coords>
+
+------------------------------------------------------------------------
+
+/Figura 4.5: Semantica dell'attributo "coords"/
+
+end
+    Definito nella Sezione 4.2.1 <#par>
+id
+    Definito nella Sezione 2 <#smil>
+show
+    Definito nella Sezione 4.5.1 <#a>
+skip-content
+    Definito nella Sezione 3.3.1 <#region>
+title
+    Definito nella Sezione 3.3.1 <#region>
+Si raccomanda caldamente che tutti gli elementi anchor abbiano un
+attributo "title" con una descrizione significativa. I programmi autore
+dovrebbero assicurare che nessun elemento possa essere introdotto in un
+documento SMIL senza questo attributo.
+
+*Esempi*
+
+/1) Associazione di link con sottoparti spaziali/
+
+Nell'esempio che segue lo spazio di schermo occupato da un video clip è
+diviso in due sezioni. A ciascuna di queste sezioni viene associato un
+link differente.
+
+<video src="http://www.w3.org/CoolStuff">
+  <anchor href="http://www.w3.org/AudioVideo" coords="0%,0%,50%,50%"/>
+  <anchor href="http://www.w3.org/Style"      coords="50%,50%,100%,100%"/>
+</video>
+
+/2) Associazione di link con sottoparti temporali/
+
+Nell'esempio che segue la durata di un video clip viene divisa in due
+sotto intervalli. A ciascuno di questi intervalli viene associato un
+link differente.
+
+<video src="http://www.w3.org/CoolStuff">
+  <anchor href="http://www.w3.org/AudioVideo" begin="0s" end="5s"/>
+  <anchor href="http://www.w3.org/Style"      begin="5s" end="10s"/>
+</video>
+
+/3) Salto alla sottoparte di un oggetto/
+
+
+L'esempio che segue contiene un link da un elemento di una presentazione
+A a metà di un oggetto video contenuto in un'altra presentazione B.
+Questo dovrebbe far partire la presentazione B iniziando dal secondo 5
+del video (cioè la presentazione partirebbe come se l'utente avesse
+portato avanti velocemente l'intera presentazione al punto in cui inizia
+il frammento video designato nel "CoolStuff").
+
+Presentation A:
+
+<a href="http://www.cwi.nl/mm/presentationB#tim">
+   <video id="graph" src="rtsp://foo.com/graph.imf" region="l_window"/>
+</a>
+
+
+Presentation B:
+
+<video src="http://www.w3.org/CoolStuff">
+  <anchor id="joe" begin="0s" end="5s"/>
+  <anchor id="tim" begin="5s" end="10s"/>
+</video>
+
+/4) Combinare usi diversi di link/
+
+L'esempio che segue mostra come gli usi diversi dei link associati
+possono essere utilizzati in combinazione.
+
+Presentation A:
+
+<a href="http://www.cwi.nl/mm/presentationB#tim">
+  <video id="graph" src="rtsp://foo.com/graph.imf" region="l_window"/>
+</a>
+
+
+Presentation B:
+
+<video src="http://www.w3.org/CoolStuff">
+  <anchor id="joe" begin="0s" end="5s" coords="0%,0%,50%,50%"
+          href="http://www.w3.org/"/>
+  <anchor id="tim" begin="5s" end="10s" coords="0%,0%,50%,50%"
+          href="http://www.w3.org/Tim"/>
+</video>
+
+
+    5 La DTD di SMIL
+
+
+      5.1 *Relazione con XML*
+
+Un documento SMIL 1.0 può facoltativamente contenere una dichiarazione
+di tipo di documento che nomina la definizione di tipo di documento
+(DTD) in uso per il documento. Per SMIL, la dichiarazione di tipo di
+documento dovrebbe apparire come segue (le doppie virgolette possono
+essere sostituite dalle virgolette singole).
+
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN"
+               "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+
+La specifica XML 1.0 fornisce un modo per estendere la DTD usando
+l'elemento <!DOCTYPE>, per esempio aggiungendo un nuovo insieme di
+definizioni di entità. Gli autori non dovrebbero usare questa
+caratteristica con SMIL poichè molti player di SMIL non la supporteranno.
+
+Quello che segue non è legale in SMIL:
+
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN"
+               "http://www.w3.org/TR/REC-smil/SMIL10.dtd" [
+<!ENTITY % AcmeCorpSymbols PUBLIC
+     "-//Acme Corp//ENTITIES Corporate Symbols//EN"
+     "http://www.acme.com/corp_symbols.xml"
+>
+%AcmeCorpSymbols;
+]>
+
+
+      5.2 DTD
+
+<!--
+
+    This is the XML document type definition (DTD) for SMIL 1.0.
+
+    Date: 1998/06/15 08:56:30
+
+    Authors: 
+        Jacco van Ossenbruggen <jrvosse@cwi.nl> 
+        Sjoerd Mullender       <sjoerd@cwi.nl>
+        
+    Further information about SMIL is available at:
+
+          http://www.w3.org/AudioVideo/
+
+-->
+
+<!-- Generally useful entities -->
+<!ENTITY % id-attr "id ID #IMPLIED">
+<!ENTITY % title-attr "title CDATA #IMPLIED">
+<!ENTITY % skip-attr "skip-content (true|false) 'true'">
+<!ENTITY % desc-attr "
+        %title-attr;
+        abstract        CDATA   #IMPLIED
+        author          CDATA   #IMPLIED
+        copyright       CDATA   #IMPLIED
+">
+
+<!--=================== SMIL Document =====================================-->
+<!--
+     The root element SMIL contains all other elements.
+-->
+<!ELEMENT smil (head?,body?)>
+<!ATTLIST smil
+        %id-attr;
+>
+
+<!--=================== The Document Head =================================-->
+<!ENTITY % layout-section "layout|switch">
+
+<!ENTITY % head-element "(meta*,((%layout-section;), meta*))?">
+
+<!ELEMENT head %head-element;>
+<!ATTLIST head %id-attr;>
+
+
+<!--=================== Layout Element ====================================-->
+<!--
+     Layout contains the region and root-layout elements defined by
+     smil-basic-layout or other elements defined an external layout 
+     mechanism.
+-->
+<!ELEMENT layout ANY>
+<!ATTLIST layout
+        %id-attr;
+        type CDATA      "text/smil-basic-layout"
+>
+
+
+<!--=================== Region Element ===================================-->
+<!ENTITY % viewport-attrs "
+        height              CDATA    #IMPLIED
+        width               CDATA    #IMPLIED
+        background-color    CDATA    #IMPLIED
+">
+
+<!ELEMENT region EMPTY>
+<!ATTLIST region
+        %id-attr;
+        %title-attr;
+        %viewport-attrs;
+        left                CDATA    "0"
+        top                 CDATA    "0"
+        z-index             CDATA    "0"
+        fit                 (hidden|fill|meet|scroll|slice)    "hidden"
+        %skip-attr;
+>
+
+<!--=================== Root-layout Element ================================-->
+<!ELEMENT root-layout EMPTY>
+<!ATTLIST root-layout
+        %id-attr;
+        %title-attr;
+        %viewport-attrs;
+        %skip-attr;
+>
+
+
+<!--=================== Meta Element=======================================-->
+<!ELEMENT meta EMPTY>
+<!ATTLIST meta
+        name    NMTOKEN #REQUIRED
+        content CDATA   #REQUIRED
+        %skip-attr;
+>
+
+<!--=================== The Document Body =================================-->
+<!ENTITY % media-object "audio|video|text|img|animation|textstream|ref">
+<!ENTITY % schedule "par|seq|(%media-object;)">
+<!ENTITY % inline-link "a">
+<!ENTITY % assoc-link "anchor">
+<!ENTITY % link "%inline-link;">
+<!ENTITY % container-content "(%schedule;)|switch|(%link;)">
+<!ENTITY % body-content "(%container-content;)">
+
+<!ELEMENT body (%body-content;)*>
+<!ATTLIST body %id-attr;>
+
+<!--=================== Synchronization Attributes ========================-->
+<!ENTITY % sync-attributes "
+        begin   CDATA   #IMPLIED
+        end     CDATA   #IMPLIED
+">
+
+<!--=================== Switch Parameter Attributes =======================-->
+<!ENTITY % system-attribute "
+        system-bitrate             CDATA                #IMPLIED
+        system-language            CDATA                #IMPLIED
+        system-required            NMTOKEN              #IMPLIED
+        system-screen-size         CDATA                #IMPLIED
+        system-screen-depth        CDATA                #IMPLIED
+        system-captions            (on|off)             #IMPLIED
+        system-overdub-or-caption  (caption|overdub)    #IMPLIED
+">
+
+<!--=================== Fill Attribute ====================================-->
+<!ENTITY % fill-attribute "
+        fill    (remove|freeze)    'remove'
+">
+
+
+<!--=================== The Parallel Element ==============================-->
+<!ENTITY % par-content "%container-content;">
+<!ELEMENT par    (%par-content;)*>
+<!ATTLIST par
+        %id-attr;
+        %desc-attr;
+        endsync CDATA           "last"
+        dur     CDATA           #IMPLIED
+        repeat  CDATA           "1"
+        region  IDREF           #IMPLIED
+        %sync-attributes;
+        %system-attribute;
+>
+
+<!--=================== The Sequential Element ============================-->
+<!ENTITY % seq-content "%container-content;">
+<!ELEMENT seq    (%seq-content;)*>
+<!ATTLIST seq
+        %id-attr;
+        %desc-attr;
+        dur     CDATA           #IMPLIED
+        repeat  CDATA           "1"
+        region  IDREF           #IMPLIED
+        %sync-attributes;
+        %system-attribute;
+>
+
+<!--=================== The Switch Element ================================-->
+<!-- In the head, a switch may contain only layout elements,
+     in the body, only container elements. However, this
+     constraint cannot be expressed in the DTD (?), so
+     we allow both:
+-->
+<!ENTITY % switch-content "layout|(%container-content;)">
+<!ELEMENT switch (%switch-content;)*>
+<!ATTLIST switch
+        %id-attr;
+        %title-attr;
+>
+
+<!--=================== Media Object Elements =============================-->
+<!-- SMIL only defines the structure. The real media data is
+     referenced by the src attribute of the media objects.
+-->
+
+<!-- Furthermore, they have the following attributes as defined
+     in the SMIL specification:
+-->
+<!ENTITY % mo-attributes "
+        %id-attr;
+        %desc-attr;
+        region     IDREF           #IMPLIED
+        alt        CDATA           #IMPLIED
+        longdesc   CDATA           #IMPLIED
+        src        CDATA           #IMPLIED
+        type       CDATA           #IMPLIED
+        dur        CDATA           #IMPLIED
+        repeat     CDATA           '1'
+        %fill-attribute;
+        %sync-attributes;
+        %system-attribute;
+">
+
+<!--
+     Most info is in the attributes, media objects are empty or
+     contain associated link elements:
+-->
+<!ENTITY % mo-content "(%assoc-link;)*">
+<!ENTITY % clip-attrs "
+        clip-begin      CDATA   #IMPLIED
+        clip-end        CDATA   #IMPLIED
+">
+
+<!ELEMENT ref           %mo-content;>
+<!ELEMENT audio         %mo-content;>
+<!ELEMENT img           %mo-content;>
+<!ELEMENT video         %mo-content;>
+<!ELEMENT text          %mo-content;>
+<!ELEMENT textstream    %mo-content;>
+<!ELEMENT animation     %mo-content;>
+
+<!ATTLIST ref           %mo-attributes; %clip-attrs;>
+<!ATTLIST audio         %mo-attributes; %clip-attrs;>
+<!ATTLIST video         %mo-attributes; %clip-attrs;>
+<!ATTLIST animation     %mo-attributes; %clip-attrs;>
+<!ATTLIST textstream    %mo-attributes; %clip-attrs;>
+<!ATTLIST text          %mo-attributes;>
+<!ATTLIST img           %mo-attributes;>
+
+<!--=================== Link Elements =====================================-->
+
+<!ENTITY % smil-link-attributes "
+        %id-attr;
+        %title-attr;
+        href            CDATA                   #REQUIRED
+        show            (replace|new|pause)     'replace'
+">
+
+
+<!--=================== Inline Link Element ===============================-->
+<!ELEMENT a (%schedule;|switch)*>
+<!ATTLIST a
+        %smil-link-attributes;
+>
+
+
+<!--=================== Associated Link Element ===========================-->
+<!ELEMENT anchor EMPTY>
+<!ATTLIST anchor
+        %skip-attr;
+        %smil-link-attributes;
+        %sync-attributes;
+        coords          CDATA                   #IMPLIED
+>
+
+
+    Riferimenti
+
+*[CSS2]*
+    "Cascading Style Sheets, level 2", B. Bos, H. Lie, C. Lilley, I.
+    Jacobs, 12 May 1998.
+    Disponibile all'indirizzo: http://www.w3.org/TR/REC-CSS2/.
+*[HTML40]*
+    "HTML 4.0 Specification", D. Raggett, A. Le Hors, I. Jacobs, 24
+    April 1998.
+    Disponibile all'indirizzo: http://www.w3.org/TR/REC-html40/
+    <http://www.w3.org/TR/REC-html40>. 
+*[ISO/IEC 10646]*
+    ISO (International Organization for Standardization). ISO/IEC
+    10646-1993 (E). Information technology -- Universal Multiple-Octet
+    Coded Character Set (UCS) -- Part 1: Architecture and Basic
+    Multilingual Plane. [Geneva]: International Organization for
+    Standardization, 1993 (plus amendments AM 1 through AM 7).
+*[NAMESPACES]*
+    "Namespaces in XML", T. Bray, D. Hollander, A. Layman, 27 March 1998
+W3C working draft. Disponibile all'indirizzo:
+http://www.w3.org/TR/WD-xml-names.
+*[PICS]*
+    "PICS 1.1 Label Distribution -- Label Syntax and Communication
+    Protocols", 31 October 1996, T. Krauskopf, J. Miller, P. Resnick, W.
+    Trees
+Disponibile all'indirizzo: http://www.w3.org/TR/REC-PICS-labels-961031
+*[RFC1738]*
+    "Uniform Resource Locators", T. Berners-Lee, L. Masinter, and M.
+    McCahill, December 1994.
+Disponibile all'indirizzo: ftp://ftp.isi.edu/in-notes/rfc1738.txt.
+*[RFC1766]*
+    "Tags for the Identification of Languages", H. Alvestrand, March 1995.
+Disponibile all'indirizzo: ftp://ftp.isi.edu/in-notes/rfc1766.txt.
+*[RFC1808]*
+    "Relative Uniform Resource Locators", R. Fielding, June 1995.
+Disponibile all'indirizzo: ftp://ftp.isi.edu/in-notes/rfc1808.txt.
+*[RFC2045]*
+    "Multipurpose Internet Mail Extensions (MIME) Part One: Format of
+    Internet Message Bodies", N. Freed and N. Borenstein, November 1996.
+Disponibile all'indirizzo: ftp://ftp.isi.edu/in-notes/rfc2045.txt. Note
+that this RFC obsoletes RFC1521, RFC1522, and RFC1590.
+*[SMPTE]*
+    "Time and Control Codes for 24, 25 or 30 Frame-Per-Second
+    Motion-Picture Systems - RP 136-1995".  Society of Motion Picture &
+    Television Engineers.
+*[URI]*
+    "Uniform Resource Identifiers (URI): Generic Syntax and Semantics",
+    T. Berners-Lee, R. Fielding, L. Masinter, 4 March 1998.
+Disponibile all'indirizzo:
+http://www.ics.uci.edu/pub/ietf/uri/draft-fielding-uri-syntax-02.txt.
+This is a work in progress that is expected to update [RFC1738]
+<#ref-RFC1738> and [RFC1808] <#ref-RFC1808>.
+*[XML10]*
+    "Extensible Markup Language (XML) 1.0", T. Bray, J. Paoli, C.M.
+    Sperberg-McQueen, editors, 10 February 1998.
+Disponibile all'indirizzo: http://www.w3.org/TR/REC-xml/
+<http://www.w3.org/TR/REC-xml>
+
+
+    Appendice
+
+
+      Estensioni di SMIL 1.0
+
+/(non-normative)/
+
+In futuro SMIL 1.0 potrebbe essere esteso da un'altra raccomandazione
+del W3C o da estensioni private.
+
+Per queste estensioni, è raccomandabile che vengano osservate le regole
+che seguono:
+
+  * Tutti gli elementi introdotti nelle estensioni devono avere un
+    attributo "skip-content" (definito nella Sezione 3.3.1) dovrebbe
+    essere possibile che il loro contenuto sia processato dai player di
+    SMIL 1.0
+  * Le estensioni private decono essere introdotte usando la sintassi
+    specificata nei namespace di XML.
+
+Si raccomanda che i player SMIL vengano preparati per manipolare i
+documenti che contengono estensioni che osservano queste due regole.
+
+Le estensioni dovrebbero essere manipolate usando il meccanismo di
+namespace di XML, una volta che tale meccanismo diventa una
+raccomandazione del W3C. Nel resto della sezione viene usata la sintassi
+e la semantica dei namespace di XML definiti nella note del W3C
+[NAMESPACE] solo come dimostrazione:
+
+Possono presentarsi i seguenti casi:
+
+ 1. Il documento contiene una dichiarazione di namespace per la
+    specifica SMIL 1.0 che definisce un prefisso vuoto. In questo caso
+    un elemento non SMIL 1.0 e gli attributi non sono accettati in un
+    documento se sono dichiarati usando un namespace XML. Il documento
+    può non contenere una dichiarazione di tipo di documento per SMIL
+    1.0. Se è così non è valido. Nell'esempio che segue l'elemento
+    "new:a" è una estensione legale. L'elemento "mytags:a" e "b" sono
+    errori di sintassi poichè non sono stati dichiarati usando il
+    namespace di XML.
+
+    <?xml:namespace ns="http://www.acme.com/new-smil" prefix="new" ?>
+    <?xml:namespace ns="http://www.w3.org/TR/PR-smil" ?>
+    <smil>
+      <body>
+        <par>
+          <new:a>
+          ...
+          </new:a>
+          <mytags:a ... />
+            ...
+          </mytags:a>
+          <b>
+           ...
+          </b>
+        </par>
+       </body>
+     </smil>
+
+ 2. Il documento non contiene dichiarazione del tipo di documento, ma
+    contiene una dichiarazione di tipo di documento per una versione di
+    SMIL superiore a 1.0, o contiene una dichiarazione di namespace per
+    una specifica di SMIL con una versione superiore di 1.0. Per un
+    player SMIL 1.0 capace di riconoscere questo tipo di dichiarazione
+    di namespace, si raccomanda che la URI delle versioni future di SMIL
+    inizino con http://www.w3.org/TR/REC-smil, e siano seguite da più
+    caratteri che possono essere per esempio il numero della versione.
+    In questo caso un player SMIL 1.0 dovrebbe assumere che viene
+    processato un documento SMIL con un numero di versione maggiore di 1.0.
+    Possono presentarsi i seguenti casi:
+
+    Unknown element
+        Gli elementi unknown vengono ignorati
+        Un elemento unknown può contenere contenuto consistente in
+        elementi di SMIL 1.0. Se questo tipo di contenuto viene ignorato
+        o processato dipende dal valore dell'attributo "skip-content".
+        Se l'attributo è posto a "true", o l'attributo è assente, il
+        contenuto non viene processato. Se è posto a "false" il
+        contenuto viene processato. 
+
+    Conteuto in elementi che venivano dichiarati "Empty"
+        Una versione futura di SMIL può permettere il contenuto negli
+        elementi che sono dichiarati come "empty" in SMIL 1.0.
+        Se questo contenuto viene ignorato o meno dipende dal valore
+        dell'attributo "skip-content" nell'elemento precedentemente
+        vuoto. Se l'attributo è posto a "true", il contenuto non viene
+        processato. Se è posto a "false" il contenuto viene processato.
+    Unknown Attribute
+        Gli attributi sconosciuti vengono ignorati.
+    Unknown Attribute Value
+        Gli attributi con valori di attributo sconosciuti vengono ignorati.
+
+ 3. Il documento contiene una dichiarazione di tipo di documento per
+    SMIL 1.0. In questo caso, potrebbe contenere elementi non SMIL 1.0,
+    anche se vengono dichiarati nel namespace di XML. Questo perchè
+    questo tipo di estensioni renderebbero il documento non valido.
+
+
+      L'uso di SMIL 1.0 come estensione
+
+Quando il meccanismo di namespace di XML viene usato per includere
+elementi e attributi SMIL in altri documenti basati su XML, viene
+raccomandato di usare il seguente identificatore di namespace:
+http://www.w3.org/TR/REC-smil

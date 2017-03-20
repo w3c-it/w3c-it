@@ -1,0 +1,6 @@
+*~
+*.bak
+_site
+_www.w3c.it
+_static
+.sass-cache

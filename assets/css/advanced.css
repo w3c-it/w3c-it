@@ -1,0 +1,858 @@
+/* **************** B. PAGE LAYOUT ***************** */
+body {
+    font:13px/1.231 sans-serif;
+}
+
+body {
+    background: #fff url(../images/page/page_bkg.jpg) repeat-x top left;
+}
+body.w3c_member {
+    background: #fff url(../images/page/page_bkg_member.jpg) repeat-x top left;
+}
+body.w3c_team {
+    background: #fff url(../images/page/page_bkg_team.jpg) repeat-x top left;
+}
+#w3c_container{
+    margin-right:2%;
+    font-size:108%;
+    line-height:1.41667;
+}
+
+/* head */
+#w3c_mast{
+    height: 107px;
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+}
+#w3c_mast p{
+    font-size: 110%;
+    font-style:italic;
+    color:#424242;
+    padding: 20px 30px;
+}
+#w3c_mast h1{
+    float:left;
+    padding:0;
+    text-align:right;
+    height: 107px;
+} 
+/* #homelogo may be used on home page; see mast-home.xml */
+/*#w3c_mast h1 a, #w3c_mast h1 #homelogo {display : block; margin:24px 22px 25px 89px; padding: 10px}*/ /*padding for larger clickable area*/
+#w3c_mast h1 a { 
+    display: block;
+    float: left;
+    background: url('../images/logo-w3c-screen-lg.gif') no-repeat top left;
+    width: 100%;
+    height: 107px;
+    position: relative;
+    z-index: 1;
+}
+#w3c_mast h1 a:hover {border: 0;}
+#w3c_mast h1 a img {display: none;}
+.w3c_member #w3c_mast h1 a,
+.w3c_member #w3c_mast h1 a:hover,
+.w3c_team #w3c_mast h1 a,
+.w3c_team #w3c_mast h1 a:hover {
+    border: 0;
+    text-decoration: none;
+}
+.w3c_member #w3c_mast h1 a {background: url('../images/logo-w3c-member-lg.gif') no-repeat top left;}
+.w3c_team #w3c_mast h1 a {background: url('../images/logo-w3c-team-lg.gif') no-repeat top left;}
+
+/*alternative text for logo*/
+.alt-logo {
+    display: block;
+    position: absolute;
+    left: 20px;
+    z-index: 0;
+    background-color: #fff;
+}
+#w3c_mast img{
+    display:block;
+    vertical-align: top;	
+}
+/* top nav */
+#w3c_nav{
+    clear: none;
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+}
+#w3c_nav form#region_form {
+    float: right;
+    margin-right: 20px;
+    margin-top: 8px;
+}
+#w3c_nav form#region_form select {
+    display: block;
+    width: 14.3em;
+    max-width: 14.3em;
+    color: #333;
+    border: 1px solid #d1d1d1;    
+    float: left;
+}
+#w3c_nav form#region_form select option {max-height: 19px; overflow: hidden;}
+#region_form input.button {display: inline;}
+.main_nav {
+    display: block;
+    width: 98%;
+	_width: 95%;
+    margin-left: 2.4%;
+    float: left;
+    padding: 27px 0 0 0;
+    text-shadow: 0 1px 1px #FFFFFF;
+}
+.main_nav a,
+.main_nav a:link,
+.main_nav span { 
+    font-weight: normal
+}
+.main_nav a,
+.main_nav span {
+    display:block;
+}
+.main_nav a,
+.main_nav span {
+    padding: 10px 10px 12px 10px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #fff;
+    color:#0C3D5F;
+    border-bottom: none;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+.main_nav a:hover,
+.main_nav a:focus,
+.main_nav a.current {
+    color: #333;
+    background-color: #fafafa;
+    border-bottom: none;
+}
+.main_nav  a, .main_nav  a:link, .main_nav  a:hover, .main_nav  a:active, .main_nav  a:visited {
+	_border-bottom: 0;
+	padding:10px 10px 12px;
+}
+.main_nav li {
+    float:left;    
+    text-align: center;
+}
+.main_nav li.last-item a{
+    border-right: none;
+}
+.main_nav li.first-item a{
+    border-left:0 none;
+    text-align:left;
+	_border-bottom: 0;
+}
+.main_nav li.search-item {    
+    width: 20%;
+    float: right;
+    margin-right: 20px; 
+}
+.extra_nav,
+.w3c_home .extra_nav { 
+    display: none;
+}
+.secondary_nav{ 
+    margin-top: 10px;
+	margin-bottom: 0;
+	margin-left: 3.2%;
+	padding: 5px 7px;
+    float:left;    
+	font-size: .85em;	
+	background: #e8e7e7;	
+	-webkit-box-shadow: 0px 1px 2px #fff;
+	-moz-box-shadow: 0px 1px 2px #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; 
+	border-top: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+}
+.secondary_nav li {
+    display:inline;
+    display:inline-block;
+    _float:left;
+    padding-left: 10px;
+    float:left;
+}
+.secondary_nav li.label {padding-left: 5px; padding-right: 3px;}
+.secondary_nav .text {max-width:none;}
+.secondary_nav li a:hover {text-decoration: none; border: 0; color: #000;}
+
+/* search form */
+#search-form {
+    border-bottom: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    border-top: 1px solid #b6b6b6;
+    background: url('../images/search-bg.png') repeat-x top left;
+    height: 28px;
+    width: 100%;
+    float:right;
+    clear: both;
+    position: relative;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; 
+}
+#search-form input.text {
+    border: none;
+    color:#333;
+    float:left;
+    font-size:1.3em;
+    margin-left:2px;
+    margin-top:4px;
+    width:70%;
+}
+#search-form button {
+    position:absolute;
+    right:3px;
+    top:6px;
+    vertical-align:middle;
+}
+#search-form button img.submit {float: right;}
+/* main - coeur du page */
+#w3c_main {
+    background: #eee;
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+}
+#w3c_logo_shadow {overflow: hidden; display: block;}
+#w3c_logo_shadow img {width: 100%;}
+#content {
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+}
+#w3c_main p,
+#w3c_main li {    
+    line-height: 1.5;
+}
+#w3c_main li.vevent .date {
+    border-bottom: 1px solid #E2E2E2;
+    margin-bottom: 18px;
+    padding-bottom: 4px;
+}
+#w3c_main li.vevent p.summary a,
+#w3c_main li.vevent p.summary a:link,
+#w3c_main li.vevent p.summary a:visited {
+    border: none;
+}
+#w3c_main li.vevent p.summary a:hover {
+    border-bottom: 2px solid #005A9C;
+}
+#w3c_main p.about {
+    color: #23668F;
+    margin-top:0.7%;
+    padding-top: 0;
+    font-size: .9em;
+}
+#w3c_main .bct { 
+    max-width: none;
+    font-size: .9em;
+}
+#w3c_main .bct li.current {padding: 0 0 9px;}
+.w3c_public #w3c_main .bct li.current {
+    background: #fff url('../images/bct.png') no-repeat bottom center;    
+}
+.w3c_member #w3c_main .bct li.current {
+    background: #fff url('../images/bct-member.png') no-repeat bottom center;
+}
+.w3c_team #w3c_main .bct li.current {
+    background: #fff url('../images/bct-team.png') no-repeat bottom center;
+}
+
+/* breadcrumb trail */
+.bct {
+    padding: 4px 20px 7px 0;
+}
+.bct li .cr { 
+    padding: 0 .83em
+}
+#w3c_crumbs br { 
+    display:inline;
+}
+#w3c_crumbs_frame { 
+    background-color: #fff;
+}
+
+/* Skip to content */
+.bct .skip {
+    display:inline;
+    background: #fff url('../images/skip.png') no-repeat center;
+    text-align: center;
+    width: 55px;
+    float: right;
+    position: relative;
+    left: 10px;
+    bottom: 3px;
+}
+.bct .skip a { 
+    color: #333;
+    font-size: 85%;
+}
+
+/* footer */
+#w3c_footer {
+    text-align:center;
+    background: #fff url('../images/footer-shadow.png') no-repeat top center;
+    width: 100%;
+}
+#w3c_footer a:hover {text-decoration: underline;}
+#w3c_footer-inner {    
+    padding:30px 0 20px 0;
+    max-width: 600px;
+	_width: 600px;
+    margin: 0 auto;
+}
+#w3c_footer-inner .main_nav { 
+    display:none;
+}
+#w3c_footer-inner ul {text-align: left;}
+
+/* footer nav */
+.w3c_footer-nav{
+    float: left;
+    margin-left: 10px;
+    margin-top: 0;
+}
+.w3c_footer-nav h3{
+    text-align: left;
+}
+.w3c_footer-nav ul{
+    padding: 10px 20px;
+}
+.w3c_footer-nav a:hover img.social-icon {
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+} 
+
+.copyright {
+    clear:both;
+    color:#333;
+    font-size:.9em;
+    padding-top:30px;
+}
+#w3c_footer a:link, #w3c_footer a:visited { border-bottom: none; }
+
+/* columns */
+/*.w3c_leftCol{display:block;float:left; padding-top: 50px; }*/
+.w3c_home .w3c_leftCol {
+    display:block;
+    float:left;
+    padding-top: 0;
+}
+.w3c_leftCol {
+    display:block;
+    float:left;
+    padding-top: 0;
+    clear: left;
+}
+.w3c_leftCol h3 a:hover,
+h2.category a:hover {
+     background: none;
+     color: #2673AB;
+     text-decoration: none;
+}
+.w3c_mainCol {
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+    background-color: #fff;
+    padding-left: 3%;
+    padding-bottom: 3%;
+    padding-top: 1.1%;
+}
+
+/* left col width */
+/* Can be resizable (20%) or fixed (~219px) */
+/* Note that the page before the footer is 20% of 98% since there is
+   a right margin of 2% for the gradient background image */
+/* Therefore, the footer calculation is 20% of 98% to match */
+#w3c_mast h1,
+.w3c_leftCol { 
+    width: 20%;
+}
+#w3c_crumbs_frame, .line .size2on3 {        
+    margin-right: 1.3%;
+}
+
+/* more cols */
+.w3c_member #w3c_acl { 
+    width: 185px;
+    padding-right: 0;
+    padding-left: 0
+}
+.w3c_alt #w3c_acl,
+.w3c_member_alt #w3c_acl,
+.w3c_team #w3c_acl {
+    margin: 0;
+    width: 210px;
+    text-align: right;
+    padding: 5px 0 0 0;
+    float: left;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* **************** C. GRIDS ***************** */
+.line,
+.lastUnit {
+    overflow: hidden;
+    _overflow: visible;
+    zoom:1;
+}
+.unit{
+    float:left;
+    zoom:1;
+}
+.size1on2{width:50%}
+.size1on3{width:33.33333%}
+.size2on3{width:66.66666%}
+.size1on4{width:25%}
+.size3on4{width:75%}
+.size1on5{width:20%}
+.size2on5{width:40%}
+.size3on5{width:60%}
+.size4on5{width:80%}
+
+.lastUnit {
+    float:none;
+    _position:relative;
+    _left:-3px;
+    _margin-right: -3px;
+    width:auto;
+}
+.w3c_home .lastUnit h2.category {margin-bottom: 15px;}
+
+/* **************** D. USEFUL CLASSES ***************** */
+.intro {
+    line-height:1.8em;
+}
+#w3c_content_body .intro p, #w3c_content_body p.intro  {
+    color: #333;
+    font-size:.9em;
+}
+ul.w3c_toc {
+    background-color: #f2f7fb;
+    padding: 5px 20px;
+    border-top: 1px solid #fff;
+    font-size: .9em; 
+	width: 100%;
+}
+ul.w3c_toc li {
+    display: inline;    
+}
+ul.w3c_toc li.toc_prefix{
+   margin-right: 10px;
+   padding: 2px 4px;
+   background-color: #fff; 
+}       
+ul.w3c_toc li .bullet {
+    font-size: 1.4em;
+    color: #cbd9e4;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+.date {
+    font-size: .85em;    
+}
+.w3c_events_talks .date .dtyear {
+    color:#FFFFFF;
+    font-size: .85em;
+    font-weight: bold;
+    float: none;
+    margin: 0;
+	vertical-align: top;
+}
+.w3c_events_talks .info-wrap {clear: none;}
+.w3c_events_talks .date .dtstart,
+.w3c_events_talks .date .dtend {
+    color:#333;
+    font-size: .8em;
+    display: block;
+    font-weight: bold;
+    line-height: 11px;
+    text-transform: uppercase;
+}
+.w3c_events_talks .date .dtstart {padding-top: 2px;}
+.w3c_events_talks .date .date-separator {display: none;}
+.w3c_events_talks .date .dtstart.single {padding: 2px 5px 0;}
+
+.w3c_image {
+    border: 1px #999 solid;
+    padding: 2px
+}
+
+/* **************** E. CONTENT ***************** */
+h2, .h2  { margin-top: 0; }
+h1, h2, h3, h4, h5, h6, ul, ol, dl, p, pre, blockquote {padding:20px 20px 0 20px;}
+code {color: #000;}
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p { padding-top:0;}
+
+
+/* ====== Headings ====== */
+
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1, #w3c_mast h1, .h1{font-size:136%;  font-weight:normal; overflow: hidden;}
+h2, .h2{font-size:167%; font-weight:normal; }
+h3, .h3{font-size:131%; font-weight:normal;}
+h4, .h4{font-size:131%; font-weight:normal; }
+h5, .h5{font-size:100%; font-weight:normal;}
+h6, .h6{font-size:85%; font-weight:normal; }
+
+.category{
+    font-size:108%;
+    font-weight:normal;
+    font-style: normal;
+    text-transform:uppercase;
+    color: #333;    
+}
+h3.category {
+    background: #E7E6E6 url('../images/category-bg-fold.png') no-repeat bottom right;
+    text-shadow: #fff 0 1px 2px;
+    color: #347cb0;
+    padding: 0 6px 0 0;
+    width: 100%;
+    position: relative;
+    margin-top: 8px;
+	_margin: 0;	
+	_width: 105%;
+}
+h2.category, .h2.category{
+    background: #FCFBFB url('../images/category-bg-right.png') repeat-x bottom right;
+    text-shadow: #fff 0 1px 2px;
+    color: #347cb0;
+    padding: 5px 11px 15px 10px;
+    margin: 20px 0 3px 10px;
+    font-weight: bold;
+}
+#w3c_home_member_testimonials h3 {padding: 0 20px;}
+h3.category .ribbon{
+    background: #E7E6E6 url('../images/category-bg.png') repeat-x bottom right;        
+    display: block;
+    padding: 8px 5px 13px 20px;
+}
+h3.category a,
+h2.category a,
+.h2.category a {
+    color: #17445F;
+    font-weight: bold;
+    border: none;
+}
+/* additional headings */
+h1.title {
+    padding:10px 20px;
+    font-size: 200%;
+    border-bottom: 1px solid #C6D4E0;
+}
+h1.title img { 
+    float: right;
+    margin-top: -2px;
+    display: inline;
+}
+
+/* ====== Media Blocks ======*/
+
+.media,
+.media .text {
+    width: auto;
+}
+.media .media {
+    float:left;
+    margin:20px 0 0 20px;
+}
+
+/*.wrap .text{ _float:none; overflow:visible;}*/
+/* headline extends media to create bread crumb trail, main page heading, etc. */
+/*.headline{background: url(../images/page/headline) repeat-y;}*/
+.headline .text {
+    min-height:33px;
+}
+.headline .media {
+    margin:0;
+}
+.headline h1,
+.headline h2,
+.headline h3,
+.headline h4,
+.headline h5,
+.headline h6 {padding:5px 20px;}
+
+
+/* ====== Lists ======*/
+
+ol.show_items li,
+.entry ol li,
+ul.show_items li,
+.entry ul li { 
+    margin-left: 40px;
+}
+
+/* theme list */
+.theme{padding-top: 10px 0 20px 0;}
+.theme ul{display:none;}
+.theme li{border-bottom: 1px solid #ddd; }
+.theme a {display:block; overflow:hidden; _overflow:visible;zoom:1;font-weight: normal; padding: 5px 0 5px 5px;}
+.theme a.current {background-color: #fff; border-bottom: none;}
+.theme .icon{background: url(../images/theme-all.png) no-repeat left top;height:22px; width:22px; display:block; float:left; margin-right:10px; -moz-border-radius: 5px;}
+.theme .devices .icon{background-position: -22px 0;}
+.theme .arch .icon{background-position: -44px 0;}
+.theme .design .icon{background-position: -66px 0;}
+.theme .semantics .icon{background-position: -88px 0;}
+.theme .services .icon{background-position: -110px 0;}
+.theme .xml .icon{background-position: -132px 0;}
+.theme .allspecs .icon{background-image: none;}
+/* theme list extended - larger icons 
+     To create a custom list item with it's own image set the background property of the span.icon to your new 44px x 44px image.
+	 <span class="icon" style="background-image: url(myCustomIcon);"></span>
+	 There should never be text within this span as it has a fixed height and width
+*/
+.theme_ext {padding: 0;}
+.theme_ext li.theme_ext_item{position: relative;padding-left: 64px; }
+.theme_ext li.theme_ext_item ul { font-size: 85%; padding-left: 20px; }
+.theme_ext .icon{background: pink url(../images/icon_sprite.png) no-repeat 0 0;height:44px; width:44px;display:block;position:absolute; top:28px; left:20px; _left: -63px; _top: 24px;}
+.theme_ext .about_donations .icon{ background-position: -1144px 0;}
+.theme_ext .about_facts .icon{ background-position: -1100px 0;}
+.theme_ext .about_jobs .icon{ background-position: -1056px 0;}
+.theme_ext .about_locations .icon{ background-position: -1012px 0;}
+.theme_ext .about_mission .icon{ background-position: -968px 0;}
+.theme_ext .about_press .icon{ background-position: -924px 0;}
+.theme_ext .comingsoon .icon{ background-position: -880px 0;}
+.theme_ext .membership_policies .icon{background-position: -660px 0; }
+.theme_ext .membership_admin .icon{background-position: -704px 0;}
+.theme_ext .membership_join .icon{ background-position: -748px 0;}
+.theme_ext .membership_fees .icon{background-position: -792px 0;  }
+.theme_ext .membership_benefits .icon{ background-position: -836px 0;}
+.theme_ext .participate_calendar .icon{ background-position: -616px 0;}
+.theme_ext .participate_groups .icon{ background-position: -572px 0;}
+.theme_ext .participate_implementation .icon{ background-position: -528px 0;}
+.theme_ext .participate_liaisons .icon{ background-position: -484px 0;}
+.theme_ext .participate_news .icon{ background-position: -440px 0;}
+.theme_ext .participate_promotion .icon{ background-position: -396px 0;}
+.theme_ext .participate_rss .icon{ background-position: -352px 0;}
+.theme_ext .participate_specifications .icon{ background-position: -308px 0;}
+.theme_ext .standards_agents .icon{ background-position: -264px 0;}
+.theme_ext .standards_webofdevices .icon{ background-position: -220px 0;}
+.theme_ext .standards_webarch .icon{ background-position: -176px 0;}
+.theme_ext .standards_webdesign .icon{ background-position: -132px 0;}
+.theme_ext .standards_semanticweb .icon{ background-position: -88px 0;}
+.theme_ext .standards_webofservices .icon{ background-position: -44px 0;}
+.theme_ext .standards_xml .icon{ background-position: 0px 0;}
+
+/* theme list - right column */
+ul.theme.right-list {padding-top: 5px;}
+.theme.right-list li {border-bottom: 1px solid #eee;}
+.theme.right-list li a:hover {background-color: #eee;}
+
+/* ====== Slideshow ====== */
+
+.w3c_home #w3c_most-recently { /* for home */
+    margin-top: 0!important;
+    padding-top: 0!important;
+} 
+.date { margin-left: 20px; }
+#w3c_most-recently .date { margin-left: 10px; }
+
+.vevent_list .location,
+.vevent_list .source,
+.vevent_list .eventtitle,
+.vevent_list .person {
+    padding:0 20px;
+}
+.main-content {
+    position:relative;
+}
+.w3c_events_talks {    
+    margin-top: 30px;    
+    background-color: #eee;
+}
+
+.w3c_events_talks .unit.size1on2, .w3c_events_talks .unit.size1on1 {
+    background: url('../images/talks-bg-left.png') no-repeat top left;    
+}
+.w3c_events_talks .w3c_upcoming_events,
+.w3c_events_talks .w3c_upcoming_talks{
+    background: url('../images/talks-bg-right.png') no-repeat top right;    
+}
+.w3c_events_talks h2.category {
+    margin: 0 20px 20px;
+    background: #F9F9F9 url('../images/talks-bg.png') repeat-x bottom left;
+	zoom: 1;
+}
+.w3c_events_talks .date {
+    background: #aaa url('../images/calendar-sprite.png') no-repeat top left;
+    border: none;
+    height: 41px;
+    width: 42px;
+	border: none;
+    float: left;
+    margin-right: 10px;    
+    text-align: center;
+}
+.w3c_events_talks ul.vevent_list li{
+    float: left;
+    width: 100%;
+}
+.w3c_events_talks ul.vevent_list .info-wrap {margin-left: 75px;}
+.w3c_events_talks ul.vevent_list .info-wrap p{
+    padding: 0 10px 0  0;
+    font-size: .85em;
+}
+.w3c_events_talks ul.vevent_list .info-wrap p.summary {font-size: 1.1em;}
+.w3c_events_talks ul.vevent_list .info-wrap p.source {color: #9A1724;}
+.w3c_events_talks .w3c_upcoming_events .date {
+    background-position: 0 0;
+    margin-bottom: 0;
+}
+.w3c_events_talks .w3c_upcoming_talks .date {
+    background-position: 0 -49px;
+    margin-bottom: 0;
+}
+
+
+/* **************** G. BLOCK SKINS ***************** */
+
+.testimonial h2 { color: #666 }
+
+/* **************** J. Specifications ***************** */
+
+/* Adjust default look and feel to be more like classic TRs for
+   familiarity but with some integration to new site style */
+.w3c_tr #w3c_crumbs {display:none;}
+.w3c_tr #w3c_footer { padding-left: 0 }
+.w3c_tr .w3c_leftCol { width: 25px }
+.w3c_tr h1.title { 
+    background-color: #FFF;
+    color: #036;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 1em;
+    margin-left: 52px;
+    text-transform: none;
+    font-size: 220%;
+    letter-spacing: -.02em;
+}
+.w3c_tr #w3c_footer-inner { background-image: none!important }
+
+/* Will need additional classes and logos for other types */
+.w3c_tr.tr_rec #w3c_main {
+    background-image: url(../images/TR/logo-REC.gif);
+    background-repeat: no-repeat;
+    background-position: 0% 100px;
+    background-attachment: fixed;
+}
+.w3c_tr #w3c_footer-inner { padding: 20px 0 20px 7%; margin: 0}
+.w3c_tr #w3c_content_body { padding: 1em 0 1em 0; margin-left: 52px; background-color: #fff; }
+.w3c_tr #w3c_logo_shadow { display: none !important;}
+
+
+/* **************** M. HOME PAGE NEWS ***************** */
+
+
+#region_form select { 
+    width: 76%;
+}
+.w3c_home #w3c_most-recently h3 {
+    margin-left: 9px;
+    padding-left: 0;
+}
+.w3c_home #w3c_most-recently h3 span a:hover {border: none;}
+.w3c_home #w3c_most-recently h3 .expand_section:hover {cursor: pointer;}
+.newsImage  {
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+}
+a.imageLink img{
+    float:left;
+    margin-right:1em;
+    display: block;
+    text-decoration: none;
+    border: 1px solid #CDDCED;
+    padding: 2px;
+}
+a.imageLink:hover img{
+    border: 1px solid #3A80B3;
+}
+.expand_section a img {vertical-align: middle; padding-right: .4em;}
+.w3c_javascript .expand_block .expand_description,
+.expand_block .expand_description {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    background: #EEE;
+    border-top: 1px solid #fff;
+}
+
+p.more-content {font-size: .8em; font-weight: bold; }
+p.more-content a { border-bottom: 0; color: #106F0D;}
+p.more-content a:hover {border-bottom: 2px solid #106F0D;}
+
+/* **************** N. Section Expansion *************** */
+
+/* .closed Covers global and individual case */
+.w3c_javascript .expand_block h3 { padding-top: 0; padding-left: 20px; }
+.w3c_javascript .expand_block h4 { padding-left: 20px;color: #333;}
+
+.w3c_javascript .expand_block.closed .expand_description,
+.w3c_javascript .closed .expand_description  {
+    display: none;
+}
+
+/* plus,minus icons and :hover the main headlines in the news section */
+.w3c_javascript .expand_block .headline,
+.expand_block .headline,
+.w3c_javascript .expand_block.closed .headline,
+.expand_block.closed .headline {
+    background: #f1f7fb;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 10px;
+}
+#recentnews .expand_block .headline {
+    padding: 10px 10px 15px 0;    
+}
+#recentnews h2#recent {margin-bottom: 10px;}
+.w3c_javascript .expand_block.closed .headline,
+.expand_block.closed .headline {
+    background: none;
+}
+.w3c_javascript .expand_block.closed .headline:hover,
+.expand_block.closed .headline:hover {
+    background-color: #f1f7fb;
+}
+
+.hierarchy .expand_block .expand_description { margin-bottom: 0;}
+
+/* special case of tr views on screen */
+.w3c_screen .trviewcat h3, .trviewcat h3 { font-size: 108% }
+.w3c_screen .trviewcat h4, .trviewcat h4 { font-size: 100% }
+
+
+/* **************** Menus ***************** */
+
+.menu.expand_block {padding-left: 0;}
+.w3c_javascript .expand_block.menu .expand_description {padding-left: 20px;}
+
+/* Entry news title block */
+#recentnews .entry_title {
+    background-color: #F1F7FB;
+    padding: 20px 10px;
+    margin-top: 10px;
+    border-top: 1px solid #C6D4E0;
+}
+
+#recentnews .entry_title .date,
+#recentnews .entry_title .source,
+#recentnews .entry_title h3 {padding-left: 0;}
+#recentnews .entry_title h3 {font-size: 131%;}
+
+.more-news {
+    font-size: 131%;
+}
+.more-news a {        
+    color: #003366;
+}

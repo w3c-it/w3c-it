@@ -1,0 +1,41 @@
+---
+title: Archivio News Ufficio Italiano W3C
+layout: page
+---
+<div class="w3c_events_talks">
+    <div class="w3c_upcoming_events">
+        <ul class="vevent_list">
+            {% assign sorted = (site.categories.w3cit | sort: 'date') | reverse %}
+            {% for post in sorted %}
+            <li class="vevent">
+                <p class="date">
+                    <span class="dtyear">{{ post.date | date: "%Y" }} </span>
+                    <span class="dtstart single">
+                        {{post.date | date: "%d" }}
+                        {% assign m = post.date | date: "%-m" %}
+                        {% case m %}
+                        {% when '1' %}GEN
+                        {% when '2' %}FEB
+                        {% when '3' %}MAR
+                        {% when '4' %}APR
+                        {% when '5' %}MAG
+                        {% when '6' %}GIU
+                        {% when '7' %}LUG
+                        {% when '8' %}AGO
+                        {% when '9' %}SET
+                        {% when '10' %}OTT
+                        {% when '11' %}NOV
+                        {% when '12' %}DIC
+                        {% endcase %}
+                    </span>
+                </p>
+                <div class="info-wrap">
+                    <p class="summary">
+                        <a href="{{post.url}}">{{post.title}}</a>
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

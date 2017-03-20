@@ -1,0 +1,25 @@
+<ul class="bct">
+<li class="skip"><a tabindex="1" accesskey="2" title="Skip to content (e.g., when browsing via audio)" href="#w3c_content_body">Skip</a></li>
+
+{% assign crumbs = page.url | split: '/' %}
+
+<li>
+  <a href="/{{ site.baseurl }}">Home</a>
+  {% if crumbs.size > 1 %}
+  <span class="cr">»</span>
+  {% endif %}
+</li>
+
+{% for crumb in crumbs offset: 1 %}
+  {% if forloop.last %}
+    <li class="current">
+    {{ crumb | replace:'-',' ' | remove:'/index.html' | remove: '.html' | capitalize }}
+    </li>
+  {% else %}
+    <li>
+    <a>{{ crumb | replace:'-',' ' | remove:'/index.html' | capitalize }}</a>
+    <span class="cr">»</span>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>

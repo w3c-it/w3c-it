@@ -1,0 +1,15 @@
+- title: Home
+  url: /
+  description: Home
+- title: Standard
+  url: /standard.html
+  description: Standard
+- title: Partecipa
+  url: /partecipa.html
+  description: Partecipa
+- title: Associazione
+  url: /associazione.html
+  description: Associazione
+- title: Informazioni sul W3C
+  url: /informazioni-sul-w3c.html
+  description: Informazioni sul W3C

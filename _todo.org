@@ -1,0 +1,25 @@
+* DONE rimuovere it
+* DONE pdf of the closing announcement
+
+* DONE migrate local news
+* DONE migrate w3c news
+
+* DONE migrate talks
+* DONE support for events
+* TODO archive pages for events
+* TODO archive pages for news
+* TODO contenuti
+  - chi siamo
+  - apertura ufficio italiano
+  - mailing list
+  - indirizzi di email
+* TODO copiare un po' di struttura da Hungary
+* TODO google analytics (check and possibly remove)
+* TODO jekyll admin/prose.io
+
+* DONE PRs
+* DONE breadcrumbs (links are not working)
+* DONE talks
+* DONE accessibilita'
+* DONE trasformare i menu in data.yml
+* TODO dry: computo mesi, pagine con elenco eventi
