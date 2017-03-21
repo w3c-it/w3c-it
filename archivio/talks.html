@@ -33,7 +33,7 @@ layout: page
                 
                 <div class="info-wrap">
                     <p class="summary">
-                        <a href="{{talk.url}}">{{talk.title}}</a>
+                        <a href="{{talk.url | prepend: site.baseurl }}">{{talk.title}}</a>
                     </p>
                     
                     <p class="source">{{talk.author}}</p>

@@ -4,21 +4,21 @@
     <head>
         <title>Ufficio Italiano W3C</title>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-        <link rel="Help" href="/Help/" />
+        <link rel="Help" href="http://www.w3.org/Help/" />
 
         <!-- CSS LOCALI -->	
-        <link rel="stylesheet" href="/assets/css/minimum.css" type="text/css" media="handheld, all" />
+        <link rel="stylesheet" href="{{ '/assets/css/minimum.css' | prepend: site.baseurl }}" type="text/css" media="handheld, all" />
         <style type="text/css" media="print, screen and (min-width: 481px)">
          /*<![CDATA[*/
-         @import url("/assets/css/advanced.css");
+         @import url("{{ '/assets/css/advanced.css' | prepend: site.baseurl }}");
          /*]]>*/
         </style>
-        <link href="/assets/css/minimum.css" rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 480px)" />
+        <link href="{{ '/assets/css/minimum.css' | prepend: site.baseurl }}" rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 480px)" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
+        <link rel="stylesheet" href="{{ '/assets/css/print.css' | prepend: site.baseurl }}" type="text/css" media="print" />
         <!-- FINE CSS LOCALI -->	
         
-        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | prepend: site.baseurl }}" type="image/x-icon" />
         <meta name="description" content= "The World Wide Web Consortium (W3C) is an international community where Member organizations, a full-time staff, and the public work together to develop Web standards." />
         <link rel="alternate" type="application/atom+xml" title="W3C News" href="http://www.w3.org/News/atom.xml" />
     </head>
@@ -28,7 +28,7 @@
             <div id="w3c_mast">
                 <!-- HEADER PAGINA -->
                 <h1 class="logo">
-                    <a tabindex="2" accesskey="1" href="/"><img src="/assets/images/logo-w3c-mobile-lg.gif" width="90" height="53" alt="W3C" /></a> <span class="alt-logo">W3C</span>
+                    <a tabindex="2" accesskey="1" href="{{ site.baseurl }}"><img src="{{ '/assets/images/logo-w3c-mobile-lg.gif' | prepend: site.baseurl }}" width="90" height="53" alt="W3C" /></a> <span class="alt-logo">W3C</span>
                 </h1>
                 
                 <!-- BARRA NAVIGAZIONE -->
@@ -92,7 +92,7 @@
                         <ul class="main_nav">
                             {% for item in site.data.menu-top %}
                             <li>
-                                <a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a>
+                                <a href="{{item.url | prepend: site.baseurl}}" title="{{item.description}}">{{item.title}}</a>
                             </li>
                             {% endfor %}
                             <!-- CERCA -->
@@ -118,7 +118,7 @@
             <div id="w3c_main">
                 <!-- LOGO -->
                 <div id="w3c_logo_shadow" class="w3c_leftCol">
-                    <img height="32" alt="" src="/assets/images/logo-shadow" />
+                    <img height="32" alt="" src="{{ '/assets/images/logo-shadow' | prepend: site.baseurl }}" />
                 </div>
                 <!-- FINE LOGO -->
                 
@@ -129,10 +129,10 @@
                     
                     <!-- MENU DI SINISTRA -->
                     {% for section in site.data.menu-sx %}
-                    <h3 class="category {% if forloop.index0 > 0 %}tMarginLg{% endif %}"><span class="ribbon"><a href="{{ section.url }}">{{ section.title }} <img src="/assets/images/header-link.gif" alt="Header link" class="header-link" height="13" width="13" /></a></span></h3>
+                    <h3 class="category {% if forloop.index0 > 0 %}tMarginLg{% endif %}"><span class="ribbon"><a href="{{ section.url | prepend: site.baseurl }}">{{ section.title }} <img src="{{ '/assets/images/header-link.gif' | prepend: site.baseurl }}" alt="Header link" class="header-link" height="13" width="13" /></a></span></h3>
                     <ul class="theme">
                         {% for item in section.menus %}
-                        <li class="design"><a href="{{ item.url }}" title="{{ item.description }}">
+                        <li class="design"><a href="{{ item.url | prepend: site.baseurl }}" title="{{ item.description }}">
                             {{ item.title }}</a>
                         </li>
                         {% endfor %}
@@ -177,7 +177,7 @@
                             <ul class="theme right-list">
                                 {% for item in site.data.menu-rx %}
      	     	                <li>
-                                    <a href="{{item.url}}" 
+                                    <a href="{{item.url | prepend: site.baseurl }}" 
                                        title="{{item.description}}" 
                                        class="navlink">{{item.title}}</a>
                                 </li>
@@ -204,7 +204,7 @@
                     <ul class="footer_bottom_nav">
                         {% for item in site.data.menu-top %}
                         <li>
-                            <a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a>
+                            <a href="{{item.url | prepend: site.baseurl }}" title="{{item.description}}">{{item.title}}</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -215,7 +215,7 @@
                     <ul class="footer_bottom_nav">
                         {% for item in site.data.menu-bottom %}
                         <li>
-                            <a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a>
+                            <a href="{{item.url | prepend: site.baseurl }}" title="{{item.description}}">{{item.title}}</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -226,11 +226,11 @@
                     <ul class="footer_follow_nav">
                         <li>
                             <a href="http://twitter.com/W3C" title="Follow W3C on Twitter">
-                                <img src="/assets/images/twitter-bird" alt="Twitter"
+                                <img src="{{ '/assets/images/twitter-bird' | prepend: site.baseurl }}" alt="Twitter"
                                      class="social-icon" width="78" height="83"/>
                             </a>
                             <a href="http://identi.ca/w3c" title="See W3C on Identica">
-                                <img src="/assets/images/identica-logo" alt="Identica"
+                                <img src="{{ '/assets/images/identica-logo' | prepend: site.baseurl }}" alt="Identica"
                                      class="social-icon" width="91" height="83" />
                             </a>
                         </li>
@@ -259,7 +259,7 @@
         <!-- /end #footer -->    
         
         <div id="w3c_scripts">
-            <script type="text/javascript" src="/assets/js/main.js">//<![CDATA[
+            <script type="text/javascript" src="{{ '/assets/js/main.js' | prepend: site.baseurl }}">//<![CDATA[
              <!-- -->
              //]]>
             </script>

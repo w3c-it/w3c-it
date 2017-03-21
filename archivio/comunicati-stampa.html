@@ -2,6 +2,7 @@
 title: Archivio Comunicati Stampa
 layout: page
 ---
+{% comment %}
 <p>
     Il testo in italiano rimanda alla traduzione in italiano (se disponibile) del comunicato stampa.
     <br>
@@ -9,6 +10,7 @@ layout: page
     <br>
     Sulla <a href="http://www.w3.org/Press/" hreflang="en" title="sito W3C: press releases">specifica sezione</a> del sito del W3C sono reperibili tutti i comunicati stampa, tradotti anche in altre lingue.
 </p>
+{% endcomment %}
 
 <div class="w3c_events_talks">
     <div class="w3c_upcoming_events">
@@ -41,12 +43,12 @@ layout: page
                 
                 <div class="info-wrap">
                     <p class="summary">
-                        <a href="{{pr.url}}">{{pr.title}}</a>
+                        <a href="{{pr.url | prepend: site.baseurl }}">{{pr.title}}</a>
                     </p>
                     <p><em>{{pr.description}}</em></p>
                     
                     <p class="eventtitle">
-                        <a href="{{pr.url}}" class="uri">{{pr.url}}</a>
+                        <a href="{{pr.url | prepend: site.baseurl }}" class="uri">{{pr.url}}</a>
                     </p>
                 </div>
             </li>
