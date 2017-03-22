@@ -1,0 +1,5 @@
+# put here any directive needed only when deploying
+# a special deploy_dir variable specifies the deployment location using rsync
+
+baseurl: '/w3c.it/website'
+deploy_dir: ict4g@ict4g.org:/www/w3c/html/website/

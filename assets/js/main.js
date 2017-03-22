@@ -1,3 +1,5 @@
+---
+---
 /*
  * jQuery JavaScript Library v1.3.2
  * http://jquery.com/
@@ -1388,7 +1390,7 @@ if(C.substring(0,B.length+1)==(B+"=")){D=decodeURIComponent(C.substring(B.length
 break
 }}}return D
 }};
-var enquire={config:{imgs:"/assets/images/"},init:function(){$("body").addClass("w3c_javascript");
+var enquire={config:{imgs:"{{ '/assets/images/' | prepend: site.baseurl }}"},init:function(){$("body").addClass("w3c_javascript");
 var E=enquire;
 appliedMedia=false;
 jQuery(document).ready(function(F){if(navigator.userAgent.indexOf("MSIE")!=-1){F("style").attr("media","screen")
@@ -1443,13 +1445,13 @@ if(recordedMedia){C(recordedMedia)
 }},tree:{init:function(D,B){var C=enquire;
 var A=C.tree;
 $(".hierarchy  ."+D).each(function(){if((B!="print")&&(B!="handheld")){if($(this).hasClass("closed")&&$(this).parents("div.expand_block, li.expand_block")){$(this).parents("div.expand_block,  li.expand_block").addClass("closed")
-}if(!$("img",$(this)).length){if($(this).parents("div.expand_block, li.expand_block").hasClass("closed")){$(this).prepend("<img src='/assets/images/ico-plus.gif' width='9' height='9' alt='Expand' width/>")
-}else{$(this).prepend("<img src='/assets/images/ico-minus.gif' width='9' height='9' alt='Collapse'/>")
+}if(!$("img",$(this)).length){if($(this).parents("div.expand_block, li.expand_block").hasClass("closed")){$(this).prepend("<img src='{{ '/assets/images/ico-plus.gif' | prepend: site.baseurl }}' width='9' height='9' alt='Expand' width/>")
+}else{$(this).prepend("<img src='{{ '/assets/images/ico-minus.gif' | prepend: site.baseurl }}' width='9' height='9' alt='Collapse'/>")
 }$(this).wrapInner("<a href='#'></a>")
 }if(!$(this).data("expand_configured")){$(this).click(function(E){E.preventDefault();
 A.toggle($(this));
-if($(this).parents("div.expand_block, li.expand_block").hasClass("closed")){$("img",$(this)).attr({src:"/assets/images/ico-plus.gif",alt:"Expand"})
-}else{$("img",$(this)).attr({src:"/assets/images/ico-minus.gif",alt:"Collapse"})
+if($(this).parents("div.expand_block, li.expand_block").hasClass("closed")){$("img",$(this)).attr({src:"{{ '/assets/images/ico-plus.gif' | prepend: site.baseurl }}",alt:"Expand"})
+}else{$("img",$(this)).attr({src:"{{ '/assets/images/ico-minus.gif' | prepend: site.baseurl }}",alt:"Collapse"})
 }})
 }$(this).data("expand_configured",true)
 }else{$(this).text($(this).text())
@@ -1457,10 +1459,10 @@ if($(this).parents("div.expand_block, li.expand_block").hasClass("closed")){$("i
 },toggle:function(A){$(A).parents("div.expand_block,  li.expand_block").toggleClass("closed")
 }},toggableInclude:{init:function(A){if((A!="print")&&(A!="handheld")&&$("#w3c_toggle_include")){if(!$("#w3c_toggle_include_show").length){$("#w3c_toggle_include").after("<form class='tMargin lMargin w3c_toggle_form' action=''><div class='noprint'><fieldset><input type='radio' id='w3c_toggle_include_show' name='w3c_toggle_include_radio' /> <label for='w3c_toggle_include_show'>Show details</label> <input type='radio' id='w3c_toggle_include_hide' name='w3c_toggle_include_radio' checked='checked' /> <label for='w3c_toggle_include_hide'>Hide details</label></fieldset></div></form>")
 }$("#w3c_toggle_include_hide").change(function(){$("p.expand_description, div.expand_description, ul.expand_description").parent().addClass("closed");
-$(".expand_section img").attr({src:"/assets/images/ico-plus.gif",alt:"Expand"})
+$(".expand_section img").attr({src:"{{ '/assets/images/ico-plus.gif' | prepend: site.baseurl }}",alt:"Expand"})
 }).change();
 $("#w3c_toggle_include_show").change(function(){$("p.expand_description, div.expand_description, ul.expand_description").parent().removeClass("closed");
-$(".expand_section img").attr({src:"/assets/images/ico-minus.gif",alt:"Collapse"})
+$(".expand_section img").attr({src:"{{ '/assets/images/ico-minus.gif' | prepend: site.baseurl }}",alt:"Collapse"})
 })
 }else{$("#w3c_toggle_include").next("form:has(#w3c_toggle_include_show)").replaceWith("")
 }}}};

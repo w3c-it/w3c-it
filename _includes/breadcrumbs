@@ -4,7 +4,7 @@
 {% assign crumbs = page.url | split: '/' %}
 
 <li>
-  <a href="/{{ site.baseurl }}">Home</a>
+  <a href="{{ site.baseurl }}/">Home</a>
   {% if crumbs.size > 1 %}
   <span class="cr">»</span>
   {% endif %}

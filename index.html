@@ -41,7 +41,7 @@ layout: default
                         </span>
                     </span>
                     | 
-                    <a title="{{top_story.title}}" href="/archivio/news-w3c-it.html">
+                    <a title="{{top_story.title}}" href="{{ '/archivio/news-w3c-it.html' | prepend: site.baseurl }}">
                         Archivio
                     </a>
                 </p>
@@ -54,7 +54,7 @@ layout: default
      	
         <p class="noprint">
             <span class="more-news">
-                <a href="/archivio/news-w3c-it" title="Altre news">
+                <a href="{{ '/archivio/news-w3c-it.html' | prepend: site.baseurl }}" title="Altre news">
                     Altre news dell'Ufficio italiano &hellip;
                 </a>
             </span>
@@ -83,9 +83,9 @@ layout: default
             <div id="w3c_home_talks" class="w3c_upcoming_talks">
                 <!-- TITOLO RAGGRUPPATORE -->
                 <h2 class="category">
-              	    <a title="Altri Talks" href="/archivio/talks.html">
+              	    <a title="Altri Talks" href="{{ '/archivio/talks.html' | prepend: site.baseurl }}">
                 	Talks
-                        <img src="/assets/images/header-link" alt="Header link" width="13" height="13" class="header-link" />
+                        <img src="{{ '/assets/images/header-link' | prepend: site.baseurl }}" alt="Header link" width="13" height="13" class="header-link" />
                     </a>
                 </h2>
                 <!-- FINE TITOLO RAGGRUPPATORE -->
@@ -156,9 +156,9 @@ layout: default
             <div id="w3c_home_upcoming_events" class="w3c_upcoming_events">
                 <!-- TITOLO RAGGRUPPATORE -->
                 <h2 class="category">
-                    <a title="Altri Eventi" href="/archivio/eventi.html">
+                    <a title="Altri Eventi" href="{{ '/archivio/eventi.html' | prepend: site.baseurl }}">
                 	Eventi
-                        <img src="/assets/images/header-link" alt="Header link" width="13" height="13" class="header-link" />
+                        <img src="{{ '/assets/images/header-link' | prepend: site.baseurl }}" alt="Header link" width="13" height="13" class="header-link" />
                     </a>
                 </h2>
                 <!-- FINE TITOLO RAGGRUPPATORE -->

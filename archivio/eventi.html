@@ -32,7 +32,7 @@ layout: page
                 
                 <div class="info-wrap">
                     <p class="summary">
-                        <a href="{{event.url}}">{{event.title}}</a>
+                        <a href="{{event.url | prepend: site.baseurl }}">{{event.title}}</a>
                     </p>
                     
                     {% if event.location %}
