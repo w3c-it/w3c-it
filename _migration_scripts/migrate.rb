@@ -106,46 +106,93 @@ end
 
 # news have only an interesting part, namely what is comprised in
 # w3c_content_body
-def parse_press_release file, title, date, categories
-  doc = File.open(file) { |f| Nokogiri::HTML(f) }
-  # body = doc.css(".w3c_content_body").children.to_xhtml(indent: 2, encoding:'US-ASCII')
-
-  <<EOS
----
-title: "#{title.gsub('"', '\\"')}"
-date: #{date}
-alias: #{file.gsub(DUMP_DIRNAME, "")}
-categories: #{categories}
----
-#{doc.to_html.strip}
-EOS
+def parse_press_release file, hash
+  string = "---\n"
+  # array rather than hash.keys, so that i control the order
+  ["title", "date", "description", "alias", "en_title", "en_link"].each do |key|
+    if key == "title" or key == "en_title" then
+      string << "#{key}: \"#{hash[key.to_sym]}\"\n"
+    else
+      string << "#{key}: #{hash[key.to_sym]}\n"
+    end
+  end
+  string << "---\n"
+  file = File.open(file)
+  string << file.read
+  file.close
+  string
 end
+
+#
+# <li class="vevent">
+#   <p class="date">
+#     <span class="dtyear">2014</span>
+#     <span class="dtstart single">16 DIC</span>
+#   </p>
+#   <div class="info-wrap">
+#     <p class="summary">
+#       <a href="/pr/2014/opensocial.html">La OpenSocial Foundation trasferisce il lavoro di standardizzazione in seno alla W3C Social Web Activity </a>
+#     </p>
+#     <p><em>recap</em></p>
+#     <p class="eventtitle">
+#       <a href="http://www.w3.org/2014/12/opensocial.html.en" class="uri">OpenSocial Foundation Moving Standards Work to W3C Social Web Activity</a>
+#     </p>
+#     <p class="location"></p>
+#   </div>
+# </li>
 
 def migrate_press_releases
   files = Dir.glob(BASE + "/" + "archive:T,months_grouper:,selected_year:20*,page_type:pr")
   files.each do |arg|
-    puts "Reading #{arg}..."
+    #puts "Reading #{arg}..."
     doc = File.open(arg) { |f| Nokogiri::HTML(f) }
 
-    puts "Extracting vevents..."
+    #puts "Extracting vevents..."
     events = doc.css("li.vevent")
     events.each do |event|
+      #puts "---"
       year = event.css(".dtyear").text
       day_month = event.css(".dtstart").text
+      #puts "  date: #{year}, #{day_month}"
 
-      a = event.css("a")[0]
+      a = event.css(".summary").css("a")[0]
       summary = a.children.to_html(encoding:'US-ASCII')
       link = a["href"]
+      #puts "  summary: #{summary}"
+      #puts "  ita link: #{link}"
 
-      puts "#{year}, #{day_month}, #{summary} #{link} #{File.basename(link)}"
-      # puts "#{to_date year, day_month}"
+      recap = event.css("p")[2].children.to_html(encoding:'US-ASCII')
+      #puts "  recap: #{recap}"
+      
+      english_url = event.css(".eventtitle").css("a")[0]
+      english_link = english_url["href"]
+      english_title = english_url.children.to_html(encoding: 'US-ASCII')
+      #puts "  usa link: #{english_link}"
+      #puts "  usa title: #{english_title}"
 
       date = to_date(year, day_month)
-      string = parse_news DUMP_DIRNAME + "/" + link, summary, date, group[2]
+
+      string = parse_press_release DUMP_DIRNAME + link,
+                                   {title: summary,
+                                    date: date,
+                                    description: recap,
+                                    alias: link,
+                                    en_link: english_link,
+                                    en_title: english_title}
       
-      f = File.open("/Users/adolfo/Documents/Sites/w3c/comunicati-stampa-new/#{date.strftime("%Y-%m-%d")}-#{File.basename(link)}", "w")
-      f.write(string)
-      f.close
+      #f = File.open("/Users/adolfo/Documents/Sites/w3c/csn/#{date.strftime("%Y-%m-%d")}-#{File.basename(link)}", "w")
+      #f.write(string)
+      #f.close
+
+      puts "processing: #{date.strftime("%Y-%m-%d")}-#{File.basename(link)}"
+      file = File.open("/Users/adolfo/Documents/Sites/w3c/pr/_posts/#{date.strftime("%Y-%m-%d")}-#{File.basename(link)}", "r")
+      text = file.read
+      file.close
+
+      file = File.open("/Users/adolfo/Documents/Sites/w3c/pr/_posts/#{date.strftime("%Y-%m-%d")}-#{File.basename(link)}", "w")
+      text.gsub!(/^date: /, "en_title: \"#{english_title}\"\nen_url: #{english_link}' #{date.strftime("%Y-%m-%d")}-#{File.basename(link)}\ndate: ")
+      file.write(text)
+      file.close
     end
   end
 end
