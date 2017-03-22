@@ -15,7 +15,7 @@ layout: page
 <div class="w3c_events_talks">
     <div class="w3c_upcoming_events">
         <ul class="vevent_list">
-            {% assign sorted = (site.categories.comunicati_stampa | sort: 'date') | reverse %}
+            {% assign sorted = (site.categories.pr | sort: 'date') | reverse %}
             {% for pr in sorted %}
             <!-- EVENTO -->
             <li class="vevent">
