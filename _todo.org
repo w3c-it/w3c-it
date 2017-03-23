@@ -1,14 +1,24 @@
-* TODO traduzioni e wai sono duplicate in sito jekyll e static
-* TODO fix problem with comunicati stampa (il testo e il link inglese non ci sono piu')
-  - bisogna riprendere tutti i comunicati stampa e recuperare
-    i link ai testi in inglese
-* TODO arhive by year
-* TODO contenuti
-  - chi siamo
-  - apertura ufficio italiano
-  - mailing list
-  - indirizzi di email
-* TODO copiare un po' di struttura da Hungary
-* TODO jekyll admin/prose.io
+#+TITLE: w3c todo
+#+STARTUP: showall
+#+TAGS: w3c
 
-* TODO dry: computo mesi, pagine con elenco eventi
+* W3C elenco task:
+** TODO traduzioni e wai sono duplicate in sito jekyll e static
+** TODO fix problem with comunicati stampa (il testo e il link inglese non ci sono piu')
+   - bisogna riprendere tutti i comunicati stampa e recuperare
+     i link ai testi in inglese
+** TODO arhive by year
+** TODO contenuti originali
+   - chi siamo
+   - apertura ufficio italiano
+   - mailing list
+   - indirizzi di email
+** TODO copiare un po' di struttura da Hungary
+** TODO pulizia codice
+   - [ ] funzioni di presentazione date
+   - [ ] pagine con elenco eventi (in cui gli eventi sono sono tutti uguali)
+** WAITING informazioni su elenco talks
+** TODO preparazione presentazione 6/4
+   DEADLINE: <2017-03-31 Fri>
+** TODO migrazione IP
+** TODO migrazione email

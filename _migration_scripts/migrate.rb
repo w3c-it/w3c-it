@@ -41,6 +41,8 @@ def parse_news file, title, date, categories
 ---
 title: "#{title.gsub('"', '\\"')}"
 date: #{date}
+alias: #{file}
+layout: page
 categories: #{categories}
 ---
 #{body.strip}
@@ -65,9 +67,9 @@ end
 # filename
 #
 # [file to read, destination folder, categories to be added to the post]
-VIEWS=[["archive\:T\,months_grouper\:\,selected_year\:20*,page_type:news+W3C", "news/w3c/_posts", ""],
-       ["archive:T,months_grouper:,selected_year:20*,page_type:news+local", "news/w3cit/_posts", ""],
-       ["archive:T,months_grouper:,selected_year:20*,page_type:events", "events/_posts", "news eventi"]]
+VIEWS=[#["archive\:T\,months_grouper\:\,selected_year\:20*,page_type:news+W3C", "news/w3c/_posts", ""],
+       #["archive:T,months_grouper:,selected_year:20*,page_type:news+local", "news/w3cit/_posts", ""],
+       ["archive:T,months_grouper:,selected_year:*,page_type:events", "eventi/_posts", ""]]
 
 def migrate_news
   VIEWS.each do |group|
