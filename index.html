@@ -23,7 +23,7 @@ layout: default
                         <span class="dtyear">{{ top_story.date | date: "%Y" }}</span>
                         <span class="dtstart single">
                             {{top_story.date | date: "%d" }}
-                            {% assign m = talk.date | date: "%-m" %}
+                            {% assign m = top_story.date | date: "%-m" %}
                             {% case m %}
                             {% when '1' %}GEN
                             {% when '2' %}FEB
