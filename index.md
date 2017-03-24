@@ -20,25 +20,25 @@ layout: default
                 </h3>
                 <p class="date">
                     <span class="published dtstart" title="{{ top_story.date }}">
-                        <span class="dtyear">{{ top_story.date | date: "%Y" }}</span>
                         <span class="dtstart single">
                             {{top_story.date | date: "%d" }}
                             {% assign m = top_story.date | date: "%-m" %}
                             {% case m %}
-                            {% when '1' %}GEN
-                            {% when '2' %}FEB
-                            {% when '3' %}MAR
-                            {% when '4' %}APR
-                            {% when '5' %}MAG
-                            {% when '6' %}GIU
-                            {% when '7' %}LUG
-                            {% when '8' %}AGO
-                            {% when '9' %}SET
-                            {% when '10' %}OTT
-                            {% when '11' %}NOV
-                            {% when '12' %}DIC
+                            {% when '1' %}gennaio
+                            {% when '2' %}febbraio
+                            {% when '3' %}marzo
+                            {% when '4' %}aprile
+                            {% when '5' %}maggio
+                            {% when '6' %}giugno
+                            {% when '7' %}luglio
+                            {% when '8' %}agosto
+                            {% when '9' %}settembre
+                            {% when '10' %}ottobre
+                            {% when '11' %}novembre
+                            {% when '12' %}dicembre
                             {% endcase %}
                         </span>
+                        <span class="dtyear">{{ top_story.date | date: "%Y" }}</span>
                     </span>
                     | 
                     <a title="{{top_story.title}}" href="{{ '/archivio/news-w3c-it.html' | prepend: site.baseurl }}">

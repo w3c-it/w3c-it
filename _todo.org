@@ -2,7 +2,7 @@
 #+STARTUP: showall
 #+TAGS: w3c
 
-* W3C elenco task:
+* W3C elenco task
 ** TODO traduzioni e wai sono duplicate in sito jekyll e static
 ** TODO fix problem with comunicati stampa (il testo e il link inglese non ci sono piu')
    - bisogna riprendere tutti i comunicati stampa e recuperare
