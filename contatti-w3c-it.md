@@ -31,8 +31,13 @@ di <a href="http://ict.fbk.eu/cognitive-computing">Cognitive Computing</a> e
 presidente della Associazione Italiana di Linguistica Computazionale
 ha il roulo di coordinatore
 dell'ufficio.
-<a href="http://hlt-nlp.fbk.eu/people/profile/magnini">Home page di Bernardo</a>
-</div>
+
+<strong>Contatti</strong>
+<ul>
+   <li><strong>email:</strong> <a href="mailto:magnini@fbk.eu">magnigni@fbk.eu</a></li>
+   <li><strong>indirizzo:</strong> Ufficio Italiano W3C c/o FBK, via Sommarive, 18, Trento</li>
+   <li><strong>home page: <a href="http://hlt-nlp.fbk.eu/people/profile/magnini">Home page di Bernardo</a></li>
+</ul>
 
 <div style="overflow:auto" class="tMarginLg">
 <img alt="Foto di Adolfo Villafiorita" src="{{ "/assets/images/adolfo.jpg" | prepend: site.baseurl }}" style="float:left;margin:4px;"> 
@@ -40,22 +45,38 @@ dell'ufficio.
 applicativa <a href="http://www.ict4g.org">ICT4G</a>, ha una lunga esperienza
 nello sviluppo di applicazioni web e mobile e fornisce consulenza e
 supporto
-tecnico. <a href="http://ict4g.org/home/profile/adolfo-villafiorita.html">Home page di Adolfo</a>
+tecnico.
+
+<strong>Contatti</strong>
+<ul>
+   <li><strong>email:</strong> <a href="mailto:adolfo.villafiorita@fbk.eu">adolfo.villafiorita@fbk.eu</a></li>
+   <li><strong>indirizzo:</strong> Ufficio Italiano W3C c/o FBK, via Sommarive, 18, Trento</li>
+   <li><strong>home page: <a href="http://ict4g.org/home/profile/adolfo-villafiorita.html">Home page di Adolfo</a></li>
+</ul>
+
 </div>
 
 <div style="overflow:auto" class="tMarginLg">
 <img alt="Foto di Manuela Speranza" src="{{ "/assets/images/manspera.jpg" | prepend: site.baseurl }}" style="float:left;margin:4px;"> 
 <strong>Manuela Speranza</strong> completa il team fornendo supporto amministrativo
-e tecnico. <a href="http://hlt-nlp.fbk.eu/people/profile/manspera">Home page di Manuela</a>
+e tecnico.
+
+<strong>Contatti</strong>
+<ul>
+   <li><strong>email:</strong> <a href="mailto:manspera@fbk.eu">manspera@fbk.eu</a></li>
+   <li><strong>indirizzo:</strong> Ufficio Italiano W3C c/o FBK, via Sommarive, 18, Trento</li>
+   <li><strong>home page: <a href="http://hlt-nlp.fbk.eu/people/profile/manspera">Home page di Manuela</a></li>
+</ul>
+
 </div>
 
+{% comment %}
 <div style="overflow:auto" class="tMarginLg">
 <strong>Contatti</strong>
-
 <ul>
 <li><strong>email:</strong> <a href="mailto:w3c@w3c.it">info@w3c.it</a></li>
 <li><strong>telefono:</strong> XXXXXXX</li>
 <li><strong>indirizzo:</strong> Ufficio Italiano W3C c/o FBK, via Sommarive, 18, Trento</li>
 </ul>
-
 </div>
+{% endcomment %}

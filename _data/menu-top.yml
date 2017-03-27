@@ -4,8 +4,11 @@
 - title: Standard
   url: /standard.html
   description: Standard
+# - title: Partecipa
+#   url: /partecipa.html
+#   description: Partecipa
 - title: Partecipa
-  url: /partecipa.html
+  url: /contatti-w3c-it.html
   description: Partecipa
 - title: Associazione
   url: /associazione.html

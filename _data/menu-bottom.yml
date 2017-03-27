@@ -1,12 +1,12 @@
 - title: Contatti
   url: /contatti-w3c-it.html
   description: Contatti
-- title: Aiuto e FAQ
-  url: /aiuto-e-faq.html
-  description: Aiuto e FAQ
-- title: Mappa del sito
-  url: /sitemap.xml
-  description: Mappa del Sito
-- title: Scrivi alla redazione
-  url: mailto:info@w3c.it
-  description: Scrivi alla redazione
+# - title: Aiuto e FAQ
+#   url: /aiuto-e-faq.html
+#   description: Aiuto e FAQ
+# - title: Mappa del sito
+#   url: /sitemap.xml
+#   description: Mappa del Sito
+# - title: Scrivi alla redazione
+#   url: mailto:info@w3c.it
+#   description: Scrivi alla redazione

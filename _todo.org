@@ -3,16 +3,16 @@
 #+TAGS: w3c
 
 * W3C elenco task
+** TODO preparare goaccess
+** TODO link su apache a w3c
 ** TODO traduzioni e wai sono duplicate in sito jekyll e static
-** TODO fix problem with comunicati stampa (il testo e il link inglese non ci sono piu')
-   - bisogna riprendere tutti i comunicati stampa e recuperare
-     i link ai testi in inglese
 ** TODO arhive by year
 ** TODO contenuti originali
-   - chi siamo
-   - apertura ufficio italiano
-   - mailing list
-   - indirizzi di email
+   - [X] chi siamo
+   - [X] apertura ufficio italiano
+   - [ ] contatto telefonico
+   - [ ] mailing list
+   - [ ] indirizzi di email
 ** TODO copiare un po' di struttura da Hungary
 ** TODO pulizia codice
    - [ ] funzioni di presentazione date
