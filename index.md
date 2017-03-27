@@ -126,7 +126,7 @@ layout: default
                         <div class="info-wrap">
                             <p class="summary">
                                 {% if talk.url %}
-                                <a href="{{ talk.url }}">{{ talk.title }}</a>
+                                <a href="{{ talk.url | prepend: site.baseurl }}">{{ talk.title }}</a>
                                 {% else %}
                                 {{ talk.title }}
                                 {% endif %}
@@ -197,7 +197,7 @@ layout: default
                 
                     <div class="info-wrap">
                         <p class="summary">
-                            <a href="{{ event.url }}">{{ event.title }}</a>
+                            <a href="{{ event.url | prepend: site.baseurl }}.html">{{ event.title }}</a>
                         </p>
                     </div>
                 </li>

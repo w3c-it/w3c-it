@@ -10,5 +10,5 @@ Speranza, raccoglie il lavoro decennale del CNR ed &egrave; dedicato a
 rafforzare il ruolo dei partner italiani nel consorzio e a
 pubblicizzare le iniziative del [W3C](http://www.w3.org).
 
-Nella [pagina dei contatti]({{ /contatti-w3c-it.html | prepend: site.baseurl }})
+Nella [pagina dei contatti]({{ "/contatti-w3c-it.html" | prepend: site.baseurl }})
 trovate maggiori informazioni sull'ufficio e sul team.
