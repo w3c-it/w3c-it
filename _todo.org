@@ -3,21 +3,18 @@
 #+TAGS: w3c
 
 * W3C elenco task
-** TODO preparare goaccess
-** TODO link su apache a w3c
+** TODO https://www.w3.org/Consortium/Offices/staff/
+   aggiornare con dati FBK
+** TODO sistemare breadcrumbs e link simbolici
+** TODO news evento + news apertura W3C
+** TODO check goaccess is actually working
 ** TODO traduzioni e wai sono duplicate in sito jekyll e static
 ** TODO arhive by year
-** TODO contenuti originali
-   - [X] chi siamo
-   - [X] apertura ufficio italiano
-   - [ ] contatto telefonico
-   - [ ] mailing list
-   - [ ] indirizzi di email
 ** TODO copiare un po' di struttura da Hungary
 ** TODO pulizia codice
    - [ ] funzioni di presentazione date
    - [ ] pagine con elenco eventi (in cui gli eventi sono sono tutti uguali)
-** WAITING informazioni su elenco talks
+   - [ ] link simbolici
 ** TODO preparazione presentazione 6/4
    DEADLINE: <2017-03-31 Fri>
 ** TODO migrazione IP

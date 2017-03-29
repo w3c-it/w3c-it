@@ -22,8 +22,6 @@ body.w3c_team {
 #w3c_mast{
     height: 107px;
     overflow:hidden;
-    _overflow:visible;
-    zoom:1;
 }
 #w3c_mast p{
     font-size: 110%;
@@ -76,8 +74,6 @@ body.w3c_team {
 #w3c_nav{
     clear: none;
     overflow:hidden;
-    _overflow:visible;
-    zoom:1;
 }
 #w3c_nav form#region_form {
     float: right;
@@ -97,7 +93,6 @@ body.w3c_team {
 .main_nav {
     display: block;
     width: 98%;
-	_width: 95%;
     margin-left: 2.4%;
     float: left;
     padding: 27px 0 0 0;
@@ -130,7 +125,6 @@ body.w3c_team {
     border-bottom: none;
 }
 .main_nav  a, .main_nav  a:link, .main_nav  a:hover, .main_nav  a:active, .main_nav  a:visited {
-	_border-bottom: 0;
 	padding:10px 10px 12px;
 }
 .main_nav li {
@@ -143,7 +137,6 @@ body.w3c_team {
 .main_nav li.first-item a{
     border-left:0 none;
     text-align:left;
-	_border-bottom: 0;
 }
 .main_nav li.search-item {    
     width: 20%;
@@ -172,7 +165,6 @@ body.w3c_team {
 .secondary_nav li {
     display:inline;
     display:inline-block;
-    _float:left;
     padding-left: 10px;
     float:left;
 }
@@ -215,15 +207,11 @@ body.w3c_team {
 #w3c_main {
     background: #eee;
     overflow:hidden;
-    _overflow:visible;
-    zoom:1;
 }
 #w3c_logo_shadow {overflow: hidden; display: block;}
 #w3c_logo_shadow img {width: 100%;}
 #content {
     overflow:hidden;
-    _overflow:visible;
-    zoom:1;
 }
 #w3c_main p,
 #w3c_main li {    
@@ -303,7 +291,6 @@ body.w3c_team {
 #w3c_footer-inner {    
     padding:30px 0 20px 0;
     max-width: 600px;
-	_width: 600px;
     margin: 0 auto;
 }
 #w3c_footer-inner .main_nav { 
@@ -359,8 +346,6 @@ h2.category a:hover {
 }
 .w3c_mainCol {
     overflow:hidden;
-    _overflow:visible;
-    zoom:1;
     background-color: #fff;
     padding-left: 3%;
     padding-bottom: 3%;
@@ -402,12 +387,9 @@ h2.category a:hover {
 .line,
 .lastUnit {
     overflow: hidden;
-    _overflow: visible;
-    zoom:1;
 }
 .unit{
     float:left;
-    zoom:1;
 }
 .size1on2{width:50%}
 .size1on3{width:33.33333%}
@@ -421,9 +403,6 @@ h2.category a:hover {
 
 .lastUnit {
     float:none;
-    _position:relative;
-    _left:-3px;
-    _margin-right: -3px;
     width:auto;
 }
 .w3c_home .lastUnit h2.category {margin-bottom: 15px;}
@@ -519,8 +498,6 @@ h3.category {
     width: 100%;
     position: relative;
     margin-top: 8px;
-	_margin: 0;	
-	_width: 105%;
 }
 h2.category, .h2.category{
     background: #FCFBFB url('../images/category-bg-right.png') repeat-x bottom right;
@@ -593,10 +570,10 @@ ul.show_items li,
 }
 
 /* theme list */
-.theme{padding-top: 10px 0 20px 0;}
+.theme {padding-top: 10px; }  /* 0 20px 0;} */
 .theme ul{display:none;}
 .theme li{border-bottom: 1px solid #ddd; }
-.theme a {display:block; overflow:hidden; _overflow:visible;zoom:1;font-weight: normal; padding: 5px 0 5px 5px;}
+.theme a {display:block; overflow:hidden; font-weight: normal; padding: 5px 0 5px 5px;}
 .theme a.current {background-color: #fff; border-bottom: none;}
 .theme .icon{background: url(../images/theme-all.png) no-repeat left top;height:22px; width:22px; display:block; float:left; margin-right:10px; -moz-border-radius: 5px;}
 .theme .devices .icon{background-position: -22px 0;}
@@ -614,7 +591,7 @@ ul.show_items li,
 .theme_ext {padding: 0;}
 .theme_ext li.theme_ext_item{position: relative;padding-left: 64px; }
 .theme_ext li.theme_ext_item ul { font-size: 85%; padding-left: 20px; }
-.theme_ext .icon{background: pink url(../images/icon_sprite.png) no-repeat 0 0;height:44px; width:44px;display:block;position:absolute; top:28px; left:20px; _left: -63px; _top: 24px;}
+.theme_ext .icon{background: pink url(../images/icon_sprite.png) no-repeat 0 0;height:44px; width:44px;display:block;position:absolute; top:28px; left:20px;}
 .theme_ext .about_donations .icon{ background-position: -1144px 0;}
 .theme_ext .about_facts .icon{ background-position: -1100px 0;}
 .theme_ext .about_jobs .icon{ background-position: -1056px 0;}
@@ -681,7 +658,6 @@ ul.theme.right-list {padding-top: 5px;}
 .w3c_events_talks h2.category {
     margin: 0 20px 20px;
     background: #F9F9F9 url('../images/talks-bg.png') repeat-x bottom left;
-	zoom: 1;
 }
 .w3c_events_talks .date {
     background: #aaa url('../images/calendar-sprite.png') no-repeat top left;
@@ -764,8 +740,6 @@ ul.theme.right-list {padding-top: 5px;}
 .w3c_home #w3c_most-recently h3 .expand_section:hover {cursor: pointer;}
 .newsImage  {
     overflow:hidden;
-    _overflow:visible;
-    zoom:1;
 }
 a.imageLink img{
     float:left;

@@ -1,4 +1,4 @@
-@charset "UTF-8";/* CSS Document */
+@charset "UTF-8";  /* CSS Document */
 /**
 * 
 *  A. LIBRARIES (reset.css et fonts.css)
@@ -33,10 +33,13 @@
 /* **************** A. LIBRARIES ***************** */
 /**{background-color:pink !important;}*/
 /* reset */
-html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
-body {font-family: sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{font-size:100%;}legend{color:#000;}
+body {font-family: sans-serif;font-size:small;font:x-small;}table {font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;font-size:108%;line-height:100%;}
+
 /* **************** B. PAGE LAYOUT ***************** */
-body{font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Geneva,sans-serif;color: #333;}
+
+body {font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Geneva,sans-serif;color: #333;}
 em { font-style: italic }
 strong { font-weight: bold }
 /* head */
@@ -84,7 +87,7 @@ strong { font-weight: bold }
 .secondary_nav li { padding-left: 5px ; margin:0; }
 }
 
-.secondary_nav li{ display: -moz-inline-stack; display: inline-block; vertical-align: top; zoom: 1; *display: inline; }
+.secondary_nav li { display: -moz-inline-stack; display: inline-block; vertical-align: top; display: inline; }
 
 .main_nav li { display: none; } /* Hide from top on all pages but home */
 .main_nav li.search-item { display: list-item; }
@@ -133,7 +136,7 @@ strong { font-weight: bold }
 .line{margin-bottom: 10px;}
 .w3c_javascript.w3c_handheld .line .size2on3 {margin: 0;}
 .size1on1,.size1on2,.size1on3,.size2on3,.size1on4,.size3on4,.size1on5,.size2on5,.size3on5,.size4on5 {float:none;width:auto;}
-.lastunit {float:none;_float:right;}
+.lastunit {float:none;}
 /* **************** D. USEFUL CLASSES ***************** */
 /*.desc{font-size:123.1%}*/
 .intro{font-size: 1em;line-height:1.2em;}
@@ -230,7 +233,7 @@ a:link, a:visited, a:hover {text-decoration: none;}
 a:link, a:visited { border-bottom: 2px solid #A8BFCF; padding-bottom: 1px;}
 a.no-border:link, a.no-border:visited,a.no-border:hover { border: none;}
 /* nav links */
-.menu a:link, .menu a:visited { color: #036; border-bottom: transparent 2px solid; _border: 0;}
+.menu a:link, .menu a:visited { color: #036; border-bottom: transparent 2px solid; }
 .w3c_leftCol a:link, .w3c_leftCol a:visited, 
 ul.theme li a:link, ul.theme li a:visited
 { border-bottom: none; }
@@ -239,21 +242,21 @@ ul.theme li a:link, ul.theme li a:visited
 h1 a:link, .h1 a:link, 
 h2 a:link, .h2 a:link,
 h3 a:link, .h3 a:link, 
-h4 a:link, .h4 a:link{font-weight:normal; border-bottom: transparent 2px solid; _border: 0;}
-h5 a:link, .h5 a:link{color:#993300; font-weight:normal; border-bottom: transparent 2px solid; _border: 0;}
-h6 a:link, .h6 a:link{color:#404040; font-weight:normal; border-bottom: transparent 2px solid; _border: 0;}
+h4 a:link, .h4 a:link{font-weight:normal; border-bottom: transparent 2px solid; }
+h5 a:link, .h5 a:link{color:#993300; font-weight:normal; border-bottom: transparent 2px solid; }
+h6 a:link, .h6 a:link{color:#404040; font-weight:normal; border-bottom: transparent 2px solid; }
 
 
 .h1 a:visited, h1 a:visited,
 .h2 a:visited, h2 a:visited,
 .h3 a:visited, h3 a:visited,
-.h4 a:visited, h4 a:visited{font-weight:normal; color:#036;  border-bottom: transparent 2px solid; _border: 0;}
-.h5 a:visited, h5 a:visited{font-weight:normal; color:#993300; border-bottom: transparent 2px solid; _border: 0;}
-.h6 a:visited, h6 a:visited{font-weight:normal; color:#404040; border-bottom: transparent 2px solid; _border: 0;}
+.h4 a:visited, h4 a:visited{font-weight:normal; color:#036;  border-bottom: transparent 2px solid; }
+.h5 a:visited, h5 a:visited{font-weight:normal; color:#993300; border-bottom: transparent 2px solid; }
+.h6 a:visited, h6 a:visited{font-weight:normal; color:#404040; border-bottom: transparent 2px solid; }
 /* other links to not underline except on hover */
 .w3c_toc a:link, .w3c_toc a:visited,
 .tech_list a:link, .tech_list a:visited,
-.data a:link, .data a:visited {  border-bottom: transparent 2px solid; _border: 0;}
+.data a:link, .data a:visited {  border-bottom: transparent 2px solid; }
 
 .w3c_leftCol a:link:after, .w3c_leftCol a:visited:after,
 table a:link:after, table a:visited:after,
@@ -330,7 +333,7 @@ p.rec_support_data a {display: inline; }
 #recentnews .entry .date { margin-left: 0;padding-left: 20px; }
 
 /* ====== Tables ====== */
-.data{padding: 20px 0; position:relative; zoom:1;vertical-align: top;border-right:solid 1px transparent;/* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data{padding: 20px 0; position:relative; vertical-align: top;border-right:solid 1px transparent;/* border fixes a FF2 bug which causes the data table to overlay its borders*/}
 .data table {width:100%; border-top: 3px solid #BCBCBC;}
 th, td{vertical-align:top}
 .txtC, .data .txtC td, .data .txtC th{text-align:center;}

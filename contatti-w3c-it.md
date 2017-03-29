@@ -16,11 +16,11 @@ all'applicazione dei risultati della ricerca sul territorio rendono
 FBK una delle realt&agrave di eccellenza in Italia, come dimostrato
 dalla valutazione ANVUR del 2017, che colloca FBK al primo posto in
 tre diverse aree (ICT, Studi Storici e Sociologia) e per l'impatto
-economico e sociale, ospit&agrave; gli uffici italiani del W3C.
+economico e sociale, ospita gli uffici italiani del W3C.
 
 &Egrave; con orgoglio che FBK raccoglie la gestione dell'ufficio
 italiano dal [C.N.R.](http://www.cnr.it), che ha rappresentato in
-Italia il W3C con continuit&agrave; negli ultimi otto anni.
+Italia il W3C con continuit&agrave; negli ultimi diciotto anni.
 
 Il team dell'ufficio Italiano del W3C &egrave; composto da:
 
