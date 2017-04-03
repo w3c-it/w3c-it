@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: default
+alias: /it/1/ufficio-italiano-w3c.html
 ---
 <h2 class="offscreen">
     News

@@ -6,16 +6,13 @@
 ** TODO https://www.w3.org/Consortium/Offices/staff/
    aggiornare con dati FBK
 ** TODO sistemare breadcrumbs e link simbolici
-** TODO news evento + news apertura W3C
-** TODO check goaccess is actually working
-** TODO traduzioni e wai sono duplicate in sito jekyll e static
-** TODO arhive by year
+** TODO archive by year
 ** TODO copiare un po' di struttura da Hungary
+** TODO rimuovere cookie tecnico
 ** TODO pulizia codice
    - [ ] funzioni di presentazione date
    - [ ] pagine con elenco eventi (in cui gli eventi sono sono tutti uguali)
    - [ ] link simbolici
-** TODO preparazione presentazione 6/4
-   DEADLINE: <2017-03-31 Fri>
-** TODO migrazione IP
 ** TODO migrazione email
+** TODO assets and siteutilities
+** TODO logos
