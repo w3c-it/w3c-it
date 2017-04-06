@@ -63,10 +63,56 @@ alias: /it/1/ufficio-italiano-w3c.html
         
         <h1 class="title tMarginLg">News dal W3C</h1>
         
+        {% assign top_story = site.categories.w3c.first %}
+     	<!-- NEWS  -->
+        <div class="event w3c_topstory expand_block">
+            <div class="headline">
+                <h3 class="h4 tPadding0 bPadding0 summary">
+                    <span class="expand_section">{{ top_story.title }}</span>
+                </h3>
+                <p class="date">
+                    <span class="published dtstart" title="{{ top_story.date }}">
+                        <span class="dtstart single">
+                            {{top_story.date | date: "%d" }}
+                            {% assign m = top_story.date | date: "%-m" %}
+                            {% case m %}
+                            {% when '1' %}gennaio
+                            {% when '2' %}febbraio
+                            {% when '3' %}marzo
+                            {% when '4' %}aprile
+                            {% when '5' %}maggio
+                            {% when '6' %}giugno
+                            {% when '7' %}luglio
+                            {% when '8' %}agosto
+                            {% when '9' %}settembre
+                            {% when '10' %}ottobre
+                            {% when '11' %}novembre
+                            {% when '12' %}dicembre
+                            {% endcase %}
+                        </span>
+                        <span class="dtyear">{{ top_story.date | date: "%Y" }}</span>
+                    </span>
+                    | 
+                    <a title="{{top_story.title}}" href="{{ '/archivio/news-w3c.html' | prepend: site.baseurl }}">
+                        Archivio
+                    </a>
+                </p>
+            </div>
+            <div class="description expand_description">
+                {{ top_story.content }}
+            </div>
+        </div>
+        <!-- FINE NEWS  -->
+        
         <p class="noprint">
             <span class="more-news">
-		&hellip;
-                <a href="http://www.w3.org/" hreflang="en" title="News sito W3C">sul sito W3C</a>
+	   	    &hellip; altre news nell'
+                <a href="{{ '/archivio/news-w3c.html' | prepend: site.baseurl }}">
+                       archivio delle news tradotte
+                </a> o direttamente 
+                <a href="http://www.w3.org/" hreflang="en" title="News sito W3C">
+                       sul sito W3C (in inglese)
+                </a>
             </span>
         </p>
     </div>
