@@ -216,7 +216,7 @@ alias: /it/1/ufficio-italiano-w3c.html
                 {% for event in site.categories.eventi %}
                 {% capture event_date %}{{ event.date | date: '%s' }}{% endcapture %}
                 {% assign event_date = event_date | plus: 0 %}
-                {% if event_date > nowunix %}
+                {% if event_date >= nowunix %}
                 <li class="vevent">
                     <p class="date">
                         <span class="dtyear">{{ event.date | date: "%Y" }}</span>
