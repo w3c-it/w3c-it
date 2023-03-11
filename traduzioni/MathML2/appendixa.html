@@ -1,0 +1,1968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Analisi del MathML</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="parsing"></a>A Analisi del MathML</h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 8 <a href="chapter8.html">Modello a oggetti dei
+  documenti per il MathML</a>
+<br>
+  Successivo: B <a href="appendixb.html">Grammatica di convalida della
+  marcatura di contenuto</a>
+<br>
+  &nbsp;<br>A <a href="appendixa.html">Analisi del MathML</a>
+<br>A.1 <a href="appendixa.html#parsing:dtd">La DTD del MathML</a>
+<br>
+</p>
+
+<p>I documenti MathML devono essere convalidati usando la <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/dtd/mathml2.dtd">DTD
+XML per il MathML</a>, che viene mostrata anche di seguito nella <a
+href="appendixa.html#parsing:dtd">Sezione&nbsp;A.1 [La DTD del
+MathML]</a>. </p>
+
+<p>Di regola, comunque, un'espressione MathML non costituisce un
+documento XML completo. Il MathML &egrave; progettato per essere usato
+come il frammento di matematica di linguaggi di marcatura pi&ugrave;
+ampi. In particolare &egrave; ideato per essere usato come un
+<i>modulo</i> in documenti contrassegnati con la famiglia XHTML dei
+linguaggi di marcatura, come definito in [<a
+href="appendixi.html#Modularization">Modularization</a>]. Per
+comodit&agrave;, viene fornita, come esempio concreto, anche una
+versione della <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/dtd/xhtml-math11-f.dtd">DTD
+XHTML, ampliata con questo modulo MathML</a>. Questa versione include
+tutte le dichiarazioni necessarie in un unico file. (Al contrario
+della versione autonoma della DTD del MathML che pone in relazione
+molti file per le dichiarazioni delle entit&agrave; ecc.) </p>
+
+<p>In alcune circostanze, quando si incorpora il MathML nei documenti
+&egrave; necessario, o conveniente, usare il meccanismo descritto nel
+<a href="chapter7.html">Capitolo&nbsp;7 [L'interfaccia del MathML]</a>
+che fornisce un prefisso per lo spazio di nomi sui nomi degli elementi
+del MathML. La DTD seguente &egrave; ideata per consentire questo
+utilizzo. Se l'entit&agrave; parametro <code>MATHML.prefixed</code>
+&egrave; dichiarata come INCLUDE, usando una dichiarazione come
+</p>
+<pre>
+&lt;!ENTITY % MATHML.prefixed &quot;INCLUDE&quot; &gt;
+</pre>
+<p>sia nel sottoinsieme locale della dichiarazione DOCTYPE che nel
+file DTD che deve includere la DTD del MathML, allora tutti gli
+elementi MathML dovrebbero essere usati con un prefisso, per esempio
+<code>&lt;m:mrow&gt;</code>, <code>&lt;m:apply&gt;</code>, ecc. Il
+prefisso predefinito &egrave; <code>m:</code> ma pu&ograve; essere
+aggiunto un altro prefisso dichiarando l'entit&agrave; parametro
+<code>MathML.prefix</code>. Per esempio,
+</p>
+<pre>
+&lt;!ENTITY % MATHML.prefix   &quot;math&quot; &gt;
+</pre>
+<p>
+imposterebbe il prefisso per lo spazio di nomi MathML a
+<code>math:</code>. </p>
+
+<p>Si noti che sebbene le Direttive [<a
+href="appendixi.html#Namespaces">Namespaces</a>] forniscano meccanismi
+per cambiare il prefisso in punti arbitrari nel documento, questa
+flessibilit&agrave; <i>non &egrave; fornita</i> in questa DTD (ed
+&egrave; probabile che non sia possibile specificarla in alcuna
+DTD). </p>
+
+<p>Se un frammento MathML &egrave; analizzato senza una DTD, in altre
+parole come un frammento ben fatto di XML, &egrave;
+responsabilit&agrave; dell'applicazione che effettua l'analisi
+trattare i caratteri di spazio bianco presenti al di fuori degli
+elementi token come non significativi. </p>
+
+<p>Un analizzatore SGML, come <code>nsgmls</code>, pu&ograve; essere
+usato per convalidare il MathML. In questo caso deve essere impiegata
+una dichiarazione SGML che definisce i vincoli dell'XML applicabili ad
+un analizzatore SGML. Si veda la <a
+href="http://www.w3.org/TR/NOTE-sgml-xml">nota sull'SGML e
+sull'XML</a>. </p>
+
+<p>Le dichiarazioni di entit&agrave; per i caratteri sono riportate
+alla fine della DTD. Queste sono collegate alle tavole dei caratteri
+nel <a href="chapter6.html">Capitolo&nbsp;6 [Caratteri, entit&agrave;
+e font]</a> per ciascun insieme di entit&agrave;. </p>
+<p>Sono disponibili anche le liste degli insiemi combinati dei nomi di
+carattere del MathML, ordinate per <a href="byalpha.html">nome</a> o
+per <a href="bycodes.html">valore Unicode</a>. </p>
+
+<p>Al fine di utilizzare i prefissi dello spazio di nomi dell'XML, la
+DTD non si riferisce direttamente al nome di un elemento come
+<code>mrow</code> ma invece fa sempre riferimento al nome attraverso
+un'entit&agrave; parametro quale <code>%mrow.qname;</code>. Le
+definizioni di queste entit&agrave; parametro si trovano nel file <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/dtd/mathml2-qname-1.mod"></a>
+ma non vengono illustrate qui. Esse sono semplicemente dichiarazioni
+come la seguente, una per ogni elemento MathML.
+</p>
+<pre>
+&lt;!ENTITY % mrow.qname           &quot;%MATHML.pfx;mrow&quot; &gt;
+</pre>
+<p>
+</p>
+
+<h2>
+<a name="parsing:dtd"></a>A.1 La DTD del MathML </h2>
+
+<p>Di seguito diamo il corpo principale della DTD. La DTD completa,
+come anche la DTD dell'XHTML-Math, &egrave; disponibile in <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/DTD-MathML-20000328.zip">formato
+zip</a>. </p>
+
+<pre>
+&lt;!-- MathML 2.0 DTD  ....................................................... --&gt;
+&lt;!-- file: mathml2.dtd
+--&gt;
+
+&lt;!-- MathML 2.0 DTD
+
+     Questo &egrave; il Linguaggio di marcatura matematica (MathML) 2.0,
+     un'applicazione XML per descrivere la notazione matematica e
+     rappresentare la sua struttura e il suo contenuto.
+
+     Copyright 1998-2000 World Wide Web Consortium
+        (Massachusetts Institute of Technology, Institut National de
+         Recherche en Informatique et en Automatique, Keio University).
+         Tutti i diritti riservati.
+
+     Con la presente &egrave; garantito in perpetuo il permesso di usare,
+     modificare e distribuire la DTD dell'XHTML 1.1 e la documentazione
+     che l'accompagna per qualsiasi scopo e senza provvigione, a
+     condizione che le informazioni sul diritto d'autore precedenti e
+     questo paragrafo appaiano in tutte le copie. I titolari del
+     diritto d'autore non hanno rappresentanza sull'idoneit&agrave; della DTD
+     a qualsiasi scopo.
+
+     E' fornita &quot;in quanto tale&quot; senza garanzia implicita o espressa.
+
+        Revisione:   $Id: parsing.xml,v 1.22 2000/03/28 09:53:02 davidc Exp $
+
+     Questa entit&agrave; pu&ograve; essere identificata mediante gli identificatori
+     PUBLIC e SYSTEM:
+
+       PUBLIC &quot;-//W3C//DTD MathML 2.0//EN&quot;
+       SYSTEM &quot;mathml2.dtd&quot;
+
+     Revisioni: la storia dell'editore e della revisione &egrave; alla fine del
+     file (EOF)
+--&gt;
+
+
+&lt;!-- Modulo dei nomi abilitati MathML ............................... --&gt;
+<a name="pent:mathmlqname.module"></a>&lt;!ENTITY % mathml-qname.module &quot;INCLUDE&quot; &gt;
+&lt;![<a href="appendixa.html#pent:mathmlqname.module">%mathml-qname.module;</a>[
+<a name="pent:mathmlqname.mod"></a>&lt;!ENTITY % mathml-qname.mod
+     PUBLIC &quot;-//W3C//ENTITIES MathML 2.0 Qualified Names 1.0//EN&quot;
+            &quot;mathml2-qname-1.mod&quot; &gt;
+<a href="appendixa.html#pent:mathmlqname.mod">%mathml-qname.mod;</a>]]&gt;
+
+&lt;!-- se %NS.prefixed; è INCLUDE, include tutti gli attributi NS, 
+     altrimenti solo quelli associati con il MathML
+--&gt;
+&lt;![%NS.prefixed;[
+&lt;!ENTITY % MATHML.NamespaceDecl.attrib
+     %NamespaceDecl.attrib; &gt;
+]]&gt;
+<a name="pent:MATHML.NamespaceDecl.attrib"></a>&lt;!ENTITY % MATHML.NamespaceDecl.attrib 
+     &quot;%MATHML.xmlns.attrib;&quot;
+&gt;
+
+&lt;!-- Attributi condivisi da tutti gli elementi .......................... --&gt;
+
+<a name="pent:MATHML.Common.attrib"></a>&lt;!ENTITY % MATHML.Common.attrib
+     &quot;<a href="appendixa.html#pent:MATHML.NamespaceDecl.attrib">%MATHML.NamespaceDecl.attrib;</a>
+      xlink:href   CDATA                    #IMPLIED
+      class        CDATA                    #IMPLIED
+      style        CDATA                    #IMPLIED
+      id           ID                       #IMPLIED
+      xref         IDREF                    #IMPLIED
+      other        CDATA                    #IMPLIED&quot;
+&gt;
+
+&lt;!-- Insieme degli elementi di presentazione ............................. --&gt;
+
+&lt;!-- Definizioni degli attributi --&gt;
+
+<a name="pent:attfontsize"></a>&lt;!ENTITY % att-fontsize
+     &quot;fontsize     CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attfontweight"></a>&lt;!ENTITY % att-fontweight
+     &quot;fontweight   ( normal | bold )        #IMPLIED&quot; &gt;
+<a name="pent:attfontstyle"></a>&lt;!ENTITY % att-fontstyle
+     &quot;fontstyle    ( normal | italic )      #IMPLIED&quot; &gt;
+<a name="pent:attfontfamily"></a>&lt;!ENTITY % att-fontfamily
+     &quot;fontfamily   CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attcolor"></a>&lt;!ENTITY % att-color
+     &quot;color        CDATA                    #IMPLIED&quot; &gt;
+
+<a name="pent:attfontinfo"></a><i></i>&lt;!ENTITY % att-fontinfo
+     &quot;<a href="appendixa.html#pent:attfontsize">%att-fontsize;</a>
+      <a href="appendixa.html#pent:attfontweight">%att-fontweight;</a>
+      <a href="appendixa.html#pent:attfontstyle">%att-fontstyle;</a>
+      <a href="appendixa.html#pent:attfontfamily">%att-fontfamily;</a>
+      <a href="appendixa.html#pent:attcolor">%att-color;</a>&quot;
+&gt;
+
+<a name="pent:attform"></a>&lt;!ENTITY % att-form
+     &quot;form         ( prefix | infix | postfix )  #IMPLIED&quot; &gt;
+<a name="pent:attfence"></a>&lt;!ENTITY % att-fence
+     &quot;fence        ( true | false )         #IMPLIED&quot; &gt;
+<a name="pent:attseparator"></a>&lt;!ENTITY % att-separator
+     &quot;separator    ( true | false )         #IMPLIED&quot; &gt;
+<a name="pent:attlspace"></a>&lt;!ENTITY % att-lspace
+     &quot;lspace       CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attrspace"></a>&lt;!ENTITY % att-rspace
+     &quot;rspace       CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attstretchy"></a>&lt;!ENTITY % att-stretchy
+     &quot;stretchy     ( true | false )         #IMPLIED&quot; &gt;
+<a name="pent:attsymmetric"></a>&lt;!ENTITY % att-symmetric
+     &quot;symmetric    ( true | false )         #IMPLIED&quot; &gt;
+<a name="pent:attmaxsize"></a>&lt;!ENTITY % att-maxsize
+     &quot;maxsize      CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attminsize"></a>&lt;!ENTITY % att-minsize
+     &quot;minsize      CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attlargeop"></a>&lt;!ENTITY % att-largeop
+     &quot;largeop      ( true | false)          #IMPLIED&quot; &gt;
+<a name="pent:attmovablelimits"></a>&lt;!ENTITY % att-movablelimits
+     &quot;movablelimits ( true | false )        #IMPLIED&quot; &gt;
+<a name="pent:attaccent"></a>&lt;!ENTITY % att-accent
+     &quot;accent       ( true | false )         #IMPLIED&quot; &gt;
+
+<a name="pent:attopinfo"></a>&lt;!ENTITY % att-opinfo
+     &quot;<a href="appendixa.html#pent:attform">%att-form;</a>
+      <a href="appendixa.html#pent:attfence">%att-fence;</a>
+      <a href="appendixa.html#pent:attseparator">%att-separator;</a>
+      <a href="appendixa.html#pent:attlspace">%att-lspace;</a>
+      <a href="appendixa.html#pent:attrspace">%att-rspace;</a>
+      <a href="appendixa.html#pent:attstretchy">%att-stretchy;</a>
+      <a href="appendixa.html#pent:attsymmetric">%att-symmetric;</a>
+      <a href="appendixa.html#pent:attmaxsize">%att-maxsize;</a>
+      <a href="appendixa.html#pent:attminsize">%att-minsize;</a>
+      <a href="appendixa.html#pent:attlargeop">%att-largeop;</a>
+      <a href="appendixa.html#pent:attmovablelimits">%att-movablelimits;</a>
+      <a href="appendixa.html#pent:attaccent">%att-accent;</a>&quot;
+&gt;
+<a name="pent:attwidth"></a>&lt;!ENTITY % att-width
+     &quot;width        CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attheight"></a>&lt;!ENTITY % att-height
+     &quot;height       CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attdepth"></a>&lt;!ENTITY % att-depth
+     &quot;depth        CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attlinebreak"></a>&lt;!ENTITY % att-linebreak
+     &quot;linebreak    CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attsizeinfo"></a>&lt;!ENTITY % att-sizeinfo
+     &quot;<a href="appendixa.html#pent:attwidth">%att-width;</a>
+      <a href="appendixa.html#pent:attheight">%att-height;</a>
+      <a href="appendixa.html#pent:attdepth">%att-depth;</a>&quot;
+&gt;
+<a name="pent:attlquote"></a>&lt;!ENTITY % att-lquote               
+     &quot;lquote       CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attrquote"></a>&lt;!ENTITY % att-rquote               
+     &quot;rquote       CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attlinethickness"></a>&lt;!ENTITY % att-linethickness        
+     &quot;linethickness CDATA                   #IMPLIED&quot; &gt;
+<a name="pent:attscriptlevel"></a>&lt;!ENTITY % att-scriptlevel          
+     &quot;scriptlevel  CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attdisplaystyle"></a>&lt;!ENTITY % att-displaystyle         
+     &quot;displaystyle ( true | false )         #IMPLIED&quot; &gt;
+<a name="pent:attscriptsizemultiplier"></a>&lt;!ENTITY % att-scriptsizemultiplier 
+     &quot;scriptsizemultiplier CDATA            #IMPLIED&quot; &gt;
+<a name="pent:attscriptminsize"></a>&lt;!ENTITY % att-scriptminsize        
+     &quot;scriptminsize CDATA                   #IMPLIED&quot; &gt;
+<a name="pent:attbackground"></a>&lt;!ENTITY % att-background           
+     &quot;background   CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attopen"></a>&lt;!ENTITY % att-open                 
+     &quot;open         CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attclose"></a>&lt;!ENTITY % att-close                
+     &quot;close        CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attseparators"></a>&lt;!ENTITY % att-separators          
+     &quot;separators   CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attsubscriptshift"></a>&lt;!ENTITY % att-subscriptshift       
+     &quot;subscriptshift CDATA                  #IMPLIED&quot; &gt;
+<a name="pent:attsuperscriptshift"></a>&lt;!ENTITY % att-superscriptshift     
+     &quot;superscriptshift CDATA                #IMPLIED&quot; &gt;
+<a name="pent:attaccentunder"></a>&lt;!ENTITY % att-accentunder          
+     &quot;accentunder  ( true | false )         #IMPLIED&quot; &gt;
+<a name="pent:attalign"></a>&lt;!ENTITY % att-align       
+     &quot;align        CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attrowalign"></a>&lt;!ENTITY % att-rowalign      
+     &quot;rowalign     CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attcolumnalign"></a>&lt;!ENTITY % att-columnalign     
+     &quot;columnalign  CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attcolumnwidth"></a>&lt;!ENTITY % att-columnwidth   
+     &quot;columnwidth  CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attgroupalign"></a>&lt;!ENTITY % att-groupalign      
+     &quot;groupalign   CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attalignmentscope"></a>&lt;!ENTITY % att-alignmentscope 
+     &quot;alignmentscope CDATA                  #IMPLIED&quot; &gt;
+<a name="pent:attrowspacing"></a>&lt;!ENTITY % att-rowspacing           
+     &quot;rowspacing   CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attcolumnspacing"></a>&lt;!ENTITY % att-columnspacing      
+     &quot;columnspacing CDATA                   #IMPLIED&quot; &gt;
+<a name="pent:attrowlines"></a>&lt;!ENTITY % att-rowlines            
+     &quot;rowlines     CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attcolumnlines"></a>&lt;!ENTITY % att-columnlines        
+     &quot;columnlines  CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attframe"></a>&lt;!ENTITY % att-frame            
+     &quot;frame       ( none | solid | dashed ) #IMPLIED&quot; &gt;
+<a name="pent:attframespacing"></a>&lt;!ENTITY % att-framespacing         
+     &quot;framespacing CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attequalrows"></a>&lt;!ENTITY % att-equalrows        
+     &quot;equalrows    CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attequalcolumns"></a>&lt;!ENTITY % att-equalcolumns         
+     &quot;equalcolumns CDATA                    #IMPLIED&quot; &gt;
+
+<a name="pent:atttableinfo"></a>&lt;!ENTITY % att-tableinfo            
+     &quot;<a href="appendixa.html#pent:attalign">%att-align;</a>
+      <a href="appendixa.html#pent:attrowalign">%att-rowalign;</a>
+      <a href="appendixa.html#pent:attcolumnalign">%att-columnalign;</a>
+      <a href="appendixa.html#pent:attcolumnwidth">%att-columnwidth;</a>
+      <a href="appendixa.html#pent:attgroupalign">%att-groupalign;</a>
+      <a href="appendixa.html#pent:attalignmentscope">%att-alignmentscope;</a>
+      <a href="appendixa.html#pent:attrowspacing">%att-rowspacing;</a>
+      <a href="appendixa.html#pent:attcolumnspacing">%att-columnspacing;</a>
+      <a href="appendixa.html#pent:attrowlines">%att-rowlines;</a>
+      <a href="appendixa.html#pent:attcolumnlines">%att-columnlines;</a>
+      <a href="appendixa.html#pent:attframe">%att-frame;</a>
+      <a href="appendixa.html#pent:attframespacing">%att-framespacing;</a>
+      <a href="appendixa.html#pent:attequalrows">%att-equalrows;</a>
+      <a href="appendixa.html#pent:attequalcolumns">%att-equalcolumns;</a>
+      <a href="appendixa.html#pent:attdisplaystyle">%att-displaystyle;</a>&quot; 
+&gt;
+
+<a name="pent:attrowspan"></a>&lt;!ENTITY % att-rowspan              
+     &quot;rowspan      CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attcolumnspan"></a>&lt;!ENTITY % att-columnspan           
+     &quot;columnspan   CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attedge"></a>&lt;!ENTITY % att-edge        
+     &quot;edge         ( left | right )         #IMPLIED&quot; &gt;
+<a name="pent:attactiontype"></a>&lt;!ENTITY % att-actiontype          
+     &quot;actiontype   CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attselection"></a>&lt;!ENTITY % att-selection       
+     &quot;selection    CDATA                    #IMPLIED&quot; &gt;
+
+<a name="pent:attname"></a>&lt;!ENTITY % att-name                 
+     &quot;name         CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attalt"></a>&lt;!ENTITY % att-alt              
+     &quot;alt          CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attindex"></a>&lt;!ENTITY % att-index           
+     &quot;index        CDATA                    #IMPLIED&quot; &gt;
+
+<a name="pent:attbevelled"></a>&lt;!ENTITY % att-bevelled       
+     &quot;bevelled      CDATA                    #IMPLIED&quot; &gt;
+
+&lt;!-- Schemi di presentazione con contenuto --&gt;
+
+<a name="pent:ptoken"></a>&lt;!ENTITY % ptoken                   
+     &quot;%mi.qname; | %mn.qname; | %mo.qname;
+      | %mtext.qname; | %ms.qname;&quot; &gt;
+
+<a name="attr:mi.qname"></a><a href="appendixa.html#elem:mi.qname">&lt;!ATTLIST</a> %mi.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attfontinfo">%att-fontinfo;</a>
+&gt;
+
+<a name="attr:mn.qname"></a><a href="appendixa.html#elem:mn.qname">&lt;!ATTLIST</a> %mn.qname;      
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a> 
+      <a href="appendixa.html#pent:attfontinfo">%att-fontinfo;</a>
+&gt;
+
+<a name="attr:mo.qname"></a><a href="appendixa.html#elem:mo.qname">&lt;!ATTLIST</a> %mo.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a> 
+      <a href="appendixa.html#pent:attfontinfo">%att-fontinfo;</a>
+      <a href="appendixa.html#pent:attopinfo">%att-opinfo;</a>
+&gt;
+
+<a name="attr:mtext.qname"></a><a href="appendixa.html#elem:mtext.qname">&lt;!ATTLIST</a> %mtext.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attfontinfo">%att-fontinfo;</a>
+&gt;
+
+<a name="attr:ms.qname"></a><a href="appendixa.html#elem:ms.qname">&lt;!ATTLIST</a> %ms.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attfontinfo">%att-fontinfo;</a>
+      <a href="appendixa.html#pent:attlquote">%att-lquote;</a>
+      <a href="appendixa.html#pent:attrquote">%att-rquote;</a>
+&gt;
+
+&lt;!-- Schemi di presentazione vuoti --&gt;
+
+<a name="pent:petoken"></a>&lt;!ENTITY % petoken                  
+     &quot;%mspace.qname;&quot; &gt;
+<a name="elem:mspace.qname"></a><a href="appendixa.html#attr:mspace.qname">&lt;!ELEMENT</a> %mspace.qname;  EMPTY &gt;
+
+<a name="attr:mspace.qname"></a><a href="appendixa.html#elem:mspace.qname">&lt;!ATTLIST</a> %mspace.qname; 
+      <a href="appendixa.html#pent:attsizeinfo">%att-sizeinfo;</a>
+      <a href="appendixa.html#pent:attlinebreak">%att-linebreak;</a>
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+&lt;!-- Presentazione: schemi generali di disposizione --&gt;
+
+<a name="pent:pgenschema"></a>&lt;!ENTITY % pgenschema               
+     &quot;%mrow.qname; | %mfrac.qname; | %msqrt.qname; | %mroot.qname; 
+      | %menclose.qname; | %mstyle.qname; | %merror.qname; 
+      | %mpadded.qname; | %mphantom.qname; | %mfenced.qname;&quot; &gt;
+
+<a name="attr:mrow.qname"></a><a href="appendixa.html#elem:mrow.qname">&lt;!ATTLIST</a> %mrow.qname;        
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:mfrac.qname"></a><a href="appendixa.html#elem:mfrac.qname">&lt;!ATTLIST</a> %mfrac.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attbevelled">%att-bevelled;</a>
+      <a href="appendixa.html#pent:attlinethickness">%att-linethickness;</a>
+&gt;
+
+<a name="attr:msqrt.qname"></a><a href="appendixa.html#elem:msqrt.qname">&lt;!ATTLIST</a> %msqrt.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:menclose.qname"></a><a href="appendixa.html#elem:menclose.qname">&lt;!ATTLIST</a> %menclose.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      notation CDATA 'longdiv' &gt;
+
+<a name="attr:mroot.qname"></a><a href="appendixa.html#elem:mroot.qname">&lt;!ATTLIST</a> %mroot.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:mstyle.qname"></a><a href="appendixa.html#elem:mstyle.qname">&lt;!ATTLIST</a> %mstyle.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attfontinfo">%att-fontinfo;</a>
+      <a href="appendixa.html#pent:attopinfo">%att-opinfo;</a>
+      <a href="appendixa.html#pent:attlquote">%att-lquote;</a>
+      <a href="appendixa.html#pent:attrquote">%att-rquote;</a>
+      <a href="appendixa.html#pent:attlinethickness">%att-linethickness;</a>
+      <a href="appendixa.html#pent:attscriptlevel">%att-scriptlevel;</a>
+      <a href="appendixa.html#pent:attscriptsizemultiplier">%att-scriptsizemultiplier;</a>
+      <a href="appendixa.html#pent:attscriptminsize">%att-scriptminsize;</a>
+      <a href="appendixa.html#pent:attbackground">%att-background;</a>
+      <a href="appendixa.html#pent:attopen">%att-open;</a>
+      <a href="appendixa.html#pent:attclose">%att-close;</a>
+      <a href="appendixa.html#pent:attseparators">%att-separators;</a>
+      <a href="appendixa.html#pent:attsubscriptshift">%att-subscriptshift;</a>
+      <a href="appendixa.html#pent:attsuperscriptshift">%att-superscriptshift;</a>
+      <a href="appendixa.html#pent:attaccentunder">%att-accentunder;</a>
+      <a href="appendixa.html#pent:atttableinfo">%att-tableinfo;</a>
+      <a href="appendixa.html#pent:attrowspan">%att-rowspan;</a>
+      <a href="appendixa.html#pent:attcolumnspan">%att-columnspan;</a>
+      <a href="appendixa.html#pent:attedge">%att-edge;</a>
+      <a href="appendixa.html#pent:attactiontype">%att-actiontype;</a>
+      <a href="appendixa.html#pent:attselection">%att-selection;</a>
+&gt;
+
+<a name="attr:merror.qname"></a><a href="appendixa.html#elem:merror.qname">&lt;!ATTLIST</a> %merror.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:mpadded.qname"></a><a href="appendixa.html#elem:mpadded.qname">&lt;!ATTLIST</a> %mpadded.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attsizeinfo">%att-sizeinfo;</a>
+      <a href="appendixa.html#pent:attlspace">%att-lspace;</a>
+&gt;
+
+<a name="attr:mphantom.qname"></a><a href="appendixa.html#elem:mphantom.qname">&lt;!ATTLIST</a> %mphantom.qname;      
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:mfenced.qname"></a><a href="appendixa.html#elem:mfenced.qname">&lt;!ATTLIST</a> %mfenced.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attopen">%att-open;</a>
+      <a href="appendixa.html#pent:attclose">%att-close;</a>
+      <a href="appendixa.html#pent:attseparators">%att-separators;</a>
+&gt;
+
+&lt;!-- Schemi di disposizione di presentazione: apici, pedici e limiti --&gt;
+
+<a name="pent:pscrschema"></a>&lt;!ENTITY % pscrschema               
+     &quot;%msub.qname; | %msup.qname; | %msubsup.qname; | %munder.qname; 
+      | %mover.qname; | %munderover.qname; | %mmultiscripts.qname;&quot; &gt;
+
+<a name="attr:msub.qname"></a><a href="appendixa.html#elem:msub.qname">&lt;!ATTLIST</a> %msub.qname;      
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attsubscriptshift">%att-subscriptshift;</a>
+&gt;
+
+<a name="attr:msup.qname"></a><a href="appendixa.html#elem:msup.qname">&lt;!ATTLIST</a> %msup.qname;         
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attsuperscriptshift">%att-superscriptshift;</a>
+&gt;
+
+<a name="attr:msubsup.qname"></a><a href="appendixa.html#elem:msubsup.qname">&lt;!ATTLIST</a> %msubsup.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attsubscriptshift">%att-subscriptshift;</a>
+      <a href="appendixa.html#pent:attsuperscriptshift">%att-superscriptshift;</a>
+&gt;
+
+<a name="attr:munder.qname"></a><a href="appendixa.html#elem:munder.qname">&lt;!ATTLIST</a> %munder.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attaccentunder">%att-accentunder;</a>
+&gt;
+
+<a name="attr:mover.qname"></a><a href="appendixa.html#elem:mover.qname">&lt;!ATTLIST</a> %mover.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attaccent">%att-accent;</a>
+&gt;
+
+<a name="attr:munderover.qname"></a><a href="appendixa.html#elem:munderover.qname">&lt;!ATTLIST</a> %munderover.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attaccent">%att-accent;</a>
+      <a href="appendixa.html#pent:attaccentunder">%att-accentunder;</a>
+&gt;
+
+<a name="attr:mmultiscripts.qname"></a><a href="appendixa.html#elem:mmultiscripts.qname">&lt;!ATTLIST</a> %mmultiscripts.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attsubscriptshift">%att-subscriptshift;</a>
+      <a href="appendixa.html#pent:attsuperscriptshift">%att-superscriptshift;</a>
+&gt;
+
+&lt;!-- Schemi di disposizione di presentazione: elementi vuoti per apici
+     e pedici --&gt;
+
+<a name="pent:pscreschema"></a>&lt;!ENTITY % pscreschema              
+     &quot;%mprescripts.qname; | %none.qname;&quot; &gt;
+
+<a name="elem:mprescripts.qname"></a><a href="appendixa.html#attr:mprescripts.qname">&lt;!ELEMENT</a> %mprescripts.qname;  EMPTY &gt;
+<a name="attr:mprescripts.qname"></a><a href="appendixa.html#elem:mprescripts.qname">&lt;!ATTLIST</a> %mprescripts.qname;   
+      %MATHML.xmlns.attrib; &gt;
+
+<a name="elem:none.qname"></a><a href="appendixa.html#attr:none.qname">&lt;!ELEMENT</a> %none.qname;  EMPTY &gt;
+<a name="attr:none.qname"></a><a href="appendixa.html#elem:none.qname">&lt;!ATTLIST</a> %none.qname;    
+      %MATHML.xmlns.attrib; &gt;
+
+&lt;!-- Schemi di disposizione di presentazione: tabelle --&gt;
+
+<a name="pent:ptabschema"></a>&lt;!ENTITY % ptabschema               
+     &quot;%mtable.qname; | %mtr.qname; | %mlabeledtr.qname; | %mtd.qname;&quot; &gt;
+
+<a name="attr:mtable.qname"></a><a href="appendixa.html#elem:mtable.qname">&lt;!ATTLIST</a> %mtable.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:atttableinfo">%att-tableinfo;</a>
+&gt;
+
+<a name="attr:mtr.qname"></a><a href="appendixa.html#elem:mtr.qname">&lt;!ATTLIST</a> %mtr.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attrowalign">%att-rowalign;</a>
+      <a href="appendixa.html#pent:attcolumnalign">%att-columnalign;</a>
+      <a href="appendixa.html#pent:attgroupalign">%att-groupalign;</a>
+&gt;
+
+<a name="attr:mlabeledtr.qname"></a><a href="appendixa.html#elem:mlabeledtr.qname">&lt;!ATTLIST</a> %mlabeledtr.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attrowalign">%att-rowalign;</a>
+      <a href="appendixa.html#pent:attcolumnalign">%att-columnalign;</a>
+      <a href="appendixa.html#pent:attgroupalign">%att-groupalign;</a>
+&gt;
+
+<a name="attr:mtd.qname"></a><a href="appendixa.html#elem:mtd.qname">&lt;!ATTLIST</a> %mtd.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attrowalign">%att-rowalign;</a>
+      <a href="appendixa.html#pent:attcolumnalign">%att-columnalign;</a>
+      <a href="appendixa.html#pent:attgroupalign">%att-groupalign;</a>
+      <a href="appendixa.html#pent:attrowspan">%att-rowspan;</a>
+      <a href="appendixa.html#pent:attcolumnspan">%att-columnspan;</a>
+&gt;
+
+<a name="pent:plschema"></a>&lt;!ENTITY % plschema                 
+     &quot;<a href="appendixa.html#pent:pgenschema">%pgenschema;</a> | <a href="appendixa.html#pent:pscrschema">%pscrschema;</a> | <a href="appendixa.html#pent:ptabschema">%ptabschema;</a>&quot; &gt;
+
+&lt;!-- Schemi di disposizione di presentazione vuoti --&gt;
+
+<a name="pent:peschema"></a>&lt;!ENTITY % peschema                 
+     &quot;%maligngroup.qname; | %malignmark.qname;&quot; &gt;
+
+<a name="elem:malignmark.qname"></a><a href="appendixa.html#attr:malignmark.qname">&lt;!ELEMENT</a> %malignmark.qname;  EMPTY &gt;
+
+<a name="attr:malignmark.qname"></a><a href="appendixa.html#elem:malignmark.qname">&lt;!ATTLIST</a> %malignmark.qname;  
+      <a href="appendixa.html#pent:attedge">%att-edge;</a> &gt;
+
+<a name="elem:maligngroup.qname"></a><a href="appendixa.html#attr:maligngroup.qname">&lt;!ELEMENT</a> %maligngroup.qname;  EMPTY &gt;
+<a name="attr:maligngroup.qname"></a><a href="appendixa.html#elem:maligngroup.qname">&lt;!ATTLIST</a> %maligngroup.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attgroupalign">%att-groupalign;</a>
+&gt;
+
+<a name="elem:mchar.qname"></a><a href="appendixa.html#attr:mchar.qname">&lt;!ELEMENT</a> %mchar.qname;  EMPTY &gt;
+<a name="attr:mchar.qname"></a><a href="appendixa.html#elem:mchar.qname">&lt;!ATTLIST</a> %mchar.qname;    
+      <a href="appendixa.html#pent:attname">%att-name;</a> &gt;
+
+<a name="elem:mglyph.qname"></a><a href="appendixa.html#attr:mglyph.qname">&lt;!ELEMENT</a> %mglyph.qname;  EMPTY &gt;
+<a name="attr:mglyph.qname"></a><a href="appendixa.html#elem:mglyph.qname">&lt;!ATTLIST</a> %mglyph.qname;    
+      <a href="appendixa.html#pent:attalt">%att-alt;</a>
+      <a href="appendixa.html#pent:attfontfamily">%att-fontfamily;</a>
+      <a href="appendixa.html#pent:attindex">%att-index;</a> &gt;
+
+&lt;!-- Schemi di azione di presentazione --&gt;
+
+<a name="pent:pactions"></a>&lt;!ENTITY % pactions                 
+     &quot;%maction.qname;&quot; &gt;
+<a name="attr:maction.qname"></a><a href="appendixa.html#elem:maction.qname">&lt;!ATTLIST</a> %maction.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attactiontype">%att-actiontype;</a>
+      <a href="appendixa.html#pent:attselection">%att-selection;</a>
+&gt;
+
+&lt;!-- La seguente entit&agrave; per la sostituzione nei costrutti
+     di contenuto esclude gli elementi che non sono
+     validi come espressioni.
+--&gt;
+
+<a name="pent:PresInCont"></a>&lt;!ENTITY % PresInCont               
+     &quot;<a href="appendixa.html#pent:ptoken">%ptoken;</a> | <a href="appendixa.html#pent:petoken">%petoken;</a> |
+      <a href="appendixa.html#pent:plschema">%plschema;</a> | <a href="appendixa.html#pent:peschema">%peschema;</a> | <a href="appendixa.html#pent:pactions">%pactions;</a>&quot; &gt;
+
+&lt;!-- Entit&agrave; di presentazione: tutti i costrutti di presentazione --&gt;
+
+<a name="pent:Presentation"></a>&lt;!ENTITY % Presentation             
+     &quot;<a href="appendixa.html#pent:ptoken">%ptoken;</a> | <a href="appendixa.html#pent:petoken">%petoken;</a> | <a href="appendixa.html#pent:pscreschema">%pscreschema;</a> |
+      <a href="appendixa.html#pent:plschema">%plschema;</a> | <a href="appendixa.html#pent:peschema">%peschema;</a> | <a href="appendixa.html#pent:pactions">%pactions;</a>&quot;&gt;
+
+&lt;!-- Insieme degli elementi di contenuto ............................. --&gt;
+
+&lt;!-- Definizione degli attributi --&gt;
+
+<a name="pent:attbase"></a>&lt;!ENTITY % att-base                 
+     &quot;base         CDATA                    '10'&quot; &gt;
+<a name="pent:attclosure"></a>&lt;!ENTITY % att-closure              
+     &quot;closure      CDATA                    'closed'&quot; &gt;
+<a name="pent:attdefinition"></a>&lt;!ENTITY % att-definition           
+     &quot;definitionURL CDATA                   ''&quot; &gt;
+<a name="pent:attencoding"></a>&lt;!ENTITY % att-encoding             
+     &quot;encoding     CDATA                    ''&quot; &gt;
+<a name="pent:attnargs"></a>&lt;!ENTITY % att-nargs             
+     &quot;nargs        CDATA                    '1'&quot; &gt;
+<a name="pent:attoccurrence"></a>&lt;!ENTITY % att-occurrence           
+     &quot;occurrence   CDATA                    'function-model'&quot; &gt;
+<a name="pent:attorder"></a>&lt;!ENTITY % att-order   
+     &quot;order        CDATA                    'numeric'&quot; &gt;
+<a name="pent:attscope"></a>&lt;!ENTITY % att-scope                
+     &quot;scope        CDATA                    'local'&quot; &gt;
+<a name="pent:atttype"></a>&lt;!ENTITY % att-type                 
+     &quot;type         CDATA                    #IMPLIED&quot; &gt;
+
+&lt;!-- Elementi di contenuto: nodi foglia --&gt;
+
+<a name="pent:ctoken"></a>&lt;!ENTITY % ctoken               
+     &quot;%csymbol.qname; | %ci.qname; | %cn.qname;&quot; &gt;
+
+<a name="attr:ci.qname"></a><a href="appendixa.html#elem:ci.qname">&lt;!ATTLIST</a> %ci.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:atttype">%att-type;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="attr:csymbol.qname"></a><a href="appendixa.html#elem:csymbol.qname">&lt;!ATTLIST</a> %csymbol.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+      <a href="appendixa.html#pent:atttype">%att-type;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+&gt;
+
+<a name="attr:cn.qname"></a><a href="appendixa.html#elem:cn.qname">&lt;!ATTLIST</a> %cn.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:atttype">%att-type;</a>
+      <a href="appendixa.html#pent:attbase">%att-base;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+&lt;!-- Elementi di contenuto: particolari --&gt;
+
+<a name="pent:cspecial"></a>&lt;!ENTITY % cspecial                 
+     &quot;%apply.qname; | %reln.qname; |
+      %lambda.qname;&quot; &gt;
+
+<a name="attr:apply.qname"></a><a href="appendixa.html#elem:apply.qname">&lt;!ATTLIST</a> %apply.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:reln.qname"></a><a href="appendixa.html#elem:reln.qname">&lt;!ATTLIST</a> %reln.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:lambda.qname"></a><a href="appendixa.html#elem:lambda.qname">&lt;!ATTLIST</a> %lambda.qname;      
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+&lt;!-- Elementi di contenuto: altri --&gt;
+
+<a name="pent:cother"></a>&lt;!ENTITY % cother                   
+     &quot;%condition.qname; | %declare.qname; | %sep.qname;&quot; &gt;
+
+<a name="attr:condition.qname"></a><a href="appendixa.html#elem:condition.qname">&lt;!ATTLIST</a> %condition.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:declare.qname"></a><a href="appendixa.html#elem:declare.qname">&lt;!ATTLIST</a> %declare.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:atttype">%att-type;</a>
+      <a href="appendixa.html#pent:attscope">%att-scope;</a>
+      <a href="appendixa.html#pent:attnargs">%att-nargs;</a>
+      <a href="appendixa.html#pent:attoccurrence">%att-occurrence;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:sep.qname"></a><a href="appendixa.html#attr:sep.qname">&lt;!ELEMENT</a> %sep.qname;  EMPTY &gt;
+<a name="attr:sep.qname"></a><a href="appendixa.html#elem:sep.qname">&lt;!ATTLIST</a> %sep.qname;         
+      %MATHML.xmlns.attrib; &gt;
+
+&lt;!-- Elementi di contenuto: mappatura semantica --&gt;
+
+<a name="pent:csemantics"></a>&lt;!ENTITY % csemantics               
+     &quot;%semantics.qname; | %annotation.qname; |
+      %annotation-xml.qname;&quot; &gt;
+
+<a name="attr:semantics.qname"></a><a href="appendixa.html#elem:semantics.qname">&lt;!ATTLIST</a> %semantics.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="attr:annotation.qname"></a><a href="appendixa.html#elem:annotation.qname">&lt;!ATTLIST</a> %annotation.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="attr:annotationxml.qname"></a><a href="appendixa.html#elem:annotationxml.qname">&lt;!ATTLIST</a> %annotation-xml.qname; 
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+&lt;!-- Elementi di contenuto: costruttori --&gt;
+
+<a name="pent:cconstructor"></a>&lt;!ENTITY % cconstructor             
+     &quot;%interval.qname; | %list.qname; | %matrix.qname; 
+      | %matrixrow.qname; | %set.qname; | %vector.qname;&quot; &gt;
+
+<a name="attr:interval.qname"></a><a href="appendixa.html#elem:interval.qname">&lt;!ATTLIST</a> %interval.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attclosure">%att-closure;</a>
+&gt;
+
+<a name="attr:set.qname"></a><a href="appendixa.html#elem:set.qname">&lt;!ATTLIST</a> %set.qname;        
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:atttype">%att-type;</a>
+&gt;
+
+<a name="attr:list.qname"></a><a href="appendixa.html#elem:list.qname">&lt;!ATTLIST</a> %list.qname;          
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attorder">%att-order;</a>
+&gt;
+
+<a name="attr:vector.qname"></a><a href="appendixa.html#elem:vector.qname">&lt;!ATTLIST</a> %vector.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:matrix.qname"></a><a href="appendixa.html#elem:matrix.qname">&lt;!ATTLIST</a> %matrix.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:matrixrow.qname"></a><a href="appendixa.html#elem:matrixrow.qname">&lt;!ATTLIST</a> %matrixrow.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+&lt;!-- Elementi di contenuto: simboli --&gt;
+
+<a name="pent:c0ary"></a>&lt;!ENTITY % c0ary              
+    &quot;%integers.qname; |
+     %reals.qname; |
+     %rationals.qname; |
+     %naturalnumbers.qname; |
+     %complexes.qname; |
+     %primes.qname; |
+     %exponentiale.qname; |
+     %imaginaryi.qname; |
+     %notanumber.qname; |
+     %true.qname; |
+     %false.qname; |
+     %emptyset.qname; |
+     %pi.qname; |
+     %eulergamma.qname; |
+     %infinity.qname;&quot; &gt;
+
+&lt;!-- Elementi di contenuto: operatori --&gt;
+
+<a name="pent:cfuncop1ary"></a>&lt;!ENTITY % cfuncop1ary              
+     &quot;%inverse.qname; | %ident.qname;&quot; &gt;
+
+<a name="elem:inverse.qname"></a><a href="appendixa.html#attr:inverse.qname">&lt;!ELEMENT</a> %inverse.qname;  EMPTY &gt;
+<a name="attr:inverse.qname"></a><a href="appendixa.html#elem:inverse.qname">&lt;!ATTLIST</a> %inverse.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:cfuncopnary"></a>&lt;!ENTITY % cfuncopnary              
+     &quot;%fn.qname; | %compose.qname;&quot; &gt;
+
+<a name="attr:fn.qname"></a><a href="appendixa.html#elem:fn.qname">&lt;!ATTLIST</a> %fn.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:ident.qname"></a><a href="appendixa.html#attr:ident.qname">&lt;!ELEMENT</a> %ident.qname;  EMPTY &gt;
+<a name="attr:ident.qname"></a><a href="appendixa.html#elem:ident.qname">&lt;!ATTLIST</a> %ident.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:compose.qname"></a><a href="appendixa.html#attr:compose.qname">&lt;!ELEMENT</a> %compose.qname;  EMPTY &gt;
+<a name="attr:compose.qname"></a><a href="appendixa.html#elem:compose.qname">&lt;!ATTLIST</a> %compose.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:carithop1ary"></a>&lt;!ENTITY % carithop1ary             
+     &quot;%abs.qname; | %conjugate.qname; | %exp.qname; | %factorial.qname; |
+      %arg.qname; | %real.qname; | %imaginary.qname;&quot; &gt;
+
+<a name="elem:exp.qname"></a><a href="appendixa.html#attr:exp.qname">&lt;!ELEMENT</a> %exp.qname;  EMPTY &gt;
+<a name="attr:exp.qname"></a><a href="appendixa.html#elem:exp.qname">&lt;!ATTLIST</a> %exp.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:abs.qname"></a><a href="appendixa.html#attr:abs.qname">&lt;!ELEMENT</a> %abs.qname;  EMPTY &gt;
+<a name="attr:abs.qname"></a><a href="appendixa.html#elem:abs.qname">&lt;!ATTLIST</a> %abs.qname;        
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:arg.qname"></a><a href="appendixa.html#attr:arg.qname">&lt;!ELEMENT</a> %arg.qname;  EMPTY &gt;
+<a name="attr:arg.qname"></a><a href="appendixa.html#elem:arg.qname">&lt;!ATTLIST</a> %arg.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:real.qname"></a><a href="appendixa.html#attr:real.qname">&lt;!ELEMENT</a> %real.qname;  EMPTY &gt;
+<a name="attr:real.qname"></a><a href="appendixa.html#elem:real.qname">&lt;!ATTLIST</a> %real.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:imaginary.qname"></a><a href="appendixa.html#attr:imaginary.qname">&lt;!ELEMENT</a> %imaginary.qname;  EMPTY &gt;
+<a name="attr:imaginary.qname"></a><a href="appendixa.html#elem:imaginary.qname">&lt;!ATTLIST</a> %imaginary.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:conjugate.qname"></a><a href="appendixa.html#attr:conjugate.qname">&lt;!ELEMENT</a> %conjugate.qname;  EMPTY &gt;
+<a name="attr:conjugate.qname"></a><a href="appendixa.html#elem:conjugate.qname">&lt;!ATTLIST</a> %conjugate.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:factorial.qname"></a><a href="appendixa.html#attr:factorial.qname">&lt;!ELEMENT</a> %factorial.qname;  EMPTY &gt;
+<a name="attr:factorial.qname"></a><a href="appendixa.html#elem:factorial.qname">&lt;!ATTLIST</a> %factorial.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:carithop1or2ary"></a>&lt;!ENTITY % carithop1or2ary          
+     &quot;%minus.qname;&quot; &gt;
+
+<a name="elem:minus.qname"></a><a href="appendixa.html#attr:minus.qname">&lt;!ELEMENT</a> %minus.qname;  EMPTY &gt;
+<a name="attr:minus.qname"></a><a href="appendixa.html#elem:minus.qname">&lt;!ATTLIST</a> %minus.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:carithop2ary"></a>&lt;!ENTITY % carithop2ary             
+     &quot;%quotient.qname; | %divide.qname; | %power.qname; | %rem.qname;&quot; &gt;
+
+<a name="elem:quotient.qname"></a><a href="appendixa.html#attr:quotient.qname">&lt;!ELEMENT</a> %quotient.qname;  EMPTY &gt;
+<a name="attr:quotient.qname"></a><a href="appendixa.html#elem:quotient.qname">&lt;!ATTLIST</a> %quotient.qname;       
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:divide.qname"></a><a href="appendixa.html#attr:divide.qname">&lt;!ELEMENT</a> %divide.qname;  EMPTY &gt;
+<a name="attr:divide.qname"></a><a href="appendixa.html#elem:divide.qname">&lt;!ATTLIST</a> %divide.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:power.qname"></a><a href="appendixa.html#attr:power.qname">&lt;!ELEMENT</a> %power.qname;  EMPTY &gt;
+<a name="attr:power.qname"></a><a href="appendixa.html#elem:power.qname">&lt;!ATTLIST</a> %power.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:rem.qname"></a><a href="appendixa.html#attr:rem.qname">&lt;!ELEMENT</a> %rem.qname;  EMPTY &gt;
+<a name="attr:rem.qname"></a><a href="appendixa.html#elem:rem.qname">&lt;!ATTLIST</a> %rem.qname;       
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:carithopnary"></a>&lt;!ENTITY % carithopnary             
+     &quot;%plus.qname; | %times.qname; | %max.qname; 
+      | %min.qname; | %gcd.qname; | %lcm.qname;&quot; &gt;
+
+<a name="elem:plus.qname"></a><a href="appendixa.html#attr:plus.qname">&lt;!ELEMENT</a> %plus.qname;  EMPTY &gt;
+<a name="attr:plus.qname"></a><a href="appendixa.html#elem:plus.qname">&lt;!ATTLIST</a> %plus.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:max.qname"></a><a href="appendixa.html#attr:max.qname">&lt;!ELEMENT</a> %max.qname;  EMPTY &gt;
+<a name="attr:max.qname"></a><a href="appendixa.html#elem:max.qname">&lt;!ATTLIST</a> %max.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:min.qname"></a><a href="appendixa.html#attr:min.qname">&lt;!ELEMENT</a> %min.qname;  EMPTY &gt;
+<a name="attr:min.qname"></a><a href="appendixa.html#elem:min.qname">&lt;!ATTLIST</a> %min.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:times.qname"></a><a href="appendixa.html#attr:times.qname">&lt;!ELEMENT</a> %times.qname;  EMPTY &gt;
+<a name="attr:times.qname"></a><a href="appendixa.html#elem:times.qname">&lt;!ATTLIST</a> %times.qname;      
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:gcd.qname"></a><a href="appendixa.html#attr:gcd.qname">&lt;!ELEMENT</a> %gcd.qname;  EMPTY &gt;
+<a name="attr:gcd.qname"></a><a href="appendixa.html#elem:gcd.qname">&lt;!ATTLIST</a> %gcd.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:lcm.qname"></a><a href="appendixa.html#attr:lcm.qname">&lt;!ELEMENT</a> %lcm.qname;  EMPTY &gt;
+<a name="attr:lcm.qname"></a><a href="appendixa.html#elem:lcm.qname">&lt;!ATTLIST</a> %lcm.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:carithoproot"></a>&lt;!ENTITY % carithoproot             
+     &quot;%root.qname;&quot; &gt;
+
+<a name="elem:root.qname"></a><a href="appendixa.html#attr:root.qname">&lt;!ELEMENT</a> %root.qname;  EMPTY &gt;
+<a name="attr:root.qname"></a><a href="appendixa.html#elem:root.qname">&lt;!ATTLIST</a> %root.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:clogicopquant"></a>&lt;!ENTITY % clogicopquant            
+     &quot;%exists.qname; | %forall.qname;&quot; &gt;
+
+<a name="elem:exists.qname"></a><a href="appendixa.html#attr:exists.qname">&lt;!ELEMENT</a> %exists.qname;  EMPTY &gt;
+<a name="attr:exists.qname"></a><a href="appendixa.html#elem:exists.qname">&lt;!ATTLIST</a> %exists.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:forall.qname"></a><a href="appendixa.html#attr:forall.qname">&lt;!ELEMENT</a> %forall.qname;  EMPTY &gt;
+<a name="attr:forall.qname"></a><a href="appendixa.html#elem:forall.qname">&lt;!ATTLIST</a> %forall.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:clogicopnary"></a>&lt;!ENTITY % clogicopnary             
+     &quot;%and.qname; | %or.qname; | %xor.qname;&quot; &gt;
+
+<a name="elem:and.qname"></a><a href="appendixa.html#attr:and.qname">&lt;!ELEMENT</a> %and.qname;  EMPTY &gt;
+<a name="attr:and.qname"></a><a href="appendixa.html#elem:and.qname">&lt;!ATTLIST</a> %and.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:or.qname"></a><a href="appendixa.html#attr:or.qname">&lt;!ELEMENT</a> %or.qname;  EMPTY &gt;
+<a name="attr:or.qname"></a><a href="appendixa.html#elem:or.qname">&lt;!ATTLIST</a> %or.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:xor.qname"></a><a href="appendixa.html#attr:xor.qname">&lt;!ELEMENT</a> %xor.qname;  EMPTY &gt;
+<a name="attr:xor.qname"></a><a href="appendixa.html#elem:xor.qname">&lt;!ATTLIST</a> %xor.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:clogicop1ary"></a>&lt;!ENTITY % clogicop1ary             
+     &quot;%not.qname;&quot; &gt;
+
+<a name="elem:not.qname"></a><a href="appendixa.html#attr:not.qname">&lt;!ELEMENT</a> %not.qname;  EMPTY &gt;
+<a name="attr:not.qname"></a><a href="appendixa.html#elem:not.qname">&lt;!ATTLIST</a> %not.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:clogicop2ary"></a>&lt;!ENTITY % clogicop2ary             
+     &quot;%implies.qname;&quot; &gt;
+
+<a name="elem:implies.qname"></a><a href="appendixa.html#attr:implies.qname">&lt;!ELEMENT</a> %implies.qname;  EMPTY &gt;
+<a name="attr:implies.qname"></a><a href="appendixa.html#elem:implies.qname">&lt;!ATTLIST</a> %implies.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:ccalcop"></a>&lt;!ENTITY % ccalcop                  
+     &quot;%log.qname; | %int.qname; | %diff.qname; | %partialdiff.qname; |
+      %divergence.qname; | %grad.qname; | %curl.qname; | %laplacian.qname;&quot; &gt;
+
+<a name="elem:divergence.qname"></a><a href="appendixa.html#attr:divergence.qname">&lt;!ELEMENT</a> %divergence.qname;  EMPTY &gt;
+<a name="attr:divergence.qname"></a><a href="appendixa.html#elem:divergence.qname">&lt;!ATTLIST</a> %divergence.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:grad.qname"></a><a href="appendixa.html#attr:grad.qname">&lt;!ELEMENT</a> %grad.qname;  EMPTY &gt;
+<a name="attr:grad.qname"></a><a href="appendixa.html#elem:grad.qname">&lt;!ATTLIST</a> %grad.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:curl.qname"></a><a href="appendixa.html#attr:curl.qname">&lt;!ELEMENT</a> %curl.qname;  EMPTY &gt;
+<a name="attr:curl.qname"></a><a href="appendixa.html#elem:curl.qname">&lt;!ATTLIST</a> %curl.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:laplacian.qname"></a><a href="appendixa.html#attr:laplacian.qname">&lt;!ELEMENT</a> %laplacian.qname;  EMPTY &gt;
+<a name="attr:laplacian.qname"></a><a href="appendixa.html#elem:laplacian.qname">&lt;!ATTLIST</a> %laplacian.qname;     
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:log.qname"></a><a href="appendixa.html#attr:log.qname">&lt;!ELEMENT</a> %log.qname;  EMPTY &gt;
+<a name="attr:log.qname"></a><a href="appendixa.html#elem:log.qname">&lt;!ATTLIST</a> %log.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:int.qname"></a><a href="appendixa.html#attr:int.qname">&lt;!ELEMENT</a> %int.qname;  EMPTY &gt;
+<a name="attr:int.qname"></a><a href="appendixa.html#elem:int.qname">&lt;!ATTLIST</a> %int.qname;    
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:diff.qname"></a><a href="appendixa.html#attr:diff.qname">&lt;!ELEMENT</a> %diff.qname;  EMPTY &gt;
+<a name="attr:diff.qname"></a><a href="appendixa.html#elem:diff.qname">&lt;!ATTLIST</a> %diff.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:partialdiff.qname"></a><a href="appendixa.html#attr:partialdiff.qname">&lt;!ELEMENT</a> %partialdiff.qname;  EMPTY &gt;
+<a name="attr:partialdiff.qname"></a><a href="appendixa.html#elem:partialdiff.qname">&lt;!ATTLIST</a> %partialdiff.qname;  
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:ccalcop1ary"></a>&lt;!ENTITY % ccalcop1ary              
+     &quot;%ln.qname;&quot; &gt;
+
+<a name="elem:ln.qname"></a><a href="appendixa.html#attr:ln.qname">&lt;!ELEMENT</a> %ln.qname;  EMPTY &gt;
+<a name="attr:ln.qname"></a><a href="appendixa.html#elem:ln.qname">&lt;!ATTLIST</a> %ln.qname;   
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:csetop1ary"></a>&lt;!ENTITY % csetop1ary               
+     &quot;%card.qname;&quot; &gt;
+
+<a name="elem:card.qname"></a><a href="appendixa.html#attr:card.qname">&lt;!ELEMENT</a> %card.qname;  EMPTY &gt;
+<a name="attr:card.qname"></a><a href="appendixa.html#elem:card.qname">&lt;!ATTLIST</a> %card.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:csetop2ary"></a>&lt;!ENTITY % csetop2ary               
+     &quot;%setdiff.qname;&quot; &gt;
+
+<a name="elem:setdiff.qname"></a><a href="appendixa.html#attr:setdiff.qname">&lt;!ELEMENT</a> %setdiff.qname;  EMPTY &gt;
+<a name="attr:setdiff.qname"></a><a href="appendixa.html#elem:setdiff.qname">&lt;!ATTLIST</a> %setdiff.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:csetopnary"></a>&lt;!ENTITY % csetopnary               
+     &quot;%union.qname; | %intersect.qname;&quot; &gt;
+
+<a name="elem:union.qname"></a><a href="appendixa.html#attr:union.qname">&lt;!ELEMENT</a> %union.qname;  EMPTY &gt;
+<a name="attr:union.qname"></a><a href="appendixa.html#elem:union.qname">&lt;!ATTLIST</a> %union.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:intersect.qname"></a><a href="appendixa.html#attr:intersect.qname">&lt;!ELEMENT</a> %intersect.qname;  EMPTY &gt;
+<a name="attr:intersect.qname"></a><a href="appendixa.html#elem:intersect.qname">&lt;!ATTLIST</a> %intersect.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:cseqop"></a>&lt;!ENTITY % cseqop                   
+     &quot;%sum.qname; | %product.qname; | %limit.qname;&quot; &gt;
+
+<a name="elem:sum.qname"></a><a href="appendixa.html#attr:sum.qname">&lt;!ELEMENT</a> %sum.qname;  EMPTY &gt;
+<a name="attr:sum.qname"></a><a href="appendixa.html#elem:sum.qname">&lt;!ATTLIST</a> %sum.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:product.qname"></a><a href="appendixa.html#attr:product.qname">&lt;!ELEMENT</a> %product.qname;  EMPTY &gt;
+<a name="attr:product.qname"></a><a href="appendixa.html#elem:product.qname">&lt;!ATTLIST</a> %product.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:limit.qname"></a><a href="appendixa.html#attr:limit.qname">&lt;!ELEMENT</a> %limit.qname;  EMPTY &gt;
+<a name="attr:limit.qname"></a><a href="appendixa.html#elem:limit.qname">&lt;!ATTLIST</a> %limit.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:ctrigop"></a>&lt;!ENTITY % ctrigop                  
+     &quot;%sin.qname; | %cos.qname; | %tan.qname; 
+      | %sec.qname; | %csc.qname; | %cot.qname; 
+      | %sinh.qname; | %cosh.qname; | %tanh.qname; 
+      | %sech.qname; | %csch.qname; | %coth.qname; 
+      | %arcsin.qname; | %arccos.qname; | %arctan.qname;&quot; &gt;
+
+<a name="elem:sin.qname"></a><a href="appendixa.html#attr:sin.qname">&lt;!ELEMENT</a> %sin.qname;  EMPTY &gt;
+<a name="attr:sin.qname"></a><a href="appendixa.html#elem:sin.qname">&lt;!ATTLIST</a> %sin.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:cos.qname"></a><a href="appendixa.html#attr:cos.qname">&lt;!ELEMENT</a> %cos.qname;  EMPTY &gt;
+<a name="attr:cos.qname"></a><a href="appendixa.html#elem:cos.qname">&lt;!ATTLIST</a> %cos.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:tan.qname"></a><a href="appendixa.html#attr:tan.qname">&lt;!ELEMENT</a> %tan.qname;  EMPTY &gt;
+<a name="attr:tan.qname"></a><a href="appendixa.html#elem:tan.qname">&lt;!ATTLIST</a> %tan.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:sec.qname"></a><a href="appendixa.html#attr:sec.qname">&lt;!ELEMENT</a> %sec.qname;  EMPTY &gt;
+<a name="attr:sec.qname"></a><a href="appendixa.html#elem:sec.qname">&lt;!ATTLIST</a> %sec.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:csc.qname"></a><a href="appendixa.html#attr:csc.qname">&lt;!ELEMENT</a> %csc.qname;  EMPTY &gt;
+<a name="attr:csc.qname"></a><a href="appendixa.html#elem:csc.qname">&lt;!ATTLIST</a> %csc.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:cot.qname"></a><a href="appendixa.html#attr:cot.qname">&lt;!ELEMENT</a> %cot.qname;  EMPTY &gt;
+<a name="attr:cot.qname"></a><a href="appendixa.html#elem:cot.qname">&lt;!ATTLIST</a> %cot.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:sinh.qname"></a><a href="appendixa.html#attr:sinh.qname">&lt;!ELEMENT</a> %sinh.qname;  EMPTY &gt;
+<a name="attr:sinh.qname"></a><a href="appendixa.html#elem:sinh.qname">&lt;!ATTLIST</a> %sinh.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:cosh.qname"></a><a href="appendixa.html#attr:cosh.qname">&lt;!ELEMENT</a> %cosh.qname;  EMPTY &gt;
+<a name="attr:cosh.qname"></a><a href="appendixa.html#elem:cosh.qname">&lt;!ATTLIST</a> %cosh.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:tanh.qname"></a><a href="appendixa.html#attr:tanh.qname">&lt;!ELEMENT</a> %tanh.qname;  EMPTY &gt;
+<a name="attr:tanh.qname"></a><a href="appendixa.html#elem:tanh.qname">&lt;!ATTLIST</a> %tanh.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:sech.qname"></a><a href="appendixa.html#attr:sech.qname">&lt;!ELEMENT</a> %sech.qname;  EMPTY &gt;
+<a name="attr:sech.qname"></a><a href="appendixa.html#elem:sech.qname">&lt;!ATTLIST</a> %sech.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:csch.qname"></a><a href="appendixa.html#attr:csch.qname">&lt;!ELEMENT</a> %csch.qname;  EMPTY &gt;
+<a name="attr:csch.qname"></a><a href="appendixa.html#elem:csch.qname">&lt;!ATTLIST</a> %csch.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:coth.qname"></a><a href="appendixa.html#attr:coth.qname">&lt;!ELEMENT</a> %coth.qname;  EMPTY &gt;
+<a name="attr:coth.qname"></a><a href="appendixa.html#elem:coth.qname">&lt;!ATTLIST</a> %coth.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:arcsin.qname"></a><a href="appendixa.html#attr:arcsin.qname">&lt;!ELEMENT</a> %arcsin.qname;  EMPTY &gt;
+<a name="attr:arcsin.qname"></a><a href="appendixa.html#elem:arcsin.qname">&lt;!ATTLIST</a> %arcsin.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:arccos.qname"></a><a href="appendixa.html#attr:arccos.qname">&lt;!ELEMENT</a> %arccos.qname;  EMPTY &gt;
+<a name="attr:arccos.qname"></a><a href="appendixa.html#elem:arccos.qname">&lt;!ATTLIST</a> %arccos.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:arctan.qname"></a><a href="appendixa.html#attr:arctan.qname">&lt;!ELEMENT</a> %arctan.qname;  EMPTY &gt;
+<a name="attr:arctan.qname"></a><a href="appendixa.html#elem:arctan.qname">&lt;!ATTLIST</a> %arctan.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:cstatopnary"></a>&lt;!ENTITY % cstatopnary              
+     &quot;%mean.qname; | %sdev.qname; |
+      %variance.qname; | %median.qname; |
+      %mode.qname;&quot; &gt;
+
+<a name="elem:mean.qname"></a><a href="appendixa.html#attr:mean.qname">&lt;!ELEMENT</a> %mean.qname;  EMPTY &gt;
+<a name="attr:mean.qname"></a><a href="appendixa.html#elem:mean.qname">&lt;!ATTLIST</a> %mean.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:sdev.qname"></a><a href="appendixa.html#attr:sdev.qname">&lt;!ELEMENT</a> %sdev.qname;  EMPTY &gt;
+<a name="attr:sdev.qname"></a><a href="appendixa.html#elem:sdev.qname">&lt;!ATTLIST</a> %sdev.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:variance.qname"></a><a href="appendixa.html#attr:variance.qname">&lt;!ELEMENT</a> %variance.qname;  EMPTY &gt;
+<a name="attr:variance.qname"></a><a href="appendixa.html#elem:variance.qname">&lt;!ATTLIST</a> %variance.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:median.qname"></a><a href="appendixa.html#attr:median.qname">&lt;!ELEMENT</a> %median.qname;  EMPTY &gt;
+<a name="attr:median.qname"></a><a href="appendixa.html#elem:median.qname">&lt;!ATTLIST</a> %median.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:mode.qname"></a><a href="appendixa.html#attr:mode.qname">&lt;!ELEMENT</a> %mode.qname;  EMPTY &gt;
+<a name="attr:mode.qname"></a><a href="appendixa.html#elem:mode.qname">&lt;!ATTLIST</a> %mode.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:cstatopmoment"></a>&lt;!ENTITY % cstatopmoment            
+     &quot;%moment.qname;&quot; &gt;
+
+<a name="elem:moment.qname"></a><a href="appendixa.html#attr:moment.qname">&lt;!ELEMENT</a> %moment.qname;  EMPTY &gt;
+<a name="attr:moment.qname"></a><a href="appendixa.html#elem:moment.qname">&lt;!ATTLIST</a> %moment.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:clalgop1ary"></a>&lt;!ENTITY % clalgop1ary              
+     &quot;%determinant.qname; |
+      %transpose.qname;&quot; &gt;
+
+<a name="elem:determinant.qname"></a><a href="appendixa.html#attr:determinant.qname">&lt;!ELEMENT</a> %determinant.qname;  EMPTY &gt;
+<a name="attr:determinant.qname"></a><a href="appendixa.html#elem:determinant.qname">&lt;!ATTLIST</a> %determinant.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:transpose.qname"></a><a href="appendixa.html#attr:transpose.qname">&lt;!ELEMENT</a> %transpose.qname;  EMPTY &gt;
+<a name="attr:transpose.qname"></a><a href="appendixa.html#elem:transpose.qname">&lt;!ATTLIST</a> %transpose.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:clalgop2ary"></a>&lt;!ENTITY % clalgop2ary              
+     &quot;%vectorproduct.qname; 
+      | %scalarproduct.qname; 
+      | %outerproduct.qname;&quot; &gt;
+
+<a name="elem:vectorproduct.qname"></a><a href="appendixa.html#attr:vectorproduct.qname">&lt;!ELEMENT</a> %vectorproduct.qname;  EMPTY &gt;
+<a name="attr:vectorproduct.qname"></a><a href="appendixa.html#elem:vectorproduct.qname">&lt;!ATTLIST</a> %vectorproduct.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:scalarproduct.qname"></a><a href="appendixa.html#attr:scalarproduct.qname">&lt;!ELEMENT</a> %scalarproduct.qname;  EMPTY &gt;
+<a name="attr:scalarproduct.qname"></a><a href="appendixa.html#elem:scalarproduct.qname">&lt;!ATTLIST</a> %scalarproduct.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:outerproduct.qname"></a><a href="appendixa.html#attr:outerproduct.qname">&lt;!ELEMENT</a> %outerproduct.qname;  EMPTY &gt;
+<a name="attr:outerproduct.qname"></a><a href="appendixa.html#elem:outerproduct.qname">&lt;!ATTLIST</a> %outerproduct.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:clalgopnary"></a>&lt;!ENTITY % clalgopnary              
+     &quot;%selector.qname;&quot; &gt;
+
+<a name="elem:selector.qname"></a><a href="appendixa.html#attr:selector.qname">&lt;!ELEMENT</a> %selector.qname;  EMPTY &gt;
+<a name="attr:selector.qname"></a><a href="appendixa.html#elem:selector.qname">&lt;!ATTLIST</a> %selector.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+&lt;!-- Elementi di contenuto: relazioni --&gt;
+
+<a name="pent:cgenrel2ary"></a>&lt;!ENTITY % cgenrel2ary             
+     &quot;%neq.qname;&quot; &gt;
+
+<a name="elem:neq.qname"></a><a href="appendixa.html#attr:neq.qname">&lt;!ELEMENT</a> %neq.qname;  EMPTY &gt;
+<a name="attr:neq.qname"></a><a href="appendixa.html#elem:neq.qname">&lt;!ATTLIST</a> %neq.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:cgenrelnary"></a>&lt;!ENTITY % cgenrelnary              
+     &quot;%eq.qname; | %leq.qname; | %lt.qname; | %geq.qname; 
+      | %gt.qname;| %equivalent.qname; | %approx.qname;&quot; &gt;
+
+<a name="elem:eq.qname"></a><a href="appendixa.html#attr:eq.qname">&lt;!ELEMENT</a> %eq.qname;  EMPTY &gt;
+<a name="attr:eq.qname"></a><a href="appendixa.html#elem:eq.qname">&lt;!ATTLIST</a> %eq.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:equivalent.qname"></a><a href="appendixa.html#attr:equivalent.qname">&lt;!ELEMENT</a> %equivalent.qname;  EMPTY &gt;
+<a name="attr:equivalent.qname"></a><a href="appendixa.html#elem:equivalent.qname">&lt;!ATTLIST</a> %equivalent.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:approx.qname"></a><a href="appendixa.html#attr:approx.qname">&lt;!ELEMENT</a> %approx.qname;  EMPTY &gt;
+<a name="attr:approx.qname"></a><a href="appendixa.html#elem:approx.qname">&lt;!ATTLIST</a> %approx.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:gt.qname"></a><a href="appendixa.html#attr:gt.qname">&lt;!ELEMENT</a> %gt.qname;  EMPTY &gt;
+<a name="attr:gt.qname"></a><a href="appendixa.html#elem:gt.qname">&lt;!ATTLIST</a> %gt.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:lt.qname"></a><a href="appendixa.html#attr:lt.qname">&lt;!ELEMENT</a> %lt.qname;  EMPTY &gt;
+<a name="attr:lt.qname"></a><a href="appendixa.html#elem:lt.qname">&lt;!ATTLIST</a> %lt.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:geq.qname"></a><a href="appendixa.html#attr:geq.qname">&lt;!ELEMENT</a> %geq.qname;  EMPTY &gt;
+<a name="attr:geq.qname"></a><a href="appendixa.html#elem:geq.qname">&lt;!ATTLIST</a> %geq.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:leq.qname"></a><a href="appendixa.html#attr:leq.qname">&lt;!ELEMENT</a> %leq.qname;  EMPTY &gt;
+<a name="attr:leq.qname"></a><a href="appendixa.html#elem:leq.qname">&lt;!ATTLIST</a> %leq.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:csetrel2ary"></a>&lt;!ENTITY % csetrel2ary              
+     &quot;%in.qname; | %notin.qname; | %notsubset.qname; | %notprsubset.qname;&quot; &gt;
+
+<a name="elem:in.qname"></a><a href="appendixa.html#attr:in.qname">&lt;!ELEMENT</a> %in.qname;  EMPTY &gt;
+<a name="attr:in.qname"></a><a href="appendixa.html#elem:in.qname">&lt;!ATTLIST</a> %in.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:notin.qname"></a><a href="appendixa.html#attr:notin.qname">&lt;!ELEMENT</a> %notin.qname;  EMPTY &gt;
+<a name="attr:notin.qname"></a><a href="appendixa.html#elem:notin.qname">&lt;!ATTLIST</a> %notin.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:notsubset.qname"></a><a href="appendixa.html#attr:notsubset.qname">&lt;!ELEMENT</a> %notsubset.qname;  EMPTY &gt;
+<a name="attr:notsubset.qname"></a><a href="appendixa.html#elem:notsubset.qname">&lt;!ATTLIST</a> %notsubset.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:notprsubset.qname"></a><a href="appendixa.html#attr:notprsubset.qname">&lt;!ELEMENT</a> %notprsubset.qname;  EMPTY &gt;
+<a name="attr:notprsubset.qname"></a><a href="appendixa.html#elem:notprsubset.qname">&lt;!ATTLIST</a> %notprsubset.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:csetrelnary"></a>&lt;!ENTITY % csetrelnary       
+     &quot;%subset.qname; | %prsubset.qname;&quot; &gt;
+
+<a name="elem:subset.qname"></a><a href="appendixa.html#attr:subset.qname">&lt;!ELEMENT</a> %subset.qname;  EMPTY &gt;
+<a name="attr:subset.qname"></a><a href="appendixa.html#elem:subset.qname">&lt;!ATTLIST</a> %subset.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="elem:prsubset.qname"></a><a href="appendixa.html#attr:prsubset.qname">&lt;!ELEMENT</a> %prsubset.qname;  EMPTY &gt;
+<a name="attr:prsubset.qname"></a><a href="appendixa.html#elem:prsubset.qname">&lt;!ATTLIST</a> %prsubset.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+&gt;
+
+<a name="pent:cseqrel2ary"></a>&lt;!ENTITY % cseqrel2ary              
+     &quot;%tendsto.qname;&quot; &gt;
+
+<a name="elem:tendsto.qname"></a><a href="appendixa.html#attr:tendsto.qname">&lt;!ELEMENT</a> %tendsto.qname;  EMPTY &gt;
+<a name="attr:tendsto.qname"></a><a href="appendixa.html#elem:tendsto.qname">&lt;!ATTLIST</a> %tendsto.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attdefinition">%att-definition;</a>
+      <a href="appendixa.html#pent:attencoding">%att-encoding;</a>
+      <a href="appendixa.html#pent:atttype">%att-type;</a>
+&gt;
+
+&lt;!-- Elementi di contenuto: quantificatori --&gt;
+
+<a name="pent:cquantifier"></a>&lt;!ENTITY % cquantifier            
+     &quot;%lowlimit.qname; | %uplimit.qname; | %bvar.qname; 
+      | %degree.qname; | %logbase.qname;&quot; &gt;
+
+<a name="attr:lowlimit.qname"></a><a href="appendixa.html#elem:lowlimit.qname">&lt;!ATTLIST</a> %lowlimit.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:uplimit.qname"></a><a href="appendixa.html#elem:uplimit.qname">&lt;!ATTLIST</a> %uplimit.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:bvar.qname"></a><a href="appendixa.html#elem:bvar.qname">&lt;!ATTLIST</a> %bvar.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:degree.qname"></a><a href="appendixa.html#elem:degree.qname">&lt;!ATTLIST</a> %degree.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+<a name="attr:logbase.qname"></a><a href="appendixa.html#elem:logbase.qname">&lt;!ATTLIST</a> %logbase.qname;
+      <a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+&gt;
+
+&lt;!-- Gruppi di operatori --&gt;
+
+<a name="pent:cop1ary"></a>&lt;!ENTITY % cop1ary                  
+     &quot;<a href="appendixa.html#pent:cfuncop1ary">%cfuncop1ary;</a> | <a href="appendixa.html#pent:carithop1ary">%carithop1ary;</a> | <a href="appendixa.html#pent:clogicop1ary">%clogicop1ary;</a> |
+      <a href="appendixa.html#pent:ccalcop1ary">%ccalcop1ary;</a> | <a href="appendixa.html#pent:ctrigop">%ctrigop;</a> | <a href="appendixa.html#pent:clalgop1ary">%clalgop1ary;</a> |
+      <a href="appendixa.html#pent:csetop1ary">%csetop1ary;</a>&quot; &gt;
+
+<a name="pent:cop2ary"></a>&lt;!ENTITY % cop2ary                  
+     &quot;<a href="appendixa.html#pent:carithop2ary">%carithop2ary;</a> | <a href="appendixa.html#pent:clogicop2ary">%clogicop2ary;</a>| <a href="appendixa.html#pent:clalgop2ary">%clalgop2ary;</a> | <a href="appendixa.html#pent:csetop2ary">%csetop2ary;</a>&quot; &gt;
+
+<a name="pent:copnary"></a>&lt;!ENTITY % copnary                  
+     &quot;<a href="appendixa.html#pent:cfuncopnary">%cfuncopnary;</a> | <a href="appendixa.html#pent:carithopnary">%carithopnary;</a> | <a href="appendixa.html#pent:clogicopnary">%clogicopnary;</a> |
+      <a href="appendixa.html#pent:csetopnary">%csetopnary;</a> | <a href="appendixa.html#pent:cstatopnary">%cstatopnary;</a> | <a href="appendixa.html#pent:clalgopnary">%clalgopnary;</a>&quot; &gt;
+
+<a name="pent:copmisc"></a>&lt;!ENTITY % copmisc                  
+     &quot;<a href="appendixa.html#pent:carithoproot">%carithoproot;</a> | <a href="appendixa.html#pent:carithop1or2ary">%carithop1or2ary;</a> | <a href="appendixa.html#pent:ccalcop">%ccalcop;</a> |
+      <a href="appendixa.html#pent:cseqop">%cseqop;</a> | <a href="appendixa.html#pent:cstatopmoment">%cstatopmoment;</a> | <a href="appendixa.html#pent:clogicopquant">%clogicopquant;</a>&quot; &gt;
+
+&lt;!-- Gruppi di relazioni --&gt;
+
+<a name="pent:crel2ary"></a>&lt;!ENTITY % crel2ary                 
+     &quot;<a href="appendixa.html#pent:cgenrel2ary">%cgenrel2ary;</a> | <a href="appendixa.html#pent:csetrel2ary">%csetrel2ary;</a> | <a href="appendixa.html#pent:cseqrel2ary">%cseqrel2ary;</a>&quot; &gt;
+
+<a name="pent:crelnary"></a>&lt;!ENTITY % crelnary                 
+     &quot;<a href="appendixa.html#pent:cgenrelnary">%cgenrelnary;</a> | <a href="appendixa.html#pent:csetrelnary">%csetrelnary;</a>&quot; &gt;
+
+&lt;!-- Costrutti di contenuto: tutti --&gt;
+
+<a name="pent:Content"></a>&lt;!ENTITY % Content                  
+     &quot;<a href="appendixa.html#pent:ctoken">%ctoken;</a> | <a href="appendixa.html#pent:cspecial">%cspecial;</a> | <a href="appendixa.html#pent:cother">%cother;</a> | <a href="appendixa.html#pent:csemantics">%csemantics;</a> | <a href="appendixa.html#pent:c0ary">%c0ary;</a>
+      | <a href="appendixa.html#pent:cconstructor">%cconstructor;</a> | <a href="appendixa.html#pent:cquantifier">%cquantifier;</a> | <a href="appendixa.html#pent:cop1ary">%cop1ary;</a> | <a href="appendixa.html#pent:cop2ary">%cop2ary;</a> 
+      | <a href="appendixa.html#pent:copnary">%copnary;</a> |<a href="appendixa.html#pent:copmisc">%copmisc;</a> | <a href="appendixa.html#pent:crel2ary">%crel2ary;</a> | <a href="appendixa.html#pent:crelnary">%crelnary;</a>&quot; &gt;
+
+&lt;!-- Costrutti di contenuto per la sostituzione in strutture di
+     presentazione --&gt;
+
+<a name="pent:ContInPres"></a>&lt;!ENTITY % ContInPres               
+     &quot;%ci.qname; |%csymbol.qname;| %cn.qname;|
+      %apply.qname; | %fn.qname; |
+      %lambda.qname; | %reln.qname; |
+      %interval.qname; | %list.qname; |
+      %matrix.qname; | %matrixrow.qname; |
+      %set.qname; | %vector.qname; |
+      %semantics.qname; |%declare.qname;&quot; &gt;
+
+&lt;!-- ............................................................. --&gt;
+&lt;!-- Definizione ricorsiva per il contenuto delle espressioni. Include
+     costrutti di presentazione al livello pi&ugrave; basso cos&igrave; gli
+     schemi di disposizione di presentazione hanno gli elementi
+     di contenuto o di presentazione. Include costrutti
+     di contenuto al livello pi&ugrave; basso cos&igrave; gli elementi di
+     contenuto hanno PCDATA o elementi di presentazione a livello
+     di foglia (per elementi che si possono sostituire nel contesto)
+--&gt;
+
+<a name="pent:ContentExpression"></a>&lt;!ENTITY % ContentExpression        
+     &quot;(<a href="appendixa.html#pent:Content">%Content;</a> | <a href="appendixa.html#pent:PresInCont">%PresInCont;</a>)*&quot; &gt;
+<a name="pent:PresExpression"></a>&lt;!ENTITY % PresExpression      
+     &quot;(<a href="appendixa.html#pent:Presentation">%Presentation;</a> | <a href="appendixa.html#pent:ContInPres">%ContInPres;</a>)*&quot; &gt;
+<a name="pent:MathExpression"></a>&lt;!ENTITY % MathExpression           
+     &quot;(<a href="appendixa.html#pent:PresInCont">%PresInCont;</a> | <a href="appendixa.html#pent:ContInPres">%ContInPres;</a>)*&quot; &gt;
+
+&lt;!-- PCDATA o elementi caratteri del MathML --&gt;
+<a name="pent:MathMLCharacters"></a>&lt;!ENTITY % MathMLCharacters         
+     &quot;#PCDATA | %mchar.qname; | %mglyph.qname; &quot; &gt;
+
+&lt;!-- Elementi di contenuto: token                               --&gt;
+&lt;!-- (possono contenere costrutti di presentazione incorporati) --&gt;
+
+<a name="elem:ci.qname"></a><a href="appendixa.html#attr:ci.qname">&lt;!ELEMENT</a> %ci.qname;                 (<a href="appendixa.html#pent:MathMLCharacters">%MathMLCharacters;</a> | <a href="appendixa.html#pent:PresInCont">%PresInCont;</a>)* &gt;
+<a name="elem:csymbol.qname"></a><a href="appendixa.html#attr:csymbol.qname">&lt;!ELEMENT</a> %csymbol.qname;            (<a href="appendixa.html#pent:MathMLCharacters">%MathMLCharacters;</a> | <a href="appendixa.html#pent:PresInCont">%PresInCont;</a>)* &gt;
+<a name="elem:cn.qname"></a><a href="appendixa.html#attr:cn.qname">&lt;!ELEMENT</a> %cn.qname;                 (<a href="appendixa.html#pent:MathMLCharacters">%MathMLCharacters;</a> | %sep.qname; | <a href="appendixa.html#pent:PresInCont">%PresInCont;</a>)* &gt;
+
+&lt;!-- Elementi di contenuto: speciali --&gt;
+
+<a name="elem:apply.qname"></a><a href="appendixa.html#attr:apply.qname">&lt;!ELEMENT</a> %apply.qname;              (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:reln.qname"></a><a href="appendixa.html#attr:reln.qname">&lt;!ELEMENT</a> %reln.qname;               (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:lambda.qname"></a><a href="appendixa.html#attr:lambda.qname">&lt;!ELEMENT</a> %lambda.qname;             (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+
+&lt;!-- Elementi di contenuto: altro --&gt;
+
+<a name="elem:condition.qname"></a><a href="appendixa.html#attr:condition.qname">&lt;!ELEMENT</a> %condition.qname;          (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:declare.qname"></a><a href="appendixa.html#attr:declare.qname">&lt;!ELEMENT</a> %declare.qname;            (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+
+&lt;!-- Elementi di contenuto: semantica --&gt;
+
+<a name="elem:semantics.qname"></a><a href="appendixa.html#attr:semantics.qname">&lt;!ELEMENT</a> %semantics.qname;          (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="pent:Annotation.content"></a>&lt;!ENTITY % Annotation.content  &quot;( #PCDATA )&quot; &gt;
+<a name="elem:annotation.qname"></a><a href="appendixa.html#attr:annotation.qname">&lt;!ELEMENT</a> %annotation.qname;         <a href="appendixa.html#pent:Annotation.content">%Annotation.content;</a> &gt;
+
+<a name="pent:Annotationxml.content"></a>&lt;!ENTITY % Annotation-xml.content &quot;ANY&quot; &gt;
+<a name="elem:annotationxml.qname"></a><a href="appendixa.html#attr:annotationxml.qname">&lt;!ELEMENT</a> %annotation-xml.qname;     <a href="appendixa.html#pent:Annotationxml.content">%Annotation-xml.content;</a> &gt;
+
+&lt;!-- Elementi di contenuto: costruttori --&gt;
+
+<a name="elem:interval.qname"></a><a href="appendixa.html#attr:interval.qname">&lt;!ELEMENT</a> %interval.qname;           (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:set.qname"></a><a href="appendixa.html#attr:set.qname">&lt;!ELEMENT</a> %set.qname;                (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:list.qname"></a><a href="appendixa.html#attr:list.qname">&lt;!ELEMENT</a> %list.qname;               (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:vector.qname"></a><a href="appendixa.html#attr:vector.qname">&lt;!ELEMENT</a> %vector.qname;             (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:matrix.qname"></a><a href="appendixa.html#attr:matrix.qname">&lt;!ELEMENT</a> %matrix.qname;             (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:matrixrow.qname"></a><a href="appendixa.html#attr:matrixrow.qname">&lt;!ELEMENT</a> %matrixrow.qname;          (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+
+&lt;!-- Elementi di contenuto: operatore (definito dall'utente) --&gt;
+
+<a name="elem:fn.qname"></a><a href="appendixa.html#attr:fn.qname">&lt;!ELEMENT</a> %fn.qname;                 (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+
+&lt;!-- Elementi di contenuto: quantificatori --&gt;
+
+<a name="elem:lowlimit.qname"></a><a href="appendixa.html#attr:lowlimit.qname">&lt;!ELEMENT</a> %lowlimit.qname;           (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:uplimit.qname"></a><a href="appendixa.html#attr:uplimit.qname">&lt;!ELEMENT</a> %uplimit.qname;            (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:bvar.qname"></a><a href="appendixa.html#attr:bvar.qname">&lt;!ELEMENT</a> %bvar.qname;               (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:degree.qname"></a><a href="appendixa.html#attr:degree.qname">&lt;!ELEMENT</a> %degree.qname;             (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+<a name="elem:logbase.qname"></a><a href="appendixa.html#attr:logbase.qname">&lt;!ELEMENT</a> %logbase.qname;            (<a href="appendixa.html#pent:ContentExpression">%ContentExpression;</a>) &gt;
+
+&lt;!-- ............................................................. --&gt;
+&lt;!-- Gli schemi di disposizione di presentazione contengono
+     token, schemi di disposizione e di contenuto.
+--&gt;
+
+<a name="elem:mstyle.qname"></a><a href="appendixa.html#attr:mstyle.qname">&lt;!ELEMENT</a> %mstyle.qname;             (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:merror.qname"></a><a href="appendixa.html#attr:merror.qname">&lt;!ELEMENT</a> %merror.qname;             (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mphantom.qname"></a><a href="appendixa.html#attr:mphantom.qname">&lt;!ELEMENT</a> %mphantom.qname;           (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mrow.qname"></a><a href="appendixa.html#attr:mrow.qname">&lt;!ELEMENT</a> %mrow.qname;               (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mfrac.qname"></a><a href="appendixa.html#attr:mfrac.qname">&lt;!ELEMENT</a> %mfrac.qname;              (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:msqrt.qname"></a><a href="appendixa.html#attr:msqrt.qname">&lt;!ELEMENT</a> %msqrt.qname;              (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:menclose.qname"></a><a href="appendixa.html#attr:menclose.qname">&lt;!ELEMENT</a> %menclose.qname;           (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mroot.qname"></a><a href="appendixa.html#attr:mroot.qname">&lt;!ELEMENT</a> %mroot.qname;              (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:msub.qname"></a><a href="appendixa.html#attr:msub.qname">&lt;!ELEMENT</a> %msub.qname;               (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:msup.qname"></a><a href="appendixa.html#attr:msup.qname">&lt;!ELEMENT</a> %msup.qname;               (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:msubsup.qname"></a><a href="appendixa.html#attr:msubsup.qname">&lt;!ELEMENT</a> %msubsup.qname;            (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mmultiscripts.qname"></a><a href="appendixa.html#attr:mmultiscripts.qname">&lt;!ELEMENT</a> %mmultiscripts.qname;      (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:munder.qname"></a><a href="appendixa.html#attr:munder.qname">&lt;!ELEMENT</a> %munder.qname;             (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mover.qname"></a><a href="appendixa.html#attr:mover.qname">&lt;!ELEMENT</a> %mover.qname;              (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:munderover.qname"></a><a href="appendixa.html#attr:munderover.qname">&lt;!ELEMENT</a> %munderover.qname;         (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mtable.qname"></a><a href="appendixa.html#attr:mtable.qname">&lt;!ELEMENT</a> %mtable.qname;             (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mtr.qname"></a><a href="appendixa.html#attr:mtr.qname">&lt;!ELEMENT</a> %mtr.qname;                (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mlabeledtr.qname"></a><a href="appendixa.html#attr:mlabeledtr.qname">&lt;!ELEMENT</a> %mlabeledtr.qname;         (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mtd.qname"></a><a href="appendixa.html#attr:mtd.qname">&lt;!ELEMENT</a> %mtd.qname;                (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:maction.qname"></a><a href="appendixa.html#attr:maction.qname">&lt;!ELEMENT</a> %maction.qname;            (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mfenced.qname"></a><a href="appendixa.html#attr:mfenced.qname">&lt;!ELEMENT</a> %mfenced.qname;            (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+<a name="elem:mpadded.qname"></a><a href="appendixa.html#attr:mpadded.qname">&lt;!ELEMENT</a> %mpadded.qname;            (<a href="appendixa.html#pent:PresExpression">%PresExpression;</a>) &gt;
+
+&lt;!-- Gli elementi di presentazione contengono PCDATA o costrutti
+     malignmark. --&gt;
+
+<a name="elem:mi.qname"></a><a href="appendixa.html#attr:mi.qname">&lt;!ELEMENT</a> %mi.qname;                 (<a href="appendixa.html#pent:MathMLCharacters">%MathMLCharacters;</a> |
+      %malignmark.qname;)* &gt;
+<a name="elem:mn.qname"></a><a href="appendixa.html#attr:mn.qname">&lt;!ELEMENT</a> %mn.qname;                 (<a href="appendixa.html#pent:MathMLCharacters">%MathMLCharacters;</a> |
+      %malignmark.qname;)* &gt;
+<a name="elem:mo.qname"></a><a href="appendixa.html#attr:mo.qname">&lt;!ELEMENT</a> %mo.qname;                 (<a href="appendixa.html#pent:MathMLCharacters">%MathMLCharacters;</a> |
+      %malignmark.qname;)* &gt;
+<a name="elem:mtext.qname"></a><a href="appendixa.html#attr:mtext.qname">&lt;!ELEMENT</a> %mtext.qname;              (<a href="appendixa.html#pent:MathMLCharacters">%MathMLCharacters;</a> |
+      %malignmark.qname;)* &gt;
+<a name="elem:ms.qname"></a><a href="appendixa.html#attr:ms.qname">&lt;!ELEMENT</a> %ms.qname;                 (<a href="appendixa.html#pent:MathMLCharacters">%MathMLCharacters;</a> |
+      %malignmark.qname;)* &gt;
+
+&lt;!-- Definizione dell'interfaccia del browser  ........................... --&gt;
+
+&lt;!-- Attributi dell'elemento &quot;math&quot; di livello principale --&gt;
+
+<a name="pent:attmacros"></a>&lt;!ENTITY % att-macros               
+     &quot;macros       CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attmode"></a>&lt;!ENTITY % att-mode                 
+     &quot;mode         CDATA                    #IMPLIED&quot; &gt;
+
+<a name="pent:atttopinfo"></a>&lt;!ENTITY % att-topinfo          
+     &quot;<a href="appendixa.html#pent:MATHML.Common.attrib">%MATHML.Common.attrib;</a>
+      <a href="appendixa.html#pent:attmacros">%att-macros;</a>
+      <a href="appendixa.html#pent:attmode">%att-mode;</a>&quot; &gt;
+
+&lt;!-- Attributi per l'elemento di interfaccia del browser --&gt;
+
+<a name="pent:attbaseline"></a>&lt;!ENTITY % att-baseline             
+     &quot;baseline     CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attoverflow"></a>&lt;!ENTITY % att-overflow            
+     &quot;overflow  ( scroll | elide | truncate | scale ) 'scroll'&quot; &gt;
+<a name="pent:attaltimg"></a>&lt;!ENTITY % att-altimg               
+     &quot;altimg       CDATA                    #IMPLIED&quot; &gt;
+<a name="pent:attalttext"></a>&lt;!ENTITY % att-alttext           
+     &quot;alttext      CDATA                    #IMPLIED&quot; &gt;
+
+<a name="pent:attbrowif"></a>&lt;!ENTITY % att-browif           
+     &quot;<a href="appendixa.html#pent:atttype">%att-type;</a>
+      <a href="appendixa.html#pent:attname">%att-name;</a>
+      <a href="appendixa.html#pent:attheight">%att-height;</a>
+      <a href="appendixa.html#pent:attwidth">%att-width;</a>
+      <a href="appendixa.html#pent:attbaseline">%att-baseline;</a>
+      <a href="appendixa.html#pent:attoverflow">%att-overflow;</a>
+      <a href="appendixa.html#pent:attaltimg">%att-altimg;</a>
+      <a href="appendixa.html#pent:attalttext">%att-alttext;</a>&quot; &gt;
+
+&lt;!-- ............................................................. --&gt;
+&lt;!-- L'elemento &quot;math&quot; di livello principale contiene la codifica
+     matematica del MathML. L'elemento &quot;math&quot; contiene gli attributi di
+     informazione del browser se &egrave; anche l'elemento di interfaccia del browser.
+--&gt;
+
+<a name="elem:math.qname"></a><a href="appendixa.html#attr:math.qname">&lt;!ELEMENT</a> %math.qname;               (<a href="appendixa.html#pent:MathExpression">%MathExpression;</a>) &gt;
+
+<a name="attr:math.qname"></a><a href="appendixa.html#elem:math.qname">&lt;!ATTLIST</a> %math.qname;
+      <a href="appendixa.html#pent:atttopinfo">%att-topinfo;</a>
+      <a href="appendixa.html#pent:attbrowif">%att-browif;</a> &gt;
+
+&lt;!-- Entit&agrave; carattere del MathML ....................................... --&gt;
+<a name="pent:mathmlcharent.module"></a>&lt;!ENTITY % mathml-charent.module &quot;INCLUDE&quot; &gt;
+&lt;![<a href="appendixa.html#pent:mathmlcharent.module">%mathml-charent.module;</a>[
+&lt;!-- Insiemi di entit&agrave; dal Rapporto Tecnico ISO 9573-13 ..... --&gt;
+
+<a name="pent:entisoamsa"></a>&lt;!ENTITY % ent-isoamsa
+      PUBLIC &quot;-//W3C//ENTITIES Added Math Symbols: Arrow Relations for MathML 2.0//EN&quot;
+             &quot;isoamsa.ent&quot; &gt;
+<a href="isoamsa.html">%ent-isoamsa;</a>
+
+
+<a name="pent:entisoamsb"></a>&lt;!ENTITY % ent-isoamsb
+      PUBLIC &quot;-//W3C//ENTITIES Added Math Symbols: Binary Operators for MathML 2.0//EN&quot;
+             &quot;isoamsb.ent&quot; &gt;
+<a href="isoamsb.html">%ent-isoamsb;</a>
+
+
+<a name="pent:entisoamsc"></a>&lt;!ENTITY % ent-isoamsc
+      PUBLIC &quot;-//W3C//ENTITIES Added Math Symbols: Delimiters for MathML 2.0//EN&quot;
+             &quot;isoamsc.ent&quot; &gt;
+<a href="isoamsc.html">%ent-isoamsc;</a>
+
+
+<a name="pent:entisoamsn"></a>&lt;!ENTITY % ent-isoamsn
+      PUBLIC &quot;-//W3C//ENTITIES Added Math Symbols: Negated Relations for MathML 2.0//EN&quot;
+             &quot;isoamsn.ent&quot; &gt;
+<a href="isoamsn.html">%ent-isoamsn;</a>
+
+
+<a name="pent:entisoamso"></a>&lt;!ENTITY % ent-isoamso
+      PUBLIC &quot;-//W3C//ENTITIES Added Math Symbols: Ordinary for MathML 2.0//EN&quot;
+             &quot;isoamso.ent&quot; &gt;
+<a href="isoamso.html">%ent-isoamso;</a>
+
+
+<a name="pent:entisoamsr"></a>&lt;!ENTITY % ent-isoamsr
+      PUBLIC &quot;-//W3C//ENTITIES Added Math Symbols: Relations for MathML 2.0//EN&quot;
+             &quot;isoamsr.ent&quot; &gt;
+<a href="isoamsr.html">%ent-isoamsr;</a>
+
+
+<a name="pent:entisogrk3"></a>&lt;!ENTITY % ent-isogrk3
+      PUBLIC &quot;-//W3C//ENTITIES Greek Symbols for MathML 2.0//EN&quot;
+             &quot;isogrk3.ent&quot; &gt;
+<a href="isogrk3.html">%ent-isogrk3;</a>
+
+
+<a name="pent:entisomfrk"></a>&lt;!ENTITY % ent-isomfrk
+      PUBLIC &quot;-//W3C//ENTITIES Math Alphabets: Fraktur for MathML 2.0//EN&quot;
+             &quot;isomfrk.ent&quot; &gt;
+<a href="isomfrk.html">%ent-isomfrk;</a>
+
+
+<a name="pent:entisomopf"></a>&lt;!ENTITY % ent-isomopf
+      PUBLIC &quot;-//W3C//ENTITIES Math Alphabets: Open Face for MathML 2.0//EN&quot;
+             &quot;isomopf.ent&quot; &gt;
+<a href="isomopf.html">%ent-isomopf;</a>
+
+
+<a name="pent:entisomscr"></a>&lt;!ENTITY % ent-isomscr
+      PUBLIC &quot;-//W3C//ENTITIES Math Alphabets: Script for MathML 2.0//EN&quot;
+             &quot;isomscr.ent&quot; &gt;
+<a href="isomscr.html">%ent-isomscr;</a>
+
+
+<a name="pent:entisotech"></a>&lt;!ENTITY % ent-isotech
+      PUBLIC &quot;-//W3C//ENTITIES General Technical for MathML 2.0//EN&quot;
+             &quot;isotech.ent&quot; &gt;
+<a href="isotech.html">%ent-isotech;</a>
+
+
+&lt;!-- Insiemi di entit&agrave; dall'informativa annessa all'ISO 8879:1986 (SGML) .. --&gt;
+
+<a name="pent:entisobox"></a>&lt;!ENTITY % ent-isobox
+      PUBLIC &quot;-//W3C//ENTITIES Box and Line Drawing for MathML 2.0//EN&quot;
+             &quot;isobox.ent&quot; &gt;
+<a href="isobox.html">%ent-isobox;</a>
+
+
+<a name="pent:entisocyr1"></a>&lt;!ENTITY % ent-isocyr1
+      PUBLIC &quot;-//W3C//ENTITIES Russian Cyrillic for MathML 2.0//EN&quot;
+             &quot;isocyr1.ent&quot; &gt;
+<a href="isocyr1.html">%ent-isocyr1;</a>
+
+
+<a name="pent:entisocyr2"></a>&lt;!ENTITY % ent-isocyr2
+      PUBLIC &quot;-//W3C//ENTITIES Non-Russian Cyrillic for MathML 2.0//EN&quot;
+             &quot;isocyr2.ent&quot; &gt;
+<a href="isocyr2.html">%ent-isocyr2;</a>
+
+
+<a name="pent:entisodia"></a>&lt;!ENTITY % ent-isodia
+      PUBLIC &quot;-//W3C//ENTITIES Diacritical Marks for MathML 2.0//EN&quot;
+             &quot;isodia.ent&quot; &gt;
+<a href="isodia.html">%ent-isodia;</a>
+
+
+<a name="pent:entisolat1"></a>&lt;!ENTITY % ent-isolat1
+      PUBLIC &quot;-//W3C//ENTITIES Added Latin 1 for MathML 2.0//EN&quot;
+             &quot;isolat1.ent&quot; &gt;
+<a href="isolat1.html">%ent-isolat1;</a>
+
+
+<a name="pent:entisolat2"></a>&lt;!ENTITY % ent-isolat2
+      PUBLIC &quot;-//W3C//ENTITIES Added Latin 2 for MathML 2.0//EN&quot;
+             &quot;isolat2.ent&quot; &gt;
+<a href="isolat2.html">%ent-isolat2;</a>
+
+
+<a name="pent:entisonum"></a>&lt;!ENTITY % ent-isonum
+      PUBLIC &quot;-//W3C//ENTITIES Numeric and Special Graphic for MathML 2.0//EN&quot;
+             &quot;isonum.ent&quot; &gt;
+<a href="isonum.html">%ent-isonum;</a>
+
+
+<a name="pent:entisopub"></a>&lt;!ENTITY % ent-isopub
+      PUBLIC &quot;-//W3C//ENTITIES Publishing for MathML 2.0//EN&quot;
+             &quot;isopub.ent&quot; &gt;
+<a href="isopub.html">%ent-isopub;</a>
+
+
+&lt;!-- Alias in MathML per i caratteri definiti sopra ................. --&gt;
+
+<a name="pent:entmmlalias"></a>&lt;!ENTITY % ent-mmlalias
+      PUBLIC &quot;-//W3C//ENTITIES Aiases for MathML 2.0//EN&quot;
+             &quot;mmlalias.ent&quot; &gt;
+&lt;!--%ent-mmlalias;--&gt;
+
+&lt;!-- Nuovi caratteri definiti dal MathML ............................ --&gt;
+
+<a name="pent:entmmlextra"></a>&lt;!ENTITY % ent-mmlextra
+      PUBLIC &quot;-//W3C//ENTITIES Extra for MathML 2.0//EN&quot;
+             &quot;mmlextra.ent&quot; &gt;
+&lt;!--%ent-mmlextra;--&gt;
+
+&lt;!-- fine della sezione delle entit&agrave; caratteri del MathML --&gt;]]&gt;
+
+&lt;!-- Cronologia delle revisioni:
+
+       Bozza iniziale (sintassi = XML) 1997-05-09
+          Stephen Buswell
+       Corretta 1997-05-14
+          Robert Miner
+       Corretta 1997-06-29 e 1997-07-02
+          Stephen Buswell
+       Corretta 1997-12-15
+          Stephen Buswell
+       Corretta 1998-02-08
+          Stephen Buswell
+       Corretta 1998-04-04
+          Stephen Buswell
+       Entit&agrave; e piccole revisioni 1999-02-21
+          David Carlisle
+       Aggiunto l'attributo definitionURL a ci e cn 1999-10-11
+          Nico Poppelier
+       Aggiunte per il MathML 2  1999-12-16
+          David Carlisle
+       Supporto per lo spazio di nomi 2000-01-14
+          David Carlisle
+       Compatibilit&agrave; XHTML 2000-02-23
+          Murray Altheim
+       Nuovi elementi di contenuto 2000-03-26
+          David Carlisle
+
+--&gt;
+
+&lt;!-- fine della DTD del MathML 2.0 ........................................ --&gt;
+&lt;!-- ...................................................................... --&gt;
+
+</pre>
+
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 8 <a href="chapter8.html">Modello a oggetti dei
+  documenti per il MathML</a>
+<br>
+  Successivo: B <a href="appendixb.html">Grammatica di convalida della
+  marcatura di contenuto</a>
+<br>
+</p>
+</body>
+</html>

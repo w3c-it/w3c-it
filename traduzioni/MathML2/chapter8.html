@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Modello a oggetti dei documenti per il MathML</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="dom-intro"></a>8 Modello a oggetti dei documenti per il MathML</h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  Marcatura Matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 7 <a href="chapter7.html">L'interfaccia del MathML</a>
+<br>
+  Successivo: A <a href="appendixa.html">Analisi del MathML</a>
+<br>
+  &nbsp;<br>8 <a href="chapter8.html">Modello a oggetti dei documenti
+  per il MathML</a>
+<br>8.1 <a href="chapter8.html#dom-intro:intro">Introduzione</a>
+<br>&nbsp;&nbsp;&nbsp;8.1.1 <a href="chapter8.html#N37772">Estensioni
+DOM al MathML</a>
+<br>
+</p>
+
+<h2>
+<a name="dom-intro:intro"></a>8.1 Introduzione </h2>
+
+<p>Questo documento estende l'API di base del DOM di Livello 1 per
+descrivere oggetti e metodi specifici degli elementi MathML nei
+documenti. Nel documento base si trova la funzionalit&agrave;
+necessaria per manipolare le strutture gerarchiche fondamentali dei
+documenti, gli elementi e gli attributi; le funzionalit&agrave; che
+dipendono dagli elementi specifici definiti nel MathML si trovano in
+questo documento. </p>
+<p>Le specifiche DOM vere e proprie appaiono nell'<a
+href="appendixe.html">Appendice&nbsp;E [Modello a oggetti dei
+documenti per il MathML]</a>. </p>
+
+<p>Gli obiettivi dell'API DOM specifica del MathML sono: </p>
+<ul>
+<li>Specializzare ed aggiungere funzionalit&agrave; specificamente
+collegate agli elementi del MathML.
+</li>
+<li>Fornire meccanismi idonei, dove appropriato, per le operazioni
+comuni e frequenti sugli elementi del MathML.
+</li>
+</ul>
+<p>Questo documento comprende le seguenti specializzazioni per il
+MathML:
+</p>
+<ul>
+<li>Un'interfaccia <code>MathMLElement</code> derivata dall'interfaccia
+di base <code>Element</code>. L'interfaccia MathMLElement specifica le
+operazioni e le interrogazioni che si possono fare su ogni elemento
+MathML. I metodi su <code>MathMLElement</code> comprendono quelli per
+il recupero e la modifica di attributi che si applicano a tutti gli
+elementi del MathML.
+</li>
+<li>Varie specializzazioni di <code>MathMLElement</code> per
+codificare restrizioni sintattiche imposte dal MathML.
+</li>
+<li>Specializzazioni di <code>MathMLElement</code> che rappresentano
+tutti gli elementi del MathML con attributi che si estendono oltre
+quelli specificati nell'interfaccia <code>MathMLElement</code>. Per
+tutti questi attributi, l'interfaccia derivata per l'elemento contiene
+metodi espliciti per impostare ed ottenere i valori.
+</li>
+<li>Metodi speciali per l'inserimento e il recupero di figli di
+elementi del MathML. Sebbene i metodi fondamentali ereditati dalle
+interfacce <code>Node</code> ed <code>Element</code> debbano
+chiaramente restare disponibili, ci&ograve; in molti casi pu&ograve;
+essere fuorviante. Cos&igrave;, per esempio, l'interfaccia
+<code>MathMLFractionElement</code> fornisce metodi per l'accesso agli
+attributi <code>numerator</code> e <code>denominator</code>; una
+chiamata a <code>setDenominator(newNode)</code> &egrave; meno ambigua
+dal punto di vista dell'applicazione chiamante di una chiamata a
+<code>Node::replaceNode(newNode, Node::childNodes().item(2))</code>.
+</li>
+</ul>
+<p>
+</p>
+
+<p>Il MathML specifica regole che sono invisibili ai generici
+elaboratori e validatori XML. Il fatto che gli oggetti DOM del MathML
+debbano rispettare queste regole, e lanciare eccezioni quando queste
+regole sono violate, &egrave; una ragione importante per fornire
+un'estensione DOM specifica per il MathML. </p>
+
+<p>Ci sono fondamentalmente due tipi di regole aggiuntive di
+grammatica e sintassi del MathML. Un tipo riguarda mettere criteri
+aggiuntivi sui valori degli attributi. Per esempio, non &egrave;
+possibile in XML puro richiedere che il valore di un attributo sia un
+intero positivo. Il secondo tipo di regola specifica restrizioni
+pi&ugrave; dettagliate sull'elemento figlio (per esempio
+sull'ordinamento) di quelle date nella DTD. Per esempio, non &egrave;
+possibile in XML specificare che il primo figlio sia interpretato in
+un modo e il secondo in un altro. Gli oggetti DOM del MathML devono
+fornire questa interpretazione. </p>
+
+<p>Il MathML ignora gli spazi bianchi che occorrono fuori dagli
+elementi token.  I caratteri che non sono spazi bianchi non sono
+permessi in tale contesto. Gli spazi bianchi che occorrono nel
+contenuto di elementi token sono `eliminati' ai lati (ovvero tutti gli
+spazi bianchi all'inizio e alla fine del contenuto sono rimossi), e
+`collassati' all'interno (ovvero ogni sequenza di uno o pi&ugrave;
+spazi bianchi &egrave; sostituita da uno spazio). Gli elementi DOM del
+MathML eseguono questa eliminazione degli spazi bianchi quando
+&egrave; necessario. Nel MathML, come nell'XML, `spazio bianco' vuol
+dire spazio, tabulazione, fine riga o ritorno del carrello, ovvero i
+caratteri con codici Unicode esadecimali rispettivamente U+0020,
+U+0009, U+000a, o U+000d. </p>
+
+<h3>
+<a name="N37772"></a>8.1.1 Estensioni DOM al MathML</h3>
+<p>Ci si aspetta che una futura versione del DOM per il MathML possa
+trattare problemi non trattati qui. Alcuni di essi sono descritti in
+seguito. </p>
+
+<h4>
+<a name="N37779"></a>8.1.1.1 Problemi di stile e valori impliciti
+degli attributi </h4>
+<p>Le interfacce descritte per rappresentare gli elementi del MathML
+comprendono l'accesso ad un numero di attributi (nel senso dell'XML)
+che appartengono a questi elementi.  L'intenzione di questi metodi
+nelle interfacce di base del MathML (le coppie `get'/`set') &egrave;
+solo di accedere ad attributi <i>esplicitamente specificati</i> degli
+elementi, e di <i>non</i> accedere specificamente a valori impliciti
+che possono essere specifici dell'applicazione, Chiamate a queste
+interfacce per ottenere attributi che non sono stati esplicitamente
+specificati non dovrebbero restituire niente (una
+<code>DOMString</code> vuota). </p>
+
+<p>Sembra importante dilungarsi su questa distinzione alla luce della
+natura degli elementi MathML e dei loro attributi; tutti gli attributi
+definiti per gli elementi di presentazione del MathML sono dichiarati
+nella DTD con un valore predefinito di <code>#IMPLIED</code>, ad
+esempio. Questo e` particolarmente rilevante per l'interfaccia
+dell'elemento <code>mo</code>, dove l'attributo <code>form</code>
+pu&ograve; essere inferito dal contesto se non dato esplicitamente, ma
+altri attributi sono normalmente raccolti da un dizionario degli
+operatori disponibile ad un interprete. La variet&agrave; delle
+applicazioni che possono aver bisogno di implementare il DOM del
+MathML pu&ograve; a volte essere legata alla convalida, al calcolo o
+ad altri aspetti del documento ad esclusione della riproduzione e
+della modifica; tali applicazioni non hanno bisogno di risolvere molti
+attributi <code>#IMPLIED</code>, e perci&ograve; non c'&egrave;
+accesso a tale risoluzione implicita in questa versione del DOM del
+MathML. </p>
+
+<p>D'altra parte, sono desiderabili metodi per ottenere i valori
+attuali ereditati e calcolati di certi attributi di stile, a causa del
+bisogno di fare frequenti chiamate per scoprire informazioni di stile,
+l'attuale livello di script e lo stile di visualizzazione. La
+matematica &egrave; caratterizzata dall'annidamento ricorsivo di
+oggetti, spesso con implicazioni per il calcolo di parametri di stile
+come la dimensione del font. Come sa chiunque abbia implementato
+riproduttori matematici, c'&egrave; un bisogno costante di queste
+informazioni, e devono essere ottenute molto velocemente. Di
+conseguenza, sarebbe saggio fornire un modulo opzionale nel DOM del
+MathML che rendesse i valori di stile o gli attributi impliciti (es. i
+valori del dizionario degli operatori) noti all'applicazione che li
+elabora, in modo da essere `allegati' ad un'istanza DOM e interrogati
+in seguito. </p>
+
+<p>Comunque, secondo noi introdurre ora metodi per trattare questi
+problemi sarebbe prematuro. Il supporto CSS e XSL per la matematica
+&egrave; ancora in evoluzione, e il meccanismo per gestire i problemi
+di stile nei documenti MathML potrebbe bene evolversi con essi. In
+pi&ugrave;, questi problemi si applicano anche al DOM dell'XML di
+base. Finora (<a href="http://www.w3.org/TR/DOM-Level-2">DOM dell'XML
+di Livello 2</a>), problemi come la privacy rispetto ai fogli di stile
+dal lato utente sono risultate in nessun metodo del DOM di base
+definito per ottenere i valori di stile ereditati, calcolati o reali
+per uno specifico elemento, con l'accesso DOM limitato a fornire le
+dichiarazioni di stile che sono efficaci. Se un'iterazione futura del
+DOM dell'XML espandesse questo accesso, i metodi usati qui si
+applicherebbero anche al DOM del MathML, e questo renderebbe ogni
+specifica che potremmo fare ora obsoleta. </p>
+
+<h4>
+<a name="N37835"></a>8.1.1.2 Interfacce di attraversamento e di gamma
+</h4>
+
+<p>Inoltre, &egrave; probabile che diventer&agrave; ovvio un bisogno
+di specializzazioni specifiche del MathML di interfacce che
+appartengono ai moduli di <a
+href="http://www.w3.org/TR/DOM-Level-2/traversal.html">attraversamento</a>
+e di <a href="http://www.w3.org/TR/DOM-Level-2/range.html">gamma</a>
+del DOM dell'XML di livello 2. L'ordine di attraversamento di
+variabili associate, condizioni e dichiarazioni - o se dovrebbero
+essere omesse da un dato attraversamento - offre un esempio di
+un'utilit&agrave; potenziale per tali specializzazioni. Ancora,
+comunque, secondo noi sarebbe prematuro specificare una qualunque di
+queste interfacce in questo momento. Sar&agrave; necessaria
+un'esperienza di implementazione per scoprire le interfacce
+appropriate che dovrebbero essere specificate. </p>
+
+<p class="minitoc">
+  Descrizione Sommaria: <a href="overview.html">Linguaggio di
+  Marcatura Matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 7 <a href="chapter7.html">L'interfaccia del MathML</a>
+<br>
+  Successivo: A <a href="appendixa.html">Analisi del MathML</a>
+<br>
+</p>
+</body>
+</html>

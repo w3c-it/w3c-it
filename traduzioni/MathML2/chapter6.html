@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Caratteri, entit&agrave; e font</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="chars"></a>6 Caratteri, entit&agrave; e font</h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  Marcatura Matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 5 <a href="chapter5.html">Combinare marcatura di
+  presentazione e di contenuto</a>
+<br>
+  Successivo: 7 <a href="chapter7.html">L'interfaccia del MathML</a>
+<br>
+  &nbsp;<br>6 <a href="chapter6.html">Caratteri, entit&agrave; e font</a>
+<br>6.1 <a href="chapter6.html#chars:intro">Introduzione</a>
+<br>&nbsp;&nbsp;&nbsp;6.1.1 <a
+href="chapter6.html#N35634">L'intenzione dei nomi dei caratteri</a>
+<br>&nbsp;&nbsp;&nbsp;6.1.2 <a href="chapter6.html#N35661">Il progetto STIX</a>
+<br>&nbsp;&nbsp;&nbsp;6.1.3 <a href="chapter6.html#N35678">Elenchi dei
+caratteri</a>
+<br>&nbsp;&nbsp;&nbsp;6.1.4 <a
+href="chapter6.html#chars:nonmark">Caratteri non di marcatura</a>
+<br>&nbsp;&nbsp;&nbsp;6.1.5 <a href="chapter6.html#N36056">Elenchi dei
+simboli di caratteri stampabili</a>
+<br>&nbsp;&nbsp;&nbsp;6.1.6 <a
+href="chapter6.html#chars:special">Costanti speciali</a>
+<br>&nbsp;&nbsp;&nbsp;6.1.7 <a href="chapter6.html#chars:list">Elenchi
+alfabetici</a>
+<br>&nbsp;&nbsp;&nbsp;6.1.8 <a
+href="chapter6.html#chars:isoent">Raggruppamenti di insiemi di
+caratteri ISO</a>
+<br>
+</p>
+
+<h2>
+<a name="chars:intro"></a>6.1 Introduzione </h2>
+
+<h3>
+<a name="N35634"></a>6.1.1 L'intenzione dei nomi dei caratteri </h3>
+
+<p>La notazione e i simboli si sono dimostrati molto importanti per la
+matematica. La matematica &egrave; cresciuta in parte a causa della
+sinteticit&agrave; e della suggestivit&agrave; della sua notazione in
+evoluzione. Ci sono stati molti nuovi segni che si sono evoluti per
+l'uso nella notazione matematica, e i matematici non si sono
+trattenuti dal fare uso di molti simboli originariamente sviluppati
+altrove. Il risultato &egrave; che la matematica fa uso di una
+grandissima collezione di simboli. E' difficile scrivere in modo
+fluente la matematica se questi caratteri non sono disponibili per
+l'uso nella codifica. E' difficile leggere la matematica se i glifi
+corrispondenti non sono disponibili per la presentazione su specifici
+dispositivi di visualizzazione. </p>
+
+<p>Questa situazione ha posto un problema per il primo Gruppo di
+Lavoro per la Matematica del W3C quando &egrave; stata portata in
+esistenza. Non &egrave; caduta naturalmente nell'ambito dello sviluppo
+di una specifica che permette alla matematica di essere usata con
+l'HTML e della produzione di una DTD per preoccuparsi di questo
+pi&ugrave; che delle entit&agrave; permesse nella DTD. Comunque, come
+l'esperienza ha dimostrato, un lungo elenco di entit&agrave; senza
+mezzi per visualizzarle &egrave; di poca utilit&agrave;, ed &egrave;
+causa di frequenti frustrazioni per chi cerca di usare uno
+standard. D'altra parte, un'ampia collezione di glifi e font di
+caratteri senza un modo standard di fare riferimento ad essi &egrave;
+di altrettanto poca utilit&agrave;. </p>
+
+<p>Il Gruppo di Lavoro per la Matematica del W3C si &egrave;
+perci&ograve; assunto direttamente il compito di specificare parte
+dell'intero meccanismo necessario per procedere dalla notazione alla
+presentazione finale, ed ha iniziato la collaborazione con
+organizzazioni che si occupano di specificare il resto. </p>
+
+<p>Per esempio, nel MathML 1 cercavamo di usare i nomi delle
+entit&agrave; per i molti segni e caratteri contenuti in ISO TR 9573,
+che sostituisce la precedente ISO TR 8879 per quello che riguarda la
+matematica. Ci sono considerazioni di uso matematico che
+occasionalmente sono contro questo, e gli elenchi TR 9573 hanno
+bisogno di un supplemento. C'era la speranza di accordi con il GL TR
+9573 su estensioni adatte, nel corso della revisione del loro
+documento che stavano intraprendendo. Ci&ograve; non &egrave; successo
+in realt&agrave;, e l'attesa revisione TR 9573 non &egrave; ancora
+apparsa. </p>
+
+<p>Anche il progetto STIX del gruppo di pubblicatori scientifici e
+tecnici STIPUB lavora dal 1997 verso una collezione comune di simboli
+e nomi matematici. Il Gruppo di Lavoro per la Matematica del W3C
+stesso ha collaborato con quel progetto e si aspetta di dover produrre
+ulteriori aggiornamenti sulla questione delle entit&agrave; carattere
+come conseguenza del lavoro utile di questo progetto e di altri. Per
+le ultime tabelle di caratteri e informazioni sui font, si veda la <a
+href="http://www.w3.org/Math">pagina principale del Gruppo di Lavoro
+per la Matematica del W3C</a>. </p>
+
+<h3>
+<a name="N35661"></a>6.1.2 Il progetto STIX </h3>
+
+<p>Il primo responsabile del gruppo del progetto STIX, Nico Poppelier,
+&egrave; membro del Gruppo di Lavoro per la Matematica del W3C. Il
+progetto STIX, avviato dal gruppo di pubblicatori STIPUB, comprende la
+Societ&agrave; Americana per la Chimica (ACS), l'Istituto Americano di
+Fisica (APS), la Societ&agrave; Americana per la Matematica (AMS), la
+Societ&agrave; Americana per la Fisica (APS), i Pubblicatori
+scientifici Elsevier e l'Istituto degli ingegneri elettrici ed
+elettronici (IEEE). L'obiettivo iniziale era formulare una collezione
+di caratteri necessari nel corso di pubblicazioni scientifiche e
+tecniche. Un database di caratteri di uso comune &egrave; stato
+prodotto da organizzazioni di pubblicazione che collaboravano,
+comprese informazioni dal mondo T<sub>E</sub>X, Springer Verlag
+(Heidelberg), Design Science Inc., Wolfram Research Inc.,
+l'Associazione per le Macchine per il Calcolo (ACM), oltre a coloro
+nominati in precedenza.  La coordinazione e la maggior parte del
+lavoro su questo &egrave; stata fatta da Barbara Beeton dell'AMS. </p>
+
+<p>Il gruppo STIX ha proposto al Comitato tecnico dell'Unicode (UTC)
+del consorzio Unicode le aggiunte alla prossima revisione dell'insieme
+di caratteri Unicode che questo processo mostra che sono necessarie,
+insieme ai codici di caratteri appropriati. Questo &egrave; stato il
+soggetto di una negoziazione per qualche tempo. Nel marzo 2000 una
+proposta sostenuta dall'UTC &egrave; stata portata avanti all'incontro
+ISO WG2 a Pechino che tratta dell'incorporazione di nuovo materiale
+nello standard ISO 10646. I risultati finali di qualla delibera, che
+si spera confermino l'assegnazione di punti di codice messi avanti
+dall'UTC, saranno incorporati nelle informazioni rese pubbliche dal GL
+per la Matematica. </p>
+
+<p>Infine, l'intenzione del progetto STIX &egrave; sempre stata quella
+di commissionare la produzione di un insieme completo di font che
+coprano quei caratteri Unicode per la scienza e la tecnologia, da
+rendere disponibile al pubblico sotto licenza, ma senza nessun
+costo. Il gruppo STIPUB riconosce che la facile disponibilit&agrave;
+dei caratteri e dei font facilita enormemente la comunicazione e la
+pubblicazione. All'inizio dell'anno 2000 il processo di commissionare
+la realizzazione di font &egrave; appena all'inizio, e se ne auspica
+la piena disponibilit&agrave; entro uno o due anni. </p>
+
+<h3>
+<a name="N35678"></a>6.1.3 Elenchi dei caratteri </h3>
+
+<p>Questo capitolo delle specifiche MathML contiene un elenco di nomi
+di caratteri utilizzabili nel MathML. </p>
+
+<p>Per fornire pi&ugrave; informazioni sui caratteri usati dalla
+matematica abbiamo usato una grande base di dati comparativa che
+mostra i codici e i significati in altri comuni ambienti
+matematici. Il gruppo di lavoro per la matematica del W3C &egrave;
+molto grato ad Elsevier Science, a Wolfram Research (i produttori di
+Mathematica &reg;) e a Design Science (i produttori di MathType &reg;)
+per averci resi disponibili cos&igrave; tanti dati utili. </p>
+
+<p>Nel MathML 1 i caratteri delle scienze matematiche erano elencati
+come entit&agrave;. Ci&ograve; &egrave; coerente con il modo di
+pensare in termini di marcatura SGML e con l'uso delle DTD. Per il
+mondo XML con il suo uso di documenti deve essere sufficiente che
+siano ben formati per l'esaminazine di uno in particolare, che non
+richieda una convalida con l'uso di una DTD, dove le entit&agrave;
+carattere si troverebbero dichiarate. Il prossimo sviluppo che ci si
+aspetta sostituisca la DTD come specificatore di una classe di
+documenti &egrave; quello degli Schemi. Le specifiche per gli Schemi
+sono attualmente in fase di sviluppo attivo al W3C. Anche se la forma
+finale degli Schemi non &egrave; ancora chiara, &egrave; noto che il
+loro uso preclude l'uso efficace di grandi elenchi di
+entit&agrave;. Per questa ragione il MathML 2 passa dall'uso delle
+entit&agrave; per nominare i caratteri matematici, che diventa un uso
+disapprovato, all'uso degli elementi <code
+class="error">mchar</code>. Per questa ragione le tabelle sotto si
+limitano ad elencare i nomi di carattere suggeriti, che dovrebbero
+essere usati nella forma <code>&lt;mchar
+name=&quot;nome_del_carattere&quot; /&gt;</code>. </p>
+
+<h3>
+<a name="chars:nonmark"></a>6.1.4 Caratteri non di marcatura </h3>
+
+<p>Alcuni caratteri, anche se importanti per la qualit&agrave; della
+presentazione in fase di stampa, non hanno un glifo
+corrispondente. Sono chiamati in questo documento caratteri non di
+marcatura. Sotto abbiamo una tabella di quelli adottati ai fini del
+MathML. I loro ruoli sono discussi nel <a
+href="chapter3.html">Capitolo&nbsp;3 [Marcatura di presentazione]</a>
+e nel <a href="chapter4.html">Capitolo&nbsp;4 [Marcatura di
+contenuto]</a>, rispettivamente. I valori degli spazi dati sono
+direttive. Alcuni di questi caratteri non hanno valori Unicode
+ufficiali, e altri sono dati come combinazione di caratteri Unicode
+facendo uso del carattere speciale modificatore per la matematica
+(U02063). La corrispondenza tra i valori di spaziatura menzionati
+sotto e quelli nelle descrizioni Unicode non &egrave; esatta, ma sono
+piuttosto vicini. </p>
+
+<p>Nel MathML 1.0 c'erano molte pi&ugrave; entit&agrave; caratteri non
+di marcatura di quelle elencate qui. Queste riguardavano il controllo
+della composizione, come le interruzioni di linea. Nel MathML 2 tale
+controllo &egrave; effettuato dall'uso degli attributi appropriati
+nell'elemento <code>mspace</code>. </p>
+
+<p>
+</p>
+<table cellpadding="3">
+<thead>
+<tr>
+<td rowspan="1" colspan="1">Nome del carattere</td>
+<td rowspan="1" colspan="1">Unicode</td>
+<td rowspan="1" colspan="1">Descrizione</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;Tab;</code></td>
+<td rowspan="1" colspan="1">00009</td>
+<td rowspan="1" colspan="1">arresto del tabulatore; tabulazione
+orizzontale</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;NewLine;</code></td>
+<td rowspan="1" colspan="1">0000A</td>
+<td rowspan="1" colspan="1">forza un'interruzione di linea; salto di linea</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;Space;</code></td>
+<td rowspan="1" colspan="1">00020</td>
+<td rowspan="1" colspan="1">spazio della dimensione della lettera m
+nel font attuale</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;NonBreakingSpace;</code></td>
+<td rowspan="1" colspan="1">000A0</td>
+<td rowspan="1" colspan="1">spazio che non &egrave; un punto legale di
+interruzione</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;ZeroWidthSpace;</code></td>
+<td rowspan="1" colspan="1">0200B</td>
+<td rowspan="1" colspan="1">spazio che non ha ampiezza</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;VeryThinSpace;</code></td>
+<td rowspan="1" colspan="1">0200A</td>
+<td rowspan="1" colspan="1">spazio di ampiezza 1/18 em</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;ThinSpace;</code></td>
+<td rowspan="1" colspan="1">02009</td>
+<td rowspan="1" colspan="1">spazio di ampiezza 3/18 em</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;MediumSpace;</code></td>
+<td rowspan="1" colspan="1">02005</td>
+<td rowspan="1" colspan="1">spazio di ampiezza 4/18 em</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;ThickSpace;</code></td>
+<td rowspan="1" colspan="1">02005-0200A</td>
+<td rowspan="1" colspan="1">spazio di ampiezza 5/18 em</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;NegativeVeryThinSpace;</code></td>
+<td rowspan="1" colspan="1">0200A-02063</td>
+<td rowspan="1" colspan="1">spazio di ampiezza -1/18 em</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;NegativeThinSpace;</code></td>
+<td rowspan="1" colspan="1">02009-02063</td>
+<td rowspan="1" colspan="1">spazio di ampiezza -3/18 em</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;NegativeMediumSpace;</code></td>
+<td rowspan="1" colspan="1">0205F-02063</td>
+<td rowspan="1" colspan="1">spazio di ampiezza -4/18 em</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;NegativeThickSpace;</code></td>
+<td rowspan="1" colspan="1">02005-02063</td>
+<td rowspan="1" colspan="1">spazio di ampiezza -5/18 em</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;InvisibleTimes;</code></td>
+<td rowspan="1" colspan="1">02062</td>
+<td rowspan="1" colspan="1">segno di moltiplicazione sottinteso (<a
+href="chapter3.html#presm:mo">Sezione&nbsp;3.2.4 [Operatore, parentesi,
+separatore o accento (<code>mo</code>)]</a>)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;ApplyFunction;</code></td>
+<td rowspan="1" colspan="1">02061</td>
+<td rowspan="1" colspan="1">carattere che indica l'applicazione di una
+funzione nell'etichettamento di presentazione (<a
+href="chapter3.html#presm:mo">Sezione&nbsp;3.2.4 [Operatore, parentesi,
+separatore o accento (<code>mo</code>)]</a>)</td>
+</tr>
+</tbody>
+</table>
+<p>
+</p>
+
+<h3>
+<a name="N36056"></a>6.1.5 Elenchi dei simboli di caratteri stampabili </h3>
+
+<p>Anche se la situazione in merito alla disponibilit&agrave; dei
+codici dei caratteri da Unicode e sotto ISO 10646 non &egrave; ancora
+ben chiara al momento della scrittura, abbiamo deciso di procedere
+sull'assunzione che le modifiche al codice suggerite all'ISO WG2
+dall'UTC saranno confermate. Come nel caso precedente possiamo solo
+ripetere che per sviluppi attuali su dettagli di standard di caratteri
+che possono influenzare il formalismo matematico si deve consultare la
+pagina principale del GL per la Matematica del W3C. </p>
+
+<p>Il GL per la Matematica ha iniziato dalla proposta ISO 9573-13,
+come ci &egrave; stato detto da Anders Berglund, ed ha aggiunto
+numerosi alias informativi aggiuntivi basati sulla pratica della
+comunit&agrave; di tipografi matematici. L'influenza principale fuori
+dall'ISO &egrave; stata l'insieme di nomi trovati nella
+comunit&agrave; T<sub>E</sub>X, poich&eacute; informano la pratica dei
+contributori all'archivio di caratteri STIX menzionato in
+precedenza. </p>
+
+<p>Per facilitare la comprensione di un elenco di nomi piuttosto
+ampio, con un totale di oltre 2000 voci in questo caso, offriamo le
+stesse informazioni in pi&ugrave; di una forma. </p>
+
+<p>Abbiamo i caratteri elencati per nome e glifi di esempio per
+ciascuno di essi. Ogni nome di carattere &egrave; accompagnato da un
+codice per un raggruppamento di caratteri scelto da un elenco dato in
+seguito, una breve descrizione verbale ed un codice esadecimale
+Unicode se c'&egrave; un glifo di esempio corrispondente in ISO 10646,
+ora esteso in accordo con la proposta avanzata dall'UTC all'ISO WG2
+nel marzo del 2000. Abbiamo escluso, con pochissime eccezioni che ci
+sembravano impellenti, altri caratteri che possono essere apparsi
+negli elenchi corrispondenti nel MathML 1. Quei caratteri
+<i>perduti</i> sono risultati di uso molto infrequente nell'esperienza
+degli editori matematici, o semplicemente completamente inaccettabili
+per l'inclusione in Unicode. Comunque il MathML 2 fornisce gli
+elementi <code>mglyph</code> e <code>csymbol</code> per disporre nuovi
+caratteri che gli scrittori possono voler introdurre. </p>
+
+<p>Gli elenchi dei caratteri in ordine alfabetico e Unicode nella <a
+href="chapter6.html#chars:list">Sezione&nbsp;6.1.7 [Elenchi
+alfabetici]</a> sono ora maggiormente in linea con i corrispondenti
+insiemi di caratteri ISO di quanto non fossero nel MathML 1.0,
+poich&eacute; se qualche parte di un insieme &egrave; inclusa allora
+&egrave; incluso l'intero insieme. In aggiunta, il gruppo ISOCHEM
+&egrave; stato rimosso, in quanto riguarda maggiormente la
+chimica. Queste modifiche sono state inoltre riflesse nelle
+dichiarazioni delle entit&agrave; nella DTD nell'<a
+href="appendixa.html">Appendice&nbsp;A [Analisi del MathML]</a>. </p>
+
+<h3>
+<a name="chars:special"></a>6.1.6 Costanti speciali </h3>
+
+<p>Per cominciare elenchiamo separatamente alcuni dei caratteri
+speciali che il MathML ha ritenuto adatti ad essere introdotti in modo
+un po' radicale. A questi caratteri sono stati assegnati nuovi valori
+Unicode. C'erano inoltre voci per <code>&amp;true;</code>,
+<code>&amp;false;</code> e <code>&amp;NotANumber;</code>, ma non hanno
+ancora valori Unicode assegnati ad essi, perci&ograve; sono stati
+eliminati. Possono essere introdotti di nuovo dai meccanismi di
+estensione dei caratteri forniti dagli elementi <code>mchar</code> e
+<code>csymbol</code>.
+
+</p>
+<table cellpadding="3">
+<thead>
+<tr>
+<td rowspan="1" colspan="1">Nome dell'entit&agrave;</td>
+<td rowspan="1" colspan="1">Unicode</td>
+<td rowspan="1" colspan="1">Descrizione</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;CapitalDifferentialD;</code></td>
+<td rowspan="1" colspan="1">02145</td>
+<td rowspan="1" colspan="1">D intesa come differenziale, es. negli
+integrali</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;DifferentialD;</code></td>
+<td rowspan="1" colspan="1">02146</td>
+<td rowspan="1" colspan="1">d intesa come differenziale, es. negli
+integrali</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;ExponentialE;</code></td>
+<td rowspan="1" colspan="1">02147</td>
+<td rowspan="1" colspan="1">e intesa come base esponenziale dei
+logaritmi naturali</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>&amp;ImaginaryI;</code></td>
+<td rowspan="1" colspan="1">02148F</td>
+<td rowspan="1" colspan="1">i intesa come radice quadrata di -1</td>
+</tr>
+</tbody>
+</table>
+<p>
+</p>
+
+<h3>
+<a name="chars:list"></a>6.1.7 Elenchi alfabetici </h3>
+
+<p>La prima tabella offerta &egrave; un lunghissimo elenco ASCII di
+nomi di entit&agrave; stampabili, <a href="byalpha.html">in ordine
+alfabetico</a>, con le maiuscole che vengono prima delle minuscole
+come nell'ordine ASCII. C'&egrave; inoltre un elenco ASCII di
+caratteri stampabili <a href="bycodes.html">in ordine di numero
+Unicode</a>. I numeri Unicode sono quelli dell'attuale proposta che,
+ci aspettiamo, far&agrave; eventualmente parte della prossima
+revisione, Unicode 4. Unicode 3 &egrave; appena stato pubblicato in
+febbraio 2000. In seguito abbiamo collezioni delle entit&agrave; in
+insiemi di entit&agrave; che corrispondono ai raggruppamenti nei
+corrispondenti documenti ISO. </p>
+
+<h3>
+<a name="chars:isoent"></a>6.1.8 Raggruppamenti di insiemi di
+caratteri ISO </h3>
+
+<p>Inoltre, elenchiamo il materiale di cui sopra nei raggruppamenti
+usati da ISO 9573-13. Questa tabella rende espliciti i raggruppamenti
+di entit&agrave; e fornisce collegamenti agli elenchi ASCII dei gruppi
+e agli elenchi tabulari HTML che mostrano anche i glifi. </p>
+
+<h4>
+<a name="N36262"></a>6.1.8.1 Insiemi di simboli ISO </h4>
+
+<p>I simboli per la matematica che ha considerato l'ISO sono
+organizzati, per ragioni sia storiche che mnemoniche, in
+raggruppamenti dai nomi piuttosto descrittivi. Nelle tabelle che
+seguono riproduciamo le ultime versioni proposte di tali gruppi e
+diamo i corrispondenti glifi di esempio Unicode. Le voci sono
+organizzate in ordine alfabetico secondo il nome dei caratteri. </p>
+
+<p>Si noti che i glifi di esempio qui riportati sono file GIF adatti
+alla visione sullo schermo di un monitor a 72dpi. Non sono adatti alla
+stampa, e in particolare non costituiscono un insieme di font che
+coprono i simboli della matematica. Un tale insieme di font &egrave;
+in fase di sviluppo in pi&ugrave; di un contesto. Il Gruppo di Lavoro
+per la Matematica del W3C &egrave; impegnato nello sforzo di
+assicurare che tali font siano presto pubblicamente disponibili. </p>
+
+<p>Il primo blocco di insiemi comprende soprattutto simboli che non
+sono lettere, insieme ad alcune lettere che hanno una semantica
+matematica.
+</p>
+<table cellpadding="3">
+<thead>
+<tr>
+<td rowspan="1" colspan="1">Gruppo</td>
+<td rowspan="1" colspan="1">Nome descrittivo</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1">ISOAMSA</td>
+<td rowspan="1" colspan="1"><a href="isoamsa.html">Simboli matematici
+aggiunti: frecce</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOAMSB</td>
+<td rowspan="1" colspan="1"><a href="isoamsb.html">Simboli matematici
+aggiunti: operatori binari</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOAMSC</td>
+<td rowspan="1" colspan="1"><a href="isoamsc.html">Simboli matematici
+aggiunti: delimitatori</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOAMSN</td>
+<td rowspan="1" colspan="1"><a href="isoamsn.html">Simboli matematici
+aggiunti: relazioni negate</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOAMSO</td>
+<td rowspan="1" colspan="1"><a href="isoamso.html">Simboli matematici
+aggiunti: ordinari</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOAMSR</td>
+<td rowspan="1" colspan="1"><a href="isoamsr.html">Simboli matematici
+aggiunti: relazioni</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOTECH</td>
+<td rowspan="1" colspan="1"><a href="isotech.html">Simboli tecnici generali</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOPUB</td>
+<td rowspan="1" colspan="1"><a href="isopub.html">Pubblicazione</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISODIA</td>
+<td rowspan="1" colspan="1"><a href="isodia.html">Segni diacritici</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISONUM</td>
+<td rowspan="1" colspan="1"><a href="isonum.html">Simboli numerici e
+simboli grafici speciali</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOBOX</td>
+<td rowspan="1" colspan="1"><a href="isobox.html">Per disegnare linee
+e riquadri</a>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+</p>
+
+<h4>
+<a name="N36496"></a>6.1.8.2 Insiemi di caratteri ISO per gli alfabeti
+matematici </h4>
+
+<p>La letteratura matematica mostra l'uso comune di stili particolari
+di font. I caratteri che rappresentano date lettere che differiscono
+solo nella presentazione del glifo non sono in principio diversi ai
+fini di un'anagrafe di caratteri come l'Unicode, che non si suppone
+che tenga in conto semplici differenze di font. Comunque l'uso ha
+portato al fatto che sia l'ISO che l'Unicode, come la matematica, li
+riconoscono come entit&agrave; diverse. Perci&ograve; vogliamo
+includere elenchi per i font greco, corsivo, contornato (noto anche
+come doppia battitura o neretto da lavagna) e fraktur (noto anche come
+gotico o tedesco). L'UTC ha accettato la proposta per l'inclusione di
+queste serie di caratteri alfabetici nell'Unicode Plane 1 per uso
+espresso della matematica, fatta loro da Murray Sargent della
+Microsoft e sostenuta dal progetto STIX come soluzione di
+compromesso. Comunque, le regole dell'UTC precludono la duplicazione,
+se possibile, di metodi per codificare un carattere che
+convenzionalmente ha essenzialmente una rappresentazione
+glifica. Perci&ograve; ci sono <i>buchi</i> in certi punti delle serie
+alfabetiche per l'uso matematico nella codifica Plane 1. Questi buchi,
+comunque, saranno riservati e non usati per niente altro, e
+cos&igrave; possono essere usati, internamente, nel modo ovvio da
+un'applicazione che gestisce la matematica. </p>
+
+<p> 
+</p>
+<table cellpadding="3">
+<thead>
+<tr>
+<td rowspan="1" colspan="1">Gruppo</td>
+<td rowspan="1" colspan="1">Nome descrittivo</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1">ISOGRK3</td>
+<td rowspan="1" colspan="1"><a href="isogrk3.html">Simboli greci</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOMSCR</td>
+<td rowspan="1" colspan="1"><a href="isomscr.html">Alfabeto corsivo
+per la matematica</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOMOPF</td>
+<td rowspan="1" colspan="1"><a href="isomopf.html">Alfabeto contornato
+per la matematica</a>
+<br>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ISOMFRK</td>
+<td rowspan="1" colspan="1"><a href="isomfrk.html">Alfabeto fraktur
+per la matematica</a>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+</p>
+
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  Marcatura Matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 5 <a href="chapter5.html">Combinare marcatura di
+  presentazione e di contenuto</a>
+<br>
+  Successivo: 7 <a href="chapter7.html">L'interfaccia del MathML</a>
+<br>
+</p>
+</body>
+</html>

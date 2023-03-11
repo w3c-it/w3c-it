@@ -1,0 +1,1198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Combinare marcatura di presentazione e di contenuto</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="mixing"></a>5 Combinare marcatura di presentazione e di
+contenuto </h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  Marcatura Matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 4 <a href="chapter4.html">Marcatura di contenuto</a>
+<br>
+  Successivo: 6 <a href="chapter6.html">Caratteri, entit&agrave; e
+  font</a>
+<br>
+  &nbsp;<br>5 <a href="chapter5.html">Combinare marcatura di
+  presentazione e di contenuto</a>
+<br>5.1 <a href="chapter5.html#mixing:why">Perch&eacute; due tipi
+diversi di marcatura?</a>
+<br>5.2 <a href="chapter5.html#mixing:markup">Marcatura mista</a>
+<br>&nbsp;&nbsp;&nbsp;5.2.1 <a
+href="chapter5.html#mixing:reasons">Ragioni per mescolare la
+marcatura</a>
+<br>&nbsp;&nbsp;&nbsp;5.2.2 <a
+href="chapter5.html#N34572">Combinazioni proibite</a>
+<br>&nbsp;&nbsp;&nbsp;5.2.3 <a
+href="chapter5.html#mixing:pmincm">Marcatura di presentazione nella
+marcatura di contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;5.2.4 <a
+href="chapter5.html#mixing:cminpm">Marcatura di contenuto nella
+marcatura di presentazione</a>
+<br>5.3 <a href="chapter5.html#mixing:parallel">Marcatura parallela</a>
+<br>&nbsp;&nbsp;&nbsp;5.3.1 <a href="chapter5.html#N34956">Marcatura
+parallela di livello principale</a>
+<br>&nbsp;&nbsp;&nbsp;5.3.2 <a href="chapter5.html#N34988">Marcatura
+parallela raffinata</a>
+<br>&nbsp;&nbsp;&nbsp;5.3.3 <a href="chapter5.html#N35053">Marcatura
+parallela tramite riferimenti incrociati: <code>id</code> e
+<code>xref</code></a>
+<br>&nbsp;&nbsp;&nbsp;5.3.4 <a href="chapter5.html#N35217">Riferimenti
+incrociati di annotazione con XLink: <code>id</code> e
+<code>href</code></a>
+<br>5.4 <a href="chapter5.html#mixing:tools">Strumenti, fogli di stile
+e macro per la marcatura combinata</a>
+<br>&nbsp;&nbsp;&nbsp;5.4.1 <a
+href="chapter5.html#mixing:notsheet">Fogli di stile notazionali</a>
+<br>&nbsp;&nbsp;&nbsp;5.4.2 <a
+href="chapter5.html#N35511">Trasformazioni fedeli al contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;5.4.3 <a href="chapter5.html#mixing:sheet">Fogli
+di stile per estensioni</a>
+<br>
+</p>
+
+<p>La marcatura di presentazione e quella di contenuto possono essere
+combinate in due modi. La prima maniera &egrave; di mischiare elementi
+di contenuto e di presentazione in quello che &egrave; essenzialmente
+un singolo albero. Questa &egrave; detta marcatura <i>mista</i>. Il
+secondo modo &egrave; fornire <i>sia</i> una presentazione esplicita
+che un contenuto esplicito in due alberi, Questa &egrave; detta
+marcatura <i>parallela</i>. Questo capitolo descrive sia la marcatura
+mista che quella parallela, e come possono essere usate in
+congiunzione con i fogli di stile ed altri strumenti. </p>
+
+<h2>
+<a name="mixing:why"></a>5.1 Perch&eacute; due tipi diversi di marcatura? </h2>
+
+<p>I capitoli 3 e 4 descrivono due tipi di marcatura per codificare
+materiale matematico nei documenti. </p>
+
+<p>La <i>marcatura di presentazione</i> cattura la <i>struttura
+notazionale</i>. Essa codifica la struttura notazionale di
+un'espressione in un modo sufficientemente astratto per facilitare la
+presentazione ai vari mezzi. Perci&ograve; la stessa marcatura di
+presentazione pu&ograve; essere riprodotta con relativa
+facilit&agrave; su schermo in finestre ampie o strette, in ASCII o con
+la grafica, in stampa, o pu&ograve; essere enunciata in modo sensato a
+parole. Questo viene fatto fornendo informazioni come il
+raggruppamento strutturato di parti dell'espressione, la
+classificazione di simboli, ecc. </p>
+
+<p>La marcatura di presentazione <i>non</i> si preoccupa direttamente
+della struttura matematica o del significato di un'espressione. In
+molte situazioni la struttura notazionale e la struttura matematica
+sono strettamente collegate, cos&igrave; un'applicazione di
+elaborazione raffinata pu&ograve; inferire euristicamente il
+significato matematico dalla struttura notazionale, ammesso che il
+contesto sia sufficientemente noto. Comunque, in pratica, l'inferenza
+del significato matematico dalla notazione matematica deve spesso
+essere lasciato al lettore. </p>
+
+<p>Impiegare soltanto tag di presentazione pu&ograve; limitare
+l'abilit&agrave; di riutilizzare un oggetto MathML in un altro
+contesto, particolarmente la valutazione da applicazioni esterne. </p>
+
+<p>La <i>marcatura di contenuto</i> cattura la <i>struttura
+matematica</i>. Essa codifica la struttura matematica in un modo
+sufficientemente regolare per agevolare l'assegnamento del significato
+matematico ad un'espressione da parte dei programmi
+applicativi. Nonostante i dettagli della mappatura dalla struttura di
+un'espressione matematica al significato matematico possano essere
+estremamente complessi, in pratica, c'&egrave; un ampio accordo sul
+significato convenzionale di molti costrutti matematici
+fondamentali. Di conseguenza, gran parte del significato di
+un'espressione di contenuto &egrave; facilmente accessibile ad
+un'applicazione di elaborazione, indipendentemente da dove o come
+&egrave; visualizzata al lettore. In molti casi la marcatura di
+contenuto pu&ograve; essere tagliata da un browser Web e incollata in
+uno strumento software matematico confidando che saranno calcolati
+valori ragionevoli. </p>
+
+<p>Poich&eacute; la marcatura di contenuto <i>non</i> si preoccupa
+direttamente di come viene visualizzata un'espressione, un
+riproduttore pu&ograve; inferire come un'espressione deve essere
+presentatata al lettore. Sebbene un riproduttore abbastanza
+sofisticato e il meccanismo dei fogli di stile possano in principio
+permettere ad un utente di leggere documenti matematici usando
+preferenze notazionali personalizzate, in pratica, presentare le
+espressioni di contenuto con sfumature notazionali pu&ograve; ancora
+richiedere un intervento di qualche tipo. </p>
+
+<p>Impiegare soltanto i tag di contenuto pu&ograve; limitare la
+possibilit&agrave; dell'autore di controllare in modo preciso come
+&egrave; presentata un'espressione. </p>
+
+<p>Sia i tag di contenuto che quelli di presentazione sono necessari
+per fornire la piena capacit&agrave; espressiva che ci si aspetta in
+un linguaggio di marcatura matematica. Spesso la stessa notazione
+matematica &egrave; usata per rappresentare vari concetti
+completamente diversi. Per esempio, la notazione
+<i>x</i><sup><i>i</i></sup> pu&ograve; essere intesa (nell'algebra
+polinomiale) come la potenza <i>i</i>-esima della variabile <i>x</i>,
+o come la componente <i>i</i>-esima di un vettore <i>x</i> (nel
+calcolo tensoriale). In altri casi, lo stesso concetto matematico
+pu&ograve; essere visualizzato in varie notazioni. Per esempio, il
+fattoriale di un numero pu&ograve; essere espresso con un punto
+esclamativo, con una funzione Gamma o con un simbolo di
+Pochhammer. </p>
+
+<p>Perci&ograve; la stessa notazione pu&ograve; rappresentare varie
+idee matematiche, e, viceversa, la stessa idea matematica spesso ha
+varie notazioni. Per fornire agli autori la possibilit&agrave; di
+controllare in modo preciso la notazione e contemporaneamente di
+codificare i significati in un modo leggibile da una macchina sono
+necessarie sia la marcatura di contenuto che quella di
+presentazione. </p>
+
+<p>In generale, se &egrave; importante controllare esattamente come
+&egrave; presentata un'espressione sar&agrave; pi&ugrave;
+soddisfacente la marcatura di presentazione. Se &egrave; importante
+che il significato di un'espressione sia interpretato in modo
+affidabile ed automatico, allora sar&agrave; pi&ugrave; soddisfacente
+la marcatura di contenuto. </p>
+
+<h2>
+<a name="mixing:markup"></a>5.2 Marcatura mista </h2>
+
+<p>Il MathML offre agli autori elementi per la marcatura sia di
+contenuto che di presentazione. Se usare l'una o l'altra, o una
+combinazione di entrambe, dipende da quali aspetti della presentazione
+e dell'interpretazione un autore desidera controllare, e da quali tipi
+di riutilizzo desidera facilitare. </p>
+
+<h3>
+<a name="mixing:reasons"></a>5.2.1 Ragioni per mescolare la marcatura </h3>
+
+<p>In molte situazioni comuni un autore o uno strumento di creazione
+pu&ograve; scegliere di generare esclusivamente marcatura di
+presentazione o di contenuto. Per esempio, un programma per tradurre
+documenti esistenti molto probabilmente generer&agrave; marcatura di
+presentazione pura. In modo simile, un pacchetto di software educativo
+generer&agrave; molto probabilmente solo marcatura di contenuto per la
+valutazione in un sistema di computer algebra. Comunque, in molte
+altre situazioni, ci sono vantaggi a mescolare marcatura di
+presentazione e di contenuto in una singola espressione. </p>
+
+<p>Se un autore &egrave; orientato principalmente alla presentazione,
+mischiando un po' di marcatura di contenuto produrr&agrave; spesso
+risultati pi&ugrave; accessibili e pi&ugrave; facili da
+riutilizzare. Per esempio, un autore che scrive di algebra lineare
+potrebbe scrivere:
+</p>
+<pre>
+&lt;mrow&gt;
+  &lt;apply&gt;
+    &lt;power/&gt;
+    &lt;ci&gt;x&lt;/ci&gt;&lt;cn&gt;2&lt;/cn&gt;
+  &lt;/apply&gt;
+  &lt;mo&gt;+&lt;/mo&gt;
+  &lt;msup&gt;
+    &lt;mi&gt;v&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;
+  &lt;/msup&gt;
+&lt;/mrow&gt;
+</pre>
+<p>dove <i>v</i> &egrave; un vettore e l'apice denota una componente
+vettoriale, e <i>x</i> &egrave; una variabile reale. Nel contesto
+dell'algebra lineare, un lettore visivamente svantaggiato pu&ograve;
+avere istruito il suo software di sintesi vocale per presentare gli
+apici come componenti vettoriali. Codificando esplicitamente la
+potenza, la marcatura di contenuto restituisce una presentazione
+vocale molto migliore di quella che probabilmente si avrebbe come
+predefinita. </p>
+
+<p>Se un autore &egrave; principalmente orientato al contenuto, ci
+sono due ragioni per mischiare la marcatura di presentazione. Primo,
+usare la marcatura di presentazione fornisce un modo per modificare o
+raffinare come &egrave; presentata un'espressione di contenuto. Per
+esempio, si pu&ograve; scrivere:
+</p>
+<pre>
+&lt;apply&gt;
+  &lt;in/&gt;
+  &lt;ci&gt;&lt;mi fontweight=&quot;bold&quot;&gt;v&lt;/mi&gt;&lt;/ci&gt;
+  &lt;ci&gt;S&lt;/ci&gt;
+&lt;/apply&gt;
+</pre>
+<p>In questo caso, l'uso della marcatura di presentazione incorporata
+permette all'autore di specificare che <i>v</i> deve essere presentato
+in grassetto. Allo stesso modo, a volte &egrave; il caso che si
+desidera una notazione completamente diversa per un'espressione di
+contenuto. Per esempio, qui esprimiamo un fatto sui fattoriali,
+<i>n</i> = <i>n</i>!/(<i>n</i>-1)!, usando la notazione dei fattoriali
+a crescere:
+</p>
+<pre>
+&lt;apply&gt;
+  &lt;equivalent/&gt;
+  &lt;ci&gt;n&lt;/ci&gt;
+  &lt;apply&gt;
+     &lt;divide/&gt;
+     &lt;semantics&gt;
+        &lt;apply&gt;
+           &lt;factorial/&gt;
+           &lt;ci&gt;n&lt;/ci&gt;
+        &lt;/apply&gt;
+        &lt;annotation-xml encoding=&quot;MathML-Presentation&quot;&gt;
+           &lt;msup&gt;
+              &lt;mn&gt;1&lt;/mn&gt;
+              &lt;mover accent=&quot;true&quot;&gt;
+                 &lt;mi&gt;n&lt;/mi&gt;
+                 &lt;mo&gt;&lt;mchar name=&quot;OverBar&quot;/&gt;&lt;/mo&gt;
+              &lt;/mover&gt;
+           &lt;/msup&gt;
+        &lt;/annotation-xml&gt;
+     &lt;/semantics&gt;
+     &lt;semantics&gt;
+        &lt;apply&gt;
+           &lt;factorial/&gt;
+           &lt;apply&gt;&lt;minus/&gt;&lt;ci&gt;n&lt;/ci&gt;&lt;cn&gt;1&lt;/cn&gt;&lt;/apply&gt;
+        &lt;/apply&gt;
+        &lt;annotation-xml encoding=&quot;MathML-Presentation&quot;&gt;
+           &lt;msup&gt;
+              &lt;mn&gt;1&lt;/mn&gt;
+              &lt;mover accent=&quot;true&quot;&gt;
+                 &lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;-&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;
+                 &lt;mo&gt;&lt;mchar name=&quot;OverBar&quot;/&gt;&lt;/mo&gt;
+              &lt;/mover&gt;
+           &lt;/msup&gt;
+        &lt;/annotation-xml&gt;
+     &lt;/semantics&gt;
+   &lt;/apply&gt;
+&lt;/apply&gt;
+</pre>
+<p>Questa espressione di contenuto verrebbe presentata con la
+notazione data come:
+<img src="image/factid.gif" alt="\frac{1^{\bar{n}}}{1^{\frac{}{n-1}}}"
+align="middle">
+</p>
+
+<p>Una seconda ragione per usare la presentazione nella marcatura di
+contenuto &egrave; che c'&egrave; un elenco continuamente in crescita
+di aree della conversazione che non hanno elementi di contenuto
+predefiniti per codificare i loro oggetti e i loro operatori. Come
+conseguenza, ogni sistema di marcatura di contenuto ha inevitabilmente
+bisogno di un meccanismo di estensione che combina la notazione con la
+semantica in qualche modo. La marcatura di contenuto del MathML
+specifica vari modi di allegare definizioni di semantica esterne ad
+oggetti di contenuto. E' necessario, comunque, usare la marcatura di
+presentazione del MathML per specificare come dovrebbero essere
+presentate tali estensioni semantiche definite dall'utente. </p>
+
+<p>Per esempio, l'operatore `rango' dell'algebra lineare non &egrave;
+incluso come elemento di contenuto MathML predefinito. Perci&ograve;,
+per esprimere la frase rank(<i>u</i><sup>T</sup><i>v</i>)=1 usiamo un
+elemento <code>semantics</code> per associare una definizione
+semantica al simbolo <i>rank</i>.
+</p>
+<pre>
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;apply&gt;
+    &lt;fn&gt;
+      &lt;semantics&gt;
+        &lt;mi&gt;rank&lt;/mi&gt;
+        &lt;annotation-xml encoding=&quot;OpenMath&quot;&gt;
+          &lt;OMS cd=&quot;linalg3&quot; name=&quot;rank&quot;/&gt;
+        &lt;/annotation-xml&gt;
+      &lt;/semantics&gt;
+    &lt;/fn&gt;
+    &lt;apply&gt; 
+      &lt;times/&gt; 
+      &lt;apply&gt; &lt;transpose/&gt; &lt;ci&gt;u&lt;/ci&gt; &lt;/apply&gt; 
+      &lt;ci&gt;v&lt;/ci&gt; 
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+  &lt;cn&gt;1&lt;/cn&gt;
+&lt;/apply&gt;
+</pre>
+<p>In questo esempio la semantica di rank &egrave; stata data usando
+un simbolo di un dizionario di contenuto (CD) OpenMath. </p>
+
+<h3>
+<a name="N34572"></a>5.2.2 Combinazioni proibite </h3>
+
+<p>La considerazione principale quando la marcatura di presentazione e
+quella di contenuto sono mescolate insieme in una singola espressione
+&egrave; che il risultato deve ancora avere senso. Quando entrambi i
+tipi di marcatura sono contenuti in un'espressione di presentazione
+vuol dire che dovrebbe essere possibile presentare l'espressione mista
+risultante in modo semplice e sensato. Viceversa, quando la marcatura
+mista appare in un'espressione di contenuto dovrebbe essere possibile
+assegnare in modo semplice e sensato un'interpretazione semantica
+all'espressione nell'insieme. Queste richieste pongono alcuni vincoli
+naturali a come la marcatura di presentazione e di contenuto possono
+essere mescolate in una singola espressione, per evitare espressioni
+ambigue o altrimenti problematiche. </p>
+
+<p>Due esempi illustrano i tipi di problemi che devono essere evitati
+nella marcatura mista. Consideriamo:
+</p>
+<pre class="error">
+&lt;mrow&gt;
+  &lt;bvar&gt; x &lt;/bvar&gt; &lt;mo&gt; + &lt;/mo&gt; &lt;bvar&gt; y &lt;/bvar&gt;
+&lt;/mrow&gt;
+</pre>
+<p>In questo esempio l'elemento di contenuto <code>bvar</code>
+&egrave; stato incorporato indiscriminatamente in un'espressione di
+presentazione. Poich&eacute; <code>bvar</code> richiede di essere
+incluso in un contesto per avere significato, questa espressione non
+&egrave; chiara. </p>
+
+<p>In modo simile, consideriamo:
+</p>
+<pre class="error">
+&lt;apply&gt;
+  &lt;ci&gt; x &lt;/ci&gt; &lt;mo&gt; + &lt;/mo&gt; &lt;ci&gt; y &lt;/ci&gt;
+&lt;/apply&gt;
+</pre>
+<p>Qui l'elemento <code>mo</code> &egrave; problematico. Un
+riproduttore dovrebbe inferire che si intende il normale operatore
+aritmetico, e agire come se fosse stato usato l'elemento prefisso di
+contenuto <code>plus</code>? O dovrebbe essere letteralmente
+interpretato come l'operatore <i>x</i> applicato a due argomenti,
+<code>&lt;mo&gt;</code>+<code>&lt;/mo&gt;</code> e
+<code>&lt;mi&gt;</code>y<code>&lt;/mi&gt;</code> ? Anche se
+decidessimo che <code>&lt;mo&gt;</code>+<code>&lt;/mo&gt;</code>
+&egrave; l'operatore, allora quale dovrebbe essere il suo significato?
+Queste domande non hanno risposte particolarmente convincenti,
+cos&igrave; questo tipo di misto di marcatura di contenuto e di
+presentazione &egrave; ugualmente proibito. </p>
+
+<h3>
+<a name="mixing:pmincm"></a>5.2.3 Marcatura di presentazione nella
+marcatura di contenuto </h3>
+
+<p>L'uso della marcatura di presentazione nella marcatura di contenuto
+&egrave; limitato a situazioni che non hanno effetto sulla
+possibilit&agrave; della marcatura di contenuto di codificare in modo
+non ambiguo il significato matematico. Specificamente, la marcatura di
+presentazione pu&ograve; apparire nella marcatura di contenuto
+soltanto in tre modi:
+</p>
+<ol>
+<li>all'interno degli elementi token <code>ci</code> e <code>cn</code>
+</li>
+<li>all'interno dell'elemento <code>csymbol</code>
+</li>
+<li>all'interno dell'elemento <code>semantics</code>
+</li>
+</ol>
+<p>Qualunque altra marcatura di presentazione che occorre all'interno
+di marcatura di contenuto &egrave; un errore MathML. Segue una
+discussione pi&ugrave; dettagliata di questi tre casi:
+</p>
+<dl>
+
+<dt>
+<b>Marcatura di presentazione all'interno di elementi token.</b>
+</dt>
+<dd>Gli elementi token <code>ci</code> e <code>cn</code> possono
+contenere qualunque sequenza di caratteri MathML (definiti nel <a
+href="chapter6.html">Capitolo&nbsp;6 [Caratteri, entit&agrave; e
+font]</a>), elementi di presentazione ed elementi <code>sep</code>
+vuoti. Blocchi contigui di caratteri MathML negli elementi
+<code>ci</code> e <code>cn</code> sono riprodotti come se fossero
+inclusi rispettivamente in elementi <code>mi</code> e
+<code>mn</code>. Se un elemento token contiene sia caratteri MathML
+che elementi di presentazione, blocchi contigui di caratteri MathML
+(se ce ne sono) sono trattati come se inclusi in elementi
+<code>mi</code> o <code>mn</code> come appropriato, e la collezione di
+elementi di presentazione risultante &egrave; presentata come se
+inclusa in un elemento <code>mrow</code>. </dd>
+
+<dt>
+<b>Marcatura di presentazione all'interno dell'elemento
+<code>csymbol</code>.</b>
+</dt>
+<dd>L'elemento <code>csymbol</code> pu&ograve; contenere o caratteri
+MathML mischiati con marcatura di presentazione o elementi di
+contenuto di tipo contenitore. E' un errore MathML che un elemento
+<code>csymbol</code> contenga elementi sia di presentazione che di
+contenuto. Quando l'elemento <code>csymbol</code> contiene sia dati
+che marcatura di presentazione si dovrebbero usare le stesse regole di
+riproduzione che si applicano ad elementi di contenuto del tipo
+token. </dd>
+
+<dt>
+<b>Marcatura di presentazione all'interno dell'elemento
+<code>semantics</code>.</b>
+</dt>
+<dd>Uno degli obiettivi principali dell'elemento
+<code>semantics</code> &egrave; di fornire un meccanismo per
+incorporare espressioni MathML arbitrarie in marcatura di contenuto in
+modo semanticamente significativo. In particolare, ogni espressione di
+presentazione valida pu&ograve; essere incorporata in un'espressione
+di contenuto ponendola come primo figlio di un elemento
+<code>semantics</code>. Il significato di questa espressione dovrebbe
+essere indicato da uno o pi&ugrave; elementi di annotazione contenuti
+a loro volta nell'elemento <code>semantics</code>. La presentazione
+consigliata per un elemento <code>semantics</code> &egrave; discussa
+nella <a href="chapter4.html#contm:synsem">Sezione&nbsp;4.2.6
+[Sintassi e semantica]</a>. </dd>
+
+</dl>
+<p>
+</p>
+
+<h3>
+<a name="mixing:cminpm"></a>5.2.4 Marcatura di contenuto nella
+marcatura di presentazione </h3>
+
+<p>Il principio guida per incorporare la marcatura di contenuto
+all'interno di espressioni di presentazione &egrave; che l'espressione
+risultante abbia ancora una presentazione non ambigua. In generale,
+questo vuol dire che le espressioni di contenuto incorporate devono
+essere semanticamente significative, poich&eacute; la presentazione
+della marcatura di contenuto dipende dal suo significato. </p>
+
+<p>Certi elementi di contenuto derivano parte del loro significato
+semantico dal contesto che li circonda, come ad esempio se un elemento
+<code>bvar</code> qualifica un integrale, un quantificatore logico o
+un'espressione lambda. Un altro esempio sarebbe se un elemento
+<code>degree</code> occorre in un elemento <code>root</code> o in un
+elemento <code>partialdiff</code>. Perci&ograve;, in un contesto di
+presentazione, simili elementi non hanno un significato chiaramente
+definito, e quindi non c'&egrave; una scelta ovvia per una
+presentazione. Di conseguenza non sono permessi. </p>
+
+<p>Usando la terminologia della <a
+href="chapter4.html#contm:cats">Sezione&nbsp;4.2.1 [Descrizione
+sommaria della sintassi e dell'uso]</a>, vediamo che gli elementi
+operatore, relazione, contenitore, costante e simbolo hanno senso di
+per s&eacute;, mentre elementi del tipo qualificatore e condizione
+no. (Si noti che <code>interval</code> pu&ograve; essere usato o come
+contenitore generico o come qualificatore.) </p>
+
+<p>Al di fuori di queste categorie, certi elementi meritano commenti
+specifici: gli elementi <code>declare</code>, <code>sep</code>,
+<code>annotation</code> e <code>annotation-xml</code> possono apparire
+soltanto in contesti molto specifici e di conseguenza non sono
+permessi come sottoespressioni dirette di ogni elemento di
+presentazione. Infine l'elemento <code>semantics</code> porta con
+s&eacute; informazioni sufficienti per essere permesso nella
+presentazione. </p>
+
+<p>L'elenco completo degli elementi di contenuto che <i>non
+possono</i> apparire come figli in un elemento di presentazione
+&egrave;:
+<code>annotation</code>,
+<code>annotation-xml</code>,
+<code>sep</code>,
+<code>declare</code>,
+<code>bvar</code>,
+<code>condition</code>,
+<code>degree</code>,
+<code>logbase</code>,
+<code>lowlimit</code>,
+<code>uplimit</code>.
+</p>
+
+<p>Si noti che all'interno della marcatura di presentazione, le
+espressioni di contenuto possono apparire soltanto in posti dove
+&egrave; permesso che appaia qualunque espressione MathML. In
+particolare, le espressioni di contenuto non possono apparire
+all'interno di elementi token di presentazione. Riguardo a ci&ograve;
+mescolare presentazione e contenuto sono casi asimmetrici. </p>
+
+<p>Si noti che incorporare la marcatura di contenuto nella
+presentazione spesso richieder&agrave; che le applicazioni presentino
+gli operatori fuori da un contesto <code>apply</code>. Es., pu&ograve;
+essere necessario presentare <code>abs</code>, <code>plus</code>,
+<code>root</code> o <code>sin</code> fuori da
+un'applicazione. Mescolare contenuto e presentazione non introduce
+nuove richieste, comunque, poich&eacute; gli operatori non applicati
+sono gi&agrave; permessi in espressioni di contenuto, ad esempio:
+</p>
+<pre>
+&lt;apply&gt;
+   &lt;compose/&gt;
+   &lt;sin/&gt;
+   &lt;apply&gt;
+      &lt;inverse/&gt;
+      &lt;root/&gt;
+   &lt;/apply&gt;
+&lt;/apply&gt;
+</pre>
+<p>
+</p>
+
+<h2>
+<a name="mixing:parallel"></a>5.3 Marcatura parallela </h2>
+
+<p>Alcune applicazioni riescone a fare uso di <i>entrambe</i> le
+informazioni di presentazione e di contenuto. Per queste applicazioni
+&egrave; desiderabile fornire entrambe le forme di marcatura per la
+stessa espressione matematica. Questa &egrave; detta <i>marcatura
+parallela</i>. </p>
+
+<p>La marcatura parallela si ottiene con l'elemento
+<code>semantics</code>. La marcatura parallela per un'espressione
+pu&ograve; essere usata da sola, o pu&ograve; essere incorporata come
+parte di un albero di contenuto o di presentazione pi&ugrave; grande.
+</p>
+
+<h3>
+<a name="N34956"></a>5.3.1 Marcatura parallela di livello principale </h3>
+<p>In molti casi ci&ograve; che si vuole &egrave; fornire marcatura di
+presentazione e marcatura di contenuto per un'espressione matematica
+nel complesso. Per fare ci&ograve; si usa un singolo elemento
+<code>semantics</code> accoppiando due alberi di marcatura, dove il
+primo ramo &egrave; la marcatura di presentazione MathML e il secondo
+ramo &egrave; la marcatura di contenuto MathML. </p>
+
+<p>Il seguente esempio codifica l'espressione aritmetica booleana
+(<i>a</i>+<i>b</i>)(<i>c</i>+<i>d</i>) in questo modo.
+</p>
+<pre>
+&lt;semantics&gt;
+  &lt;mrow&gt;
+    &lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt; &lt;mo&gt;+&lt;/mo&gt; &lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+    &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+    &lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;c&lt;/mi&gt; &lt;mo&gt;+&lt;/mo&gt; &lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+  &lt;/mrow&gt;
+  &lt;annotation-xml encoding=&quot;MathML-Content&quot;&gt;
+    &lt;apply&gt;&lt;and/&gt;
+      &lt;apply&gt;&lt;xor/&gt;&lt;ci&gt;a&lt;/ci&gt; &lt;ci&gt;b&lt;/ci&gt;&lt;/apply&gt;
+      &lt;apply&gt;&lt;xor/&gt;&lt;ci&gt;c&lt;/ci&gt; &lt;ci&gt;d&lt;/ci&gt;&lt;/apply&gt;
+    &lt;/apply&gt;
+  &lt;/annotation-xml&gt;
+&lt;/semantics&gt;
+</pre>
+<p>Questo esempio &egrave; non banale nel senso che la marcatura di
+contenuto non potrebbe essere derivata facilmente soltanto dalla
+marcatura di presentazione.
+</p>
+
+<h3>
+<a name="N34988"></a>5.3.2 Marcatura parallela raffinata </h3>
+
+<p>L'accoppiamento a livello principale di marcatura di presentazione
+e di contenuto indipendenti &egrave; sufficiente per molte situazioni,
+ma non per tutte. Le applicazioni che permettono il trattamento di
+<i>sottoespressioni</i> di oggetti matematici richiedono la
+capacit&agrave; di associare presentazione, contenuto o informazioni
+con le <i>parti</i> di un oggetto con marcatura
+matematica. L'accoppiamento ad alto livello con un elemento
+<code>semantics</code> &egrave; insufficiente in questo tipo di
+situazioni; l'identificazione di una sottoespressione in un ramo
+dell'elemento <code>semantics</code> non d&agrave; indicazioni sulle
+parti corrispondenti negli altri rami. </p>
+
+<p>La capacit&agrave; di identificare le sottoespressioni
+corrispondenti &egrave; richiesta in applicazioni come i programmi di
+scrittura di espressioni matematiche. In questa situazione, scegliere
+una sottoespressione su un display visuale pu&ograve; identificare una
+particolare porzione dell'albero della marcatura di
+presentazione. L'applicazione ha poi bisogno di determinare le
+annotazioni corrispondenti delle sottoespressioni; in particolare
+l'applicazione ha bisogno delle sottoespressioni dell'albero
+<code>annotation-xml</code> nella notazione di contenuto MathML. </p>
+
+<p>E' possibile in linea di principio fornire annotazioni per ogni
+nodo di presentazione incorporando ricorsivamente elementi
+<code>semantics</code>.
+</p>
+<pre>
+&lt;semantics&gt;
+  &lt;mrow&gt;
+    &lt;semantics&gt;
+      &lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt; &lt;mo&gt;+&lt;/mo&gt; &lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+      &lt;annotation-xml encoding=&quot;MathML-Content&quot;&gt;
+        &lt;apply&gt;&lt;plus/&gt;&lt;ci&gt;a&lt;/ci&gt; &lt;ci&gt;b&lt;/ci&gt;&lt;/apply&gt;
+      &lt;/annotation-xml&gt;
+    &lt;/semantics&gt;
+    &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+    &lt;semantics&gt;
+      &lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;c&lt;/mi&gt; &lt;mo&gt;+&lt;/mo&gt; &lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+      &lt;annotation-xml encoding=&quot;MathML-Content&quot;&gt;
+        &lt;apply&gt;&lt;plus/&gt;&lt;ci&gt;c&lt;/ci&gt; &lt;ci&gt;d&lt;/ci&gt;&lt;/apply&gt;
+      &lt;/annotation-xml&gt;
+    &lt;/semantics&gt;
+  &lt;/mrow&gt;
+
+  &lt;annotation-xml encoding=&quot;MathML-Content&quot;&gt;
+    &lt;apply&gt;&lt;times/&gt;
+      &lt;apply&gt;&lt;plus/&gt;&lt;ci&gt;a&lt;/ci&gt; &lt;ci&gt;b&lt;/ci&gt;&lt;/apply&gt;
+      &lt;apply&gt;&lt;plus/&gt;&lt;ci&gt;c&lt;/ci&gt; &lt;ci&gt;d&lt;/ci&gt;&lt;/apply&gt;
+    &lt;/apply&gt;
+  &lt;/annotation-xml&gt;
+&lt;/semantics&gt;
+</pre>
+<p>Per essere completo questo esempio dovrebbe essere molto
+pi&ugrave; prolisso, avvolgendo ciascuna delle foglie <code>mi</code>,
+<code>mo</code> e <code>mn</code> in altri sette elementi
+<code>semantics</code>. </p>
+
+<p>Questo approccio &egrave; molto generico e funziona per tutti i
+tipi di annotazioni (comprese le annotazioni non MathML e le
+annotazioni multiple). Porta, comunque, a un aumento di
+O(<i>n</i><sup>2</sup>) nella dimensione del documento. Questo non
+&egrave; perci&ograve; un approccio adatto per la marcatura parallela
+raffinata di grandi oggetti. </p>
+
+<h3>
+<a name="N35053"></a>5.3.3 Marcatura parallela tramite riferimenti
+incrociati: <code>id</code> e <code>xref</code>
+</h3>
+
+<p>Per accontentare meglio le applicazioni che devono trattare con
+sottoespressioni di grandi oggetti il MathML usa i riferimenti
+incrociati tra i rami di un elemento <code>semantics</code> per
+identificare le sottostrutture corrispondenti. </p>
+
+<p>I riferimenti incrociati si ottengono usando gli attributi
+<code>id</code> e <code>xref</code> all'interno dei rami di un
+elemento <code>semantics</code> che li contiene. Questi attributi
+possono essere posti opzionalmente su elementi MathML di qualunque
+tipo. </p>
+
+<p>L'esempio seguente mostra l'uso dei riferimenti incrociati per
+l'espressione aritmetica booleana
+(<i>a</i>+<i>b</i>)(<i>c</i>+<i>d</i>).
+
+</p>
+<pre>
+&lt;semantics&gt;
+  &lt;mrow id=&quot;E&quot;&gt;
+    &lt;mrow id=&quot;E.1&quot;&gt;
+      &lt;mo id=&quot;E.1.1&quot;&gt;(&lt;/mo&gt;
+      &lt;mi id=&quot;E.1.2&quot;&gt;a&lt;/mi&gt;
+      &lt;mo id=&quot;E.1.3&quot;&gt;+&lt;/mo&gt;
+      &lt;mi id=&quot;E.1.4&quot;&gt;b&lt;/mi&gt;
+      &lt;mo id=&quot;E.1.5&quot;&gt;)&lt;/mo&gt;
+    &lt;/mrow&gt;
+    &lt;mo id=&quot;E.2&quot;&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+    &lt;mrow id=&quot;E.3&quot;&gt;
+      &lt;mo id=&quot;E.3.1&quot;&gt;(&lt;/mo&gt;
+      &lt;mi id=&quot;E.3.2&quot;&gt;c&lt;/mi&gt;
+      &lt;mo id=&quot;E.3.3&quot;&gt;+&lt;/mo&gt;
+      &lt;mi id=&quot;E.3.4&quot;&gt;d&lt;/mi&gt;
+      &lt;mo id=&quot;E.3.5&quot;&gt;)&lt;/mo&gt;
+    &lt;/mrow&gt;
+  &lt;/mrow&gt;
+
+  &lt;annotation-xml encoding=&quot;MathML-Content&quot;&gt;
+    &lt;apply xref=&quot;E&quot;&gt;
+      &lt;and xref=&quot;E.2&quot;/&gt;
+      &lt;apply xref=&quot;E.1&quot;&gt;
+        &lt;xor xref=&quot;E.1.3&quot;/&gt;&lt;ci xref=&quot;E.1.2&quot;&gt;a&lt;/ci&gt;&lt;ci xref=&quot;E.1.4&quot;&gt;b&lt;/ci&gt;
+      &lt;/apply&gt;
+      &lt;apply xref=&quot;E.3&quot;&gt;
+        &lt;xor xref=&quot;E.3.3&quot;/&gt;&lt;ci xref=&quot;E.3.2&quot;&gt;c&lt;/ci&gt;&lt;ci xref=&quot;E.3.4&quot;&gt;d&lt;/ci&gt;
+      &lt;/apply&gt;
+    &lt;/apply&gt;
+  &lt;/annotation-xml&gt;
+&lt;/semantics&gt;
+</pre>
+<p>
+</p>
+
+<p>Un attributo <code>id</code> e un corrispondente <code>xref</code>
+che appaiono nello stesso elemento <code>semantics</code> creano una
+corrispondenza tra sottoespressioni. </p>
+
+<p>Creando queste corrispondenze con i riferimenti incrociati,
+<i>tutti</i> gli attributi <code>id</code> a cui fa riferimento un
+qualche <code>xref</code> devono essere nello <i>stesso</i> ramo di un
+elemento <code>semantics</code> che li racchiude. Questo vincolo
+garantisce che queste corrispondenze non creino involontariamente
+cicli. (Si noti che questa restrizione <i>non</i> esclude l'uso di
+attributi <code>id</code> negli altri rami dell'elemento
+<code>semantics</code> di chiusura. Esclude, comunque, riferimenti ad
+altri attributi <code>id</code> che hanno origine nello stesso
+elemento <code>semantics</code>.) </p>
+
+<p>Non ci sono restrizioni su quale ramo dell'elemento
+<code>semantics</code> pu&ograve; contenere gli attributi
+<code>id</code> di destinazione. Spetta all'applicazione determinare
+quale ramo usare. </p>
+
+<p>In generale, non ci sar&agrave; una corrispondenza univoca tra nodi
+nei rami paralleli. Per esempio, un albero di presentazione pu&ograve;
+contenere elementi, come parentesi, che non hanno un corrispondente
+nell'albero di contenuto. E' perci&ograve; spesso utile mettere gli
+attributi <code>id</code> nel ramo con la struttura dei nodi
+pi&ugrave; raffinata. Tutti gli altri rami avranno poi attributi
+<code>xref</code> che punteranno a un qualche sottoinsieme degli
+attributi <code>id</code>. </p>
+
+<p>In assenza di altri criteri, il primo ramo dell'elemento
+<code>semantics</code> &egrave; una scelta ragionevole per contenere
+gli attributi <code>id</code>. Le applicazioni che aggiungono o
+rimuovono le annotazioni non dovranno allora riassegnare gli attributi
+agli alberi <code>semantics</code>. </p>
+
+<p>In generale l'uso degli attributi <code>id</code> e
+<code>xref</code> permette che nel testo sia data una corrispondenza
+completa tra sottoespressioni al pi&ugrave; maggiore dell'originale di
+un fattore costante. La direzione dei riferimenti non deve essere
+scelta in modo da implicare che la selezione di una sottoespressione
+si intenda permessa solo su un figlio dell'elemento
+<code>semantics</code>. E' altrettanto possibile scegliere un
+sottoalbero in un ramo qualunque e risalire ai sottoalberi
+corrispondenti negli altri rami. </p>
+
+<h3>
+<a name="N35217"></a>5.3.4 Riferimenti incrociati di annotazione con
+XLink: <code>id</code> e <code>href</code>
+</h3>
+
+<p>E' possibile dare riferimenti incrociati tra un'espressione MathML
+e un'annotazione XML non MathML usando il protocollo XLink [<a
+href="appendixi.html#XLink">XLink</a>]. Come esempio, l'espressione
+booleana della sezione precedente pu&ograve; essere annotata con
+OpenMath e collegata come segue:
+</p>
+<pre>
+&lt;semantics&gt;
+  &lt;mrow id=&quot;E&quot;&gt;
+    &lt;mrow id=&quot;E.1&quot; xlink:id=&quot;E.1&quot;&gt;
+      &lt;mo id=&quot;E.1.1&quot;&gt;(&lt;/mo&gt;
+      &lt;mi id=&quot;E.1.2&quot;&gt;a&lt;/mi&gt;
+      &lt;mo id=&quot;E.1.3&quot;&gt;+&lt;/mo&gt;
+      &lt;mi id=&quot;E.1.4&quot;&gt;b&lt;/mi&gt;
+      &lt;mo id=&quot;E.1.5&quot;&gt;)&lt;/mo&gt;
+    &lt;/mrow&gt;
+    &lt;mo id=&quot;E.2&quot;&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+    &lt;mrow id=&quot;E.3&quot;&gt;
+      &lt;mo id=&quot;E.3.1&quot;&gt;(&lt;/mo&gt;
+      &lt;mi id=&quot;E.3.2&quot;&gt;c&lt;/mi&gt;
+      &lt;mo id=&quot;E.3.3&quot;&gt;+&lt;/mo&gt;
+      &lt;mi id=&quot;E.3.4&quot;&gt;d&lt;/mi&gt;
+      &lt;mo id=&quot;E.3.5&quot;&gt;)&lt;/mo&gt;
+    &lt;/mrow&gt;
+  &lt;/mrow&gt;
+
+  &lt;annotation-xml encoding=&quot;MathML-Content&quot;&gt;
+    &lt;apply xref=&quot;E&quot;&gt;
+      &lt;and xref=&quot;E.2&quot;/&gt;
+      &lt;apply xref=&quot;E.1&quot;&gt;
+        &lt;xor xref=&quot;E.1.3&quot;/&gt;&lt;ci xref=&quot;E.1.2&quot;&gt;a&lt;/ci&gt;&lt;ci xref=&quot;E.1.4&quot;&gt;b&lt;/ci&gt;
+      &lt;/apply&gt;
+      &lt;apply xref=&quot;E.3&quot;&gt;
+        &lt;xor xref=&quot;E.3.3&quot;/&gt;&lt;ci xref=&quot;E.3.2&quot;&gt;c&lt;/ci&gt;&lt;ci xref=&quot;E.3.4&quot;&gt;d&lt;/ci&gt;
+      &lt;/apply&gt;
+    &lt;/apply&gt;
+  &lt;/annotation-xml&gt;
+
+  &lt;annotation-xml encoding=&quot;OpenMath&quot;&gt;
+    &lt;OMA xlink:href=&quot;id('E')&quot; xmlns=&quot;www.openmath.org/OpenMath&quot;&gt;
+      &lt;OMS cd=&quot;logic1&quot; name=&quot;and&quot; xlink:href=&quot;id('E')&quot;/&gt;
+      &lt;OMA xlink:href=&quot;id('E.1')&quot;&gt;
+        &lt;OMS cd=&quot;logic1&quot; name=&quot;xor&quot; xlink:href=&quot;id('E.1.3')&quot;/&gt;
+        &lt;OMV name=&quot;a&quot; xlink:href=&quot;id('E.1.2')&quot;/&gt;
+        &lt;OMV name=&quot;b&quot; xlink:href=&quot;id('E.1.4')&quot;/&gt;
+      &lt;/OMA&gt;
+      &lt;OMA xlink:href=&quot;id('E.3')&quot;&gt;
+        &lt;OMS cd=&quot;logic1&quot; name=&quot;xor&quot; xlink:href=&quot;id('E.3.3')&quot;/&gt;
+        &lt;OMV name=&quot;c&quot; xlink:href=&quot;id('E.3.2')&quot;/&gt;
+        &lt;OMV name=&quot;d&quot; xlink:href=&quot;id('E.3.4')&quot;/&gt;
+      &lt;/OMA&gt;
+    &lt;/OMA&gt;
+  &lt;/annotation-xml&gt;
+&lt;/semantics&gt;
+</pre>
+<p>
+Qui <code>OMA</code>, <code>OMS</code> e <code>OMV</code> sono
+elementi definiti nello standard OpenMath per rappresentare
+rispettivamente un'applicazione, un simbolo e una variabile. </p>
+
+<p>(Si noti che l'applicazione pu&ograve; o meno avere un meccanismo
+per estendere le DTD. Sar&agrave; perci&ograve; il caso che qualche
+applicazione dar&agrave; XML ben formato ma non &quot;valido&quot;
+all'interno degli elementi <code>annotation-xml</code>. Di conseguenza
+alcune applicazioni MathML che usano <code>annotation-xml</code> non
+saranno convalidate. L'uso degli Schemi XML offre maggiore
+flessibilit&agrave;.) </p>
+
+<h2>
+<a name="mixing:tools"></a>5.4 Strumenti, fogli di stile e macro per
+la marcatura combinata </h2>
+
+<p>L'interazione della marcatura di contenuto con quella di
+presentazione pu&ograve; essere ampiamente estesa con l'uso di vari
+strumenti. Sebbene l'insieme degli strumenti e degli standard per
+lavorare con applicazioni XML sia attualmente in rapida evoluzione,
+possiamo gi&agrave; delineare alcune tecniche specifiche. </p>
+
+<p>In generale l'interazione di contenuto e presentazione &egrave;
+gestita tramite regole di trasformazione sugli alberi MathML. Queste
+regole di trasformazione sono a volte chiamate `macro'. In linea di
+principio, tali regole possono essere espresse usando uno qualunque
+dei vari meccanismi, compresi i DSSSL, i programmi Java che operano su
+un DOM, ecc. Anticipiamo, comunque, che il meccanismo principale per
+queste trasformazioni nella maggior parte delle applicazioni
+sar&agrave; l'XSLT. </p>
+
+<p>In questa sezione discutiamo regole di trasformazione per due fini
+specifici: per i fogli di stile notazionali e per semplificare la
+marcatura parallela. </p>
+
+<h3>
+<a name="mixing:notsheet"></a>5.4.1 Fogli di stile notazionali </h3>
+
+<p>Gli autori che fanno uso della marcatura di contenuto possono dover
+esporre i loro documenti in ambienti con convenzioni notazionali
+diverse dalla riproduzione predefinita del contenuto. Ci si aspetta
+perci&ograve; che siano usati strumenti di trasformazione per
+determinare notazioni per gli elementi di contenuto nelle diverse
+impostazioni. Certi elementi, es. <code>lambda</code>,
+<code>mean</code> e <code>transpose</code>, hanno notazioni comuni che
+variano ampiamente e spesso richiederanno una selezione
+notazionale. Alcuni esempi di variazioni notazionali sono dati in
+seguito.
+</p>
+<ul>
+<li>
+<img src="image/f5001.gif" alt="\mathbf{V}" align="middle">
+rispetto a <img src="image/f5002.gif" alt="\vec{V}" align="middle">
+</li>
+<li>tan <i>x</i> rispetto a tg <i>x</i>
+</li>
+<li>
+<img src="image/f5003.gif" alt="{n \choose m}" align="middle">
+rispetto a <img src="image/f5004.gif" alt="{}_nC^m" align="middle">
+rispetto a <img src="image/f5005.gif" alt="C^n_m" align="middle">
+rispetto a <img src="image/f5006.gif" alt="C^m_n" align="middle">
+</li>
+<li>
+<img src="image/f5007.gif"
+alt="a_0 + \frac{ ~1 ~ |}{| ~a_1 ~} + \ldots + \frac{~1 ~ |}{| ~ a_k~}"
+align="middle"> rispetto a <img src="image/f5008.gif"
+alt="[a_0, a_1, \ldots, a_k]" align="middle">
+</li>
+</ul>
+<p>
+Per altri elementi, per esempio <code>plus</code> e <code>sin</code>,
+sar&agrave; meno probabile che siano richieste queste
+caratteristiche. </p>
+
+<p>Si osserva che la selezione dello stile notazionale a volte
+&egrave; necessaria per la corretta comprensione dei documenti a
+seconda dell'ambiente. Per esempio, il coefficiente binomiale <img
+src="image/f5005.gif" alt="C^n_m" align="middle"> nella notazione
+francese equivale a <img src="image/f5006.gif" alt="C^m_n"
+align="middle"> nella notazione russa. </p>
+
+<p>Un modo naturale per un'applicazione MathML per associare una
+notazione particolare all'insieme dei tag di contenuto &egrave; con un
+foglio di stile XSLT [<a href="appendixi.html#XSXLT">XSLT</a>]. Gli
+esempi di questa sezione assumeranno che sia questo il meccanismo per
+esprimere le scelte di stile. (Altre scelte sono ugualmente possibili,
+ad esempio un programma applicativo pu&ograve; fornire menu che
+offrono un numero di scelte di presentazione per tutti i tag di
+contenuto.
+</p>
+
+<p>Quando si scrivono fogli di stile XSLT per la notazione matematica,
+alcune regole di trasformazione possono essere puramente locali,
+mentre altre richiederanno un contesto a pi&ugrave; nodi per
+determinare la corretta notazione per l'uscita. L'esempio seguente
+d&agrave; una regola di trasformazione locale che potrebbe essere
+inclusa in un foglio di stile notazionale che visualizza gli
+intervalli aperti come ]<i>a</i>,<i>b</i>[ piuttosto che come
+(<i>a</i>,<i>b</i>).
+</p>
+<pre>
+&lt;xsl:template match=&quot;m:interval&quot;&gt;
+  &lt;m:mrow&gt;
+    &lt;xsl:choose&gt;
+      &lt;xsl:when test=&quot;@closure='closed'&quot;&gt;
+        &lt;m:mfenced open=&quot;[&quot; close=&quot;]&quot; separators=&quot;,&quot;&gt;
+          &lt;xsl:apply-templates/&gt;
+        &lt;/m:mfenced&gt;
+      &lt;/xsl:when&gt;
+      &lt;xsl:when test=&quot;@closure='open'&quot;&gt;
+        &lt;m:mfenced open=&quot;]&quot; close=&quot;[&quot; separators=&quot;,&quot;&gt;
+          &lt;xsl:apply-templates/&gt;
+        &lt;/m:mfenced&gt;
+      &lt;/xsl:when&gt;
+      &lt;xsl:when test=&quot;@closure='open-closed'&quot;&gt;
+        &lt;m:mfenced open=&quot;]&quot; close=&quot;]&quot; separators=&quot;,&quot;&gt;
+          &lt;xsl:apply-templates/&gt;
+        &lt;/m:mfenced&gt;
+      &lt;/xsl:when&gt;
+      &lt;xsl:when test=&quot;@closure='closed-open'&quot;&gt;
+        &lt;m:mfenced open=&quot;[&quot; close=&quot;[&quot; separators=&quot;,&quot;&gt;
+          &lt;xsl:apply-templates/&gt;
+        &lt;/m:mfenced&gt;
+      &lt;/xsl:when&gt;
+      &lt;xsl:otherwise&gt;
+        &lt;m:mfenced open=&quot;[&quot; close=&quot;]&quot; separators=&quot;,&quot;&gt;
+          &lt;xsl:apply-templates/&gt;
+        &lt;/m:mfenced&gt;
+      &lt;/xsl:otherwise&gt;
+    &lt;/xsl:choose&gt;
+  &lt;/mrow&gt;
+&lt;/xsl:template&gt;
+</pre>
+<p>
+Qui con <code>m</code> si intende lo spazio di nomi MathML. </p>
+
+<p>Un esempio di regola che richiede informazioni sul contesto &egrave;:
+</p>
+<pre>
+&lt;xsl:template match=&quot;m:apply[m:factorial]&quot;&gt;
+  &lt;m:mrow&gt;
+    &lt;xsl:choose&gt;
+      &lt;xsl:when test=&quot;not(*[2]=m:ci) and not(*[2]=m:cn)&quot;&gt;
+        &lt;m:mrow&gt;
+          &lt;m:mo&gt;(&lt;/m:mo&gt;
+          &lt;xsl:apply-templates select=&quot;*[2]&quot; /&gt;
+          &lt;m:mo&gt;)&lt;/m:mo&gt;
+        &lt;/m:mrow&gt;
+      &lt;/xsl:when&gt;
+      &lt;xsl:otherwise&gt;
+        &lt;xsl:apply-templates select=&quot;*[2]&quot; /&gt;
+      &lt;/xsl:otherwise&gt;
+    &lt;/xsl:choose&gt;
+    &lt;m:mo&gt;!&lt;/m:mo&gt;
+  &lt;/m:mrow&gt;
+&lt;/xsl:template&gt;
+</pre>
+<p>
+Altri esempi di trasformazioni dipendenti dal contesto potrebbero
+essere per esempio l'applicazione (<code>apply</code>) di un'addizione
+(<code>plus</code>) da presentare <i>a</i>-<i>b</i>+<i>c</i>,
+piuttosto che <i>a</i>+ -<i>b</i>+<i>c</i>, o l'applicazione
+(<code>apply</code>) di una potenza (<code>power</code>) da presentare
+sin<sup>2</sup><i>x</i>, piuttosto che sin <i>x</i><sup>2</sup>. </p>
+
+<p>Le variazioni notazionali occorreranno sia per gli elementi di
+contenuto predefiniti che per le estensioni. Lo stile notazionale per
+le estensioni pu&ograve; essere gestito nel modo sopra descritto, con
+regole che hanno lo stesso nome dei tag delle estensioni, e con la
+gestione del contenuto (in un foglio di stile fedele al contenuto)
+come descritto nella <a
+href="chapter5.html#mixing:sheet">Sezione&nbsp;5.4.3 [Fogli di stile
+per estensioni]</a>. </p>
+
+<h3>
+<a name="N35511"></a>5.4.2 Trasformazioni fedeli al contenuto </h3>
+
+<p>Si pu&ograve; essere tentati di vedere i fogli di stile notazionali
+come una trasformazione della marcatura di contenuto in marcatura di
+presentazione equivalente. Questo punto di vista &egrave;
+esplicitamente scoraggiato, poich&eacute; l'informazione andrebbe
+persa e applicazioni orientate al contenuto potrebbero non funzionare
+correttamente. </p>
+
+<p>Definiamo una trasformazione `fedele al contenuto' come una
+trasformazione che conserva il contenuto originale nella marcatura
+parallela (<a href="chapter5.html#mixing:parallel">Sezione&nbsp;5.3
+[Marcatura parallela]</a>). </p>
+
+<p>Gli strumenti che supportano il MathML devono essere `fedeli al
+contenuto', e non convertire gratuitamente gli elementi di contenuto
+in elementi di presentazione nella loro elaborazione. I fogli di stile
+notazionali devono essere fedeli al contenuto quando potrebbero essere
+usati in applicazioni interattive. </p>
+
+<p>E' possibile scrivere fogli di stile fedeli al contenuto in vari
+modi. La marcatura parallela di livello principale pu&ograve; essere
+ottenuta incorporando le seguenti regole in un foglio di stile XSLT:
+</p>
+<pre>
+&lt;xsl:template match=&quot;m:math&quot;&gt;
+   &lt;m:semantics&gt;
+      &lt;xsl:apply-templates/&gt;
+
+      &lt;m:annotation-xml m:encoding=&quot;MathML-Content&quot;&gt;
+         &lt;xsl:copy-of select=&quot;.&quot;/&gt;
+      &lt;/annotation-xml&gt;
+   &lt;/m:semantics&gt;
+&lt;/xsl:template&gt;
+</pre>
+<p>
+La notazione sar&agrave; generata da regole aggiuntive per produrre la
+presentazione dal contenuto, come quelle nella <a
+href="chapter5.html#mixing:notsheet">Sezione&nbsp;5.4.1 [Fogli di
+stile notazionali]</a>. La marcatura parallela raffinata si pu&ograve;
+ottenere con regole aggiuntive per trattare gli attributi
+<code>id</code>. </p>
+
+<h3>
+<a name="mixing:sheet"></a>5.4.3 Fogli di stile per estensioni </h3>
+
+<p>I tag di presentazione del MathML formano un vocabolario chiuso di
+strutture notazionali, ma sono piuttosto ricchi e possono essere usati
+per esprimere la presentazione della maggior parte delle notazioni
+matematiche. Notazioni complesse possono essere ottenute componendo
+gli elementi fondamentali forniti per la marcatura di
+presentazione. In questo senso l'abilit&agrave; di presentazione del
+MathML &egrave; espandibile. E' spesso utile, comunque, dare un nome
+ai nuovi schemi notazionali se saranno usati spesso. Per esempio,
+possiamo abbreviare e rendere pi&ugrave; chiaro l'esempio del
+fattoriale a crescere della <a
+href="chapter5.html#mixing:reasons">Sezione&nbsp;5.2.1 [Ragioni per
+mescolare la marcatura]</a>, con una regola che sostituisce
+</p>
+<pre>
+&lt;mx:a-factorial&gt;X&lt;/mx:a-factorial&gt;
+</pre>
+<p>
+con
+</p>
+<pre>
+&lt;semantics&gt;
+   &lt;apply&gt; &lt;factorial/&gt; &lt;mi&gt;X&lt;/mi&gt; &lt;/apply&gt;
+   &lt;annotation-xml encoding=&quot;MathML-Presentation&quot;&gt;
+      &lt;msup&gt;
+         &lt;mn&gt;1&lt;/mn&gt;
+         &lt;mover accent=&quot;true&quot;&gt;
+            &lt;mi&gt;X&lt;/mi&gt;
+            &lt;mo&gt;&lt;mchar name=&quot;OverBar&quot;/&gt;&lt;/mo&gt;
+         &lt;/mover&gt;
+      &lt;/msup&gt;
+   &lt;/annotation-xml&gt;
+&lt;/semantics&gt;
+</pre>
+<p>
+Allora l'esempio verrebbe scritto pi&ugrave; chiaramente come:
+</p>
+<pre>
+&lt;apply&gt;
+  &lt;equivalent/&gt;
+  &lt;ci&gt;n&lt;/ci&gt;
+  &lt;apply&gt;
+     &lt;divide/&gt;
+     &lt;mx:a-factorial&gt;&lt;ci&gt;n&lt;/ci&gt;&lt;/mx:a-factorial&gt;
+     &lt;mx:a-factorial&gt;
+        &lt;apply&gt;&lt;minus/&gt;&lt;ci&gt;n&lt;/ci&gt;&lt;cn&gt;1&lt;/cn&gt;&lt;/apply&gt;
+     &lt;/mx:a-factorial&gt;
+   &lt;/apply&gt;
+&lt;/apply&gt;
+</pre>
+<p>
+</p>
+
+<p>In modo simile, i tag di contenuto formano un vocabolario di
+concetti fisso che copre i tipi della matematica incontrati nelle
+applicazioni pi&ugrave; comuni. Non &egrave; ragionevole aspettarsi
+che gli utenti compongano i tag di contenuto MathML esistenti per
+costruire nuovi concetti di contenuto. (Questo approccio presenta
+molte difficolt&agrave; tecniche anche per matematici professionisti.)
+Invece, &egrave; anticipato che le applicazioni i cui concetti di
+contenuto matematico si estendono oltre ci&ograve; che &egrave;
+offerto dal MathML useranno annotazioni all'interno di elementi
+<code>semantics</code>, e che queste annotazioni useranno linguaggi
+per la descrizione del contenuto esterni al MathML. </p>
+
+<p>Spesso il dare un nome ad una notazione e l'identificazione di un
+nuovo concetto semantico sono correlati. Questo permette che una
+singola regola di trasformazione catturi sia la marcatura di
+presentazione che di contenuto per un'espressione. Questa &egrave; una
+delle parti del MathML che trae maggior beneficio dall'uso
+dell'elaborazione delle macro.
+</p>
+<pre>
+&lt;mx:rank/&gt;
+</pre>
+<p>
+e
+</p>
+<pre>
+&lt;mx:tr&gt;X&lt;/mx:tr&gt;
+</pre>
+<p>
+sono trasformati rispettivamente in
+</p>
+<pre>
+&lt;semantics&gt;
+   &lt;ci&gt;&lt;mo&gt;rank&lt;/mo&gt;&lt;/ci&gt;
+   &lt;annotation-xml encoding=&quot;OpenMath&quot;&gt;
+      &lt;OMS cd=&quot;linalg1&quot; name=&quot;rank&quot;/&gt;
+   &lt;/annotation-xml&gt;
+&lt;/semantics&gt;
+</pre>
+<p>
+e
+</p>
+<pre>
+&lt;apply&gt;
+ &lt;transpose/&gt;
+ &lt;ci&gt;X&lt;/ci&gt;
+&lt;/apply&gt;
+</pre>
+<p>
+Il lungo esempio di codifica di rank(<i>u</i><sup>T</sup><i>v</i>)=1,
+dalla <a href="chapter5.html#mixing:reasons">Sezione&nbsp;5.2.1
+[Ragioni per mescolare la marcatura]</a> potrebbe allora essere
+condensato in
+</p>
+<pre>
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;apply&gt;
+    &lt;mx:rank/&gt;
+    &lt;apply&gt; &lt;times/&gt; &lt;mx:tr&gt;u&lt;/mx:tr&gt; &lt;ci&gt;v&lt;/ci&gt; &lt;/apply&gt;
+   &lt;/apply&gt;
+  &lt;cn&gt;1&lt;/cn&gt;
+&lt;/apply&gt;
+</pre>
+<p>
+Da questo esempio vediamo come la combinazione di marcatura di
+presentazione e di contenuto potrebbe diventare molto pi&ugrave;
+semplice ed efficace da generare man mano che le librerie standard per
+i fogli di stile diverranno disponibili.
+</p>
+
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  Marcatura Matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente:     4 <a href="chapter4.html">Marcatura di contenuto</a>
+<br>
+  Successivo:     6 <a href="chapter6.html">Caratteri, entit&agrave; e font</a>
+<br>
+</p>
+</body>
+</html>

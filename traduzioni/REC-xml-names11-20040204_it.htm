@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="IT"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>Spazio dei Nomi (Namespaces) in XML 1.1 – Versione Italiana</title><style type="text/css">
+code           { font-family: monospace; }
+
+div.constraint,
+div.issue,
+div.note,
+div.notice     { margin-left: 2em; }
+
+ol.enumar      { list-style-type: decimal; }
+ol.enumla      { list-style-type: lower-alpha; }
+ol.enumlr      { list-style-type: lower-roman; }
+ol.enumua      { list-style-type: upper-alpha; }
+ol.enumur      { list-style-type: upper-roman; }
+
+
+div.exampleInner pre { margin-left: 1em;
+                       margin-top: 0em; margin-bottom: 0em}
+div.exampleOuter {border: 4px double gray;
+                  margin: 0em; padding: 0em}
+div.exampleInner { background-color: #d5dee3;
+                   border-top-width: 4px;
+                   border-top-style: double;
+                   border-top-color: #d3d3d3;
+                   border-bottom-width: 4px;
+                   border-bottom-style: double;
+                   border-bottom-color: #d3d3d3;
+                   padding: 4px; margin: 0em }
+div.exampleWrapper { margin: 4px }
+div.exampleHeader { font-weight: bold;
+                    margin: 4px}
+
+.RFC2119 {
+  text-transform: lowercase;
+  font-style: italic;
+}
+
+</style><link type="text/css" rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/W3C-REC.css" /></head><body>
+
+
+<TABLE bgColor="#ffcc00" border="1" cellPadding="5" width="100%"><TBODY><TR><TD>
+<p><b>Possibili errori di traduzione possono essere presenti in questo documento. Traduzionne a cura di: Nick Venturelli 23/3/2004 </b></p>
+
+<p><b>Solo il documento originale in inglese puo essere considerato ufficiale: <a  href="http://www.w3.org/TR/2004/REC-xml-names11-20040204">http://www.w3.org/TR/2004/REC-xml-names11-20040204</a></b></p>
+
+<p></P></TD></TR></TBODY></TABLE><HR noShade SIZE=1>
+
+
+<div class="head"><p><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home" /></a></p>
+<h1><a id="title" name="title" /> Spazio dei Nomi (Namespaces) in XML 1.1 - Versione Italiana</h1>
+<h2><a id="w3c-doctype" name="w3c-doctype" />Raccomandazione del W3C, 4 febbraio 2004</h2><dl><dt>Questa versione (in inglese) :</dt><dd>
+<a href="http://www.w3.org/TR/2004/REC-xml-names11-20040204">http://www.w3.org/TR/2004/REC-xml-names11-20040204</a>
+</dd><dt>Ultima versione (in inglese):</dt><dd>
+<a href="http://www.w3.org/TR/xml-names11">
+http://www.w3.org/TR/xml-names11</a>
+</dd><dt>Precedente versione (in inglese):</dt><dd>
+<a href="http://www.w3.org/TR/2003/PR-xml-names11-20031105">
+http://www.w3.org/TR/2003/PR-xml-names11-20031105</a>
+</dd><dt>Autori:</dt><dd>Tim Bray, Textuality <a href="mailto:tbray@textuality.com">&lt;tbray@textuality.com&gt;</a></dd><dd>Dave Hollander, Contivo, Inc. <a href="mailto:dmh@contivo.com">&lt;dmh@contivo.com&gt;</a></dd><dd>Andrew Layman, Microsoft <a href="mailto:andrewl@microsoft.com">&lt;andrewl@microsoft.com&gt;</a></dd><dd>Richard Tobin, University of Edinburgh and Markup Technology Ltd <a href="mailto:richard@cogsci.ed.ac.uk">&lt;richard@cogsci.ed.ac.uk&gt;</a> - Version 1.1</dd></dl><p>Fare riferimento a l'<a href="http://www.w3.org/XML/2004/xml-names11-errata"><strong>errata</strong></a> di questo documento, che può includere alcune correzioni normative.</p><p>Vedere <a href="http://www.w3.org/2003/03/Translations/byTechnology?technology=xml-names11"><strong>traduzioni</strong></a>.</p><p>Il documento é disponibile in questi formati non normativi: <a href="http://www.w3.org/TR/2004/REC-xml-names11-20040204/REC-xml-names11-20040204.xml">XML</a>.</p><p class="copyright"><a href="http://www.w3.org/Co
+<h2><a id="abstract" name="abstract" />Riassunto</h2><p>Lo spazio dei nomi (namespaces) XML rappresenta un metodo semplice per la qualificazione dei nomi degli elementi e attributi utilizzati nei documenti XML, associandoli con dei spazi dei nomi identificati con indirrizzi <span>IRI</span>.</p></div><div>
+<h2><a id="status" name="status" />Stato di questo documento</h2><p><em>Questa sezione descrive lo stato di questo documento al momento della sua pubblicazione. Altri documenti possono sostituire questo documento. L'ultima versione di questa serie di documenti si trova al W3C. Un elenco delle Raccomandazioni attuali del W3C e di altri documenti tecnici si trova a l' <a href="http://www.w3.org/TR/">indice dei documenti tecnici del W3C</a> all'indirizzo http://www.w3.org/TR/.</em></p><p>Questo Documento e una <a href="http://www.w3.org/2003/06/Process-20030618/tr.html#RecsW3C">Raccomandazione</a> del W3C. È stato rivisto dai
+membri del W3C e da altre parti interessate ed è stato approvato dal Direttore
+come una raccomdazione del W3C. E' un documento stabile che può essere usato
+come materiale di riferimento o citato come riferimento normativo da un altro
+documento. Il ruolo del W3C nel fare questa Raccomandazione è quello
+di richiamare l'attenzione alla specificazione e di promuovere la sua ampia
+diffusione. Questo aumenta la funzionalità e l'interoperabilità del
+Web.</p><p>Questo
+documento è un prodotto dell'<a href="http://www.w3.org/XML/Activity.html">attività XML del W3C</a>.
+La versione inglese di questo documento è la sola versione normativa. Tuttavia,
+per le traduzioni di questo documento riferirsi a <a href="http://www.w3.org/2003/03/Translations/byTechnology?technology=xml-names11">http://www.w3.org/2003/03/Translations/byTechnology?technology=xml-names11</a>.
+</p><p>La documentazione degli eventuali diritti di proprietà intellettuale relativa a
+questa raccomandazione si trova alla pagina publica 
+<a href="http://www.w3.org/2002/08/xmlcore-IPR-statements">IPR disclosure page</a> del gruppo di lavoro.</p><p>Le realizzazioni conosciute sono documentate nel rapporto <a href="http://www.w3.org/XML/2002/12/xml-names11-implementation.html">Namespaces 1.1 implementation report</a>. 
+Un insieme di prova è disponibile via la pagina <a href="http://www.w3.org/XML/Test/">XML Test Suite</a>
+.</p><p>Per favore riportate gli errori presente in questo documento a <a href="mailto:xml-names-editor@w3.org">xml-names-editor@w3.org</a>; 
+Gli <a href="http://lists.w3.org/Archives/Public/xml-names-editor/">archivi</a> pubblici sono
+disponibili. La lista degli errori in questo documento è disponibile a  <a href="http://www.w3.org/XML/2004/xml-names11-errata">http://www.w3.org/XML/2004/xml-names11-errata</a>(solo in inglese).</p></div><div class="toc">
+<h2><a id="contents" name="contents" />Indice</h2><p class="toc">1 <a href="#sec-intro">Motivazione e Sommario</a><br />
+    1.1 <a href="#notation">Nota sulla Notazione e l’uso</a><br />
+2 <a href="#sec-namespaces">Spazio dei Nomi XML</a><br />
+    2.1 <a href="#concepts">Concetti di Base</a><br />
+    2.2 <a href="#iri-use">L'utilizzo dei Indirizzi IRI come Nomi del Spazio Dei Nomi</a><br />
+    2.3 <a href="#IRIComparison">Paragone dei indirizzi IRI</a><br />
+3 <a href="#ns-decl">La Dichiarazione degli Spazi dei Nomi</a><br />
+4 <a href="#ns-qualnames">Nomi Qualificati</a><br />
+5 <a href="#ns-using">L'uso dei Nomi Qualificati</a><br />
+6 <a href="#scoping-defaulting">L'applicazione del spazio dei nomi agli elementi e attributi</a><br />
+    6.1 <a href="#scoping">La Portata del spazio dei nomi</a><br />
+    6.2 <a href="#defaulting">Lo spazio dei nomi per default</a><br />
+    6.3 <a href="#uniqAttrs">Unicità degli Attributi</a><br />
+7 <a href="#Conformance">Conformit�  dei Documenti</a><br />
+8 <a href="#ProcessorConformance">La Conformità dei Processori</a><br />
+9 <a href="#IRIs">Identificatori di Risorse Internazionalizzati  (IRIs)</a><br />
+</p>
+<h3><a id="appendices" name="appendices" />Appendici</h3><p class="toc">A <a href="#refs">Riferimenti Normativi</a><br />
+B <a href="#nrefs">Altri riferimenti</a> (Non-Normativi)<br />
+C <a href="#Philosophy">La struttura interna del spazio dei nomi XML</a> (Non-Normativi)<br />
+D <a href="#changes">I cambiamenti dalla versione 1.0</a> (Non-Normativi)<br />
+E <a href="#sec-xml-and-sgml">Ringraziamenti</a> (Non-Normativi)<br />
+</p></div><hr /><div class="body"><div class="div1">
+<h2><a id="sec-intro" name="sec-intro" />1 Motivazione e Sommario</h2><p>Prevediamo applicazioni dell
+linguagio XML per il quale un solo documento XML può contenere gli
+elementi e gli attributi (qui chiamato “vocabolario di markup”) definiti ed
+utilizzati da multipli moduli software. Una motivazione per questo è la
+modularità: se tale vocabolario di markup esiste che è ben capito e per cui del
+software utile è disponibile, è meglio riutilizzare questo vocabolario di
+markup piuttosto che di reinventarlo.
+</p><p>I
+documenti di questo tipo, che contengono molti vocabolari di markup, creano
+problemi di riconoscimento e di collisione. I moduli di software devono potere
+riconoscere gli elementi e gli attributi che devono trattare, anche di fronte
+agli “scontri&quot; che accadono quando il markup destinato ad un certo altro
+software usa lo stesso <span>nome</span> d'elemento o d'attributo.
+</p><p>
+Queste
+considerazioni richiedono che le strutture di documenti dovrebbero avere dei
+nomi construiti per evitare scontri fra i nomi provenendo da differenti
+vocabolari di markup. Questa specifica descrive un meccanismo, 
+<em>spazio dei nomi XML</em>, che compie questo assegnando dei <a title="Expanded Name" href="#dt-expname">nomi espansi</a>
+agli elementi ed agli attributi.
+</p><div class="div2">
+<h3><a id="notation" name="notation" />1.1 Nota sulla Notazione e l’uso</h3><p>
+Dove messo in  <em class="RFC2119">RISALTO</em>, in questo modo le parole, 
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVE</em>,
+<em class="RFC2119" title="MUST NOT in RFC 2119 context">NON DEVE</em>,
+<em class="RFC2119" title="REQUIRED in RFC 2119 context">RICHIESTO</em>,
+<em class="RFC2119" title="SHOULD in RFC 2119 context">DOVREBBE</em>,
+<em class="RFC2119" title="SHOULD NOT in RFC 2119 context">Non DOVREBBE</em>,
+<em class="RFC2119" title="MAY in RFC 2119 context">Può </em>
+in questo documento devono essere interpretati come descritto nel
+<a href="#keywords">[Keywords]</a>.
+</p><p>Notare che molti non-terminali non sono
+definiti nelle produzioni di questa specifica ma nella specificazione del XML <a href="#XML">[XML]</a>.
+Quando i non-terminali definiti qui hanno gli stessi nomi dei non-terminali definiti
+nella specificazione XML, le produzioni fatte qui in ogni caso corrispondono
+a un sottoinsieme delle stringe corrispondenti della specificazione XML.
+</p><p>Nelle produzioni di questo documento, il  <code>NSC</code> è una  "Namespace Constraint" (limitazione
+del spazio dei nomi), una delle regole che i documenti conformando a questa specifica
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVONO</em>
+seguire. 
+</p></div></div><div class="div1">
+<h2><a id="sec-namespaces" name="sec-namespaces" />2 Il Spazio dei Nomi XML</h2><div class="div2">
+<h3><a id="concepts" name="concepts" />2.1 Concetti di Base</h3><p>
+[<a title="Namespace" id="dt-namespace" name="dt-namespace">Definizione </a>: 
+Un <b>spazio dei nomi XML </b> è identificato da un <a title="IRI reference" href="#dt-IRI">indirizzo IRI</a>;
+i
+nomi d'elementi e d'attributi si possono mettere in un spazio dei nomi XML
+usando meccanismi descritti in questa specificazione.
+]
+</p><p>
+[<a title="Expanded Name" id="dt-expname" name="dt-expname">Definizione</a>: 
+Un <b>nome espanso</b>
+è un paio consistendo in un  
+<a title="Namespace Name" href="#dt-NSName">nome del spazio dei nomi</a>
+ed un 
+<a title="Local Name" href="#dt-localname">nome locale</a>.
+]
+
+[<a title="Namespace Name" id="dt-NSName" name="dt-NSName">Definizione</a>: 
+Per un nome <var>N</var> in un spazio
+dei nomi identificato da un indirizzo IRI <var>I</var>, il
+<b>nome del spazio dei nomi</b>
+è <var>I</var>. Per un nome <var>N</var> che non è in un spazio dei nomi il
+<b>nome del spazio dei nomi</b>
+non ha valore.
+]
+
+[<a title="Local Name" id="dt-localname" name="dt-localname">Definizione</a>: 
+In ogni luogo il 
+<b>nome locale</b>
+è <var>N</var>.
+]
+
+È questa combinazione
+tra lo spazio dei nomi IRI gestito universalmente ed i nomi locali del
+vocabolario che è efficace ad evitare i scontri di nomi.
+</p><p>
+Gli
+indirizzi IRI possono contenere caratteri non ammessi per i nomi e sono spesso
+inconvenientemente lunghi, per cui non si utilizzano direttamente i nomi
+espansi per nominare gli elementi e gli attributi nei documenti XML. Invece i 
+<a title="Qualified Name" href="#dt-qualname">nomi qualificati</a>
+sono usati.
+[<a title="Qualified Name" id="dt-qualname" name="dt-qualname">Definizione </a>: 
+Un 
+<b>nome qualificato </b>
+è un nome soggetto all'interpretazione del spazio dei nomi.
+]
+Nei documenti conformi a questa
+specifica, i nomi d'elementi e d'attributi appaiono come nomi qualificati.
+Sintatticamente, sono sia
+<a title="" href="#NT-PrefixedName">nomi con prefisso</a> sia
+<a title="" href="#NT-UnprefixedName">nomi sensa prefisso</a>.
+Una sintassi
+di dichiarazione basata a partire dai attributi è fornita per legare i prefissi
+ai nomi del spazio dei nomi e per legare un spazio dei nomi di default che è
+valido per nomi d’elementi sensa prefisso; queste dichiarazioni si limitano
+agli elementi sui quali appaiono, in modo che si possano legare in vari modi
+nelle parti diverse di un documento. I processori conformi a questa specifica 
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVONO</em>
+riconoscere ed agire su queste dichiarazioni e prefissi.
+</p></div><div class="div2">
+<h3><a id="iri-use" name="iri-use" />2.2 L'utilizzo dei Indirizzi IRI come Nomi del Spazio Dei Nomi</h3><p>
+La stringa vuota, benchè sia un indirizzo IRI legale, non può essere usata come
+nome del spazio dei nomi.
+</p><p>
+L'uso
+di indirizzi IRI relativi, compreso gli appelli al documento stesso, è
+sconsiglato nelle dichiarazioni del spazio dei nomi.
+</p><div class="note"><p class="prefix"><b>Nota:</b></p><p>
+Sconsigliare gli indirizzi IRI relativi è stato deciso da una scheda elettorale plenaria del
+W3C XML  <a href="#reluri">[Sconsiglio dei indirizzi IRI relativi]</a>.  Inoltre dichiara che “le specifiche
+successive quali DOM, XPath, ecc. Non definiranno alcun'interpretazione”.
+</p></div></div><div class="div2">
+<h3><a id="IRIComparison" name="IRIComparison" />2.3 Paragone dei indirizzi IRI</h3><p>
+Gli indirizzi IRI, che identificano lo
+spazio dei nomi sono paragonati per determinare se un nome appartiene a un deto
+spazio dei nomi, e se due nomi appartengono allo stesso spazio dei nomi.
+[<a title="Identical" id="dt-identical" name="dt-identical">Definizione</a>: 
+I due indirizzi IRI sono trattati come delle stringhe e sono 
+<b>identici</b>
+se e soltanto se le stringhe sono identiche, cioè, se sono la stessa sequenza
+di caratteri.
+]
+Il paragone è sensibile ai caratteri minuscoli/maiuscoli, e
+nessun %-escaping è fatto o sfatto.
+</p><p>
+Una
+conseguenza è che gli indirizzi IRI che non sono identici in questo senso possono
+risolversi alla stessa risorsa. Per esempio, gli indirizzi IRI che differiscono
+soltanto dai loro caratteri minuscoli/maiuscoli o dal %-escaping, o coloro che
+sono in delle entità esterne che hanno indirizzi URI di base diversi (ma notate
+che gli indirizzi IRI relativi sono sconsigliati come nomi del spazio dei nomi).
+</p><p>
+In una dichiarazione di un spazio dei nomi, l'indirizzo IRI è il 
+<a href="http://www.w3.org/TR/REC-xml#AVNormalize">valore normalizzato</a>
+dell'attributo, allora la sostituzione dei caratteri XML e degli appelli d'entità è già stato
+fatto prima di qualunque paragone.
+</p><p>Esempi:</p><p>
+Gli indirizzi IRI seguenti sono diversi per quanto riguarda l'identificazione degli
+spazi dei nomi, poiché differiscono nei caratteri minuscoli/maiuscoli:
+</p><ul><li><p><code>
+http://www.example.org/wine
+</code></p></li><li><p><code>
+http://www.Example.org/wine
+</code></p></li><li><p><code>
+http://www.example.org/Wine
+</code></p></li></ul><p>
+Anche Gli indirizzi IRI seguenti sono diversi nel scopo di identificare i spazi dei nomi:
+</p><ul><li><p><code>
+http://www.example.org/rosé
+</code></p></li><li><p><code>
+http://www.example.org/ros%c3%a9
+</code></p></li><li><p><code>
+http://www.example.org/ros%c3%A9
+</code></p></li><li><p><code>
+http://www.example.org/ros%C3%a9
+</code></p></li><li><p><code>
+http://www.example.org/ros%C3%A9
+</code></p></li></ul><p>
+E anche questi:
+</p><ul><li><p><code>
+http://www.example.org/~wilbur
+</code></p></li><li><p><code>
+http://www.example.org/%7ewilbur
+</code></p></li><li><p><code>
+http://www.example.org/%7Ewilbur
+</code></p></li></ul><p>
+Se l'entità <b>eacute</b> è definito come essendo <b>é</b>,
+i tag iniziali seguenti contengono tutte delle dichiarazioni del spazio dei nomi che legano il
+prefisso  <b>p</b>
+allo stesso indirizzo IRI, <code>http://example.org/rosé</code>.
+</p><ul><li><p><code>
+&lt;p:foo xmlns:p="http://example.org/rosé"&gt;
+</code></p></li><li><p><code>
+&lt;p:foo xmlns:p="http://example.org/ros&amp;#xe9;"&gt;
+</code></p></li><li><p><code>
+&lt;p:foo xmlns:p="http://example.org/ros&amp;#xE9;"&gt;
+</code></p></li><li><p><code>
+&lt;p:foo xmlns:p="http://example.org/ros&amp;#233;"&gt;
+</code></p></li><li><p><code>
+&lt;p:foo xmlns:p="http://example.org/ros&amp;eacute;"&gt;
+</code></p></li></ul><p>
+A causa del rischio di confusione tra indirizzi IRI che sarebbero equivalenti se
+dereferenziati, l’uso del %-escaping nei nomi per il spazio dei nomi è
+fortemente scoraggiato.
+</p></div></div><div class="div1">
+<h2><a id="ns-decl" name="ns-decl" />3 La dichiarazione degli Spazi dei Nomi</h2><p>[<a title="Namespace declaration" id="dt-NSDecl" name="dt-NSDecl">Definizione</a>: Uno spazio dei nomi 
+<span>(o, più precisamente, un legato ad un spazio dei nomi)</span>
+è
+<b>dichiarato</b> tramite una famiglia di attributi riservati. Il nome di un tal
+attributo deve essere <b>xmlns</b> o <span>iniziare con <b>xmlns:</b></span>.
+Questi attributi, come tutti gli altri attributi di XML, possono essere forniti
+direttamente o <a href="http://www.w3.org/TR/REC-xml#dt-default"> da default</a>.
+]
+</p>
+<h5><a id="N400245" name="N400245" />Nomi di attributi per la dichiarazione del spazio dei nomi</h5><table summary="Scrap" class="scrap"><tbody><tr valign="baseline"><td><a id="NT-NSAttName" name="NT-NSAttName" />[1]   </td><td><code>NSAttName</code></td><td>   ::=   </td><td><code><a href="#NT-PrefixedAttName">PrefixedAttName</a></code></td></tr><tr valign="baseline"><td /><td /><td /><td><code>| <a href="#NT-DefaultAttName">DefaultAttName</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-PrefixedAttName" name="NT-PrefixedAttName" />[2]   </td><td><code>PrefixedAttName</code></td><td>   ::=   </td><td><code>'xmlns:' <a href="#NT-NCName">NCName</a></code></td><td><a href="#xmlReserved">[NSC: Prefissi e Nomi del Spazio Dei Nomi Riservati]</a></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-DefaultAttName" name="NT-DefaultAttName" />[3]   </td><td><code>DefaultAttName</code></td><td>   ::=   </td><td><code>'xmlns'</code></td></tr></tbody><tbody><tr v
+<a href="#NT-NCNameChar">NCNameChar</a>*</code></td><td><i>/* Un
+<a href="http://www.w3.org/TR/xml11#NT-Name">Nome</a> di XML, sensa il ":" */</i></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-NCNameChar" name="NT-NCNameChar" />[5]   </td><td><code>NCNameChar</code></td><td>   ::=   </td><td><code><a href="http://www.w3.org/TR/xml11#NT-NameChar">NameChar</a>
+- ':'</code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-NCNameStartChar" name="NT-NCNameStartChar" />[5a]   </td><td><code>NCNameStartChar</code></td><td>   ::=   </td><td><code><a href="http://www.w3.org/TR/xml11#NT-NameStartChar">NameStartChar</a>
+- ':'</code></td></tr></tbody></table><p>
+<span>
+Il
+<a href="http://www.w3.org/TR/REC-xml#AVNormalize">valore normalizzato</a>
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVE</em>
+essere un indirizzo IRI — il 
+<a title="Namespace Name" href="#dt-NSName">nome del spazio dei nomi</a>
+che identifica il spazio dei nomi —
+o una stringa vuota.
+</span>
+Il nome del spazio dei nomi, per servire il suo scopo inteso
+<em class="RFC2119" title="SHOULD in RFC 2119 context">DOVREBBE</em>
+avere le caratteristiche dell'unicità e della persistenza. Non è un obiettivo
+que sia direttamente utilizzabile per il ricupero di uno schema (se uno
+esiste). I Nomi di Risorsa Uniforme (Uniform Resource Name) <a href="#URNs">[RFC2141]</a> è un esempio di una sintassi che è disegnata con questi obiettivi a mente. Comunque, dovrebbe essere notato che gli URLs
+ordinari possono essere gestiti in tale maniera per realizzare questi stessi
+obiettivi.</p><p>
+[<a title="Namespace Prefix" id="dt-prefix" name="dt-prefix">Definizione</a>: Se il nome del attributo corrisponde al  <a href="#NT-PrefixedAttName">PrefixedAttName</a>,
+allora il
+<a href="#NT-NCName">NCName</a> dà il <b>prefisso del spazio dei nomi</b>,
+usato per associare i nomi dei attributi e dei elementi col 
+<a title="Namespace Name" href="#dt-NSName">nome del spazio dei nomi</a> nel valore del attributo entro il limite
+dell'elemento a cui la dichiarazione è fissata.]
+</p><p>[<a title="Default Namespace" id="dt-defaultNS" name="dt-defaultNS">Definizione</a>: Se il nome del attributo corrisponde al <a href="#NT-DefaultAttName">DefaultAttName</a>,
+allora il
+<a title="Namespace Name" href="#dt-NSName">nome del spazio dei nomi</a> nel valore
+dell'attributo è quello del <b>defualt spazio dei nomi</b>
+entro il limite dell'elemento a cui la dichiarazione è fissata.]
+Il defualt spazio dei nomi e l’annullamento di dichiarazioni sono discussi in 
+<a href="#scoping-defaulting"><b>6 'applicazione del spazio dei nomi agli elementi e attributi</b></a>.
+</p><p>Un esempio di dichiarazione di spazio dei nomi che associa il prefisso spazio dei
+nomi <b>edi</b> con il nome del spazio dei nomi  
+<code>http://ecommerce.example.org/schema</code>:
+</p><div class="exampleInner"><pre>&lt;x xmlns:edi='http://ecommerce.example.org/schema'&gt;
+  &lt;!-- il prefisso "edi" è legato a http://ecommerce.example.org/schema
+       per l'elemento "x" ed il suo contenuto --&gt;
+&lt;/x&gt;</pre></div><div class="constraint">
+<p class="prefix"><a id="xmlReserved" name="xmlReserved" /><b>Limitazione del spazio dei nomi (Namespace constraint): Prefissi e nomi del spazio dei nomi riservati</b></p>
+
+<p>
+Il prefisso <b>xml</b> è per definizione legato al nome del spazio dei nomi
+<code>http://www.w3.org/XML/1998/namespace</code>. Si
+<em class="RFC2119" title="MAY in RFC 2119 context">PUÒ</em>,
+dichiararlo, ma non
+è obbligatorio, e 
+<em class="RFC2119" title="MUST NOT in RFC 2119 context">NON SI DEVE</em>
+eliminarne la dichiarazione o legarlo a qualunque altro nome del spazio dei nomi. Altri prefissi
+<em class="RFC2119" title="MUST NOT in RFC 2119 context">NON DEVONO</em>
+essere legati a questo nome del spazio dei nomi.
+</p>
+
+<p>
+Il prefisso <b>xmlns</b> è utilizzato soltanto per dichiarare le legature agli
+spazi dei nomi ed è legato per definizione al nome del spazio dei nomi
+<code>http://www.w3.org/2000/xmlns/</code>. 
+<em class="RFC2119" title="MUST NOT in RFC 2119 context">NON SI DEVE</em>
+dichiararlo o eliminarne la dichiarazione. Altri prefissi
+<em class="RFC2119" title="MUST NOT in RFC 2119 context">NON DEVONO</em>
+essere legati a questo nome del spazio dei nomi.
+</p>
+
+<p>
+Tutti
+gli altri prefissi che cominciano con la sequenza delle tre lettere x, m, l, in
+ovunque combinazione dei caratteri minuscoli/maiuscoli, sono riservati. Ciò
+significa che:
+</p>
+
+<ul><li><p>gli utenti 
+<em class="RFC2119" title="SHOULD NOT in RFC 2119 context">NON DOVREBBERO</em>
+     usarli tranne come definiti dalle specifiche ulteriori</p></li><li><p>i processori 
+<em class="RFC2119" title="MUST NOT in RFC 2119 context">NON DEVONO</em>
+trattarli come dei errori irrimediabili (fatal errors).</p></li></ul>
+
+</div><p>
+Nonostante
+non sono loro stessi riservati, è sconsigliabile usare nomi prefissi di cui la
+parte locale comincia con le lettere x, m, l, in ovunque combinazione dei
+caratteri minuscoli/maiuscoli, poiché questi nomi sarebbero riservati se
+fossero utilizzati senza prefisso.
+</p></div><div class="div1">
+<h2><a id="ns-qualnames" name="ns-qualnames" />4 Nomi Qualificati</h2><p>Nei
+documenti XML conformi a questa specifica, alcuni nomi (delle strutture che
+corrispondono al  
+<a href="http://www.w3.org/TR/xml11#NT-Name">Nome</a> non-terminale)
+<span>
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVONO</em>
+essere</span> dati come
+<a title="Qualified Name" href="#dt-qualname">nomi qualificati</a>,
+definiti come segue:
+</p>
+<h5><a id="N40034C" name="N40034C" />Nomi Qualificati</h5><table summary="Scrap" class="scrap"><tbody><tr valign="baseline"><td><a id="NT-QName" name="NT-QName" />[6]   </td><td><code>QName</code></td><td>   ::=   </td><td><code><a href="#NT-PrefixedName">Nome con Prefisso</a></code></td></tr><tr valign="baseline"><td /><td /><td /><td><code>| <a href="#NT-UnprefixedName">Nome sensa Prefisso</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-PrefixedName" name="NT-PrefixedName" />[6a]   </td><td><code>PrefixedName</code></td><td>   ::=   </td><td><code>
+<a href="#NT-Prefix">Prefisso</a> ':' <a href="#NT-LocalPart">Parte Locale</a>
+</code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-UnprefixedName" name="NT-UnprefixedName" />[6b]   </td><td><code>UnprefixedName</code></td><td>   ::=   </td><td><code>
+<a href="#NT-LocalPart">Parte Locale</a>
+</code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-Prefix" name="NT-Prefix" />[7]   </td><td><code>Prefix</code></td><td>   ::=   </td><td><code><a href="#NT-NCName">NCName</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-LocalPart" name="NT-LocalPart" />[8]   </td><td><code>LocalPart</code></td><td>   ::=   </td><td><code><a href="#NT-NCName">NCName</a></code></td></tr></tbody></table><p>
+Il 
+<a href="#NT-Prefix">Prefisso</a> fornisce la parte  
+<a title="Namespace Prefix" href="#dt-prefix">prefisso del spazio dei nomi </a>
+del nome qualificato e 
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVE</em>
+essere associato ad un indirizzo <span>IRI</span>
+di spazio dei nomi in una
+<a title="Namespace declaration" href="#dt-NSDecl">dichiarazione di spazio dei nomi</a>.
+[<a title="Local Part" id="dt-localpart" name="dt-localpart">Definizione</a>: 
+La <a href="#NT-LocalPart">ParteLocale</a> fornisce la
+<b>parte locale</b> del nome qualificato.]
+</p><p>Notare che il prefisso funziona <em>soltanto</em> come un parametro di sostituzione per un nome di spazio dei nomi. Le applicazioni
+<em class="RFC2119" title="SHOULD in RFC 2119 context">DOVREBBERO</em>
+utilizzare il nome del spazio
+dei nomi, e non il prefisso, nella costruzione dei nomi di cui lo scopo
+estende oltre il documneto contenitore.</p></div><div class="div1">
+<h2><a id="ns-using" name="ns-using" />5 L'uso dei Nomi Qualificati</h2><p>Nei
+documenti XML conformi a questa specifica, i <span>nomi</span> d'elementi sono dati come
+<a title="Qualified Name" href="#dt-qualname">nomi qualificati</a>, come segue:
+</p>
+<h5><a id="N4003C2" name="N4003C2" />I nomi d'elementi</h5><table summary="Scrap" class="scrap"><tbody><tr valign="baseline"><td><a id="NT-STag" name="NT-STag" />[9]   </td><td><code>STag</code></td><td>   ::=   </td><td><code>'&lt;' <a href="#NT-QName">QName</a> 
+(<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> 
+<a href="http://www.w3.org/TR/REC-xml#NT-Attribute">Attribute</a>)* 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? '&gt;'
+</code></td><td><a href="#nsc-NSDeclared">[NSC: Prefisso Dichiarato]</a></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-ETag" name="NT-ETag" />[10]   </td><td><code>ETag</code></td><td>   ::=   </td><td><code>'&lt;/' <a href="#NT-QName">QName</a> 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? '&gt;'</code></td><td><a href="#nsc-NSDeclared">[NSC: Prefisso Dichiarato]</a></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-EmptyElemTag" name="NT-EmptyElemTag" />[11]   </td><td><code>EmptyElemTag</code></td><td>   ::=   </td><td><code>'&lt;' <a href="#NT-QName">QName</a> 
+(<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>
+<a href="http://www.w3.org/TR/REC-xml#NT-Attribute">Attribute</a>)* 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? '/&gt;'</code></td><td><a href="#nsc-NSDeclared">[NSC: Prefisso Dichiarato]</a></td></tr></tbody></table><p>Un esempio di un nome qualificato che serve
+da nome di elemento:
+</p><div class="exampleInner"><pre>
+  &lt;!-- il spazio dei nomi dell’elemento 'price' è http://ecommerce.example.org/schema --&gt;
+  &lt;edi:price xmlns:edi='http://ecommerce.example.org/schema' units='Euro'&gt;32.18&lt;/edi:price&gt;
+</pre></div><p>
+Gli attributi sono sia <a title="Namespace declaration" href="#dt-NSDecl">dichiarazioni
+di spazio dei nomi</a>
+o i loro nomi sono dati come
+<a title="Qualified Name" href="#dt-qualname">nomi qualificati</a>:
+</p>
+<h5><a id="N400434" name="N400434" />Attributi</h5><table summary="Scrap" class="scrap"><tbody><tr valign="baseline"><td><a id="NT-Attribute" name="NT-Attribute" />[12]   </td><td><code>Attribute</code></td><td>   ::=   </td><td><code><a href="#NT-NSAttName">NSAttName</a>
+<a href="http://www.w3.org/TR/REC-xml#NT-Eq">Eq</a> 
+<a href="http://www.w3.org/TR/REC-xml#NT-AttValue">AttValue</a></code></td></tr><tr valign="baseline"><td /><td /><td /><td><code>| <a href="#NT-QName">QName</a> <a href="http://www.w3.org/TR/REC-xml#NT-Eq">Eq</a> 
+<a href="http://www.w3.org/TR/REC-xml#NT-AttValue">AttValue</a></code></td><td><a href="#nsc-NSDeclared">[NSC: Prefisso dichiarato]</a></td></tr></tbody></table><p>Un esempio di nome qualificato che serve come nome d'attributo:
+</p><div class="exampleInner"><pre>&lt;x xmlns:edi='http://ecommerce.example.org/schema'&gt;
+  &lt;!-- il spazio dei nomi dell'attributo 'taxclass' è http://ecommerce.example.org/schema --&gt;
+  &lt;lineItem edi:taxClass="exempt"&gt;Baby food&lt;/lineItem&gt;
+&lt;/x&gt;</pre></div><div class="constraint">
+<p class="prefix"><a id="nsc-NSDeclared" name="nsc-NSDeclared" /><b>Limitazione del spazio dei nomi: Prefisso Dichiarato</b></p>
+<p>Il prefisso del spazio dei nomi, a meno che si tratti di <code>xml</code>
+o di <code>xmlns</code>,
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVE</em>
+essere stato dichiarato in un
+attributo di <a title="Namespace declaration" href="#dt-NSDecl">dichiarazione del spazio dei nomi</a>
+sia nel tag iniziale dell’elemento in cui il
+prefisso è usato o in un elemento antenato (cioè un elemento nel qual 
+<a href="http://www.w3.org/TR/REC-xml#dt-content">contenuto</a> accade il
+markup prefisso). Inoltre, il valore dell'attributo nella dichiarazione la più interna 
+<em class="RFC2119" title="MUST NOT in RFC 2119 context">NON DEVE</em>
+essere <span>una stringa vuota</span>.
+</p></div><p>Questa Limitazione può condurre
+alle difficoltà operazionali nel caso dove l’attributo di dichiarazione del
+spazio dei nomi è fornito, non direttamente 
+<a href="http://www.w3.org/TR/REC-xml#dt-docent">nell'entità del documento</a>, XML, ma via
+un attributo di default in un'entità esterna. Tali dichiarazioni possono non
+essere lette da un software basato su un processore XML che non convalida.
+Molte applicazioni XML, presumibilmente comprese quelle sensibili al spazio dei
+nomi, non richiedono processori che convalidano.
+<span>Se il funzionamento corretto con tali applicazioni è richiesto</span>,
+le dichiarazioni del spazio dei nomi
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVONO</em>
+essere fornite sia direttamente
+sia via attributi di defualt dichiarati nel 
+<a href="http://www.w3.org/TR/REC-xml#dt-doctype">sottoinsieme interno del DTD</a>.
+</p><p>I nomi degli elementi e degli attributi sono anche dati come nomi qualificati
+quando appaiono in dichiarazioni nel  
+<a href="http://www.w3.org/TR/REC-xml#dt-doctype">DTD</a>:
+</p>
+<h5><a id="N4004BC" name="N4004BC" />I Nomi Qualificati Nelle Dichiarazioni</h5><table summary="Scrap" class="scrap"><tbody><tr valign="baseline"><td><a id="NT-doctypedecl" name="NT-doctypedecl" />[13]   </td><td><code>doctypedecl</code></td><td>   ::=   </td><td><code>'&lt;!DOCTYPE' <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>
+<a href="#NT-QName">QName</a> (<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>
+<a href="http://www.w3.org/TR/REC-xml#NT-ExternalID">ExternalID</a>)? 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? ('[' 
+(<a href="http://www.w3.org/TR/REC-xml#NT-markupdecl">markupdecl</a> 
+| <a href="http://www.w3.org/TR/REC-xml#NT-PEReference">PEReference</a> 
+| <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>)* 
+']' 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>?)? '&gt;'</code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-elementdecl" name="NT-elementdecl" />[14]   </td><td><code>elementdecl</code></td><td>   ::=   </td><td><code>'&lt;!ELEMENT' <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> 
+<a href="#NT-QName">QName</a> 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> 
+<a href="http://www.w3.org/TR/REC-xml#NT-contentspec">contentspec</a>
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? '&gt;'</code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-cp" name="NT-cp" />[15]   </td><td><code>cp</code></td><td>   ::=   </td><td><code>(<a href="#NT-QName">QName</a> 
+| <a href="http://www.w3.org/TR/REC-xml#NT-choice">choice</a> 
+| <a href="http://www.w3.org/TR/REC-xml#NT-seq">seq</a>) 
+('?' | '*' | '+')?</code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-Mixed" name="NT-Mixed" />[16]   </td><td><code>Mixed</code></td><td>   ::=   </td><td><code>'(' <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? 
+'#PCDATA'
+(<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? 
+'|' 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? 
+<a href="#NT-QName">QName</a>)* 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? 
+')*' </code></td></tr><tr valign="baseline"><td /><td /><td /><td><code>| '(' <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? '#PCDATA' <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? ')'
+</code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-AttlistDecl" name="NT-AttlistDecl" />[17]   </td><td><code>AttlistDecl</code></td><td>   ::=   </td><td><code>'&lt;!ATTLIST' <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> 
+<a href="#NT-QName">QName</a> 
+<a href="#NT-AttDef">AttDef</a>*
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>? '&gt;'</code></td></tr></tbody><tbody><tr valign="baseline"><td><a id="NT-AttDef" name="NT-AttDef" />[18]   </td><td><code>AttDef</code></td><td>   ::=   </td><td><code><a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> 
+(<a href="#NT-QName">QName</a> | <a href="#NT-NSAttName">NSAttName</a>)
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> <a href="http://www.w3.org/TR/REC-xml#NT-AttType">AttType</a> 
+<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> <a href="http://www.w3.org/TR/REC-xml#NT-DefaultDecl">DefaultDecl</a></code></td></tr></tbody></table><p>
+Notare che la convalida fondata sulle DTD non
+tiene conto degli spazi dei nomi nel senso seguente: un DTD limita gli elementi
+ed attributi che possono apparire in un documento dai loro nomi non
+interpretati, non dalle (spazio dei nomi, nome locale) paia. Per convalidare un
+documento che usa il spazio dei nomi contro un DTD, gli stessi prefissi devono
+essere usati nel DTD come nell'istanza. Una DTD può tuttavia limitare
+indirettamente il spazio dei nomi in un documetno valido dando valori fissi <code>#FIXED</code> agli attributi che dichiarano gli spazi dei nomi.
+</p></div><div class="div1">
+<h2><a id="scoping-defaulting" name="scoping-defaulting" />6 L'applicazione del Spazio Dei Nomi
+agli Elementi e Attributi</h2><div class="div2">
+<h3><a id="scoping" name="scoping" />6.1 La portata del spazio dei nomi</h3><p>
+La portata di una dichiarazione del spazio dei nomi che dichiara un prefisso si estende dall'inizio del tag iniziale nel quale appare fino alla fine del tag finale corrispondente, a parte la portata di qualunque dichiarazioni interne con la stessa parte di NSAttName. Nel caso di un tag vuoto, lo scopo è il tag sé stesso
+</p><p>
+Una tale dichiarazione del spazio dei nomi si applica a tutti i nomi d'elementi e
+d'attributi entro la sua portata, il cui prefisso corrisponde a quello
+precisato nella dichiarazione.
+</p><p>
+Il
+<a title="Expanded Name" href="#dt-expname">nome espanso</a>
+che corrisponde ad un
+nome d'elemento o d'attributo prefisso, ha l'indirizzo IRI al quale 
+<a title="" href="#NT-Prefix">prefisso</a>
+è legato, come il suo 
+<a title="Namespace Name" href="#dt-NSName">nome del spazio dei nomi</a>,
+e la
+<a title="" href="#NT-LocalPart">parte locale</a>
+come il suo
+<a title="Local Name" href="#dt-localname">nome locale</a>.
+</p><div class="exampleInner"><pre>&lt;?xml version="<span>1.1</span>"?&gt;
+
+&lt;html:html xmlns:html='<span>http://www.w3.org/1999/xhtml</span>'&gt;
+
+  &lt;html:head&gt;&lt;html:title&gt;Frobnostication&lt;/html:title&gt;&lt;/html:head&gt;
+  &lt;html:body&gt;&lt;html:p&gt;Mosso 
+    &lt;html:a href='http://frob.example.com'&gt;qui.&lt;/html:a&gt;&lt;/html:p&gt;&lt;/html:body&gt;
+&lt;/html:html&gt;</pre></div><p>Si possono dichiarare molti prefissi del spazio dei nomi come attributi di un solo
+elemento, come lo mostra quest'esempio:
+</p><div class="exampleInner"><pre>&lt;?xml version="<span>1.1</span>"?&gt;
+&lt;!-- i due prefissi del spazio dei nomi sono disponibili ovunque --&gt;
+&lt;bk:book xmlns:bk='urn:loc.gov:books'
+         xmlns:isbn='urn:ISBN:0-395-36341-6'&gt;
+    &lt;bk:title&gt;Cheaper by the Dozen&lt;/bk:title&gt;
+    &lt;isbn:number&gt;1568491379&lt;/isbn:number&gt;
+&lt;/bk:book&gt;</pre></div><p>
+Il valore di un attributo nella dichiarazione del spazio dei nomi per un prefisso 
+<em class="RFC2119" title="MAY in RFC 2119 context">PUÒ</em>
+essere vuoto. Ciò ha per effetto,
+nella portata della dichiarazione, di eliminare ogni associazione del prefisso
+ad un nome del spazio dei nomi. Dichiarazioni ulteriori 
+<em class="RFC2119" title="MAY in RFC 2119 context">POSSONO</em>
+re-dichiare il prefisso di nuovo:
+</p><div class="exampleInner"><pre>
+<span>
+&lt;?xml version="1.1"?&gt;
+&lt;x xmlns:n1="http://www.w3.org"&gt;
+    &lt;n1:a/&gt;               &lt;!-- legale; il prefisso n1 è legato a  http://www.w3.org --&gt;
+    &lt;x xmlns:n1=""&gt;
+        &lt;n1:a/&gt;           &lt;!-- illegale; qui il prefisso n1 non è legato --&gt;
+	&lt;x xmlns:n1="http://www.w3.org"&gt;
+            &lt;n1:a/&gt;       &lt;!-- legale; il prefisso n1 è legato di nuovo  --&gt;
+        &lt;/x&gt;
+    &lt;/x&gt;
+&lt;/x&gt;</span></pre></div></div><div class="div2">
+<h3><a id="defaulting" name="defaulting" />6.2 Lo spazio dei nomi per default</h3><p>
+La portata della dichiarazione di uno 
+<a title="Default Namespace" href="#dt-defaultNS">spazio dei nomi per defualt</a> si estende dall'inizio del tag iniziale, nel
+quale appare, fino alla fine del tag finale corrispondente, all'infuori della
+portata di qualsiasi dichiarazioni del spazio dei nomi da default interne. Nel
+caso di un tag vuoto, lo scopo è il tag sé stesso.
+</p><p>
+Una dichiarazione del spazio dei nomi da defualt è applicata a tutti i nomi
+d'elemento sensa prefisso entro la sua portata. Le dichiarazioni del spazio dei
+nomi da defualt non si applicano direttamente ai nomi d'attributi; l'interpretazione
+degli attributi sensa prefisso è determinata dall'elemento sul quale appaiono.
+</p><p>
+Se
+c’è una dichiarazione del spazio dei nomi da default nello scopo, il 
+<a title="Expanded Name" href="#dt-expname">nome espanso</a>
+corrispondendo ad un elemento sensa prefisso ha l'indirizzo IRI del 
+<a title="Default Namespace" href="#dt-defaultNS">spazio dei nomi da defualt</a>
+come il suo
+<a title="Namespace Name" href="#dt-NSName">nome del spazio dei nomi</a>.
+Se non c'è nessuna dichiarazione del spazio
+dei nomi da defualt nello scopo, il nome del spazio dei nomi non ha valori. Il
+nome del spazio dei nomi di un nome d'attributo sensa prefisso non ha mai
+valori. In tutti i casi, il 
+<a title="Local Name" href="#dt-localname">nome locale</a> corrisponde a la 
+<a title="" href="#NT-LocalPart">parte locale</a>
+(che naturalmente è lo stesso di quello del nome sensa prefisso sé stesso).
+</p><div class="exampleInner"><pre>&lt;?xml version="<span>1.1</span>"?&gt;
+&lt;!-- gli elementi sono nello spazio dei nomi HTML, in questo caso da default --&gt;
+&lt;html xmlns='<span>http://www.w3.org/1999/xhtml</span>'&gt;
+  &lt;head&gt;&lt;title&gt;Frobnostication&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;p&gt;Mosso 
+    &lt;a href='http://frob.example.com'&gt;qui&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;
+&lt;/html&gt;</pre></div><div class="exampleInner"><pre>&lt;?xml version="<span>1.1</span>"?&gt;
+&lt;!-- i tipi di elementi sensa prefisso sono del tipo "books" --&gt;
+&lt;book xmlns='urn:loc.gov:books'
+      xmlns:isbn='urn:ISBN:0-395-36341-6'&gt;
+    &lt;title&gt;Cheaper by the Dozen&lt;/title&gt;
+    &lt;isbn:number&gt;1568491379&lt;/isbn:number&gt;
+&lt;/book&gt;</pre></div><p>Un più grand'esempio della portata del spazio dei nomi:
+</p><div class="exampleInner"><pre>&lt;?xml version="<span>1.1</span>"?&gt;
+&lt;!-- inizialmente, il spazio dei nomi da default è "books" --&gt;
+&lt;book xmlns='urn:loc.gov:books'
+      xmlns:isbn='urn:ISBN:0-395-36341-6'&gt;
+    &lt;title&gt;Cheaper by the Dozen&lt;/title&gt;
+    &lt;isbn:number&gt;1568491379&lt;/isbn:number&gt;
+    &lt;notes&gt;
+      &lt;!-- fare HTML il nome del spazio dei nomi da defualt per un commento  --&gt;
+      &lt;p xmlns='<span>http://www.w3.org/1999/xhtml</span>'&gt;
+          This is a &lt;i&gt;funny&lt;/i&gt; book!
+      &lt;/p&gt;
+    &lt;/notes&gt;
+&lt;/book&gt;</pre></div><p>Il valore d'attributi in una dichiarazione del spazio dei nomi da default
+<em class="RFC2119" title="MAY in RFC 2119 context">PUÒ</em>
+essere vuoto. Ciò ha lo stesso effetto, nella portata della dichiarazione, di aver nessun spazio dei nomi da
+default.
+</p><div class="exampleInner"><pre>&lt;?xml version='<span>1.1</span>'?&gt;
+&lt;Beers&gt;
+  &lt;!-- <span>lo spazio dei nomi da default all'interno della tabella è HTML </span> --&gt;
+  &lt;table xmlns='<span>http://www.w3.org/1999/xhtml</span>'&gt;
+   &lt;th&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Origin&lt;/td&gt;&lt;td&gt;Description&lt;/td&gt;&lt;/th&gt;
+   &lt;tr&gt; 
+     &lt;!-- nessun spazio dei nomi da defualt nelle cellule della tabella  --&gt;
+     &lt;td&gt;&lt;brandName xmlns=""&gt;Huntsman&lt;/brandName&gt;&lt;/td&gt;
+     &lt;td&gt;&lt;origin xmlns=""&gt;Bath, UK&lt;/origin&gt;&lt;/td&gt;
+     &lt;td&gt;
+       &lt;details xmlns=""&gt;&lt;class&gt;Bitter&lt;/class&gt;&lt;hop&gt;Fuggles&lt;/hop&gt;
+         &lt;pro&gt;Wonderful hop, light alcohol, good summer beer&lt;/pro&gt;
+         &lt;con&gt;Fragile; excessive variance pub to pub&lt;/con&gt;
+         &lt;/details&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/Beers&gt;</pre></div></div><div class="div2">
+<h3><a id="uniqAttrs" name="uniqAttrs" />6.3 Unicità degli Attributi</h3><p>Nei
+documenti XML conformi a questa specifica, nessun tag può contenere due
+attributi che:
+</p><ol class="enumar"><li><p>hanno dei nomi identici, o</p></li><li><p>hanno dei nomi qualificati con la stessa
+<a title="Local Part" href="#dt-localpart">parte locale</a> e con 
+<a title="Namespace Prefix" href="#dt-prefix">prefissi</a> legati a
+ <a title="Namespace Name" href="#dt-NSName">nomi del spazio dei nomi</a> che sono
+ <a title="Identical" href="#dt-identical">identici</a>.
+</p></li></ol><p>
+Questa limitazione equivale ad esigere che nessun elemento abbia due attributi con lo
+stesso  
+<a title="Expanded Name" href="#dt-expname">nome espanso</a>.
+</p><p>Per esempio, ogni tag iniziale  <code>bad</code> è illegale nel seguito:
+</p><div class="exampleInner"><pre>&lt;!-- http://www.w3.org è legato a n1 e n2 --&gt;
+&lt;x xmlns:n1="http://www.w3.org" 
+   xmlns:n2="http://www.w3.org" &gt;
+  &lt;bad a="1"     a="2" /&gt;
+  &lt;bad n1:a="1"  n2:a="2" /&gt;
+&lt;/x&gt;</pre></div><p>
+Comunque,
+ciascuno delle seguenti è legale, il secondo perché lo spazio dei nomi da
+defualt non si applica ai nomi d'attributi:
+</p><div class="exampleInner"><pre>&lt;!-- http://www.w3.org è legato a n1 ed è il defualt --&gt;
+&lt;x xmlns:n1="http://www.w3.org" 
+   xmlns="http://www.w3.org" &gt;
+  &lt;good a="1"     b="2" /&gt;
+  &lt;good a="1"     n1:a="2" /&gt;
+&lt;/x&gt;</pre></div></div></div><div class="div1">
+<h2><a id="Conformance" name="Conformance" />7 Conformit�  dei Documenti</h2><p>
+Questa specifica si applica ai documenti di XML 1.1. Per Essere conformi a questa
+specifica, un documento
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVE</em>
+essere ben-formato secondo la specifica XML 1.1  <a href="#XML11">[XML 1.1]</a>.
+</p><p>
+
+Nei documenti XML conformi a questa specifica, i nomi d'elementi e d'attributi 
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVONO</em>
+corrispondere alla produzione per  
+<a href="#NT-QName">QName</a>
+(nomi qualificati) e 
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVONO</em>
+soddisfare i "Namespace Constraint" (limitazione del spazio dei nomi). Tutti gli altri simboli nel documento che sono
+<em class="RFC2119" title="REQUIRED in RFC 2119 context">RICHIESTI</em>,
+per essere ben-formato secondo XML 1.1, a corrispondere alla produzione del 
+<a href="http://www.w3.org/TR/xml11#NT-Name">Nome</a>,
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVONO</em>
+corrispondere a questa specifica per la produzione del  
+<a href="#NT-NCName">NCName</a>.
+</p><p>
+[<a title="namespace well-formedness" id="dt-nwf" name="dt-nwf">Definizione</a>: 
+Un documento è <b>ben-formato per il spazio dei nomi</b> 
+se è conforme a questa specifica.
+]
+</p><p>
+Ne segue che in un documento ben-formato per il spazio dei nomi:
+</p><ul><li><p>Tutti i nomi d'elementi e d'attributi
+contengono zero o un, due punti (:) ;</p></li><li><p>Nessun nome d'entità, trattamento d’obiettivi
+d’istruzione, o nome di notazione contiene un due punti.</p></li></ul><p>
+Inoltre, un documento ben-formato per il spazio dei nomi può essere anche valido per il spazio dei nomi.
+</p><p>
+[<a title="namespace validity" id="dt-nv" name="dt-nv">Definizione</a>: 
+Un documento ben-formato per il spazio dei nomi è <b>valido per il spazio dei nomi</b>
+se è valido
+rispetto alla specifica XML 1.1, e tutti i simboli tranne i nomi dell'elementi
+e d’attributi che sono
+<em class="RFC2119" title="REQUIRED in RFC 2119 context">RICHIESTI</em>,
+per validità del XML 1.1, a corrispondere alla produzione XML del
+<a href="http://www.w3.org/TR/xml11#NT-Name">Nome</a>,
+corrispondono a questa specifica per la produzione del 
+<a href="#NT-NCName">NCName</a>.
+]
+</p><p>
+Ne segue che in un documento valido per il spazio dei nomi:
+</p><ul><li><p>
+   Nessun attributo il cui tipo dichiarato è 
+   <b>ID</b>, <b>IDREF(S)</b>, <b>ENTITY(IES)</b>, o <b>NOTATION</b>
+   contiene un due punti(:).
+  </p></li></ul></div><div class="div1">
+<h2><a id="ProcessorConformance" name="ProcessorConformance" />8 La Conformità dei Processori</h2><p>
+Per essere conforme a questa specifica, un processore 
+<em class="RFC2119" title="MUST in RFC 2119 context">DEVE</em>
+segnalare le violazioni
+al ben-formato del spazio dei nomi, con l’eccezione che NON È
+<em class="RFC2119" title="REQUIRED in RFC 2119 context">RICHIESTO</em>
+controllare che i nomi del spazio dei nomi siano indirizzi IRI legali.
+</p><p>
+[<a title="namespace-validating" id="dt-nvp" name="dt-nvp">Definizione</a>: 
+Un processore di convalidazione XML che è conforme a questa specifica è <b>convalidando
+del spazio dei nomi</b> se in più segnala le violazioni di validità dello
+spazio dei nomi.
+]
+</p></div><div class="div1">
+<h2><a id="IRIs" name="IRIs" />9 Identificatori di Risorse Internazionalizzati (IRI)</h2><p>
+Il lavoro continua per produrre un documento RFC definendo gli Identificatori di Risorse Internazionalizzati (IRI).
+ Poiché questo lavoro non è ancora completo, questa sezione dà una definizione sintattica degli indirizzi IRI per
+le necessità di questa specifica. Il gruppo di lavoro XML Core prevede di emettere
+un erratum che sostituira questa sezione con un riferimento al documento RFC
+quando quest'ultimo sarà pubblicato.
+</p><p>Gli
+utenti che definiscono il spazio dei nomi sono consigliati di limitarsi ai nomi
+del spazio dei nomi con indirizzi URI finché il documento RFC sia pubblicato e
+il software che sostiene l'IRI sia nell'uso comune. I sviluppatori sono
+similmente consigliati di non rigettare i nomi del spazio dei nomi che
+violano le versioni preliminari in termini dei caratteri consentiti.
+</p><p>
+Per una definizione più generale e discussioni sugli indirizzi IRI, vedere il
+documento 
+<a href="#IRIdraft5">[IRI draft 5]</a> (lavoro in corso).
+</p><p>
+Gli
+indirizzi URI sono limitati ad un sottoinsieme dei caratteri ASCII; gli indirizzi IRI permettono la maggior
+parte dei caratteri Unicode da #xA0 in poi. Le versioni preliminari precedenti
+del documento RFC che tratta degli indirizzi IRI (per esempio <a href="#IRIdraft3">[IRI draft 3]</a>) autorizzavano anche loro alcuni caratteri ASCII vietati, ma non la versione corrente 
+(<a href="#IRIdraft5">[IRI draft 5]</a>).
+</p><p>
+[<a title="additional characters" id="dt-addchar" name="dt-addchar">Definizione</a>: 
+I <b>caratteri supplementari </b> permessi negli indirizzi IRI da la versione  
+<a href="#IRIdraft5">[IRI draft 5]</a>
+sono:
+]
+</p><ul><li><p>
+i caratteri Unicode del piano 0 #xA0 - #xD7FF, #xF900-#xFDCF, #xFDF0-#xFFEF
+</p></li><li><p>
+i caratteri Unicode dei piani 1 a 14  #x10000-#x1FFFD ... #xD0000-#xDFFFD, #xE1000-#xEFFFD
+</p></li></ul><p>
+[<a title="IRI reference" id="dt-IRI" name="dt-IRI">Definizione</a>: 
+Un <b>indirizzo IRI</b> è un gruppo di caratteri convertibili in un indirizzo
+URI seguendo le tappe seguenti:
+]
+</p><ol class="enumar"><li><p>
+  Convertire la parte hostname, se presente, usando
+l'operazione ToASCII precisata nella Sezione 4.1 del documento 
+  <a href="#IDNA">[RFC3490]</a>
+  con le flag
+UseSTD3ASCIIRules e AllowUnassigned messe a TRUE.
+  </p></li><li><p>sfuggire (escape) tutti  
+   <a title="additional characters" href="#dt-addchar">caratteri supplementari</a>
+   come segue:</p><ol class="enumla"><li><p>
+   Ogni carattere supplementare è convertito in UTF- 8 
+   <a href="#UTF8">[RFC3629]</a>
+   come uno o più byte.
+  </p></li><li><p>
+   I byte risultanti sono sfuggiti secondo il
+meccanismo di scappamento degli indirizzi URI (cioè convertiti in %HH, dove HH è
+la notazione esadecimale del valore del byte).
+  </p></li><li><p>
+   Il carattere originale è sostituito con la sequenza di caratteri risultanti.
+  </p></li></ol></li></ol><div class="note"><p class="prefix"><b>Nota:</b></p><p>
+L'algoritmo della versione <a href="#IRIdraft5">[IRI draft 5]</a> include una
+tappa di normalizzazione UCS, ma ciò non fa alcuna differenza per le stringhe
+che sono indirizzi IRI.
+ </p></div></div></div><div class="back"><div class="div1">
+<h2><a id="refs" name="refs" />A Riferimenti Normativi</h2><dl><dt class="label"><a id="keywords" name="keywords" />Keywords</dt><dd>
+<a href="http://www.rfc-editor.org/rfc/rfc2119.txt"><cite>RFC 2119: Key words for use in RFCs to Indicate Requirement Levels</cite></a>,
+S. Bradner, ed.
+IETF (Internet Engineering Task Force),
+March 1997.
+Available at
+http://www.rfc-editor.org/rfc/rfc2119.txt
+</dd><dt class="label"><a id="URNs" name="URNs" />RFC2141</dt><dd>
+<a href="http://www.rfc-editor.org/rfc/rfc2141.txt"><cite>RFC 2141: URN Syntax</cite></a>,
+R. Moats, ed.
+IETF (Internet Engineering Task Force),
+May 1997.
+<span>
+Available at
+http://www.rfc-editor.org/rfc/rfc2141.txt.
+</span>
+</dd><dt class="label"><a id="URIRef" name="URIRef" />RFC2396</dt><dd>
+<a href="http://www.rfc-editor.org/rfc/rfc2396.txt"><cite>RFC 2396: Uniform Resource Identifiers (URI): Generic Syntax</cite></a>,
+T. Berners-Lee, R. Fielding, and L. Masinter, eds.
+IETF (Internet Engineering Task Force),
+August 1998.
+Available at
+http://www.rfc-editor.org/rfc/rfc2396.txt
+</dd><dt class="label"><a id="IP6URL" name="IP6URL" />RFC2732</dt><dd>
+<a href="http://www.rfc-editor.org/rfc/rfc2732.txt"><cite>RFC 2732: Format for Literal IPv6 Addresses in URL's</cite></a>,
+R. Hinden, B. Carpenter, and L. Masinter, eds.
+IETF (Internet Engineering Task Force),
+December 1999.
+Available at http://www.rfc-editor.org/rfc/rfc2732.txt.
+</dd><dt class="label"><a id="IDNA" name="IDNA" />RFC3490</dt><dd>
+<a href="http://www.rfc-editor.org/rfc/rfc3490.txt"><cite>RFC 3490: Internationalizing Domain Names in Applications (IDNA)</cite></a>,
+P. Faltstrom, P. Hoffman, and A. Costello, eds.
+IETF (Internet Engineering Task Force),
+March 2003.
+Available at http://www.rfc-editor.org/rfc/rfc3490.txt
+</dd><dt class="label"><a id="UTF8" name="UTF8" />RFC3629</dt><dd>
+<a href="http://www.rfc-editor.org/rfc/rfc3629.txt"><cite>RFC 3629: UTF-8, a transformation format of ISO 10646</cite></a>,
+F. Yergeau, ed.
+IETF (Internet Engineering Task Force),
+November 2003.
+Available at http://www.rfc-editor.org/rfc/rfc3629.txt
+</dd><dt class="label"><a id="XML" name="XML" />XML</dt><dd>
+<a href="http://www.w3.org/TR/REC-xml"><cite>Extensible Markup Language
+(XML) 1.0 (Third Edition)</cite></a>, Tim Bray, Jean
+Paoli, C. M. Sperberg-McQueen, Eve Maler, and François Yergeau eds.
+W3C (World Wide Web Consortium),
+4 February 2004.
+Available at
+http://www.w3.org/TR/REC-xml.
+</dd><dt class="label"><a id="XML11" name="XML11" />XML 1.1</dt><dd>
+<a href="http://www.w3.org/TR/xml11"><cite>Extensible Markup Language
+(XML) 1.1</cite></a>,
+Tim Bray, Jean Paoli, C. M. Sperberg-McQueen, Eve Maler, and John Cowan eds.
+W3C (World Wide Web Consortium),
+4 February 2004.
+Available at
+http://www.w3.org/TR/xml11.
+</dd></dl></div><div class="div1">
+<h2><a id="nrefs" name="nrefs" />B Altri riferimenti (Non-Normativi)</h2><dl><dt class="label"><a id="IRIdraft3" name="IRIdraft3" />IRI draft 3</dt><dd>
+<a href="http://www.w3.org/International/iri-edit/draft-duerst-iri-03.txt"><cite>Internationalized Resource Identifiers (IRIs)</cite></a>,
+M. Duerst and M. Suignard eds.
+March 2, 2003.
+Available at 
+http://www.w3.org/International/iri-edit/draft-duerst-iri-03.txt.
+</dd><dt class="label"><a id="IRIdraft5" name="IRIdraft5" />IRI draft 5</dt><dd>
+<a href="http://www.w3.org/International/iri-edit/draft-duerst-iri-05.txt"><cite>Internationalized Resource Identifiers (IRIs)</cite></a>,
+M. Duerst and M. Suignard eds.
+October 26, 2003.
+Available at 
+http://www.w3.org/International/iri-edit/draft-duerst-iri-05.txt.
+</dd><dt class="label"><a id="errata10" name="errata10" />1.0 Errata</dt><dd>
+<a href="http://www.w3.org/XML/xml-names-19990114-errata"><cite>Namespaces in XML Errata</cite></a>.
+W3C (World Wide Web Consortium).
+Available at
+http://www.w3.org/XML/xml-names-19990114-errata.
+</dd><dt class="label"><a id="reluri" name="reluri" />Relative URI deprecation</dt><dd>
+<a href="http://www.w3.org/2000/09/xppa"><cite>
+Results of W3C XML Plenary
+Ballot on relative URI References
+In namespace declarations
+3-17 July 2000</cite></a>,
+Dave Hollander and
+C. M. Sperberg-McQueen,
+6 September 2000.
+Available at
+http://www.w3.org/2000/09/xppa.
+</dd><dt class="label"><a id="req11" name="req11" />Requirements</dt><dd>
+<a href="http://www.w3.org/TR/2002/WD-xml-names11-req-20020403/"><cite>Namespaces in XML 1.1 Requirements</cite></a>,
+Jonathan Marsh, ed.
+W3C (World Wide Web Consortium),
+March 2002.
+Available at
+http://www.w3.org/TR/2002/WD-xml-names11-req-20020403/.
+</dd></dl></div><div class="div1">
+<h2><a id="Philosophy" name="Philosophy" />C La struttura interna del spazio dei nomi XML (Non-Normativi)</h2><p>
+Quest'appendice è stata cancellata.
+</p></div><div class="div1">
+<h2><a id="changes" name="changes" />D I cambiamenti dalla versione 1.0 (Non-Normativi)</h2><p>
+Questa versione incorpora le correzioni d'errore della versione 1.0 dal 6 dicembre 2002
+<a href="#errata10">[1.0 Errata]</a>.  Due cambiamenti importanti vengono ad aggiungersi:
+</p><ul><li><p>Un meccanismo è fornito per eliminare la dichiarazione di prefissi;</p></li><li><p>I nomi del spazio dei nomi sono indirizzi IRI invece di essere indirizzi URI.</p></li></ul><p>
+Ci
+sono molti cambiamenti redazionali, compreso un certo numero di cambiamenti alla
+terminologia e di aggiunte intese a migliorare la coerenza. L'appendice
+non-normativo “La struttura interna del spazio dei nomi XML.” è stato tolto
+</p></div><div class="div1">
+<h2><a id="sec-xml-and-sgml" name="sec-xml-and-sgml" />E Ringraziamenti(Non-Normativi)</h2><p>Questo
+lavoro riflette la collaborazione di molte persone, che comprende in
+particolare i partecipanti del World Wide Web Consortium XML Working Group e il
+Special Interest Group ed i partecipanti nel W3C Metadata Activity. I
+contributi di Charles Frankston di Microsoft sono stati di valore particolare.</p></div></div></body></html>

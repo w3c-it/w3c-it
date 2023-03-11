@@ -1,0 +1,1158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>L'interfaccia del MathML</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="interf"></a>7 L'interfaccia del MathML</h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  Marcatura Matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 6 <a href="chapter6.html">Caratteri, entit&agrave; e
+  font</a>
+<br>
+  Successivo: 8 <a href="chapter8.html">Modello a oggetti dei
+  documenti per il MathML</a>
+<br>
+  &nbsp;<br>7 <a href="chapter7.html">L'interfaccia del MathML</a>
+<br>7.1 <a href="chapter7.html#interf:embed">Incorporare il MathML in
+altri documenti</a>
+<br>&nbsp;&nbsp;&nbsp;7.1.1 <a
+href="chapter7.html#interf:namespace">Il MathML e gli spazi di
+nomi</a>
+<br>&nbsp;&nbsp;&nbsp;7.1.2 <a href="chapter7.html#N36835">L'elemento
+<code>math</code> di livello principale</a>
+<br>&nbsp;&nbsp;&nbsp;7.1.3 <a href="chapter7.html#N37086">Invocare
+gli elaboratori del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;7.1.4 <a
+href="chapter7.html#interf:link">Mescolare e collegare il MathML e
+l'HTML</a>
+<br>7.2 <a href="chapter7.html#interf:genproc">Generare, elaborare ed
+interpretare il MathML</a>
+<br>&nbsp;&nbsp;&nbsp;7.2.1 <a
+href="chapter7.html#N37327">Conformit&agrave; al MathML</a>
+<br>&nbsp;&nbsp;&nbsp;7.2.2 <a
+href="chapter7.html#interf:error">Gestione degli errori</a>
+<br>&nbsp;&nbsp;&nbsp;7.2.3 <a
+href="chapter7.html#interf:unspecified">Attributi per dati non
+specificati</a>
+<br>7.3 <a href="chapter7.html#interf:future">Estensioni future</a>
+<br>&nbsp;&nbsp;&nbsp;7.3.1 <a href="chapter7.html#N37562">Macro e
+fogli di stile</a>
+<br>&nbsp;&nbsp;&nbsp;7.3.2 <a href="chapter7.html#N37628">Estensioni
+XML al MathML</a>
+<br>
+</p>
+
+<p>Per essere efficace, il MathML deve funzionare bene con un'ampia
+variet&agrave; di interpreti, elaboratori, traduttori e programmi di
+scrittura. Questo capitolo copre alcuni dei problemi di interfaccia
+coinvolti nel generare e riprodurre il MathML. Poich&eacute; il MathML
+esiste principalmente per codificare la matematica nei documenti Web,
+forse i problemi di interfaccia pi&ugrave; importanti sono legati ad
+incorporare il MathML nell'HTML [<a
+href="appendixi.html#HTML4.0">HTML4.0</a>] e nell'XHTML [<a
+href="appendixi.html#XHTML1.0">XHTML1.0</a>] e [<a
+href="appendixi.html#XHTML1.1">XHTML1.1</a>]. </p>
+
+<p>Ci sono tre tipi di problemi di interfaccia che sorgono
+nell'incorporare il MathML in altri documenti XML. Primo, il MathML
+deve essere semanticamente integrato. La marcatura del MathML deve
+essere riconosciuta come contenuto XML incorporato valido, e non come
+un errore. Questa &egrave; soprattutto una questione di gestire gli
+spazi di nomi nell'XML [<a
+href="appendixi.html#Namespaces">Namespaces</a>]. </p>
+
+<p>Secondo, nel caso dell'HTML/XHTML, la riproduzione del MathML deve
+essere integrata nel browser. Alcuni browser implementano gi&agrave;
+la riproduzione del MathML in modo nativo, e ci si pu&ograve;
+aspettare che pi&ugrave; browser lo faranno in futuro. Al tempo
+stesso, altri browser hanno sviluppato infrastrutture per facilitare
+la riproduzione del MathML e altro contenuto XML incorporato da
+software di terzi. Usare questi meccanismi dipendenti dal browser
+richiede generalmente un po' di marcatura di interfaccia aggiuntiva di
+qualche tipo perch&eacute; si attivino. </p>
+
+<p>Terzo, altri strumenti per generare ed elaborare il MathML devono
+poter intercomunicare. Sono stati sviluppati o sono in fase di
+sviluppo vari strumenti per il MathML, compresi programmi di
+scrittura, traduttori, sistemi di computer algebra e altro software
+scientifico. Comunque, poich&eacute; le espressioni MathML tendono ad
+essere lunghe, ed &egrave; facile sbagliare se si inseriscono a mano,
+deve essere data un'enfasi speciale ad assicurare che il MathML possa
+essere facilmente generato da strumenti di conversione e di creazione
+amichevoli, e che questi strumenti lavorino insieme in un modo
+affidabile e indipendente dal produttore e dalla piattaforma. </p>
+
+<p>Il gruppo di lavoro per la Matematica del W3C fornisce supporto ai
+produttori di software che vogliano sviluppare strumenti per il MathML
+di ogni tipo. Il gruppo di lavoro tiene d'occhio la mailing list
+pubblica <a href="mailto:www-math@w3.org">www-math@w3.org</a> e
+cercher&agrave; di rispondere a domande sulle specifiche MathML. Il
+gruppo di lavoro collabora con gruppi di sviluppatori e utenti
+MathML. Per informazioni su strumenti MathML, applicazioni e
+attivit&agrave; di supporto agli utenti, si consulti la <a
+href="http://www.w3.org/Math/">pagina principale del Gruppo di Lavoro
+per la Matematica del W3C</a>. </p>
+
+<h2>
+<a name="interf:embed"></a>7.1 Incorporare il MathML in altri documenti</h2>
+
+<p>Sebbene il MathML si possa usare da solo come linguaggio per
+scambiare espressioni matematiche tra applicazioni compatibili con il
+MathML, l'uso primario anticipato del MathML &egrave; codificare
+espressioni matematiche all'interno di documenti pi&ugrave; grandi. Il
+MathML &egrave; ideale per incorporare espressioni matematiche in
+altre applicazioni dell'XML. </p>
+
+<p>In particolare, ci concentriamo qui sulla meccanica di incorporare
+il MathML nell'XHTML. L'XHTML [<a
+href="appendixi.html#XHTML1.0">XHTML1.0</a>] &egrave; una Direttiva
+del W3C pubblicata di recente che formula una famiglia di attuali e
+futuri tipi di documento basati sull'XML e moduli che riproducono,
+specializzano ed estendono l'HTML 4. Sebbene l'HTML 4 [<a
+href="appendixi.html#HTML4.0">HTML4.0</a>] sia il linguaggio dominante
+sul Web attualmente, si pu&ograve; anticipare uno spostamento
+dall'HTML 4 all'XHTML. In realt&agrave;, l'XHTML viene gi&agrave;
+riprodotto correttamente negli interpreti per l'HTML 4. </p>
+
+<p>Poich&eacute; il MathML e l'XHTML condividono un modello XML
+comune, gli spazi di nomi forniscono un meccanismo standard per
+incorporare il MathML nell'XHTML. Sebbene alcuni interpreti HTML
+popolari supportino anche l'inclusione del MathML direttamente
+nell'HTML 4 come &quot;isole di dati XML&quot;, il punto di vista che
+adottiamo qui &egrave; che questa &egrave; una strategia transitoria,
+e non la portiamo avanti. Si consulti la documentazione del proprio
+interprete HTML per informazioni specifiche sul supporto per
+incorporare l'XML nell'HTML. </p>
+
+<h3>
+<a name="interf:namespace"></a>7.1.1 Il MathML e gli spazi di nomi</h3>
+
+<p>Incorporare il MathML in documenti basati sull'XML in generale, e
+sull'XHTML in particolare, &egrave; una questione di gestione degli
+spazi di nomi. Si veda la Direttiva del W3C &quot;Spazi di nomi
+nell'XML&quot; [<a href="appendixi.html#Namespaces">Namespaces</a>]
+per maggiori dettagli. </p>
+
+<p>Uno spazio di nomi XML &egrave; una collezione di nomi identificata
+da una risorsa URI. L'URI dello spazio di nomi MathML &egrave;:
+
+<pre>
+http://www.w3.org/1998/Math/MathML
+</pre>
+
+<p>Usando gli spazi di nomi, incorporare un'espressione MathML in un
+documento XML pi&ugrave; grande &egrave; puramente una questione di
+identificare la marcatura MathML come residente nello spazio di nomi
+del MathML. Questo pu&ograve; essere fatto sia identificando
+esplicitamente ogni nome di elemento MathML allegando ad esso un
+prefisso dello spazio di nomi, che dichiarando uno spazio di nomi
+predefinito su un elemento che lo include. </p>
+
+<p>Per dichiarare uno spazio di nomi si usa un attributo
+<code>xmlns</code>, o un attributo con un prefisso
+<code>xmlns</code>. Quando si usa l'attributo <code>xmlns</code> da
+solo, definisce lo spazio di nomi per l'elemento sul quale appare, e
+per ogni elemento figlio. </p>
+
+<p>Esempio:</p>
+
+<pre>
+&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;
+&lt;mrow&gt;...&lt;/mrow&gt;
+&lt;/math&gt;
+</pre>
+
+<p>Quando l'attributo <code>xmlns</code> &egrave; usato come prefisso,
+dichiara un prefisso che pu&ograve; poi essere usato per associare
+esplicitamente altri elementi ed attributi con uno spazio di nomi
+particolare. </p>
+
+<p>Esempio:</p>
+
+<pre>
+&lt;body xmlns:m=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;
+...
+&lt;m:math&gt;&lt;m:mrow&gt;...&lt;/m:mrow&gt;&lt;/m:math&gt;
+...
+&lt;/body&gt;
+</pre>
+
+<p>Questi due metodi di dichiarazione degli spazi di nomi possono
+essere usati insieme. Per esempio, usando sia un prefisso di spazio di
+nomi esplicito esteso a tutto il documento che dichiarazioni di spazi
+di nomi predefiniti sui singoli elementi math, &egrave; possibile
+localizzare la marcatura relativa agli spazi di nomi all'elemento
+<code>math</code> di livello principale. Questo &egrave; importante
+anche per l'implementazione con alcuni interpreti HTML, poich&eacute;
+allegare i comportamenti di riproduzione ad un elemento attualmente
+richiede un prefisso di spazio di nomi esplicito per questi
+browser. Allo stesso tempo, vari strumenti di scrittura MathML non
+riconoscono ancora gli spazi di nomi, e per questo la
+possibilit&agrave; di usare marcatura senza prefissi &egrave;
+altrettanto desiderabile a breve termine. </p>
+
+<p>Esempio:</p>
+
+<pre>
+&lt;body xmlns:m=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;
+...
+&lt;m:math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;
+&lt;mrow&gt;...&lt;mrow&gt;
+&lt;/m:math&gt;
+...
+&lt;/body&gt;
+</pre>
+
+<h4>
+<a name="interf:validation"></a>7.1.1.1 Problemi di convalida dei
+documenti </h4>
+
+<p>L'uso dei prefissi degli spazi di nomi crea un problema per la
+convalida DTD dei documenti che incorporano il MathML. La convalida
+DTD richiede la conoscenza dei nomi letterali (eventualmente prefissi)
+degli elementi usati nel documento. Comunque, gli spazi di nomi nella
+Direttiva XML [<a href="appendixi.html#Namespaces">Namespaces</a>]
+permettono che i prefissi siano cambiati in punti arbitrari nel
+documento, poich&eacute; i prefissi degli spazi di nomi possono essere
+dichiarati su ogni elemento. </p>
+
+<p>Il metodo `storico' per superare questo divario era scrivere una
+DTD con un prefisso fissato, o nel caso dell'XHTML e del MathML senza
+prefisso, e richiedere che la forma specificata dovesse essere usata
+in tutto il documento. Comunque, ci&ograve; &egrave; piuttosto
+restrittivo per una DTD modulare che &egrave; pensata per l'uso in
+congiunzione con un'altra DTD, che &egrave; esattamente la situazione
+del MathML nell'XHTML. In sostanza, la DTD del MathML dovrebbe
+`allocare' un prefisso per se stessa e sperare che nessun altro modulo
+usi lo stesso prefisso per evitare collisioni di nome, perdendo
+cos&igrave; uno dei principali vantaggi degli spazi di nomi
+dell'XML. </p>
+
+<p>Una strategia per risolvere questo problema &egrave; far s&igrave;
+che ad ogni nome di elemento della DTD si possa accedere tramite un
+riferimento ad entit&agrave;. Questo vuol dire che dichiarando un paio
+di entit&agrave; per specificare il prefisso prima che la DTD sia
+caricata, il prefisso pu&ograve; essere scelto dall'autore di un
+documento, e DTD composte che includono pi&ugrave; moduli possono,
+senza cambiare le DTD dei moduli, specificare prefissi unici per
+ciascun modulo per evitare collisioni. La DTD del MathML &egrave;
+stata progettata in questo modo. Si veda la <a
+href="appendixa.html#parsing:dtd">Sezione&nbsp;A.1 [La DTD del
+MathML]</a>, [<a
+href="appendixi.html#Modularization">Modularization</a>] e [<a
+href="appendixi.html#Building">Building</a>] per dettagli. </p>
+
+<p>Un altro problema nasce nel caso che si usino prefissi espliciti
+sull'elemento math di livello principale, mentre per altri elementi
+MathML si usa uno spazio di nomi predefinito. In questo caso si vuole
+che il modulo MathML sia incluso nell'XHTML con il prefisso
+vuoto. Comunque, il file `driver' DTD che definisce l'inclusione del
+modulo MathML avrebbe bisogno allora di definire un nuovo elemento di
+nome m:math. Questo permetterebbe all'elemento math di livello
+principale di usare un prefisso esplicito, per includere comportamenti
+di riproduzione nei browser attuali, mentre il contenuto non avrebbe
+bisogno di un prefisso esplicito, per facilit&agrave; di
+interoperabilit&agrave; tra strumenti di scrittura, ecc. </p>
+
+<h4>
+<a name="interf:compatibility"></a>7.1.1.2 Suggerimenti per la
+compatibilit&agrave;</h4>
+
+<p>Sebbene l'uso degli spazi di nomi per includere il MathML in altre
+applicazioni XML sia completamente descritto dalle rilevanti direttive
+del W3C, si richiede ancora un certo grado di pragmatismo
+attualmente. Il supporto per l'XML, gli spazi di nomi e i
+comportamenti di riproduzione negli interpreti HTML popolari non
+&egrave; sempre pienamente allineato con le Direttive del W3C. In
+alcuni casi il software precede lo standard rilevante, e in altri casi
+gli standard rilevanti non sono ancora completi. </p>
+
+<p>Durante il periodo transitorio in cui qualche prodotto software
+pu&ograve; non essere pienamente compatibile con gli spazi di nomi,
+alcune pratiche convenzionali potranno semplificare i problemi di
+compatibilit&agrave;. Dopo aver visionato un certo numero di
+interpreti HTML e altre applicazioni software compatibili con il
+MathML, offriamo i seguenti suggerimenti.
+
+</p>
+<ol>
+<li>Se usate i prefissi degli spazi di nomi con la marcatura MathML,
+usate m: come prefisso convenzionale per lo spazio di nomi del
+MathML. Usare un prefisso esplicito &egrave; probabilmente pi&ugrave;
+sicuro per la compatibilit&agrave; negli interpreti HTML attuali.
+</li>
+
+<li>Se usate i prefissi degli spazi di nomi, sceglietene uno ed
+usatelo in modo coerente all'interno di un documento.
+</li>
+
+<li>Dichiarate esplicitamente lo spazio di nomi del MathML su ogni
+elemento <code>math</code>.
+</li> </ol>
+<p>
+</p>
+
+<p>Esempi. </p>
+
+<pre>
+&lt;body&gt;
+...
+&lt;m:math xmlns:m=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;
+&lt;m:mrow&gt;...&lt;m:mrow&gt;
+&lt;/m:math&gt;
+...
+&lt;/body&gt;
+</pre>
+
+<p>Oppure</p>
+<pre>
+&lt;body&gt;
+...
+&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;
+&lt;mrow&gt;...&lt;mrow&gt;
+&lt;/math&gt;
+...
+&lt;/body&gt;
+</pre>
+
+<p>Si noti che questi suggerimenti da soli possono non essere
+sufficienti per creare pagine Web funzionali che contengono marcatura
+MathML. Sar&agrave; generalmente il caso che si render&agrave;
+necessaria della marcatura aggiuntiva estesa a tutto il
+documento. Pu&ograve; essere necessario anche ulteriore lavoro per
+rendere tutte le istanze MathML in un documento compatibili con le
+dichiarazioni estese al documento. Questo &egrave; particolarmente
+vero quando i documenti sono creati tagliando e incollando espressioni
+MathML, poich&eacute; i programmi attuali non saranno probabilmente in
+grado di chiedere informazioni sullo spazio di nomi globale. </p>
+
+<p>Si consulti la pagina principale del <a
+href="http://www.w3.org/Math">Gruppo di Lavoro per la Matematica del
+W3C</a> per consigli sulla compatibilit&agrave; e sulle
+implementazioni per browser attuali e altri strumenti che lavorino con
+il MathML.</p>
+
+<h3>
+<a name="N36835"></a>7.1.2 L'elemento <code>math</code> di livello
+principale </h3>
+
+<p>Il MathML specifica un singolo elemento <code>math</code> di
+livello principale o radice, che incapsula ogni istanza della
+marcatura MathML all'interno di un documento. Ogni altro contenuto
+MathML deve essere all'interno di un elemento <code>math</code>;
+equivalentemente, ogni espressione MathML valida e completa deve
+essere contenuta nei tag <code>&lt;math&gt;</code>. L'elemento
+<code>math</code> deve essere sempre l'elemento pi&ugrave; esterno in
+un'espressione MathML; &egrave; un errore che un elemento
+<code>math</code> ne contenga un altro. </p>
+
+<p>Applicazioni che restituiscono sottoespressioni di altre
+espressioni MathML, per esempio come risultato di un'operazione di
+copia e incolla, dovrebbero sempre includerle in una coppia di tag
+<code>&lt;math&gt;</code>. Idealmente, la presenza di tag
+<code>&lt;math&gt;</code> di apertura e chiusura dovrebbe essere
+un'ottima prova euristica per il contenuto MathML. In modo simile,
+applicazioni che inseriscono espressioni MathML in altre espressioni
+MathML devono preoccuparsi di rimuovere i tag
+<code>&lt;math&gt;</code> dalle espressioni interne. </p>
+
+<p>L'elemento <code>math</code> pu&ograve; contenere un numero
+arbitrario di schemi figli. Gli schemi figli sono riprodotti in modo
+predefinito come se fossero contenuti in un elemento
+<code>mrow</code>. </p>
+
+<p>Gli attributi dell'elemento <code>math</code> sono:
+</p>
+<dl>
+<dt>
+<b>class, id, style</b>
+</dt>
+<dd>Forniti per compatibilit&agrave; con i fogli di stile e il
+DOM. </dd>
+
+<dt>
+<b>macros</b>
+</dt>
+<dd>Questo attributo fornisce un modo di fare riferimento a file
+esterni di definizione di macro. Le macro non sono parte delle
+specifiche MathML, e gran parte della funzionalit&agrave; offerta
+dalle macro in MathML pu&ograve; essere fornita dalle trasformazioni
+XSL [<a href="appendixi.html#XSLT">XSLT</a>]. Comunque, l'attributo
+<code>macros</code> &egrave; fornito per rendere possibili sviluppi
+futuri di meccanismi di macro pi&ugrave; dinamici e specifici del
+MathML. Il valore di quest'attributo &egrave; una sequenza di URL o
+URI, separati da spazi bianchi. </dd>
+
+<dt>
+<b>mode</b>
+</dt>
+<dd>L'attributo <code>mode</code> specifica se l'espressione MathML
+inclusa deve essere presentata in stile visuale o in stile in
+linea. Valori permessi sono <code>display</code> e <code>inline</code>
+(predefinito). Questo attributo &egrave; <a
+href="chapter7.html#interf:deprec">disapprovato</a> in favore del
+nuovo attributo <code>display</code>, o della propriet&agrave;
+standard <a
+href="http://www.w3.org/TR/CSS2/visuren.html#propdef-display">dei CSS2
+`display'</a> con gli analoghi valori <code>block</code> e
+<code>inline</code>. </dd>
+
+<dt>
+<b>display</b>
+</dt>
+<dd>L'attributo <code>display</code> sostituisce l'elemento
+<code>mode</code>, disapprovato. Specifica se l'espressione MathML
+inclusa deve essere presentata in stile visuale o in stile in
+linea. Valori permessi sono <code>block</code> e <code>inline</code>
+(predefinito).
+</dd>
+
+</dl>
+<p>
+</p>
+
+<p>Gli attributi dell'elemento <code>math</code> hanno effetto
+sull'intera espressione inclusa. Sono, in un certo senso, `orientati
+all'interno'. Comunque, per presentare nel modo giusto il MathML in un
+browser e per integrarlo nel modo giusto in un documento XHTML,
+&egrave; utile anche una seconda collezione di attributi `orientati
+all'esterno'. </p>
+
+<p>Sebbene meccanismi generali per allegare comportamenti di
+presentazione agli elementi nei documenti XML siano in fase di
+sviluppo, restano ampie variazioni nella strategia e nel livello di
+implementazione tra i vari interpreti HTML esistenti. Di conseguenza,
+il resto di questa sezione descrive attributi e funzionalit&agrave;
+desiderabili per integrare moduli di visualizzazione prodotti da terzi
+con interpreti HTML:
+
+</p>
+<dl>
+<dt>
+<b>overflow</b>
+</dt> <dd>In caso che la negoziazione della dimensione non sia
+possibile o fallisca (per esempio nel caso di un'equazione
+estremamente lunga), questo attributo &egrave; fornito per suggerire
+un metodo di elaborazione alternativo all'interprete. Valori permessi
+sono <dl>
+<dt>
+<b>scroll</b>
+</dt> <dd>La finestra fornisce un obl&ograve; nel display completo
+pi&ugrave; grande dell'espressione matematica. Sono aggiunte alla
+finestra barre di scorrimento orizzontali o verticali come necessario
+per permettere che l'obl&ograve; possa essere mosso in una posizione
+diversa. </dd> 
+
+<dt>
+<b>elide</b>
+</dt>
+<dd>La visualizzazione &egrave; abbreviata rimuovendone abbastanza in
+modo che il resto possa entrare nella finestra. Per esempio, un
+polinomio lungo potrebbe avere visualizzati il primo e l'ultimo
+termine con `+ ...  +' tra di essi. Visualizzatori avanzati possono
+fornire una facilit&agrave; per zumare nelle aree elise. </dd>
+
+<dt>
+<b>truncate</b>
+</dt>
+<dd>La visualizzazione &egrave; abbreviata semplicemente troncandola
+ai margini destro e inferiore. Si raccomanda che sia data qualche
+indicazione del troncamento al lettore. </dd>
+
+<dt>
+<b>scale</b>
+</dt>
+<dd>I font usati per visualizzare l'espressione matematica sono scelti
+in modo che l'intera espressione entri nella finestra. Si noti che
+questo succede solo se l'espressione &egrave; troppo larga. Nel caso
+di una finestra pi&ugrave; larga del necessario, l'espressione
+&egrave; mostrata alla sua dimensione normale nella finestra
+pi&ugrave; grande. </dd>
+
+</dl>
+
+</dd>
+
+<dt>
+<b>altimg</b>
+</dt>
+<dd>Questo attributo fornisce un'elegante soluzione di riserva per i
+browser che non supportano gli elementi incorporati. Il valore
+dell'attributo &egrave; un URL. </dd>
+
+<dt>
+<b>alttext</b>
+</dt>
+<dd>Questo attributo fornisce un'elegante soluzione di riserva per i
+browser che non supportano gli elementi incorporati o le immagini. Il
+valore dell'attributo &egrave; una stringa di testo. </dd>
+
+</dl>
+<p>
+</p>
+
+<h3>
+<a name="N37086"></a>7.1.3 Invocare gli elaboratori del MathML</h3>
+
+<p>Nei browser dove il MathML non &egrave; supportato in modo nativo,
+anticipiamo che la riproduzione del MathML sar&agrave; eseguita
+tramite oggetti incorporati come plug-in, applet o applicazioni di
+aiuto. La direzione che &egrave; cominciata ad emergere per invocare
+software di presentazione ed elaborazione prodotto da terzi &egrave;
+illustrata nella Bozza di Lavoro del W3C &quot;Estensioni di
+comportamento ai CSS&quot; [<a
+href="appendixi.html#Behaviors">Behaviors</a>]. </p>
+
+<p>Le estensioni di comportamento usano i meccanismi di collegamento
+dei CSS per allegare componenti eseguibili agli elementi. Tipicamente,
+i componenti eseguibili coinvolgono codice script che manipola il DOM
+per instanziare altri componenti di elaborazione del MathML. Usando
+implementazioni sperimentali per estensioni di comportamento negli
+interpreti HTML attuali, &egrave; possibile allegare componenti di
+elaborazione agli elementi <code>math</code> che usano applet o
+plug-in per riprodurre la marcatura MathML in una pagina XHTML. </p>
+
+<p>Al W3C si sta svolgendo un lavoro sulle estensioni al comportamento
+dei CSS, e implementazioni esistenti devono essere considerate come
+sperimentali attualmente. Comunque, questo offre una direzione molto
+promettente per invocazioni potenti e flessibili di elaboratori di
+MathML prodotti da terzi. </p>
+
+<p>I tipi MIME offrono una strategia alternativa che pu&ograve; essere
+usata anche negli interpreti HTML attuali per invocare un riproduttore
+per il MathML. Questo &egrave; principalmente utile quando si fa
+riferimento a file separati che contengono marcatura MathML
+proveniente da un elemento <code>EMBED</code> o
+<code>OBJECT</code>. Il Gruppo di Lavoro per la Matematica del W3C
+suggerisce che al MathML generico sia assegnato il tipo MIME
+<code>text/x-mathml</code>, e per il registry dei browser, suggeriamo
+di usare l'estensione standard <code>.mml</code>. In MathML 1.0 come
+tipo MIME suggerito era stato dato il tipo
+<code>text/mathml</code>. Comunque, l'assegnazione di tipi MIME ad
+applicazioni XML &egrave; un argomento venuto in discussione nel
+frattempo. Perci&ograve;, a cominciare dal MathML 2.0, suggeriamo di
+usare invece il tipo MIME sperimentale e meno regolato
+<code>text/x-mathml</code>. </p>
+
+<p>Anche se la riproduzione delle espressioni MathML tipicamente
+avviene localmente in un browser, altre funzioni di elaborazione del
+MathML avvengono in modo pi&ugrave; naturale in altre
+applicazioni. Compiti particolarmente comuni includono l'apertura di
+un'espressione MathML in un programma di scrittura di equazioni o in
+un sistema di computer algebra. </p>
+
+<p>Attualmente, non c'&egrave; un modo standard di scegliere tra varie
+applicazioni che possono essere usate per riprodurre o elaborare il
+MathML incorporato. Come il lavoro procede riguardo al coordinamento
+tra browser ed elementi incorporati e il Modello a Oggetti dei
+Documenti [<a href="appendixi.html#DOM">DOM</a>], fornire questo tipo
+di funzionalit&agrave; dovrebbe essere una priorit&agrave;. Sia gli
+autori che i lettori dovrebbero essere in grado di indicare una
+preferenza su quale applicazione MathML usare in un dato contesto. Per
+esempio, si potrebbe immaginare che una qualche azione del mouse su
+un'espressione MathML faccia s&igrave; che un browser presenti al
+lettore un menu, mostrando i vari tipi di elaborazione MathML
+disponibili sul sistema e gli elaboratori MathML raccomandati
+dall'autore. </p>
+
+<p>Poich&eacute; il MathML spesso &egrave; generato da strumenti di
+scrittura, &egrave; particolarmente importante che aprire
+un'espressione MathML in un programma di scrittura sia facile da fare
+e da implementare. In molti casi, sar&agrave; desiderabile che uno
+strumento di scrittura registri alcune informazioni sul suo stato
+interno insieme a un'espressione MathML, in modo che un autore possa
+ripartire a scrivere da dove era rimasto. Le specifiche MathML non
+contengono esplicitamente un modo per registrare informazioni sullo
+strumento di scrittura. In alcune circostanze, pu&ograve; essere
+possibile includere informazioni sul programma di scrittura che si
+applicano a un intero documento nella forma di meta-dati; lettori
+interessati sono incoraggiati a consultare l'Attivit&agrave; sui
+Meta-dati del W3C per informazioni attuali sui meta-dati e sulla
+definizione di risorse. Per codificare informazioni di stato sui
+programmi di scrittura che si applicano ad una particolare istanza
+MathML, i lettori possono riferirsi al possibile uso dell'elemento
+<code>semantics</code> per questo fine. </p>
+
+<p>A breve termine, senza tener conto della metodologia, gli
+implementatori di applicazioni che elaborano il MathML incorporato
+sono incoraggiati a cercare di permettere i seguenti tipi di
+funzionalit&agrave;:
+
+</p>
+<ul>
+<li>Un autore che vuole raggiungere un pubblico pi&ugrave; vasto
+possibile pu&ograve; volere che il MathML sia visualizzato da ogni
+elaboratore disponibile.
+</li>
+
+<li>Un autore che si rivolge a un pubblico specifico pu&ograve; voler
+indicare che sia usato un elaboratore MathML particolare.
+</li>
+
+<li>Un lettore pu&ograve; voler specificare quale dei vari elaboratori
+disponibili installati localmente deve essere usato.
+</li>
+</ul>
+<p>
+</p>
+
+<h3>
+<a name="interf:link"></a>7.1.4 Mescolare e collegare il MathML e
+l'HTML </h3>
+
+<p>Perch&eacute; sia pienamente integrato nell'XHTML, deve essere
+possibile non solo incorporare il MathML nell'XHTML, ma anche
+incorporare l'XHTML nel MathML. Comunque, il problema di supportare
+l'XHTML nel MathML presenta molte difficolt&agrave;. In pi&ugrave;, i
+problemi non sono specifici del MathML; sono problemi delle
+applicazioni XML nell'XHTML in generale. Perci&ograve;, attualmente,
+le specifiche MathML non permettono nessun elemento XHTML all'interno
+di un'espressione MathML, nonostante questo possa essere soggetto a
+cambiamenti in una revisione futura del MathML. </p>
+
+<p>Nella maggior parte dei casi, o gli elementi XHTML non si applicano
+in un contesto matematico (intestazioni, paragrafi, liste, ecc.) o il
+MathML fornisce gi&agrave; funzionalit&agrave; equivalenti o migliori,
+disegnate specificamente per il contenuto matematico (tabelle,
+cambiamenti di stile, ecc.). Comunque, ci sono due eccezioni
+notevoli. </p>
+
+<h4>
+<a name="N37178"></a>7.1.4.1 I link</h4>
+
+<p>Il MathML non ha un elemento che corrisponde all'elemento ancora
+<i>a</i> dell'XHTML. In XHTML le ancore si usano sia per creare
+collegamenti che per fornire locazioni alle quali i collegamenti
+possono essere creati. Il MathML, come applicazione XML, definisce i
+link usando il meccanismo descritto nella Bozza di Lavoro del W3C
+&quot;Il linguaggio di collegamento XML&quot; [<a
+href="appendixi.html#XLink">XLink</a>]. Il lettore tenga presente che
+questa &egrave; attualmente ancora una bozza di lavoro, ed &egrave;
+perci&ograve; soggetta a future revisioni. Poich&eacute; il meccanismo
+di link del MathML &egrave; definito in termini della specifica di
+link dell'XML, lo stesso avviso vale anche per questo. </p>
+
+<p>Un elemento MathML &egrave; identificato come link dalla presenza
+dell'attributo <code>xlink:href</code>. Per usare l'attributo
+<code>xlink:href</code> &egrave; inoltre necessario dichiarare lo
+spazio di nomi appropriato. Perci&ograve; un tipico link MathML
+pu&ograve; avere quest'aspetto:
+</p>
+<pre>
+&lt;mrow xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+      xlink:href=&quot;sample.xml&quot;&gt;
+  ...
+&lt;/mrow&gt;
+</pre>
+<p>
+</p>
+<p>Il MathML prevede che quasi tutti gli elementi possano essere usati
+come elementi di link dell'XML. Gli unici elementi che non possono
+essere usati come elementi di link sono quelli come l'elemento
+<code>sep</code>, che esiste principalmente per eliminare
+l'ambiguit&agrave; in altri costrutti MathML e che in generale non
+corrisponde a nessuna parte di una visualizzazione tipica. La lista
+completa degli elementi che fanno eccezione e non possono essere usati
+come elementi di link &egrave; data nella seguente tabella. </p>
+<table width="75%" cellpadding="3">
+<caption>Elementi MathML che non possono essere elementi di link. </caption>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1"><code>mprescripts</code></td>
+<td rowspan="1" colspan="1"><code>none</code></td>
+<td rowspan="1" colspan="1"><code>sep</code></td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1"><code>malignmark</code></td>
+<td rowspan="1" colspan="1"><code>maligngroup</code></td>
+<td rowspan="1" colspan="1">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>
+</p>
+
+<p>Si noti che anche le specifiche dei collegamenti in XML [<a
+href="appendixi.html#XLink">XLink</a>] e del linguaggio dei puntatori
+in XML [<a href="appendixi.html#XPointer">XPointer</a>] definiscono
+come mettere un link <i>all'interno</i> di un'espressione MathML. Si
+tenga presente, comunque, che tali link possono o meno essere
+interpretati correttamente nel software attuale. </p>
+
+<h4>
+<a name="N37282"></a>7.1.4.2 Le immagini </h4>
+
+<p>L'elemento <code>IMG</code> non ha un equivalente in MathML. La
+decisione di omettere un meccanismo generale per l'inclusione delle
+immagini nel MathML &egrave; stata basata su diversi
+fattori. Comunque, la ragione principale per non aver fornito un modo
+per includere immagini &egrave; che il MathML deve rendere la
+struttura notazionale e il contenuto matematico che codifica
+facilmente disponibile agli elaboratori, mentre le informazioni
+contenute in immagini sono disponibili solo ad un lettore umano che
+guarda una loro rappresentazione visuale. Perci&ograve;, ad esempio,
+nel paradigma MathML, sarebbe preferibile introdurre nuovi glifi
+tramite l'elemento <code>mglyph</code> che come minimo li identifica
+come glifi, piuttosto che includerli semplicemente come immagini. </p>
+
+<p>Infine, a prescindere dall'introduzione di nuovi glifi, molte
+situazioni dove si potrebbe voler usare un'immagine sono quelle dove
+si devono rappresentare diagrammi etichettati. Ad esempio, i diagrammi
+nodo, i diagrammi di Venn, i diagrammi di Dynkin, i diagrammi di
+Feynman e complicati diagrammi commutativi cadono tutti in questa
+categoria. Come al solito, il loro contenuto sarebbe codificato meglio
+tramite una combinazione di grafici strutturati e marcatura MathML. A
+causa della generalit&agrave; della costruzione di `diagrammi
+etichettati', la definizione di un linguaggio di marcatura per
+codificare tali costruzioni esula dal campo dell'attuale
+attivit&agrave; nel campo della matematica del W3C. (Si veda <a
+href="http://www.w3.org/Graphics">http://www.w3.org/Graphics</a> per
+ulteriore attivit&agrave; del W3C in questo campo.)
+
+</p>
+
+<h2>
+<a name="interf:genproc"></a>7.2 Generare, elaborare ed interpretare
+il MathML </h2>
+
+<p>Sempre pi&ugrave; informazioni sono generate, elaborate e
+visualizzate da strumenti software. La crescita esponenziale della
+rete sta esaurendo lo sviluppo di sistemi avanzati per la ricerca, la
+suddivisione in categorie e l'interconnessione automatica delle
+informazioni. Perci&ograve;, anche se il MathML pu&ograve; essere
+scritto a mano e letto dalla gente, il futuro del MathML &egrave;
+legato anche all'abilit&agrave; di elaborarlo con strumenti
+software. </p>
+
+<p>Ci sono molti tipi diversi di programmi di scrittura, traduttori,
+elaboratori e riproduttori MathML. Ci&ograve; significa che supportare
+il MathML varia ampiamente da un'applicazione all'altra. Per esempio,
+i problemi che sorgono in un analizzatore di convalida
+MathML-compatibile sono molto diversi da quelli per un programma per
+la scrittura di equazioni MathML-compatibile. </p>
+
+<p>In questa sezione sono date linee guida per descrivere tipi diversi
+di supporto MathML e per quantificare l'estensione del supporto MathML
+in una data applicazione. Sviluppatori, utenti e revisori sono
+incoraggiati ad usare queste linee guida nel caratterizzare i
+prodotti. L'intenzione dietro queste linee guida &egrave; di
+facilitare il riuso e l'interoperabilit&agrave; tra applicazioni
+MathML caratterizzando accuratamente le loro capacit&agrave; in
+termini quantificabili. </p>
+
+<h3>
+<a name="N37327"></a>7.2.1 Conformit&agrave; al MathML </h3>
+
+<p>Un'espressione MathML valida &egrave; un costrutto XML determinato
+dalla DTD del MathML insieme con i requisiti addizionali dati nelle
+specifiche dei documenti MathML. </p>
+
+<p>Definiamo un `elaboratore MathML' qualunque applicazione che
+pu&ograve; accettare, produrre o `elaborare' un'espressione MathML
+valida. Un esempio di un'applicazione che pu&ograve; elaborare
+un'espressione MathML potrebbe essere un programma di scrittura che
+scrive un nuovo file anche se non sono state fatte modifiche. </p>
+
+<p>Specifichiamo tre forme di compatibilt&agrave; MathML:
+</p>
+<ol>
+<li>Un elaboratore compatibile in entrata con il MathML deve accettare
+tutte le espressioni MathML valide, e tradurre fedelmente tutte le
+espressioni MathML in una forma specifica dell'applicazione
+permettendo che siano eseguite le operazioni dell'applicazione nativa.
+</li>
+
+<li>Un elaboratore compatibile in uscita con il MathML deve generare
+MathML valido, rappresentando fedelmente tutti i dati specifici
+dell'applicazione.
+</li>
+
+<li>Un elaboratore compatibile in entrata e uscita con il MathML deve
+preservare l'equivalenza del MathML. Due espressioni MathML sono
+`equivalenti' se e solo se entrambe le espressioni hanno la stessa
+interpretazione (come stabilito dalla DTD e dalle specifiche MathML)
+sotto ogni circostanza, secondo ogni elaboratore MathML. L'equivalenza
+su una base elemento-per-elemento &egrave; discussa altrove in questo
+documento.
+</li>
+</ol>
+<p>
+</p>
+
+<p>Oltre queste definizioni, le specifiche MathML non fanno richieste
+particolari ai singoli elaboratori. Al fine di guidare gli
+sviluppatori, le specifiche MathML comprendono materiale che contiene
+consigli; per esempio, si suggeriscono regole di visualizzazione nel
+<a href="chapter3.html">Capitolo 3 [Marcatura di
+presentazione]</a>. Comunque, in generale, gli sviluppatori hanno
+ampia scelta di interpretare qualunque tipo di implementazione MathML
+che sia significativa per la loro particolare applicazione. </p>
+
+<p>Per chiarire la differenza tra compatibilit&agrave; ed
+interpretazione di ci&ograve; che &egrave; significativo, consideriamo
+alcuni esempi:
+</p>
+<ol>
+<li>Per essere compatibile in entrata con il MathML, un analizzatore
+di convalida ha bisogno solo di accettare espressioni, e restituire
+`vero' per espressioni che sono MathML valido. In particolare, non ha
+affatto bisogno di presentare o interpretare le espressioni MathML.
+</li>
+
+<li>Un'interfaccia MathML per un programma di computer algebra basata
+sulla marcatura del contenuto pu&ograve; scegliere di ignorare tutta
+la marcatura di presentazione. Ammesso che l'interfaccia accetti tutte
+le espressioni MathML valide comprese quelle che contengono marcatura
+di presentazione, sarebbe tecnicamente corretto caratterizzare
+l'applicazione come compatibile in entrata con il MathML.
+</li>
+
+<li>Uno strumento per la scrittura di equazioni pu&ograve; avere una
+rappresentazione interna dei dati che rende facile esportare alcune
+equazioni in MathML ma non altre. Se l'editor esporta le equazioni
+semplici come espressioni MathML valide, e si limita a visualizzare un
+messaggio di errore per informare l'utente che la conversione &egrave;
+fallita per le altre, &egrave; ancora tecnicamente compatibile in
+uscita con il MathML. </li> </ol> <p> </p>
+
+<p>Come mostra l'esempio precedente, per essere utile, il concetto di
+compatibilit&agrave; MathML coinvolge spesso un giudizio su quali
+parti del linguaggio siano implementate in modo significativo,
+rispetto alle parti che sono semplicemente elaborate in un modo
+tecnicamente corretto rispetto alle definizioni di
+compatibilit&agrave;. Questo richiede alcuni meccanismi per dare una
+definizione quantitativa su quali parti del MathML siano implementate
+in modo significativo da una data applicazione. A questo fine, il
+gruppo di lavoro per la Matematica del W3C ha fornito una serie di
+espressioni MathML di prova a http://www.w3.org/Math/testsuite. </p>
+
+<p>La serie di prova consiste in un gran numero di espressioni MathML
+divise per categoria di marcatura e per l'elemento MathML dominante
+che si sta testando. L'esistenza di questa serie di prova rende
+possibile, per esempio, caratterizzare quantitativamente l'ipotetica
+interfaccia di computer algebra rammentata sopra dicendo che &egrave;
+un elaboratore compatibile in entrata con il MathML che implementa in
+modo significativo la marcatura di contenuto MathML, comprese tutte le
+espressioni date sotto http://www.w3.org/Math/testsuite/tests/4. </p>
+
+<p>Gli sviluppatori che scelgono di non implementare parti delle
+specifiche MathML in modo significativo sono incoraggiati ad elencare
+le parti che hanno lasciato fuori facendo riferimento a specifiche
+categorie nella serie di prova. </p>
+
+<p>Per elaboratori compatibili in uscita con il MathML, c'&egrave;
+anche un validatore MathML in rete a
+http://www.w3.org/Math/validator. Sviluppatori di elaboratori
+compatibili in uscita con il MathML sono incoraggiati a verificare i
+loro dati in uscita con questo validatore. </p>
+
+<p>Clienti di applicazioni MathML che vogliono verificare le
+dichiarazioni riguardo a quali parti delle specifiche MathML sono
+implementate da un'applicazione sono incoraggiati ad usare le serie di
+prova come parte dei loro processi di decisione. </p>
+
+<h4>
+<a name="interf:deprec"></a>7.2.1.1 Caratteristiche del MathML 1.x
+disapprovate </h4>
+
+<p>Il MathML 2.0 contiene vari costrutti del MathML 1.x che ora sono
+disapprovati. Chiariamo ora la relazione tra caratteristiche
+disapprovate e compatibilit&agrave; con il MathML 2.0. </p>
+
+<ol>
+<li>Perch&eacute; siano compatibili in uscita con il MathML, gli
+strumenti di creazione non possono generare marcatura MathML che
+contiene caratteristiche disapprovate. </li>
+
+<li>Perch&eacute; siano compatibili in entrata con il MathML, gli
+strumenti di presentazione e di lettura devono supportare le
+caratteristiche disapprovate se devono essere compatibili con il
+MathML 1.x. Non c'&egrave; bisogno che supportino le caratteristiche
+disapprovate per essere considerati compatibili con il MathML
+2.0. Comunque, si incoraggia che tutti gli strumenti supportino le
+vecchie forme il pi&ugrave; possibile. </li>
+
+<li>Perch&eacute; sia compatibile in entrata e in uscita, un
+elaboratore ha bisogno solo di preservare l'equivalenza MathML in
+espressioni che non contengono caratteristiche disapprovate. </li>
+
+</ol>
+
+<h3>
+<a name="interf:error"></a>7.2.2 Gestione degli errori </h3>
+
+<p>Se un'applicazione compatibile in entrata con il MathML riceve dati
+in ingresso che contengono uno o pi&ugrave; elementi con un numero o
+un tipo illegale di attributi o di schemi figli, dovrebbe ugualmente
+tentare di riprodurre tutti i dati in ingresso in un modo
+comprensibile, ovvero riprodurre normalmente le parti valide dei dati
+in ingresso e presentare messaggi di errore (riprodotti come se
+inclusi in un elemento <code>merror</code>) al posto delle espressioni
+non valide. </p>
+
+<p>Applicazioni compatibili in uscita con il MathML come programmi di
+scrittura e traduttori possono scegliere di generare espressioni
+<code>merror</code> per segnalare errori nei loro dati in
+ingresso. Questo &egrave; generalmente preferibile a generare valido,
+ma probabilmente errato, MathML. <p>
+
+<h3>
+<a name="interf:unspecified"></a>7.2.3 Attributi per dati non
+specificati </h3>
+
+<p>Gli attributi MathML descritti nelle specifiche MathML sono
+necessari per la marcatura di presentazione e di contenuto. Idealmente
+gli attributi MathML dovrebbero essere un elenco espandibile, in modo
+che gli utenti possano aggiungere attributi specifici per riproduttori
+specifici. Comunque, questo non pu&ograve; essere fatto entro i
+confini di una singola DTD XML. Anche se pu&ograve; essere fatto
+usando estensioni del DTD standard, alcuni autori vorranno usare
+attributi non standard per avvantaggiarsi di capacit&agrave;
+specifiche del riproduttore rimanendo strettamente in
+compatibilit&agrave; con la DTD standard. </p>
+
+<p>Per permettere questo, le specifiche MathML 1.0 permettevano
+l'attributo <code>other</code> su tutti gli elementi, per usarlo come
+un gancio per passare informazioni specifiche del riproduttore. In
+particolare, era inteso come gancio per passare informazioni ai
+riproduttori audio, ai sistemi di computer algebra e per la ricerca di
+sottostringhe in meccanismi futuri di macro/estensioni. Il motivo di
+questo approccio al problema era storico, considerando il PostScript,
+per esempio, dove si usano ampiamente i commenti per passare
+informazioni che non fanno parte del PostScript. </p>
+
+<p>Nel frattempo, comunque, lo sviluppo di un meccanismo generale
+degli spazi di nomi XML ha reso obsoleto l'uso dell'attributo
+<code>other</code>. Nel MathML 2.0 l'attributo <code>other</code>
+&egrave; <a href="chapter7.html#interf:deprec">disapprovato</a> in
+favore dell'uso dei prefissi degli spazi di nomi per identificare
+attributi non-MathML. </p>
+
+<p>Ad esempio, nel MathML 1.0 si raccomandava che se si usavano
+informazioni aggiuntive in un'implementazione specifica del
+riproduttore per l'elemento <code>maction</code> (<a
+href="chapter3.html#presm:maction">Sezione 3.6.1 [Associare un'azione
+ad una sottoespressione (<code>maction</code>)]</a>), quelle
+informazioni dovevano essere passate usando l'attributo
+<code>other</code>: </p>
+
+<pre>
+&lt;maction actiontype=&quot;highlight&quot; other=&quot;color='#ff0000'&quot;&gt; expression &lt;/maction&gt;
+</pre>
+
+<p>Nel MathML 2.0 si userebbe l'attributo <code>color</code> da un
+altro spazio di nomi: </p>
+
+<pre>
+&lt;body xmlns:my=&quot;http://www.myrenderer.com/MathML/extensions&quot;&gt;
+...
+&lt;maction actiontype=&quot;highlight&quot; my:color=&quot;#ff0000&quot;&gt; expression &lt;/maction&gt;
+...
+&lt;/body&gt;
+</pre>
+
+<p>Si noti che l'intento di permettere attributi non standard
+<i>non</i> &egrave; quello di incoraggiare gli sviluppatori di
+software ad usarlo come una via d'uscita per aggirare le convenzioni
+di base della marcatura del MathML. Confidiamo che sia gli autori che
+le applicazioni useranno gli attributi non standard con giudizio. </p>
+
+<!-- Io in questo non confido molto, invece. NdT -->
+
+<h2>
+<a name="interf:future"></a>7.3 Estensioni future </h2>
+
+<p>Se il MathML deve rimanere utile in futuro, &egrave; giusto
+aspettarsi che il MathML avr&agrave; bisogno di essere esteso e
+rivisto in vari modi. Alcune di queste estensioni possono essere
+facilmente previste; per esempio, come va avanti il lavoro sulle
+estensioni di comportamento ai CSS, il MathML probabilmente
+avr&agrave; bisogno di essere esteso allo stesso modo. </p>
+
+<p>Ugualmente, ci sono vari tipi di funzionalit&agrave; che sono
+candidati piuttosto ovvi per estensioni future del MathML. Questi
+includono le macro, i fogli di stile, e forse una facilitazione
+generale per `diagrammi etichettati'. Comunque, senza dubbio ci
+saranno altre estensioni desiderabili al MathML che emergeranno solo
+quando il MathML sar&agrave; ampiamente usato. Per queste estensioni,
+il gruppo di lavoro per la Matematica del W3C conta sull'architettura
+estensibile dell'XML e sul buon senso della grande comunit&agrave;
+Web. </p>
+
+<h3>
+<a name="N37562"></a>7.3.1 Macro e fogli di stile </h3>
+
+<p>Lo sviluppo di meccanismi come i fogli di stile per l'XML fa parte
+dell'attivit&agrave; XML in corso del Consorzio per il Web. Sia l'XSL
+che i CSS stanno cercando di incorporare maggior supporto per la
+matematica. </p>
+
+<p>In particolare, le trasformazioni XSL [<a
+href="appendixi.html#XSLT">XSLT</a>] probabilmente avranno un grande
+impatto sullo sviluppo futuro del MathML. Le macro hanno
+tradizionalmente contribuito largamente all'usabilit&agrave; e
+all'efficacia delle codifiche matematiche.  Chiaramente c'&egrave;
+richiesta di ulteriori applicazioni di sviluppo dell'XSLT adattate
+specificamente al MathML. </p>
+
+<p>Alcuni possibili usi delle capacit&agrave; delle macro per il
+MathML comprendono:
+</p>
+<dl>
+<dt>
+<b>Abbreviazione</b>
+</dt>
+<dd>Un uso comune delle macro &egrave; per le abbreviazioni. Gli
+scrittori che hanno bisogno di ripetere una qualche notazione
+complicata ma costante possono definire una macro. Questo facilita
+notevolmente la creazione a mano. Le macro che permettono la
+sostituzione di parametri facilitano quest'uso ancora
+maggiormente. </dd>
+
+<dt>
+<b>Estensione della marcatura di contenuto</b>
+</dt>
+<dd>Definendo le macro per oggetti semantici, per esempio per un
+coefficiente binomiale, o per una funzione di Bessel, si pu&ograve; in
+effetti estendere la marcatura di contenuto per il MathML. Una simile
+macro potrebbe includere un legame semantico esplicito, oppure un
+legame simile potrebbe essere aggiunto facilmente da un'applicazione
+esterna. Discipline ben definite potrebbero introdurre facilmente
+marcatura di contenuto standardizzata usando pacchetti standard di
+macro. Per esempio, il progetto OpenMath potrebbe distribuire
+pacchetti di macro per includere la marcatura di contenuto
+OpenMath. </dd>
+
+<dt>
+<b>Controllo della presentazione e dello stile</b>
+</dt>
+
+<dd>Un altro modo fondamentale in cui si usano spesso le macro
+&egrave; per fornire un modo di controllare lo stile e i comportamenti
+di presentazione sostituendo le defnizioni di macro ad alto
+livello. Questo &egrave; particolarmente importante per controllare il
+comportamento di presentazione dei tag di contenuto del MathML in un
+modo che dipende dal contesto. Tale capacit&agrave; delle macro
+&egrave; necessaria anche per fornire un modo di associare
+presentazioni ad estensioni XML definite dall'utente al MathML di
+base. </dd>
+
+<dt>
+<b>Accessibilit&agrave;</b>
+</dt>
+<dd>I fogli stile controllati dall'utente sono importanti per fornire
+accessibilit&agrave; al MathML. Per esempio, un utente che ascolti un
+riproduttore vocale potrebbe, come comportamento predefinito, sentire
+una parte di marcatura di presentazione MathML letta come `D pedice x
+apice 2 di f'. Sapendo che il contesto &egrave; quello delle funzioni
+di pi&ugrave; variabili, l'utente potrebbe voler usare un foglio stile
+o un pacchetto macro che istruisca il riproduttore in modo che questo
+presenti tale elemento <code>&lt;msubsup&gt;</code> come `derivata
+seconda rispetto ad x di f'. </dd>
+
+</dl>
+<p>
+</p>
+
+<h3>
+<a name="N37628"></a>7.3.2 Estensioni XML al MathML </h3>
+
+<p>L'insieme di elementi ed attributi definiti nelle specifiche MathML
+sono necessari per riprodurre le comuni espressioni matematiche. Si
+riconosce che non tutta la notazione matematica &egrave; coperta da
+questo insieme di elementi, che si inventano continuamente nuove
+notazioni e che tra i matematici alcune sottocomunit&agrave; spesso
+hanno notazioni specializzate; e inoltre che l'estensione esplicita di
+uno standard &egrave; un processo necessariamente lento e
+conservativo. Questo implica che lo standard MathML non potr&agrave;
+mai coprire esplicitamente tutte le forme di presentazione usate da
+ogni sottocomunit&agrave; di scrittori e lettori di matematica,
+tantomeno potr&agrave; codificare tutto il contenuto matematico. </p>
+
+<p>Per agevolare l'uso del MathML da parte del pubblico pi&ugrave;
+ampio possibile, e per rendere possibile la sua rapida evoluzione in
+modo da avere pi&ugrave; forme notazionali e pi&ugrave; contenuto
+matematico (magari eventualmente coperto da estensioni esplicite dello
+standard), l'insieme di tag e di attributi &egrave; espandibile, nel
+senso descritto in questa sezione. </p>
+
+<p>Il MathML &egrave; descritto da una DTD XML, che necessariamente
+limita gli elementi e gli attributi a quelli che occorrono nella
+DTD. I riproduttori che desiderano accettare elementi o attributi non
+standard e gli autori che desiderano includerli nei documenti
+dovrebbero accettare o produrre documenti conformi ad una DTD XML
+estesa in modo appropriato che abbia la DTD standard del MathML come
+sottoinsieme. </p>
+
+<p>Si permette, ma non si richiede, che i riproduttori conformi al
+MathML accettino elementi e attributi non standard e che li
+riproducano in qualunque modo. Se un riproduttore non accetta alcuni o
+tutti i tag non standard, &egrave; incoraggiato o a gestirli come
+errori come descritto in precedenza per elementi con il numero
+sbagliato di argomenti, o a presentare i loro argomenti come se
+fossero argomenti di un elemento <code>mrow</code>, in ogni caso
+presentando tutte le parti standard dei dati in entrata nel modo
+normale. </p>
+
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  Marcatura Matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 6 <a href="chapter6.html">Caratteri, entit&agrave; e
+  font</a>
+<br>
+  Successivo: 8 <a href="chapter8.html">Modello a oggetti dei
+  documenti per il MathML</a>
+<br>
+</p>
+</body>
+</html>

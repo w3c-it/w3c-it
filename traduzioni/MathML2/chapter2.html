@@ -1,0 +1,1837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Fondamenti del MathML</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="fund"></a>2 Fondamenti del MathML</h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 1 <a href="chapter1.html">Introduzione</a>
+<br>
+  Successivo: 3 <a href="chapter3.html">Marcatura di presentazione</a>
+<br>
+  &nbsp;<br>2 <a href="chapter2.html">Fondamenti del MathML</a>
+<br>2.1 <a href="chapter2.html#fund:overview">Descrizione sommaria del
+MathML</a>
+<br>&nbsp;&nbsp;&nbsp;2.1.1 <a href="chapter2.html#N1254">Tassonomia
+degli elementi del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;2.1.2 <a href="chapter2.html#N1516">Marcatura di
+presentazione</a>
+<br>&nbsp;&nbsp;&nbsp;2.1.3 <a href="chapter2.html#N1592">Marcatura di
+contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;2.1.4 <a href="chapter2.html#N1679">Mescolare
+presentazione e contenuto</a>
+<br>2.2 <a href="chapter2.html#fund:examples">Alcuni esempi di
+MathML</a>
+<br>&nbsp;&nbsp;&nbsp;2.2.1 <a href="chapter2.html#N1720">Esempi di
+presentazione</a>
+<br>&nbsp;&nbsp;&nbsp;2.2.2 <a href="chapter2.html#N1882">Esempi di
+contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;2.2.3 <a href="chapter2.html#N1965">Esempi di
+marcatura mista</a>
+<br>2.3 <a href="chapter2.html#fund:syntax">Sintassi e grammatica del
+MathML</a>
+<br>&nbsp;&nbsp;&nbsp;2.3.1 <a href="chapter2.html#N2058">Sintassi e
+grammatica del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;2.3.2 <a href="chapter2.html#fund:xmlsyntax">Una
+breve introduzione della sintassi dell'XML</a>
+<br>&nbsp;&nbsp;&nbsp;2.3.3 <a href="chapter2.html#N2223">Figli
+rispetto ad argomenti</a>
+<br>&nbsp;&nbsp;&nbsp;2.3.4 <a href="chapter2.html#fund:attval">Valori
+degli attributi del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;2.3.5 <a
+href="chapter2.html#fund:globatt">Attributi condivisi da tutti gli
+elementi del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;2.3.6 <a
+href="chapter2.html#fund:collapse">Collassare gli spazi bianchi in
+entrata</a>
+<br>
+</p>
+
+<h2>
+<a name="fund:overview"></a>2.1 Descrizione sommaria del MathML </h2>
+
+<p>Questo capitolo presenta le idee fondamentali del MathML. La prima
+sezione descrive il progetto globale del MathML. La seconda sezione
+presenta una serie di esempi per le motivazioni, per dare al lettore
+qualcosa di concreto a cui fare riferimento leggendo i capitoli
+successivi delle specifiche del MathML. L'ultima sezione descrive le
+caratteristiche fondamentali della sintassi e della grammatica del
+MathML, che si applicano a tutta la marcatura MathML. In particolare,
+la <a href="chapter2.html#fund:syntax">Sezione&nbsp;2.3 [Sintassi e
+grammatica del MathML]</a> dovrebbe essere letta <i>prima</i> del <a
+href="chapter3.html">Capitolo&nbsp;3 [Marcatura di presentazione]</a>,
+del <a href="chapter4.html">Capitolo&nbsp;4 [Marcatura di
+contenuto]</a> e del <a href="chapter5.html">Capitolo&nbsp;5
+[Combinare marcatura di presentazione e di contenuto]</a>. </p>
+
+<p>Una sfida fondamentale nella definizione di un linguaggio di
+marcatura per la matematica in rete &egrave; riconciliare il bisogno
+di codificare sia la presentazione di una notazione matematica che il
+contenuto dell'idea matematica o dell'oggetto che essa
+rappresenta. </p>
+
+<p>La relazione tra una notazione matematica e un'idea matematica
+&egrave; sottile e profonda. A livello formale, il risultato della
+logica matematica fa sorgere sconvolgenti domande sulla corrispondenza
+tra i sistemi di logica simbolica e i fenomeni per cui essi sono
+modelli. Ad un livello pi&ugrave; intuitivo, chiunque usi la notazione
+matematica conosce la differenza che pu&ograve; fare una buona scelta
+della notazione; la struttura simbolica della notazione suggerisce la
+struttura logica. Per esempio, la notazione di Leibnitz per le
+derivate `suggerisce' la regola a catena dell'analisi matematica
+tramite la cancellazione simbolica delle frazioni: <img
+src="image/f2001.gif" alt="\frac{d f}{d x}\frac{d x}{d t}=\frac{d f}{d
+t}" align="middle">. </p>
+
+<p>I matematici e gli insegnanti lo comprendono intuitivamente molto
+bene; parte della loro esperienza sta nello scegliere la notazione che
+enfatizzi gli aspetti chiave di un problema nascondendo o portando in
+secondo piano gli aspetti estranei. E' diffuso nella matematica e
+nella scienza scrivere una cosa quando a livello strettamente tecnico
+si intende qualcos'altro, perch&eacute; una lunga esperienza dimostra
+che questo in realt&agrave; a livelli pi&ugrave; alti comunica meglio
+l'idea dei dettagli rigorosi. </p>
+
+<p>In molte altre occasioni, tuttavia, la notazione matematica
+&egrave; usata per codificare il senso pieno e preciso di un oggetto
+matematico. La notazione matematica &egrave; capace di una
+rigorosit&agrave; prodigiosa, e se usata attentamente pu&ograve;
+essere virtualmente libera da ambiguit&agrave;. Inoltre, &egrave;
+esattamente questa mancanza di ambiguit&agrave; che rende possibile
+descrivere oggetti matematici in modo che essi possano essere usati da
+applicazioni di software come sistemi di computer algebra e
+riproduttori vocali. In situazioni dove una tale comunicazione tra
+applicazioni &egrave; di importanza fondamentale, le sfumature della
+presentazione visuale assumono generalmente un ruolo minimo. </p>
+
+<p>Il MathML permette agli autori di codificare sia la notazione che
+rappresenta un oggetto matematico che la struttura dell'oggetto
+stesso. Inoltre, gli autori possono mescolare entrambi i tipi di
+codifica per specificare sia la presentazione che il contenuto di
+un'idea matematica. Il resto di questa sezione d&agrave; una
+descrizione sommaria di come pu&ograve; essere usato il MathML in
+ciascuno di questi modi. </p>
+
+<h3>
+<a name="N1254"></a>2.1.1 Tassonomia degli elementi del MathML </h3>
+
+<p>Tutti gli elementi del MathML cadono in una di tre categorie:
+elementi di presentazione, elementi di contenuto ed elementi di
+interfaccia. Ciascuna di queste categorie &egrave; descritta nei
+dettagli rispettivamente nel <a href="chapter3.html">Capitolo&nbsp;3
+[Marcatura di presentazione]</a>, nel <a
+href="chapter4.html">Capitolo&nbsp;4 [Marcatura di contenuto]</a> e
+nel <a href="chapter7.html">Capitolo&nbsp;7 [L'interfaccia del
+MathML]</a>. </p>
+
+<p>Gli elementi di presentazione descrivono la struttura
+bidimensionale orientata visivamente della notazione
+matematica. Esempi tipici sono l'elemento <code>mrow</code>, che
+&egrave; generalmente impiegato per indicare una riga orizzontale di
+pezzi di espressioni, e l'elemento <code>msup</code>, che &egrave;
+usato per marcare un'espressione come base ed aggiungerle un
+apice. Come regola generale, ogni elemento di presentazione
+corrisponde ad un singolo tipo di `???' come cifre, lettere o altri
+simboli. </p>
+
+<p>Sebbene questo esempio particolare coinvolga la notazione
+matematica, e quindi la marcatura di presentazione, la stessa
+osservazione sulla decomposizione si applica altrettanto bene agli
+oggetti matematici astratti, e quindi alla marcatura di contenuto. Per
+esempio, nel contesto della marcatura di contenuto il nostro esempio
+dell'apice sarebbe tipicamente denotato da un'operazione di elevamento
+a potenza che richiederebbe due operandi: una `base' e un
+`esponente'. Non &egrave; una coincidenza, poich&eacute; come regola
+generale la disposizione della notazione matematica segue strettamente
+la struttura logica degli oggetti matematici sottostanti. </p>
+
+<p>La natura ricorsiva degli oggetti e della notazione matematica si
+riflette fortemente nella marcatura MathML. Nella pratica, quasi tutti
+gli elementi di presentazione o di contenuto contengono altri elementi
+MathML che corrispondono ai pezzi costituenti con i quali &egrave;
+costruito ricorsivamente l'oggetto originario. Lo schema originario
+&egrave; detto comunemente lo schema <i>padre</i>, e i pezzi
+costituenti sono detti schemi <i>figli</i>. Pi&ugrave; generalmente,
+le espressioni MathML possono essere viste come alberi, dove ogni nodo
+corrisponde ad un elemento MathML, i rami sotto un nodo `padre'
+corrispondono ai suoi `figli' e le foglie nell'albero corrispondono ad
+unit&agrave; atomiche di notazione o di contenuto come numeri,
+caratteri, ecc. </p>
+
+<p>La maggior parte dei nodi foglia in un albero di espressione MathML
+sono o <i>elementi canonicamente vuoti</i> senza corpo o <i>elementi
+token</i>. Gli elementi canonicamente vuoti rappresentano direttamente
+i simboli nel MathML, per esempio, questo vale per l'elemento di
+contenuto <code>&lt;plus/&gt;</code>. Gli elementi token del MathML
+sono i soli elementi del MathML che possono contenere dati di
+caratteri MathML. I dati di caratteri MathML possono consistere di
+caratteri Unicode e di elementi MathML
+<code>&lt;mchar/&gt;</code>. Questi elementi
+<code>&lt;mchar/&gt;</code>, come <code>&lt;mchar
+name=&quot;alpha&quot; /&gt;</code> e <code>&lt;mchar
+name=&quot;rightarrow&quot; /&gt;</code>, denotano tipicamente
+caratteri Unicode non nel codice ASCII e l'attributo <code>name</code>
+contiene l'informazione di quale simbolo speciale si rappresenta. La
+costruzione <code>&lt;mchar/&gt;</code> sostituisce l'uso di
+entit&agrave; MathML speciali come <code>&amp;alpha;</code> per
+codificare simboli speciali specificato nel MathML 1 per
+compatibilit&agrave; con i meccanismi generici dell'XML. Un terzo tipo
+di nodo foglia permesso nel MathML &egrave; l'elemento
+<code>annotation</code>, che &egrave; usato per contenere dati che non
+sono in formato MathML. </p>
+
+<p>Gli elementi token di presentazione pi&ugrave; importanti sono
+<code>mi</code>, <code>mn</code> e <code>mo</code> per rappresentare
+rispettivamente identificatori, numeri e operatori. Tipicamente un
+riproduttore impiegher&agrave; stili tipografici leggermente diversi
+per ciascuno di questi tipi di dati: i numeri sono normalmente in
+caratteri diritti, gli identificatori in corsivo, e gli operatori
+hanno pi&ugrave; spazio intorno ad essi. Nella marcatura di contenuto,
+ci sono solo tre elementi token, <code>ci</code>, <code>cn</code> e
+<code>csymbol</code>, rispettivamente per identificatori, numeri e
+nuovi simboli introdotti nel documento stesso. Nella marcatura di
+contenuto sono forniti elementi separati per funzioni ed operatori
+comunemente usati. E' fornito l'elemento <code>fn</code> per
+estensioni definite dall'utente all'insieme fondamentale. </p>
+
+<p>In termini di marcatura, la maggior parte degli elementi MathML
+sono denotati da un'etichetta <i>iniziale</i> e da un'etichetta
+<i>finale</i>, che contengono la marcatura per il loro contenuto. Nel
+caso degli elementi token, il contenuto sono dati di caratteri, e
+nella maggior parte degli altri casi, il contenuto &egrave; la
+marcatura per gli elementi figli. Una terza categoria di elementi,
+detti elementi canonicamente vuoti, non richiedono contenuto, e sono
+denotati da una singola etichetta della forma
+<code>&lt;nome/&gt;</code>. Un esempio di questo tipo di marcatura
+&egrave; <code>&lt;plus/&gt;</code> nella marcatura di contenuto. </p>
+
+<p>Tornando all'esempio di (<i>a</i> + <i>b</i>)<sup>2</sup>, possiamo
+ora vedere come i principi discussi in precedenza abbiano applicazione
+pratica. Una forma di marcatura di presentazione per quest'esempio
+&egrave;:
+</p>
+<pre>
+   &lt;msup&gt;
+     &lt;mfenced&gt;
+       &lt;mrow&gt;
+         &lt;mi&gt;a&lt;/mi&gt;
+         &lt;mo&gt;+&lt;/mo&gt;
+         &lt;mi&gt;b&lt;/mi&gt;
+       &lt;/mrow&gt;
+     &lt;/mfenced&gt;
+     &lt;mn&gt;2&lt;/mn&gt;
+   &lt;/msup&gt;
+</pre>
+<p>
+</p>
+
+<p>Questo esempio dimostra vari elementi di presentazione. Il primo
+elemento, uno che &egrave; usato molto, &egrave;
+<code>mrow</code>. Questo elemento si usa per denotare una riga di
+materiale allineato orizzontalmente. Il materiale contenuto tra i tag
+<code>&lt;mrow&gt;</code> e <code>&lt;/mrow&gt;</code> &egrave;
+considerato un argomento dell'elemento
+<code>mrow</code>. Perci&ograve; l'intera espressione qui &egrave;
+contenuta in un elemento <code>mrow</code>. Come notato in precedenza,
+quasi tutte le espressioni matematiche si decompongono in
+sottoespressioni. Anche queste sottoespressioni possono, a loro volta,
+essere contenute in un elemento <code>mrow</code>. Per esempio, a+b
+&egrave; a sua volta contenuta in un elemento <code>mrow</code>. </p>
+
+<p>L'elemento <code>mfenced</code> &egrave; usato per mettere
+parentesi (graffe, quadre e tonde) intorno a formule. Il suo
+comportamento predefinito &egrave; usare parentesi tonde. </p>
+
+<p>Si noti l'uso dell'elemento <code>mi</code> per visualizzare le
+variabili a e b e dell'elemento <code>mo</code> per marcare
+l'operatore +. </p>
+
+<p>L'elemento <code>msup</code> &egrave; per espressioni che
+coinvolgono gli apici e richiede due argomenti, nell'ordine,
+l'espressione base (qui, (<i>a</i>+<i>b</i>)) e l'espressione
+esponente (qui, 2). </p>
+
+<p>La marcatura di contenuto per lo stesso esempio &egrave;:
+</p>
+<pre>
+   &lt;apply&gt;
+     &lt;power/&gt;
+     &lt;apply&gt;
+       &lt;plus/&gt;
+       &lt;ci&gt;a&lt;/ci&gt;
+       &lt;ci&gt;b&lt;/ci&gt;
+     &lt;/apply&gt;
+     &lt;cn&gt;2&lt;/cn&gt;
+   &lt;/apply&gt;
+</pre>
+<p>
+</p>
+
+<p>Qui, l'elemento di contenuto <code>apply</code> significa applicare
+un'operazione ad un'espressione. In questo esempio, sono
+<i>applicati</i> sia l'elemento <code>power</code> (per l'elevamento a
+potenza), che non richiede un corpo, che l'elemento simile
+<code>plus</code> (per l'addizione). Si osservi che entrambi gli
+operatori richiedono due argomenti, con l'ordine che &egrave;
+particolarmente significativo nel caso dell'elevamento a potenza. </p>
+
+<p>Si noti l'uso dell'elemento <code>ci</code> per denotare le
+variabili a e b, e dell'elemento <code>cn</code> per denotare il
+numero 2. </p>
+
+<h3>
+<a name="N1516"></a>2.1.2 Marcatura di presentazione </h3>
+
+<p>La marcatura di presentazione del MathML consiste di circa 30
+elementi che accettano oltre 50 attributi. La maggior parte degli
+elementi corrispondono a <i>schemi di disposizione</i>, che contengono
+altri elementi di presentazione. Ogni schema di disposizione
+corrisponde ad un dispositivo notazionale bidimensionale, come un
+pedice o un apice, una frazione o una tabella. Inoltre, ci sono gli
+elementi token di presentazione <code>mi</code>, <code>mn</code> e
+<code>mo</code> presentati in precedenza, come pure vari altri
+elementi token usati meno comunemente. I pochi restanti elementi di
+presentazione sono elementi vuoti, e sono usati per lo pi&ugrave; in
+congiunzione con l'allineamento. </p>
+
+<p>Gli schemi di disposizione cadono in diverse classi. Un gruppo di
+elementi riguarda gli apici e i pedici, e contiene elementi come
+<code>msub</code>, <code>munder</code> e
+<code>mmultiscripts</code>. Un altro gruppo si concentra su una
+disposizione pi&ugrave; generale e comprende <code>mrow</code>,
+<code>mstyle</code> e <code>mfrac</code>. Un terzo gruppo tratta le
+tabelle. L'elemento <code>maction</code> &egrave; in una categoria da
+solo, e permette la codifica di vari tipi di azioni sulla notazione,
+come occorrere in un'espressione che commuta tra due notazioni. </p>
+
+<p>Una caratteristica importante di molti schemi di disposizione
+&egrave; che l'ordine degli schemi figli &egrave; significativo. Per
+esempio, il primo figlio di un elemento <code>mfrac</code> &egrave; il
+numeratore e il secondo figlio &egrave; il denominatore. Poich&eacute;
+l'ordine degli schemi figli non &egrave; imposto a livello XML dalla
+DTD del MathML, l'informazione aggiunta dall'ordinamento &egrave;
+disponibile solo ad un elaboratore MathML, rispetto ad un generico
+elaboratore XML. Quando vogliamo enfatizzare che un elemento MathML
+come <code>mfrac</code> richiede i figli in un ordine preciso, ci
+riferiremo ad essi come <i>argomenti</i>, e penseremo all'elemento
+<code>mfrac</code> come ad un `costruttore' notazionale. </p>
+
+<h3>
+<a name="N1592"></a>2.1.3 Marcatura di contenuto </h3>
+
+<p>La marcatura di contenuto consiste di circa 100 elementi che
+accettano circa una dozzina di attributi. La maggioranza di questi
+elementi sono elementi vuoti che corrispondono ad un'ampia
+variet&agrave; di operatori, relazioni e funzioni con un nome. Esempi
+di questo tipo comprendono <code>partialdiff</code>, <code>leq</code>
+e <code>tan</code>. Altri come <code>matrix</code> e <code>set</code>
+sono usati per codificare vari tipi di dati matematici, e una terza,
+importante categoria di elementi di contenuto come <code>apply</code>
+si usa per applicare operazioni ad espressioni e anche per creare
+nuovi oggetti matematici partendo da altri. </p>
+
+<p>L'elemento <code>apply</code> &egrave; forse l'elemento di
+contenuto pi&ugrave; importante. E' usato per applicare una funzione o
+un'operazione ad una collezione di argomenti. Le posizioni degli
+schemi figli sono anche qui significative, con il primo figlio che
+denota la funzione da applicare, e gli altri figli che denotano gli
+argomenti della funzione in ordine. Si noti che il costrutto
+<code>apply</code> usa sempre la notazione prefissa, come il
+linguaggio programmativo LISP. In particolare, anche operazioni
+binarie come la sottrazione sono marcate applicando un operatore di
+sottrazione prefisso a due argomenti. Per esempio, <i>a</i> - <i>b</i>
+sarebbe marcato come
+</p>
+<pre>
+&lt;apply&gt;
+   &lt;minus/&gt;
+   &lt;ci&gt;a&lt;/ci&gt;
+   &lt;ci&gt;b&lt;/ci&gt;
+&lt;/apply&gt;
+</pre>
+<p>
+</p>
+
+<p>Alcune funzioni e operazioni richiedono uno o pi&ugrave;
+quantificatori per essere ben definite. Per esempio, oltre ad un
+integrando, un integrale definito deve specificare i limiti di
+integrazione e la variabile legata. Per questa ragione, ci sono vari
+schemi <i>qualificatori</i> come <code>bvar</code> e
+<code>lowlimit</code>. Sono usati con operatori come <code>diff</code>
+e <code>int</code>. </p>
+
+<p>Il costrutto <code>declare</code> &egrave; particolarmente
+importante per la marcatura di contenuto che potrebbe essere valutata
+da un sistema di computer algebra. L'elemento <code>declare</code>
+fornisce un meccanismo fondamentale di assegnamento, dove una
+variabile pu&ograve; essere dichiarata di un certo tipo, con un certo
+valore. </p>
+
+<h3>
+<a name="N1679"></a>2.1.4 Mescolare presentazione e contenuto </h3>
+
+<p>Diversi tipi di marcatura saranno pi&ugrave; adatti per diversi
+tipi di compiti. I documenti scritti prima che il web diventasse
+importante erano pi&ugrave; spesso intesi solo per la comunicazione
+visiva delle informazioni, cos&igrave; questi dati sono probabilmente
+tradotti meglio in marcatura di presentazione pura, poich&eacute; le
+informazioni semantiche su cosa intendeva l'autore possono solo essere
+intuite euristicamente. Per contrasto, alcune applicazioni matematiche
+e strumenti di creazione orientati pedagogicamente sceglieranno
+probabilmente di essere basati interamente sul contenuto. La
+maggioranza delle applicazioni cade in un punto tra questi
+estremi. Per queste applicazioni, la marcatura pi&ugrave; appropriata
+&egrave; un misto di marcatura di presentazione e di contenuto. </p>
+
+<p>Le regole per mescolare la marcatura di presentazione e di
+contenuto derivano dal principio generale che il contenuto misto deve
+essere permesso solo in luoghi dove esso ha senso. Per la marcatura di
+contenuto incorporata nella marcatura di presentazione questo
+significa fondamentalmente che ogni frammento di contenuto deve essere
+semanticamente significativo, e non deve richiedere che siano
+specificati interamente quantificatori o argomenti aggiuntivi. Per la
+marcatura di presentazione incorporata nella marcatura di contenuto,
+questo di solito significa che la marcatura di presentazione deve
+essere contenuta in un elemento token di contenuto, in modo che possa
+essere trattata come un'unit&agrave; notazionale indivisibile usata
+come nome di funzione o di variabile. </p>
+
+<p>Un'altra opzione &egrave; usare un elemento
+<code>semantics</code>. L'elemento <code>semantics</code> &egrave;
+usato per associare espressioni MathML a vari tipi di annotazioni. Un
+uso comune per l'elemento <code>semantics</code> &egrave; associare un
+pezzo di marcatura di contenuto a della marcatura di presentazione
+come annotazione semantica. In questo modo, un autore pu&ograve;
+specificare una notazione non standard da usare quando si visualizza
+una particolare espressione di contenuto. Un altro uso dell'elemento
+<code>semantics</code> &egrave; associare qualche altro tipo di
+specificazione semantica, come un'espressione in OpenMath, ad
+un'espressione MathML. In questo modo, l'elemento
+<code>semantics</code> pu&ograve; essere usato per estendere l'ambito
+della marcatura di contenuto del MathML. </p>
+
+<h2>
+<a name="fund:examples"></a>2.2 Alcuni esempi di MathML </h2>
+
+<h3>
+<a name="N1720"></a>2.2.1 Esempi di presentazione </h3>
+
+<p>Notazione: <i>x</i><sup>2</sup> + 4<i>x</i> + 4 = 0. </p>
+
+<p>Marcatura:
+</p>
+<pre>
+&lt;mrow&gt;
+  &lt;mrow&gt;
+    &lt;msup&gt;
+      &lt;mi&gt;x&lt;/mi&gt;
+      &lt;mn&gt;2&lt;/mn&gt;
+    &lt;/msup&gt;
+    &lt;mo&gt;+&lt;/mo&gt;
+    &lt;mrow&gt;
+      &lt;mn&gt;4&lt;/mn&gt;
+      &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+      &lt;mi&gt;x&lt;/mi&gt;
+    &lt;/mrow&gt;
+    &lt;mo&gt;+&lt;/mo&gt;
+    &lt;mn&gt;4&lt;/mn&gt;
+  &lt;/mrow&gt;
+  &lt;mo&gt;=&lt;/mo&gt;
+  &lt;mn&gt;0&lt;/mn&gt;
+&lt;/mrow&gt;
+</pre>
+<p>
+Gli elementi mfrac e msqrt sono usati per generare rispettivamente
+frazioni e radici quadrate. </p>
+
+<p>Si noti l'uso degli elementi <code>mrow</code> annidati per
+denotare termini, ad esempio, il lato sinistro dell'equazione valido
+come operando di `='. Marcare i termini facilita molto la spaziatura
+per la riproduzione visuale, la presentazione vocale e le interruzioni
+di linea. L'entit&agrave; di carattere MathML
+<code>InvisibleTimes</code> &egrave; usata qui per indicare che ci
+sono regole speciali di spaziatura tra il 4 e la x, e che il 4 e la x
+non devono essere spezzati su linee separate. Infatti, l'uso di
+un'entit&agrave; &egrave; ora esplicitamente <a
+href="chapter7.html#interf:deprec">disapprovato</a> in favore dell'uso
+di <code>&lt;mchar name=&quot;InvisibleTimes&quot; /&gt;</code> ma
+&egrave; stato introdotto nel MathML 1.0. Negli esempi seguenti
+sar&agrave; usata la nuova versione, che &egrave; stata menzionata in
+precedenza e che &egrave; discussa esplicitamente nella <a
+href="chapter4.html#contm:tokenel">Sezione&nbsp;4.4.1 [Elementi
+token]</a>. </p>
+
+<p>Notazione: <img src="image/f2007.gif"
+alt="x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}" align="middle">. </p>
+
+<p>Marcatura:
+</p>
+<pre>
+&lt;mrow&gt;
+  &lt;mi&gt;x&lt;/mi&gt;
+  &lt;mo&gt;=&lt;/mo&gt;
+  &lt;mfrac&gt;
+    &lt;mrow&gt;
+      &lt;mrow&gt;
+        &lt;mo&gt;-&lt;/mo&gt;
+        &lt;mi&gt;b&lt;/mi&gt;
+      &lt;/mrow&gt;
+      &lt;mo&gt;&lt;mchar name=&quot;PlusMinus&quot;/&gt;&lt;/mo&gt;
+      &lt;msqrt&gt;
+        &lt;mrow&gt;
+          &lt;msup&gt;
+            &lt;mi&gt;b&lt;/mi&gt;
+            &lt;mn&gt;2&lt;/mn&gt;
+          &lt;/msup&gt;
+          &lt;mo&gt;-&lt;/mo&gt;
+          &lt;mrow&gt;
+            &lt;mn&gt;4&lt;/mn&gt;
+            &lt;mo&gt;&lt;mchar name=&quot;InvisibleTimes&quot;/&gt;&lt;/mo&gt;
+            &lt;mi&gt;a&lt;/mi&gt;
+            &lt;mo&gt;&lt;mchar name=&quot;InvisibleTimes&quot;/&gt;&lt;/mo&gt;
+            &lt;mi&gt;c&lt;/mi&gt;
+          &lt;/mrow&gt;
+        &lt;/mrow&gt;
+      &lt;/msqrt&gt;
+    &lt;/mrow&gt;
+    &lt;mrow&gt;
+      &lt;mn&gt;2&lt;/mn&gt;
+      &lt;mo&gt;&lt;mchar name=&quot;InvisibleTimes&quot;/&gt;&lt;/mo&gt;
+      &lt;mi&gt;a&lt;/mi&gt;
+    &lt;/mrow&gt;
+  &lt;/mfrac&gt;
+&lt;/mrow&gt;
+</pre>
+<p>
+Si noti che il segno `pi&ugrave; o meno' &egrave; dato da un elemento
+speciale usato per il nome di simbolo specifico <code>&lt;mchar
+name=&quot;PlusMinus&quot; /&gt;</code>. Poi &egrave; usato lo stesso
+costrutto con <code>&lt;mchar name=&quot;InvisibleTimes&quot;
+/&gt;</code>, invece della vecchia forma nell'esempio precedente. Il
+MathML fornisce un elenco molto ampio di nomi di caratteri per i
+simboli matematici. In aggiunta ai simboli matematici necessari per la
+presentazione su schermo o stampata, il MathML fornisce simboli per
+facilitare la riproduzione acustica. Per riproduttori acustici,
+&egrave; importante poter determinare automaticamente se
+</p>
+<pre>
+&lt;mrow&gt;
+  &lt;mi&gt;z&lt;/mi&gt;
+  &lt;mfenced&gt;
+    &lt;mrow&gt;
+      &lt;mi&gt;x&lt;/mi&gt;
+      &lt;mo&gt;+&lt;/mo&gt;
+      &lt;mi&gt;y&lt;/mi&gt;
+    &lt;/mrow&gt;
+  &lt;/mfenced&gt;
+&lt;/mrow&gt;
+</pre>
+<p>
+deve essere letto come `<i>z</i> per la quantit&agrave; <i>x</i>
+pi&ugrave; <i>y</i>' o `<i>z</i> di <i>x</i> pi&ugrave; <i>y</i>'. Gli
+elementi di marcatura <code>&lt;mchar name=&quot;InvisibleTimes&quot;
+/&gt;</code> e <code>&lt;mchar name=&quot;ApplyFunction&quot;
+/&gt;</code> forniscono agli autori un modo per codificare
+direttamente la distinzione per i riproduttori audio. Per esempio, nel
+primo caso si dovrebbe inserire <code>&lt;mchar
+name=&quot;InvisibleTimes&quot; /&gt;</code> dopo la linea che
+contiene la <i>z</i>. Il MathML introduce anche entit&agrave; come
+<code>&lt;mchar name=&quot;dd&quot; /&gt;</code> che rappresenta una
+`d differenziale' che si riproduce con una spaziatura leggermente
+diversa nella stampa, e pu&ograve; essere presentata come `d' o
+`rispetto a' parlando. A meno che non si usino i tag di contenuto, o
+qualche altro meccanismo, per eliminare l'ambiguit&agrave;, gli autori
+dovrebbero usare sempre queste entit&agrave;, per rendere i loro
+documenti pi&ugrave; accessibili. </p>
+
+<p>Notazione: <img src="image/f2008.gif"
+alt="A=\left[\begin{array}{cc} x &amp; y \\ z &amp; w \end{array}\right]"
+align="middle">. </p>
+
+<p>Marcatura:
+</p>
+<pre>
+&lt;mrow&gt;
+  &lt;mi&gt;A&lt;/mi&gt;
+  &lt;mo&gt;=&lt;/mo&gt;
+  &lt;mfenced open=&quot;[&quot; close=&quot;]&quot;&gt;
+    &lt;mtable&gt;
+      &lt;mtr&gt;
+         &lt;mtd&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mtd&gt;
+         &lt;mtd&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mtd&gt;
+      &lt;/mtr&gt;
+      &lt;mtr&gt;
+         &lt;mtd&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;/mtd&gt;
+         &lt;mtd&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;/mtd&gt;
+      &lt;/mtr&gt;
+    &lt;/mtable&gt;
+  &lt;/mfenced&gt;
+&lt;/mrow&gt;
+</pre>
+<p>
+La maggior parte degli elementi ha attributi che controllano i
+dettagli delle loro riproduzioni su schermo e su stampa. Per esempio,
+ci sono vari attributi per l'elemento <code>mfenced</code> che
+controllano che parentesi devono essere usate all'inizio e alla fine
+dell'espressione raggruppata in precedenza. Gli attributi per elementi
+operatori dati usando <code>&lt;mo&gt;</code> sono impostati a valori
+predefiniti determinati da un dizionario. Per il dizionario degli
+operatori MathML consigliato, si veda l'<a
+href="appendixd.html">Appendice&nbsp;D [Dizionario degli
+operatori]</a>. </p>
+
+<h3>
+<a name="N1882"></a>2.2.2 Esempi di contenuto </h3>
+
+<p>Notazione: <i>x</i><sup>2</sup> + 4<i>x</i> + 4 = 0. </p>
+
+<p>Marcatura:
+</p>
+<pre>
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;apply&gt;
+    &lt;plus/&gt;
+    &lt;apply&gt;
+      &lt;power/&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+      &lt;cn&gt;2&lt;/cn&gt;
+    &lt;/apply&gt;
+    &lt;apply&gt;
+      &lt;times/&gt;
+      &lt;cn&gt;4&lt;/cn&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+    &lt;/apply&gt;
+    &lt;cn&gt;4&lt;/cn&gt;
+  &lt;/apply&gt;
+  &lt;cn&gt;0&lt;/cn&gt;
+&lt;/apply&gt;
+</pre>
+<p>
+Si noti che l'elemento <code>apply</code> si usa per relazioni,
+operatori e funzioni. </p>
+
+<p>Notazione: <img src="image/f2007.gif"
+alt="x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}" align="middle">. </p>
+
+<p>Marcatura:
+</p>
+<pre>
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;ci&gt;x&lt;/ci&gt;
+  &lt;apply&gt;
+    &lt;divide/&gt;
+    &lt;apply&gt;
+      &lt;fn&gt;&lt;mo&gt;&lt;mchar name='PlusMinus'/&gt;&lt;/mo&gt;&lt;/fn&gt;
+      &lt;apply&gt;
+        &lt;minus/&gt;
+        &lt;ci&gt;b&lt;/ci&gt;
+      &lt;/apply&gt;
+      &lt;apply&gt;
+        &lt;root/&gt;
+        &lt;apply&gt;
+          &lt;minus/&gt;
+          &lt;apply&gt;
+            &lt;power/&gt;
+            &lt;ci&gt;b&lt;/ci&gt;
+            &lt;cn&gt;2&lt;/cn&gt;
+          &lt;/apply&gt;
+          &lt;apply&gt;
+            &lt;times/&gt;
+            &lt;cn&gt;4&lt;/cn&gt;
+            &lt;ci&gt;a&lt;/ci&gt;
+            &lt;ci&gt;c&lt;/ci&gt;
+          &lt;/apply&gt;
+        &lt;/apply&gt;
+        &lt;cn&gt;2&lt;/cn&gt;
+      &lt;/apply&gt;
+    &lt;/apply&gt;
+    &lt;apply&gt;
+      &lt;times/&gt;
+      &lt;cn&gt;2&lt;/cn&gt;
+      &lt;ci&gt;a&lt;/ci&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+</pre>
+<p>
+La marcatura di contenuto del MathML non contiene direttamente un
+elemento per l'operazione `pi&ugrave; o meno'. Perci&ograve;, usiamo
+l'elemento <code>fn</code> per dichiarare che vogliamo che la
+marcatura di presentazione per questo operatore agisca come un
+operatore di contenuto. Questo &egrave; un esempio semplice di come si
+possono mescolare marcatura di presentazione e di contenuto per
+estendere la marcatura di contenuto. </p>
+
+<p>Notazione: <img src="image/f2011.gif"
+alt="A=\left(\begin{array}{cc} x &amp; y \\ z &amp; w \end{array}\right)"
+align="middle">. </p>
+
+<p>Marcatura:
+</p>
+<pre>
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;ci&gt;A&lt;/ci&gt;
+  &lt;matrix&gt;
+    &lt;matrixrow&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+      &lt;ci&gt;y&lt;/ci&gt;
+    &lt;/matrixrow&gt;
+    &lt;matrixrow&gt;
+      &lt;ci&gt;z&lt;/ci&gt;
+      &lt;ci&gt;w&lt;/ci&gt;
+    &lt;/matrixrow&gt;
+  &lt;/matrix&gt;
+&lt;/apply&gt;
+</pre>
+<p>
+Si noti che, di default, la riproduzione dell'elemento di contenuto
+<code>matrix</code> comprende le parentesi, perci&ograve; non abbiamo
+bisogno di codificarle direttamente. Questo &egrave; piuttosto diverso
+dall'elemento di presentazione <code>mtable</code> che pu&ograve;
+riferirsi o meno ad una matrice, e quindi richiede la codifica
+esplicita delle parentesi se esse sono desiderate. </p>
+
+<h3>
+<a name="N1965"></a>2.2.3 Esempi di marcatura mista</h3>
+
+<p>Notazione: <img src="image/f2012.gif"
+alt="\displaystyle \int_0^t \frac{\diffd x}{x}" align="middle">. </p>
+
+<p>Marcatura:
+</p>
+<pre>
+&lt;semantics&gt;
+  &lt;mrow&gt;
+    &lt;msubsup&gt;
+      &lt;mo&gt;&lt;mchar name='int'/&gt;&lt;/mo&gt;
+      &lt;mn&gt;0&lt;/mn&gt;
+      &lt;mi&gt;t&lt;/mi&gt;
+    &lt;/msubsup&gt;
+    &lt;mfrac&gt;
+      &lt;mrow&gt;
+        &lt;mo&gt;&lt;mchar name='dd'/&gt;&lt;/mo&gt;
+        &lt;mi&gt;x&lt;/mi&gt;
+      &lt;/mrow&gt;
+      &lt;mi&gt;x&lt;/mi&gt;
+    &lt;/mfrac&gt;
+  &lt;/mrow&gt;
+  &lt;annotation-xml encoding=&quot;MathML-Content&quot;&gt;
+    &lt;apply&gt;
+      &lt;int/&gt;
+      &lt;bvar&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/bvar&gt;
+      &lt;lowlimit&gt;&lt;cn&gt;0&lt;/cn&gt;&lt;/lowlimit&gt;
+      &lt;uplimit&gt;&lt;ci&gt;t&lt;/ci&gt;&lt;/uplimit&gt;
+      &lt;apply&gt;
+        &lt;divide/&gt;
+        &lt;cn&gt;1&lt;/cn&gt;
+        &lt;ci&gt;x&lt;/ci&gt;
+      &lt;/apply&gt;
+    &lt;/apply&gt;
+  &lt;/annotation-xml&gt;
+&lt;/semantics&gt;
+</pre>
+<p>
+In questo esempio, usiamo l'elemento <code>semantics</code> per
+fornire un'espressione di contenuto MathML che serve come `annotazione
+semantica' per un'espressione di presentazione. L'elemento
+<code>semantics</code> ha come primo figlio l'espressione annotata, e
+i figli successivi sono le annotazioni. Non ci sono restrizioni sul
+tipo di annotazioni che possono essere allegate usando l'elemento
+<code>semantics</code>. Per esempio, si pu&ograve; dare una codifica
+T<sub>E</sub>X, o dati in ingresso per computer algebra in
+un'annotazione. Il tipo di annotazione &egrave; specificata
+dall'attributo <code>encoding</code> e dagli elementi
+<code>annotation</code> e <code>annotation-xml</code>. </p>
+
+<p>Un altro uso comune dell'elemento <code>semantics</code> nasce
+quando si vuole usare una codifica di contenuto, e fornire un
+suggerimento per la sua presentazione. In un caso simile, applicata
+alla formula precedente avremmo la marcatura:
+</p>
+<pre>
+&lt;semantics&gt;
+  &lt;apply&gt;
+    &lt;int/&gt;
+    &lt;bvar&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/bvar&gt;
+    &lt;lowlimit&gt;&lt;cn&gt;0&lt;/cn&gt;&lt;/lowlimit&gt;
+    &lt;uplimit&gt;&lt;ci&gt;t&lt;/ci&gt;&lt;/uplimit&gt;
+    &lt;apply&gt;
+      &lt;divide/&gt;
+      &lt;cn&gt;1&lt;/cn&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+  &lt;annotation-xml encoding=&quot;MathML-Presentation&quot;&gt;
+    &lt;mrow&gt;
+      &lt;msubsup&gt;
+        &lt;mo&gt;&lt;mchar name='int'/&gt;&lt;/mo&gt;
+        &lt;mn&gt;0&lt;/mn&gt;
+        &lt;mi&gt;t&lt;/mi&gt;
+      &lt;/msubsup&gt;
+      &lt;mfrac&gt;
+        &lt;mrow&gt;
+          &lt;mo&gt;&lt;mchar name='dd'/&gt;&lt;/mo&gt;
+          &lt;mi&gt;x&lt;/mi&gt;
+        &lt;/mrow&gt;
+        &lt;mi&gt;x&lt;/mi&gt;
+      &lt;/mfrac&gt;
+    &lt;/mrow&gt;
+  &lt;/annotation-xml&gt;
+&lt;/semantics&gt;
+</pre>
+<p>
+</p>
+
+<p>Questo tipo di annotazione &egrave; utile quando si desidera
+qualcosa di diverso dalla presentazione predefinita della codifica del
+contenuto. Per esempio, di default, alcuni riproduttori potrebbero
+disporre l'integrando come `(1/<i>x</i>)d<i>x</i>'. Specificare che
+l'integrando dovrebbe essere presentato invece preferibilmente come
+`d<i>x</i>/<i>x</i>' pu&ograve; essere fatto con l'uso di
+un'annotazione di Presentazione MathML come mostrato. Si tenga
+presente, comunque, che i riproduttori non hanno l'obbligo di tenere
+conto delle informazioni contenute nelle annotazioni, e l'uso che ne
+sar&agrave; fatto, se esse saranno usate, dipender&agrave; dal
+riproduttore. </p>
+
+<h2>
+<a name="fund:syntax"></a>2.3 Sintassi e grammatica del MathML </h2>
+
+<h3>
+<a name="N2058"></a>2.3.1 Sintassi e grammatica del MathML </h3>
+
+<p>Il MathML &egrave; un'applicazione dell'XML, o Linguaggio di
+Marcatura Estensibile [<a
+href="appendixi.html#Bray1998">Bray1998</a>], e come tale la sua
+sintassi &egrave; governata dalle regole della sintassi dell'XML, e la
+sua grammatica &egrave; specificata in parte da una DTD, o Definizione
+di Tipo di un Documento. In altre parole, i dettagli sull'uso dei tag,
+degli attributi, dei riferimenti alle entit&agrave; e cos&igrave; via
+sono definiti nelle specifiche del linguaggio XML, e i dettagli sugli
+elementi e sui nomi degli attributi del MathML, quali elementi possono
+essere annidati in quali altri, e cos&igrave; via sono specificati
+nella DTD del MathML. Questo &egrave; nell'<a
+href="appendixa.html">Appendice&nbsp;A [Analisi del MathML]</a>. </p>
+
+<p>Il W3C, cercando di aumentare la flessibilit&agrave; dell'uso
+dell'XML per il Web, e di incoraggiare la modularizzazione di
+applicazioni costruite con l'XML, ha scoperto che la forma
+fondamentale di una DTD non &egrave; l'ideale. Perci&ograve; &egrave;
+stato creato un Gruppo di Lavoro W3C per sviluppare delle specifiche
+per gli Schemi XML [<a
+href="appendixi.html#XMLSchemas">XMLSchemas</a>], che sono documenti
+di specifica che eventualmente sostituiranno le DTD. Il MathML 2.0
+&egrave; stato progettato in modo cosciente perch&eacute; la
+matematica possa avvantaggiarsi delle ultime tecnologie del
+Web. Perci&ograve; deve esserci uno Schema per il MathML. Per maggiori
+informazioni su uno Schema MathML si veda l'<a
+href="appendixa.html">Appendice&nbsp;A [Analisi del MathML]</a> e la
+pagina principale del MathML (<a
+href="http://www.w3.org/Math"></a>). </p>
+
+<p>Comunque, il MathML specifica inoltre alcune regole di sintassi e
+di grammatica in aggiunta alle regole generali che eredita come
+applicazione XML. Queste regole permettono al MathML di codificare
+molte pi&ugrave; informazioni di quanto sarebbe possibile normalmente
+con l'XML puro, senza introdurre molti pi&ugrave; elementi, e usando
+una DTD o uno schema sostanzialmente pi&ugrave; complesso. Nell'<a
+href="appendixb.html">Appendice&nbsp;B [Grammatica di convalida della
+marcatura di contenuto]</a> &egrave; data una grammatica per le
+espressioni della marcatura di contenuto. Ovviamente, uno svantaggio
+dell'uso di regole specifiche del MathML &egrave; che sono invisibili
+agli elaboratori e ai convalidatori XML generici. </p>
+
+<p>Ci sono fondamentalmente due tipi di regole di grammatica e di
+sintassi del MathML aggiuntive. Un tipo coinvolge come porre criteri
+aggiuntivi sui valori degli attributi. Per esempio, non &egrave;
+possibile in XML puro richiedere che il valore di un attributo sia un
+intero positivo. Il secondo tipo di regola specifica restrizioni
+pi&ugrave; dettagliate sugli elementi figli (per esempio
+sull'ordinamento) di quelle date nella DTD o anche in uno schema. Per
+esempio, non &egrave; possibile in XML specificare che il primo figlio
+debba essere interpretato in un modo, e il secondo in un altro. </p>
+
+<p>Le seguenti sezioni discutono caratteristiche della sintassi e
+della grammatica sia dell'XML in generale che del MathML in
+particolare. Nel resto delle specifiche del MathML, faremo normalmente
+attenzione a distinguere tra l'uso richiesto dalla sintassi dell'XML e
+dalla DTD (e dallo schema) del MathML e l'uso richiesto da regole
+specifiche del MathML. Comunque, alluderemo spesso a `errori MathML'
+senza identificare quale parte delle specifiche &egrave; stata
+violata. </p>
+
+<h3>
+<a name="fund:xmlsyntax"></a>2.3.2 Una breve introduzione della
+sintassi dell'XML </h3>
+
+<p>Poich&eacute; il MathML &egrave; un'applicazione dell'XML, le
+specifiche del MathML usano la terminologia dell'XML per
+descriverlo. Brevemente, i dati XML sono composti da caratteri Unicode
+(che comprendono i normali caratteri ASCII), `riferimenti ad
+entit&agrave;' (chiamati in modo informale `entit&agrave;') come
+<code>&amp;lt;</code> che rappresentano di solito `caratteri estesi',
+ed `elementi' come <code>&lt;mi fontstyle=&quot;normal&quot;&gt; x
+&lt;/mi&gt;</code>. </p>
+
+<p>Molto spesso un elemento contiene altri dati XML detti il suo
+`contenuto', o `corpo', tra un `tag iniziale' (a volte detto `tag di
+apertura') e un `tag finale', come nell'HTML. Ci sono anche `elementi
+vuoti' come <code>&lt;plus/&gt;</code>, il cui tag iniziale finisce
+con <code>/&gt;</code> per indicare che l'elemento non ha contenuto o
+tag finale. Il tag iniziale pu&ograve; contenere parametri con nomi
+detti `attributi', come <code>fontstyle=&quot;normal&quot;</code>
+nell'esempio precedente. Per maggiori dettagli sull'XML, si consultino
+le specifiche dell'XML [<a
+href="appendixi.html#Bray1998">Bray1998</a>]. </p>
+
+<p>Poich&eacute; l'XML fa differenza tra maiuscole e minuscole, lo
+stesso vale per i nomi di elementi e di attributi del MathML. Per
+ragioni di leggibilit&agrave;, il MathML li definisce quasi tutti in
+minuscolo. </p>
+
+<p>Nelle discussioni formali sulla marcatura XML si mantiene una
+distinzione tra un elemento, come un elemento <code>mrow</code>, e i
+tag <code>&lt;mrow&gt;</code> e <code>&lt;/mrow&gt;</code> che lo
+marcano. Ci&ograve; che si trova fra il tag iniziale
+<code>&lt;mrow&gt;</code> e il tag finale <code>&lt;/mrow&gt;</code>
+&egrave; il contenuto o corpo dell'elemento <code>mrow</code>. Un
+`elemento vuoto' come <code>none</code> per definizione non ha un
+corpo e perci&ograve; ha un solo tag della forma
+<code>&lt;none/&gt;</code>. Di solito, la distinzione tra elementi e
+tag non sar&agrave; tracciata cos&igrave; nettamente in queste
+specifiche. Per esempio, a volte faremo riferimento agli elementi
+<code>&lt;mrow&gt;</code> e <code>&lt;none/&gt;</code>, intendendo in
+realt&agrave; gli elementi i cui tag sono questi, perch&eacute; i
+riferimenti agli elementi siano visivamente distinguibili dai
+riferimenti agli attributi. Comunque, le parole `elemento' e `tag'
+saranno usate in stretto accordo con la terminologia XML. </p>
+
+<h3>
+<a name="N2223"></a>2.3.3 Figli rispetto ad argomenti </h3>
+
+<p>Molti elementi MathML richiedono un numero specifico di elementi
+figli o aggiungono significati aggiuntivi ai figli in certe
+posizioni. Come notato in precedenza, richieste di questo tipo sono
+specifiche del MathML, e non possono essere date interamente usando la
+sintassi e la grammatica XML. Quando i figli di un dato elemento
+MathML sono soggetti a questo tipo di condizioni aggiuntive, spesso
+faremo riferimento ad essi come <i>argomenti</i> invece che
+semplicemente come figli in ordine di enfatizzare il loro utilizzo
+specifico del MathML. Si noti che specialmente nel <a
+href="chapter3.html">Capitolo&nbsp;3 [Marcatura di presentazione]</a>
+il termine `argomento' si usa di solito in questo senso tecnico, a
+meno che non sia specificato altrimenti, e perci&ograve; si riferisce
+ad un elemento figlio. </p>
+
+<p>Nelle discussioni dettagliate della sintassi degli elementi data
+con ogni elemento nelle specifiche del MathML, il numero di argomenti
+necessari e il loro ordine &egrave; indicato implicitamente dando nomi
+per gli argomenti alle varie posizioni. Queste informazioni sono date
+anche per gli elementi di presentazione nella tabella degli argomenti
+necessari nella <a
+href="chapter3.html#presm:reqarg">Sezione&nbsp;3.1.3 [Argomenti
+necessari]</a>, e per gli elementi di contenuto nell'<a
+href="appendixb.html">Appendice&nbsp;B [Grammatica di convalida della
+marcatura di contenuto]</a>. </p>
+
+<p>Pochi elementi hanno altri requisiti sul numero o sul tipo degli
+argomenti. Questi requisiti aggiuntivi sono descritti insieme con i
+singoli elementi. </p>
+
+<h3>
+<a name="fund:attval"></a>2.3.4 Valori degli attributi del MathML
+</h3>
+
+<p>Secondo le specifiche del linguaggio XML, gli attributi dati agli
+elementi devono avere una delle forme
+</p>
+<pre>
+nome-attributo = &quot;valore&quot;
+</pre>
+<p>
+oppure
+</p>
+<pre>
+nome-attributo = 'valore'
+</pre>
+<p>
+dove gli spazi bianchi intorno al simbolo '=' sono opzionali. </p>
+
+<p>I nomi degli attributi sono mostrati generalmente in un carattere
+<code>a grandezza fissa</code> all'interno di testo descrittivo in
+queste specifiche, come pure &egrave; usato il carattere <code>a
+grandezza fissa</code> per gli esempi. </p>
+
+<p>Il valore di un attributo, che in generale nel MathML pu&ograve;
+essere una stringa di caratteri arbitrari, deve essere circondato da
+una coppia o di doppi apici (<code>&quot;</code>) o di apici singoli
+(<code>'</code>). Il tipo di carattere non usato per circondare il
+valore pu&ograve; farne parte. </p>
+
+<p>Il MathML usa una sintassi pi&ugrave; complicata per valori di
+attributi rispetto alla sintassi XML generica richiesta dalla DTD del
+MathML. Queste regole aggiuntive sono intese per l'uso da parte di
+applicazioni MathML, ed &egrave; un errore MathML violarle, anche se
+non possono essere imposte dall'elaborazione XML. La sintassi MathML
+di ogni valore di attributo &egrave; specificata nella tabella degli
+attributi fornita con la descrizione di ogni elemento, usando una
+notazione descritta in seguito. Nelle applicazioni MathML questi
+valori di attributi dovrebbero essere elaborati ulteriormente come
+segue, a meno che non sia specificato altrimenti: gli spazi bianchi
+devono essere ignorati tranne che per separare sequenze di lettere e
+cifre in parole o numeri; e i riferimenti numerici Unicode (elencati
+nel <a href="chapter6.html">Capitolo&nbsp;6 [Caratteri, entit&agrave;
+e font]</a>) che possono essere usati all'interno di elementi token
+per rappresentare caratteri possono essere usati per rappresentare
+quei caratteri nei valori degli attributi (quando quei caratteri
+sarebbero permessi dalla sintassi del valore dell'attributo). Si noti
+che l'uso dei riferimenti ad entit&agrave; per la maggior parte dei
+simboli &egrave; ora <a
+href="chapter7.html#interf:deprec">disapprovato</a> nel MathML
+2. Perci&ograve; l'uso di un riferimento numerico a carattere Unicode
+&egrave; migliore, se la codifica di ingresso non permette di usarlo
+direttamente. </p>
+
+<p>In particolare, i caratteri <code>&quot;</code>, <code>'</code>,
+<code>&amp;</code> e <code>&lt;</code> possono essere inclusi nei
+valori degli attributi MathML (quando permesso dalla sintassi del
+valore dell'attributo) usando rispettivamente i riferimenti ad
+entit&agrave; <code>&amp;quot;</code>, <code>&amp;apos;</code>,
+<code>&amp;amp;</code> e <code>&amp;lt;</code>. </p>
+
+<p>La DTD del MathML fornita nell'<a
+href="appendixa.html">Appendice&nbsp;A [Analisi del MathML]</a>
+dichiara la maggior parte dei tipi di valori degli attributi come
+stringhe <code>CDATA</code>. Questo permette una maggiore
+interoperabilit&agrave; con il software SGML e XML esistente e
+permette l'estensione degli elenchi dei valori predefiniti. Simili
+considerazioni valgono con gli schemi. </p>
+
+<h4>
+<a name="N2339"></a>2.3.4.1 Notazioni sintattiche usate nelle
+specifiche MathML </h4>
+
+<p>Per descrivere la sintassi specifica del MathML dei valori permessi
+per gli attributi, si usano le seguenti convenzioni e notazioni per la
+maggior parte degli attributi nel presente documento.
+</p>
+<table id="fund:table-attval" cellpadding="3">
+<thead>
+<tr>
+<td rowspan="1" colspan="1">Notazione</td>
+<td rowspan="1" colspan="1">A cosa corrisponde</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1">numero</td>
+<td rowspan="1" colspan="1">numero decimale intero o razionale (una
+stringa di cifre con un punto decimale), che inizia opzionalmente con
+'-'</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">numero-senza-segno</td>
+<td rowspan="1" colspan="1">numero decimale intero o reale, senza
+segno</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">intero</td>
+<td rowspan="1" colspan="1">intero decimale, che inizia opzionalmente
+con '-'</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">intero-positivo</td>
+<td rowspan="1" colspan="1">numero decimale, senza segno, non 0</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">stringa</td>
+<td rowspan="1" colspan="1">stringa arbitraria (sempre l'intero valore
+dell'attributo)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">carattere</td>
+<td rowspan="1" colspan="1">singolo carattere non di spaziatura, o
+riferimento a entit&agrave; MathML; gli spazi bianchi di separazione
+sono opzionali</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">#rrggbb</td>
+<td rowspan="1" colspan="1">colore in formato RGB; le tre coppie di
+cifre esadecimali nell'esempio #5599dd definiscono proporzioni di
+rosso, verde e blu su una scala da x00 a xFF, che d&agrave; un blu
+cielo intenso.</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">h-unit&agrave;</td>
+<td rowspan="1" colspan="1">unit&agrave; di lunghezza orizzontale (le
+unit&agrave; permesse sono elencate in seguito)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">v-unit&agrave;</td>
+<td rowspan="1" colspan="1">unit&agrave; di lunghezza verticale (le
+unit&agrave; permesse sono elencate in seguito)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">famiglia-di-font-css</td>
+<td rowspan="1" colspan="1">spiegato nella sottosezione CSS, in
+seguito</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">nome-di-colore-css</td>
+<td rowspan="1" colspan="1">spiegato nella sottosezione CSS, in
+seguito</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">altre parole in corsivo</td>
+<td rowspan="1" colspan="1">spiegate nel testo per ogni attributo</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">forma +</td>
+<td rowspan="1" colspan="1">una o pi&ugrave; istanze di 'forma'</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">forma *</td>
+<td rowspan="1" colspan="1">zero o pi&ugrave; istanze di 'forma'</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">f1 f2 ... fn</td>
+<td rowspan="1" colspan="1">un'istanza di ciascuna forma, in sequenza,
+opzionalmente separate da spazi bianchi</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">f1 | f2 | ... | fn</td>
+<td rowspan="1" colspan="1">una qualunque delle forme specificate</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">[ forma ]</td>
+<td rowspan="1" colspan="1">un'istanza opzionale di 'forma'</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">( forma )</td>
+<td rowspan="1" colspan="1">lo stesso che forma</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">parola in testo normale</td>
+<td rowspan="1" colspan="1">quella parola, presente letteralmente nel
+valore dell'attributo (a meno che non faccia ovviamente parte di una
+frase di spiegazioni)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">simbolo tra apici</td>
+<td rowspan="1" colspan="1">quel simbolo, presente letteralmente nel
+valore dell'attributo (es. &quot;+&quot; or '+')</td>
+</tr>
+</tbody>
+</table>
+<p>
+</p>
+
+<p>L'ordine di precedenza degli operatori per la notazione della
+sintassi &egrave;, dalla precedenza maggiore a quella minore:
+</p>
+<ul>
+<li>forma + o forma *</li>
+<li>f1 f2 ... fn (sequenza di forme)</li>
+<li>f1 | f2 | ... | fn (forme alternative)</li>
+</ul>
+<p>
+</p>
+
+<p>Una <i>stringa</i> pu&ograve; contenere caratteri arbitrari
+specificabili all'interno dei valori degli attributi
+<code>CDATA</code> nell'XML; deve usare riferimenti alle entit&agrave;
+per certi caratteri, come descritto in precedenza. Pu&ograve;
+contenere riferimenti a caratteri o a entit&agrave; in formato XML per
+ciascuno dei caratteri elencati nel <a
+href="chapter6.html">Capitolo&nbsp;6 [Caratteri, entit&agrave; e
+font]</a>. Nessuna regola di sintassi nel MathML comprende una
+<i>stringa</i> come solo una parte del valore di un attributo, solo
+come l'intero valore. </p>
+
+<p>Un <i>carattere</i> &egrave; un singolo carattere Unicode che non
+sia uno spazio bianco, o un riferimento ad entit&agrave; carattere, o
+un'espressione che usa l'elemento <code>mchar</code> e d&agrave; il
+nome di un carattere. Esempi di quest'ultima forma sono dati dalle
+centinaia nel <a href="chapter6.html">Capitolo&nbsp;6 [Caratteri,
+entit&agrave; e font]</a>. </p>
+
+<p>Come semplice esempio, i valori permessi per gli attributi booleani
+sono specificati come <code>true | false</code>, che significa che
+l'intero valore dell'attributo deve essere o <code>true</code> o
+<code>false</code>. </p>
+
+<p>Parole chiave e numeri adiacenti devono essere separati da uno
+spazio bianco nel valore reale dell'attributo, tranne per gli
+identificatori di unit&agrave; (denotati dai simboli sintattici
+<code>h-unit&agrave;</code> o <code>v-unit&agrave;</code>) che seguono
+i numeri. Gli spazi bianchi non sono altrimenti necessari, ma sono
+permessi tra due qualunque dei token elencati in precedenza, tranne
+(per compatibilit&agrave; con i CSS1) immediatamente prima degli
+identificatori di unit&agrave;, tra il segno '-' e le cifre dei numeri
+negativi, o tra <code>#</code> e <code>rrggbb</code> o
+<code>rgb</code>. </p>
+
+<p>Valori numerici di attributi per le dimensioni che devono dipendere
+dal font attuale possono essere dati in unit&agrave; relative ai font,
+o in unit&agrave; assolute con un nome (descritte in una sottosezione
+separata). Le dimensioni orizzontali sono date per convenzione in
+<code>em</code>, e le dimensioni verticali in <code>ex</code>, facendo
+seguire immediatamente un numero da uno degli identificatori di
+unit&agrave; <code>em</code> o <code>ex</code>. Per esempio, lo spazio
+orizzontale intorno ad un operatore come `+' &egrave; dato per
+convenzione in <code>em</code>, anche se potrebbero essere usate altre
+unit&agrave;. Usare unit&agrave; relative ai font &egrave;
+generalmente preferibile all'uso di unit&agrave; assolute,
+poich&eacute; permette alle riproduzioni di aumentare o diminuire in
+dimensione proporzionalmente alla dimensione attuale del font. </p>
+
+<p>Per la maggior parte degli attributi numerici, solo quelli in un
+sottoinsieme dei valori esprimibili hanno senso; valori all'esterno di
+questo sottoinsieme non sono errori, a meno che non sia specificato
+diversamente, ma piuttosto sono arrotondati verso l'alto o verso il
+basso (a discrezione del riproduttore) al valore pi&ugrave; vicino
+all'interno del sottoinsieme permesso. L'insieme dei valori permessi
+pu&ograve; dipendere dal riproduttore, e non &egrave; specificato dal
+MathML. </p>
+
+<p>Se &egrave; dichiarato che un valore numerico all'interno della
+descrizione della sintassi del valore di un attributo permette un
+segno meno ('-'), es. <code>numero</code> o <code>intero</code>, non
+&egrave; un errore di sintassi che ce ne sia uno in casi dove un
+valore negativo non ha senso. Invece, il valore dovrebbe essere
+gestito dall'applicazione che elabora il documento come descritto nel
+paragrafo precedente. Un segno pi&ugrave; esplicito ('+') non &egrave;
+permesso come parte di un valore numerico tranne quando &egrave;
+specificatamente elencato nella sintassi (come un '+' o &quot;+&quot;
+tra apici) e la sua presenza pu&ograve; modificare il significato del
+valore dell'attributo (come documentato con ogni attributo che lo
+permette). </p>
+
+<p>I simboli <code>h-unit&agrave;</code>, <code>v-unit&agrave;</code>,
+<code>famiglia-di-font-css</code> e <code>nome-di-colore-css</code>
+sono spiegati nelle seguenti sottosezioni. </p>
+
+<h4>
+<a name="fund:units"></a>2.3.4.2 Attributi con unit&agrave; </h4>
+
+<p>Alcuni attributi accettano lunghezze orizzontali o verticali come
+numeri seguiti da un `identificatore di unit&agrave;' (spesso chiamato
+soltanto `unit&agrave;'). I simboli di sintassi
+<code>h-unit&agrave;</code> e <code>v-unit&agrave;</code> si
+riferiscono rispettivamente ad un'unit&agrave; per la lunghezza
+orizzontale o verticale. Le unit&agrave; possibili e le lunghezze a
+cui si riferiscono sono mostrate nella tabella seguente; sono le
+stesse per lunghezze orizzontali e verticali, ma i simboli di sintassi
+sono distinti nella sintassi degli attributi per tenere presente la
+direzione nella quale sono usati. </p>
+
+<p>Gli identificatori di unit&agrave; e i loro significati sono presi
+dal CSS1. Comunque, la sintassi dei numeri seguiti da identificatori
+di unit&agrave; nel MathML non &egrave; identica alla sintassi dei
+valori di lunghezza con unit&agrave; nei fogli di stile CSS,
+poich&eacute; i numeri nel CSS non possono finire con virgole
+decimali, e possono iniziare con segni '+'. </p>
+
+<p>Le unit&agrave; orizzontali o verticali possibili nel MathML sono:
+</p>
+<table cellpadding="3">
+<thead>
+<tr>
+<td rowspan="1" colspan="1">Identificatore di unit&agrave;</td>
+<td rowspan="1" colspan="1">Descrizione di unit&agrave;</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1">em</td>
+<td rowspan="1" colspan="1">em (unit&agrave; relativa ai font
+tradizionalmente usata per lunghezze orizzontali)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">ex</td>
+<td rowspan="1" colspan="1">ex (unit&agrave; relativa ai font
+tradizionalmente usata per lunghezze verticali)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">px</td>
+<td rowspan="1" colspan="1">pixel, o dimensione in pixel del display
+attaule</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">in</td>
+<td rowspan="1" colspan="1">pollici (1 pollice = 2.54 centimetri)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">cm</td>
+<td rowspan="1" colspan="1">centimetri</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">mm</td>
+<td rowspan="1" colspan="1">millimetri</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">pt</td>
+<td rowspan="1" colspan="1">punti (1 punto = 1/72 di pollice)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">pc</td>
+<td rowspan="1" colspan="1">pica (1 pica = 12 punti)</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">%</td>
+<td rowspan="1" colspan="1">percentuale del valore predefinito</td>
+</tr>
+</tbody>
+</table>
+
+<p>Le unit&agrave; tipografiche <code>em</code> e <code>ex</code> sono
+definite nell'<a href="appendixf.html">Appendice&nbsp;F
+[Glossario]</a>, e discusse ulteriormente sotto `Note aggiuntive' in
+seguito. </p>
+
+<p><code>%</code> &egrave; un'unit&agrave; `relativa'; quando un
+valore di un attributo &egrave; dato come <code>n%</code> (per ogni
+valore numerico <code>n</code>), il valore specificato &egrave; il
+valore predefinito della propriet&agrave; che si intende controllare
+moltiplicato per <code>n</code> diviso 100. Il valore predefinito (o
+il modo nel quale esso &egrave; ottenuto, se non &egrave; costante)
+&egrave; elencato nella tabella degli attributi per ogni elemento, e
+il suo significato &egrave; descritto nella successiva documentazione
+dell'attributo. (L'elemento <code>mpadded</code> ha la sua sintassi
+per <code>%</code> e non lo permette come identificatore di
+unit&agrave;.) </p>
+
+<p>Per consistenza con i CSS, le unit&agrave; di lunghezza nel MathML
+sono raramente opzionali. Quando lo sono, il simbolo di unit&agrave;
+&egrave; racchiuso tra parentesi quadre nella sintassi dell'attributo,
+dopo il numero al quale si applica, es. <code>numero [ h-unit&agrave;
+]</code>. Il significato di non specificare nessuna unit&agrave;
+&egrave; dato nella documentazione di ogni attributo; in generale
+&egrave; che il numero dato &egrave; un moltiplicatore per il valore
+predefinito dell'attributo. (In questi casi, specificare il numero
+<code>nnn</code> senza un'unit&agrave; &egrave; equivalente a
+specificare il numero <code>nnn</code> per 100 seguito da
+<code>%</code>. Per esempio, <code>&lt;mo maxsize=&quot;2&quot;&gt; (
+&lt;/mo&gt;</code> &egrave; equivalente a <code>&lt;mo
+maxsize=&quot;200%&quot;&gt; ( &lt;/mo&gt;</code>.) </p>
+
+<p>Come eccezione speciale (anch'essa consistente con i CSS), non
+&egrave; necessario che un valore numerico uguale a 0 sia seguito da
+un identificatore di unit&agrave; anche se la sintassi qui specificata
+ne richiede uno. In tali casi, l'identificatore di unit&agrave; (o la
+sua mancanza) non importerebbe, poich&eacute; 0 per ogni unit&agrave;
+fa 0. </p>
+
+<p>Per la maggior parte degli attributi &egrave; scelta l'unit&agrave;
+tipica che sarebbe usata per descriverli nell'impaginazione come
+quella usata nel valore predefinito di quell'attributo in queste
+specifiche; quando non &egrave; dato un valore predefinito specifico,
+l'unit&agrave; tipica &egrave; di solito menzionata nella tabella
+della sintassi o nella documentazione per quell'attributo. Le
+unit&agrave; pi&ugrave; comuni sono <code>em</code> o
+<code>ex</code>. Comunque, pu&ograve; essere usata qualunque
+unit&agrave;, a meno che non sia specificato diversamente per un dato
+attributo. </p>
+
+<h5>
+<a name="N3012"></a>Note aggiuntive sulle unit&agrave; </h5>
+
+<p>Si noti che alcuni attributi, es. <code>framespacing</code> in un
+elemento <code>&lt;mtable&gt;</code>, possono contenere pi&ugrave; di
+un valore numerico, ciascuno seguito dalla sua unit&agrave;. </p>
+
+<p>E' convenzione usare l'unit&agrave; relativa ai font
+<code>ex</code> principalmente per lunghezze verticali, e
+<code>em</code> principalmente per lunghezze orizzontali, ma non
+&egrave; necessario. Queste unit&agrave; sono relative al font e alla
+dimensione del font usata per riprodurre l'elemento nel cui valore di
+attributo sono specificate, il che significa che devono essere
+interpretate <i>dopo</i> che sono elaborati attributi come
+<code>fontfamily</code> e <code>fontsize</code>, se ce ne sono sullo
+stesso elemento, poich&eacute; modificare il font corrente o la sua
+dimensione pu&ograve; alterare la lunghezza di una di queste
+unit&agrave;. </p>
+
+<p>La definizione della lunghezza di ogni unit&agrave; (ma non la
+sintassi MathML per i valori di lunghezza) &egrave; quella specificata
+nei CSS1, tranne che se un font fornisce valori specifici per
+<code>em</code> e <code>ex</code> diversi dai valori definiti dai CSS1
+(rispettivamente la dimensione del font e l'altezza `x'), devono
+essere usati questi valori. </p>
+
+<h4>
+<a name="fund:cssatt"></a>2.3.4.3 Attributi compatibili con i CSS
+</h4>
+
+<p>Vari attributi del MathML, elencati in seguito, corrispondono
+strettamente alle propriet&agrave; di presentazione testuale definite
+dai Fogli di Stile a Cascata, Livello 1 (CSS1). </p>
+
+<p>I nomi e i valori accettabili di questi attributi sono stati
+allineati con le direttive CSS1 dove possibile. In generale, la
+sintassi MathML per ogni attributo intende essere un sottoinsieme
+della sintassi CSS per la propriet&agrave; corrispondente. Differenze
+di dettagli, dove esistono, sono spiegate con la documentazione di
+ogni attributo, nelle sezioni di queste specifiche elencate nella
+tabella precedente. </p>
+
+<p>La sintassi di certi attributi &egrave; parzialmente specificata,
+nelle tabelle della sintassi degli attributi in queste specifiche,
+usando uno dei simboli <code>famiglia-di-font-css</code> o
+<code>nome-di-colore-css</code>, come mostrato nella seguente
+tabella. Questi simboli si riferiscono a sintassi di altre Direttive
+W3C, e sono spiegati nelle sezioni di queste specifiche a cui si fa
+riferimento nella tabella. </p>
+<table cellpadding="3">
+<thead>
+<tr>
+<td rowspan="1" colspan="1">Attributo MathML</td>
+<td rowspan="1" colspan="1">Propriet&agrave; CSS</td>
+<td rowspan="1" colspan="1">simbolo di sintassi</td>
+<td rowspan="1" colspan="1">Elementi MathML</td>
+<td rowspan="1" colspan="1">si riferisce a</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="1" colspan="1">fontsize</td>
+<td rowspan="1" colspan="1">font-size</td>
+<td rowspan="1" colspan="1">-</td>
+<td rowspan="1" colspan="1">token di presentazione; <code>mstyle</code></td>
+<td rowspan="1" colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">fontweight</td>
+<td rowspan="1" colspan="1">font-weight</td>
+<td rowspan="1" colspan="1">-</td>
+<td rowspan="1" colspan="1">token di presentazione; <code>mstyle</code></td>
+<td rowspan="1" colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">fontstyle</td>
+<td rowspan="1" colspan="1">font-style</td>
+<td rowspan="1" colspan="1">-</td>
+<td rowspan="1" colspan="1">token di presentazione; <code>mstyle</code></td>
+<td rowspan="1" colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">fontfamily</td>
+<td rowspan="1" colspan="1">font-family</td>
+<td rowspan="1" colspan="1">famiglia-di-font-css</td>
+<td rowspan="1" colspan="1">token di presentazione; <code>mstyle</code></td>
+<td rowspan="1" colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">color</td>
+<td rowspan="1" colspan="1">color</td>
+<td rowspan="1" colspan="1">nome-di-colore-css</td>
+<td rowspan="1" colspan="1">token di presentazione; <code>mstyle</code></td>
+<td rowspan="1" colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">background</td>
+<td rowspan="1" colspan="1">background</td>
+<td rowspan="1" colspan="1">nome-di-colore-css</td>
+<td rowspan="1" colspan="1"><code>mstyle</code></td>
+<td rowspan="1" colspan="1">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p>Si veda inoltre la <a
+href="chapter2.html#fund:globatt">Sezione&nbsp;2.3.5 [Attributi
+condivisi da tutti gli elementi del MathML]</a> in seguito per una
+discussione degli attributi <code>class</code>, <code>style</code> e
+<code>id</code> per l'uso con i fogli di stile. </p>
+
+<h5>
+<a name="N3329"></a>Ordine di elaborazione degli attributi rispetto ai
+fogli di stile </h5>
+
+<p>I CSS o fogli di stile analoghi possono specificare modifiche alle
+propriet&agrave; di riproduzione degli elementi MathML selezionati; la
+selezione di tali elementi pu&ograve; avvenire in vari modi. Sia le
+propriet&agrave; elencate in precedenza che altri attributi di
+riproduzione del MathML o propriet&agrave; supportate da un meccanismo
+di fogli di stile possono essere influenzate, in principio, per ogni
+elemento. Poich&eacute; le propriet&agrave; di riproduzione possono
+anche essere modificate da attributi su un elemento o automaticamente
+&egrave; necessario specificare l'ordine nel quale sono applicate le
+modifiche da varie fonti. Un esempio di aggiustamento automatico
+&egrave; ci&ograve; che succede per <code>fontsize</code>, come
+spiegato nella discussione su <code>scriptlevel</code> nella <a
+href="chapter3.html#presm:mstyle">Sezione&nbsp;3.3.4 [Modifiche allo
+stile (<code>mstyle</code>)]</a>. Nel caso di modifiche `assolute',
+ovvero impostare un nuovo valore della propriet&agrave; indipendente
+dal vecchio valore (opposte alle modifiche `relative', come incrementi
+o moltiplicazioni per un fattore), la modifica assoluta effettuata per
+ultima sar&agrave; l'unica modifica assoluta efficace, cos&igrave; le
+fonti di modifiche che dovrebbero avere la priorit&agrave; pi&ugrave;
+alta devono essere elaborate per ultime. </p>
+
+<p>Nel caso dei CSS1, l'ordine di elaborazione delle modifiche da
+varie fonti che influenzano le propriet&agrave; di riproduzione di un
+elemento MathML deve essere il seguente: </p>
+<blockquote>
+<p>
+(prime modifiche; priorit&agrave; minore)
+</p>
+</blockquote>
+<ul>
+
+<li>
+modifiche automatiche alle propriet&agrave; o agli attributi basati
+sul tipo dell'elemento padre, e dalla posizione di questo elemento
+nell'elemento padre, come per le modifiche a <code>fontsize</code> in
+relazione a <code>scriptlevel</code> menzionate in precedenza; tali
+modifiche saranno di solito implementate dall'elemento padre stesso
+prima che passi un insieme di propriet&agrave; di riproduzione a
+quest'elemento </li>
+
+<li>
+da un foglio di stile del lettore: stili che <i>non</i> sono
+dichiarati `important' </li>
+
+<li>
+impostazioni esplicite di attributi su quest'elemento MathML </li>
+
+<li>
+da un foglio di stile dell'autore: stili che <i>non</i> sono
+dichiarati `important' </li>
+
+<li>
+da un foglio di stile del lettore: stili che <i>sono</i> dichiarati
+`important' </li>
+
+<li>
+da un foglio di stile dell'autore: stili che <i>sono</i> dichiarati
+`important' </li>
+
+</ul>
+<blockquote>
+<p>
+(ultime modifiche; priorit&agrave; maggiore)
+</p>
+</blockquote>
+
+<p>Si noti che l'ordine delle modifiche derivate dai fogli di stile
+CSS &egrave; specificato dai CSS stessi. La seguente spiegazione
+logica &egrave; legata solo al problema di dove in quest'ordine
+preesistente devono essere inserite le modifiche causate
+dall'impostazione esplicita di attributi MathML. </p>
+
+<p>Spiegazione logica: gli attributi di riproduzione del MathML sono
+analoghi agli attributi di riproduzione dell'HTML come
+<code>align</code>, che secondo la sezione dei CSS1 sull'ordine di
+cascata devono essere elaborati con la stessa
+priorit&agrave;. Inoltre, questa scelta di priorit&agrave; permette ai
+lettori, dichiarando certi stili CSS `important', di decidere quali
+delle loro preferenze di stile devono sovrascrivere l'impostazione
+esplicita degli attributi nel MathML. Poich&eacute; le espressioni
+MathML, sia composte di elementi di `presentazione' che di
+`contenuto', sono intese principalmente per trasferire significato,
+con il loro `aspetto grafico' (se presente) inteso principalmente per
+aiutare a questo fine ma non per essere essenziale, &egrave; probabile
+che i lettori spesso vorranno che le loro preferenze di stile abbiano
+la priorit&agrave;; l'eccezione principale sar&agrave; quando un
+attributo di riproduzione &egrave; inteso per alterare il significato
+contenuto in un'espressione, cosa che &egrave; generalmente
+scoraggiata negli attributi di presentazione del MathML. </p>
+
+<h4>
+<a name="N3452"></a>2.3.4.4 Valori predefiniti degli attributi </h4>
+
+<p>I valori predefiniti degli attributi MathML sono dati in generale
+insieme alla descrizione degli elementi specifici nel testo. I valori
+predefiniti mostrati in testo normale nelle tabelle degli attributi
+per un elemento sono valori letterali (a meno che non siano ovviamente
+frasi esplicative), ma quando sono in corsivo sono la descrizione di
+come possono essere calcolati i valori predefiniti. </p>
+
+<p>I valori predefiniti descritti come <i>ereditati</i> sono presi
+dall'ambiente di riproduzione, come descritto sotto
+<code>mstyle</code>, o in alcuni casi (descritti individualmente) dai
+valori di altri attributi di elementi circostanti, o da certe parti di
+quei valori. Il valore usato sar&agrave; sempre uno che potrebbe
+essere stato specificato espressamente, se fosse noto; non
+dipender&agrave; mai dal contenuto o dagli attributi dello stesso
+elemento, solo dal suo ambiente. (Ci&ograve; che significa quando
+viene usato pu&ograve;, comunque, dipendere da questi attributi o dal
+contenuto.) </p>
+
+<p>I valori predefiniti descritti come <i>automatici</i> devono essere
+calcolati da un riproduttore MathML in un modo che produca una
+presentazione di alta qualit&agrave;; come fare questo non &egrave;
+generalmente specificato dalle specifiche del MathML. Il valore
+calcolato sar&agrave; sempre uno che potrebbe essere stato specificato
+espressamente, se fosse noto, ma dipender&agrave; di solito dal
+contenuto dell'elemento e probabilmente dall'ambiente di
+riproduzione. </p>
+
+<p>Altre descrizioni in corsivo di valori predefiniti che appaiono
+nelle tabelle degli attributi sono spiegate singolarmente per ogni
+attributo. </p>
+
+<p>Gli apici semplici o doppi necessari attorno ai valori di attributi
+in un tag di apertura XML non sono mostrate nelle tabelle della
+sintassi dei valori degli attributi per ogni elemento, ma sono
+mostrate attorno ai valori degli attributi degli esempi nel
+testo. </p>
+
+<p>Si noti che, in generale, non c'&egrave; un valore che possa essere
+dato esplicitamente per un attributo MathML che simuli l'effetto di
+non specificare affatto l'attributo per gli attributi <i>ereditati</i>
+o <i>automatici</i>. Dare espressamente le parole `ereditato' o
+`automatico' non funzioner&agrave;, e non &egrave; generalmente
+permesso. Inoltre, anche per gli attributi di presentazione per i
+quali &egrave; documentato qui un valore predefinito specifico,
+pu&ograve; essere usato l'elemento <code>mstyle</code> (<a
+href="chapter3.html#presm:mstyle">Sezione&nbsp;3.3.4 [Modifiche allo
+stile (<code>mstyle</code>)]</a>) per cambiarlo per gli elementi che
+esso contiene. Perci&ograve;, la DTD del MathML dichiara la maggior
+parte dei valori predefiniti degli attributi di presentazione come
+<code>#IMPLIED</code> (impliciti), cosa che impedisce ai
+preelaboratori XML di aggiungere loro uno specifico valore
+predefinito. Questo punto di vista &egrave; portato attraverso lo
+schema del MathML. </p>
+
+<h4>
+<a name="N3508"></a>2.3.4.5 Valori degli attributi nella DTD del
+MathML </h4>
+
+<p>In una DTD XML, i valori degli attributi permessi possono essere
+dichiarati come stringhe generiche, o possono essere vincolati in vari
+modi, sia enumerando i possibili valori, sia dichiarandoli di certi
+tipi di dati speciali. La scelta di un tipo di attributo XML influenza
+l'estensione nella quale possono essere eseguiti controlli di
+validit&agrave; usando una DTD. </p>
+
+<p>La DTD del MathML specifica i tipi formali di attributi XML per
+tutti gli attributi MathML, comprese le enumerazioni di valori
+legittimi in alcuni casi. In generale, comunque, la DTD del MathML
+&egrave; relativamente permissiva, dichiarando spesso i valori degli
+attributi come stringhe; questo &egrave; fatto per ragioni di
+interoperabilit&agrave; con analizzatori SGML permettendo che
+attributi multipli di un elemento MathML accettino gli stessi valori
+(come <code>true</code> e <code>false</code>), e anche per permettere
+estensioni agli elenchi dei valori predefiniti. </p>
+
+<p>Allo stesso tempo, anche se un valore di attributo pu&ograve;
+essere dichiarato come una stringa nella DTD, solo certi valori sono
+legittimi nel MathML, come descritto in precedenza e nel resto di
+queste specifiche. Per esempio, molti attributi si aspettano valori
+numerici. Nella sezione che segue sono descritti i valori permessi per
+gli attributi di ciascun elemento. Per determinare quando questi
+vincoli sono realmente imposti nella DTD del MathML, si consulti l'<a
+href="appendixa.html">Appendice&nbsp;A [Analisi del
+MathML]</a>. Comunque, la mancanza di imposizione di un requisito
+nella DTD <i>non</i> implica che il requisito stesso non faccia parte
+del linguaggio MathML, o che non sar&agrave; imposto da un particolare
+riproduttore MathML. (Si veda la <a
+href="chapter7.html#interf:error">Sezione&nbsp;7.2.2 [Gestione degli
+errori]</a> per una descrizione di come i riproduttori MathML
+dovrebbero reagire agli errori MathML.) </p>
+
+<p>Inoltre, &egrave; fornita per comodit&agrave; la DTD del MathML;
+anche se essa intende essere pienamente compatibile con il testo delle
+specifiche, il testo dovrebbe essere considerato definitivo se
+c'&egrave; una contraddizione. (Ogni contraddizione che pu&ograve;
+esistere tra vari capitoli del testo dovrebbe essere risolta a favore
+del <a href="chapter6.html">Capitolo&nbsp;6 [Caratteri, entit&agrave;
+e font]</a> in primo luogo, poi del <a
+href="chapter3.html">Capitolo&nbsp;3 [Marcatura di presentazione]</a>,
+del <a href="chapter4.html">Capitolo&nbsp;4 [Marcatura di
+contenuto]</a>, poi della <a
+href="chapter2.html#fund:syntax">Sezione&nbsp;2.3 [Sintassi e
+grammatica del MathML]</a>, e poi di altre parti del testo.) Per lo
+Schema del MathML la situazione sar&agrave; la stessa: il testo delle
+Direttive pubblicate avr&agrave; la precedenza. Sebbene questo sia
+ci&ograve; che dovrebbe succedere, c'&egrave; una difficolt&agrave;
+pratica. Se il sistema che elabora il MathML usa un analizzatore di
+convalida, sia esso basato su una DTD o su uno Schema, il processo si
+limiter&agrave; probabilmente ad arrestarsi quando incontrer&agrave;
+qualcosa che &egrave; sintassi incorretta, sia che un'ulteriore
+elaborazione MathML in piena armonia con le specifiche riesca ad
+elaborare il pezzo nel modo corretto o meno. </p>
+
+<h3>
+<a name="fund:globatt"></a>2.3.5 Attributi condivisi da tutti gli
+elementi del MathML </h3>
+
+<p>Per agevolare la compatibilit&agrave; con i Fogli di Stile a
+Cascata, Livello&nbsp;1 (CSS1), tutti gli elementi del MathML
+accettano gli attributi <code>class</code>, <code>style</code> e
+<code>id</code> oltre agli attributi descritti specificamente per ogni
+elemento. I riproduttori MathML che non supportano i CSS possono
+ignorare questi attributi. Il MathML specifica i valori di questi
+attributi come stringhe generiche, anche se i meccanismi di fogli di
+stile hanno una sintassi pi&ugrave; restrittiva per essi. Ovvero, ogni
+valore per essi &egrave; valido nel MathML. </p>
+
+<p>I riproduttori che supportano i CSS (o analoghi meccanismi di fogli
+di stile) possono usare questi attributi per determinare meglio quali
+elementi MathML devono essere soggetti a quali modifiche indotte dai
+fogli di stile alle varie propriet&agrave; di riproduzione. Le
+propriet&agrave; che possono essere influenzate, e come queste
+modifiche le influenzano, sono discusse nella <a
+href="chapter2.html#fund:cssatt">Sezione&nbsp;2.3.4.3 [Attributi
+compatibili con i CSS]</a> in precedenza. </p>
+
+<p>Ogni elemento MathML, a causa di un'eredit&agrave; dal MathML 1.0,
+accetta inoltre l'attributo <a
+href="chapter7.html#interf:deprec">disapprovato</a> <code>other</code>
+(<a href="chapter7.html#interf:unspecified">Sezione&nbsp;7.2.3
+[Attributi per dati non specificati]</a>) che era stato concepito per
+passare attributi non standard senza violare la DTD del MathML. Ai
+riproduttori MathML &egrave; richiesto di elaborare questo attributo
+solo se reagiscono ad attributi non standard nel MathML. Comunque,
+l'uso di <code>other</code> &egrave; altamente disapprovato quando ci
+sono gi&agrave; altri modi nel MathML per passare informazioni
+specifiche. </p>
+
+<p>Si veda inoltre la <a
+href="chapter3.html#presm:commatt">Sezione&nbsp;3.2.1 [Attributi
+comuni agli elementi token]</a> per un elenco di attributi MathML che
+possono essere usati sulla maggior parte degli elementi token di
+presentazione. </p>
+
+<h3>
+<a name="fund:collapse"></a>2.3.6 Collassare gli spazi bianchi in
+entrata </h3>
+
+<p>Il MathML ignora gli spazi bianchi che occorrono fuori dagli
+elementi token. I caratteri che non sono spazi bianchi non sono
+permessi qui. Gli spazi bianchi che occorrono nel contenuto degli
+elementi token sono `eleminati' dalle estremit&agrave;, ovvero ogni
+spazio bianco all'inizio e alla fine del contenuto &egrave;
+rimosso. Gli spazi bianchi interni al contenuto degli elementi MathML
+sono `collassati' in modo canonico, ovvero ogni sequenza di 1 o
+pi&ugrave; caratteri di spazio bianco &egrave; sostituita con un
+carattere di spaziatura (o carattere di spazio). </p>
+
+<p>Nel MathML, come nell'XML, `spazi bianchi' vuol dire semplici
+spazi, caratteri di tabulazione, fine linea o ritorno del carrello,
+ovvero i caratteri con codici Unicode esadecimali rispettivamente
+<code>U+0020</code>, <code>Uè0009</code>, <code>U+000a</code> o
+<code>U+000d</code>. </p>
+
+<p>Per esempio, <code>&lt;mo&gt; ( &lt;/mo&gt;</code> &egrave;
+equivalente a <code>&lt;mo&gt;(&lt;/mo&gt;</code>, e
+</p>
+<pre>
+&lt;mtext&gt;
+  Teorema
+  1:
+&lt;/mtext&gt;
+</pre>
+<p>
+&egrave; equivalente a <code>&lt;mtext&gt;Teorema
+1:&lt;/mtext&gt;</code>. </p>
+
+<p>Gli autori che desiderano codificare caratteri di spazio bianco
+all'inizio o alla fine del contenuto di un token, o in sequenze
+diverse da quella di un singolo spazio, senza che essi siano ignorati,
+devono usare <code>&amp;nbsp;</code> o altre entit&agrave; `spazio
+bianco' non di marcatura come descritto nella <a
+href="chapter6.html#chars:nonmark">Sezione&nbsp;6.1.4 [Caratteri non
+di marcatura]</a>. Per esempio, si confronti
+</p>
+<pre>
+&lt;mtext&gt;
+ Teorema
+  1:
+&lt;/mtext&gt;
+</pre>
+<p>
+con
+</p>
+<pre>
+&lt;mtext&gt;
+&amp;nbsp;Teorema&amp;NewLine; &amp;nbsp;1: 
+&lt;/mtext&gt; </pre>
+<p>
+</p>
+
+<p>Quando viene presentato il primo esempio, non ci sono spazi bianchi
+prima di `Teorema', uno spazio tra `Teorema' e `1:' e nessuno spazio
+bianco dopo `1:'. Nel secondo esempio viene riprodotto un singolo
+spazio prima di `Teorema', un carattere di fine linea dopo `Teorema',
+due spazi prima di `1:' e nessuno spazio bianco dopo `1:'. </p>
+
+<p>Si noti che l'attributo <code>xml:space</code> non si applica in
+questa situazione poich&eacute; gli elaboratori XML passano gli spazi
+bianchi nei token a un elaboratore MathML; sono le regole di
+elaborazione del MathML che specificano che gli spazi bianchi sono
+eliminati e collassati. </p>
+
+<p>Per spazi bianchi che occorrono fuori dal contesto degli elementi
+token <code>mi</code>, <code>mn</code>, <code>mo</code>,
+<code>ms</code>, <code>mtext</code>, <code>ci</code>, <code>cn</code>
+e <code>annotation</code>, dovrebbe essere usato un elemento
+<code>mspace</code>, opposto ad un elemento <code>mtext</code> che
+contiene solo entit&agrave; `spazi bianchi'. </p>
+
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: 1 <a href="chapter1.html">Introduzione</a>
+<br>
+  Successivo: 3 <a href="chapter3.html">Marcatura di presentazione</a>
+<br>
+</p>
+</body>
+</html>

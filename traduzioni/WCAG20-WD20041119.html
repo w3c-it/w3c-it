@@ -1,0 +1,2923 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html lang="it" xml:lang="it"><head><title>Web Content Accessibility Guidelines 2.0 Working Draft</title>
+<style type="text/css">CODE {
+	FONT-FAMILY: monospace
+}
+DIV.constraint {
+	MARGIN-LEFT: 1em
+}
+DIV.issue {
+	MARGIN-LEFT: 1em
+}
+DIV.note {
+	MARGIN-LEFT: 1em
+}
+DIV.notice {
+	MARGIN-LEFT: 1em
+}
+LI P {
+	MARGIN-TOP: 0.3em; MARGIN-BOTTOM: 0.3em
+}
+.revnote {
+	COLOR: black; BACKGROUND-COLOR: #adff2f
+}
+P.revnote {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; MARGIN: 0em; PADDING-TOP: 0.5em
+}
+DIV.revnote {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; MARGIN: 0em; PADDING-TOP: 0.5em
+}
+.informative {
+	BORDER-RIGHT: #f1f1f1 thin solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #f1f1f1 thin solid; MARGIN-TOP: 0.5em; PADDING-LEFT: 1em; BACKGROUND: #ffffff; PADDING-BOTTOM: 0.5em; MARGIN-LEFT: 2em; BORDER-LEFT: #f1f1f1 thin solid; COLOR: #000000; BORDER-BOTTOM: #f1f1f1 thin solid
+}
+.bp {
+	BORDER-RIGHT: #000066 thin solid; PADDING-RIGHT: 1em; BORDER-TOP: #000066 thin solid; MARGIN-TOP: 0px; DISPLAY: block; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; BORDER-LEFT: #000066 thin solid; COLOR: black; PADDING-TOP: 0em; BORDER-BOTTOM: #000066 thin solid; BACKGROUND-COLOR: #cfe8ef
+}
+.additional {
+	BORDER-RIGHT: #000066 thin solid; PADDING-RIGHT: 1em; BORDER-TOP: #000066 thin solid; MARGIN-TOP: 0px; DISPLAY: block; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; BORDER-LEFT: #000066 thin solid; COLOR: black; PADDING-TOP: 0em; BORDER-BOTTOM: #000066 thin solid; BACKGROUND-COLOR: #cfe8ef
+}
+.boneyard {
+	BORDER-RIGHT: #ff4500 dashed; PADDING-RIGHT: 0.5em; BORDER-TOP: #ff4500 dashed; MARGIN-TOP: 0.5em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0.5em; MARGIN-LEFT: 2em; BORDER-LEFT: #ff4500 dashed; BORDER-BOTTOM: #ff4500 dashed; BACKGROUND-COLOR: #ffdead
+}
+H3.guideline {
+	BORDER-RIGHT: #000066 thin solid; PADDING-RIGHT: 1em; BORDER-TOP: #000066 thin solid; PADDING-LEFT: 1em; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 1em; BORDER-LEFT: #000066 thin solid; COLOR: #000000; PADDING-TOP: 1em; BORDER-BOTTOM: #000066 5px solid; BACKGROUND-COLOR: #cfe8ef
+}
+.req {
+	BORDER-RIGHT: #000066 thin solid; PADDING-RIGHT: 1em; BORDER-TOP: #000066 thin solid; MARGIN-TOP: 0px; DISPLAY: block; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; BORDER-LEFT: #000066 thin solid; COLOR: black; PADDING-TOP: 0em; BORDER-BOTTOM: #000066 thin solid; BACKGROUND-COLOR: #cfe8ef
+}
+H2.principle {
+	BORDER-RIGHT: #666666 thin solid; PADDING-RIGHT: 1em; BORDER-TOP: #666666 thin solid; PADDING-LEFT: 1em; FONT-WEIGHT: bold; PADDING-BOTTOM: 1em; BORDER-LEFT: #666666 thin solid; COLOR: #000000; PADDING-TOP: 1em; BORDER-BOTTOM: #666666 thin solid; BACKGROUND-COLOR: #ffffff
+}
+.bigger {
+	FONT-WEIGHT: bold
+}
+.smaller {
+	FONT-SIZE: 75%
+}
+.termref {
+	BACKGROUND: white; COLOR: #006400; FONT-STYLE: italic
+}
+A.termref:link {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #006400; FONT-STYLE: italic; pitch: high
+}
+A.termref:hover {
+	COLOR: #006400; BACKGROUND-COLOR: #fafad2
+}
+DIV.exampleInner PRE {
+	MARGIN-TOP: 0em; MARGIN-BOTTOM: 0em; MARGIN-LEFT: 1em
+}
+DIV.exampleOuter {
+	BORDER-RIGHT: gray 4px double; PADDING-RIGHT: 0em; BORDER-TOP: gray 4px double; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; MARGIN: 0em; BORDER-LEFT: gray 4px double; PADDING-TOP: 0em; BORDER-BOTTOM: gray 4px double
+}
+DIV.exampleInner {
+	PADDING-RIGHT: 4px; BORDER-TOP: #d3d3d3 4px double; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; MARGIN: 0em; PADDING-TOP: 4px; BORDER-BOTTOM: #d3d3d3 4px double; BACKGROUND-COLOR: #d5dee3
+}
+DIV.exampleWrapper {
+	MARGIN: 4px
+}
+DIV.exampleHeader {
+	FONT-WEIGHT: bold; MARGIN: 4px
+}
+</style>
+<!-- link allo stylesheet sul sito www.w3.org corretto da Oreste Signore -->
+<link href="http://www.w3.org/StyleSheets/TR/W3C-WD.css" type="text/css" rel="stylesheet">
+<meta content="MSHTML 6.00.2800.1400" name="GENERATOR"></head>
+<body>
+<P align=center>[<A 
+href="#contents">contenuti</A>]</P>
+<div class="head">
+<!-- link al logo W3C sul sito www.w3.org corretto da Oreste Signore -->
+<p><a href="http://www.w3.org/"><img height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home" width="72"> </a></p>
+<h1><a id="title" name="title"></a>Linee Guida per l'Accessibilità ai Contenuti Web 2.0</h1>
+<h2><a id="w3c-doctype" name="w3c-doctype"></a>W3C Working Draft del 19 Novembre 2004</h2></div>
+<div class="req">
+<p>Questo documento è una traduzione della <strong>Working Draft</strong> relativa alle <strong>Linee Guida per l'Accessibilità ai Contenuti Web 2.0</strong>.
+Questo documento potrebbe contenere errori di traduzione.</p>
+<dl><p>
+  </p><dt><strong>La versione in lingua inglese, si trova a:</strong>   
+  </dt><dd><a href="http://www.w3.org/TR/2004/WD-WCAG20-20041119/">http://www.w3.org/TR/2004/WD-WCAG20-20041119/</A><p></p> 
+<p>
+  </p></dd><dt><strong>Questa versione italiana tradotta è disponibile all&#8217;indirizzo:</strong> 
+  </dt><dd><a href="http://www.del.univpm.it:8080/del/Knowledge/Knowledge/WCAG20-versionefinale%20novembre.html">http://www.del.univpm.it/ </a>, sezione knowledge - <em>Accessibilità</em><p></p> 
+  </dd><dt><strong>Traduttrici</strong> 
+  </dt><dd><a href="mailto:elvira.d@libero.it">Elvira D'Orsi</a>, Dottoranda in e-Learning - Università Politecnica delle Marche 
+  </dd><dd><a href="mailto:mariavalenti@tiscali.it">Maria Valenti</a>, Dottoranda in e-Learning - Università Politecnica delle Marche </dd></dl></div>
+<div class="head">
+<dl><dt><strong>Questa versione:</strong> 
+  </dt><dd><a href="http://www.w3.org/TR/2004/WD-WCAG20-20041119/">http://www.w3.org/TR/2004/WD-WCAG20-20041119/</A>
+  </dd><dt><strong>Ultima versione:</strong> 
+  </dt><dd><a href="http://www.w3.org/TR/WCAG20/">http://www.w3.org/TR/WCAG20/</A>
+  </dd><dt><strong>Versione precedente:</strong> 
+  </dt><dd><a href="http://www.w3.org/TR/2004/WD-WCAG20-20040730/">http://www.w3.org/TR/2004/WD-WCAG20-20040730/</A>
+
+  </dd><dt><strong>Redazione: </strong>
+  </dt><dd>Ben Caldwell, Trace R&amp;D Center 
+  </dd><dd>Wendy Chisholm, W3C 
+  </dd><dd>Gregg Vanderheiden, Trace R&amp;D Center 
+  </dd><dd>Jason White, University of Melbourne </dd></dl>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 
+2004 <a href="http://www.w3.org/"> <acronym title="World Wide Web Consortium">W3C</acronym> </a><sup>®</sup> (<a href="http://www.csail.mit.edu/"> <acronym title="Massachusetts Institute of Technology">MIT</acronym> </a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym> 
+</a>, <a href="http://www.keio.ac.jp/">Keio</a>), Tutti i diritti riservati. Si applicano le regole del W3C riguardanti la <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">responsabilità</a>, il  
+<a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">marchio depositato</a>, l' 
+<a href="http://www.w3.org/Consortium/Legal/copyright-documents">uso dei documenti
+</a> e le <a href="http://www.w3.org/Consortium/Legal/copyright-software">licenze software </a> .</p></div>
+<hr>
+
+<div>
+<h2><a id=abstract name=abstract></a>Abstract</h2>
+<p>Il World Wide Web Consortium (W3C) ha pubblicato nel maggio 1999 
+le <a href="http://www.w3.org/TR/WCAG10/">Web Content Accessibility Guidelines 1.0</a> 
+(WCAG 1.0) sotto forma di Reccommendation. 
+L&#8217;attuale Working Draft per la versione 2.0 si basa sulle WCAG 1.0. Ha lo stesso scopo: 
+spiegare come costruire materiali Web accessibili ad utenti disabili e stabilire come 
+obiettivo dei livelli di accessibilità. Avendo tenuto in debito conto il feedback 
+relativo alle WCAG 1.0, la Working Draft 2.0 si concentra sulle linee guida che tenta 
+di applicare ad un&#8217;ampia gamma di tecnologie e si sforza di  usare una terminologia 
+comprensibile ad un più vasto uditorio.</p></div>
+<div>
+<h2><a id="status" name="status"></a>Stato del Documento</h2>
+<p><em>In questa sezione viene descritto lo stato del documento all&#8217;atto della sua 
+pubblicazione. Altri documenti possono prenderne il posto. Un elenco delle correnti 
+pubblicazioni del W3C e l&#8217;ultima revisione di questo rapporto tecnico sono reperibili 
+nel <a href="http://www.w3.org/TR/">W3C technical reports index</a> all&#8217;indirizzo 
+http://www.w3.org/TR/.</em> </p>
+<p>Questo documento è stato redatto dal <a href="http://www.w3.org/WAI/GL/">Web Content 
+Accessibility Guidelines Working Group</a> (WCAG WG) per mostrare come rendere le linee 
+guida più generiche (meno specifiche per l&#8217;<acronym title="HyperText Markup Language">HTML</acronym>). Questa draft non si basa ancora 
+sul consenso di tutto il WCAG Working Group né ha ancora
+superato il cammino di un documento tecnico del W3C, né soppianta le 
+<a href="http://www.w3.org/TR/WCAG10/">WCAG 1.0</a>.</p>
+<p>Far riferimento a "<a href="http://trace.wisc.edu/bugzilla_wcag/issuereports/wcag2_issues.php">Issue 
+Tracking for WCAG 2.0 Working Draft</a>" per un elenco di 
+questioni aperte relative a questa Working Draft. E&#8217; anche disponibile la "<a href="http://www.w3.org/WAI/GL/WCAG20/WD-change-history.html">History of Changes 
+to WCAG 2.0 Working Drafts</a>".</p>
+<p>La pubblicazione di una Working Draft non implica l&#8217;approvazione dei membri del W3C. 
+Questo documento è in stato di bozza e può essere aggiornato, sostituito o reso obsoleto 
+da altri documenti in qualunque momento. Va citato unicamente come work in progress. E&#8217; 
+disponibile un elenco dei <a href="http://www.w3.org/TR/">current 
+W3C Recommendations and other technical documents</a>.</p>
+<p>Il Working Group attende commenti a questo documento all&#8217;indirizzo <a href="mailto:public-comments-wcag20@w3.org">public-comments-wcag20@w3.org</a>. Gli  
+<a href="http://lists.w3.org/Archives/Public/public-comments-wcag20/">archives for 
+this list</a> sono di dominio pubblico, così come gli archivi relativi alle <a href="http://lists.w3.org/Archives/Public/w3c-wai-gl/">WCAG WG mailing list 
+discussions</a>.</p>
+<p>Questo documento è stato prodotto secondo la <A 
+href="http://www.w3.org/TR/2002/NOTE-patent-practice-20020124">24 January 2002 
+CPP </A> ed è stato emendato attenendosi alla <A href="http://www.w3.org/2004/02/05-pp-transition">W3C Patent Policy Transition 
+Procedure </A>. Il Working Group rende disponibile una <A href="http://www.w3.org/WAI/GL/disclosures.html">
+public list of patent disclosures </A>(lista pubblica sull’informativa relativa ai diritti di brevetto) 
+importante per il documento stesso; tale pagina contiene anche istruzioni sull'informativa 
+riguardante un brevetto. Un soggetto con conoscenza effettiva di un brevetto, che ritiene contenga 
+Dichiarazioni Essenziali rispetto a questa specifica, dovrebbe rendere nota 
+l'informazione in accordo con la <A 
+href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section 
+6 of the W3C Patent Policy </A>.</p>
+<p>Questo documento è stato prodotto come parte del W3C <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> (WAI). Gli obiettivi del 
+WCAG WG sono dibattuti nella <a href="http://www.w3.org/WAI/GL/new-charter-2000.html">
+Working Group charter</a>. 
+Il WCAG WG fa parte di <a href="http://www.w3.org/WAI/Technical/Activity">WAI Technical 
+Activity</a>. </p></div>
+<div class="toc">
+<hr>
+
+<h2><a id="contents" name="contents"></a>Indice dei Contenuti</h2>
+<ul>
+  <li><a href="#intro">Introduzione 
+  </a>
+  <ul>
+    <li><a href="#intro-purpose">Scopo</a> 
+    </li><li><a href="#how-to">Come leggere il documento</a> 
+    </li><li><a href="#audience">Destinatari</a> 
+    <LI><A href="#authtools">Authoring tools</A>
+    </li><li><a href="#scope">Ambito</a> 
+    </li><li><a href="#priorities-techs">Priorità 
+    e Tecniche</a> 
+    </li><li><a href="#conformance">Conformità</a> 
+    </li></ul>
+  </li><li><a href="#overview-design-principles">
+  Panoramica dei Principi di Progettazione </a> 
+  <ul>
+    <li><a href="#user-needs">Bisogni 
+    dell&#8217;utente </a> 
+    </li><li><a href="#accessible-content">Progettare contenuti 
+    Web accessibili</a> </li></ul>
+  </li><li><a href="#perceivable">Principio 1: 
+  Rendere i contenuti percepibili.</a> 
+  <ul>
+    <li>Linea Guida 1.1 <a href="#text-equiv">Fornire testo alternativo per ogni contenuto 
+    non testuale.</a> 
+    </li><li>Linea Guida 1.2 <a href="#media-equiv">Fornire alternative sincronizzate per i multimedia.</a> 
+    </li><li>Linea Guida 1.3 <a href="#content-structure-separation">Assicurare che informazioni, funzionalità e 
+    struttura siano separabili dalla presentazione.</a> 
+    </li><li>Linea Guida 1.4 <a href="#visual-contrast">Rendere semplice distinguere le informazioni dalle immagini e dai suoni di background</a> 
+    </li></ul>
+  </li><li><a href="#operable">Principio 
+  2: Rendere fruibili gli elementi dell&#8217;interfaccia nel contenuto.</a> 
+  <ul>
+    <li>Linea Guida 2.1 <a href="#keyboard-operation">Rendere  tutte le funzionalità fruibili attraverso 
+    tastiera o interfaccia di tastiera.</a> 
+    </li><li>Linea Guida 2.2 <a href="#time-limits">Permettere agli utenti di controllare i propri tempi di lettura o 
+    di interazione.</a> 
+    </li><li>Linea Guida 2.3 <a href="#flicker">Consentire agli utenti di evitare il contenuto che potrebbe causare 
+    attacchi dovuti ad epilessia fotosensibile.</a> 
+    </li><li>Linea Guida 2.4 <a href="#navigation-mechanisms">Aggiungere funzionalità che aiutino l&#8217;utente a trovare i contenuti, ad orientarsi 
+     e a spostarsi tra essi. </a>[linea guida di livello 2]
+    </li><li>Linea Guida 2.5 <a href="#minimize-error">Aiutare gli utenti ad evitare gli errori e consentire loro di 
+    rimediare con facilità.</a> [linea guida di livello 2]  </li></ul>
+  </li><li><a href="#understandable">Principio 
+  3: Rendere comprensibili contenuti e comandi.</a> 
+  <ul>
+    <li>Linea Guida 3.1 <a href="#meaning">Assicurare che possa essere determinato il significato del contenuto.</a> 
+    </li><li>Linea Guida 3.2 <a href="#consistent-behavior">Organizzare il contenuto in maniera coerente da "pagina 
+    a pagina" e fare in modo che le componenti interattive si comportino in modo 
+    prevedibile.</a> </li></ul>
+  </li><li><a href="#robust">Principio 
+  4: Progettare  contenuti sufficientemente robusti al fine di garantirne la 
+  compatibilità con le tecnologie presenti e future.</a>
+  <ul>
+    <li>Linea Guida 4.1 <a href="#use-spec">Utilizzare tecnologie che rispettino le specifiche.</a> 
+    </li><li>Linea Guida 4.2 <a href="#technology-supports-access">Assicurare che le interfacce utente siano 
+    accessibili o fornite di alternative accessibili.</a> </li></ul></li></ul>
+<h3><a id="appendices" name="appendices"></a>Appendici</h3>
+<ul>
+  <li><a href="#d0e2515">Appendice A 
+  Glossario</a> 
+  </li><li><a href="#d0e2969">Appendice B 
+  Collaboratori</a> (Non-Normativa) 
+  </li><li><a href="#d0e2977">Appendice C 
+  Le differenze fra le WCAG 1.0 e le WCAG 2.0 (Non-Normativa) 
+  </a></li><li><a href="#d0e3034">Appendice D 
+  Riferimenti</a> (Non-Normativa) </li></ul></div>
+<hr>
+
+<div class="front">
+<div class="div1">
+<h2><a id="intro" name="intro"></a>Introduzione </h2>
+<div class="div2">
+<h3><a id="intro-purpose" name="intro-purpose"></a>Scopo</h3>
+<p>Questo documento delinea i principi di progettazione per creare materiali Web 
+accessibili. Laddove tali principi vengano ignorati, gli utenti disabili non saranno in 
+grado di accedere ai contenuti o vi accederanno con grande difficoltà. 
+Se i principi di accessibilità saranno implementati, i contenuti Web diventeranno 
+accessibili tramite molteplici dispositivi, quali telefoni, palmari, cabine telefoniche,
+ apparecchiature di rete e pertanto accessibili agli utenti nelle situazioni più 
+disparate.</p>
+<p>I principi di progettazione espressi in questo documento rappresentano concetti 
+generali che si applicano a tutti i contenuti Web, non essendo specifici per l&#8217;HTML, XML 
+o qualsiasi altra tecnologia. Si è scelto questo tipo di approccio per consentire 
+l&#8217;applicazione dei principi di progettazione a molteplici situazioni e tecnologie, 
+incluse quelle future.</p></div>
+<div class="div2">
+<h3><a id="how-to" name="how-to"></a>Come leggere il documento</h3>
+<p>Allo scopo di facilitare la comprensione delle linee guida e aiutare i lettori a 
+focalizzare esattamente le parti d&#8217;interesse, si è deciso di presentare le linee guida 
+sotto forma di più documenti intercorrelati. Le WCAG 2.0 sono articolate su tre livelli:</p>
+<div class="div3">
+<h4><a id="d0e148" name="d0e148"></a>1 - Top layer - Panoramica dei Principi di Progettazione, 
+delle Linee Guida, dei  Success Criteria</h4>
+<p>Tale livello ha per titolo <strong>"Web Content Accessibility Guidelines 2.0"</strong>. 
+E&#8217; costituito dal presente documento. Contiene:</p>
+<ol type="1">
+  <li>
+  <p>Un'introduzione</p>
+  </li><li>
+  <p>I 4 principi fondamentali per l'accessibilità (Percepibile, Fruibile, Comprensibile 
+  e Robusto). </p>
+  </li><li>
+  <p>Le linee guida (non riferite a tecnologie specifiche) (13 in tutto). </p>
+  </li><li>
+  <p> I success criteria , test di verifica del successo, (<a class="termref" title="" href="#normativedef">normativi</a>), e le definizioni, i benefici e gli esempi (tutti 
+  non normativi) relativi a ciascuna linea guida.</p>
+  </li><li>
+  <p> Un&#8217;appendice contenente definizioni, riferimenti ed altre informazioni di supporto. 
+  </p></li></ol></div>
+<div class="div3">
+<h4><a id="d0e175" name="d0e175"></a>2 - Liste di controllo inerenti tecnologie specifiche</h4>
+<p>Andranno ad integrare le linee guida tutta una serie di documenti costituiti da liste 
+di controllo inerenti tecnologie specifiche. Questi documenti forniranno informazioni sull&#8217;uso delle differenti tecnologie 
+per conformarsi alle WCAG 2.0 Working Draft.</p>
+<div class="revnote">
+<p><strong>Nota dell&#8217; Editore</strong>: Tali checklist non sono state ancora 
+organizzate. Al momento, non è chiaro se saranno <a class="termref" title="" href="#normativedef">normative</a> o non-normative. Se le 
+checklist saranno non-normative, sarà più facile aggiornarle. In caso contrario, i 
+cambiamenti ad esse apportate andranno ad alterare la definizione di conformità. 
+Comunque, potrebbe essere indispensabile organizzare checklist normative al fine di 
+rendere  le linee guida testabili. </p></div></div>
+<div class="div3">
+<h4><a id="d0e186" name="d0e186"></a>3 - Bottom layer - Informazioni sulle applicazioni 
+inerenti tecnologie specifiche</h4>
+<p>I Techniques Documents includeranno esempi di codice, screen shot e informazioni 
+specifiche relative alle diverse tecnologie. Saranno documenti non normativi. 
+Illustreranno varie strategie, che consentiranno di conformarsi ai requisiti delle linee 
+guida, e gli approcci correnti più utilizzati, laddove esistano. Gli esempi 
+comprenderanno:</p>
+<ul>
+<li>
+  <p><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/Overview.html#">General Techniques</A></p>
+  </li>
+  <li>
+  <p><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-HTML-TECHS-20041119/Overview.html#">Hypertext 
+  Markup Language (HTML) and Extensible Hypertext Markup Language (XHTML) 
+  Techniques </A></p>
+  </li><li>
+  <p><A href="http://www.w3.org/TR/2004/WD-WCAG20-CSS-TECHS-20041119/Overview.html#">Cascading 
+  Style Sheets (CSS) Techniques </A></p>
+  </li><li>
+  <p>Server-side scripting Techniques</p>
+  </li><li>
+  <p><A href="http://www.w3.org/TR/2004/WD-WCAG20-SCRIPT-TECHS-20041119/Overview.html#">Client-side scripting Techniques</A></p>
+  </li><li>
+  <p>Scalable Vector Graphics (SVG) Techniques</p>
+  </li><li>
+  <p>Synchronized Multimedia Integration Language (SMIL) Techniques</p>
+  </li><li>
+  <p>Extensible Markup Language (XML) Techniques</p></li></ul>
+<p><em>(I sopracitati diventeranno link attivi non appena le corrispondenti Working Draft 
+saranno pubblicate) </em> </p></div></div>
+<div class="div2">
+<h3><a id="audience" name="audience"></a>Destinatari</h3>
+<p>Le linee guida sono dirette ad un pubblico vasto, politici, manager, creatori di 
+contenuti Web, programmatori. Ci si è sforzati di rendere il documento leggibile ed 
+usabile per quanto possibile senza trascurare l&#8217;accuratezza e la chiarezza necessarie in 
+una specifica di carattere tecnico. Per utenti alle prime armi, è vivamente raccomandato 
+il lavoro <a href="http://www.w3.org/WAI/EO/">Education and Outreach Working Group</a> del WAI
+e in particolare <a href="http://www.w3.org/WAI/gettingstarted/"> Getting Started: Making a Web Site Accessible.</p>
+</div>
+<div class="div2">
+<h3><A id=authtools name=authtools></A>Authoring tools</h3>
+<p>La maggior parte dei contenuti Web è creata usando authoring tool. Questi strumenti spesso determinano
+come implementare il contenuto, sia assumendo direttamente decisioni di authoring sia limitando le possibilità di scelta dell&#8217autore. 
+Dunque gli authoring tool giocheranno un ruolo molto importante nella creazione di contenuti conformi 
+alle Web Content Accessibility Guidelines. Allo stesso tempo raccomandiamo
+che tutti gli autori familiarizzino con le Linee Guida poiché ciò favorirà la creazione 
+di contenuti accessibili e poiché la copertura delle linee guida può variare da tool a tool.</p>
+<p>Gli sviluppatori di authoring tool possono rendere tali strumenti 
+maggiormente compatibili con le Web Content Accessibility Guidelines seguendo le 
+<a href="http://www.w3.org/TR/ATAG10/">Authoring Tool Accessibility Guidelines.</a></p>
+<P>Consigliamo agli utilizzatori finali e agli acquirenti di authoring tool 
+di considerare la conformità alle <A href="http://www.w3.org/TR/ATAG10/">Authoring Tool Accessibility 
+Guidelines</A> come criterio di selezione tra i vari strumenti.</P>
+<DIV class=revnote>
+<P><STRONG>Nota dell&#8217;editore</STRONG>: Il Working Group delle Authoring Tool Accessibility Guidelines 
+ha pubblicato varie Working Draft delle <A 
+href="http://www.w3.org/TR/ATAG20/">ATAG 2.0</A>. I riferimenti sopra indicati dovranno 
+essere aggiornati non appena le ATAG 2.0 diventeranno delle recommendation. </P></DIV></DIV>
+<div class="div2">
+<h3><a id="scope" name="scope"></a>Ambito</h3>
+<p>Le linee guida coprono un&#8217;ampia gamma di questioni e raccomandazioni per creare 
+contenuti Web maggiormente accessibili. Includono raccomandazioni per rendere i 
+materiali accessibili ed usabili da utenti con le più disparate disabilità. 
+In generale le linee guida non includono raccomandazioni inerenti l&#8217;usabilità, eccetto dove esse 
+abbiano specifiche conseguenze per l&#8217;accessibilità. </p></div>
+<div class="div2">
+<h3><a id="priorities-techs" name="priorities-techs"></a>Priorità e Tecniche</h3>
+<p>La Working Draft WCAG 2.0 si basa sulle WCAG 1.0 e sul feedback ricevuto a partire 
+dalla loro pubblicazione, avvenuta nel maggio del 1999. Anche se i due documenti si 
+approcciano in modo identico alle problematiche dell&#8217;accessibilità, hanno organizzazione 
+e struttura diverse. Mentre le WCAG 1.0 sono organizzate in linee guida in cui sono 
+inseriti i vari checkpoint, le WCAG 2.0 utilizzano le linee guida  per raggruppare i 
+success criteria. Nelle WCAG 1.0, ad ogni <em>checkpoint</em> è assegnato un diverso livello di 
+priorità; nella presente draft i <em>success criteria</em> sono articolati in tre diverse 
+categorie. </p>
+<p>I principi di progettazione sono stati riscritti per essere applicati ad un&#8217;ampia 
+gamma di tecnologie esistenti e future. La Working Draft  WCAG 2.0 non contiene requisiti 
+o tecniche di implementazione relative a tecnologie specifiche, ma farà riferimento a 
+requisiti, esempi e tecniche inerenti tecnologie specifiche (non appena saranno 
+organizzati i relativi documenti).</p>
+<p>Il Working Group si sta preoccupando di facilitare la transizione alle WCAG 2.0 per le 
+organizzazioni e per coloro che fanno riferimento alle WCAG 1.0 (che al momento 
+rimangono l&#8217;unico documento ufficiale). Per maggiori informazioni riguardanti analogie e 
+differenze fra i checkpoint delle WCAG 1.0 e le linee guida con i relativi success 
+criteria delle WCAG 2.0, si può far riferimento al documento <a href="http://www.w3.org/WAI/GL/2004/06/02-mapping.html">Mapping Between WCAG 1.0 
+and the WCAG 2.0 Working Draft</a>.</p></div>
+<DIV class=div2>
+<H3><A id=conformance name=conformance></A>Conformità</H3>
+<DIV class=revnote>
+<P><A id=baseline-note name=baseline-note></A><STRONG>Nota dell&#8217;Editore</STRONG>: 
+Assunzione di una Linea base per le Tecnologie</P>
+<P>Nella stesura delle WCAG 2.0, il WCAG WG si dibatte nel tentativo di definire il ruolo dei  
+content author e degli user agent nel rendere i contenuti Web accessibili alle
+persone con disabilità. A causa delle carenze individuate negli user agent, 
+nelle WCAG 1.0 sono state utilizzate frasi del tipo: "finché gli user agent..."</P>
+<P>Oggi continuano a sussistere molti problemi e si sta cercando un meccanismo più efficace per risolverli rispetto alla 
+creazione di linee guida "temporary bridge", progettate per sopperire alle carenze degli user agent. Un modo per fare 
+ciò potrebbe consistere nel creare linee guida basate sull&#8217;assunzione di una linea base per gli user agent.
+Stiamo attualmente considerando di utilizzare user agent conformi alle User Agent accessibility Guidelines come linea base per User Agent  
+per le WCAG 2.0. Quindi le WCAG 2.0 dovrebbero essere scritte assumendo che tutti gli utenti possiedano 
+user agent conformi a tutti i checkpoint di priorità 1 delle <A 
+href="http://www.w3.org/TR/UAAG10/">User Agent Accessibility Guideline 1.0 (UAAG 
+1.0)</A>. Ne derivano parecchie implicazioni. Per esempio, le WCAG 2.0 dovrebbero assumere che gli
+user agent e le tecnologie assistive possano effettivamente interagire con i contenuti.</P>
+<P>Oggi, nessuno user agent soddisfa tutti i checkpoint di priorità 1 delle UAAG 1.0. 
+Se le WCAG 2.0 assumessero che gli user agent debbano conformarsi ai checkpoint di priority 1 
+delle UAAG 1.0, si creerebbero delle discrepanze tra il contenuto che soddisfa le WCAG 2.0 e gli attuali user agent disponibili. 
+Per risolvere tale problema, proponiamo due metodi.</P>
+<OL type=1>
+  <LI>
+  <P>Incalzare per lo sviluppo di user agent che si confomino a tutti i checkpoint di 
+priorità 1 delle UAAG 1.0 </P>
+  <LI>
+  <P>Sviluppare un insieme di "tecniche di riparazione" ad uso degli autori di contenuti che 
+desiderano sia conformarsi alle WCAG 2.0, sia compensare le mancanze degli attuali user agent. </P></LI></OL>
+<P>Gradiremmo inoltre collaborare con <A href="http://www.w3.org/WAI/UA/">User 
+Agent Accessibility Guidelines Working Group</A> (UAWG) e con <A 
+href="http://www.w3.org/WAI/AU/">Authoring Tools Accessibility Guidelines 
+Working Group</A> (AUWG) per individuare un insieme di strategie che i produttori di user agent 
+potrebbero inserire all&#8217interno di essi per compensare i più comuni errori degli autori di contenuti.</P>
+<P>Come risultato si potrebbero ottenere WCAG 2.0 più stabili e una migliore integrazione con le UAAG, 
+in modo da attribuire la responsabilità per i problemi di accessibilità alle appropriate competenze delle tecnologie Web (user agent versus Web 
+content). Fare riferimento a <A 
+href="http://www.w3.org/WAI/intro/components">Interdependent Components of Web 
+Accessibility</A> per maggiori informazioni.</P>
+<P>Il WCAG working group sta analizzando questo approccio per capirne meglio le possibili conseguenze sugli 
+utenti. Le linee guida e i success criteria in questa working draft non riflettono ancora questo andamento. 
+Il WCAG WG invita a commentare questo approccio e i problemi ad esso collegati.</P></DIV>
+<DIV class=revnote>
+</DIV>
+<div class="revnote">
+<p><strong>Nota dell&#8217;Editore</strong>: Esistono <A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/conformance_issues.php">varie questioni aperte relative allo 
+schema di conformità proposto</A>. Questa sezione delinea lo schema di conformità usato in 
+questo documento. Si auspicano feedback, commenti e proposte.</p></div>
+<p>I success criteria per ciascuna linea guida sono raggruppati in tre livelli:</p>
+<ul>
+  <li>
+  <p><strong>Success criteria di livello 1:</strong> </p>
+  <ol type="1">
+    <li>
+    <p>Si raggiunge un livello minimo di accessibilità attraverso markup, scripting o altre tecnologie che interagiscono 
+o permettono l&#8217;accesso tramite user agent e tecnologie assistive. </p>
+    </li><li>
+    <p>Possono essere ragionevolmente applicati a tutte le risorse Web</p></li></ol>
+  </li>
+  <LI>
+  <P><STRONG>Success criteria di livello 2:</STRONG> </P>
+  <OL type=1>
+    <LI>
+    <P>L'accessibilità aumenta attraverso una o entrambe le seguenti condizioni:</P>
+    <OL type=a>
+      <LI>
+      <P>viene ulteriormente facilitata l'abilità dello user agent di fornire contenuto accessibile</P>
+      <LI>
+      <P>il contenuto e/o la presentazione sono direttamente accessibili e non richiedono all'utente disabile o allo user agent 
+       di operare in modo diverso rispetto agli utenti non disabili </P></LI></OL>
+    <LI>
+    <P>Possono essere ragionevolmente applicati a tutte le risorse Web.</P></LI></OL>
+  <LI>
+  <P><STRONG>Success criteria di livello 3:</STRONG> </P>
+  <OL type=1>
+    <LI>
+    <P>Si va oltre i livelli 1 e 2 per incrementare ulteriormente l&#8217;accessibilità diretta e dello user agent.</P></LI></OL></LI></UL>
+<P>Il Working Group ritiene che tutti i success criteria dovrebbero essere testabili.
+I test possono essere realizzati automaticamente tramite il computer o con l'ausilio di esperti in queste linee guida. 
+I test condotti da esperti dovrebbero giungere allo stesso risultato analizzando lo stesso contenuto con gli stessi success criteria. </P> 
+<div class="revnote">
+<p><strong>Nota dell&#8217;Editore</strong>: Per facilitare la discussione relativa ai 
+livelli assegnati a ciascun criterio, al termine di ciascuno di essi è stata posta una 
+notazione racchiusa in parentesi quadre. &#8220;[I]&#8221; (invisibile) indica che un criterio non 
+specifica come è presentata l&#8217;informazione e &#8220;[V]&#8221; (visibile) indica che conformarsi 
+al criterio può richiedere all&#8217;autore di presentare il contenuto in modo specifico. </p></div>
+<DIV class=div3>
+<H4><A id=conformance-reqs name=conformance-reqs></A> Requisiti per la Conformità
+</H4>
+<OL type=1>
+  <LI>
+  <P>Qualunque conformità con le WCAG 2.0 richiede che siano soddisfatti <EM>tutti </EM>i success 
+  criteria di livello 1 di <EM>tutte </EM>le linee guida. </P>
+  <LI>
+  <P>La conformità alle WCAG 2.0 di livello A  significa che sono soddisfatti <EM>tutti </EM>i success 
+  criteria di livello 1 di <EM>tutte </EM>linee guida.</P>
+  <LI>
+  <P>La conformità alle WCAG 2.0 di livello Double-A significa che sono soddisfatti <EM>tutti </EM> i success 
+  criteria di livello 1 e <EM>tutti </EM> i success criteria di livello 2 di <EM>tutte </EM> le linee guida. </P>
+  <LI>
+  <P>La conformità alle WCAG 2.0 di livello Triple-A significa che sono soddisfatti <EM>tutti </EM> i success 
+  criteria di livello 1, di livello 2 e di livello 3 di <EM>tutte </EM> le linee guida. 
+  </P></LI></OL>
+<P>Il Working Group ritiene che tutti e tre i livelli di success criteria siano importanti o 
+essenziali per alcune persone. Quindi le precedenti descrizioni "impossibile accedere" 
+per il livello A, "difficoltà di accesso" per il livello AA, e "alcune difficoltà" per 
+il livello AAA non sono più usate. Al loro posto, abbiamo definito i tre livelli come sopra.</P>
+</DIV>
+<div class="div3">
+<h4><a id="conformance-claims" name="conformance-claims"></a>Dichiarazioni di Conformità</h4>
+<p>Tutte le dichiarazioni di conformità devono includere almeno le seguenti informazioni:</p>
+<ol type="1">
+  <li>
+  <p>La versione delle linee guida in base alla quale è sta dichiarata la conformità.</p>
+  </li><li>
+ <P>Una lista di uno o più <ACRONYM 
+  title="Uniform Resource Identifier">URI</ACRONYM> o <A class=termref 
+  title="" 
+  href="#URIpatterndef">URI 
+  pattern</A>, che identificano le <A class=termref title="" 
+  href="#deliveryunitdef">delivery unit  </A>  per le quali la dichiarazione è stata fatta. Una risorsa è conforme alle WCAG 2.0, per un dato 
+livello, se è conforme tutto il contenuto fornito da quella risorsa. </P>
+  <DIV class=note>
+  <P class=prefix><STRONG>Nota:</STRONG></P>
+  <P>Se attraverso la negoziazione del contenuto si possono recuperare da un URI più rappresentazioni dello stesso, 
+allora la dichiarazione di conformità dovrebbe essere fatta per la <A class=termref 
+  title="" 
+  href="#deliveryunitdef">delivery unit </A> 
+  restituita in assenza di negoziazione (a meno che il server non fornisca errore in quella situazione,
+nel qual caso una delle forme negoziate deve essere conforme). </P></DIV>
+  <DIV class=revnote>
+  <P><STRONG>Nota dell&#8217;editore</STRONG>: Vi sono dei problemi riguardo a se l&#8217;URI sia un riferimento 
+  abbastanza specifico del materiale per il quale viene fatta la dichiarazione di conformità</P></DIV>
+  <LI>
+  <P>Il livello di conformità deve essere dichiarato. </P></LI></OL>
+<DIV class=revnote>
+<P><STRONG>Nota dell&#8217;editore</STRONG>: E' stato sollevato il problema riguardo a se 
+l&#8217;informazione richiesta negli item 1-3 sopra indicati debba essere trasmessa nell&#8217;intestazione HTTP o 
+in qualche altro modo.</P></DIV></DIV>
+<DIV class=div3>
+<H4><A id=id4511819 name=id4511819></A>Livello di conformità da dichiarare</H4>
+<P>Il livello di conformità per una delivery unit che contiene <A class=termref 
+title="" 
+href="#authored-unitdef">authored unit </A>
+è equivalente al livello  più basso di conformità dichiarato per il contenuto della delivery unit 
+e per qualsiasi authored unit che essa contiene - incluse le dichiarazioni di unità aggregate.</P>
+<P>Una risorsa individuata per mezzo di un URI è conforme alle WCAG 2.0, ad un dato livello 
+di conformità, solo se tutto il contenuto fornito da quella risorsa è conforme. Per esempio, se la 
+risorsa fornisce informazioni recuperate da un database in risposta ad interrogazioni dell'utente, tutte le delivery unit 
+contenenti tale informazione devono soddisfare tutti i success criteria delle WCAG 2.0 del livello per il quale la conformità 
+è dichiarata. Notare l&#8217;eccezione se la negoziazione del contenuto è operativa e lo user 
+agent richiede una versione del contenuto che non soddisfa le WCAG 2.0 al livello di conformità asserito.</P>
+<DIV class=revnote>
+<P><STRONG>Nota dell&#8217;editore</STRONG>: Ci stiamo attualmente occupando di come  trattare
+ <A class=termref title="" 
+href="#authored-unitdef">authored 
+unit</A> sconosciute o prodotte da comunità, create utilizzando un tool aggregatore fornito. 
+Se il tool aggregatore fornito è conforme 
+alle ATAG, la conformità alle ATAG implica che il contenuto 
+aggregato sia conforme alle WCAG?</P></DIV></DIV>
+<DIV class=div3>
+<H4><A id=id4511881 name=id4511881></A>Ambito delle dichiarazioni di conformità</H4>
+<P>Le dichiarazioni di conformità possono riguardare solo alcune parti di un 
+sito Web. Tutte le dichiarazioni di conformità devono fare riferimento ad un URI o ad un gruppo di URI. 
+Non è permesso escludere da un sito un particolare tipo di contenuto (per esempio, immagini o script)  
+poichè ciò comporterebbe l'esclusione di  singoli success criteria. E' invece permesso utilizzare un URI 
+per escludere sezioni di un sito, in modo che gli autori possano effettuare dichiarazioni di conformità 
+che ne riguardino solo alcune parti.    
+</P></DIV>
+<DIV class=div3>
+<H4><A id=relation-to-wcag10 name=relation-to-wcag10></A>Contenuto conforme alle WCAG 1.0</H4>
+<P>Gli autori di un contenuto attualmente conforme alle WCAG 1.0 potrebbero volersi adeguare alle WCAG 2.0, capitalizzando 
+il lavoro fatto in passato per raggiungere l'accessibilità. Questo passaggio potrebbe essere permesso da una dichiarazione di conformità 
+condizionata. Ad esempio, una dichiarazione di conformità potrebbe essere fatta nel seguente modo:"I materiali creati 
+o modificati prima del 24 Aprile 2003 sono conformi alle WCAG 1.0. I materiali creati o modificati il 24 Aprile 2003 o dopo tale data
+sono conformi alle WCAG 2.0. Se una delivery unit è modificata in modo significativo, allora 
+dovrebbe conformarsi completamente alle WCAG 2.0."</P>
+<DIV class=revnote>
+<P><STRONG>Nota dell'Editore</STRONG>: A seconda dei success criteria utilizzati, in alcuni casi potrebbe essere più 
+semplice conformarsi alle WCAG 2.0 che alle WCAG 1.0 e viceversa. Il WCAG WG prenderà in considerazione le differenze 
+fra la conformità secondo le WCAG 1.0 e quella secondo le WCAG 2.0 e fornirà comunicazioni agli sviluppatori 
+che attualmente si conformano alle WCAG 1.0. Tale comunicazione, che non è stata ancora organizzata, potrebbe assumere 
+la forma di un profilo di conformità tra WCAG 1.0 e WCAG 2.0 e informare su come passare dalle WCAG 1.0 alle WCAG 2.0.
+</P></DIV></DIV></DIV></DIV> 
+<div class="div1">
+<h2><a id="overview-design-principles" name="overview-design-principles"></a>Panoramica dei principi di progettazione</h2>
+<p>L&#8217;obiettivo principale è creare materiale Web che sia percepibile, fruibile e 
+comprensibile da una molteplicità di utenti  e compatibile con un&#8217;ampia gamma di 
+tecnologie assistive, attuali e future. I principi fondamentali sono:</p>
+<ol type="1">
+  <li>
+  <p>Rendere i contenuti <strong>percepibili</strong>.</p>
+  </li><li>
+  <p>Rendere <strong>fruibili</strong> gli elementi dell&#8217;interfaccia nel contenuto.</p>
+  </li><li>
+  <p>Rendere <strong>comprensibili</strong> contenuti e comandi.</p>
+  </li><li>
+  <p>Progettare contenuti sufficientemente <strong>robusti </strong>al fine di garantirne 
+  la compatibilità con le tecnologie presenti e future.</p></li></ol>
+<p>Rendere accessibili i contenuti Web va a vantaggio di moltissimi utenti, non solo di 
+quelli con disabilità. Nel mondo fisico, le rampe sono usate dalle biciclette, dalle 
+persone con passeggini e da quelle in carrozzella. Parimenti, dei contenuti Web 
+accessibili beneficerà una grande varietà di  utenti, con o senza disabilità. Ad esempio, 
+chi si trova temporaneamente ad operare in condizioni poco adatte come ambienti rumorosi 
+che impediscono di ascoltare bene o scarsamente illuminati può trarre benefici da un contenuto accessibile. 
+Allo stesso modo, un motore di ricerca può trovare una citazione famosa in un film se esso è corredato di sottotitoli per supportare 
+utenti non-udenti.</p>
+<div class="note">
+<p class="prefix"><strong>Nota:</strong> </p>
+<p>I principi di progettazione si applicano solo ai contenuti Web rivolti ad un lettore 
+umano. Un database o un insieme di metadata destinati all&#8217;uso di altre macchine, e che 
+non richiedono interfaccia, non rientrano nel campo d&#8217;azione di queste linee guida.</p></div>
+<div class="div2">
+<h3><a id="user-needs" name="user-needs"></a>Bisogni dell'utente</h3>
+<p>Di seguito sono rappresentati alcuni scenari senza alcuna pretesa di esaustività nei 
+riguardi dei vari tipi di disabilità e bisogni:</p>
+<ul>
+  <li>
+  <p>Chi non può sentire desidera una rappresentazione visiva delle informazioni 
+  veicolate col sonoro.</p>
+  </li><li>
+  <p>Chi non può vedere desidera ascoltare o sentire (mediante braille o grafici tattili) 
+  l&#8217;equivalente dell&#8217;informazione visiva.</p>
+  </li><li>
+  <p>Chi ha difficoltà nei movimenti desidera utilizzare piccolissimi spostamenti ed 
+  avere più tempo a disposizione per operare con le interfacce Web. </p>
+  </li><li>
+  <p>Chi non legge bene può desiderare che le informazioni siano lette ad alta voce. </p></li></ul>
+<p>Se i contenuti Web si avvalgono dei principi di progettazione descritti in questo 
+documento, gli utenti dovrebbero essere in grado  di accedere ai materiali usando 
+strategie adattive e tecnologie assistive. Esistono molti strumenti utilizzati da utenti 
+disabili per navigare all&#8217;interno del Web. Per scenari più approfonditi inerenti le 
+disabilità rapportate a contenuti Web accessibili o meno, far riferimento al documento "<a href="http://www.w3.org/WAI/EO/Drafts/PWD-Use-Web/">How People with Disabilities 
+Use the Web</a>".</p></div>
+<div class="div2">
+<h3><a id="accessible-content" name="accessible-content"></a>Progettare Contenuti Web 
+Accessibili </h3>
+<p>Le presenti linee guida forniscono i requisiti base per progettare contenuti Web 
+accessibili. Scopo di questo documento non è fornire il background necessario per far 
+apprendere come progettare un Web accessibile in maniera effettiva od esauriente. A 
+questo proposito, si può far riferimento al documento <a href="http://www.w3.org/WAI/EO/">Education and Outreach Working Group</a> del 
+<a href="http://www.w3.org/WAI/">Web Accessibility 
+Initiative</a>.</p></div></div></div>
+<div class="body">
+<div class="div1">
+<h2 class="principle"><a id="perceivable" name="perceivable"></a>Principio 1: Rendere i 
+contenuti percepibili.</h2>
+<div class="div2">
+<h3 class="guideline"><a id="text-equiv" name="text-equiv"></a>Linea Guida 1.1 Fornire testo 
+alternativo per ogni contenuto non testuale. </h3>
+<div class="req">
+<h4><a id="d0e480" name="d0e480"></a>Success Criteria per la Linea Guida 1.1 &#8211; Livello 1
+</h4>
+<OL type=1>
+  <LI><A id=text-equiv-functional name=text-equiv-functional></A>Per ogni contenuto non testuale 
+che sia funzionale, come link grafici o pulsanti, il <A class=termref title="" href="#text-altdef">testo 
+  alternativo</A> spiega lo scopo o la funzione del contenuto non testuale. [I] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/text-equiv-functional.html">Come fornire testo alternativo per contenuto funzionale</A>. 
+  (Informativo)</P>
+  <LI><A id=text-equiv-informative name=text-equiv-informative></A>Per ogni contenuto non testuale, usato per trasmettere 
+informazioni, il <A class=termref title="" 
+  href="#text-altdef">testo 
+  alternativo</A> trasmette le stesse informazioni. [I] 
+  <P><EM>Nota:</EM> ciò significa che per i multimedia sono fornite etichette (come descritto nel precedente 
+criterio) e trascrizioni.</P>
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/text-equiv-informative.html">Come fornire testo alternativo 
+per contenuto che trasmette informazioni</A>. 
+  (Informativo)</P>
+  <LI><A id=text-equiv-sensory name=text-equiv-sensory></A>Per il contenuto non testuale creato per generare una specifica esperienza sensoriale, 
+come musica o arte visiva il, <A class=termref title="" href="#text-altdef">testo 
+  alternativo</A> identifica e descrive il contenuto non testuale. [I] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/text-equiv-sensory.html">Come fornire testo alternativo 
+per il contenuto che genera una specifica esperienza sensoriale</A>. (Informativo)</P>
+  <LI><A id=text-equiv-ignored name=text-equiv-ignored></A>Il contenuto non testuale che non fornisce informazioni, funzionalità, 
+o esperienze sensoriali è marcato in modo da essere ignorato dalle tecnologie assistive. [I] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/text-equiv-ignored.html">Come fornire testi alternativi che possano 
+essere ignorati dalle tecnologie assistive.</A>. 
+  (Informativo)</P>
+  <LI><A id=text-equiv-explicit-assoc name=text-equiv-explicit-assoc></A>Qualsiasi <A 
+  class=termref title="" 
+  href="#text-altdef">testo 
+  alternativo</A> è <A class=termref title="" 
+  href="#explicitly-associateddef">esplicitamente associato</A> con il <A class=termref title="" 
+  href="#non-text-contentdef">contenuto non testuale</A>. [I] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/text-equiv-explicit-assoc.html">Come associare in modo esplicito il testo alternativo 
+con il contenuto non testuale.</A>. 
+  (Informativo)</P>
+  <LI><A id=text-equiv-live-media name=text-equiv-live-media></A>
+  <P>Per il contenuto dal vivo solo audio o solo video, come internet radio o 
+  Web camera, il testo alternativo descrive lo scopo della presentazione o è fornito un link ad un contenuto alternativo in tempo reale, 
+come un rapporto sul traffico trasmesso da una Web camera.</P>
+  <P>Nota: il contenuto in tempo reale non implica sottotitoli in tempo reale.</P>
+  <DIV class=revnote>
+  <P><STRONG>Nota dell&#8217;editore</STRONG>: Ciò è simile al #1 sopra indicato, sembra che
+ci sia ancora bisogno di occuparsi in modo specifico del contenuto solo audio o solo video per evitare confusione.</P></DIV></LI></OL></DIV>
+
+<div class="bp">
+<h4><a id="d0e516" name="d0e516"></a>Success Criteria per la Linea Guida 1.1 &#8211; Livello 2</h4>
+<ol type="1">
+  <li>
+  <p>Nessun success criteria di livello 2 per questa linea guida.</p></li></ol></div>
+<div class="additional">
+<h4><a id="d0e522" name="d0e522"></a>Success Criteria per la Linea Guida 1.1 &#8211; Livello 3 
+</h4>
+<OL type=1>
+  <LI><A id=text-equiv-text-doc name=text-equiv-text-doc></A>Per il contenuto multimediale, è fornita
+  una trascrizione combinata di descrizioni audio e sottotitoli. [I] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/text-equiv-text-doc.html">Come fornire descrizioni di tutte le 
+importanti informazioni visive inerenti i multimedia.</A> 
+  (Informativo) </P></LI></OL></DIV>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/text-equiv_issues.php">Linea Guida
+1.1 (testo equivalente) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e529" name="d0e529"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e531" name="d0e531"></a>Chi beneficia della Linea guida 1.1 
+(Informativa) </h4>
+<ul>
+  <li>
+  <p>Utenti <strong>non vedenti</strong>, <strong>ipovedenti</strong>, <strong>disabili 
+  cognitivi</strong> o che hanno difficoltà per un qualsiasi motivo a leggere un testo 
+  possono usufruire del contenuto letto a voce alta dalle tecnologie assistive. </p>
+  </li><li>
+  <p>Utenti <strong>non udenti</strong>, <strong>con menomazioni dell&#8217;udito</strong> o 
+  che hanno difficoltà per un qualsiasi motivo a comprendere informazioni audio possono 
+  leggere il contenuto in forma testuale o averlo tradotto e rappresentato nel linguaggio 
+  dei segni dalle tecnologie 
+  assistive. </p>
+  </li><li>
+  <p>Utenti <strong>non vedenti-non udenti</strong> possono leggere il testo in braille. </p></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e562" name="d0e562"></a>Esempi relativi alla Linea Guida 1.1 
+(Informativi) 
+ </h4>
+<ul>
+  <li> 
+  <p><strong>Esempio 1: un&#8217;immagine usata come un pulsante. </strong> </p>
+  <p>Un&#8217;icona a forma di lente d&#8217;ingrandimento è usata per linkare alla pagina 
+di ricerca di un sito Web. Uno screen reader individua il pulsante come un link e legge il testo alternativo "Ricerca".</p>
+  </li><li>
+  <p><strong>Esempio 2: un diagramma di dati.</strong> </p>
+  <p>Un diagramma a barre confronta quanti articoli sono stati venduti in Giugno, Luglio 
+  ed Agosto. L&#8217;etichetta breve dice &#8220; Figura 1 &#8211; Vendite in Giugno, Luglio ed Agosto&#8221;. La 
+  descrizione lunga identifica il tipo di grafico, fornisce un sommario dei 
+  dati confrontabile con quello che risulta dal grafico, e organizza i dati 
+  in una tabella. </p>
+  </li><li>
+
+  <p><strong>Esempio 3: una registrazione di un discorso.</strong> </p>
+  <p>Il link ad una clip audio dice, &#8220;Discorso di Chairman all'assemblea&#8220;. E' fornito un link ad una trascrizione testuale 
+immediatamente dopo il link alla clip audio.</p>
+  </li><li>
+  <p><strong> Esempio 4: una registrazione di una sinfonia.</strong> </p>
+  <p>Il link ad un file audio dice, &#8220;Quinta sinfonia di Beethoven eseguita dall&#8217; Orchestra filarmonica di Vienna&#8221;.</p>
+  </li><li>
+  <p><strong> Esempio 5: una&#8217;animazione che illustra come lavora il motore di una macchina.</strong> </p>
+  <p>Un&#8217;animazione illustra come lavora il motore di una macchina. Non è presente l&#8217;audio
+e l&#8217;animazione è parte di un tutorial che descrive come lavora un motore. Tutto quel che è necessario è una descrizione 
+dell&#8217;immagine. Da <A 
+href="http://auto.howstuffworks.com/engine3.htm">&#8220;Come lavora il motore di una macchina: Combustione interna&#8221;</A></p></li></ul>
+<DIV class=revnote>
+<P><STRONG>Nota dell&#8217;Editore</STRONG>: Devono essere sviluppati esempi relativi a radio stream e Web camera dal vivo.</P></DIV></DIV></DIV></DIV>
+</div></div></div>
+<div class="div2">
+<h3 class="guideline"><a id="media-equiv" name="media-equiv"></a>Linea Guida 1.2 Fornire 
+alternative sincronizzate per i multimedia.</h3>
+
+<DIV class=req>
+<H4><A id=id4512745 name=id4512745></A>Success Criteria per la Linea Guida 1.2 &#8211; Livello 1</H4>
+<OL type=1>
+  <LI><P> Sono forniti <A id=media-equiv-captions name=media-equiv-captions></A><A class=termref 
+  title="" 
+  href="#captionsdef">sottotitoli</A> 
+  per i <A class=termref title="" 
+  href="#multimediadef">multimedia</A> preregistrati. 
+  [I]</P>
+  <LI><P>Sono fornite  <A id=media-equiv-audio-desc name=media-equiv-audio-desc></A><A 
+  class=termref title="" 
+  href="#audiodescdef">descrizioni audio </A> per i <A class=termref title="" 
+  href="#multimediadef">multimedia </A>preregistrati
+  [I]</P> 
+  <DIV class=revnote>
+  <P><STRONG>Nota dell&#8217;Editore</STRONG>: Sebbene vi sono casi in cui sottotitoli e descrizioni audio non sono 
+indispensabili, questa versione della Linea guida 1.2 non cerca di risolvere il problema. Piuttosto, si presume che  
+maggiori dettagli vengano inclusi nei documenti tecnici e che i policy maker chiariranno quando i sottotitoli e le 
+descrizioni audio risultino indispensabili.</P></DIV>
+  <LI><A id=media-equiv-rebroadcast name=media-equiv-rebroadcast></A>
+  <P>Se il contenuto multimediale è trasmesso da un altro medium, le caratteristiche di accessibilità richieste per quel medium 
+devono restare inalterate.</P></LI></OL>
+<DIV class=revnote>
+<P><STRONG>Nota dell&#8217;Editore</STRONG>: Come rapportarsi con le presentazioni che contengono 
+solo audio o solo video e che costringono gli utenti ad interagire con esse in momenti specifici? Poichè non 
+si tratta di questioni riguardanti i multimedia, si potrebbe aggiungere un criterio alla linea guida 1.1. Si sente 
+comunque la necessità di alternative sincronizzate, quindi si potrebbe aggiungere un criterio a questa linea guida. Fare 
+riferimento al <A href="http://trace.wisc.edu/bugzilla_wcag/show_bug.cgi?id=1272">problema 1272</A>.</P></DIV></DIV>
+<DIV class=bp>
+<H4><A id=id4512864 name=id4512864></A>Success Criteria per la Linea Guida 1.2 &#8211; Livello 2</H4>
+<OL type=1>
+  <LI><A id=media-equiv-real-time-captions 
+  name=media-equiv-real-time-captions></A>Sono forniti sottotitoli in tempo reale per i multimedia dal <EM>vivo</EM>. [I] </LI></OL></DIV>
+<DIV class=additional>
+<H4><A id=id4512894 name=id4512894></A>Success Criteria per la Linea Guida 1.2 &#8211; Livello 3</H4>
+<OL type=1>
+  <LI><A id=media-equiv-sign name=media-equiv-sign></A>
+  <P>I multimedia sono corredati di traduzione nel linguaggio dei segni</P>
+  <LI><A id=media-equiv-extended-ad name=media-equiv-extended-ad></A>
+  <P>Sono fornite <A class=termref title="" 
+  href="#extended-addef">ampie descrizioni audio </A>per i multimedia preregistrati.
+</P>
+  <LI><A id=media-equiv-live-ad name=media-equiv-live-ad></A>
+  <P>Sono fornite descrizioni audio per i multimedia dal vivo.</P></LI></OL></DIV>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/media-equiv_issues.php">Linea guida 1.2 (media-equiv) Problemi</A></P>
+
+<div class="informativi">
+<h4><a id="d0e712" name="d0e712"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e714" name="d0e714"></a>Chi beneficia della Linea guida 1.2  
+(Informativa) </h4>
+<ul>
+  <li>
+  <p>Utenti <strong>non udenti </strong> o con<strong> menomazioni dell&#8217;udito</strong>  
+  possono accedere alle informazioni audio mediante i sottotitoli.</p>
+  </li><li>
+  <p>Utenti <strong>non vedenti </strong> o <strong>ipovedenti </strong> o con 
+  <strong>disabilità cognitive </strong>, che hanno difficoltà ad 
+  interpretare informazioni visive, traggono vantaggio dalle corrispondenti descrizioni 
+  audio.</p></li></ul>
+<p>Dei <a class="termref" title="" href="#media-equivdef">media alternativi</a> beneficiano anche 
+persone non disabili quali ad esempio:</p>
+<ul>
+  <li>
+  <p>Utenti in ambienti rumorosi o privi del sonoro spesso fanno affidamento sui sottotitoli.
+  </p>
+  </li><li>
+  <p>I sottotitoli aiutano molti utenti a sviluppare il linguaggio e l&#8217;abilità di 
+  lettura. </p>
+  </li><li>
+  <p>Le descrizioni audio forniscono l&#8217;informazione visiva a chi distoglie 
+  temporaneamente lo sguardo dallo schermo, ad esempio quando si stanno eseguendo le 
+  istruzioni di un video e l&#8217;attenzione è rivolta alle mani. </p>
+  </li><li>
+  <p>Sottotitoli e descrizioni testuali rendono possibile l&#8217;indicizzazione e la ricerca 
+  dei file mediali.</p></li></ul>
+
+<div class="div4">
+<h4 class="bigger"><a id="d0e763" name="d0e763"></a>Esempi relativi alla Linea Guida 1.2 
+(Informativi) </h4>
+<ul>
+  <li>
+  <p><strong>Esempio 1: un movie clip con descrizione audio.</strong> </p>
+  <P>Trascrizione audio basata sui primi cinque minuti di "<A 
+  href="http://www.pbs.org/wgbh/evolution/educators/teachstuds/tvideos.html">Teaching 
+  Evolution Case Studies, Bonnie Chen</A>" (copyright WGBH and Clear Blue Sky 
+  Productions, Inc.)</P>
+  <P>Descrittore: Il titolo, "Teaching Evolution Case Studies. Bonnie Chen." Ora un' 
+insegnante mostra delle fotografie.</P>
+  <P>Bonnie Chen: Queste sono tutte inquadrature delle Everglades...per oggi può darsi proprio 
+il caso che voi siate una specie di trampoliere che ha un becco come questo."</P>
+  <P>Descrittore: Lei consegna a ciascuno di loro due lamine di legno lisce e sottili.</P>
+  </li><li>
+  <p><strong>Esempio 2: un tutorial sottotitolato.</strong> </p>
+  <P>Un video mostra come fare un nodo. Nei sottotitoli si legge "(musica)</P>
+  <P>USARE UNA CORDA PER FARE NODI</P>
+  <P>ERA UNA ABILITA' IMPORTANTE</P>
+  <P>PER MARINAI, SOLDATI E BOSCAIOLI."</P>
+  <P>Da Formattazione di Trascrizioni Campione di Whit Anderson</P>
+  <LI>
+  <DIV class=revnote>
+  <P><STRONG>Nota dell&#8217;Editore</STRONG>: Esempi da sviluppare: un&#8217;animazione 
+con colonna sonora di musica lirica, una presentazione di diapositive interattiva, un'animazione con colonna sonora musicale.</P></DIV></LI></UL></DIV></DIV></DIV>
+<div class="div2">
+<h3 class="guideline"><a id="content-structure-separation" name="content-structure-separation"></a>Linea guida  1.3 Assicurare che informazioni, 
+funzionalità e strutture siano separabili dalla presentazione.
+</h3>
+<div class="req">
+<h4><a id="d0e797" name="d0e797"></a>Success Criteria per la Linea Guida 1.3 &#8211; Livello 1</h4>
+
+
+<OL type=1>
+  <LI><A id=content-structure-separation-programmatic 
+  name=content-structure-separation-programmatic></A>Strutture e relazioni all&#8217;interno del contenuto 
+possono essere <A class=termref title="" 
+  href="#programmaticallydetermineddef">programmaticamente determinati</A>. [I] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/content-structure-separation-programmatic.html">Come assicurare che strutture e 
+relazioni nel contenuto possano essere programmaticamente determinate</A>. (Informativo)</P>
+  <DIV class=revnote>
+  <P><STRONG>Nota dell&#8217;Editore</STRONG>: I concetti "affidabile" e "standard" devono essere incorporati nella 
+definizione "programmaticamente."</P></DIV>
+  <LI><A id=content-structure-separation-emphasis 
+  name=content-structure-separation-emphasis></A>L&#8217;enfasi può essere programmaticamente determinata. [I] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/content-structure-separation-emphasis.html">Come assicurare che l&#8217;enfasi possa 
+essere programmaticamente determinata</A>. 
+  (Informativo)</P>
+  <LI><A id=content-structure-presentation-color 
+  name=content-structure-presentation-color></A>Qualsiasi informazione presentata 
+attraverso il colore è anche disponibile senza (per esempio, tramite il contesto il markup, o codice che non dipende dal colore . [I] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/content-structure-presentation-color.html">Come rendere disponibile l&#8217;informazione 
+presentata tramite il colore attraverso il contesto o il markup</A>. (Informativo)</P></LI></OL></DIV>
+<DIV class=bp>
+<H4><A id=id4513318 name=id4513318></A>Success Criteria per la Linea Guida 1.3 &#8211; Livello 2</H4>
+<OL type=1>
+  <LI><A id=content-presentation-structure-without-color 
+  name=content-presentation-structure-without-color></A>L&#8217;informazione presentata usando il colore è anche 
+disponibile senza colore e senza dover interpretare il markup (per esempio attraverso il contesto o codifica del testo). [V] 
+  <P><A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/content-presentation-structure-without-color.html">Come rendere disponibile l&#8217;informazione 
+presentata attraverso il colore senza dover interpretare il markup</A>. (Informativo)</P></LI></OL></DIV>
+<DIV class=additional>
+<H4><A id=id4513368 name=id4513368></A>Success Criteria per la Linea Guida 1.3 &#8211; Livello 3</H4>
+<OL>
+  <LI>Nessun success criteria di livello 2 per questa linea guida.</LI></OL></DIV>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/content-structure-separation_issues.php">Linea Guida
+1.3 (separazione del contenuto dalla struttura) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e855" name="d0e855"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e857" name="d0e857"></a>Chi beneficia della Linea Guida 1.3 
+(Informativi) </h4>
+<ul>
+  <li>
+  <p>Separare contenuto e struttura dalla presentazione permette di veicolare i contenuti 
+  Web essere in maniera differenziata per venire incontro alle esigenze e alle difficoltà 
+  degli utenti, senza perdita d&#8217;informazione o di struttura. Ad esempio, un contenuto 
+  concepito originariamente per essere rappresentato visivamente, può esser reso col 
+  sonoro o in testo braille.</p>
+  </li><li>
+  <p>Può essere facilitata l&#8217;enfasi automatica della struttura o una navigazione più 
+  efficiente.</p>
+  </li><li>
+  <p>Di tutto ciò possono beneficiare utenti con <strong>disabilità cognitive</strong>, <strong>fisiche</strong>, 
+   <strong>uditive</strong> e <strong>visive</strong>.</p></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e882" name="d0e882"></a>Esempi relativi alla Linea Guida 1.3 
+(Informativi) </h4>
+<div class="revnote">
+<p><strong>Nota dell'Editore</strong>: Questi esempi sono stati migliorati rispetto 
+alle draft precedenti, ma sono specifici per l&#8217;HTML. Saranno generalizzati nelle future 
+draft.
+</p></div>
+<ul>
+  <li>
+  <p><strong>Esempio 1: Un form che specifica in forma testuale quali campi non sono 
+  stati compilati.</strong> </p>
+  <p>Quando un utente compila un form senza riempire tutti i campi richiesti, appare un 
+  messaggio che lo informa dei campi ancora vuoti. Questi sono anche evidenziati con 
+  colore diverso per attrarre su di essi l&#8217;attenzione dei disabili cognitivi. Poiché il 
+  messaggio è anche disponibile in forma testuale, gli utenti che non possono distinguere 
+  i colori saranno in grado di individuare i campi da correggere.</p>
+  </li><li>
+  <p><strong>Esempio 2: Un orario di autobus dove le intestazioni sono state associate 
+  alle celle.</strong> </p>
+  <p>L&#8217;orario di un autobus è organizzato in una tabella dove verticalmente sono indicate 
+  le fermate e orizzontalmente le diverse corse. Ogni cella contiene l&#8217;ora relativa alla 
+  fermata del bus. Nel markup ogni cella è stata associata sia alla corrispondente 
+  fermata dell&#8217;autobus, che alla relativa corsa. </p>
+  </li><li>
+  <p><strong>Esempio 3: Un form dove ad ogni casella di controllo è stata associata la 
+  relativa etichetta.</strong> </p>
+  <p>In un form dove gli utenti possono selezionare differenti opzioni usando caselle di 
+  controllo, ad ognuna è stata associata la relativa etichetta. Ciò avvantaggia varie 
+  categorie di utenti. Permette ai non vedenti di determinare qual è la funzione della 
+  casella. I disabili motori possono controllare la casella più agevolmente in quanto 
+  possono selezionare un qualunque punto dell&#8217;etichetta invece di cliccare esattamente 
+  nella casella di controllo.</p></li></ul></div></div></div>
+<div class="div2">
+<h3 class="guideline"><a id="visual-contrast" name="visual-contrast"></a>Linea Guida 1.4 
+Rendere semplice distinguere le informazioni dalle immagini e dai suoni di background.</h3>
+<div class="req">
+<h4><a id="d0e916" name="d0e916"></a>Success Criteria per la Linea Guida 1.4 &#8211; Livello 1</h4>
+<ol type="1">
+  <li><A id=visual-audio-contrast-determined 
+  name=visual-audio-contrast-determined></A>Ogni testo implementato su un'<A 
+  class=termref title="" 
+  href="#background-imagedef">immagine di background</A>, 
+  su colore o testo di sfondo, può essere <A class=termref title="" 
+  href="#programmaticallydetermineddef">programmaticamente 
+  determinato</A>. [I] </LI></OL>
+  <div class="note">
+  <p class="prefix"><strong>Nota:</strong> </p>
+<P>Le immagini del testo che si adeguano alla linea guida 1.1 dovrebbero soddisfare questo criterio. 
+(Fare riferimento alla <A href="#text-equiv"><EM>Linea Guida 1.1 Fornire 
+testo alternativo per tutti i contenuti non testuali.</EM></A>)</P></DIV></DIV>
+<div class="bp">
+<h4><a id="d0e928" name="d0e928"></a>Success Criteria per la Linea Guida 1.4 &#8211; Livello 2</h4>
+<OL type=1>
+  <LI><A id=visual-audio-contrast-contrast 
+  name=visual-audio-contrast-contrast></A>Il testo e i diagrammi che sono presentati 
+  su un'<A class=termref title="" 
+  href="#background-imagedef">immagine di background </A>, 
+  colore o testo di sfondo hanno un contrasto maggiore di X1 dove l'elemento più chiaro è
+  almeno Y1 come misurato da _____. [V] 
+  <LI><A id=visual-audio-contrast-bg-patterns 
+  name=visual-audio-contrast-bg-patterns></A>Il testo che è presentato su uno schema 
+  di background fatto da righe che sono entro 500% +/- della larghezza 
+  dei caratteri o delle loro grazie devono avere un contrasto fra i caratteri 
+  e le righe maggiore di X2, dove l'elemento più chiaro è almeno Y2. [V] 
+  <LI><A id=visual-audio-contrast-dis-audio 
+  name=visual-audio-contrast-dis-audio></A>Gli utenti possono disabilitare l'audio di background  
+  che gira automaticamente su una pagina, in modo che esso non interferisca con il software di lettura
+  del testo eventualmente utilizzato. [V] </LI></OL>
+<DIV class=revnote>
+<P><STRONG>Nota dell'Editore</STRONG>: 	Il Working Group sta cercando un algoritmo 
+capace di misurare il contrasto in maniera sufficientemente accurata e verificabile da poterlo includere nelle linee guida. 
+Attualmente viene preso in considerazione, per essere incorporato nelle tecniche, l'algoritmo che proviene dal documento <A 
+href="http://www.w3.org/TR/AERT">Techniques For Accessibility Evaluation And 
+Repair Tools</A>. Il gruppo, però, non ha ancora trovato qualcosa di abbastanza specifico da poter essere incluso a livello di linee guida. 
+</P></DIV></DIV>
+<div class="additional">
+<h4><a id="d0e940" name="d0e940"></a>Success Criteria per la Linea Guida 1.4 &#8211; Livello 3</h4>
+<ol type="1">
+  <li>Il testo non è implementato su uno sfondo (immagine, testo, colore o schema), oppure se è 
+  presente un background, il contrasto fra il testo e lo sfondo è maggiore di X2. [V]
+  </li><li>Il contenuto audio non ha sottofondo sonoro oppure i suoni di background sono almeno di 20 
+  decibel più bassi rispetto al contenuto audio, eccetto che per effetti sonori  
+  occasionali. [V]</li></ol>
+<DIV class=note>
+<P class=prefix><STRONG>Note:</STRONG></P>
+<P>Una differenza di 20 decibel nel livello di un suono lo rende circa 4 volte più basso 
+(o più alto). Il background sonoro che ha questi requisiti risulterà approssimativamente 
+quattro volte (4x) più basso del contenuto audio di foreground.</P></DIV></DIV>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/visual-contrast_issues.php">Linea Guida 
+1.4 (contrasto audio-visivo) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e951" name="d0e951"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e953" name="d0e953"></a>Chi beneficia della Linea Guida 1.4 
+(Informativa) </h4>
+<UL>
+  <LI>
+  <P>Utenti <strong>ipovedenti</strong> possono facilmente leggere i caratteri di un 
+  testo, pur in presenza di un campo visivo limitato o di carenze nella percezione del colore, al pari di 
+utenti normodotati che non hanno difficoltà nel distinguere il testo dalle immagini di 
+  background. Anche i disabili cognitivi si avvantaggeranno 
+nella comprensione, poichè beneficeranno di un testo facilmente distinguibile. Il contrasto visivo aiuta anche gli utenti con disabilità uditive, 
+che potranno usufruire di una chiara rappresentazione visiva del'informazione.
+  <LI>
+  <P>Utenti con <strong>menomazioni uditive</strong>, che limitano la loro capacità di percepire 
+  le frequenze sonore, possono estrapolare le parole dai suoni perché non mixate col 
+  sottofondo musicale.</P></LI></UL>
+<DIV class=note>
+<P class=prefix><STRONG>Nota:</STRONG></P>
+<P>Il Contrasto Audio è anche conosciuto come "rapporto segnale/rumore" dagli audiologisti, 
+dove "segnale" fa riferimento all'audio di foreground e "rumore"  a quello di
+background.</P></DIV></DIV>
+<div class="div4">
+<h4 class="bigger"><a id="d0e963" name="d0e963"></a>Esempi relativi alla Linea Guida 1.4 
+(Informativi)  </h4>
+<ul>
+  <li>
+  <p><strong>Esempio 1: una pagina con immagine di background. </strong> </p>
+  <p>Un&#8217;immagine di background e un testo sono implementati in modo tale che essa non si 
+  trovi dietro il testo o che sia appena percettibile in modo che il contrasto tra la 
+  parte più scura dell&#8217;immagine e il testo (che è scuro) incontri i requisiti standard 
+  per il contrasto tra foreground e background. Inoltre l&#8217;immagine dietro il testo non 
+  contiene linee che hanno lo stesso spessore dei caratteri, in modo da non interferire 
+  con il loro riconoscimento. </p></li>
+  <li>
+  <p><strong>Esempio 2: parlato su background sonoro.</strong> </p>
+  <p>Il parlato è spesso naturalmente mixato con suoni di background (movie, notizie dal 
+  vivo ecc.) e non può essere facilmente rimosso o separato, perciò (secondo 
+  le indicazioni della <a href="#media-equiv">linea guida 1.2</a>) sono forniti 
+  sottotitoli al fine di rendere il dialogo comprensibile. Non tutte le persone, però, 
+  sono in grado di leggerli o vederli. Se il parlato è mixato o registrato con suoni di 
+  background, ma ha un&#8217;intensità superiore ad essi di almeno 20 decibel, per molti utenti 
+  non sono più necessari i sottotitoli per comprendere il dialogo.</p></li></ul></div></div></div>
+<div class="div1">
+<h2 class="principle"><a id="operable" name="operable"></a>Principio 2: Rendere fruibili gli 
+elementi dell&#8217;interfaccia nel contenuto.</h2>
+<div class="div2">
+<h3 class="guideline"><a id="keyboard-operation" name="keyboard-operation"></a>Linea Guida 2.1 Rendere  tutte le funzionalità fruibili 
+attraverso tastiera o interfaccia di tastiera. </h3>
+<div class="req">
+<h4><a id="d0e1029" name="d0e1029"></a>Success Criteria per la Linea Guida 2.1 &#8211; Livello 1</h4>
+<ol type="1">
+  <li>Tutte le <a class="termref" title="" href="#functionalitydef">funzionalità</a> del 
+  contenuto, laddove le funzionalità o il loro  risultato possono essere descritte in una 
+  frase, sono fruibili tramite tastiera o <a class="termref" title="" href="#keybrd-interfacedef">interfaccia di tastiera</a>. [I] 
+  <div class="note">
+  <p class="prefix"><strong>Nota:</strong> </p>
+  <p>Sono incluse caratteristiche di accessibilità fornite dagli autori.</p></div>
+  <div class="note">
+  <p class="prefix"><strong>Nota:</strong> </p>
+  <p>Possono essere fornite interfacce aggiuntive alla tastiera, come ad esempio il 
+  mouse.</p></div>
+  <div class="note">
+  <p class="prefix"><strong>Nota:</strong> </p>
+  <p>Far riferimento alla <a href="#technology-supports-access">linea guida 4.2</a> 
+  per informazioni inerenti il supporto degli user agent.</p></div></li></ol></div>
+<div class="bp">
+<h4><a id="d0e1053" name="d0e1053"></a>Success Criteria per la Linea Guida 2.1 &#8211; Livello 2 
+</h4>
+<ol type="1">
+  <li>Laddove è disponibile e supportata una scelta fra <a class="termref" title="" href="#event-handlerdef">event handler</a> attivati da dispositivi di input, è 
+  utilizzato l&#8217;evento più astratto. [I] 
+  </li></ol></div>
+<div class="additional">
+<h4><a id="d0e1063" name="d0e1063"></a>Success Criteria per la Linea Guida 2.1 &#8211; Livello 3
+</h4>
+<ol type="1">
+  <li>
+  <p>Tutte le <a class="termref" title="" href="#functionalitydef">funzionalità</a> del contenuto sono fruibili tramite tastiera 
+  o <a class="termref" title="" href="#keybrd-interfacedef">interfaccia di tastiera</a>.
+  </p></li></ol></div>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/keyboard-operation_issues.php">Linea Guida
+2.1 (operazioni da tastiera) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e1076" name="d0e1076"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1078" name="d0e1078"></a>Chi beneficia della Linea Guida 2.1 
+(Informativa)  </h4>
+<ul>
+  <li>
+  <p>I <strong>non vedenti</strong> (che non possono usare dispositivi di puntamento) possono accedere 
+  alle funzionalità del contenuto Web o del sito.</p>
+  </li><li>
+  <p>Coloro che hanno <strong>serie disabilità fisiche</strong> possono utilizzare input vocali (che 
+  simulano i tasti) sia per immettere i dati che per operare con gli elementi dell&#8217;
+  interfaccia della pagina.</p></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1094" name="d0e1094"></a>Esempi relativi alla Linea Guida 2.1 
+(Informativi) </h4>
+<ul>
+  <li>
+  <p><strong>Esempio 1: operare con più dispositivi di input.</strong></p>
+  <p>Il contenuto fa affidamento soltanto su focus-in, focus-out e eventi di attivazione; 
+  questi sono definiti nelle API dell&#8217;ambiente per il quale il contenuto è stato 
+  realizzato e sono fruibili mediante più dispositivi di input, inclusi dispositivi di 
+  puntamento, tastiere e sistemi di input vocale.</p>
+  </li><li>
+  <p><strong>Esempio 2: esempi di contenuto Web fruibile o meno da tastiera o interfaccia 
+  di tastiera.</strong> </p>
+  <ul>
+    <li>
+    <p>Se è scritto per essere fruibile da tastiera, allora è conforme (in quanto è 
+    fruibile da tastiera). </p>
+    </li><li>
+    <p>Se è scritto per essere per essere utilizzato da un dispositivo che solitamente 
+    non è provvisto di tastiera, come un telefono cellulare, ma può essere controllato 
+    mediante una tastiera aggiuntiva, allora è conforme. (Un utente che necessita di 
+    tastiera &#8211; o di tastiera alternativa &#8211; può utilizzarla per controllare l&#8217;
+    applicazione). </p>
+    </li><li>
+    <p>Se è scritto per essere fruibile da un dispositivo che non ha tastiera, ma 
+    potrebbe anche essere utilizzabile mediante tastiera da dispositivi simili che ne 
+    sono provvisti, allora è conforme. (Un utente che necessita di tastiera non 
+    comprerebbe un dispositivo che ne è privo, che potrebbe essere considerato non 
+    accessibile. Ma il contenuto può essere controllato da un dispositivo con tastiera e 
+    quindi è conforme a questa linea guida).</p>
+    </li><li>
+    <p>Se è scritto per essere fruibile da dispositivi sprovvisti di tastiera ma non può 
+    essere utilizzato da quelli con tastiera, allora non è conforme (non si può accedere 
+    al contenuto tramite tastiera). </p></li></ul></li></ul></div></div></div>
+<div class="div2">
+<h3 class="guideline"><a id="time-limits" name="time-limits"></a>Linea Guida 2.2 Permettere 
+agli utenti di controllare i propri tempi di lettura o di interazione.</h3>
+<div class="req">
+<h4><a id="d0e1128" name="d0e1128"></a>Success Criteria per la Linea Guida 2.2 &#8211; Livello 1</h4>
+<ol type="1">
+  <li>Il contenuto è progettato in modo che i time-out non siano elemento essenziale 
+  dell&#8217;interazione, oppure si verifica almeno una delle seguenti situazioni per ogni
+  time-out funzionale al contenuto: [I] 
+  <ul>
+    <li>
+    <p>L&#8217;utente può disattivare il time-out o; </p>
+    </li><li>
+    <p>L&#8217;utente può regolare il tempo entro un ampio intervallo, almeno 10 volte più 
+    lungo rispetto alle impostazioni di default o; </p>
+    </li><li>
+    <p> L&#8217;utente è avvertito che il tempo a disposizione sta per terminare, può 
+    prolungarlo con una semplice azione (ad esempio premendo un qualunque tasto) e gli 
+    vengono forniti almeno 10 secondi per rispondere o;</p>
+    </li><li>
+    <p>Il tempo è una componente importante di un evento real-time (ad esempio una 
+    vendita all&#8217;incanto) e non ci sono alternative possibili al limite temporale o;</p>
+    </li><li>
+    <p>Il tempo è parte di un&#8217;<a class="termref" title="" href="#competitiveactivitydef">attività 
+    in cui la temporizzazione è essenziale</a>  (ad esempio 
+    gare o test da risolvere entro un certo limite di tempo) e quindi non può essere 
+    ulteriormente prolungato per non invalidare l&#8217;attività. </p></li></ul></li></ol></div>
+<div class="bp">
+<h4><a id="d0e1153" name="d0e1153"></a>Success Criteria per la Linea Guida 2.2 &#8211; Livello 2 
+</h4>
+<ol type="1">
+  <li> E' fornito un metodo per disattivare il <a class="termref" title="" href="#blinksdef">contenuto che lampeggia</a> per più di 3 secondi. [I] 
+  </li><li>E' fornito un metodo per mettere in pausa e/o disattivare in modo permanente contenuti in 
+  movimento o basati sul tempo  [I] </li></ol></div>
+<div class="additional">
+<h4><a id="d0e1166" name="d0e1166"></a>Success Criteria per la Linea Guida 2.2 &#8211; Livello 3 
+</h4>
+<ol type="1">
+  <li>Fatta eccezione per gli eventi in tempo reale, il contenuto è stato progettato in modo 
+  che la durata non sia parte essenziale dell'attività e che ogni limite di tempo soddisfi 
+  i success criteria 1 di livello 1 di questa linea guida. [V] 
+  </li><li>Ogni interruzione non indispensabile, come ad esempio la possibilità di aggiornare 
+  il contenuto, può essere posposta e/o eliminata dall&#8217;utente [V] </li></ol></div>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/time-limits_issues.php">Linea Guida 
+2.2 (limiti di tempo) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e1180" name="d0e1180"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1182" name="d0e1182"></a>Chi beneficia della Linea Guida 2.2 
+(Informativa)  </h4>
+<ul>
+  <li>
+  <p>Utenti <strong>dislessici</strong>, con <strong>disabilità cognitive</strong> e 
+  <strong>di apprendimento</strong> hanno spesso bisogno di più tempo per leggere e 
+  comprendere un testo scritto. </p>
+  </li><li>
+  <p>Utenti con <strong>disabilità fisiche</strong> possono esaminare e leggere i materiali 
+  frequentemente aggiornati prima che avvenga il refresh o nel caso in cui i contenuti 
+  siano letti con una tecnologia assistiva o un browser vocale guasti.</p></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1204" name="d0e1204"></a>Esempi relativi alla Linea Guida 2.2 
+(Informativi) </h4>
+<ul>
+  <li>
+  <p>Esempi di contenuti che devono soddisfare i success criteria di questo checkpoint:</p>
+  <ul>
+    <li>
+    <p>refresh automatico,</p>
+    </li><li>
+    <p>reindirizzamento,</p>
+    </li><li>
+    <p>testo che lampeggia o in scorrimento,</p>
+    </li><li>
+    <p>dialogo che scompare dopo un breve periodo,</p>
+    </li><li>
+    <p>chiusura o disattivazione di risorse se l&#8217;attività non è espletata entro un certo 
+    tempo.</p></li></ul>
+  </li><li>
+  <p><strong>Esempio 1: testo che lampeggia.</strong> </p>
+  <p>Lo scripting dal lato client è utilizzato per creare testo che lampeggia. Il 
+  contenuto fornisce all&#8217;utente un&#8217;opzione che gli consente di disattivare 
+  l&#8217;intermittenza.</p>
+  </li><li>
+  <p><strong>Esempio 2: un sito di news che si aggiorna regolarmente.</strong> </p>
+  <p>La prima pagina di un sito di news viene aggiornata ogni mezz&#8217;ora. Contiene testi 
+  molto stringati e consiste principalmente di link al contenuto. Un utente che non 
+  desidera l&#8217;aggiornamento della pagina seleziona una casella di controllo, che si trova 
+  nella sezione del sito relativa alle &#8220;user preferences&#8221; e che costituisce uno dei primi 
+  link di ogni pagina. </p></li></ul></div></div></div>
+<div class="div2">
+<h3 class="guideline"><a id="flicker" name="flicker"></a>Linea Guida 2.3 Consentire agli utenti 
+di evitare il contenuto che potrebbe causare attacchi dovuti ad epilessia fotosensibile.</h3>
+<div class="req">
+<h4><a id="d0e1246" name="d0e1246"></a>Success Criteria per la Linea Guida 2.3 &#8211; Livello 1</h4>
+<ol type="1">
+ <LI><A id=flicker-rate-and-warning name=flicker-rate-and-warning></A>Il contenuto che viola gli standard internazionali per 
+  la salute e la sicurezza per <A class=termref 
+  title="" href="#flash-thresholddef">intermittenza generica 
+  </A> o  <A class=termref title="" 
+  href="#red-thresholddef">intermittenza rossa</A> 
+   è <a class="termref" title="" href="#markedpriordef">marcato in modo che l&#8217;utente 
+  possa accedervi prima del suo apparire</a>. [V] </li></ol></div>
+<div class="bp">
+<h4><a id="d0e1255" name="d0e1255"></a>Success Criteria per la Linea Guida 2.3 &#8211; Livello 2
+</h4>
+<ol type="1">
+  <li>Il contenuto non viola gli standard internazionali per 
+  la salute e la sicurezza per <A class=termref 
+  title="" href="#flash-thresholddef">intermittenza generica 
+  </A> o  <A class=termref title="" 
+  href="#red-thresholddef">intermittenza rossa</A> [V] </li></ol></div>
+<div class="additional">
+<h4><a id="d0e1262" name="d0e1262"></a>Success Criteria per la Linea Guida 2.3 &#8211; Livello 3 
+</h4>
+<ol type="1">
+  <li>Il contenuto non viola gli standard internazionali per 
+  la salute e la sicurezza per <A class=termref title="" 
+  href="#pattern-thresholddef">soglie di distribuzione spaziale</A> o <A class=termref title="" 
+  href="#red-thresholddef">intermittenza rossa</A>. [V] 
+</li></ol>
+<DIV class=revnote>
+<P><STRONG>Nota dell'Editore</STRONG>: Il Trace Center dell'Università del Wisconsin renderà disponibile un free tool 
+che analizzerà in tal senso il contenuto Web. </P></DIV></DIV>
+</div>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/flicker_issues.php">Linea Guida
+2.3 (sfarfallio) Problemi</A> </P>
+
+<div class="informative">
+<h4><a id="d0e1357" name="d0e1357"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1359" name="d0e1359"></a>Chi beneficia della Linea Guida 2.3 
+(Informativa)  </h4>
+<ul>
+  <li>
+  <p>Persone con <strong>epilessia fotosensibile</strong> che possono evitare attacchi dovuti alle 
+  intermittenze o alle distribuzioni spaziali. </p></li></ul></div></div></div>
+<div class="div2">
+<H3 class=guideline><A id=navigation-mechanisms 
+name=navigation-mechanisms></A>Linea Guida 2.4  Aggiungere funzionalità che aiutino l’utente a trovare i contenuti, ad orientarsi e a spostarsi tra essi.</H3>
+<DIV class=req>
+<H4><A id=id4514757 name=id4514757></A>Success Criteria per la Linea Guida 2.4 &#8211; Livello 1  
+</H4>
+<OL type=1>
+  <LI><A id=navigation-mechanisms-structure 
+  name=navigation-mechanisms-structure></A>Strutture e relazioni all'interno dei contenuti
+  possono essere <A class=termref title="" 
+  href="#programmaticallydetermineddef">
+  determinate programmaticamente</A>. [I] 
+  <DIV class=note>
+  <P class=prefix><STRONG>Nota:</STRONG></P>
+  <P>Conformemente al primo criterio di livello 1 della <A 
+  href="#content-structure-separation"><EM>Linea Guida 
+  1.3 Assicurare che informazioni, funzionalità e strutture siano separabili dalla presentazione. 
+  </EM></A> si destina anche questa linea guida al livello 1.</P></DIV>
+  <DIV class=revnote>
+  <P><STRONG>Nota dell'Editore</STRONG>: Il working group è alla ricerca di input circa la sovrapposizione 
+  del criterio per le linee guida 1.3 e 2.4.</P></DIV></LI></OL></DIV>
+<DIV class=bp>
+<H4><A id=id4514813 name=id4514813></A>Success Criteria per la Linea Guida 2.4 &#8211; Livello 2 </H4>
+<OL type=1>
+  <LI><A id=navigation-mechanisms-toc 
+  name=navigation-mechanisms-toc></A> I documenti che hanno più intestazioni 
+  di sezioni e sono presentati come un'unica <A class=termref title="" 
+  href="#deliveryunitdef">delivery unit</A> includono 
+  una tabella dei contenuti con link alle sezioni importanti del documento. [V] 
+  <LI><A id=navigation-mechanisms-mult-loc 
+  name=navigation-mechanisms-mult-loc></A>C'è più di un modo per individuare
+  il contenuto di ogni <A class=termref title="" 
+  href="#deliveryunitdef">delivery unit</A>, 
+  e ciò include ma non si limita a gruppi di link, mappa del sito, motore di ricerca interno
+  o altri meccanismi di navigazione. [V] 
+  <LI><A id=navigation-mechanisms-skip 
+  name=navigation-mechanisms-skip></A>Blocchi di contenuto ripetuto, quali ad esempio menù di 
+  navigazione o intestazioni di documento, sono marcati in modo da poter essere bypassati da 
+  chi usa tecnologie assistive o naviga tramite tastiera o interfacce di tastiera. [V] 
+  <DIV class=revnote>
+  <P><STRONG>Nota dell'Editore</STRONG>: Le <A 
+  href="http://www.w3.org/TR/2004/WD-WCAG20-GENERAL-20041119/Overview.html">General 
+  Techniques</A> potrebbero includere informazioni su come soddisfare questo criterio attraverso 
+  metadata, uso di un futuro attributo di ruolo, ecc.</P></DIV></LI></OL></DIV>
+<DIV class=additional>
+<H4><A id=id4514911 name=id4514911></A>Success Criteria per la Linea Guida 2.4 &#8211; Livello 3 </H4>
+<OL type=1>
+  <LI><A id=navigation-mechanisms-one-seq 
+  name=navigation-mechanisms-one-seq></A>Quando il contenuto è organizzato in una 
+  sequenza che incide sul suo significato, tale sequenza può essere determinata programmaticamente. 
+  [I] 
+  <DIV class=revnote>
+  <P><STRONG>Nota dell'Editore</STRONG>: Il problema è come specificare l'applicazione
+  di questo criterio al contenuto organizzato in sequenza, senza che occorra un test allo scopo. 
+  E' stato notato che l'ordine di lettura è già garantito dalla 1.3, che chiede di rendere determinabili 
+programmaticamente le strutture e le relazioni all'interno del contenuto.
+  Se il Working Group ed altri lettori condividono questo punto di vista, questo success criterion 
+  potrebbe essere cancellato e la relativa General Technique potrebbe essere spostata alla linea guida 1.3.</P></DIV>
+  <DIV class=revnote>
+  <P><STRONG>Nota dell'Editore</STRONG>: Il criterio riguardante l'ordine di lettura 
+  può essere più appropriato se inserito nel Principio 3: si potrebbe arguire che l'ordine di 
+  lettura sia irrilevante, a meno che non incida sull'abilità dell'utente di capire il contenuto. 
+  L'ordine di lettura di per sé non è necessariamente un problema relativo all'accessibilità. 
+  Lo diventa se un utente disabile (ad esempio con menomazioni visive o cognitive) non riesce a
+  ricavare in maniera affidabile un significativo ordine di lettura dalla
+  presentazione di default. Se vogliamo mantenere questo criterio e conservarlo 
+  nella 2.4, abbiamo bisogno di dare una formulazione che vincoli l'ordine di lettura
+  all'abilità dell'utente nell'operare ed utilizzare il contenuto. Non è necessariamente vero
+  che il solo mostrare la struttura allo user agent sia sufficiente ad indicare un ordine di 
+  lettura plausibile. L'esempio per la General Technique circa l'ordine di lettura è ideato
+  per evidenziare questo problema.</P></DIV>
+  <LI><A id=navigation-mechanisms-focus 
+  name=navigation-mechanisms-focus></A>Quando una pagina o un'altra <A class=termref 
+  title="" href="#deliveryunitdef">delivery unit</A> 
+  è navigata in maniera sequenziale, gli elementi vengono focalizzati nell'ordine con cui si succedono le
+  relazioni e le sequenze nel contenuto. [I] 
+  <LI><A id=navigation-mechanisms-images 
+  name=navigation-mechanisms-images></A>Le immagini hanno una <A class=termref title="" 
+  href="#structuredef">struttura</A> a cui gli utenti possono accedere. [I] 
+  <LI><A id=navigation-mechanisms-title name=navigation-mechanisms-title></A>Le <A 
+  class=termref title="" 
+  href="#deliveryunitdef">delivery unit</A> hanno 
+  titoli descrittivi. [I] 
+  <LI><A id=navigation-mechanisms-paragraphs 
+  name=navigation-mechanisms-paragraphs></A>Il testo è diviso in paragrafi. [V] 
+
+  <LI><A id=navigation-mechanisms-title-subsections 
+  name=navigation-mechanisms-title-subsections></A>I documenti sono suddivisi in 
+  sezioni e sottosezioni gerarchiche che hanno titoli descrittivi. [V] 
+</LI></OL></DIV>
+
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/navigation-mechanisms_issues.php">Linea Guida
+2.4 (meccanismi di navigazione) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e1471" name="d0e1471"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1473" name="d0e1473"></a>Chi Beneficia della Linea Guida 2.4 
+(Informativa) </h4>
+<ul>
+  <li>
+  <p>Se nel markup o nel data model è fornita la <a class="termref" title="" href="#structuredef">struttura</a> logica, </p>
+  <ul>
+    <li>
+    <p>Utenti con <strong>disabilità fisiche</strong> possono usare la struttura per 
+    muoversi più agevolmente fra paragrafi, capitoli, sezioni ecc. </p>
+    </li><li>
+    <p>Utenti con <strong>disabilità cognitive</strong> possono usare la  struttura (titoli dei 
+    capitoli, intestazioni, ecc.) per contestualizzare meglio il testo di loro interesse. Fra
+    l&#8217;altro gli elementi strutturali richiamano l&#8217;attenzione sui cambiamenti di 
+    contesto ed orientano l&#8217;utente verso il nuovo focus. </p>
+    </li><li>
+    <p>Utenti <strong>non vedenti</strong> o <strong>ipovedenti</strong> possono passare da 
+    intestazione ad intestazione per avere una panoramica degli argomenti o per "saltare" più 
+    rapidamente alla sezione d&#8217;interesse.</p>
+    </li><li>
+    <p>Lettori <strong>ipovedenti</strong> possono talvolta (a seconda della tecnologia video) 
+    modificare la visualizzazione dei titoli dei capitoli e delle intestazioni per renderli più 
+    visibili e più facili da usare quando navigano nel documento. </p>
+    </li><li>
+    <p>Il contenuto può essere visualizzato tramite molteplici dispositivi il cui software non 
+    solo è in grado di scegliere quali elementi visualizzare, ma di farlo anche nel modo più 
+    efficace. </p></li></ul>
+  </li><li>
+  <p>Fornire differenti meccanismi di navigazione può aiutare utenti con diverse abilità, background    
+  culturale, orientamento visuale verso il testo, e tipo di informazioni che essi stanno ricercando 
+  in quel momento.</p>
+  </li><li>
+  <p>Per utenti con <strong>disabilità cognitive</strong> può risultare più facile cercare quello che     
+  desiderano piuttosto che dedurne la posizione da scelte categoriche. </p>
+  </li><li>
+  <p>Utenti <strong>ipovedenti</strong> o <strong>non vedenti</strong> possono reputare più efficaci tecniche 
+  di ricerca che prelevano i dati inerenti l&#8217;argomento d&#8217;interesse, rispetto a tecniche 
+  che richiedono loro di esaminare liste o elenchi di contenuti. </p>
+  </li><li>
+  <p>Una presentazione che enfatizza la struttura:</p>
+  <ul>
+    <li>
+    <p>Mette in grado gli utenti con <strong>disabilità cognitive e visive</strong> di orientarsi         all&#8217;interno dei contenuti, </p>
+    </li><li>
+    <p>Mette in grado tutti gli utenti di spostarsi più velocemente fra i contenuti e di rilevarne le     ripartizioni più importanti, </p>
+    </li><li>
+    <p>Mette in grado tutti gli utenti, ma particolarmente gli utenti con <strong>disabilità cognitive e     visive</strong> a focalizzare contenuti chiave, </p>
+    </li><li>
+    <p>Mette in grado tutti gli utenti, ma particolarmente gli utenti con <strong>disabilità cognitive e         visive</strong> di distinguere i vari tipi di contenuto. </p></li></ul></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1557" name="d0e1557"></a>Esempi relativi alla Linea Guida 2.4 (Informativi) </h4>
+<ul>
+  <li>
+  <p><strong>Esempio 1: documentazione per un prodotto.</strong> </p>
+  <p>E&#8217; consuetudine identificare i capitoli ed etichettare la struttura di un
+  libro. Nei capitoli, i titoli (etichette) identificano i cambiamenti di contesto e i concetti 
+  chiave contenuti nel testo. Le sottili differenze fra l&#8217;aspetto del titolo di un capitolo 
+  e delle intestazioni dei paragrafi aiutano l&#8217;utente a comprendere la gerarchia e le
+  relazioni fra titoli ed intestazioni. Nel caso di informazioni visive, la differenza potrebbe 
+  consistere nella dimensione del carattere e nei margini di indentazione; nel caso di informazioni 
+  uditive in una voce diversa o in un suono da anteporre.</p>
+  </li><li>
+  <p><strong>Esempio 2: un&#8217;immagine scalabile di una bicicletta.</strong> </p>
+  <p>Linee e una circonferenza (raggi e cerchio) sono raggruppati in una &#8220;ruota&#8221;. Linee 
+  in un triangolo che si fissa ad ogni ruota sono raggruppati in un &#8220;telaio&#8221;. </p>
+  </li><li>
+  <p><strong>Esempio 3: interfaccia utente.</strong> </p>
+  <p>I controlli dell&#8217;interfaccia utente sono suddivisi in gruppi organizzati. </p>
+  </li><li>
+  <p><strong>Esempio 4: una tabella di dati.</strong> </p>
+  <p>I gruppi di righe o colonne sono etichettati con le intestazioni. </p>
+  </li><li>
+  <p><strong>Esempio 5: una presentazione audio.</strong> </p>
+  <p>La versione audio di un documento, generata secondo un foglio di stile, utilizza una voce 
+  diversa, più   formale, per leggere i titoli e le intestazioni in modo che l&#8217;ascoltatore 
+  possa identificare facilmente le parole componenti i titoli e distinguerle dal restante testo. 
+  </p></li></ul></div></div></div>   </p></li></ul></div></div></div>
+<p> </p>
+<DIV class=div2>
+<H3 class=guideline><A id=minimize-error name=minimize-error></A>Linea Guida 2.5 
+Aiutare gli utenti ad evitare gli errori e consentire loro di 
+rimediare con facilità.</a> <SPAN 
+class=smaller>[linea guida di livello 2]</SPAN></H3>
+<div class="req">
+<h4><a id="d0e1604" name="d0e1604"></a>Success Criteria per la Linea Guida 2.5 &#8211; Livello 1
+</h4>
+<ol>
+  <li>Nessun success criteria di livello 1 per questa linea guida. 
+</li></ol></div>
+<div class="bp">
+<h4><a id="d0e1606" name="d0e1606"></a>Success Criteria per la Linea Guida 2.5 &#8211; Livello 2
+</h4>
+<ol type="1">
+  <li>
+  <p> Se è rilevato un errore dell&#8217;utente, l'errore è identificato e segnalato  sotto forma di testo.
+</p>
+  </li><li>
+  <p>Se è rilevato un errore dell&#8217;utente e sono noti i suggerimenti per la correzione 
+da poter fornire senza compromettere la sicurezza o gli obiettivi, l'errore è identificato e i suggerimenti 
+resi disponibili.  
+ </p>
+  </li><li>
+  <p>Se sono importanti le conseguenze ma non il tempo di risposta, 
+si verifica una delle seguenti possibilità: 
+</p>
+  <ol type="a">
+    <li>
+    <p>Le azioni sono reversibili.</p>
+    </li><li>
+    <p>Se le azioni sono non reversibili, viene eseguito il controllo 
+degli errori prima di procedere al passo successivo.</p>
+    </li><li>
+    <p>Se le azioni sono non reversibili e non controllabili, 
+l&#8217;utente è messo in grado di riesaminare e confermare o correggere 
+l&#8217;informazione prima che venga trasmessa.
+</p></li></ol></li></ol></div>
+<div class="additional">
+<h4><a id="d0e1628" name="d0e1628"></a>Success Criteria per la Linea Guida 2.5 &#8211; Livello 3
+ </h4>
+<ol type="1">
+  <li>
+  <p>Laddove è richiesta immissione testo per cui esiste un insieme di meno di 75 alternative valide che possono essere fornite 
+senza compromettere la sicurezza o gli obiettivi, 
+agli utenti è permesso selezionare le scelte da una lista di opzioni così come digitare 
+i dati direttamente. 
+  </p>
+  </li><li>
+  <p>Se consenito dal linguaggio naturale del testo, è fornita
+  un'opzione per il controllo ortografico dei termini immessi con suggerimento di quelli corretti.
+ </p></li></ol></div>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/minimize-error_issues.php">Linea Guida 
+2.5 (minimizzare l'errore) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e1639" name="d0e1639"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1641" name="d0e1641"></a>Chi beneficia della Linea Guida 2.5 (Informativa) 
+</h4>
+<ul>
+  <li>
+  <p> Identificare gli errori di battitura aiuta gli utenti <strong>disgrafici</strong> 
+e <strong>dislessici</strong> 
+che spesso incontrano difficoltà nell&#8217;inserire il testo nei form o dove 
+è richiesto un input testuale.</p>
+  </li><li>
+  <p> Alcune disabilità rendono difficoltoso operare con i dispositivi di input, incrementando la possibilità di 
+  errore. Per esempio, gli utenti con limitate funzioni motorie hanno più probabilità di commettere errori se 
+  utilizzano il mouse o la tastiera. I sistemi di riconoscimento vocale possono aver difficoltà nel riconoscere
+  le parole di chi ha <STRONG>disabilità del linguaggio</STRONG>. Le caratteristiche che aiutano ad individuare 
+  e correggere gli errori vanno a vantaggio di questi tipi di disabili.</p></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1660" name="d0e1660"></a>Esempi relativi alla Linea Guida 2.5 (Informativi)  
+ </h4>
+<UL>
+  <LI>
+  <P><STRONG>Esempio 1: Identificare errori nella trasmissione di un form.</STRONG> </P>
+  <P>Il sito Web di una linea aerea offre una speciale promozione relativa ai voli scontati. 
+  All'utente è richiesta la compilazione di un semplice form in cui inserire informazioni personali,
+  come nome, indirizzo, numero di telefono, preferenze per il posto a sedere ed e-mail.
+  Se qualcuno dei campi del form è incompleto o completato in modo non esatto, l'utente è avvertito
+   dell'errore di input. All'utente è poi presentato lo stesso form, con ancora disponibili tutte le informazione 
+  inserite in precedenza in maniera corretta. Gli verrà richiesto di correggere ogni campo segnalato da 
+   una freccia rossa o da un doppio asterisco. Notare come gli errori non siano evidenziati unicamente tramite il colore.</P>
+  <LI>
+  <P><STRONG>Esempio 2: Username e password errati.</STRONG> </P>
+  <P>Una pagina Web richiede all'utente di inserire sia username che password. Se
+  uno dei due non è corretto, l'utente è informato della presenza di un errore, ma per ragioni di sicurezza,
+  non gli viene comunicato in quale campo è l'errore, se in quello relativo allo username o in quello
+  relativo alla password, e non vengono proposti suggerimenti per la correzione.</P>
+  <LI>
+  <P><STRONG>Esempio 3: Un test online.</STRONG> </P>
+  <P>Un sito Web fornisce un test online per certificare le conoscenze in un determinato ambito 
+  di studio. Il test segnala all'utente le risposte errate, ma non offre 
+  suggerimenti per la correzione. Lo scopo del test online è di saggiare le conoscenze dell'utente,
+  pertanto, fornire indizi sulle risposte esatte andrebbe contro gli obiettivi del sito Web.</P>
+  <LI>
+  <P><STRONG>Esempio 4: Conferma di un ordine.</STRONG> </P>
+  <P>Un'attività Web di vendita al minuto offre shopping online ai consumatori.
+  Quando viene trasmesso un ordine, le relative informazioni, comprendenti gli articoli ordinati, 
+  la quantità di ciascuno, l'indirizzo per la spedizione e il metodo di pagamento, sono visualizzate 
+  sullo schermo per consentire all'utente di controllare la correttezza dell'ordine. Questi può o 
+  confermare l'ordine o apportare dei cambiamenti.  </P>
+  <LI>
+  <P><STRONG>Esempio 5: Una lista di selezione per ridurre gli errori.</STRONG> </P>
+  <P>Un'attività Web di vendita al minuto offre shopping online ai consumatori 
+  interessati all'equipaggiamento per la pesca con la mosca. Quando all'utente è richiesto il paese d'origine,
+  viene proposto di selezionare il proprio da un elenco pulldown, invece di digitare l'informazione. 
+  Al fine di rendere le cose più semplici, l'utente è avvertito che i paesi sono elencati in ordine
+  alfabetico. </P>
+  <LI>
+  <P><STRONG>Esempio 6: Caratteristiche di un motore di ricerca.</STRONG> </P>
+  <P>Un motore di ricerca è fornito di varie opzioni di ricerca per i differenti livelli 
+  di abilità e le diverse preferenze. Include un'opzione per controllare l'ortografia dei 
+  termini da ricercare ed offre alternative "best guess", ricerche tipo query-by-example 
+  ed altre ricerche simili.</P>
+  <LI>
+  <P><STRONG>Esempio 7: Controllo ortografico in un form con feedback.</STRONG> </P>
+  <P>Il sito Web di una banca fornisce ai clienti un form per trasmettere domande o 
+  suggerimenti. L'interfaccia del form include una caratteristica opzionale di controllo ortografico
+  per l'area riservata all'input del testo dove immettere la domanda o il suggerimento.</P></LI></UL></DIV></DIV></DIV></DIV>
+<div class="div1">
+<h2 class="principle"><a id="understandable" name="understandable"></a>Principio 3: 
+Rendere comprensibili contenuti e comandi.
+</h2>
+<div class="div2">
+<h3 class="guideline"><a id="meaning" name="meaning"></a>Linea Guida 3.1 Assicurare 
+che possa essere determinato il significato del contenuto.
+</h3>
+<div class="req">
+<h4><a id="d0e1678" name="d0e1678"></a>Success Criteria per la 
+Linea Guida 3.1 &#8211; Livello 1
+</h4>
+<ol type="1">
+  <li>Il linguaggio naturale utilizzato dal documento nella sua 
+globalità può essere identificato da strumenti automatici [I]. 
+  </li><li>Il significato delle abbreviazioni e degli acronimi può essere <a class="termref" title="" href="#programmaticlocatedef"> individuato programmaticamente</a>.[I] </li></ol></div>
+<div class="bp">
+<h4><a id="d0e1690" name="d0e1690"></a>Success Criteria per la Linea Guida 3.1 &#8211; Livello 2
+</h4>
+<ol type="1">
+  <li>Il significato e la pronuncia di ogni parola possono essere<a class="termref" title="" href="#programmaticlocatedef"> individuati programmaticamente</a>. [I] 
+  </li><li>Il significato di tutti gli idiomi nel contenuto può essere <a class="termref" title="" href="#programmaticallydetermineddef">determinato programmaticamente</a>. [I] 
+  </li><li>Ogni passo o frase in lingua straniera presente nel contenuto è identificato 
+attraverso markup o in altri modi. Si fa riferimento a passi o frasi che non utilizzano 
+la lingua base del documento. [I] 
+  <div class="note">
+  <p class="prefix"><strong>Nota:</strong> </p>
+  <p>Quanto detto sopra non si applica ai termini stranieri presenti nel testo, 
+diventati ormai di uso comune.
+</p></div></li></ol></div>
+<div class="additional">
+<h4><a id="d0e1715" name="d0e1715"></a>Success Criteria per la Linea Guida 3.1 &#8211; Livello 3
+ </h4>
+<ol type="1">
+  <li>Quando una parola ha più significati e non è da attribuirle quello che il dizionario associato 
+  contempla come principale, è fornito markup aggiuntivo o altra tecnica per poter determinare il 
+  significato corretto [I]. 
+  </li><li>Intestazioni di sezione e link testuali sono comprensibili quando letti come un gruppo 
+  a sé (ad esempio in una lista di link o in una tabella di contenuti di uno screen reader) [V]. 
+  </li><li>E&#8217; presente una dichiarazione associata al contenuto che afferma 
+  l&#8217;esistenza di Strategie per Ridurre la Complessità del Contenuto (lista seguente). [V] 
+  <div class="revnote">
+  <p><strong>Nota dell'editore</strong>: Stiamo tuttora esaminando metodi per 
+  rendere testabili alcuni o tutti i success criteria succitati (tali metodi potrebbero 
+  essi stessi diventare dei success criteria). 
+  </p></div>
+  <ul>
+    <li>
+    <p><strong>In generale</strong> </p>
+    <ul>
+      <li>
+      <p>Organizzare il materiale in modo che sia semplice da leggere ed usare. </p>
+      </li><li>
+      <p>Usare un manuale di stile, dizionario, e gli altri materiali di riferimento. </p>
+      </li><li>
+      <p>Testare i documenti con potenziali utenti per verificare la comprensibilità 
+del materiale, includendo nel test group soggetti con disabilità cognitive, di apprendimento e di lettura.
+</p>
+      </li><li>
+      <p>Sviluppare un solo argomento o sotto argomento per paragrafo. 
+</p></li></ul>
+    </li><li>
+    <p><strong>Lessico</strong> </p>
+    <ul>
+      <li>
+      <p>Usare un lessico che sia familiare ai potenziali lettori.  
+</p>
+      <ul>
+        <li>
+        <p>Se la risorsa è diretta a chi lavora in un particolare campo tecnico, 
+usare un linguaggio controllato. Per esempio, una risorsa progettata per 
+ingegneri aeronautici potrebbe servirsi di un linguaggio controllato come quello 
+utilizzato dalla Boeing Aircraft Company. 
+</p>
+        </li><li>
+        <p>Se una risorsa tecnica è designata ad essere tradotta in altre lingue, 
+usare un linguaggio controllato
+</p>
+        </li><li>
+        <p>Evitare gergo professionale, dialetto, e altri termini con significato 
+specialistico che può essere sconosciuto a persone non del ramo, se il materiale 
+è diretto ad una vasta platea o è destinato alla traduzione in altre lingue. 
+Può essere anche utile rivedere il materiale per semplificarne il linguaggio, 
+usando una checklist come quella prodotta dagli Stati Uniti e da 
+agenzie governative canadesi.   
+</p></li></ul>
+      <div class="revnote">
+      <p><strong>Nota dell'editore</strong>: Bisogna aggiungere esempi 
+relativi ad altri paesi ed altre lingue.</p></div>
+      </li><li>
+      <p>Formulare frasi di lunghezza e complessità conformi a quanto raccomandato 
+nelle best practices relative al pubblico a cui ci si rivolge. Ciò è quanto avviene 
+nei correnti libri di testo che trattano argomenti della disciplina o del campo d&#8217;interesse 
+dei lettori.</p></li></ul>
+    </li><li>
+    <p><strong>Frasi</strong> </p>
+    <ul>
+      <li>
+      <p>Rendere la lunghezza della frase coerente con le comuni pratiche del 
+linguaggio del documento o dello specifico pubblico a cui il documento è diretto. 
+Possono essere utili i libri di testo che trattano della disciplina o del campo 
+d&#8217;interesse dei lettori, se disponibili. 
+</p></li></ul>
+    </li><li>
+    <p><strong>Sintassi</strong> </p>
+    <ul>
+      <li>
+      <p> Usare per le frasi  la sintassi più semplice, adatta allo scopo del contenuto.  
+</p>
+      <ul>
+        <li>
+        <p>Per esempio, la sintassi più semplice per una frase inglese è 
+soggetto-verbo-complemento: <em>John hit the ball</em> o <em>Il sito Web è conforme alle WCAG 2.0</em>.  
+</p></li></ul>
+      </li><li>
+      <p> Usare elenchi numerati o puntati al posto di paragrafi che contengono 
+una lunga serie di parole o frasi separate da punteggiatura.
+</p></li></ul>
+    </li><li>
+    <p><strong>Nomi, locuzioni nominali, e pronomi
+</strong> </p>
+    <ul>
+      <li>
+      <p>Usare nomi singoli o brevi locuzioni nominali. </p>
+      </li><li>
+      <p>Rendere chiaro a chi o cosa rimanda un certo pronome e collocarlo il più vicino 
+possibile al termine a cui fa riferimento nel documento.  
+ </p>
+      <div class="exampleOuter">
+      <p>Esempio di potenziale ambiguità.La frase sottostante contiene vari pronomi 
+e non è chiaro a chi o a cosa essi si riferiscano:</p>
+<p><em>Web developers can't understand those guidelines because they 
+don't speak their language.</em> </p>
+      <ol type="a">
+        <li>
+        <p>Non è chiaro a quali linee guida si fa riferimento con <em>&#8220;those guidelines&#8221;</em> 
+(le linee guida che stai leggendo ora, sono these guidelines).
+</p>
+        </li><li>
+        <p>Non è chiaro se il pronome <em>&#8220;they&#8221;</em> è riferito ai <em>Web developers</em>  
+o alle <em> guidelines</em> (la sintassi inglese afferma che dovrebbe riferirsi alle guidelines 
+ma questa regola non sempre è rispettata nell&#8217;uso comune).
+        </p>
+        </li><li>
+        <p>Non è chiaro se il pronome Non è chiaro se il pronome
+<em> &#8220;their&#8221;</em>  è riferito al linguaggio utilizzato 
+dai <em> Web developers</em> o al linguaggio in cui sono scritte le guidelines.
+</p></li></ol>
+      <p>Per evitare ambiguità, la frase può essere riscritta nel seguente modo:</p>
+      <p><em>Web developers can't understand these guidelines because the 
+      guidelines are not written in the developers' language.</em> 
+      </p></div></li></ul>
+    </li><li>
+    <p><strong>Verbi</strong> </p>
+    </li><li>
+    <p><strong>Voci verbali</strong> </p>
+    <ul>
+      <li>
+      <p> Usare la voce attiva per documenti scritti in inglese e nelle 
+altre lingue occidentali, a meno che non ci sia una specifica ragione per usare 
+la costruzione passiva. Infatti le frasi attive sono spesso più corte e più facili 
+da capire di quelle in forma passiva. </p>
+      <div class="exampleOuter">
+      <ul>
+        <li>
+        <p><strong>Attivo:</strong> Many people believe that readers understand 
+        sentences in the active voice more easily than sentences in the passive 
+        voice.</p>
+        </li><li>
+        <p><strong>Passivo:</strong> It is believed by many that sentences in 
+        the active voice are more easily understood by readers than sentences in 
+        the passive voice.</p></li></ul></div></li></ul>
+    </li><li>
+    <p><strong>Tempi</strong> </p>
+    <ul>
+      <li>
+      <p>Usare i tempi verbali in modo coerente.</p>
+      <p>Ad esempio, non cambiare a caso tra presente e passato. Nella frase, 
+<em>John left the room. He takes the elevator down to the lobby</em>, il passaggio dal 
+tempo passato (nella prima frase <em>left the room</em>) al tempo presente nella 
+seconda frase (<em>takes the elevator</em>) potrebbe creare ambiguità circa l&#8217;uso 
+dell&#8217;ascensore da parte di John: l&#8217;ha usato nel passato o lo sta usando adesso?
+</p></li></ul>
+    </li><li>
+    <p><strong>Logica e relazioni</strong> </p>
+    <ul>
+      <li>
+      <p>Indicare le relazioni logiche tra frasi, proposizioni, paragrafi o sezioni del testo. 
+</p>
+      <ul>
+        <li>
+        <p>In alcuni casi, semplici parole come <em>&#8220;e&#8221;</em>, <em>&#8220;comunque&#8221;</em>, 
+<em>&#8220;inoltre&#8221;</em>, <em>&#8220;perciò&#8221;</em> possono essere sufficienti per chiarire la relazione 
+logica tra una proposizione e la successiva. In altri casi può essere utile ricorrere a frasi 
+più lunghe o proposizioni aggiuntive che siano maggiormente esplicative del contenuto.  
+</p></li></ul></li></ul>
+    </li><li>
+    <p><strong>Istruzioni e contenuti fruibili</strong> </p>
+    <ul>
+      <li>
+      <p>Spiegare in modo esauriente istruzioni o azioni richieste. </p>
+      </li><li>
+      <p>Usare in maniera coerente nomi ed etichette. </p>
+      </li><li>
+      <p>Esser chiari nei punti in cui il documento: </p>
+      <ul>
+        <li>
+        <p>spiega le scelte e le opzioni, </p>
+        </li><li>
+        <p>etichetta le opzioni per ottenere ulteriori informazioni,</p>
+        </li><li>
+        <p>istruisce gli utenti su come modificare selezioni in funzioni critiche 
+(ad esempio, come cancellare un articolo da un carrello di acquisto).</p></li></ul>
+      </li><li>
+      <p>Utilizzare una struttura obiettivo-azione per il prompt di menu. </p>
+      </li><li>
+      <p>Utilizzare le impostazioni di default (e renderne facile il ripristino) </p>
+      </li><li>
+      <p>Utilizzare two-step, &#8220;seleziona e conferma&#8221; per ridurre selezioni 
+accidentali per funzioni critiche. </p>
+      </li><li>
+      <p> Fornire assistenza di calcolo (per esempio, usare uno script per 
+calcolare il prezzo totale per un acquisto on-line).  
+</p></li></ul>
+    </li><li>
+    <p><strong>Rappresentazioni alternative: sommari, parafrasi, esempi, illustrazioni, e 
+linguaggi simbolici</strong> </p>
+    <ul>
+      <li>
+      <p>Fornire sommari per aiutare la comprensione.</p>
+      </li><li>
+      <p>Aggiungere contenuto non-testuale al sito per pagine o sezioni chiave 
+in modo da renderlo più comprensibile agli utenti che non possono capire 
+la sola versione testuale.</p>
+      <div class="revnote">
+      <p><strong>Nota dell'editore</strong>:  Le WCAG 1.0 e la Section 508 
+permettono varianti di solo testo unicamente nei casi in cui "l&#8217;originale" 
+non possa esser reso accessibile in alcun modo, e richiedono che la versione 
+solo-testo sia aggiornata ogni volta che si modifica l&#8217;originale. Tale richiesta 
+non è presente nelle WCAG 2.0, ma riteniamo necessario reinserirla.
+</p></div>
+      </li><li>
+      <p>Usare design, grafica, colori, font, animazioni, video o audio 
+per chiarire testi complessi.</p>
+      </li><li>
+      <p>Includere contenuto non-testuale in aggiunta a quello testuale 
+nelle pagine o nelle sezioni chiave del sito. </p></li></ul></li></ul></li></ol></div>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/meaning_issues.php">Linea Guida
+3.1 (significato) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e1989" name="d0e1989"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e1991" name="d0e1991"></a>Chi beneficia della 
+Linea Guida 3.1 (Informativa) 
+</h4>
+<ul>
+  <li>
+  <p>Spesso in un documento sono utilizzate  frasi di lingua diversa 
+dal resto del documento. Se queste sono opportunamente identificate, 
+un sintetizzatore vocale può leggerle con accento e pronuncia appropriati; 
+in caso contrario esso legge la frase in modo incomprensibile poiché continua 
+ad utilizzare la lingua base del documento. Identificare i cambiamenti di lingua 
+permette inoltre di chiedere traduzioni automatiche del contenuto. Nell&#8217;editare 
+il testo, gli authoring tools possono scegliere fra dizionari appropriati.
+</p>
+  </li><li>
+  <p>Fornire la spiegazione delle abbreviazioni e degli acronimi non solo aiuta 
+gli utenti che hanno poca familiarità con essi, ma chiarisce quale sia 
+il significato più appropriato da usare. Ad esempio, l'acronimo "ADA" 
+sta sia per <em>&#8220;American with Disabilities Act&#8221;</em> che per <em>&#8220;American Dental Association&#8221;</em>.
+</p>
+  </li><li>
+  <p>Definire termini chiave e linguaggio specifico aiuta le persone 
+che non hanno familiarità con quell&#8217;argomento.  </p>
+  </li><li>
+  <p>La decodifica non ambigua di caratteri e parole di un contenuto 
+è inoltre utile per coloro che stanno imparando a leggere o 
+stanno studiando una seconda lingua.  
+</p>
+  </li><li>
+  <p>Tutti gli utenti, specialmente quelli con <strong>deficit cognitivo</strong>, 
+<strong>di apprendimento</strong> o <strong>difficoltà di lettura</strong> si 
+avvantaggiano dell&#8217;utilizzo di un linguaggio chiaro e semplice. Ciò non 
+dovrebbe però scoraggiare dall&#8217;esprimere idee complesse o concetti tecnici.  
+</p>
+  </li><li>
+  <p>Usare un linguaggio chiaro e semplice aiuta chi non padroneggia la lingua, 
+inclusi coloro che comunicano soprattutto col linguaggio dei segni.  
+</p>
+  </li><li>
+  <p>Suoni, grafica, video e animazioni possono aiutare a presentare meglio 
+i concetti, specialmente a persone con <strong>deficit cognitivo</strong>, 
+<strong>di lettura</strong>, <strong>di apprendimento</strong> 
+e a chi ha <a class="termref" title="" href="#unfamiliar-contentdef">poca familiarità</a> 
+  con la lingua del sito.</p>
+  </li><li>
+  <p>Riassumere le informazioni difficili da comprendere aiuta 
+le persone con difficoltà di lettura.  
+</p>
+  </li><li>
+  <p>Fornire sommari degli schemi visivi che mostrano relazioni e collegamenti 
+fra informazioni complesse aiuta le persone che non utilizzano schemi visivi o 
+che hanno difficoltà ad interpretarli. Ad esempio, i non vedenti non possono 
+servirsi di alcuno schema visivo, mentre i <strong> dislessici</strong>  o gli <strong> ipovedenti</strong>  
+potrebbero avere difficoltà nell&#8217;interpretarli.</p></li></ul>
+<div class="note">
+<p class="prefix"><strong>Nota:</strong> </p>
+<p>I designer devono essere cauti nell&#8217;utilizzo delle illustrazioni. 
+Leggere una figura è probabilmente un modo di apprendere più facile 
+per alcuni che per altri. Alcuni utenti ignorano le figure, 
+mentre altri leggono solo quelle. I designer devono inoltre tener 
+presente che le convenzioni visive non sono universali e che ognuno 
+sviluppa propri schemi mentali e aspettative nell'interpretare le informazioni visive.  
+</p></div></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e2052" name="d0e2052"></a>Esempi relativi alla Linea Guida 3.1 (Informativi)
+</h4>
+<ul>
+  <li>
+  <p><strong>Esempio 1: un acronimo nel titolo di una pagina. </strong> </p>
+  <p>Nel titolo seguente, "People of the <acronym title="World Wide Web Consortium">W3C</acronym>" il markup è stato fatto in modo appropriato, 
+così gli user agent saranno in grado di leggere le lettere dell&#8217;acronimo una 
+alla volta, piuttosto che tentare di pronunciarlo come se fosse un&#8217;unica parola. 
+</p>
+  </li><li>
+  <p><strong>Esempio 2: una frase in lingua francese in un periodo in lingua inglese.</strong> </p>
+  <p>Nel seguente periodo, &#8220;And with a certain <span lang="fr">je ne sais quoi</span>, 
+she entered both the room, and his life, forever", la frase "<span lang="fr">je ne sais quoi</span>" 
+è identificata come lingua francese. A seconda del linguaggio di markup, 
+l&#8217;inglese può essere marcato come la lingua usata per l&#8217;intero documento, 
+eccetto dove specificato o marcato a livello di paragrafo.
+</p>
+  </li><li>
+  <p><strong>Esempio 3: una descrizione di un processo.</strong> </p>
+  <p>Una pagina descrive come imparare a giocare a calcio. 
+Ciascun passo nell&#8217;apprendimento delle regole del gioco è illustrato con 
+la foto di un giocatore mentre esegue ciò che viene descritto nel testo.</p>
+  </li><li>
+  <p><strong>Esempio 4: descrizione di un complesso evento naturale.</STRONG> </P>
+  <P>
+  Una pagina Web tratta del Monte Pinatubo nelle Filippine. La pagina include la 
+  descrizione dell'eruzione del 1991, corredata di foto, le sue 
+  conseguenze ed anche una breve spiegazione sulle cause delle eruzioni vulcaniche. 
+  Allo scopo di rendere più chiara la spiegazione, è presente un link ad un video accessibile e ad 
+  una simulazione 3D di ciò che accadde al di sotto della crosta terrestre e all'interno del
+  vulcano durante l'eruzione.</P>
+  </li><li>
+  <p><strong>Esempio 6: dati sull&#8217;andamento della borsa.</strong> </p>
+  <p>Un sito di news confronta l&#8217;andamento dell&#8217;economia nel terzo trimestre 
+di questo anno con il terzo trimestre degli ultimi tre anni. Si confrontano 
+i prezzi delle azioni più comuni. I dati vengono rappresentati in un grafico 
+a barre collegato ai dati grezzi utilizzati per la creazione del diagramma.</p>
+  </li><li>
+  <p><strong>Esempio 7: storia della musica.</strong> </p>
+  <p>Un nonno ha l&#8217;hobby di ascoltare e suonare musica, tanto che ha creato 
+un sito Web che contiene esempi di vari tipi di musica e di strumenti musicali.
+Quando descrive specifici tipi di musica, effettua un collegamento ad un breve clip sonoro.
+</p></li></ul></div></div></div>
+<div class="div2">
+<h3 class="guideline"><a id="consistent-behavior" name="consistent-behavior"></a>Linea Guida 3.2 Organizzare il contenuto in maniera 
+coerente da "pagina a pagina" e fare in modo che le  componenti interattive 
+si comportino in modo prevedibile. </h3>
+<div class="revnote">
+<p><strong>Nota dell'editore</strong>: Stiamo cercando un termine 
+per rimpiazzare la parola &#8220;pagina&#8221; che sia valido per le tecnologie. 
+Per applicazioni visive, si potrebbe utilizzare "schermata", ma tale termine 
+non sarebbe fruibile per tecnologie sonore, come VoiceXML.
+</p></div>
+<div class="req">
+<h4><a id="d0e2127" name="d0e2127"></a>Success Criteria per la Linea Guida 3.2 &#8211; Livello 1
+</h4>
+<ol type="1">
+  <li>Qualsiasi <a class="termref" title="" href="#extreme-changedef">cambiamento imprevisto nel contesto</a> è implementato 
+  in maniera da poter essere identificato in modo programmatico. [I] </li></ol></div>
+<div class="bp">
+<h4><a id="d0e2136" name="d0e2136"></a>Success Criteria per la Linea Guida 3.2 &#8211; Livello 2
+</h4>
+<ol type="1">
+  <li>Le componenti  ripetute in più "pagine" all'interno di un documento o 
+  sezione di un documento si succedono sempre nella stessa sequenza, 
+  o almeno in un unico formato di presentazione. [V]    
+  </li><li>Tutti i componenti dell&#8217;interfaccia dovrebbero essere focalizzati, 
+  senza provocarne l'attivazione automatica. [I]   
+  </li><li>Cambiare il settaggio di qualche campo di input non dovrebbe provocare 
+  automaticamente un <a class="termref" title="" href="#extreme-changedef">cambiamento imprevisto nel contesto</a>, 
+  come ad esempio l&#8217;abbandono della "pagina". [V]  
+  </li><li>Elementi interattivi che appaiono in più "pagine", 
+  inclusi elementi grafici, sono associati alle stesse funzionalità, 
+  ovunque essi appaiano. [I]   
+  </li><li>Ogni <a class="termref" title="" href="#extreme-changedef">cambiamento imprevisto nel 
+  contesto</a> è segnalato in modo esplicito. [V]  
+  <div class="revnote">
+  <p><strong>Nota dell'editore</strong>: Questo criterio è specifico per l&#8217;HTML.
+  </p></div>
+  </li><LI><A id=consistent-behavior-target-identified    name=consistent-behavior-target-identified></A>La destinazione di ogni <A 
+  class=termref title="" href="http://www.w3.org/TR/WCAG20/#linkdef">link </A>è identificata 
+  tramite parole o frasi che o si trovano nel link o possono essere determinate 
+  programmaticamente. [V] 
+  <DIV class=revnote>
+  <P><STRONG>Nota dell'editore</STRONG>:&nbsp;C'è qualche discussione circa la specificità di 
+  questo criterio. C'è anche una questione riguardo la sua inclusione a livello 2 o a livello 3.
+  </P></DIV></LI></OL></DIV>
+<div class="additional">
+<h4><a id="d0e2163" name="d0e2163"></a>Success Criteria per la Linea Guida 3.2 &#8211; Livello 3
+</h4>
+<ol type="1">
+  <li>Le componenti grafiche che appaiono su più pagine, inclusi i link grafici, 
+sono associati allo stesso equivalente testuale, ovunque essi appaiano [V]. 
+ </li><li>Le componenti che appaiono su più pagine, come barre di navigazione, 
+form di ricerca e sezioni all'interno del contenuto principale, sono 
+visualizzati sempre nella stessa posizione [V].  
+  </li><li>Gli utenti possono scegliere di visualizzare componenti, 
+come menu di navigazione e form di ricerca che appaiono su più pagine, 
+in una differente posizione o con un diverso ordine di lettura  [V]. 
+  </li><li>Non si verificano <a class="termref" title="" href="#extreme-changedef">cambiamenti imprevisti nel contesto</a>. [V] </li></ol>
+<div class="revnote">
+<p><strong>Nota dell'editore</strong>: Ci si preoccupa del fatto che questi 
+success criteria siano troppo specifici per l&#8217;HTML. </p></div></div>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/consistent-behavior_issues.php">Linea Guida 
+3.2 (condotta coerente) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e2189" name="d0e2189"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e2191" name="d0e2191"></a>Chi beneficia della Linea Guida 3.2 (Informativa) 
+</h4>
+<ul>
+  <li>
+  <p>Fornire risposte coerenti e prevedibili alle azioni dell&#8217;utente costituisce 
+per questi un importante feedback. Consente loro di capire che il sito funziona in 
+maniera appropriata e ne incoraggia le interazioni con i contenuti. Risposte 
+inaspettate potrebbero scoraggiare gli utenti nell&#8217;utilizzo del sito o far ritenere 
+che ci siano problemi di funzionamento. Alcuni potrebbero confondersi tanto da non 
+ritenersi in grado di navigare il sito.
+</p>
+  </li><li>
+  <p> Gli utenti che non sono capaci d&#8217;individuare cambiamenti imprevisti 
+nel contesto o che non possono realizzare che il contesto è cambiato saranno 
+probabilmente meno disorientati nel corso della navigazione. Ci si riferisce 
+alle seguenti situazioni: </p>
+  <ul>
+    <li>
+    <p><strong>Non vedenti</strong>  o <strong>ipovedenti</strong> che possono 
+avere difficoltà ad individuare cambiamenti nel contesto visivo, come l&#8217;apertura automatica di una finestra 
+di pop up. In tal caso, avvertire l&#8217;utente che il contesto sta cambiando, 
+minimizza la confusione quando egli scopre che il pulsante per tornare alla 
+pagina precedente non funziona più al solito modo.
+</p>
+    </li><li>
+    <p>Nelle presentazioni solo audio, gli utenti <strong>sordi </strong>o con <strong>deficit dell&#8217;udito</strong> 
+o quelli che non sono in grado di individuare cambiamenti dello speaker: 
+è opportuno, quindi, evidenziarli mediante sottotitoli. 
+</p></li></ul>
+  </li><li>
+  <p>Gli <strong>ipovedenti</strong>,<strong> i dislessici</strong> o coloro che hanno difficoltà ad interpretare 
+schemi visivi possono beneficiare di indicazioni supplementari 
+per rilevare cambiamenti imprevisti del contesto. 
+</p></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e2226" name="d0e2226"></a>Esempi relativi alla Linea Guida 3.2 (Informativi) 
+</h4>
+<ul>
+  <li>
+  <p><strong> Esempio 1: un form per disattivare finestre di pop-up.</strong> </p>
+  <p>In una pagina di link viene fornita una casella di controllo per permettere 
+agli utenti di scegliere se far apparire le pagine attivate nella stessa finestra o meno. 
+</p>
+  </li><li>
+  <p><strong> Esempio 2: un avvertimento fornito prima dell&#8217;apertura di una finestra di pop-up. 
+</strong> </p>
+  <p>Al termine di una notizia  di attualità, vengono forniti parecchi link 
+per ottenere ulteriori informazioni. All&#8217;inizio di ogni link viene posta 
+un'icona a forma di freccia, con testo equivalente "Il collegamento attiverà 
+una nuova finestra ".
+</p>
+  </li><li>
+  <p><strong>Esempio 3: frame che non permettono di tracciare lo sviluppo 
+della storia perché il pulsante per tornare alla pagina precedente si 
+comporta in maniera inaspettata.
+</strong> </p>
+  <p></p>
+  </li><li>
+  <p><strong>Esempio 4: form. </strong> </p></li></ul>
+<div class="revnote">
+<p><strong>Nota dell'editore</strong>: E&#8217; necessario completare questi esempi 
+o sostituirli con altri migliori. 
+</p></div></div></div></div></div>
+<div class="div1">
+<h2 class="principle"><a id="robust" name="robust"></a>Principio 4: Progettare  
+contenuti sufficientemente robusti al fine di garantirne la compatibilità 
+con le tecnologie presenti e future. 
+</h2>
+<div class="div2">
+<h3 class="guideline"><a id="use-spec" name="use-spec"></a>Linea Guida 4.1 
+Utilizzare tecnologie che rispettino le specifiche.</h3>
+<div class="req">
+<h4><a id="d0e2268" name="d0e2268"></a>Success Criteria per la 
+Linea Guida 4.1 &#8211; Livello 1
+</h4>
+<ol type="1">
+  <li>Eccetto il caso in cui il sito abbia documentato che una specifica 
+è stata violata per compatibilità con le versioni precedenti o per 
+compatibilità con una tecnologia assistiva, la tecnologia ha: [I]  
+  <ol type="a">
+    <li>
+    <p>superato i test di validazione per la versione in uso 
+(se essa è conforme o meno ad uno schema, Document Type Definition - DTD), 
+o soddisfa altri test descritti nelle specifiche),
+</p>
+    </li><li>
+    <p>gli elementi strutturali e gli attributi sono utilizzati 
+come suggerito nelle specifiche.
+</p></li></ol></li></ol></div>
+<div class="bp">
+<h4><a id="d0e2281" name="d0e2281"></a>Level 2 Success Criteria for Guideline 4.1 
+</h4>
+<ol type="1">
+  <li>
+  <p>Nessun success criteria di livello 2 per questa linea guida.</p></li></ol></div>
+<div class="additional">
+<h4><a id="d0e2288" name="d0e2288"></a>Success Criteria per la 
+Linea Guida 4.1 &#8211; Livello 2
+</h4>
+<ol type="1">
+  <li>Le tecnologie sono utilizzate nel rispetto delle specifiche senza eccezioni.[V]  
+  </li></ol></div>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/use-spec_issues.php">Linea Guida
+4.1 (uso specifiche) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e2295" name="d0e2295"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e2297" name="d0e2297"></a>Chi beneficia della 
+Linea Guida 4.1 (Informativa) 
+</h4>
+<ul>
+  <li>
+  <p>Questa linea guida enfatizza il fatto che le future specifiche 
+accrescono la probabilità di contenuto accessibile. Mentre altre linee guida 
+fanno riferimento a parti specifiche del contenuto, la 4.1 fa un passo indietro 
+per guardare al quadro generale; è stata predisposta per permettere di risolvere 
+i problemi che potranno crearsi con le futute tecnologie e quelli che al momento 
+della stesura di queste linee guida non si possono prevedere. Così, i vantaggi 
+delle future specifiche consistono principalmente nel fatto che le tecnologie 
+assistive e gli user agent possono rappresentare il contenuto in modo conforme.
+</p>
+  </li><li>
+  <p> Conformarsi alle future specifiche per markup e altri formati 
+di file rende più semplice riformattare, riproporre e riutilizzare 
+il contenuto, cosa importante per gli utenti che possono utilizzarlo 
+a pieno solo se è presentato in un particolare formato.</p></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e2307" name="d0e2307"></a>Esempi relativi alla 
+Linea Guida 4.1 (Informativi)
+</h4>
+<ul>
+  <li>
+  <p><strong>Esempio 1: elementi strutturali.</strong> </p>
+  <p>In un sito Web a carattere storico, gli elementi strutturali sono usati 
+in maniera appropriata per indicare la presenza di citazioni, definizioni 
+e riferimenti bibliografici. Poiché questi elementi sono stati utilizzati 
+secondo le specifiche, gli user agent possono essere configurati in maniera 
+tale che gli elementi siano differenziati dal resto del contesto, 
+permettendo all&#8217;utente di ottimizzare l&#8217;uso del sito per scopi di ricerca.
+</p>
+  </li><li>
+  <p><strong>Esempio 2: elementi di  presentazione.</strong> </p>
+  <p>Un autore di pagine Web desidera attirare l&#8217;attenzione su determinate 
+parole, per ragioni puramente estetiche. Usa elementi 
+progettati per applicare caratteristiche di stile e di presentazione, 
+piuttosto che elementi progettati per trasmettere informazioni 
+circa la struttura o l&#8217;organizzazione della pagina, per esaltare 
+la presentazione visiva ed evita elementi poco comprensibili a utenti 
+che non usano l&#8217;informazione visuale o che fanno riferimento solo al testo.
+</p>
+  </li><li>
+  <p><strong>Esempio 3: API accessibili.</strong> </p>
+  <p>Un&#8217;applet Java utilizza l&#8217;accessibilità API definita dal linguaggio. 
+Far riferimento a <a href="http://www-3.ibm.com/able/guidelines/java/snsjavag.html">IBM 
+  Guidelines for Writing Accessible Applications Using 100% Pure 
+  Java</a>.</p></li></ul></div></div></div>
+<div class="div2">
+<h3 class="guideline"><a id="technology-supports-access" name="technology-supports-access"></a>Linea Guida 4.2 Assicurare che 
+le interfacce utente siano accessibili o fornite di alternative accessibili.  
+</h3>
+<div class="req">
+<h4><a id="d0e2341" name="d0e2341"></a>Success Criteria per la 
+Linea Guida 4.2 &#8211; Livello 1
+</h4>
+<ol type="1">
+  <li>Almeno un plug-in necessario per accedere al contenuto soddisfa sia i 
+requisiti di conformità nelle <a href="http://www.w3.org/TR/UAAG10/">User Agent Accessibility Guidelines (UAAG) 
+  1.0</a> (che devono essere soddisfatte al livello A) sia i sottostanti (a) through (j). 
+Se il plug-in necessario non è accessibile, è disponibile una soluzione alternativa 
+conforme alle WCAG 2.0. Se sono disponibili plug-in inaccessibili, il contenuto 
+spiega come ottenere un plug-in accessibile. [V] 
+  </li><li>Ogni <a class="termref" title="" href="#programmaticuidef"> componente programmatica dell&#8217;interfaccia utente</a>  
+  del contenuto è conforme sia a quanto richiesto nelle UAAG 1.0 (che devono essere soddisfatte 
+al livello A) sia ai requisiti sottostanti. Se le interfacce utente personalizzate 
+non possono essere rese accessibili, è presente una soluzione alternativa conforme 
+alle WCAG 2.0 al livello richiesto. [V] 
+  <p><strong>Requisiti (a) through (j) 
+</strong> </p>
+  <ol type="a">
+    <li>
+    <p>Le applicazioni che presentano testo sotto forma di immagine dovrebbero conformarsi a <a href="http://www.w3.org/TR/UAAG10/conformance.html#conformance-label-visualtext">VisualText 
+    checkpoints</a>.</p>
+    </li><li>
+    <p>Le applicazioni che presentano immagini dovrebbero conformarsi a <a href="http://www.w3.org/TR/UAAG10/conformance.html#conformance-label-visualtext">Image 
+    checkpoints</a>.</p>
+    </li><li>
+    <p>Le applicazioni che presentano animazioni dovrebbero conformarsi a <a href="http://www.w3.org/TR/UAAG10/conformance.html#conformance-label-animation">Animation 
+    checkpoints</a>.</p>
+    </li><li>
+    <p>Le applicazioni che utilizzano audio dovrebbero conformarsi a <a href="http://www.w3.org/TR/UAAG10/conformance.html#conformance-label-video">Video 
+    checkpoints</a>.</p>
+    </li><li>
+    <p>Le applicazioni che utilizzano audio dovrebbero conformarsi a <a href="http://www.w3.org/TR/UAAG10/conformance.html#conformance-label-audio">Audio 
+    checkpoints</a>.</p>
+    </li><li>
+    <p>Le applicazioni che eseguono un proprio event handling dovrebbero conformarsi a <a href="http://www.w3.org/TR/UAAG10/conformance.html#conformance-label-events">Events 
+    checkpoints</a>.</p>
+    </li><li>
+    <p>Le applicazioni che implementano meccanismi di selezione dovrebbero  conformarsi a <a href="http://www.w3.org/TR/UAAG10/conformance.html#conformance-label-selection">Selection 
+    checkpoints</a>.</p>
+    </li><li>
+    <p>Le applicazioni dovrebbero supportare l&#8217;accesso tramite tastiera per i checkpoint 
+    <a href="http://www.w3.org/TR/UAAG10/guidelines.html#tech-device-independent-ui">1.1</a> e <a href="http://www.w3.org/TR/UAAG10/guidelines.html#tech-keyboard-api"> 6.7</a> delle UAAG 1.0.</p>
+    </li><li>
+    <p>Le applicazioni che implementano input vocali o di puntamento dovrebbero conformarsi a <a href="http://www.w3.org/TR/UAAG10/conformance.html#input-modality-labels">Input 
+    Modality checkpoints</a>.</p></li></ol></li></ol></div>
+<div class="bp">
+<h4><a id="d0e2423" name="d0e2423"></a>Success Criteria per la Linea Guida 4.2 &#8211; Livello 2
+</h4>
+<ol type="1">
+  <li>Sono utilizzate le regole di accessibilità del markup o 
+dei linguaggi di programmazione (markup API o specifico). [I] 
+</li></ol></div>
+<div class="additional">
+<h4><a id="d0e2430" name="d0e2430"></a>Success Criteria per la Linea Guida 4.2 &#8211; Livello 3
+</h4>
+<ol type="1">
+  <li>La risorsa Web include una lista delle tecnologie che gli user agent 
+devono supportare allo scopo di rendere operativo il contenuto come prefisso. 
+La lista è documentata nei metadata se essi sono supportati dal formato, 
+altrimenti nei suggerimenti per l&#8217;uso associati al contenuto. [V] 
+  </li><li>Gli utenti che non possiedono una o più di tali tecnologie possono 
+ancora accedere ed utilizzare la risorsa, anche se in modo limitato. [V] 
+  <div class="note">
+  <p class="prefix"><strong>Nota:</strong> </p>
+  <p>Quando scegli la tecnologia occorrente, considera che l&#8217;hardware e il software 
+assistivi si adattano con ritardo ai progressi tecnologici e che la disponibilità di 
+tecnologie assistive varia a seconda dei <a class="termref" title="" href="#natural-langdef">linguaggi naturali</a>. Verifica che la tecnologia assistiva 
+compatibile con le tecnologie che hai scelto sia disponibile nel linguaggio naturale 
+del tuo contenuto.</p></div>
+  </li><li>Le tecnologie e le caratteristiche utilizzate sono open standard o 
+hanno specifiche pubbliche. [V] 
+</li></ol></div>
+<P><A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/technology-supports-access_issues.php">Linea Guida
+4.2 (accesso ai supporti tecnologici) Problemi</A> </P>
+<div class="informative">
+<h4><a id="d0e2449" name="d0e2449"></a></h4>
+<div class="div4">
+<h4 class="bigger"><a id="d0e2451" name="d0e2451"></a>Chi beneficia della Linea Guida 4.2</h4>
+<ul>
+  <li>
+  <p>  Gli autori che assicurano l&#8217;accessibilità delle interfacce utente 
+in tutto il loro contenuto: 
+</p>
+  <ul>
+    <li>
+    <p>andranno incontro a minori difficoltà implementando queste linee guida,
+encounter fewer challenges when implementing these guidelines,</p>
+    </li><li>
+    <p>non avranno bisogno di creare soluzioni personalizzate e di procedere 
+per approssimazioni successive per fronteggiare i problemi di accessibilità,
+</p>
+    </li><li>
+    <p>non avranno bisogno di fornire versioni alternative del contenuto 
+presentato mediante una tecnologia che non si adegua totalmente a queste linee guida.
+</p></li></ul>
+  <p>Vantaggi nel determinare e documentare i requisiti delle tecnologie:
+</p>
+  <ul>
+    <li>
+    <p> Gli utenti possono capire (attraverso la documentazione del sito o 
+automaticamente attraverso i metadata) se sono o non sono in grado di 
+utilizzare il sito. In combinazione con un motore di ricerca o un server proxy, 
+ciò potrebbe servire a filtrare ed escludere i siti a cui l&#8217;utente non può accedere 
+oppure servire a filtrare i migliori siti usabili.
+</p>
+    </li><li>
+    <p>Documentare i requisiti tecnologici costringerà gli autori a valutare 
+le assunzioni degli user agent e minimizzerà il numero di siti loro malgrado 
+inaccessibili perché non sono consapevoli dei problemi di compatibilità sottostanti.
+</p></li></ul>
+  <p>Vantaggi nell&#8217;assicurare l&#8217;accessibilità dell&#8217;interfaccia utente e nel 
+fornire alternative accessibili:
+</p>
+  <ul>
+    <li>
+    <p>Utenti che devono usare browser e dispositivi alternativi saranno 
+in grado di accedere al contenuto.
+</p>
+    </li><li>
+    <p>Gli utenti che non possono permettersi o non possono avere accesso 
+alle più recenti tecnologie traggono vantaggio dalla compatibilità con le versioni 
+precedenti poiché non avranno bisogno di acquistare spesso aggiornamenti o attrezzature. 
+</p></li></ul></li></ul></div>
+<div class="div4">
+<h4 class="bigger"><a id="d0e2486" name="d0e2486"></a>Esempi relativi alla Linea Guida 4.2 (Informativi)
+</h4>
+<ul>
+  <li>
+  <p><strong> Esempio 1: un magazzino online che elenca le tecnologie richieste
+  </strong></p>
+  <p>Documentando i requisiti minimi dell'user agent, lo store rende possibile l&#8217;uso 
+di particolari tecnologie per verificare se gli utenti potranno trovarsi 
+in difficoltà utilizzando il magazzino o il suo meccanismo di checkout, prima 
+che comincino ad acquistare. Ciò impedisce che dopo la selezione dei prodotti 
+e l'inizio del processo di checkout, l'utente scopra di non essere in grado di completare 
+la transazione. Si possono comunque scegliere alternative per riuscire nell&#8217;intento.</p>
+  </li><li>
+  <p><strong>Esempio 2: un sito intranet che si trasforma in modo gradevole
+  </strong></p>
+  <p>Una grande compagnia si interessa di indirizzare gli utenti alle varie 
+diverse office locations che hanno differenti basi tecnologiche. 
+Per risolvere il problema, essa ha creato due versioni dei propri contenuti e 
+documentato i requisiti per ciascuno, rendendo facile per gli utenti determinare 
+con quale versione lavorare al meglio, nel rispetto delle loro tecnologie. 
+</p>
+  </li><li>
+  <p><strong>Esempio 3: un sito di informazione che assicura la compatibilità con le versioni precedenti. 
+  </strong> </p>
+  <p>Un sito di informazione tratta di una gran varietà di argomenti e vuole 
+mettere in grado i propri visitatori di reperire velocemente gli argomenti oggetto 
+della ricerca. A questo scopo, è stato implementato nel sito un sistema di menù 
+interattivo supportato dalla più recente versione di due diffusi user agent. 
+Per assicurare ai visitatori sprovvisti di questi user agent di utilizzare in 
+maniera efficiente il sito, viene fornito un meccanismo di navigazione che non 
+dipende dal sistema di menù interattivo e che non supporta le tecnologie più recenti. 
+</p></li></ul></div></div></div></div>
+<div class="back">
+<div class="div1">
+<h2><a id="d0e2515" name="d0e2515"></a>Appendice A Glossario</h2>
+<div class="revnote">
+<p><strong>Nota dell'editore</strong>: Il WCAG WG non ha ancora affrontato 
+le definizioni dei termini, utilizzati a volte in modo non coerente. È necessario 
+coordinare i  termini e le definizioni col Glossario del WAI e lavorare sulle proposte
+per organizzare le definizioni. L&#8217;attenzione è rivolta al glossario dell'UAAG 1.0 e 
+agli altri glossari del W3C. E' disponibile un elenco di 
+<A 
+href="http://trace.wisc.edu/bugzilla_wcag/issuereports/glossary_issues.php">problemi aperti 
+relativi a questo glossario</A>. </p></div>
+<dt class="label"><a id="asciiartdef" name="asciiartdef"></a>Arte ASCII  
+  </dt><dd>
+  <p>Rappresentazioni grafiche create per mezzo di una sistemazione spaziale di 
+caratteri di testo. Sebbene si possa visualizzare in forma testuale, non si tratta 
+di testo.
+</p>
+  </dd><DT class=label><A id=URIpatterndef name=URIpatterndef></A>URI pattern
+  <DD>
+  <P>Un <ACRONYM title="Uniform Resource Identifier">URI </ACRONYM>pattern è un'
+  <A class=termref title="" 
+  href="#regularexpressiondef"> 
+  espressione regolare</A> che identifica un insieme di risorse. Una risorsa appartiene
+  all'insieme se l'espressione regolare corrisponde al suo URI. </P>
+  <DIV class=note>
+  <P class=prefix><STRONG>Nota:</STRONG></P>
+  <P>per essere inclusa nel set, la risorsa deve esistere; l'espressione regolare può e tipicamente incontrerà 
+URI che non fanno riferimento a risorse esistenti.</P></DIV>
+<dt class="label"><a id="wiscequivdef" name="wiscequivdef"></a>Wisconsin Computer 
+  Equivalence Algorithm 
+  </dt><dd>
+  <p>Il Wisconsin Computer Equivalence Algorithm è un metodo per applicare 
+i principi espressi dalla ITC del Regno Unito (nel documento 
+"ITC Guidance Note for Licensees on Flashing Images and Regular Patterns 
+in Television" revisionato e pubblicato nel Luglio 2001) riguardo al contenuto 
+visualizzato sullo schermo di un computer, come le pagine Web o altri contenuti digitali. 
+ITC Guidance si basa sull&#8217;assunzione che lo schermo televisivo occupa i dieci 
+gradi centrali del campo visivo.  Questo non è esatto per uno schermo che è 
+collocato di fronte ad una persona. Il Wisconsin Algorithm fondamentalmente 
+esegue la stessa analisi delle linee guida dell&#8217;ITC, ma lo fa per ogni 
+possibile finestra di dieci gradi di un prototipo di display di calcolatore. 
+</p>
+  <div class="revnote">
+  <p><strong>Nota dell'editore</strong>: I collegamenti ai riferimenti 
+saranno forniti non appena essi saranno disponibili.
+</p></div></dd></dl></div>
+<dl><dt class="label"><a id="competitiveactivitydef" name="competitiveactivitydef"></a>Attività in cui la temporizzazione è essenziale 
+</dt><dd>
+  <p>Un'<strong>attività in cui la temporizzazione è essenziale</strong> è stata 
+progettata in modo che il tempo rivesta in essa un&#8217;importanza fondamentale.  
+La rimozione del fattore tempo può modificare la performance dei partecipanti. 
+Potrebbero essere preferite e necessarie in alcune circostanze attività (es. test) 
+non basate sul tempo o con limiti di tempo. Questo comporterebbe riprogettare 
+l&#8217;attività (es. test) e potrebbe modificarne il carattere e i metodi di validazione 
+e non rientrerebbe quindi nel campo di azione di queste linee guida. 
+</p>
+  </dd>
+<dt class="label"><a id="audiodescdef" name="audiodescdef"></a>Descrizione audio 
+  </dt><dd>
+  <p>Narrazione audio aggiuntiva che spiega dettagli importanti che non possono
+  essere capiti soltanto dalla traccia sonora principale. Durante le pause di dialogo, le 
+  descrizioni audio forniscono informazioni sulle azioni, sui personaggi, sui cambiamenti di scena, 
+  che sono inoltre visualizzate sullo schermo sotto forma di testo per i disabili della vista.
+</p>
+  <DT class=label><A id=authored-unitdef name=authored-unitdef></A>Authored unit 
+  </dt><dd>
+  <P>Insieme di materiali creati da un autore come singola entità. Ad esempio, una raccolta di 
+  markup, un foglio di stile, una <A 
+  href="http://www.w3.org/TR/di-gloss/#def-resource">risorsa</A> mediale, come un'immagine o una clip audio. </P>
+  <DIV class=note>
+  <P class=prefix><STRONG>Nota: </STRONG></P>
+  <P>Questo termine è stato preso letteralmente dal <A 
+  href="http://www.w3.org/TR/di-gloss/">Glossary of Terms for Device 
+  Independence </A>. </P></DIV>
+  </dt></dd>
+ <DT class=label><A id=background-imagedef 
+  name=background-imagedef></A>Immagine di background
+  <DD>
+  <P>Immagine che appare dietro o sullo sfondo del campo visivo.</P><dt class="label"><a id="captionsdef" name="captionsdef"></a>Sottotitoli 
+  </dt><DD>
+  <P>Trascrizioni sincronizzzate di dialogo ed importanti effetti sonori. I sottotitoli 
+ consentono l'accesso ai multimedia per i disabili dell'udito.</P>
+  </dd><dt class="label"><a id="complex-contentdef" name="complex-contentdef"></a>Contenuto complesso 
+  </dt><dd>
+  <p>Il contenuto è considerato <strong>complesso </strong>quando non è facile dedurre le 
+relazioni esistenti tra le varie informazioni. Se la presentazione delle informazioni mira 
+ad evidenziare trend o relazioni tra i concetti, questi dovrebbero essere esplicitati nel sommario. 
+</p>
+  <p>Esempi d'informazioni complesse:</p>
+  <ul>
+    <li>
+    <p>tabelle di dati,</p>
+    </li><li>
+    <p>concetti esoterici o difficili da capire,</p>
+    </li><li>
+    <p>contenuto sviluppato su più livelli.
+</p></li></ul>
+  </dd><dt class="label"><a id="contentdef" name="contentdef"></a>Contenuto 
+  </dt><dd>
+  <p><strong>Contenuto </strong></p>
+  <div class="revnote">
+  <p><strong>Nota dell'editore </strong>: È necessario includere 
+in questo punto una definizione di contenuto.</p></div>
+  </dd><dt class="label"><a id="blinksdef" name="blinksdef"></a>Contenuto che 
+lampeggia 
+  </dt><dd>
+  <p>Il <strong>contenuto che lampeggia</strong> è un contenuto che 
+si accende e si spegne da 0.5 a 4 volte al secondo.
+</p>
+  </dd><dt class="label"><a id="controlled-langdef" name="controlled-langdef"></a>Linguaggi controllati 
+  </dt><dd>
+  <p>I <strong>Linguaggi controllati </strong> usano un vocabolario 
+ristretto che costituisce un sottoinsieme del linguaggio naturale. 
+Lo scopo è di rendere i testi più semplici da capire e da tradurre. 
+Gli standard in genere attribuiscono alle parole un solo significato 
+e prestabilita parte del discorso. È evitata la sintassi complessa. 
+Informazioni sulle applicazioni di linguaggio controllato sono 
+disponibili sul Web. 
+</p>
+  </dd><DT class=label><A id=deliveryunitdef name=deliveryunitdef></A>Delivery unit
+  <DD>
+  <P>Un insieme di materiali trasferiti fra due programmi Web cooperanti, come la
+  risposta ad una singola <A 
+  href="http://www.w3.org/TR/di-gloss/#def-http-request"> richiesta HTTP </A>. Il 
+  trasferimento potrebbe, ad esempio, essere fra un <A 
+  href="http://www.w3.org/TR/di-gloss/#def-origin-server"> origin server </A> e 
+  uno <A href="http://www.w3.org/TR/di-gloss/#def-user-agent">user agent</A>.</P>
+  <DIV class=note>
+  <P class=prefix><STRONG>Nota:</STRONG></P>
+  <P>Questo termine è stato preso letteralmente dal <A 
+  href="http://www.w3.org/TR/di-gloss/">Glossary of Terms for Device 
+  Independence</A>.</P></DIV>
+</dd><dt class="label"><a id="event-handlerdef" name="event-handlerdef"></a>Event handler 
+  </dt><dd>
+  <p>Sezione di codice che corrisponde ad un'azione effettuata dall'utente 
+(o dallo user agent). Sulle pagine Web, gli eventi di solito sono azioni 
+eseguite dall&#8217;utente come il movimento del mouse, la pressione di un tasto, ecc. 
+Un <strong>event handler </strong>determina la risposta a quell'azione. Un event handler 
+specifico per una tecnologia risponde solo ad un'azione effettuata tramite 
+un certo dispositivo di input. Un <strong>abstract event handler </strong>corrisponde ad 
+un&#8217;azione che può essere attivata da più dispositivi di input. </p>
+</dd><dt class="label"><a id="explicitly-associateddef" name="&lt;DT" class="label"></a><a id="explicitly-associateddef" name="explicitly-associateddef"></a>Esplicitamente associato 
+  </dt><dd>
+  <p>
+  </p><div class="revnote">
+  <p><strong>Nota dell'editore: </strong> È necessario includere in 
+questo punto una definizione di associazione esplicita. 
+ </p></div>
+  </dd><DT class=label><A id=extended-addef name=extended-addef></A>Ampia descrizione audio 
+  <DD>
+  <P>Nei casi in cui è necessaria una più lunga descrizione audio, ma non c'e nell'audio una pausa
+sufficiente per inserirla, l'audio e il video vengono arrestati durante l'esecuzione della descrizione audio.
+Quando la descrizione termina, il video ed il dialogo riprendono. Descrizioni ampie e "regolari" possono
+essere mixate in una stessa presentazione multimediale.
+   </P>
+</dd><dt class="label"><a id="extreme-changedef" name="extreme-changedef"></a>Cambiamento imprevisto 
+nel contesto 
+  </dt><dd>
+  <p>Un <strong>cambiamento imprevisto nel contesto</strong> include:</p>
+  <ul>
+    <li>
+    <p>apertura inaspettata di una nuova finestra del browser e senza alcuna indicazione 
+non visiva (il pulsante per tornare alla pagina precedente improvvisamente non funziona)
+</p>
+    </li><li>
+    <p>in una presentazione uditiva, lo speaker cambia senza che venga dato un avvertimento 
+visivo o un&#8217;indicazione nei sottotitoli
+</p>
+    </li><li>
+    <p>sottotitoli che non segnalano il cambiamento dello speaker  
+</p></li></ul>
+  <p>Azioni tipiche dell&#8217;utente sono:
+</p>
+  <ul>
+    <li>
+    <p>movimenti del mouse</p>
+    </li><li>
+    <p>attivazione di un tasto</p>
+    </li><li>
+    <p>selezione di un link</p>
+    </li><li>
+    <p>uso di un pulsante di navigazione del browser 
+(es. pulsanti per tornare indietro o andare avanti)
+</p>
+    </li><li>
+    <p>apertura di nuove finestre del browser
+</p></li></ul>
+  <p>Risposte tipiche alle azioni dell&#8217;utente sono:
+</p>
+  <ul>
+    <li>
+    <p>caricamenti di nuove pagine
+</p>
+    </li><li>
+    <p>visibilità o meno del contenuto a seconda della posizione del mouse o del 
+focus della tastiera 
+</p>
+    </li><li>
+    <p>visualizzazione dei contenuti di un menù (in modo uditivo o visivo)
+</p>
+    </li><li>
+    <p>visualizzazione di menù o finestre di pop-up
+</p>
+    </li><li>
+    <p>sottoscrizione di un form
+</p></li></ul>
+  <p>È importante che le risposte alle azioni dell&#8217;utente siano prevedibili e 
+percepibili e che le modalità  d&#8217;interazioni siano coerenti in tutto il sito 
+e analoghe alle metafore d&#8217;interazione comunemente usate nel Web.  
+</p>
+  </dd><dt class="label"><a id="featuredef" name="featuredef"></a>Caratteristica 
+  </dt><dd>
+  <p>Una <strong>caratteristica </strong>è una specifica componente 
+di una tecnologia, per esempio un elemento in un linguaggio di markup o 
+l&#8217;attivazione di una funzione in una Application Programming Interface. 
+Solitamente, una certa caratteristica può essere disponibile solo in 
+determinate versioni della tecnologia, e quindi può essere necessario 
+segnalare la cosa nell'elenco dei requisiti. 
+</p>
+  </dd><dt class="label"><a id="functionalitydef" name="functionalitydef"></a>Funzionalità 
+  </dt><dd>
+  <p>Le <strong>funzionalità</strong> rappresentano lo scopo 
+o effetto previsto del contenuto. Ciò può includere presentare un&#8217;informazione, 
+raccogliere dati, assicurare una risposta da parte dell&#8217;utente, fornirgli esperienza, 
+stabilire collegamenti ad altro contenuto, testare, confermare, acquistare, ecc.  
+</p>
+  </dd> <DT class=label><A id=flash-thresholddef name=flash-thresholddef></A>Soglia di intermittenza generica
+  <DD>
+  <UL>
+    <LI>
+    <P>Non sono permesse sequenze intermittenti o rapidi cambiamenti di immagini quando si 
+  verificano entrambe le seguenti situazioni: </P>
+    <OL type=1>
+      <LI>
+      <P>L&#8217;area sede delle intermittenze che avvengono simultaneamente (ma non 
+    necessariamente contiguamente) occupa più di un quarto di un qualsiasi rettangolo di 
+    dimensioni 355x268 pixel entro l&#8217;area schermo, laddove il contenuto sia visualizzato 
+    con risoluzione 1024x768 e </P>
+      <LI>
+      <P>Avvengono più di tre intermittenze al secondo. 
+      </P></LI></OL>
+    <DIV class=note>
+    <P class=prefix><STRONG>Nota:</STRONG></P>
+    <P>Nella General Flash Threshold, un&#8217;intermittenza è definita come coppia di opposti 
+  cambiamenti nella luminanza (ad esempio, un aumento della luminanza seguito da una sua 
+  diminuzione o una diminuzione seguito da un aumento) di 20 cd.m<sup>-2</sup> o più, e se la 
+  luminanza dello schermo relativa alle immagini più scure è inferiore a 160 cd.m
+  <sup>-2</sup>. </P></DIV></LI></UL>
+  <DIV class=note>
+  <P class=prefix><STRONG>Nota:</STRONG></P>
+  <P>Le soglie si basano sul documento <a href="http://www.ofcom.org.uk/codes_guidelines/broadcasting/tv/vrs_code_notes/flsh_imgs/?a=87101">ITC 
+  Guidance Note for Licensees on Flashing Images and Regular Patterns in 
+  Television</a> (Riveduto e ripubblicato nel luglio 2001) 
+  come modificato dal <a class="termref" title="" href="#wiscequivdef">Wisconsin 
+  Computer Equivalence Algorithm</a>.</P></DIV>
+</dd><dt class="label"><a id="keybrd-interfacedef" name="keybrd-interfacedef"></a>Interfaccia di tastiera 
+  </dt><dd>
+  <p>Su dispositivi che non hanno una tastiera incorporata 
+o annessa, esiste spesso un metodo alternativo per connettere la tastiera 
+al dispositivo, o un metodo interno per inserire un testo. 
+Attraverso &#8220;l' <strong>interfaccia di tastiera</strong>&#8221;, il contenuto può essere controllato 
+per mezzo di comandi da tastiera o metodi alternativi che ne sostituiscono 
+l&#8217;utilizzo. 
+</p>
+  </dd>
+
+ <DT class=label><A id=linkdef name=linkdef></A>Link 
+  <DD>
+  <P><STRONG>Un link </STRONG>indirizza a un collegamento ipertestuale fra il documento corrente 
+  e una singola destinazione. (Qui, "link" indirizza ad un singolo "arc" nella specifica <A 
+  href="http://www.w3.org/TR/2001/REC-xlink-20010627/">XML Linking Language 
+  (XLink) Version 1.0 </A>). Solo i link che sono disponibili per essere attivati 
+  dall'utente necessitano di incontrare i requisiti di accessibilità. Ciò esclude i link attivati 
+  automaticamente o programmaticamente. </P>
+
+<dt class="label"><a id="markedpriordef" name="markedpriordef"></a>Marcato in modo che 
+l&#8217;utente possa accedervi prima del suo apparire
+  </dt><dd>
+  <p>Il contenuto è marcato in modo da permettere all&#8217;utente di individuare 
+il materiale indesiderato e di evitarlo. Alcuni metodi che potrebbero essere 
+usati a tale scopo includono:
+</p>
+  <ul>
+    <li>
+    <p>metadata relativi alla pagina</p>
+    </li><li>
+    <p>informazioni nel titolo (così i motori di ricerca sono in grado di mostrarle)</p>
+    </li><li>
+    <p>notifica sulla pagina prima che le informazioni indesiderate stanno per essere visualizzate.</p></li></ul>
+  <div class="revnote">
+  <p><strong>Nota dell'editore</strong>: Questa definizione necessita di rielaborazione.</p></div>
+  </dd><dt class="label"><a id="media-equivdef" name="media-equivdef"></a>Media alternativi 
+  </dt><dd>
+  <p>I <strong>Media alternativi</strong> presentano visivamente informazioni 
+audio essenziali (<a class="termref" title="" href="#captionsdef">sottotitoli</a>)
+  ed uditivamente informazioni video essenziali (<a class="termref" title="" href="#audiodescdef">descrizioni audio</a>).</p>
+  </dd><DT class=label><A id=multimediadef name=multimediadef></A>Multimedia
+  <DD>
+  <P>Nelle intenzioni di queste linee guida, i multimedia si riferiscono a presentazioni congiunte di audio  
+  e video.</P>
+  <DIV class=revnote>
+  <P><STRONG>Nota dell'Editore</STRONG>: Nel futuro, i multimedia comprenderanno probabilmente 
+  anche contenuti  visivi dinamici, interattivi e forse altre combinazioni di media. 
+  </P></DIV>
+<dt class="label"><a id="natural-langdef" name="natural-langdef"></a>Linguaggi naturali 
+  </dt><dd>
+  <p>I <strong>linguaggi naturali</strong> sono quelli usati dall&#8217;uomo per comunicare, 
+incluse le lingue parlate, scritte e il linguaggio dei segni.
+</p>
+  </dd><dt class="label"><a id="non-text-contentdef" name="non-text-contentdef"></a>Contenuto non testuale 
+  </dt><dd>
+  <p>Il<strong> contenuto non testuale</strong> include, ma non si limita, 
+a immagini, testo in immagini raster, mappe immagini, animazioni (es. GIF animate), 
+<a class="termref" title="" href="#asciiartdef">Arte ASCII</a>, immagini usate come 
+list bullet,  barre spaziatrici, pulsanti grafici, suoni (che si attivano con o 
+senza interazione dell&#8217;utente), file audio stand-alone, tracce audio o video, 
+video. Inoltre includono qualunque <a class="termref" title="" href="#textdef">testo </a>che non può essere tradotto nel linguaggio Unicode. 
+</p>
+  <div class="note">
+  <p class="prefix"><strong>Nota:</strong> </p>
+  <p>Script, applet, e oggetti programmatici non sono inclusi in questa definizione 
+e sono analizzati nella <a href="#technology-supports-access">linea guida 
+  4.2</a>.</p></div>
+  </dd><dt class="label"><a id="normativedef" name="normativedef"></a>Normativo 
+  </dt><dd>
+  <p>Richiesto per la conformità.
+  </p>
+  </dd><dt class="label"><a id="presentationdef" name="presentationdef"></a>Presentazione 
+  </dt><dd>
+  <p>La <strong>presentazione </strong>è la resa del contenuto e della struttura 
+in una forma che può essere percepita dall&#8217;utente.
+  </p>
+  </dd><dt class="label"><a id="programmaticuidef" name="programmaticuidef"></a>Componente programmatica dell&#8217;interfaccia utente 
+  </dt><dd>
+  <p>Componente d&#8217;interfaccia creata dall&#8217;autore, aggiuntiva rispetto a quelle 
+fornite dallo user agent. Per esempio, una casella di controllo HTML non può 
+essere una <strong>componente programmatica dell&#8217;interfaccia utente </strong>perché l&#8217;autore 
+usa una componente dell&#8217;interfaccia supportata dallo user agent. Una casella 
+di controllo implementata con script potrebbe essere una componente programmatica 
+dell&#8217;interfaccia utente perché fornisce funzionalità che sono note o supportate 
+dagli user agent e non possono essere rese accessibili dagli user agent anche 
+se questi si conformano alle <acronym title="User Agent Accessibility Guidelines">UAAG</acronym>.</p>
+  </dd><dt class="label"><a id="programmaticallydetermineddef" name="programmaticallydetermineddef"></a>Determinato programmaticamente
+  </dt><dd>
+  <p><strong>Determinato programmaticamente</strong>  
+significa che può essere determinato lo specifico valore in uno standard, forma decifrabile da una macchina o da un software.</p>
+  </dd><dt class="label"><a id="programmaticlocatedef" name="programmaticlocatedef"></a>Individuato programmaticamente 
+  </dt><dd>
+  <p><strong>Individuato programmaticamente</strong> significa 
+che il valore può essere trovato, sebbene possano esistere 
+più valori (ad esempio, fornendo una definizione da dizionario per una 
+parola che ha molteplici significati). Questo termine contrasta con <A class=termref title="" 
+  href="#programmaticallydetermineddef">determinato programmaticamente</A>, dove lo specifico valore 
+può essere determinato. 
+ </p>
+  <div class="revnote">
+  <p><strong>Nota dell'editore</strong>: Questa disposizione dipende 
+dalla definizione di un modo standard di associare i dizionari e 
+dalla disponibilità di dizionari on-line. 
+</p></div>
+  </dd><dt class="label"><a id="real-time-eventsdef" name="real-time-eventsdef"></a>Eventi in tempo reale 
+  </dt><dd>
+  <p><strong>Eventi in tempo reale </strong> sono accadimenti che 
+non sono sotto il diretto controllo dell&#8217;autore.
+</p>
+  </dd><DT class=label><A id=red-thresholddef name=red-thresholddef></A>Soglia 
+  d'intermittenza rossa
+  <DD>
+  <UL>
+    <LI>
+    <P>Non è permesso il passaggio a (o da) un rosso saturo ad un qualsiasi livello 
+  luminescente quando si verificano entrambe le seguenti situazioni: </P>
+    <OL type=1>
+      <LI>
+      <P>L&#8217;area sede delle intermittenze che avvengono simultaneamente occupa più di un 
+    quarto di un qualsiasi rettangolo di dimensioni 355x268 pixel entro l&#8217;area schermo, 
+    laddove il contenuto è visualizzato con risoluzione 1024x768 e </P>
+      <LI>
+      <P>avvengono più di tre intermittenze al secondo. 
+      </P></LI></OL>
+    <DIV class=note>
+    <P class=prefix><STRONG>Nota:</STRONG></P>
+    <P>Nella Red Flash Threshold, un flash è definito come qualunque coppia di transizioni 
+  opposte a (o da) un rosso saturo ad un qualsiasi livello luminescente. 
+  (Vedi nota sottostante). </P></DIV></LI></UL>
+  <DIV class=note>
+  <P class=prefix><STRONG>Nota:</STRONG></P>
+  <P>Le soglie si basano sul documento <a href="http://www.ofcom.org.uk/codes_guidelines/broadcasting/tv/vrs_code_notes/flsh_imgs/?a=87101">ITC 
+  Guidance Note for Licensees on Flashing Images and Regular Patterns in 
+  Television</a> (Riveduto e ripubblicato nel luglio 2001) 
+  come modificato dal <a class="termref" title="" href="#wiscequivdef">Wisconsin 
+  Computer Equivalence Algorithm</a>.
+</P></DIV>
+</dd><DT class=label><A id=regularexpressiondef 
+  name=regularexpressiondef></A>Espressione regolare
+  <DD>
+  <P>Una <STRONG>espressione regolare</STRONG> come definita in <A 
+  href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#regexs">XML Schema 
+  Part 2: Datatypes, Appendix F</A>.</P>
+<dt class="label"><a id="site-nav-mechdef" name="site-nav-mechdef"></a>Meccanismo 
+di navigazione di un sito 
+ </dd></dt><dd>
+  <p>Un <strong>meccanismo di navigazione di un sito </strong> è un 
+meccanismo per orientarsi e muoversi facilmente all&#8217;interno del sito. 
+I meccanismi di navigazione di un sito includono ma non sono limitati a: </p>
+  <ul>
+    <li>
+    <p>homepage con hyperlink e pagine successive che collegano ad altre parti del sito
+</p>
+    </li><li>
+    <p>mappa(e) del sito
+</p>
+    </li><li>
+    <p>motore(i) di ricerca
+</p>
+    </li><li>
+    <p>schema(i) che si espandono
+</p>
+    </li><li>
+    <p>visioni dinamiche a vasto raggio che mostrano tutte le pagine linkate 
+o gli argomenti collegati a ciascuna pagina.</p>
+    </li><li>
+    <p> rappresentazioni virtuali in 3-D del contenuto del sito
+</p></li></ul></p>
+ 
+<DT class=label><A id=pattern-thresholddef 
+  name=pattern-thresholddef></A>Soglie di distribuzione spaziale 
+  <DD>
+  <P>Le definizioni internazionali per la soglia di distribuzione spaziale stanno mutando
+  e noi adotteremo i nuovi standard non appena saranno resi pubblici</P>
+<dt class="label"><a id="structuredef" name="structuredef"></a>Struttura 
+  </dt><dd>
+  <p>La <strong>struttura </strong>include sia la struttura gerarchica 
+del contenuto, sia le relazioni non gerarchiche come i riferimenti 
+incrociati o le corrispondenze tra le intestazioni e i dati contenuti 
+nelle celle di una tabella. La struttura gerarchica del contenuto 
+rappresenta le variazioni nel contesto. Per esempio,
+</p>
+  <ol type="1">
+    <li>
+    <p>un libro è diviso in capitoli, paragrafi, liste. I titoli 
+dei capitoli aiutano il lettore ad anticipare il senso dei paragrafi successivi. 
+Le liste indicano concetti separati, ma collegati tra loro. 
+Tutte queste suddivisioni aiutano il lettore ad anticipare le variazioni nel contesto.
+</p>
+    </li><li>
+    <p>una bicicletta è costituita da ruote e telaio. Inoltre una ruota è 
+formata da un pneumatico e un cerchio. In un&#8217;immagine di bicicletta, un gruppo di cerchi 
+e linee si trasformano in una &#8220;ruota&#8221; mentre un altro gruppo si trasforma nel &#8220;telaio&#8221;.
+</p></li></ol>
+  </dd><dt class="label"><a id="technologydef" name="technologydef"></a>Tecnologia 
+  </dt><dd>
+  <p>Una <strong>tecnologia </strong>è</p>
+  <ul>
+    <li>
+    <p>un linguaggio di markup o di programmazione 
+</p>
+    </li><li>
+    <p>un&#8217;Application Programming Interface (API)
+</p>
+    </li><li>
+    <p>o un protocollo di comunicazione
+</p></li></ul>
+  </dd><dt class="label"><a id="textdef" name="textdef"></a>Testo 
+  </dt><dd>
+  <div class="revnote">
+  <p><strong>Nota dell'editore</strong>: Stiamo attualmente lavorando 
+con Internationalization (I18N) per includere riferimenti ed esprimere 
+meglio le definizioni  WCAG 2.0 relative a  &#8220;testo&#8221; e &#8220;codifica dei caratteri&#8221;. 
+</p></div>
+  </dd>
+<dt class="label"><a id="text-altdef" name="text-altdef"></a>Testo alternativo 
+  </dt><dd>
+  <p>Un <a class="termref" title="" href="#textdef">testo 
+  </a>alternativo</p>
+  <ul>
+    <li>
+    <p>ha la stessa funzione del contenuto non testuale 
+</p>
+    </li><li>
+    <p>comunica la stessa informazione veicolata dal contenuto non testuale
+</p>
+    </li><li>
+    <p>può comprendere contenuto strutturato o metadata
+</p></li></ul>
+  <div class="note">
+  <p class="prefix"><strong>Nota:</strong> </p>
+  <p>I testi alternativi dovrebbero essere facilmente convertibili 
+  in Braille o parlato, visualizzati con un font più grande o colori diversi, 
+  inseriti nei traduttori o in software per riassumere, etc.</p></div><dt class="label"><a id="text-descriptiondef" name="text-descriptiondef"></a>Descrizione testuale
+  </dt><dd>
+  <p>
+  </p><div class="revnote">
+  <p><strong>Nota dell'editore</strong>: È necessario inserire 
+in questo punto una definizione di descrizione testuale. 
+</p></div>
+  </dd><dt class="label"><a id="text-labeldef" name="text-labeldef"></a>Etichetta di testo 
+  </dt><dd>
+  <p>
+  </p><div class="revnote">
+  <p><strong>Nota dell'editore</strong>: È necessario inserire in 
+questo punto una definizione di etichetta di testo. </p></div>
+  </dd>
+  </dd><dt class="label"><a id="time-dep-presentdef" name="time-dep-presentdef"></a>Presentazioni dipendenti dal tempo 
+  </dt><dd>
+  <p>Una <strong>presentazione dipendente dal tempo 
+</strong> è una presentazione che:
+</p>
+  <ul>
+    <li>
+    <p> è formata da tracce audio e video sincronizzate (es. un film),  
+    o</p>
+    </li><li>
+    <p>richiede all'utente di interagire in uno specifico momento della 
+presentazione.</p></li></ul>
+  </dd><dt class="label"><a id="unfamiliar-contentdef" name="unfamiliar-contentdef"></a>Contenuto poco familiare
+  </dt><dd>
+  <p>È probabile che il contenuto sia <strong>poco familiare </strong>
+se si usano termini specifici per un particolare uditorio. Per esempio, molti dei termini usati 
+in questo documento sono specifici per la comunità dei disabili.</p>
+  </dd>
+<DT class=label><A id=video-onlydef name=video-onlydef></A>video-only
+ </dt><DD><p>Una presentazione dipendente dal tempo che contiene solo video.</P></DD></DL></DIV>
+
+<div class="div1">
+<h2><a id="d0e2969" name="d0e2969"></a>Appendice B Collaboratori</h2>
+<p><a href="http://www.w3.org/WAI/GL/participants.html">Participants in the
+ WCAG Working Group</a> </p></div>
+<div class="div1">
+<h2><a id="d0e2977" name="d0e2977"></a>Appendice C Differenze tra le WCAG 1.0 e le 
+WCAG 2.0</h2>
+<p>Sin dalla pubblicazione delle WCAG 1.0 nel Maggio 1999, il WCAG Working Group 
+ha ricevuto feedback sulle priorità dei checkpoint, sull&#8217;usabilità  dei vari documenti, 
+e richieste di chiarimenti sul significato di specifici checkpoint e di come operare 
+per soddisfarli. Pertanto quando le WCAG 2.0 diventeranno una W3C Recommendation:
+</p>
+<ul>
+  <li>
+  <p>saranno organizzate in modo più efficiente,</p>
+  </li><li>
+  <p>potranno rettificare la priorità di alcuni checkpoint,</p>
+  </li><li>
+  <p>potranno modificare, eliminare o aggiungere requisiti a seguito dei cambiamenti 
+nelle Tecnologie Web, riscontrati dopo la pubblicazione delle WCAG 1.0,</p>
+  </li><li>
+  <p>incorporeranno gli Errata delle WCAG 1.0,</p>
+  </li><li>
+  <p>faranno tesoro dell&#8217;esperienza acquisita nell&#8217;implementare le WCAG 1.0.</p></li></ul>
+<p>Per un confronto dettagliato, fare riferimento al documento <a href="http://www.w3.org/WAI/GL/2004/06/02-mapping.html">Mapping Between WCAG 1.0 
+and the WCAG 2.0 Working Draft</a>.</p>
+<div class="div2">
+<h3><a id="d0e3005" name="d0e3005"></a>Miglioramenti nelle WCAG 2.0</h3>
+<p>Ci auguriamo che le WCAG 2.0 presentino parecchi 
+miglioramenti rispetto alle WCAG 1.0. L&#8217;obiettivo principale delle WCAG 2.0 è lo stesso delle WCAG 1.0 
+(promuovere l&#8217;accessibilità dei contenuti Web). Obiettivi supplementari per le WCAG 2.0 sono:
+</p>
+<ol type="1">
+  <li>
+  <p>assicurare che i requisiti possano essere applicati trasversalmente dalle tecnologie
+</p>
+  </li><li>
+  <p>assicurare che i requisiti per la conformità siano chiari
+</p>
+  </li><li>
+  <p>assicurare che i documenti siano facili da  usare
+</p>
+  </li><li>
+  <p>scrivere per un pubblico variegato
+</p>
+  </li><li>
+  <p> identificare chiaramente chi beneficia dei contenuti accessibili
+</p>
+  </li><li>
+  <p>assicurare che la revisione sia compatibile con le WCAG 1.0 
+
+Per maggiori informazioni circa i miglioramenti 
+</p></li></ol>
+<p>Per maggiori informazioni circa i miglioramenti proposti nella Working Draft WCAG 2.0 fare riferimento ai <a href="http://www.w3.org/TR/wcag2-req/">Requirements
+ for WCAG 2.0
+</a>.</p></div></div>
+<div class="div1">
+<h2><a id="d0e3034" name="d0e3034"></a>Appendice D Riferimenti</h2>
+<div class="revnote">
+<p><strong>Nota dell'editore</strong>: I collegamenti che si trovano nel documento saranno elencati in questa sezione. 
+Per il momento essi sono interni al documento stesso.</p></div></div></div></body></html> 

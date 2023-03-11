@@ -1,0 +1,3126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Definizioni degli elementi di contenuto</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="cedef"></a>C Definizioni degli elementi di contenuto </h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: B <a href="appendixb.html">Grammatica di convalida della
+  marcatura di contenuto</a>
+<br>
+  Successivo: D <a href="appendixd.html">Dizionario degli
+  operatori</a> (Non normativa) <br>
+  &nbsp;<br>C <a href="appendixc.html">Definizioni degli elementi di
+  contenuto</a>
+<br>C.1 <a href="appendixc.html#cedef:about">A proposito degli
+elementi della marcatura di contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;C.1.1 <a href="appendixc.html#N42763">Le
+definizioni predefinite</a>
+<br>&nbsp;&nbsp;&nbsp;C.1.2 <a href="appendixc.html#N42791">La
+struttura di una MMLdefinition.</a>
+<br>C.2 <a href="appendixc.html#cedef:def">Definizioni degli elementi
+di contenuto del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.1 <a href="appendixc.html#N43091">Elementi
+foglia</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.2 <a href="appendixc.html#N43118">Elemento
+di contenuto fondamentale</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.3 <a
+href="appendixc.html#cedef:001">Aritmetica, algebra e logica</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.4 <a
+href="appendixc.html#N43551">Relazioni</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.5 <a href="appendixc.html#N43622">Analisi
+matematica</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.6 <a href="appendixc.html#N43726">Teoria
+degli insiemi</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.7 <a
+href="appendixc.html#N43852">Successioni e serie</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.8 <a
+href="appendixc.html#N43901">Trigonometria</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.9 <a
+href="appendixc.html#N44071">Statistica</a>
+<br>&nbsp;&nbsp;&nbsp;C.2.10 <a href="appendixc.html#N44142">Algebra
+lineare</a>
+<br>
+</p>
+
+<h2>
+<a name="cedef:about"></a>C.1 A proposito degli elementi della
+marcatura di contenuto </h2>
+
+<p>Il ruolo primario degli elementi di contenuto del MathML &egrave;
+fornire un meccanismo per registrare il fatto che una particolare
+struttura notazionale ha un particolare significato matematico. A
+questo fine, ogni elemento di contenuto deve avere una definizione
+matematica associata con esso in qualche forma. Il fine di questa
+appendice &egrave; fornire definizioni <i>predefinite</i>. (In seguito
+nel documento &egrave; fornito un indice alle definizioni.) L'autore
+pu&ograve; adattare la notazione alle sue particolari necessit&agrave;
+usando &quot;definitionURL&quot; per sovrascrivere queste definizioni
+predefinite per gli elementi di contenuto selezionati. </p>
+
+<p>Le definizioni matematiche non sono ristrette a nessun formato. Ci
+sono varie ragioni per permettere questa flessibilit&agrave;, quasi
+tutte derivate dal fatto che se &egrave; estremamente importante
+permettere agli autori di fare uso di definizioni esistenti dalla
+letteratura matematica.
+</p>
+<ol>
+<li>Non c'&egrave; una notazione adatta di uso comune. Per esempio, le
+librerie matematiche anche dei pi&ugrave; estensivi sistemi di calcolo
+matematico in uso oggi catturano solo una piccola frazione della
+letteratura matematica e comunque non tutta la matematica &egrave;
+computazionale.
+</li>
+<li>Nella maggior parte dei casi, la traduzione di una definizione
+matematica in un nuovo linguaggio denotazionale &egrave; un uso
+inappropriato dell'energia e del tempo di un autore.
+</li>
+<li>Il compito di progettare un nuovo linguaggio leggibile da una
+macchina adatto a registrare descrizioni semantiche &egrave; un
+compito oneroso che va sostanzialmente oltre l'ambito di questa
+particolare direttiva. Esso inoltre si sovrappone sostanzialmente con
+gruppi di lavoro come il Consorzio OpenMath. (Si vedano anche:
+l'Iniziativa Nordamericana OpenMath e il Consorzio Europeo OpenMath.)
+
+</li>
+</ol>
+<p>
+</p>
+
+<p>I problemi chiave per fini sia di archiviazione che di calcolo sono
+che ci sia una definizione e che l'autore abbia un meccanismo per
+specificare quale definizione deve essere usata per una data istanza
+di un costrutto notazionale. Questo requisito denotazionale &egrave;
+importante senza tener conto dell'esistenza di un'implementazione di
+un particolare concetto o oggetto in un sistema di calcolo matematico.
+La definizione pu&ograve; essere vaga come sostenere che, diciamo
+<i>F</i>, &egrave; una funzione sconosciuta, ma derivabile dai numeri
+reali ai numeri reali, o complicata come richiedere che <i>F</i> sia
+una funzione o un'operazione elaborata definita in qualche documento
+di ricerca recente (o classico). La cosa importante &egrave; che il
+lettore abbia sempre un modo per determinare come &egrave; usata la
+notazione. </p>
+
+<h3>
+<a name="N42763"></a>C.1.1 Le definizioni predefinite </h3>
+
+<p>La decisione di un autore di usare elementi di contenuto &egrave;
+una decisione di usare oggetti definiti. Per rendere questo compito
+meno oneroso, sono fornite definizioni predefinite. In questo modo, un
+autore ha bisogno di fornire definizioni esplicite solo quando il loro
+uso &egrave; diverso dall'uso predefinito. </p>
+
+<p>Quando &egrave; possibile le definizioni sono state scelte per
+riflettere l'uso comune affinch&eacute; la maggior parte delle
+comunicazioni matematiche ben scritte (in ogni formato) tragga un
+sostanziale beneficio dall'uso dell'autore di termini ampiamente usati
+e compresi.
+</p>
+
+<p>Le definizioni sono sovrascritte in un'istanza particolare facendo
+uso dell'attributo <code>definitionURL</code>. Il formato del
+contenuto di tale URL non &egrave; specificato. Pu&ograve; anche
+essere il caso che l'attributo <code>definitionURL</code> sia un nome
+inventato dall'autore, in questo caso serve ad avvisare il lettore (e
+i sistemi di calcolo) che l'autore sta usando la sua definizione.
+Pu&ograve; essere l'URL di un documento matematico il cui scopo sia
+definire un nuovo operatore, o anche un riferimento a un testo
+tradizionale nel quale &egrave; definito il costrutto. Se l'operatore
+matematico dell'autore corrisponde esattamente ad un operatore in un
+particolare sistema di calcolo, una definizione appropriata potrebbe
+essere in termini di un elemento <code>semantics</code> del MathML che
+stabilisce una corrispondenza tra due codifiche. Qualunque formato sia
+scelto, l'unico requisito &egrave; che sia indicato un qualche tipo di
+definizione. </p>
+
+<p>Questo resto di questa appendice fornisce descrizioni dettagliate
+della semantica predefinita associata con ogni elemento di contenuto
+del MathML. Poich&eacute; questo &egrave; esattamente il ruolo inteso
+per le codifiche in fase di sviluppo dal Consorzio OpenMath e uno dei
+nostri obiettivi &egrave; promuovere la cooperazione internazionale in
+questi lavori di standardizzazione abbiamo presentato le definizioni
+predefinite in un formato modellato sui <i>dizionari di contenuto</i>
+di OpenMath. Sebbene i dettagli reali siano piuttosto diversi dalle
+specifiche OpenMath, i principi sottostanti sono gli stessi. </p>
+
+<h3>
+<a name="N42791"></a>C.1.2 La struttura di una MMLdefinition. </h3>
+
+<p>Ogni elemento MathML &egrave; descritto usando un formato XML.
+L'elemento principale &egrave; <code>MMLdefinition</code>. I
+sottoelementi identificano le varie parti della descrizione e
+comprendono:
+</p>
+<dl>
+<dt>
+<b>name</b>
+</dt>
+<dd>
+<code>PCDATA</code> che fornisce il nome dell'elemento MathML. </dd>
+
+<dt>
+<b>description</b>
+</dt>
+<dd>Una descrizione CDATA dell'oggetto che un elemento rappresenta.
+Questo spesso comprender&agrave; riferimenti incrociati a testi o
+documenti pi&ugrave; tradizionali o a documenti esistenti sul Web.
+</dd>
+
+<dt>
+<b>classification</b>
+</dt>
+<dd>Ogni elemento MathML deve essere classificato secondo il suo ruolo
+matematico.
+
+<dl>
+<dt>
+<b>punctuation</b>
+</dt>
+<dd>Alcuni elementi esistono semplicemente come aiuto all'analisi. Per
+esempio l'elemento <code>sep</code> &egrave; usato per separare il
+<code>CDATA</code> che definisce un numero razionale in due parti in
+un modo che sia elaborato facilmente da un'applicazione XML. Questi
+oggetti sono chiamati <i>punteggiatura</i>. </dd>
+
+<dt>
+<b>descriptor</b>
+</dt>
+<dd>Alcuni elementi esistono semplicemente per modificare le
+propriet&agrave; di un elemento o di un oggetto matematico esistente.
+Per esempio il costrutto <code>declare</code> &egrave; usato per
+reimpostare i valori predefiniti degli attributi, o per associare un
+nome ad una specifica istanza di un oggetto. Questi tipi di elementi
+sono chiamati <i>descrittori</i> e il tipo di oggetto risultante
+&egrave; lo stesso dell'elemento modificato, ma con i nuovi valori
+degli attributi. Non &egrave; prevista una firma per i descrittori.
+</dd>
+
+<dt>
+<b>constructor</b>
+</dt>
+<dd>Gli oggetti rimanenti che `contengono' sottoelementi sono tutti i
+<i>costruttori</i> di oggetti di un tipo o dell'altro. Essi combinano
+i sottoelementi in un oggetto matematico composto come una costante,
+un insieme, una lista o l'applicazione di una funzione. Per esempio,
+l'elemento <code>lambda</code> <i>costruisce</i> una definizione di
+funzione da una lista di variabili e un'espressione, mentre l'elemento
+<code>apply</code> costruisce un'<i>applicazione di funzione</i>. Con
+<i>applicazione di funzione</i> intendiamo il risultato di applicare
+il primo elemento dell'elemento <code>apply</code> (la funzione) agli
+zero o pi&ugrave; elementi rimanenti (gli argomenti).
+Un'<i>applicazione di funzione</i> rappresenta un oggetto nel
+codominio della funzione. Per ogni data combinazione di tipo e ordine
+di figli XML, la firma di un costruttore indica il tipo (e a volte il
+sottotipo) dell'oggetto risultante.
+</dd>
+
+<dt>
+<b>function (operator)</b>
+</dt>
+<dd>Le tradizionali funzioni e gli operatori matematici sono
+rappresentati in MathML da elementi XML vuoti come <code>plus</code> e
+<code>sin</code>. Queste definizioni di <i>funzioni</i> sono
+parametrizzate dai valori dei loro attributi XML (per esempio, possono
+essere di tipo vettore) e sono usate o come sono, per esempio quando
+si discutono le propriet&agrave; di una particolare funzione o
+operatore, o sono <i>applicate</i> ad argomenti usando l'elemento
+<code>apply</code>. L'ultimo caso &egrave; detto applicazione di
+funzioni.
+
+Le funzioni sono classificate secondo come sono usate. Per esempio
+l'elemento vuoto <code>sin</code> rappresenta la funzione matematica
+<i>unaria</i> seno. L'elemento <code>plus</code> &egrave; un operatore
+<i>n-ario</i>. La <i>firma</i> di una funzione (si veda sotto)
+descrive come deve essere usata una funzione matematica all'interno di
+un elemento <code>apply</code>. Ogni combinazione di tipi di argomenti
+di funzione usata all'interno di un elemento <code>apply</code>
+d&agrave; origine ad un elemento <code>apply</code> di un dato tipo.
+</dd>
+
+</dl>
+
+</dd>
+
+<dt>
+<b>MMLattribute</b>
+</dt>
+<dd>Alcuni degli attributi XML di un elemento di contenuto del MathML
+hanno un impatto diretto sulla semantica matematica dell'oggetto. Per
+esempio l'attributo <code>type</code> dell'elemento <code>cn</code>
+&egrave; usato per determinare che tipo di costante (intera, reale,
+ecc.) si sta costruendo. Solo quegli attributi che influenzano le
+propriet&agrave; matematiche di un oggetto sono elencati qui e
+tipicamente questi appaiono anche esplicitamente nella firma. </dd>
+
+<dt>
+<b>signature</b>
+</dt>
+<dd>La firma (signature) &egrave; una rappresentazione sistematica che
+associa i tipi delle diverse possibili combinazioni di attributi e
+argomenti di funzione al tipo dell'oggetto matematico costruito. Le
+combinazioni possibili di tipi di parametri e argomenti (il lato
+sinistro) risultano ciascuna in un oggetto di qualche tipo (il lato
+destro). In effetti, descrive come risolvere la sovrascrittura degli
+operatori.
+
+Per i costruttori, il lato sinistro della firma descrive i tipi di
+elementi figli e il lato destro descrive il tipo di oggetto costruito.
+Per le funzioni, il lato sinistro della firma indica i tipi di
+parametri e argomenti attesi quando la funzione &egrave; applicata, o
+usata per costruire una relazione, e il lato destro rappresenta il
+tipo matematico dell'oggetto costruito dall'elemento
+<code>apply</code>. I modificatori modificano gli attributi di un
+oggetto esistente. Per esempio, un <i>simbolo</i> pu&ograve; diventare
+un <i>simbolo di tipo vettore</i>.
+
+La firma deve poter registrare valori di attributi e tipi di argomenti
+specifici a sinistra, e tipi parametrizzati a destra. La sintassi
+usata per le firme &egrave; della forma generale:
+<pre>
+[&lt;nome dell'attributo&gt;=&lt;valoreattributo&gt;]( &lt;lista dei tipi degli argomenti&gt; )
+--&gt; &lt;tipo matematico del risultato&gt;(&lt;sottotipo matematico&gt;)
+</pre>
+
+Gli attributi MML, se presenti, appaiono nella forma
+<code>&lt;nome&gt;=&lt;valore&gt;</code>. Sono separati
+notazionalmente dal resto degli argomenti da parentesi quadre. I
+valoro possibili sono presi di solito da una lista enumerata, e la
+firma &egrave; di solito influenzata dalla selezione di un possibile
+valore.
+
+Per gli argomenti reali delle funzioni e i parametri con nome a
+sinistra, l'attenzione &egrave; sui tipi matematici coinvolti. I tipi
+degli argomenti della funzione sono presentati in una sintassi simile
+a quella usata per una DTD, con un'eccezione principale. I tipi dei
+parametri con nome appaiono nella firma come
+<code>&lt;nomeelemento&gt;=&lt;tipo&gt;</code> in un modo analogo a
+quello usato per i valori degli attributi. Per esempio, se l'argomento
+ha un nome (es. <code>bvar</code>) allora &egrave; rappresentato nella
+firma da un'equazione come in:
+<pre>
+[&lt;nome attributo&gt;=&lt;valoreattributo&gt;]( bvar=simbolo,&lt;lista argomenti&gt; ) --&gt;
+&lt;tipo matematico del risultato&gt;(&lt;sottotipo matematico&gt;)
+</pre>
+
+Nel MathML non avviene mai nessuna valutazione matematica. Ogni
+elemento di contenuto MathML o si riferisce ad un oggetto definito
+come una funzione matematica o combina tali oggetti in qualche modo
+per costruire un nuovo oggetto. Ai fini della segnatura, l'oggetto
+costruito rappresenta un oggetto di un certo tipo, eventualmente
+parametrizzato. Per esempio il risultato di applicare
+<code>plus</code> agli argomenti &egrave; un'espressione che
+rappresenta una somma. Il tipo di espressione risultante dipende dai
+tipi degli operandi e dai valori degli attributi MathML. </dd>
+
+<dt>
+<b>example</b>
+</dt>
+<dd>Gli esempi dell'uso di questo oggetto nel MathML sono compresi in
+questi elementi. </dd>
+
+<dt>
+<b>property</b>
+</dt>
+<dd>Questo elemento descrive le propriet&agrave; matematiche di tali
+oggetti. Per semplici associazioni di valori con specifiche istanze di
+un oggetto, il primo figlio &egrave; un'istanza dell'oggetto definito.
+Il secondo &egrave; un elemento <code>value</code> (valore) o
+<code>approx</code> (approssimazione) che contiene una descrizione
+MathML di questo particolare valore. Condizioni pi&ugrave; elaborate
+sull'oggetto sono espresse usando la sintassi MathML. </dd>
+
+<dt>
+<b>comment</b>
+</dt>
+<dd>Questi elementi contengono solo PCDATA e possono occorrere come
+figli della MMLDefinition in ogni punto. </dd>
+
+</dl>
+<p>
+</p>
+
+<h2>
+<a name="cedef:def"></a>C.2 Definizioni degli elementi di contenuto
+del MathML </h2>
+
+<h3>
+<a name="N43091"></a>C.2.1 Elementi foglia </h3>
+
+<h4>
+<a name="N43095"></a>C.2.1.1 <code>cn</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+&lt;name&gt; cn &lt;/name&gt;
+&lt;description&gt; 
+Una costante numerica. Il tipo matematico di numero &egrave;
+dato come attributo. Il tipo predefinito &egrave; &quot;real&quot;.
+Numeri razionali, complessi o reali richiedono due
+parti per una completa specificazione. Le parti di un
+tale numero sono separate da un elemento &quot;sep&quot; vuoto. Ci
+sono alcune costanti predefinite che comprendono:
+      &amp;pi; &amp;Exponential; &amp;ComplexI &amp;true; &amp;false; &amp;NaN;
+le propriet&agrave; di alcune delle quali sono delineate in
+seguito. La costante &amp;NaN; &egrave; il &quot;Not a Number&quot; (non un
+numero) dell'IEEE, come definita nello standardi IEEE 854
+per l'aritmetica in virgola mobile.
+&lt;/description&gt;
+&lt;functorclass&gt; constant &lt;/functorclass&gt;
+&lt;MMLattribute&gt;
+    &lt;name&gt; type &lt;/name&gt;
+    &lt;value&gt; integer | rational | complex-cartesian 
+             | complex-polar | real 
+    &lt;/value&gt;
+    &lt;default&gt; real &lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+    &lt;name&gt; base &lt;/name&gt;
+    &lt;value&gt; positive_integer &lt;/value&gt;
+    &lt;default&gt; 10 &lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; [type=integer](numstring) -&gt; constant(integer) &lt;/signature&gt;
+&lt;signature&gt; [base=basevalue](numstring) -&gt; constant(integer) &lt;/signature&gt; 
+&lt;signature&gt; [type=rational](numstring,numstring) -&gt; constant(rational) &lt;/signature&gt;
+&lt;signature&gt; [type=complex-cartesian](numstring,numstring) -&gt; constant(complex) &lt;/signature&gt;
+&lt;signature&gt; [type=rational](numstring,numstring) -&gt; constant(rational) &lt;/signature&gt;
+&lt;signature&gt; [type=real](&amp;pi;) -&gt; constant(real) &lt;/signature&gt;
+&lt;signature&gt; [definition](numstring,numstring) -&gt; constant(userdefined) &lt;/signature&gt;
+&lt;signature&gt; (&amp;gamma;) -&gt; constant&lt;/signature&gt;
+&lt;example&gt; &lt;cn&gt; 245 &lt;/cn&gt; &lt;/example&gt;
+&lt;example&gt; &lt;cn type="integer"&gt; 245 &lt;/cn&gt; &lt;/example&gt;
+&lt;example&gt; &lt;cn type="integer" base="16"&gt; A &lt;/cn&gt;&lt;/example&gt;
+&lt;example&gt; &lt;cn type="rational"&gt; 245 &lt;sep&gt; 351 &lt;/cn&gt; &lt;/example&gt;
+&lt;example&gt; &lt;cn type="complex-cartesian"&gt; 1 &lt;sep/&gt; 2 &lt;/cn&gt; &lt;/example&gt;
+&lt;example&gt; &lt;cn&gt; 245 &lt;/cn&gt; &lt;/example&gt;
+&lt;property&gt; &lt;approx&gt;
+  &lt;cn&gt; &amp;pi; &lt;/cn&gt;  
+  &lt;cn&gt; 3.141592654 &lt;/cn&gt;
+&lt;/approx&gt;&lt;/property&gt;
+&lt;property&gt; &lt;approx&gt;
+  &lt;cn&gt; &amp;gamma; &lt;/cn&gt; 
+  &lt;cn&gt; .5772156649 &lt;/cn&gt;
+&lt;/approx&gt; &lt;/property&gt;
+&lt;property&gt; &lt;reln&gt;&lt;identity/&gt;
+  &lt;cn&gt;&amp;ImaginaryI; &lt;/cn&gt;
+  &lt;apply&gt;&lt;root&gt;&lt;cn&gt;-1&lt;/cn&gt;&lt;cn&gt;2&lt;/cn&gt;&lt;/apply&gt;
+&lt;/reln&gt;
+&lt;/property&gt;  
+&lt;property&gt; &lt;reln&gt;&lt;approx&gt;
+&lt;cn&gt; &amp;ExponentialE; &lt;/cn&gt;&lt;cn&gt;2.718281828 &lt;/cn&gt;
+&lt;/reln&gt; &lt;/property&gt;
+&lt;property&gt; &lt;apply&gt;&lt;forall/&gt;
+  &lt;bvar&gt;&lt;ci type=boolean&gt;p&lt;/ci&gt;&lt;/bvar&gt;
+ apply&gt;&lt;and/&gt;
+    &lt;ci&gt;p&lt;/ci&gt;&lt;cn&gt;&amp;true;&lt;/cn&gt;&lt;/apply&gt;
+    &lt;ci&gt;p&lt;/ci&gt;  
+  &lt;/apply&gt;
+&lt;/property&gt;
+&lt;property&gt; &lt;apply&gt;&lt;forall/&gt;
+  &lt;bvar&gt;&lt;ci type=boolean&gt;p&lt;/ci&gt;&lt;/bvar&gt;
+  &lt;apply&gt;&lt;or/&gt;
+    &lt;ci&gt;p&lt;/ci&gt;&lt;cn&gt;&amp;true;&lt;/cn&gt;&lt;/apply&gt;
+    &lt;cn&gt;&amp;true;&lt;/cn&gt;  
+  &lt;/apply&gt;
+&lt;/property&gt;
+  &lt;bvar&gt;&lt;ci type=boolean&gt;p&lt;/ci&gt;&lt;/bvar&gt;
+  &lt;apply&gt;&lt;or/&gt;
+    &lt;ci&gt;p&lt;/ci&gt;&lt;cn&gt;&amp;true;&lt;/cn&gt;&lt;/apply&gt;
+    &lt;cn&gt;&amp;true;&lt;/cn&gt;  
+  &lt;/apply&gt;
+&lt;/property&gt;
+&lt;property&gt; 
+    &lt;identity&gt;
+      &lt;apply&gt;&lt;not/&gt;&lt;cn&gt; &amp;true; &lt;/apply&gt;
+      &lt;cn&gt; &amp;false; &lt;/cn&gt;
+    &lt;/identity&gt;
+&lt;/property&gt;
+&lt;property&gt; &lt;reln&gt;&lt;identity/&gt;
+  &lt;cn base="16"&gt; A &lt;/cn&gt; &lt;cn&gt; 10 &lt;/cn&gt; &lt;/reln&gt; &lt;/property&gt;
+&lt;property&gt; &lt;reln&gt;&lt;identity/&gt;
+  &lt;cn base="16"&gt; B &lt;/cn&gt; &lt;cn&gt; 11 &lt;/cn&gt; &lt;/reln&gt;&lt;/property&gt;
+&lt;property&gt; &lt;reln&gt;&lt;identity/&gt;
+  &lt;cn base="16"&gt; C &lt;/cn&gt; &lt;cn&gt; 12 &lt;/cn&gt; &lt;/reln&gt;&lt;/property&gt;
+&lt;property&gt; &lt;reln&gt;&lt;identity/&gt;
+  &lt;cn base="16"&gt; D &lt;/cn&gt; &lt;cn&gt; 13 &lt;/cn&gt; &lt;/reln&gt;&lt;/property&gt;
+&lt;property&gt; &lt;reln&gt;&lt;identity/&gt;
+  &lt;cn base="16"&gt; E &lt;/cn&gt; &lt;cn&gt; 14 &lt;/cn&gt; &lt;/reln&gt;&lt;/property&gt;
+&lt;property&gt; &lt;reln&gt;&lt;identity/&gt;
+  &lt;cn base="16"&gt; F &lt;/cn&gt; &lt;cn&gt; 15 &lt;/cn&gt; &lt;/reln&gt;&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43106"></a>C.2.1.2 <code>ci</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; ci &lt;/name&gt;  
+&lt;description&gt;      
+Un nome simbolico di costruttore. L'attributo type
+pu&ograve; essere impostato a ogni tipo MathML valido.
+&lt;/description&gt;  
+&lt;functorclass&gt; constructor , unary &lt;/functorclass&gt;
+&lt;MMLattribute&gt;          
+  &lt;name&gt; type &lt;/name&gt;          
+  &lt;value&gt; constant | matrix | set | vector | list | MathMLtype &lt;/value&gt;          
+  &lt;default&gt; real &lt;/default&gt;
+&lt;/MMLattribute&gt; 
+&lt;signature&gt; ({string|mmlpresentation}) -&gt; symbol(constant) &lt;/signature&gt;
+&lt;signature&gt; [type=MathMLType]({string|mmlpresentation}) -&gt; symbol(MathMLType) &lt;/signature&gt;
+&lt;example&gt;&lt;ci&gt; xyz &lt;/ci&gt; &lt;/example&gt;  
+&lt;example&gt;&lt;ci&gt; type="vector"&gt; V &lt;/ci&gt; &lt;/example&gt;  
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="N43118"></a>C.2.2 Elemento di contenuto fondamentale </h3>
+
+<h4>
+<a name="N43122"></a>C.2.2.1 <code>apply</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; apply &lt;/name&gt;  
+&lt;description&gt;      
+Questo &egrave; il costruttore MathML per l'applicazione di
+funzioni. Il primo argomento &egrave; applicato ai rimanenti
+argomenti. Pu&ograve; essere il caso che alcuni degli elementi
+figli sono elementi con un nome. (Si veda la firma.)
+&lt;/description&gt;  
+&lt;functorclass&gt; constructor , nary &lt;/functorclass&gt;
+&lt;signature&gt; (function,anything*) -&gt; application &lt;/signature&gt;
+&lt;example&gt;&lt;apply&gt;&lt;plus/&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;cn&gt;1&lt;/cn&gt;&lt;/apply&gt;&lt;/example&gt;  
+&lt;example&gt;&lt;apply&gt;&lt;sin/&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/apply&gt;&lt;/example&gt;  
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43133"></a>C.2.2.2 <code>reln</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; reln &lt;/name&gt;  
+&lt;description&gt;      
+Questo &egrave; il costruttore MathML per esprimere una relazione tra due
+o pi&ugrave; oggetti matematici. Il primo argomento indica il tipo di
+&quot;relazione&quot; tra i rimanenti argomenti. (Si veda la firma.)
+Non sono fatte assunzioni sul valore di verit&agrave; di una tale
+relazione. Tipicamente, la relazione &egrave; usata come componente nella
+costruzione di qualche asserzione logica. Le relazioni possono essere
+combinate in insiemi, ecc. come ogni altro oggetto matematico.
+&lt;/description&gt;  
+&lt;functorclass&gt; constructor &lt;/functorclass&gt;
+&lt;signature&gt; (function,anything*) -&gt; reln &lt;/signature&gt;
+&lt;example&gt;&lt;reln&gt;&lt;and/&gt;&lt;ci&gt;P&lt;/ci&gt;&lt;ci&gt;Q&lt;/ci&gt;&lt;/reln&gt;&lt;/example&gt;
+&lt;example&gt;&lt;reln&gt;&lt;lt/&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;ci&gt;y&lt;/ci&gt;&lt;/reln&gt;&lt;/example&gt;  
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43144"></a>C.2.2.3 <code>fn</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; fn &lt;/name&gt;  
+&lt;description&gt;      
+Questo &egrave; il costruttore MathML per costruire nuovi nomi di
+funzioni. Il &quot;nome&quot; pu&ograve; essere un elemento di contenuto MathML
+generico. Esso identifica quell'oggetto come &quot;utilizzabile&quot; in
+un contesto di funzione.
+Impostando il suo valore di definitionURL, si pu&ograve;
+associare ad esso una particolare definizione di
+funzione. Si usi l'elemento declare del MathML per
+associare un nome con un costrutto lambda.
+&lt;/description&gt;
+&lt;MMLattribute&gt;
+  &lt;name&gt;definitionURL&lt;/name&gt;
+  &lt;value&gt; URL &lt;/value&gt;
+  &lt;default&gt; none &lt;/default&gt;
+&lt;/MMLattribute&gt;  
+&lt;functorclass&gt; constructor &lt;/functorclass&gt;
+&lt;signature&gt; (anything) -&gt; function &lt;/signature&gt;
+&lt;signature&gt; [definitionURL=functiondef](anything) -&gt; 
+  function(definitionURL=functiondef)
+&lt;/signature&gt;
+&lt;example&gt;&lt;fn&gt;&lt;ci&gt;F&lt;/ci&gt;&lt;/fn&gt;&lt;/example&gt;
+&lt;example&gt;&lt;fn definitionURL="http://www.w3c/..."&gt;
+  &lt;lt/&gt;&lt;ci&gt;G&lt;/ci&gt;&lt;/fn&gt;
+&lt;/example&gt;
+&lt;!--Si dichiara Id come la funzione identit&agrave;.--&gt;
+&lt;example&gt;
+  &lt;declare&gt;&lt;fn&gt;&lt;ci&gt;Id&lt;/ci&gt;&lt;/fn&gt;&lt;lambda&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/declare&gt;
+&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43155"></a>C.2.2.4 <code>interval</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; interval &lt;/name&gt;  
+&lt;description&gt;      
+Questo &egrave; l'elemento costruttore del MathML per costruire un
+intervallo sull'asse reale. Sebbene un intervallo possa essere
+espresso combinando in modo appropriato delle relazioni, esse
+occorrono esplicitamente a causa della loro frequenza di occorrenza
+nell'uso comune.
+&lt;/description&gt;
+&lt;MMLattribute&gt;
+  &lt;name&gt;type&lt;/name&gt;
+  &lt;value&gt; closed | open | open-closed | closed-open &lt;/value&gt;
+  &lt;default&gt; closed &lt;/default&gt;
+&lt;/MMLattribute&gt;  
+&lt;functorclass&gt; constructor , binary &lt;/functorclass&gt;
+&lt;signature&gt; [type=intervaltype](expression,expression) -&gt; interval &lt;/signature&gt;
+&lt;example&gt;&lt;reln&gt;&lt;and/&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;cn&gt;1&lt;/cn&gt;&lt;/reln&gt;&lt;/example&gt;
+&lt;example&gt;&lt;reln&gt;&lt;lt/&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/reln&gt;&lt;/example&gt;  
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43166"></a>C.2.2.5 <code>inverse</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; inverse &lt;/name&gt;  
+&lt;description&gt;      
+Questo elemento MathML &egrave; applicato ad una funzione per costruire
+una nuova funzione che deve essere interpretata come la funzione
+inversa della funzione originale. Per una funzione particolare F,
+inverse(F) composta con F si comporta come la mappa identit&agrave; sul
+dominio F e F composta con inverse(F) deve essere una funzione
+identit&agrave; di un sottoinsieme appositamente ristretto del
+codominio di F.
+L'attributo definitionURL del MathML deve essere usato per
+risolvere ambiguit&agrave; notazionali, o per restringere l'inversa
+ad un particolare dominio o renderla univoca.
+&lt;/description&gt;  
+&lt;MMLattribute&gt;
+  &lt;name&gt;definitionURL&lt;/name&gt;
+  &lt;value&gt; CDATA &lt;/value&gt;
+  &lt;default&gt; none &lt;/default&gt;
+&lt;!--none corrisponde ad usare la definizione predefinita del MathML ...--&gt;
+&lt;/MMLattribute&gt;  
+&lt;functorclass&gt; operator, unary &lt;/functorclass&gt;
+&lt;signature&gt; (function) -&gt; function &lt;/signature&gt;
+&lt;signature&gt; [definitionURL=URL](function) -&gt; 
+    function(definition) &lt;/signature&gt;
+&lt;example&gt;&lt;apply&gt;&lt;inverse/&gt;&lt;sin/&gt;&lt;/apply&gt;&lt;/example&gt;
+&lt;example&gt;
+  &lt;apply&gt;
+  &lt;inverse definitionURL="www.w3c.org/MathML/Content/arcsin"/&gt;
+  &lt;sin/&gt;
+  &lt;/apply&gt;
+&lt;/example&gt;
+&lt;property&gt;&lt;apply&gt;&lt;forall/&gt;
+  &lt;bvar&gt;&lt;ci&gt;y&lt;/ci&gt;&lt;/bvar&gt;
+  &lt;apply&gt;&lt;sin/&gt;
+    &lt;apply&gt;
+      &lt;apply&gt;&lt;inverse/&gt;&lt;sin/&gt;&lt;/apply&gt;
+      &lt;ci&gt;y&lt;/ci&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+  &lt;value&gt;&lt;ci&gt;y&lt;/ci&gt;&lt;/value&gt;
+&lt;/apply&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;apply&gt;
+  &lt;apply&gt;&lt;inverse/&gt;&lt;sin/&gt;&lt;/apply&gt;
+  &lt;apply&gt;
+    &lt;sin/&gt;
+    &lt;ci&gt;x&lt;/ci&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;value&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;F(inverse(F)(y))&lt;value&gt;y&lt;/value&gt;&lt;/property&gt;  
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43177"></a>C.2.2.6 <code>sep</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; sep &lt;/name&gt;  
+&lt;description&gt;      
+Questo &egrave; il costruttore infisso del MathML usato per suddividere i
+PCDATA in componenti separati. Per esempio, questo &egrave; usato nella
+descrizione di un numero multiparte come un numero razionale o complesso.
+&lt;/description&gt;  
+&lt;functorclass&gt; punctuation &lt;/functorclass&gt;
+&lt;example&gt;&lt;cn type="complex-polar"&gt;123&lt;sep/&gt;456&lt;/cn&gt;&lt;/example&gt;
+&lt;example&gt;&lt;cn&gt;123&lt;/cn&gt;&lt;/example&gt;  
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43188"></a>C.2.2.7 <code>condition</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; condition &lt;/name&gt;  
+&lt;description&gt;      
+Questo &egrave; il costruttore MathML per costruire condizioni.
+Una condizione &egrave; diversa da una relazione per come &egrave; usata.
+Una relazione &egrave; semplicemente un'espressione, mentre una
+condizione &egrave; usata come predicato per porre una condizione
+su una variabile legata.
+Per una condizione composta si usano le relazioni
+o si applicano operatori come &quot;and&quot; o &quot;or&quot; o un
+insieme di relazioni.
+&lt;/description&gt;  
+&lt;functorclass&gt; constructor, unary &lt;/functorclass&gt;
+&lt;signature&gt; ({reln|apply|set}) -&gt; predicate &lt;/signature&gt;
+&lt;example&gt;
+&lt;condition&gt;
+  &lt;reln&gt;&lt;lt/&gt;
+    &lt;apply&gt;&lt;power/&gt;
+      &lt;ci&gt;x&lt;/ci&gt;&lt;cn&gt;5&lt;/cn&gt;
+    &lt;/apply&gt;
+    &lt;cn&gt;3&lt;/cn&gt;
+  &lt;/reln&gt;
+&lt;/condition&gt;
+&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43199"></a>C.2.2.8 <code>declare</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; declare &lt;/name&gt;  
+&lt;description&gt;      
+Questo &egrave; il costruttore MathML per ridefinire le propriet&agrave; e i
+valori con gli oggetti matematici. Per esempio V pu&ograve; essere un
+nome dichiarato come vettore, o V pu&ograve; essere un nome che sta per
+un vettore particolare.
+I valori degli attributi dell'istruzione declare sono assegnati come
+corrispondenti valori predefiniti degli attributi del primo oggetto.
+&lt;/description&gt;  
+&lt;functorclass&gt; modifier , (unary | binary) &lt;/functorclass&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;definitionURL&lt;/definition&gt;
+&lt;value&gt; Any valid URL &lt;/value&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;&lt;value&gt; MathMLType &lt;/value&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;nargs&lt;/name&gt;&lt;value&gt; numero di argomenti per un oggetto di tipo fn &lt;/value&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; [attributename=attributevalue](anything)   -&gt; anything(attributevalue) &lt;/signature&gt;
+&lt;!-- La forma a due argomenti aggiorna le propriet&agrave; del primo oggetto
+a quelle del secondo. I valori degli attributi sovrascrivono le
+propriet&agrave; del &quot;valore&quot;.
+--&gt;
+&lt;signature&gt; [attributename=attributevalue](anything,anything)   -&gt; anything(attributevalue) &lt;/signature&gt;
+&lt;example&gt;&lt;reln&gt;&lt;and/&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;cn&gt;1&lt;/cn&gt;&lt;/reln&gt;&lt;/example&gt;
+&lt;example&gt;&lt;reln&gt;&lt;lt/&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/reln&gt;&lt;/example&gt;  
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43210"></a>C.2.2.9 <code>lambda</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;name&gt; lambda &lt;/name&gt;
+&lt;description&gt; L'operazione del lambda calcolo che crea una
+funzione da un'espressione e una variabile. La definizione a
+questo livello usa solo una variabile. Lambda &egrave; una funzione
+binaria, dove il primo argomento &egrave; la variabile e il secondo
+argomento &egrave; l'espressione.
+Lambda( x, F ) &egrave; scritto come \lambda x [F] nella letteratura
+del lambda calcolo.
+La funzione lambda pu&ograve; essere vista come l'inversa dell'applicazione
+di funzione.
+Sebbene l'espressione F possa contenere x, l'espressione lambda &egrave;
+interpretata come libera da x. Ovvero, la variabile x &egrave; una
+variabile locale all'ambiente della definizione della funzione o
+dell'operatore. Formalmente, lambda(x,F) &egrave; libera da x, e ogni
+sostituzione, valutazione o confronto per x in lambda(x,F)
+non deve succedere.
+Un'espressione lambda su una funzione arbitraria applicata
+ad un semplice argomento &egrave; equivalente alla funzione arbitraria.
+Es. lambda(x, f(x)) == F. Questa &egrave; una scorciatoia comune.
+&lt;/description&gt;
+  &lt;functorclass&gt; Nary , Constructor &lt;/functorclass&gt;
+  &lt;property&gt;
+    &lt;lambda&gt;&lt;ci&gt;x&lt;/ci&gt;
+      &lt;apply&gt;&lt;fn&gt;&lt;ci&gt;F&lt;/ci&gt;&lt;/fn&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/apply&gt;
+    &lt;/lambda&gt;
+     &lt;value&gt; &lt;fn&gt;&lt;ci&gt;F&lt;/ci&gt;&lt;/fn&gt; &lt;/value&gt;
+  &lt;/property&gt;
+&lt;!-- Costruire una variante della funzione seno --&gt;
+   &lt;example&gt;
+      &lt;lambda&gt;
+        &lt;ci&gt; x &lt;/ci&gt; 
+        &lt;apply&gt;&lt;sin/&gt;
+          &lt;apply&gt;&lt;plus/&gt;
+            &lt;ci&gt; x &lt;/ci&gt;
+            &lt;cn&gt; 3 &lt;/cn&gt;
+        &lt;/apply&gt;
+      &lt;/lambda&gt;
+   &lt;/example&gt;
+&lt;!-- l'operatore identit&agrave;  --&gt;
+  &lt;example&gt;
+    &lt;lambda&gt;&lt;ci&gt; x &lt;/ci&gt; &lt;ci&gt; x &lt;/ci&gt; &lt;/lambda&gt; 
+  &lt;/example&gt;
+  &lt;property&gt;
+  &lt;reln&gt;&lt;identity/&gt;
+    &lt;lambda&gt;&lt;ci&gt;x&lt;/ci&gt;
+      &lt;apply&gt;&lt;fn&gt;&lt;ci&gt;F&lt;/ci&gt;&lt;/fn&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/apply&gt;
+    &lt;/lambda&gt;
+    &lt;fn&gt;&lt;ci&gt;F&lt;/ci&gt;&lt;/fn&gt; 
+  &lt;/reln&gt;
+  &lt;/property&gt;
+&lt;MMLdefinition&gt; 
+</pre>
+
+<h4>
+<a name="N43221"></a>C.2.2.10 <code>compose</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; compose &lt;/name&gt;  
+&lt;description&gt;      
+  Questo &egrave; il costruttore MathML per comporre funzioni.
+  Perch&eacute; una composizione abbia senso, il codominio della
+  prima funzione deve essere il dominio della seconda funzione,
+  ecc.
+  Il risultato &egrave; una nuova funzione il cui dominio &egrave; il dominio
+  della prima funzione e il cui codominio &egrave; il codominio dell'ultima
+  funzione e la cui definizione &egrave; equivalente ad applicare ogni
+  funzione al risultato precedente a sua volta come in:
+  (f @ g )( x )   ==  f( g(x) ).
+Questa funzione &egrave; spesso denotata da un operatore infisso
+piccolo cerchio.
+&lt;/description&gt;  
+&lt;functorclass&gt; Nary , Operator &lt;/functorclass&gt;
+&lt;signature&gt; (fn*) -&gt; fn &lt;/signature&gt;
+&lt;example&gt;
+&lt;apply&gt;&lt;compose/&gt;
+       &lt;fn&gt;&lt;ci&gt; f &lt;/ci&gt;&lt;/fn&gt;
+       &lt;fn&gt;&lt;ci&gt; g &lt;/ci&gt;&lt;/fn&gt;
+     &lt;/apply&gt;&lt;/example&gt;
+&lt;property&gt;
+&lt;apply&gt;&lt;forall&gt;
+  &lt;bvar&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/bvar&gt;
+  &lt;reln&gt;&lt;eq/&gt;
+    &lt;apply&gt;
+      &lt;apply&gt;&lt;compose/&gt;
+        &lt;ci&gt;f&lt;/ci&gt;
+        &lt;ci&gt;g&lt;/ci&gt;
+      &lt;/apply&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+    &lt;/apply&gt;
+    &lt;apply&gt;&lt;ci&gt;f&lt;/ci&gt;
+      &lt;apply&gt;&lt;ci&gt;g&lt;/ci&gt;
+        &lt;ci&gt;x&lt;/ci&gt;
+      &lt;/apply&gt;
+    &lt;/apply&gt;
+  &lt;/reln&gt;
+&lt;/apply&gt;    
+&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43232"></a>C.2.2.11 <code>ident</code>
+</h4>
+<pre>
+&lt;MMLdefinition&gt;  
+&lt;name&gt; ident &lt;/name&gt;  
+&lt;description&gt;      
+  Questo &egrave; il costruttore MathML per la funzione identit&agrave;.
+  Questa funzione ha la propriet&agrave; che
+       f( x ) = x,  per ogni x nel suo dominio.
+&lt;/description&gt;  
+&lt;functorclass&gt; Nary , Operator &lt;/functorclass&gt;
+&lt;signature&gt; (symbol) -&gt; symbol &lt;/signature&gt;
+&lt;example&gt;
+&lt;apply&gt;&lt;ident/&gt;
+       &lt;ci&gt; f &lt;/ci&gt;
+       &lt;ci&gt; x &lt;/ci&gt;
+&lt;/apply&gt;
+&lt;/example&gt;
+&lt;property&gt;
+&lt;apply&gt;&lt;forall&gt;
+  &lt;bvar&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/bvar&gt;
+  &lt;reln&gt;&lt;eq/&gt;
+    &lt;apply&gt;&lt;ident/&gt;
+        &lt;ci&gt;f&lt;/ci&gt;
+        &lt;ci&gt;x&lt;/ci&gt;
+    &lt;/apply&gt;
+    &lt;ci&gt;x&lt;/ci&gt;
+    &lt;/reln&gt;
+&lt;/apply&gt;
+&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="cedef:001"></a>C.2.3 Aritmetica, algebra e logica </h3>
+
+<h4>
+<a name="cedef:002"></a>C.2.3.1 <code>quotient</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+La funzione binaria usata per rappresentare
+il quoziente di due interi.
+divisione. Per gli argomenti a e b, tali che
+il segno di a, il suo valore sarebbe q.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;integer&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (integer, integer) -&gt; integer &lt;/signature&gt;
+&lt;signature&gt; [type=integer](symbolic, symbolic) -&gt; symbolic &lt;/signature&gt;
+&lt;property&gt;&lt;apply&gt;&lt;forall/&gt;
+&lt;bvar&gt;&lt;ci&gt;a&lt;/ci&gt;
+&lt;/bvar&gt;
+&lt;bvar&gt;&lt;ci&gt;b&lt;/ci&gt;
+&lt;/bvar&gt;
+&lt;reln/&gt;
+&lt;eq/&gt;
+&lt;ci&gt;a&lt;/ci&gt;
+&lt;apply&gt;&lt;plus/&gt;
+&lt;apply&gt;&lt;times/&gt;
+&lt;ci&gt;b&lt;/ci&gt;
+&lt;apply&gt;&lt;quotient/&gt;
+&lt;ci&gt;a&lt;/ci&gt;
+&lt;ci&gt;b&lt;/ci&gt;
+&lt;/apply&gt;
+&lt;/apply&gt;
+&lt;apply&gt;&lt;rem/&gt;
+&lt;ci&gt;a&lt;/ci&gt;
+&lt;ci&gt;b&lt;/ci&gt;
+&lt;/apply&gt;
+&lt;/apply&gt;
+&lt;apply/&gt;
+&lt;/apply&gt;&lt;/property&gt;
+&lt;property&gt;&lt;apply&gt;&lt;ident/&gt;
+&lt;apply&gt;&lt;quotient/&gt;
+&lt;ci&gt;5&lt;/ci&gt;
+&lt;ci&gt;4&lt;/ci&gt;
+&lt;/apply&gt;
+&lt;ci&gt;1&lt;/ci&gt;
+&lt;/apply&gt;&lt;/property&gt;
+=======
+&lt;name&gt; quotient &lt;/name&gt;
+    &lt;description&gt; Quoziente intero, il risultato della
+      divisione intera. Per gli argomenti a e b, restituisce q,
+      dove a = b*q+r, |r| &lt; |b| e a*r &gt;= 0 (o il segno di r
+      &egrave; uguale al segno di a).
+     &lt;/description&gt;
+       &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+       &lt;signature&gt; (integer, integer) -&gt; integer &lt;/signature&gt;
+       &lt;signature&gt; (symbolic, symbolic) -&gt; symbolic  -&gt;  =&gt;  &#8594; &lt;/signature&gt;
+       &lt;property&gt;
+       &lt;description&gt;
+       ForAll(bvar(a,b),identity(a ,b*Quotient(a,b) + Remainder(a,b))  
+       &lt;/description&gt;
+       &lt;apply&gt;&lt;forall/&gt;
+         &lt;bvar&gt;&lt;ci&gt;a&lt;/ci&gt;&lt;/bvar&gt;
+         &lt;bvar&gt;&lt;ci&gt;b&lt;/ci&gt;&lt;/bvar&gt;
+         &lt;reln/&gt;&lt;eq/&gt;
+             &lt;ci&gt;a&lt;/ci&gt;
+             &lt;apply&gt;&lt;plus/&gt;
+               &lt;apply&gt;&lt;times/&gt;
+                 &lt;ci&gt;b&lt;/ci&gt;
+                 &lt;apply&gt;&lt;quotient/&gt;&lt;ci&gt;a&lt;/ci&gt;&lt;ci&gt;b&lt;/ci&gt;&lt;/apply&gt;
+               &lt;/apply&gt;
+               &lt;apply&gt;&lt;rem/&gt;&lt;ci&gt;a&lt;/ci&gt;&lt;ci&gt;b&lt;/ci&gt;&lt;/apply&gt;
+             &lt;/apply&gt;
+         &lt;reln&gt;
+       &lt;/apply&gt;
+       &lt;/property&gt;
+       &lt;property&gt;
+     &lt;description&gt;
+   1 = quotient(5,4)
+     &lt;/description&gt;
+      &lt;apply&gt;&lt;identity/&gt;
+        &lt;apply&gt;&lt;quotient/&gt;
+          &lt;ci&gt;5&lt;/ci&gt;
+          &lt;ci&gt;4&lt;/ci&gt;
+        &lt;/apply&gt;
+        &lt;ci&gt;1&lt;/ci&gt;
+     &lt;apply&gt;
+     &lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:003"></a>C.2.3.2 <code>exp</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+La funzione esponenziale.
+&lt;reference&gt; M. Abramowitz e I. Stegun, Handbook of
+Mathematical Functions, [4.2]&lt;/reference&gt;
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; real -&gt; real &lt;/signature&gt;
+&lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+&lt;property&gt;&lt;apply&gt;&lt;eq/&gt;
+&lt;apply&gt;&lt;exp/&gt;
+&lt;cn&gt;0&lt;/cn&gt;
+&lt;/apply&gt;
+&lt;cn&gt;1&lt;/cn&gt;
+&lt;/apply&gt;&lt;/property&gt;
+&lt;property&gt;&lt;apply&gt;&lt;ident/&gt;
+&lt;apply&gt;&lt;exp/&gt;
+&lt;ci&gt;x&lt;/ci&gt;
+&lt;/apply&gt;
+&lt;apply&gt;&lt;power/&gt;
+&lt;cn&gt;ExponentialE;&lt;/cn&gt;
+&lt;ci&gt;x&lt;/ci&gt;
+&lt;/apply&gt;
+&lt;/apply&gt;&lt;/property&gt;
+&lt;property&gt; exp(x) = limit( (1+x/n)^n, n, infinity ) &lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:004"></a>C.2.3.3 <code>factorial</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Questo elemento &egrave; usato per costruire fattoriali
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;integerl&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; ( algebraic ) -&gt; algebraic &lt;/signature&gt;
+&lt;signature&gt;(integer)-&gt;integer&lt;/signature&gt;
+&lt;property&gt;&lt;apply&gt;&lt;forall/&gt;
+&lt;bvar&gt;&lt;ci&gt;n&lt;/ci&gt;&lt;/bvar&gt;
+&lt;condition&gt;&lt;apply&gt;&lt;gt/&gt;
+&lt;ci&gt;n&lt;/ci&gt;
+&lt;cn&gt;0&lt;/cn&gt;
+&lt;/apply&gt;
+&lt;/condition&gt;
+&lt;apply&gt;&lt;eq/&gt;
+&lt;apply&gt;&lt;factorial/&gt;&lt;ci&gt;n&lt;/ci&gt;&lt;/apply&gt;
+  &lt;apply&gt;&lt;times/&gt;
+    &lt;ci&gt;n&lt;/ci&gt;
+    &lt;apply&gt;&lt;factorial/&gt;
+      &lt;apply&gt;&lt;minus/&gt;&lt;ci&gt;n&lt;/ci&gt;&lt;cn&gt;1&lt;/cn&gt;&lt;/apply&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/property&gt;
+&lt;example&gt;&lt;apply&gt;&lt;factorial/&gt;
+&lt;ci&gt;n&lt;/ci&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:005"></a>C.2.3.4 <code>divide</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Questo &egrave; l'operatore binario MathML che &egrave; usato per costruire
+l'espressione matematica a &quot;diviso&quot; b. In generale,
+costruisce l'espressione che &egrave; equivalente
+alla moltiplicazione a destra per l'inverso
+moltiplicativo di b.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt; type &lt;/attname&gt;
+&lt;attvalue&gt; anything &lt;sep/&gt;non-commutative&lt;/attvalue&gt;
+&lt;attdefault&gt; real &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (complex, complex) -&gt; complex &lt;/signature&gt;
+&lt;signature&gt; (real, real) -&gt; real &lt;/signature&gt;
+&lt;signature&gt; (rational, rational) -&gt; rational &lt;/signature&gt;
+&lt;signature&gt; (integer, integer) -&gt; rational &lt;/signature&gt;
+&lt;signature&gt; (symbolic, symbolic) -&gt; symbolic &lt;/signature&gt;
+&lt;property&gt;&lt;apply&gt;&lt;forall/&gt;
+  &lt;bvar&gt;&lt;ci&gt;a&lt;/ci&gt;&lt;/bvar&gt;
+  &lt;apply&gt;&lt;eq/&gt;
+    &lt;apply&gt;&lt;divide/&gt;
+      &lt;ci&gt; a &lt;/ci&gt;
+      &lt;ci&gt; 0 &lt;/ci&gt;
+    &lt;/apply&gt;
+    &lt;apply&gt;&lt;ci&gt;Error&lt;/ci&gt;
+      &lt;ci&gt;Division by 0&lt;/ci&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/property&gt;
+&lt;property&gt;whenever not(a=0) then a/a = 1 &lt;/property&gt;
+&lt;example&gt;&lt;apply&gt;&lt;divide/&gt;
+&lt;ci&gt; a &lt;/ci&gt;
+&lt;ci&gt; b &lt;/ci&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:006"></a>C.2.3.5 <code>max</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Rappresenta il massimo di un insieme di elementi. Gli elementi
+possono essere elencati esplicitamente o possono essere
+descritti da una condizione, es, il massimo
+fra tutte le x nell'insieme A.
+Perch&eacute; sia ben definito, tutti gli elementi
+devono essere confrontabili.
+classificazione= funzione 
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; ( ordered_set_element * ) -&gt; ordered_set_element &lt;/signature&gt;
+&lt;signature&gt; ( bvar,condition,anything ) -&gt;  ordered_set_element &lt;/signature&gt;
+&lt;example&gt;&lt;apply&gt;&lt;max/&gt;
+&lt;cn&gt;2&lt;/cn&gt;
+&lt;cn&gt;3&lt;/cn&gt;
+&lt;cn&gt;5&lt;/cn&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;example&gt;&lt;apply&gt;
+  &lt;max/&gt;
+  &lt;bvar&gt;&lt;ci&gt;y&lt;/ci&gt;&lt;/bvar&gt;
+  &lt;condition&gt;
+  &lt;/condition&gt;
+  &lt;apply&gt;
+      &lt;power/&gt;
+    &lt;ci&gt; y&lt;/ci&gt;
+    &lt;cn&gt;x &lt;/cn&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:007"></a>C.2.3.6 <code>min</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Rappresenta il massimo di un insieme di elementi. Gli elementi
+possono essere elencati esplicitamente o possono essere
+descritti da una condizione, es, il massimo
+fra tutte le x nell'insieme A.
+Perch&eacute; sia ben definito, tutti gli elementi
+devono essere confrontabili.
+classificazione= funzione 
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; ( ordered_set_element * ) -&gt; ordered_set_element &lt;/signature&gt;
+&lt;signature&gt; ( bvar,condition,anything ) -&gt;  ordered_set_element &lt;/signature&gt;
+&lt;example&gt;&lt;apply&gt;&lt;min/&gt;
+&lt;cn&gt;2&lt;/cn&gt;
+&lt;cn&gt;3&lt;/cn&gt;
+&lt;cn&gt;5&lt;/cn&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;example&gt;&lt;apply&gt;
+  &lt;min/&gt;
+  &lt;bvar&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/bvar&gt;
+  &lt;condition&gt;
+  &lt;/condition&gt;
+  &lt;apply&gt;
+      &lt;power/&gt;
+    &lt;ci&gt; x &lt;/ci&gt;
+    &lt;cn&gt; 2 &lt;/cn&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:008"></a>C.2.3.7 <code>minus</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore di sottrazione per un gruppo additivo.
+ 
+Se &egrave; fornito un argomento questo costruisce l'inverso
+additivo di tale elemento del gruppo.
+Se sono forniti due argomenti, siano essi a e b,
+costruisce l'espressione matematica a - b.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt;[type=typevalue](typevalue,typevaluel) -&gt; typevalue &lt;/signature&gt;
+&lt;signature&gt;[type=typevalue](typevalue)-&gt;typevalue &lt;/signature&gt;
+&lt;property&gt;&lt;apply&gt;&lt;eq/&gt;
+&lt;bvar&gt;&lt;ci&gt;n&lt;/ci&gt;
+&lt;/bvar&gt;
+&lt;apply&gt;&lt;minus/&gt;
+&lt;cn&gt;1&lt;/cn&gt;
+&lt;/apply&gt;
+&lt;cn&gt;-1&lt;/cn&gt;
+&lt;/apply&gt;&lt;/property&gt;
+&lt;example&gt;&lt;apply&gt;&lt;minus/&gt;
+&lt;cn&gt;3&lt;/cn&gt;
+&lt;cn&gt;5&lt;/cn&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;example&gt;&lt;apply&gt;&lt;minus/&gt;
+&lt;cn&gt;3&lt;/cn&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:009"></a>C.2.3.8 <code>plus</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore N-ario di addizione di una struttura algebrica.
+Se non sono forniti operandi, l'espressione rappresenta
+l'elemento neutro additivo.
+Se &egrave; fornito un operando, a, l'espressione assume il
+valore &quot;a&quot;.
+Se sono forniti due o pi&ugrave; operandi, l'espressione rappresenta
+l'elemento del gruppo che corrisponde ad un accoppiamento
+binario degli operandi associativo a sinistra.
+Problemi relativi al &quot;valore&quot; di operandi misti sono
+lasciati al sistema di destinazione. Se l'autore desidera
+fare riferimento a specifiche regole di coercizione
+di tipo, allora deve essere usato l'attributo definitionURL
+per fare riferimento ad una specifica adatta.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt;[type=typevalue](typevalue*) -&gt; typevalue &lt;/signature&gt;
+&lt;property&gt; plus( ) = 0 &lt;/property&gt;
+&lt;property&gt; +(a) = a &lt;/property&gt;
+&lt;property&gt; ForAll(a,Commutative, a + b = b + a)&lt;/property&gt;
+&lt;example&gt;&lt;apply&gt;&lt;plus/&gt;
+&lt;cn&gt;3&lt;/cn&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;example&gt;&lt;apply&gt;&lt;plus/&gt;
+&lt;cn&gt;3&lt;/cn&gt;
+&lt;cn&gt;5&lt;/cn&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;example&gt;&lt;apply&gt;&lt;plus/&gt;
+&lt;cn&gt;3&lt;/cn&gt;
+&lt;cn&gt;5&lt;/cn&gt;
+&lt;cn&gt;7&lt;/cn&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:010"></a>C.2.3.9 <code>power</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore binario di elevamento a potenza usato per costruire
+espressioni come a &quot;alla&quot; b. In particolare, &egrave; l'operazione
+per la quale a &quot;alla&quot; seconda &egrave; equivalente ad a * a.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (complex complex) -&gt; complex &lt;/signature&gt;
+&lt;signature&gt; (real real) -&gt; complex &lt;/signature&gt;
+&lt;signature&gt; (rational rational) -&gt; complex &lt;/signature&gt;
+&lt;signature&gt; (rational integer) -&gt; rational &lt;/signature&gt;
+&lt;signature&gt; (integer integer) -&gt; rational &lt;/signature&gt;
+&lt;signature&gt; (symbolic symbolic) -&gt; symbolic &lt;/signature&gt;
+&lt;signature&gt;[type=typevalue](typevalue,typevalue) -&gt; typevalue &lt;/signature&gt;
+&lt;property&gt; ForAll(a,Condition(a_NE_0),a^0=1) &lt;/property&gt;
+&lt;property&gt; ForAll(a,a^1=a) &lt;/property&gt;
+&lt;property&gt; ForAll(a,1^a=1) &lt;/property&gt;
+&lt;property&gt;ForAll(a,0^0=Undefined)&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:011"></a>C.2.3.10 <code>rem</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Resto di una divisione intera.
+Per gli argomenti a e b, tali che
+uguale al segno di a, il suo valore &egrave; r.
+classificazione= funzione, binaria 
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;integer&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (integer integer) -&gt; integer &lt;/signature&gt;
+&lt;signature&gt; (symbolic symbolic) -&gt; symbolic &lt;/signature&gt;
+&lt;signature&gt;[type=typevalue](typevalue,typevalue)-&gt;typevalue&lt;/signature&gt;
+&lt;property&gt; a = b*rem(a,b) + rem(a,b) &lt;/property&gt;
+&lt;property&gt;rem(a,0) = Division_by_Zero&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:012"></a>C.2.3.11 <code>times</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore n-ario di moltiplicazione di
+un anello.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (complex *) -&gt; complex &lt;/signature&gt;
+&lt;signature&gt; (real*) -&gt; real &lt;/signature&gt;
+&lt;signature&gt; (rational*) -&gt; rational &lt;/signature&gt;
+&lt;signature&gt; (integer*) -&gt; integer &lt;/signature&gt;
+&lt;signature&gt; (symbolic*) -&gt; symbolic &lt;/signature&gt;
+&lt;property&gt;ForAll(bvars(a,b),condition(in({a,b},Commutative)),a*b=b*a)&lt;/property&gt;
+&lt;property&gt;ForAll(bvars(a,b,c),Associative,a*(b*c)=(a*b)*c), associativity &lt;/property&gt;
+&lt;property&gt; a*1=a &lt;/property&gt;
+&lt;property&gt; 1*a=a &lt;/property&gt;
+&lt;property&gt; a*0=0 &lt;/property&gt;
+&lt;property&gt; 0*a=0 &lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:013"></a>C.2.3.12 <code>root</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Costruisce la radice n-esima di un oggetto.
+Il primo argomento &quot;a&quot; &egrave; l'oggetto e il secondo
+oggetto &quot;n&quot; denota la radice, come in
+( a ) ^ (1/n)
+classificazione= funzione, binaria 
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;attname&gt; type &lt;/attname&gt;
+&lt;attvalue&gt; real &lt;sep/&gt; complex &lt;sep/&gt; principle_branch &lt;/attvalue&gt;
+&lt;attdefault&gt; real &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; ( anything , anything) -&gt; root &lt;/signature&gt;
+&lt;property&gt; Forall(bvars(a,n),root(a,n) = a^(1/n)) &lt;/property&gt;
+&lt;example&gt;&lt;apply&gt;&lt;root/&gt;
+&lt;ci&gt; a &lt;/ci&gt;
+&lt;ci&gt; n &lt;/ci&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:014"></a>C.2.3.13 <code>gcd</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Questo operatore &egrave; usato per costruire
+un'espressione che rappresenta il massimo comun
+divisore dei suoi argomenti.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;integer&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; [type=typevalue](typevalue*) -&gt;typevalue &lt;/signature&gt;
+&lt;property&gt;Forall(p,q,(is(p,prime) and is(q,prime)) , gcd(p,q)=1 &lt;/property&gt;
+&lt;example&gt;&lt;apply&gt;&lt;gcd/&gt;
+&lt;cn&gt;12&lt;/cn&gt;
+&lt;cn&gt;17&lt;/cn&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:015"></a>C.2.3.14 <code>and</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Questo &egrave; l'operatore logico n-ario &quot;and&quot;. E' usato per
+costruire l'espressione logica che ha valore &quot;vero&quot;
+quando tutti i suoi operandi hanno valore di verit&agrave;
+&quot;vero&quot;, e &quot;falso&quot; altrimenti.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;attname&gt; type &lt;/attname&gt;
+&lt;attvalue&gt; qualunque tipo MathML&lt;/attvalue&gt;
+&lt;attdefault&gt; complex &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (boolean*) -&gt; boolean &lt;/signature&gt;
+&lt;signature&gt; [type="boolean"](symbolic*)      -&gt; boolean &lt;/signature&gt;
+&lt;property&gt; identity(true and p , p ) &lt;/property&gt;
+&lt;property&gt; identity(p and q , q and p ) &lt;/property&gt;
+&lt;example&gt;&lt;apply&gt;&lt;and/&gt;
+&lt;ci&gt;p&lt;/ci&gt;
+&lt;ci&gt;q&lt;/ci&gt;
+&lt;/apply&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:016"></a>C.2.3.15 <code>or</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore logico &quot;or&quot;. L'espressione costruita ha un
+valore di verit&agrave; vero se almeno uno dei suoi argomenti &egrave; vero.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;boolean&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (boolean*) -&gt; boolean &lt;/signature&gt;
+&lt;signature&gt; [type="boolean"](symbolic*)      -&gt; boolean &lt;/signature&gt;
+&lt;property&gt; ...&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:017"></a>C.2.3.16 <code>xor</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore logico &quot;xor&quot;. L'espressione costruita ha valore
+di verit&agrave; vero se esattamente uno degli argomenti &egrave; vero.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;boolean&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (boolean*) -&gt; boolean &lt;/signature&gt;
+&lt;signature&gt; [type="boolean"](symbolic*)      -&gt; symbolic &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:018"></a>C.2.3.17 <code>not</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore logico &quot;not&quot; nega il valore di verit&agrave;
+del suo singolo argomento. es., not P
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;boolean&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (boolean) -&gt; boolean &lt;/signature&gt;
+&lt;signature&gt; [type="boolean"](symbolic)      -&gt; symbolic &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:019"></a>C.2.3.18 <code>implies</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore implica. Questo rappresenta
+la costruzione dell'espressione logica
+  "A implica B".   
+classificazione= Relazione, binaria 
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;boolean&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (boolean,boolean) -&gt; boolean &lt;/signature&gt;
+&lt;property&gt;&lt;apply&gt;&lt;forall/&gt;
+&lt;bvar&gt;&lt;ci&gt;A&lt;/ci&gt;
+&lt;/bvar&gt;
+&lt;bvar&gt;&lt;ci&gt;B&lt;/ci&gt;
+&lt;/bvar&gt;
+&lt;apply&gt;&lt;eq/&gt;
+&lt;apply&gt;&lt;implies/&gt;
+&lt;ci&gt;A&lt;/ci&gt;
+&lt;ci&gt;B&lt;/ci&gt;
+&lt;/apply&gt;
+&lt;apply&gt;&lt;or/&gt;
+&lt;ci&gt;B&lt;/ci&gt;
+&lt;apply&gt;&lt;not/&gt;
+&lt;ci&gt; A &lt;/ci&gt;
+&lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/apply&gt;&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:020"></a>C.2.3.19 <code>forall</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Il quantificatore logico &quot;Per ogni&quot; &egrave; applicato
+agli argomenti per costruire un predicato. Le variabili
+legate sono etichettate con bvar, e l'ultimo argomento
+&egrave; il predicato booleano asserito come vero.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;boolean&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (bvar*,condition?,apply) -&gt; boolean &lt;/signature&gt;
+&lt;signature&gt; (bvar*,condition?,(reln)) -&gt; boolean &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:021"></a>C.2.3.20 <code>exists</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Questo &egrave; l'operatore MathML che &egrave; usato per
+asserire l'esistenza, come in &quot;Esiste x tale che
+x &egrave; reale e x &egrave; positivo&quot;.
+Si aspetta tre argometnti.
+Il primo argomento indica la variabile legata. Il
+secondo argomento pone condizioni su tale
+variabile legata. L'ultimo argomento &egrave; l'espressione
+asserita come vera.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;boolean&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (element,set) -&gt;boolean &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:022"></a>C.2.3.21 <code>abs</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Un operatore unario che rappresenta il valore assoluto del suo
+argomento. Nel caso complesso questo &egrave; spesso detto modulo.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt;(real)-&gt;real&lt;/signature&gt;
+&lt;signature&gt;(complex)-&gt;real&lt;/signature&gt;
+&lt;property&gt;for all x and y, abs(x) + abs(y) &gt;= abs(x+y) 
+&lt;/property&gt;
+&lt;example&gt;&lt;apply&gt;&lt;abs/&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/apply&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:023"></a>C.2.3.22 <code>conjugate</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore aritmetico &quot;conjugate&quot; &egrave;
+usato per rappresentare il complesso coniugato del
+suo argomento. In particolare, conjugate( ImaginaryI )
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;attname&gt; type &lt;/attname&gt;
+&lt;attvalue&gt; qualunque cosa &lt;/attvalue&gt;
+&lt;attdefault&gt; complex &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt; (algebraic) -&gt; algebraic &lt;/signature&gt;
+&lt;signature&gt;(complex)-&gt;complex&lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:024"></a>C.2.3.23 <code>arg</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+L'operatore &quot;arg&quot; &egrave; usato per costruire un'espressione
+che rappresenta &quot;l'argomento&quot;
+di un numero complesso.
+classificazione=funzione
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt;(compex)-&gt;real&lt;/signature&gt;
+&lt;property&gt;???&lt;/property&gt;
+&lt;ci&gt;a&lt;/cn&gt;
+&lt;ci&gt;&amp;epsilon&lt;/cn&gt;
+&lt;ci&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mrow&gt;&lt;/cn&gt;
+&lt;ci&gt;v&lt;/ci&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:025"></a>C.2.3.24 <code>real</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Un operatore usato per costruire un'espressione
+che rappresenta la parte &quot;reale&quot; di un numero complesso.
+classificazione=unario
+&lt;MMLattribute&gt;
+&lt;name&gt;type&lt;/name&gt;
+&lt;values&gt;
+Qualunque tipo MathML
+&lt;/values&gt;
+&lt;default&gt;real&lt;/default&gt;
+&lt;/MMLattribute&gt;
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt;(complex)-&gt;real&lt;/signature&gt;
+&lt;ci&gt;a&lt;/cn&gt;
+&lt;ci&gt;&amp;epsilon&lt;/cn&gt;
+&lt;ci&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mrow&gt;&lt;/cn&gt;
+&lt;ci&gt;v&lt;/ci&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="cedef:026"></a>C.2.3.25 <code>imaginary</code>
+</h4>
+
+<pre>
+&lt;MMLdefinition&gt;
+Un nome usato come identificatore simbolico.
+classificazione=costante
+&lt;MMLattribute&gt;
+&lt;attname&gt;definitionURL&lt;/attname&gt;
+&lt;attvalue&gt; CDATA &lt;/attvalue&gt;
+&lt;attdefault&gt; none &lt;/attdefault&gt;
+&lt;/MMLattribute&gt;
+&lt;signature&gt;(complex)-&gt;real&lt;/signature&gt;
+&lt;example&gt;&lt;cn type="constant"&gt;&amp;Imaginary;&lt;/cn&gt;&lt;/example&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="N43551"></a>C.2.4 Relazioni </h3>
+
+<h4>
+<a name="N43555"></a>C.2.4.1 <code>eq</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; eq &lt;/Name&gt;
+&lt;description&gt; L'operatore di uguaglianza. &lt;/description&gt;
+&lt;functorclass&gt; Relazione, n-aria &lt;/functorclass&gt;
+&lt;property&gt; Commutativa &lt;/property&gt;
+&lt;signature&gt; (symbolic symbolic) -&gt; boolean &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43566"></a>C.2.4.2 <code>neq</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; neq &lt;/Name&gt;
+&lt;description&gt; L'operatore non uguale. &lt;/description&gt;
+&lt;functorclass&gt; Relazione, n-aria &lt;/functorclass&gt;
+&lt;property&gt; Commutativa &lt;/property&gt;
+&lt;signature&gt; (symbolic symbolic) -&gt; boolean &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43577"></a>C.2.4.3 <code>gt</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; gt &lt;/Name&gt;
+&lt;description&gt; L'operatore di uguaglianza. &lt;/description&gt;
+&lt;functorclass&gt; relazione, binaria &lt;/functorclass&gt;
+&lt;property&gt; Commutativa &lt;/property&gt;
+&lt;signature&gt; (symbolic symbolic) -&gt; boolean &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43588"></a>C.2.4.4 <code>lt</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; lt &lt;/Name&gt;
+&lt;description&gt; L'operatore di disuguaglianza di uguaglianza "&lt;" &lt;/description&gt;
+&lt;functorclass&gt; relazione, binaria &lt;/functorclass&gt;
+&lt;property&gt; Commutativa &lt;/property&gt;
+&lt;signature&gt; (symbolic, symbolic*) -&gt; boolean &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43599"></a>C.2.4.5 <code>geq</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; geq &lt;/Name&gt;
+&lt;description&gt; L'operatore di disuguaglianza. &gt;= &lt;/description&gt;
+&lt;functorclass&gt; Relazione, n-aria &lt;/functorclass&gt;
+&lt;signature&gt; (symbolic, symbolic*) -&gt; boolean &lt;/signature&gt;
+&lt;property&gt; ... Commutativa ? ... &lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43610"></a>C.2.4.6 <code>leq</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; leq &lt;/Name&gt;
+&lt;description&gt; L'operatore di disuguaglianza  &lt;/description&gt;
+&lt;functorclass&gt; Relazione, n-aria &lt;/functorclass&gt;
+&lt;property&gt; Commutativa &lt;/property&gt;
+&lt;signature&gt; (symbolic symbolic) -&gt; boolean &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="N43622"></a>C.2.5 Analisi matematica </h3>
+
+<h4>
+<a name="N43626"></a>C.2.5.1 <code>ln</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;name&gt;ln&lt;/name&gt;
+&lt;description&gt;
+La funzione logaritmica. Detta anche logaritmo naturale. L'inversa della
+funzione esponenziale.
+&lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+Mathematical Functions, [4.1]
+&lt;/Reference&gt;
+&lt;/description&gt;
+&lt;functorclass&gt; Funzione, Unaria &lt;/functorclass&gt;
+&lt;property&gt;
+    Error( "il logaritmo ha una singolarit&agrave; in 0" )
+&lt;/property&gt;
+&lt;signature&gt; Intersect(real,positive) -&gt; real &lt;/signature&gt;
+&lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+&lt;property&gt; ln(1) = 0 &lt;/property&gt;
+&lt;property&gt; ln(exp(x)) = x, "for real x" &lt;/property&gt;
+&lt;property&gt; exp(ln(x)) = x, always &lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43637"></a>C.2.5.2 <code>log</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; log &lt;/Name&gt;
+        &lt;description&gt; La funzione logaritmica (base 10), o in
+qualunque altra base specificata dall'utente.
+Detto anche logaritmo naturale.
+L'inversa della funzione esponenziale.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+Mathematical Functions, [4.1]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Funzione, Unaria &lt;/functorclass&gt;
+        &lt;signature&gt; (real,logbase) -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt;
+            Error( "il logaritmo ha una singolarit&agrave; in 0" )
+        &lt;/property&gt;
+      &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43648"></a>C.2.5.3 <code>int</code>
+</h4>
+    
+<pre>
+ &lt;MMLdefinition&gt;
+        &lt;Name&gt; int &lt;/Name&gt;
+        &lt;description&gt;
+            L'integrale definito o indefinito di una funzione o di
+            un'espressione algebrica.
+            Ci sono varie forme di sequenze chiamanti a seconda della
+            natura degli argomenti, e se &egrave; o meno un integrale
+            definito.
+        &lt;/description&gt;
+        &lt;functorclass&gt; Funzione, Binaria &lt;/functorclass&gt;
+        &lt;signature&gt; (function) -&gt; function &lt;/signature&gt;
+        &lt;signature&gt; (algebraic,bvar) -&gt; algebraic &lt;/signature&gt;
+        &lt;signature&gt; (algebraic,bvar,interval) -&gt; algebraic &lt;/signature&gt;
+        &lt;signature&gt; (algebraic,bvar,condition) -&gt; algebraic &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43659"></a>C.2.5.4 <code>diff</code>
+</h4>
+    
+<pre>
+   &lt;MMLdefinition&gt;
+        &lt;Name&gt; diff &lt;/Name&gt;
+        &lt;description&gt;
+            Per espressioni, questo rappresenta la derivata del
+            suo primo argomento valutata nel secondo argomento.
+	    Per funzioni unarie (solo un argomento) rappresenta
+	    f'.
+        &lt;/description&gt;
+        &lt;functorclass&gt; (Unary | Binary) , Function &lt;/functorclass&gt;
+        &lt;signature&gt; (algebraic,bvar) -&gt; algebraic &lt;/signature&gt;
+        &lt;property&gt;Forall(x,diff( sin(x) , x ) = cos(x)) &lt;/property&gt;
+        &lt;property&gt;Forall(x,diff( x , x ) = 1 ) &lt;/property&gt;
+        &lt;property&gt;Forall(x,diff( x^2 , x ) = 2x) &lt;/property&gt;
+        &lt;property&gt;identity( diff(sin) , cos ) &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43670"></a>C.2.5.5 <code>partialdiff</code>
+</h4>
+    
+<pre>
+   &lt;MMLdefinition&gt;
+        &lt;Name&gt; partialdiff &lt;/Name&gt;
+        &lt;description&gt;
+            Per espressioni, questo rappresenta la derivata del 
+            suo primo argomento valutata nel secondo argomento. 
+            Per funzioni unarie (solo un argomento) rappresenta 
+            f'.
+        &lt;/description&gt;
+        &lt;functorclass&gt; (Binary) , Function &lt;/functorclass&gt;
+        &lt;signature&gt; (algebraic,bvar) -&gt; algebraic &lt;/signature&gt;
+        &lt;property&gt;Forall(x,diff( sin(x*y) , x ) = cos(x)) &lt;/property&gt;
+        &lt;property&gt;Forall(x,y,diff( x*y , x ) = diff(x,x)*y + diff(y,x)*x ) &lt;/property&gt;
+        &lt;property&gt;Forall(x,a,b,diff( a + b , x ) = diff(a,x) + diff(b,x) ) &lt;/property&gt;
+        &lt;property&gt;identity( diff(sin) , cos ) &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43681"></a>C.2.5.6 <code>lowlimit</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; lowlimit &lt;/Name&gt;
+        &lt;description&gt; Costruisce un limite inferiore. I
+	 limiti sono usati in alcuni integrali come modo
+	 alternativo di descrivere la regione sulla quale
+	 &egrave; calcolato un integrale. (es. una componente
+	 connessa dell'asse reale.)
+         &lt;/description&gt;
+        &lt;functorclass&gt; Constructor &lt;/functorclass&gt;
+        &lt;signature&gt; (anything*) -&gt; list &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43692"></a>C.2.5.7 <code>uplimit</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; uplimit &lt;/Name&gt;
+        &lt;description&gt; Costruisce un limite superiore. I
+         limiti sono usati in alcuni integrali come modo
+         alternativo di descrivere la regione sulla quale
+         &egrave; calcolato un integrale. (es. una componente
+         connessa dell'asse reale.)
+         &lt;/description&gt;
+        &lt;functorclass&gt; Constructor &lt;/functorclass&gt;
+        &lt;signature&gt; (anything*) -&gt; list &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43703"></a>C.2.5.8 <code>bvar</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; bvar &lt;/Name&gt;
+        &lt;description&gt; 
+L'elemento bvar &egrave; l'elemento contenitore
+per la &quot;variabile legata&quot; di un'operazione.
+Per esempio, in un integrale specifica la
+variabile di integrazione. In una derivata,
+indica rispetto a quale variabile &egrave;
+derivata una funzione.
+Quando l'elemento bvar &egrave; usato per quantificare una derivata,
+l'elemento bvar pu&ograve; contenere un elemento figlio degree
+che specifica l'ordine della derivata rispetto a quella
+variabile. L'elemento bvar &egrave; usato anche per le variabili
+interne in sommatorie e produttorie.
+    &lt;/description&gt;
+        &lt;functorclass&gt; Constructor &lt;/functorclass&gt;
+        &lt;signature&gt; (symbol) -&gt; symbol &lt;/signature&gt;
+        &lt;example&gt; &lt;bvar&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/bvar&gt;&lt;/example&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43714"></a>C.2.5.9 <code>degree</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; degree &lt;/Name&gt;
+        &lt;description&gt; Un parametro usato da alcuni
+	tipi di dati del MathML per specificare che, per
+	esempio, una variabile legata &egrave; ripetuta varie volte.
+        &lt;/description&gt;
+        &lt;functorclass&gt; Constructor &lt;/functorclass&gt;
+        &lt;signature&gt; (algebraic) -&gt; algebraic &lt;/signature&gt;
+        &lt;example&gt; &lt;degree&gt;&lt;ci&gt;x&lt;/ci&gt;&lt;/degree&gt;&lt;/example&gt;
+        &lt;property&gt; ... &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="N43726"></a>C.2.6 Teoria degli insiemi </h3>
+
+<h4>
+<a name="N43730"></a>C.2.6.1 <code>set</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; set &lt;/Name&gt;
+        &lt;description&gt; Costruisce un insieme. &lt;/description&gt;
+        &lt;functorclass&gt; Nary, Constructor &lt;/functorclass&gt;
+        &lt;signature&gt; (anything*) -&gt; set &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43741"></a>C.2.6.2 <code>list</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; list &lt;/Name&gt;
+        &lt;description&gt; Costruisce una lista. &lt;/description&gt;
+        &lt;functorclass&gt; Nary, Constructor &lt;/functorclass&gt;
+        &lt;signature&gt; (anything*) -&gt; list &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43752"></a>C.2.6.3 <code>union</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; union &lt;/Name&gt;
+        &lt;description&gt; L'unione di due insiemi. &lt;/description&gt;
+        &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; (set*) -&gt; set &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43763"></a>C.2.6.4 <code>intersect</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; intersection &lt;/Name&gt;
+        &lt;description&gt; L'intersezione di due insiemi. &lt;/description&gt;
+        &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; (set set) -&gt; set &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43774"></a>C.2.6.5 <code>in</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; in &lt;/Name&gt;
+        &lt;description&gt; 
+            L'operazione di controllo di appartenenza (detta
+	    comunemente anche &quot;in&quot; o &quot;include&quot;). Restituisce vero se
+	    il primo argomento &egrave; parte del secondo argomento. Il
+	    secondo argomento deve essere un insieme.
+        &lt;/description&gt;
+        &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; (anything, set) -&gt; boolean &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43785"></a>C.2.6.6 <code>notin</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+    &lt;Name&gt; notin &lt;/Name&gt;
+    &lt;description&gt; 
+        L'operazione di esclusione di appartenenza (detta
+	comunemente anche &quot;non in&quot; o &quot;include&quot;).
+	E' definita come &quot;non in&quot;.
+    &lt;/description&gt;
+        &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; (anything set) -&gt; boolean &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43796"></a>C.2.6.7 <code>subset</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+    &lt;Name&gt; subset &lt;/Name&gt;
+    &lt;description&gt;
+      Funzione booleana il cui valore &egrave; determinato da
+      se un sottoinsieme &egrave; o meno sottoinsieme di un altro.
+     &lt;/description&gt;
+        &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; (set*) -&gt; boolean &lt;/signature&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43807"></a>C.2.6.8 <code>prsubset</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+    &lt;Name&gt; prsubset &lt;/Name&gt;
+    &lt;description&gt;
+      Funzione booleana il cui valore &egrave; determinato da
+      se un sottoinsieme &egrave; o meno sottoinsieme proprio di un altro.
+     &lt;/description&gt;
+        &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; (set, set) -&gt; boolean &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43818"></a>C.2.6.9 <code>notsubset</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+    &lt;Name&gt; notsubset &lt;/Name&gt;
+    &lt;description&gt;
+      Funzione booleana il cui valore &egrave; il complemento
+      di "sottoinsieme".
+     &lt;/description&gt;
+        &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; (set, set) -&gt; boolean &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43829"></a>C.2.6.10 <code>notprsubset</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+    &lt;Name&gt; notprsubset &lt;/Name&gt;
+    &lt;description&gt;
+      Funzione booleana il cui valore &egrave; il complemento
+      di "sottoinsieme proprio".
+     &lt;/description&gt;
+        &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; (set, set) -&gt; boolean &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43840"></a>C.2.6.11 <code>setdiff</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+    &lt;Name&gt; setdiff &lt;/Name&gt;
+    &lt;description&gt;
+      Funzione che indica la differenza di due insiemi.
+    &lt;/description&gt;
+    &lt;functorclass&gt; Binary, Function &lt;/functorclass&gt;
+    &lt;signature&gt; (set, set) -&gt; set &lt;/signature&gt;
+    &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="N43852"></a>C.2.7 Successioni e serie </h3>
+
+<h4>
+<a name="N43856"></a>C.2.7.1 <code>sum</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; sum &lt;/Name&gt;
+&lt;description&gt; 
+L'elemento sum denota l'operatore di sommatoria. I limiti superiori
+e inferiori per la sommatoria, e pi&ugrave; generalmente un dominio per le
+variabili legate, sono specificati usando uplimit, lowlimit o una
+condizione sulle variabili legate. L'indice per la sommatoria &egrave;
+specificato da un elemento bvar. L'elemento sum accetta l'attributo definition
+che pu&ograve; essere usato per sovrascrivere la semantica predefinita.
+&lt;/description&gt;
+&lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+&lt;signature&gt; (bvar*,((lowlimit,uplimit)|condition),algebraic) -&gt; sum &lt;/signature&gt;
+&lt;signature&gt; ... &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43867"></a>C.2.7.2 <code>product</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; product &lt;/Name&gt;
+&lt;description&gt; 
+L'elemento product denota l'operatore produttoria. I limiti superiori
+e inferiori per la produttoria, e pi&ugrave; generalmente un dominio per le
+variabili legate, sono specificati usando uplimit, lowlimit o una
+condizione sulle variabili legate. L'indice per la produttoria &egrave;
+specificato da un elemento bvar.
+L'elemento product accetta l'attributo definition che pu&ograve; essere usato
+per sovrascrivere la semantica predefinita.
+&lt;/description&gt;
+&lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+&lt;signature&gt; (bvar*,((lowlimit,uplimit)|condition),algebraic)   -&gt; product &lt;/signature&gt;
+&lt;signature&gt; ... &lt;/signature&gt;
+&lt;signature&gt; ... &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43878"></a>C.2.7.3 <code>limit</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; limit &lt;/Name&gt;
+&lt;description&gt; 
+L'elemento sum denota l'operatore di sommatoria.
+I limiti superiori e inferiori per la sommatoria,
+e pi&ugrave; generalmente un dominio per le variabili legate,
+sono specificati usando uplimit, lowlimit o una
+condizione sulle variabili legate. L'indice per la sommatoria
+&egrave; specificato da un elemento bvar.
+&lt;/description&gt;
+&lt;functorclass&gt; Nary, Function &lt;/functorclass&gt;
+&lt;signature&gt; (bvar*,(lowlimit | condition*),algebraic) -&gt; limit &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43889"></a>C.2.7.4 <code>tendsto</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+&lt;Name&gt; tendsto &lt;/Name&gt;
+&lt;description&gt; tendsto &egrave; usato per specificare come &egrave;
+calcolato un limite. Accetta un attributo type che determina
+il modo in cui esso tende ad un valore.
+&lt;/description&gt;
+&lt;functorclass&gt; binary, Function &lt;/functorclass&gt;
+&lt;signature&gt; (symbol,anything) -&gt; condition(limit) &lt;/signature&gt;
+&lt;signature&gt; [type=direction](symbol,anything) -&gt;    condition(limit) &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="N43901"></a>C.2.8 Trigonometria </h3>
+
+<h4>
+<a name="N43905"></a>C.2.8.1 <code>sin</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; sin &lt;/Name&gt;
+        &lt;description&gt; La funzione trigonometrica circolare seno
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; sin(0) = 0 &lt;/property&gt;
+        &lt;property&gt; sin(integer*Pi) = 0 &lt;/property&gt;
+        &lt;property&gt; sin((Z+1/2)*Pi) = (-1)^Z, "per Z intero" &lt;/property&gt;
+        &lt;property&gt; -1 &lt;= sin(real) &lt;/property&gt;
+        &lt;property&gt; sin(real) &lt;= 1 &lt;/property&gt;
+        &lt;property&gt; sin(3*x)=-4*sin(x)^3+3*sin(x), "formula dell'angolo triplo"
+            &lt;Reference&gt; v. sopra, [4.3.27] &lt;/Reference&gt;
+        &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43916"></a>C.2.8.2 <code>cos</code>
+</h4>
+    
+<pre>
+   &lt;MMLdefinition&gt;
+        &lt;Name&gt; cos &lt;/Name&gt;
+        &lt;description&gt; La funzione coseno.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; cos(0) = 1 &lt;/property&gt;
+        &lt;property&gt; cos(integer*Pi+Pi/2) = 0 &lt;/property&gt;
+        &lt;property&gt; cos(Z*Pi) = (-1)^Z, "per Z intero" &lt;/property&gt;
+        &lt;property&gt; -1 &lt;= cos(real) &lt;/property&gt;
+        &lt;property&gt; cos(real) &lt;= 1 &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43927"></a>C.2.8.3 <code>tan</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; tan &lt;/Name&gt;
+        &lt;description&gt; La funzione tangente.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; tan(integer*Pi) = 0 &lt;/property&gt;
+        &lt;property&gt; tan(x) = sin(x)/cos(x) &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43938"></a>C.2.8.4 <code>sec</code>
+</h4>
+    
+<pre>
+   &lt;MMLdefinition&gt;
+        &lt;Name&gt; sec &lt;/Name&gt;
+        &lt;description&gt; La funzione secante.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; sec(x) = 1/cos(x) &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43949"></a>C.2.8.5 <code>csc</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; csc &lt;/Name&gt;
+        &lt;description&gt; La funzione cosecante.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; csc(x) = 1/sin(x) &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43960"></a>C.2.8.6 <code>cot</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; cot &lt;/Name&gt;
+        &lt;description&gt; La funzione cotangente.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; cot(integer*Pi+Pi/2) = 0 &lt;/property&gt;
+        &lt;property&gt; cot(x) = cos(x)/sin(x) &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43971"></a>C.2.8.7 <code>sinh</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; sinh &lt;/Name&gt;
+        &lt;description&gt; La funzione seno iperbolico.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43982"></a>C.2.8.8 <code>cosh</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; sinh &lt;/Name&gt;
+        &lt;description&gt; La funzine seno iperbolico.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N43993"></a>C.2.8.9 <code>tanh</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; tanh &lt;/Name&gt;
+        &lt;description&gt; La funzione tangente iperbolica.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44004"></a>C.2.8.10 <code>sech</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; sech &lt;/Name&gt;
+        &lt;description&gt; La funzione secante iperbolica.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44015"></a>C.2.8.11 <code>csch</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; csch &lt;/Name&gt;
+        &lt;description&gt; La funzione cosecante iperbolica.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44026"></a>C.2.8.12 <code>coth</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; coth &lt;/Name&gt;
+        &lt;description&gt; La funzione cotangente iperbolica.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.3]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt;...&lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44037"></a>C.2.8.13 <code>arcsin</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; arcsin &lt;/Name&gt;
+        &lt;description&gt; L'inversa della funzione seno.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.4]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; sin(arcsin(x)) = x &lt;/property&gt;
+        &lt;property&gt; arcsin(sin(x)) = x, "per x fra -Pi/2 e Pi/2" &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44048"></a>C.2.8.14 <code>arccos</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; arccos &lt;/Name&gt;
+        &lt;description&gt; L'inversa della funzione coseno.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.4]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; cos(arccos(x)) = x &lt;/property&gt;
+        &lt;property&gt; arccos(cos(x)) = x, "per x fra 0 e Pi" &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44059"></a>C.2.8.15 <code>arctan</code>
+</h4>
+    
+<pre>
+    &lt;MMLdefinition&gt;
+        &lt;Name&gt; arctan &lt;/Name&gt;
+        &lt;description&gt; L'inversa della funzione tangente.
+            &lt;Reference&gt; M.&nbsp;Abramowitz e I.&nbsp;Stegun, Handbook of
+                Mathematical Functions, [4.4]
+            &lt;/Reference&gt;
+        &lt;/description&gt;
+        &lt;functorclass&gt; Unary, Function &lt;/functorclass&gt;
+        &lt;signature&gt; real -&gt; real &lt;/signature&gt;
+        &lt;signature&gt; symbolic -&gt; symbolic &lt;/signature&gt;
+        &lt;property&gt; tan(arctan(x)) = x &lt;/property&gt;
+        &lt;property&gt; arctan(tan(x)) = x, "per x fra -Pi/2 e Pi/2" &lt;/property&gt;
+    &lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="N44071"></a>C.2.9 Statistica </h3>
+
+<h4>
+<a name="N44075"></a>C.2.9.1 <code>mean</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; mean &lt;/Name&gt;
+  &lt;description&gt; 
+    Dati k argomenti scalari non specificati essi sono trattati come valori
+    equiprobabili di una variabile aleatoria e la media &egrave; calcolata come:
+      media( a1, a2, ...  an)   Somma( ai, i=1... n )/ n.
+    (si veda la sez. 7.7 nelle tabelle e formule matematiche standard del CRC).
+    Pi&ugrave; in generale, il primo argomento &egrave; un simbolo X di tipo
+    "variabile_aleatoria_discreta", questo &egrave; il primo momento della
+    variabile aleatoria X ed &egrave; definito come
+    E[ X ] = Somma( x*f(x), x in S ) 
+    dove la probabilit&agrave; che x = x_i &egrave;  P( x = x_i) = f(x_i).
+    Gli argomenti sono o tutti dati, tutte variabili aleatorie discrete
+    o tutte variabili aleatorie continue.
+    Questo pu&ograve; essere generalizzato per distribuzioni continue e
+    per k dimensioni seguendo le definizioni fornite nel riferimento:
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996, [7.1.2] e [7.7]
+    &lt;/Reference&gt;  
+  &lt;/description&gt;
+  &lt;MMLattribute&gt;
+    &lt;name&gt;type&lt;/name&gt;
+    &lt;values&gt; random_variable | continuous_random_variable | data &lt;/value&gt;
+    &lt;default&gt; data &lt;/default&gt;
+  &lt;/MMLattribute&gt;
+  &lt;functorclass&gt;Nary , Operator &lt;/functorclass&gt;
+  &lt;signature&gt;(scalar*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(scalar(type=data)*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(symbol(type=random_variable)*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(symbol(type=continuous_random_variable)*) -&gt; scalar&lt;/signature&gt;
+  &lt;property&gt; &lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44086"></a>C.2.9.2 <code>sdev</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; sdev &lt;/Name&gt;
+  &lt;description&gt; 
+    Questo rappresenta la variazione standard.
+    Dati k argomenti scalari non specificati, essi sono trattati come valori
+    equiprobabili di una variabile aleatoria e la "deviazione standard" &egrave;
+    calcolata come la radice quadrata del secondo momento della media U.
+      sdev( a1, a2, ...  an)^2  = E( (X - U)^2 ).
+    Se il primo argomento &egrave; un simbolo X di tipo
+    "variabile_aleatoria_discreta", allora tutti gli argomenti sono trattati
+    come variabili aleatorie discrete, invece che dati, e il secondo momento
+    della media &egrave; calcolato come
+      Somma( ( x_i - U )^2 * f(x_i) , x_i  in S )
+    come
+    dove la probabilit&agrave; che x = x_i &egrave;  P( x = x_i) = f(x_i).
+    Gli argomenti sono o tutti dati, tutte variabili aleatorie discrete
+    o tutte variabili aleatorie continue.
+    Questo pu&ograve; essere generalizzato per distribuzioni continue e
+    per k dimensioni seguendo le definizioni trovate in:
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996, [7.1.2] e [7.7]
+    &lt;/Reference&gt;  
+  &lt;/description&gt;
+  &lt;MMLattribute&gt;
+    &lt;name&gt;type&lt;/name&gt;
+    &lt;values&gt; random_variable | continuous_random_variable | data &lt;/value&gt;
+    &lt;default&gt; data &lt;/default&gt;
+  &lt;/MMLattribute&gt;
+  &lt;functorclass&gt;Nary , Operator &lt;/functorclass&gt;
+  &lt;signature&gt;(scalar*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(scalar(type=data)*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(symbol(type=discrete_random_variable)*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(symbol(type=continuous_random_variable)*) -&gt; scalar&lt;/signature&gt;
+  &lt;property&gt; &lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44097"></a>C.2.9.3 <code>variance</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; variance &lt;/Name&gt;
+  &lt;description&gt; 
+    Questo calcola il secondo momento centrato, noto anche come varianza.
+    Dati k argomenti scalari non specificati essi sono trattati come valori
+    equiprobabili di una variabile aleatoria e la &quot;varianza&quot; &egrave;
+    calcolata come il secondo momento della media U.
+      varianza( a1, a2, ...  an)  = E( (X - U)^2 ).
+    Se il primo argomento &egrave; un simbolo X di tipo
+    "variabile_aleatoria_discreta", allora tutti gli argomenti sono trattati
+    come variabili aleatorie discrete, invece che dati e il secondo momento
+    della media &egrave; calcolato come nella sez. [7.7] (v. rif. sotto).
+    about the mean is computed as  in section [7.7] (see reference below.)
+      Somma( ( x_i - U )^2 * f(x_i) , x_i  in S )
+    come
+    dove la probabilit&agrave; che x = x_i &egrave;  P( x = x_i) = f(x_i) .
+    Gli argomenti sono o tutti dati, tutte variabili aleatorie discrete
+    o tutte variabili aleatorie continue.
+    Questo si pu&ograve; generalizzare per distribuzioni continue e
+    per k dimensioni seguendo le definizioni trovate in:
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996, [7.1.2] e [7.7]
+    &lt;/Reference&gt;  
+  &lt;/description&gt;
+  &lt;MMLattribute&gt;
+    &lt;name&gt;type&lt;/name&gt;
+    &lt;values&gt; random_variable | continuous_random_variable | data &lt;/value&gt;
+    &lt;default&gt; data &lt;/default&gt;
+  &lt;/MMLattribute&gt;
+  &lt;functorclass&gt;Nary , Operator &lt;/functorclass&gt;
+  &lt;signature&gt;(scalar*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(scalar(type=data)*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(symbol(type=discrete_random_variable)*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(symbol(type=continuous_random_variable)*) -&gt; scalar&lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44108"></a>C.2.9.4 <code>median</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; median &lt;/Name&gt;
+  &lt;description&gt; 
+    Questo rappresenta la mediana di n dati.
+    Se n =2k + 1  allora la moda &egrave; x_k.
+    Se n = 2k allora la mediana &egrave; (x_k + x_(k+1)/2).
+    (Si noti che tale descrizione suppone che i dati siano
+     stati ordinati in modo ascendente.)
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996,  [7.7]
+    &lt;/Reference&gt;    
+  &lt;/description&gt;
+  &lt;functorclass&gt;Nary , Operator&lt;/functorclass&gt;
+  &lt;signature&gt;(scalar*) -&gt; scalar&lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44119"></a>C.2.9.5 <code>mode</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; mode &lt;/Name&gt;
+  &lt;description&gt; 
+    Questo rappresenta la moda di n dati.
+    La moda &egrave; il valore dei dati che occorre con
+    la frequenza maggiore.
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996,  [7.7]
+    &lt;/Reference&gt;    
+  &lt;/description&gt;
+  &lt;functorclass&gt;Nary , Operator&lt;/functorclass&gt;
+  &lt;signature&gt;(scalar*) -&gt; scalar&lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44130"></a>C.2.9.6 <code>moment</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; moment &lt;/Name&gt;
+  &lt;description&gt; 
+    Questo calcola il momento i-esimo di un insieme di dati, o di una
+    variabile aleatoria.
+    Dati k argomenti scalari di tipo non specificato, essi sono trattati
+    come valori equiprobabili di una variabile aleatoria, e i "momenti" sono
+    calcolati come il secondo momento della media U.
+      momento( grado=i, scalare*)= E( X^i ).
+    Se il primo argomento x1 &egrave; un simbolo X di tipo
+    "variabile_aleatoria_discreta", allora tutti gli argomenti sono trattati
+    come variabili aleatorie discrete, invece che dati e il momento i-esimo
+    della media &egrave; calcolato come
+      Somma( (x)^i * f(x) , x in S )
+dove la probabilit&agrave; che x = x_i &egrave; P( x = x_i) = f(x_i) .
+    Gli argomenti sono o tutti dati, tutte variabili aleatorie discrete
+    o tutte variabili aleatorie continue.
+    Questo pu&ograve; essere generalizzato per distribuzioni continue e
+    per k dimensioni seguendo le definizioni trovate in:
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996, [7.1.2]
+    &lt;/Reference&gt;  
+  &lt;/description&gt;
+  &lt;MMLattribute&gt;
+    &lt;name&gt;type&lt;/name&gt;
+    &lt;values&gt; random_variable | continuous_random_variable | data &lt;/value&gt;
+    &lt;default&gt; data &lt;/default&gt;
+  &lt;/MMLattribute&gt;
+  &lt;functorclass&gt;Nary , Operator &lt;/functorclass&gt;
+  &lt;signature&gt;(degree,scalar*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(degree,scalar(type=data)*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(degree,symbol(type=discrete_random_variable)*) -&gt; scalar&lt;/signature&gt;
+  &lt;signature&gt;(degree, symbol(type=continuous_random_variable)*) -&gt; scalar&lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h3>
+<a name="N44142"></a>C.2.10 Algebra lineare </h3>
+
+<h4>
+<a name="N44146"></a>C.2.10.1 <code>vector</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; vector &lt;/Name&gt;
+  &lt;description&gt; 
+    Un vettore &egrave; una n-tupla ordinata di valori
+    che rappresentano un elemento di uno spazio
+    vettoriale ad n dimensioni. I "valori" sono tutti
+    dello stesso anello, tipicamente reali o complessi.
+    Possono essere numeri, simboli o espressioni algebriche
+    generali. L'attributo type pu&ograve; essere usato per specificare
+    il tipo di vettore rappresentato.
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996, [2.4]
+    &lt;/Reference&gt;
+  &lt;/description&gt;
+  &lt;MMLattribute&gt;
+    &lt;name&gt; type &lt;/name&gt;
+    &lt;value&gt;  real | complex | symbolic | anything &lt;/value&gt;
+    &lt;default&gt; real &lt;/default&gt;
+  &lt;/MMLattribute&gt;
+  &lt;MMLattribute&gt;
+    &lt;name&gt; other &lt;/name&gt;
+    &lt;value&gt;  row | column &lt;/value&gt;
+    &lt;default&gt; row &lt;/default&gt;
+  &lt;/MMLattribute&gt;
+  &lt;functorclass&gt; constructor , N-ary &lt;/functorclass&gt;
+  &lt;signature&gt; 
+    ((cn|ci|apply)*) -&gt; vector(type=real) 
+  &lt;/signature&gt;
+  &lt;signature&gt; 
+    [type=vectortype]((cn|ci|apply)*) -&gt; vector(type=vectortype)
+  &lt;/signature&gt;
+  &lt;!-- Si noti che c'&egrave; una necessit&agrave; notazionale per esprimere una sequenza
+       v1, v2, ... vn con un valore non esplicito di n. Inoltre, nella
+       seguente propriet&agrave;, dovrebbe essere chiarito che b, v1 e v2 sono
+       tutti elementi dello stesso anello. --&gt;
+  &lt;property&gt;  &lt;!-- moltiplicazione scalare--&gt;
+      &lt;apply&gt;&lt;forall/&gt;
+        &lt;bvar&gt;&lt;ci&gt;b&lt;/ci&gt;&lt;/bvar&gt;
+        &lt;bvar&gt;&lt;ci&gt;v1&lt;/ci&gt;&lt;/bvar&gt;
+        &lt;bvar&gt;&lt;ci&gt;v2&lt;/ci&gt;&lt;/bvar&gt;
+        &lt;reln&gt;
+          &lt;apply&gt;&lt;times/&gt;
+            &lt;ci&gt;ci&gt;b&lt;/ci&gt;
+            &lt;vector&gt;&lt;ci&gt;ci&gt;v1&lt;/ci&gt;&lt;ci&gt;ci&gt;v2&lt;/ci&gt;&lt;/vector&gt;
+            &lt;/apply&gt;
+            &lt;vector&gt;
+              &lt;apply&gt;&lt;ci&gt;b&lt;/ci&gt;&lt;ci&gt;v1&lt;/ci&gt;&lt;/apply&gt;
+              &lt;apply&gt;&lt;ci&gt;b&lt;/ci&gt;&lt;ci&gt;v2&lt;/ci&gt;&lt;/apply&gt;
+            &lt;/vector&gt;
+        &lt;/reln&gt;
+      &lt;/apply&gt;
+  &lt;/property&gt;
+  &lt;property&gt; somma vettoriale &lt;/property&gt;
+  &lt;property&gt; distribuitiva sugli scalari&lt;/property&gt;
+  &lt;property&gt; associativit&agrave;.&lt;/property&gt;
+  &lt;property&gt; Matrice * vettore colonna &lt;/property&gt;
+  &lt;property&gt; vettore riga * Matrice &lt;/property&gt;
+  &lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44157"></a>C.2.10.2 <code>matrix</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; matrix &lt;/Name&gt;
+  &lt;description&gt;
+    Questo &egrave; il costruttore per una matrice. La matrice &egrave;
+    costruita a partire da righe di matrice. Il tipo e le
+    propriet&agrave; determinano l'interazione normale con vettori
+    e scalari.
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996, [2.5.1]
+    &lt;/Reference&gt;
+  &lt;/description&gt;
+  &lt;MMLattribute&gt;
+    &lt;name&gt;type&lt;/name&gt;
+    &lt;value&gt;real | complex | integer | symbolic | anything &lt;/value&gt;
+    &lt;default&gt; real &lt;/default&gt;
+  &lt;/MMLattribute&gt;
+  &lt;functorclass&gt;constructor , N-ary &lt;/functorclass&gt;
+  &lt;signature&gt;(matrixrow*) -&gt; matrix&lt;/signature&gt;
+  &lt;signature&gt;
+    [type=matrixtype](matrixrow*) -&gt; 
+       matrix(type=matrixtype)&lt;/signature&gt;
+  &lt;property&gt;moltiplicazione scalare &lt;/property&gt;
+  &lt;property&gt;Matrice*vettore colonna&lt;/property&gt;
+  &lt;property&gt;Addizione&lt;/property&gt;
+  &lt;property&gt;Matrice*Matrice&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44168"></a>C.2.10.3 <code>matrixrow</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; matrixrow &lt;/Name&gt;
+  &lt;description&gt;
+    Questo &egrave; un costruttore per descrivere le righe di una matrice.
+    Questo occorre solo all'interno di una matrice. Il suo "tipo"
+    &egrave; determinato dall'elemento matrix che lo contiene.
+  &lt;/description&gt;
+  &lt;functorclass&gt;constructor , N-ary&lt;/functorclass&gt;
+  &lt;signature&gt;(cn|ci|apply)-&gt;matrixrow &lt;/signature&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44179"></a>C.2.10.4 <code>determinant</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt;determinant&lt;/Name&gt;
+  &lt;description&gt;Il "determinante" di una matrice.
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996, [2.5.4]
+    &lt;/Reference&gt;
+  &lt;/description&gt;
+  &lt;functorclass&gt;Unary, operator&lt;/functorclass&gt;
+  &lt;signature&gt;(matrix)-&gt; scalar &lt;/signature&gt;
+  &lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44190"></a>C.2.10.5 <code>transpose</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; transpose &lt;/Name&gt;
+  &lt;description&gt;La trasposta di una matrice o di un vettore.
+    &lt;Reference&gt; CRC Standard Mathematical Tables and Formulae, 
+      editor: Dan Zwillinger, CRC Press Inc., 1996, [2.4] and [2.5.1]
+    &lt;/Reference&gt;
+  &lt;/description&gt;
+  &lt;functorclass&gt;Unary, Operator&lt;/functorclass&gt;
+  &lt;signature&gt;(vector)-&gt;vector(other=row)&lt;/signature&gt;
+  &lt;signature&gt;[other=column](vector)-&gt;vector(other=row)&lt;/signature&gt;
+  &lt;signature&gt;[other=row](vector)-&gt;vector(other=column)&lt;/signature&gt;
+  &lt;signature&gt;(matrix)-&gt;matrix&lt;/signature&gt;
+  &lt;property&gt;transpose(transpose(A))= A&lt;/property&gt;
+  &lt;property&gt;transpose(transpose(V))= V&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<h4>
+<a name="N44201"></a>C.2.10.6 <code>selector</code>
+</h4>
+    
+<pre>
+&lt;MMLdefinition&gt;
+  &lt;Name&gt; selector &lt;/Name&gt;
+  &lt;description&gt;
+    L'operatore usato per estrarre sotto-oggetti da vettori, matrici,
+    righe di matrici e liste.
+    Agli elementi si accede fornendo un elemento indice per ogni dimensione.
+    Per le matrici, le sottomatrici sono selezionate fornendo alcuni
+    indici in pi&ugrave;. Per una matrice A e un vettore colonna V:
+     select( i,j , A ) &egrave; l'elemento  i,j-esimo di A.
+     select(i , A )  &egrave; la riga di matrice formata dalla riga i-esima di A.
+     select( i , V ) &egrave; l'elemento i-esimo di V.
+     select( V ) &egrave; la sequenza di tutti gli elementi di V.
+     select(A) &egrave; la sequenza di tutti gli elementi di A estratti riga per riga.
+     select(i,L) &egrave; l'eleemnto i-esimo di una lista.
+     select(L) &egrave; la sequenza di tutti gli elementi di una lista.
+  &lt;/description&gt;
+  &lt;functorclass&gt;N-ary, operator)&lt;/functorclass&gt;
+  &lt;signature&gt;(scalar,scalar,matrix)-&gt;scalar&lt;/signature&gt;
+  &lt;signature&gt;(scalar,matrix)-&gt;matrixrow&lt;/signature&gt;
+  &lt;signature&gt;(matrix)-&gt;scalar* &lt;/property&gt;
+  &lt;signature&gt;(scalar,(vector|list|matrixrow))-&gt;scalar&lt;/signature&gt;
+  &lt;signature&gt;(vector|list|matrixrow)-&gt;scalar*&lt;/signature&gt;
+  &lt;property&gt;
+    Forall( 
+       bvar(A(type=matrix)),bvar(V(type=vector)), 
+       select(A) = select(V)
+     )
+  &lt;/property&gt;
+  &lt;property&gt;Per ogni vettore V, V = vector(select(V))&lt;/property&gt;
+&lt;/MMLdefinition&gt;
+</pre>
+
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: B <a href="appendixb.html">Grammatica di convalida della
+  marcatura di contenuto</a>
+<br>
+  Successivo: D <a href="appendixd.html">Dizionario degli
+  operatori</a> (Non normativa) <br>
+</p>
+</body>
+</html>

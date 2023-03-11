@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Modifiche</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="changes"></a>H modifiche (Non normativa)</h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: G <a href="appendixg.html">Membri del gruppo di
+  lavoro</a> (Non normativa)
+<br>
+  Successivo: I <a href="appendixi.html">Riferimenti</a> (Non normativa)
+<br>
+  &nbsp;<br>H <a href="appendixh.html">Modifiche</a> (Non normativa)<br>
+</p>
+
+<p>Quest'appendice riassume le modifiche rispetto alla precedente
+versione (1.01) delle Specifiche del MathML. </p>
+
+<ul>
+<li>modifiche al <a href="chapter1.html">Capitolo&nbsp;1
+[Introduzione]</a> (fino alla revisione 1.20)
+<ul>
+<li>riscritto per riflettere lo sviluppo dalla pubblicazione delle
+Drettive MathML 1.0, per esempio XML, XSL, CSS e gli schemi </li>
+</ul>
+</li>
+
+<li>modifiche al <a href="chapter2.html">Capitolo&nbsp;2 [Fondamenti
+del MathML]</a> (fino alla revisione 1.23)
+<ul>
+<li>riscritto per riflettere lo sviluppo dalla pubblicazione delle
+direttive MathML 1.0, per esempio XML, XSL, CSS e gli schemi </li>
+<li>aggiunto riferimento alla direttiva XML </li>
+<li>rimosso errore nella descrizione dei caratteri permessi nei valori
+degli attributi </li>
+</ul>
+</li>
+
+<li>modifiche al <a href="chapter3.html">Capitolo&nbsp;3 [Marcatura di
+presentazione]</a> (fino alla revisione 1.39)
+<ul>
+<li>l'attributo <code>definitionURL</code> pu&ograve; avere un URL o
+un URI come valore </li>
+<li>aggiunte sezioni su <code>menclose</code> e <code>meqno</code>
+</li>
+<li>aggiunti attributi <code>beveled</code>, <code>numalign</code> e
+<code>denomalign</code> a <code>mfrac</code>, e aggiornato il testo di
+conseguenza </li>
+<li>verificata la correttezza degli esempi, e corretti vari refusi
+</li>
+<li>aggiunte sezioni su <code>mchar</code> e <code>mglyph</code>
+</li>
+<li>aggiustata descrizione di <code>mstyle</code> e
+<code>mglyph</code>
+</li>
+<li>aggiunta descrizione di <code>mlabeledtr</code>
+</li>
+<li>aggiunti esempi per la notazione attuariale e per la divisione
+lunga </li>
+<li>aggiunto attributo width a <code>mtable</code>
+</li>
+<li>descritte caratteristiche disapprovate </li>
+<li>reso pi&ugrave; uniforme l'uso dell'attributo
+<code>encoding</code> </li>
+<li>eliminati <code>mtr</code> e <code>mtd</code> impliciti
+</li>
+</ul>
+</li>
+
+<li>modifiche al <a href="chapter4.html">Capitolo&nbsp;4 [Marcatura di
+contenuto]</a> (fino alla revisione 1.39)
+<ul>
+<li>discusso uso modificato di <code>apply</code>, e disapprovazione
+di <code>reln</code>
+</li>
+<li>presentato <code>csymbol</code> e discussa la relazione con
+<code>fn</code>
+</li>
+<li>presentata la nuova categoria di funzioni classiche elementari
+</li>
+<li>presentati i nuovi elementi di contenuto <code>arg</code>,
+<code>real</code>, <code>imaginary</code>, <code>equivalent</code>,
+<code>approx</code>, <code>divergence</code>, <code>grad</code>,
+<code>curl</code>, <code>laplacian</code>, <code>size</code>,
+<code>vectorproduct</code>, <code>scalarproduct</code> e
+<code>outerproduct</code>
+</li>
+<li>verificata la correttezza degli esempi, e corretti vari refusi
+</li>
+<li>l'attributo <code>definitionURL</code> pu&ograve; avere un URL o
+un URI come valore </li>
+<li>riviste alcune delle rirpoduzioni predefinite </li>
+<li>descritto l'uso della marcatura di presentazione all'interno di
+<code>cn</code>
+</li>
+<li>modificato l'esempio della radice per indicare che la riproduzione
+con un segno di radice &egrave; solo per gradi interi </li>
+<li>riproduzione predefinita di <code>not</code> fatta corrispondere
+alla marcatura dell'esempio </li>
+<li>aggiunto <code>minus</code> alla riga per gli operatori aritmetici
+unari nella tabella nella sezione 4.2.3 </li>
+<li>reso pi&ugrave; uniforme l'uso dell'attributo
+<code>encoding</code> </li>
+<li>modificata la descrizione dell'uso di <code>bvar</code> in
+combinazione con <code>min</code> e <code>max</code>
+</li>
+<li>descritte le caratteristiche disapprovate </li>
+<li>reso pi&ugrave; uniforme l'uso dell'attributo
+<code>encoding</code> </li>
+</ul>
+</li>
+
+<li>modifiche al <a href="chapter5.html">Capitolo&nbsp;5 [Combinare
+marcatura di presentazione e di contenuto]</a> (fino alla revisione
+1.21)
+<ul>
+<li>aggiunta descrizione delle trasformazioni fedeli al contenuto
+</li>
+<li>aggiornato in modo da usare <code>csymbol</code> e non
+<code>fn</code> negli esempi </li>
+<li>definito elenco del contenuto che pu&ograve; apparire nella
+presentazione </li>
+<li>aggiunto attributo <code>xref</code> al fine dei riferimenti
+incrociati </li>
+<li>aggiunta breve descrizione degli elementi <code>OMA</code>,
+<code>OMS</code> e <code>OMV</code>
+</li>
+<li>aggiunti esempi con l'uso di XLink e degli spazi di nomi </li>
+<li>reso pi&ugrave; uniforme l'uso dell'attributo
+<code>encoding</code> </li>
+<li>varie correzioni tipografiche </li>
+</ul>
+</li>
+
+<li>modifiche al <a href="chapter6.html">Capitolo&nbsp;6 [Caratteri,
+entit&agrave; e font]</a> (fino alla revisione 1.9)
+modifiche al cap6, collegamento alle tabelle
+<ul>
+<li>nessuna </li>
+</ul>
+</li>
+
+<li>modifiche al <a href="chapter7.html">Capitolo&nbsp;7
+[L'interfaccia del MathML]</a> (fino alla revisione 1.25)
+<ul>
+<li>riscritto testo introduttivo nella sezione 7.2 e tutto il testo
+della sezione 7.2.1 </li>
+<li>riscritte molte frasi al futuro nei tempi presente o passato </li>
+<li>riscritto il testo dove si riconosce che gli elementi di livello
+principale e di interfaccia per il MathML sono adesso in pratica gli
+stessi </li>
+<li>riscritto il testo sui collegamenti in accordo con la nuova bozza
+XLink </li>
+<li>rivisto il materiale sulle interazioni con riproduttori
+incorporati per riflettere lo stato attuale dell'implementazione DOM
+</li>
+<li>verificata la correttezza degli esempi, e corretti vari refusi
+</li>
+<li>descritte le caratteristiche disapprovate </li>
+<li>reso pi&ugrave; uniforme l'uso dell'attributo
+<code>encoding</code> </li>
+<li>riscritto testo estesamente per descrivere gli spazi di nomi e i
+comportamenti CSS </li>
+</ul>
+</li>
+
+<li>modifiche al <a href="chapter8.html">Capitolo&nbsp;8 [Modello a
+oggetti dei documenti per il MathML]</a> (fino alla revisione 1.5)
+<ul>
+<li>questo &egrave; un capitolo completamente nuovo </li>
+<li>spostate definizioni IDL ad una nuova appendice non normativa
+</li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixa.html">Appendice&nbsp;A [Analisi
+del MathML]</a> (fino alla revisione 1.15)
+<ul>
+<li>rinominato attributo <code>occurence</code> in <code>occurrence</code>
+</li>
+<li>aggiunto attributo globale <code>xref</code>
+</li>
+<li>aggiunti collegamenti alla tabelle per ogni insieme di
+entit&agrave; </li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixb.html">Appendice&nbsp;B
+[Grammatica di convalida della marcatura di contenuto]</a> (fino alla
+revisione 1.7)
+<ul>
+<li>nessuna </li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixc.html">Appendice&nbsp;C
+[Definizioni degli elementi di contenuto]</a> (fino alla revisione
+1.15)
+<ul>
+<li>completamente riscritta </li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixd.html">Appendice&nbsp;D
+[Dizionario degli operatori]</a> (fino alla revisione 1.14)
+<ul>
+<li>le voci nel dizionario degli operatori sono parametrizzate </li>
+<li>il dizionario degli operatori &egrave; diventato parte non
+normativa delle specifiche </li>
+<li>sono state aggiunte nuove voci al dizionario degli operatori </li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixe.html">Appendice&nbsp;E [Modello a
+oggetti dei documenti per il MathML]</a> (fino alla revisione 1.19)
+<ul>
+<li>questa &egrave; un'appendice completamente nuova, che contiene le
+definizioni IDL che di solito erano nel capitolo 8 </li>
+<li>varie interfacce sono state modificate </li>
+<li>aggiunte le dichiarazioni degli attributi <code>xmlns</code> a
+<code>none</code>, <code>sep</code> e <code>mprescripts</code>
+</li>
+<li>aggiunti vari attributi e metodi che riflettono modifiche nelle
+specifiche </li>
+<li>sostituita l'interfaccia MathMLCollection con
+MathMLDOMImplementation </li>
+<li>esteso elenco degli elementi supportati dall'interfaccia
+MathMLpredefinedSymbol </li>
+<li>riconciliati vari usi inconsistenti dei metodi </li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixf.html">Appendice&nbsp;F
+[Glossario]</a> (fino alla revisione 1.14)
+<ul>
+<li>aggiunte voci per XSL, XSLT e XSL FO </li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixg.html">Appendice&nbsp;G [Membri
+del gruppo di lavoro]</a> (fino alla revisione 1.11)
+<ul>
+<li>solo elencati tutti i membri del primo e del secondo gruppo di
+lavoro </li>
+<li>nuovi indirizzi per Maple </li>
+<li>tolto `Publishers' dagli affiliati a NP </li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixh.html">Appendice&nbsp;H
+[Modifiche]</a> (fino alla revisione 1.14)
+<ul>
+<li>appendice completamente nuova, basata sulle registrazioni ottenute
+dal CVS </li>
+</ul>
+</li>
+
+<li>modifiche all'<a href="appendixi.html">Appendice&nbsp;I
+[Riferimenti]</a> (fino alla revisione 1.11)
+<ul>
+<li>aggiunta voce per la direttiva XML </li>
+<li>aggiunti documenti sugli schemi XML </li>
+<li>aggiunte voci per altri documenti W3C </li>
+<li>modificato il primo autore del riferimento 5 in `Chaundy' </li>
+<li>aggiunta edizione rivista del libro di Ellen Swanson </li>
+</ul>
+</li>
+
+<li>modifiche generali
+<ul>
+<li>testo della specifica ora in forma XML, con riproduzione HTML e
+XHTML per mezzo di XSLT e riproduzione PDF per mezzo di XSLT e
+T<sub>E</sub>X </li>
+<li>corretti errori di ortografia e di notazione </li>
+<li>gli esempi normativi di formule sono immagini, con l'equivalente
+in LaT<sub>E</sub>X </li>
+<li>gli esempi non normativi di formule sono costruzioni in HTML ogni
+volta che &egrave; possibile </li>
+<li>riferimenti incrociati migliorati </li>
+</ul>
+</li>
+</ul>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: G <a href="appendixg.html">Membri del gruppo di
+  lavoro</a> (Non normativa)
+<br>
+  Successivo: I <a href="appendixi.html">Riferimenti</a> (Non normativa)
+</p>
+</body>
+</html>

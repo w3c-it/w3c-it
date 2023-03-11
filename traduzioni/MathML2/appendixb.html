@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Grammatica di convalida della marcatura di contenuto</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="cmvg"></a>B Grammatica di convalida della marcatura di contenuto </h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: A <a href="appendixa.html">Analisi del MathML</a>
+<br>
+  Successivo: C <a href="appendixc.html">Definizioni degli elementi di
+  contenuto</a>
+<br>
+  &nbsp;<br>B <a href="appendixb.html">Grammatica di convalida della
+  marcatura di contenuto</a>
+<br>
+</p>
+
+<pre>
+Grammatica ENBF per la convalida della struttura della marcatura di contenuto
+=============================================================================
+// Note
+//
+// Questa grammatica definisce gli alberi di espressione validi nella
+// marcatura di contenuto
+//
+// ** non definisce la convalida degli attributi -
+// ** essa deve essere fatta all'inizio
+//
+// Presentation_tags &egrave; un segnaposto per un tag iniziale
+// o finale di un elemento di presentazione valido
+//
+// #PCDATA sono i dati dei caratteri XML analizzati
+//
+// i simboli che iniziano con '_' per esempio _mmlarg sono simboli interni
+// (per il riconoscimento &egrave; in genere richiesta una grammatica ricorsiva)
+//
+// i simboli in lettere minuscole per esempio 'ci' sono simboli terminali
+// che rappresentano elementi di contenuto del MathML
+//
+// i simboli che iniziano con una maiuscola sono terminali che 
+// rappresentano altri token
+//
+// corretto sb 3.nov.97, 16.nov.97 e 22.dic.1997
+// corretto sb 6.gen.98, 6.Feb.1998 e 4.aprile.1998
+// le definizioni di spazio bianco includono presentation_tags
+Presentation_tags ::= &quot;presentation&quot;        //segnaposto
+Space    ::= #x09 | #xoA | #xoD | #x20      //caratteri tab, lf, cr, spazio
+S        ::= (Space | Presentation_tags)*   //tratta presentazione come spazio
+// solo per la convalida del contenuto
+// caratteri
+Char     ::= Space | [#x21 - #xFFFD] 
+             | [#x00010000 - #x7FFFFFFFF]   //caratteri XML validi
+// funzioni dei tag iniziali e finali
+// start(\%x) restituisce un tag iniziale valido per l'elemento \%x
+// end(\%x) restituisce un tag finale valido per l'elemento \%x
+// empty(\%x) restituisce un tag vuoto valido per l'elemento \%x
+//
+// start(ci)    ::= &quot;&lt;ci&gt;&quot;
+// end(cn)              ::= &quot;&lt;/cn&gt;&quot;
+// empty(plus)  ::= &quot;&lt;plus/&gt;&quot;
+//
+// La ragione per far ci&ograve; consiste nell'evitare di scrivere una grammatica
+// per tutti gli attributi. Il modello di seguito non &egrave; completo
+// per tutti i possibili valori degli attributi.
+_start(\%x)      ::= &quot;&lt;\%x&quot; (Char - '&gt;')* &quot;&gt;&quot;
+// restituisce un tag iniziale valido per l'elemento \%x
+_end(\%x)        ::= &quot;&lt;\%x&quot; Space* &quot;&gt;&quot;
+// restituisce un tag finale valido per l'elemento \%x
+_empty(\%x)      ::= &quot;&lt;\%x&quot; (Char - '&gt;')* &quot;/&gt;&quot;
+// restituisce un tag vuoto valido per l'elemento \%x
+_sg(\%x)         ::= S _start(\%x)
+// tag iniziale preceduto da spazi bianchi opzionali
+_eg(\%x)         ::= _end(\%x) S
+// tag finale seguito da spazi bianchi opzionali
+_ey(\%x)         ::= S _empty(\%x) S
+// tag vuoto preceduto e seguito da spazi bianchi opzionali
+// costrutti di contenuto del mathml 
+// declare &egrave; permesso all'interno di un tipo generico di argomenti
+// cos&igrave; possiamo inserirlo dovunque
+_mmlall         ::= _container | _relation | _operator | _qualifier | _other
+_mmlarg         ::= declare* _container declare*
+_container      ::= _token | _special | _constructor
+_token          ::= ci | cn | csymbol
+_special        ::= apply | lambda | reln | fn
+_constructor    ::= interval | list | matrix | matrixrow | set | vector
+_other          ::= condition |  declare | sep
+_qualifier      ::= lowlimit | uplimit | bvar | degree | logbase
+// relazioni
+_relation       ::= _genrel | _setrel | _seqrel2ary
+_genrel         ::= _genrel2ary | _genrelnary
+_genrel2ary     ::= ne
+_genrelnary     ::= eq | leq | lt | geq | gt
+_setrel         ::=  _seqrel2ary | _setrelnary
+_setrel2ary     ::=  in | notin | notsubset | notprsubset
+_setrelnary     ::= subset | prsubset
+_seqrel2ary     ::= tendsto
+//operatori
+_operator       ::= _funcop | _sepop | _arithop | _calcop
+                | _seqop | _trigop | _statop | _lalgop
+                | _logicop | _setop
+_funcop         ::= _funcop1ary | _funcopnary
+_funcop1ary     ::= inverse     | ident
+_funcopnary     ::= fn| compose   // la funzione generale definita dall'utente &egrave; n-aria 
+// operatori aritmetici
+// (nota meno &egrave; sia unario che binario)
+_arithop        ::= _arithop1ary | _arithop2ary | _arithopnary  | root
+_arithop1ary    ::= abs | conjugate | exp | factorial | minus
+_arithop2ary    ::= quotient | divide | minus | power | rem
+_arithopnary    ::= plus | times | max | min | gcd
+// analisi matematica
+_calcop         ::= _calcop1ary | log | int | diff | partialdiff
+_calcop1ary     ::= ln 
+// successioni e serie
+_seqop          ::= sum | product | limit
+// trigonometria
+_trigop         ::= sin | cos | tan | sec | csc | cot | sinh 
+                    | cosh | tanh | sech | csch | coth 
+                    | arcsin | arccos | arctan
+// operatori statistici
+_statop         ::= _statopnary | moment
+_statopnary     ::= mean | sdev | variance | median | mode
+// operatori dell'algebra lineare
+_lalgop         ::= _lalgop1ary | _lalgopnary
+_lalgop1ary     ::= determinant | transpose
+_lalgopnary     ::= selector
+// operatori logici
+_logicop        ::= _logicop1ary | _logicopnary | _logicop2ary | _logicopquant
+_logicop1ary    ::= not
+_logicop2ary    ::= implies
+_logicopnary    ::= and | or | xor
+_logicopquant   ::= forall | exists
+// operatori insiemistici
+_setop          ::= _setop2ary | _setopnary
+_setop2ary      ::= setdiff
+_setopnary      ::= union | intersect
+// gruppi di operatori
+_unaryop        ::=  _func1ary | _arithop1ary | _trigop | _lalgop1ary 
+                     | _calcop1ary | _logicop1ary
+_binaryop       ::=  _arithop2ary | _setop2ary | _logicop2ary
+_naryop         ::=  _arithopnary | _statopnary  | _logicopnary 
+                     | _lalgopnary | _setopnary | _funcopnary
+_ispop          ::= int | sum | product
+_diffop         ::= diff | partialdiff
+_binaryrel      ::= _genrel2ary | _setrel2ary |  _seqrel2ary
+_naryrel        ::= _genrelnary | _setrelnary
+//separatore
+sep             ::=  _ey(sep)
+// token foglia  e contenuto degli elementi foglia
+// nota _mdata qui comprende i costrutti di presentazione.
+_mdatai         ::= (#PCDATA | Presentation_tags)*
+_mdatan         ::= (#PCDATA | sep | Presentation_tags)*
+ci              ::=  _sg(ci) _mdatai _eg(ci)
+cn              ::=  _sg(cn) _mdatan _eg(cn)
+// condition -  vincoli. contiene sia un singolo
+// elemento reln (relazione) che un elemento apply con
+// una combinazione logica di relazioni che un
+// insieme (sul quale deve essere applicato l'operatore)
+condition       ::= _sg(condition)  reln | apply | set  _eg(condition)
+// domini per integrale, sommatoria, produttoria
+_ispdomain      ::= (lowlimit  uplimit?)
+                | uplimit
+                | interval
+                | condition
+// costrutto apply
+apply           ::= _sg(apply) _applybody _eg(apply)
+_applybody      ::= ( _unaryop _mmlarg  )
+//operatori unari 
+                                | (_binaryop _mmlarg _mmlarg)
+//operatori binari
+                                | (_naryop _mmlarg*)
+//operatori n-ari, argomenti enumerati
+                                | (_naryop bvar* condition _mmlarg)
+//operatori n-ari, la condizione definisce la lista degli argomenti
+                                | (_ispop  bvar? _ispdomain? _mmlarg)
+//integrale, sommatoria, produttoria
+                                | (_diffop bvar* _mmlarg)
+//operatori differenziali
+                                | (log logbase? _mmlarg)
+//logaritmi
+                                | (moment degree? _mmlarg*)
+//momento statistico
+                                | (root degree? _mmlarg)
+//radici - di base si assume la radice quadrata
+                                | (limit bvar* lowlimit? condition? _mmlarg)
+//limiti
+                                | (_logicopquant bvar+ condition? (reln | apply))
+//quantificatori con variabili legate esplicite
+// equazioni e relazioni - reln usa la sintassi del lisp (come apply)
+// bvar e condition si usano per costruire un vincolo &quot;tale che&quot; o
+// &quot;dove&quot; sulla relazione
+reln            ::= _sg(reln) _relnbody _eg(reln)
+_relnbody       ::= ( _binaryrel bvar* condition? _mmlarg _mmlarg )
+                    | ( _naryrel bvar* condition? _mmlarg*  )
+// costrutto fn 
+fn                      ::= _sg(fn) _fnbody _eg(fn)
+_fnbody         ::=  Presentation_tags | container 
+// costrutto lambda - nota deve essere presente almeno 1 bvar 
+lambda          ::=  _sg(lambda) _lambdabody _eg(lambda)
+_lambdabody     ::=  bvar+ _container  //lambda-calcolo multivariato
+//costrutto declare 
+declare         ::= _sg(declare) _declarebody _eg(declare)
+_declarebody    ::= ci (fn | constructor)?
+// costruttori
+interval        ::=  _sg(interval) _mmlarg _mmlarg _eg(interval)
+//inizio e fine definiscono l'intervallo
+set         ::=  _sg(set) _lsbody _eg(set)
+list        ::=  _sg(list) _lsbody _eg(list)
+_lsbody         ::=  _mmlarg*                  //argomenti enumerati 
+                 | (bvar* condition _mmlarg)   //una condizione costruisce gli argomenti
+matrix          ::= _sg(matrix) matrixrow* _eg(matrix)
+matrixrow       ::= _sg(matrixrow) _mmlall* _eg(matrixrow)
+//consente matrici di operatori
+vector          ::= _sg(vector) _mmlarg* _eg(vector)
+//qualificatori - nota _mmlarg potrebbe essere un elemento reln
+lowlimit        ::= _sg(lowlimit) _mmlarg  _eg(lowlimit)
+uplimit         ::= _sg(uplimit) _mmlarg _eg(uplimit)
+bvar            ::= _sg(bvar) ci degree? _eg(bvar)
+degree          ::= _sg(degree) _mmlarg _eg(degree)
+logbase         ::= _sg(logbase) _mmlarg _eg(logbase)
+//relazioni e operatori
+// (una dichiarazione per ciascun elemento operatore e relazione)
+_relation       ::= _ey(\%relation)         //per esempio &lt;eq/&gt;  &lt;lt/&gt;
+_operator       ::= _ey(\%operator)         //per esempio &lt;exp/&gt; &lt;times/&gt;
+//elemento math di livello principale
+math            ::= _sg(math) mmlall* _eg(math)
+</pre>
+
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di marcatura
+  matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: A <a href="appendixa.html">Analisi del MathML</a>
+<br>
+  Successivo: C <a href="appendixc.html">Definizioni degli elementi di
+  contenuto</a>
+<br>
+</p>
+</body>
+</html>

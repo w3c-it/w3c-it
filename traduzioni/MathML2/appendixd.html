@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Dizionario degli operatori</title>
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<h1>
+<a name="oper-dict"></a>D Dizionario degli operatori (Non normativa)</h1>
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: C <a href="appendixc.html">Definizioni degli elementi di
+  contenuto</a>
+<br>
+  Successivo: E <a href="appendixe.html">Modello a oggetti dei
+  documenti per il MathML</a> (Non normativa) <br>
+  &nbsp;<br>D <a href="appendixd.html">Dizionario degli operatori</a>
+  (Non normativa) <br>D.1 <a
+  href="appendixd.html#oper-dict:format">Formato delle voci del
+  dizionario degli operatori</a>
+<br>D.2 <a href="appendixd.html#oper-dict:index">Indicizzazione del
+dizionario degli operatori</a>
+<br>D.3 <a href="appendixd.html#oper-dict:names">Scelta dei nomi delle
+entit&agrave;</a>
+<br>D.4 <a href="appendixd.html#oper-dict:space">Note sugli attributi
+<code>lspace</code> e <code>rspace</code></a>
+<br>D.5 <a href="appendixd.html#oper-dict:entries">Voci del dizionario
+degli operatori</a>
+<br>
+</p>
+
+<p>La tabella seguente d&agrave; il dizionario consigliato delle
+propriet&agrave; di riproduzione per operatori, parentesi, separatori
+e accenti in MathML, i quali sono tutti rappresentati da elementi
+<code>mo</code>. Per brevit&agrave;, tutti questi elementi saranno
+chiamati semplicemente `operatori' in questa Appendice. </p>
+
+<h2>
+<a name="oper-dict:format"></a>D.1 Formato delle voci del dizionario
+degli operatori </h2>
+
+<p>Gli operatori sono divisi in gruppi, che sono separati da linee
+bianche nell'elenco seguente. Il raggruppamento, e l'ordine dei
+gruppi, &egrave; significativo per il corretto raggruppamento delle
+sottoespressioni usando <code>&lt;mrow&gt;</code> (<a
+href="chapter3.html#presm:mrow">Sezione&nbsp;3.3.1 [Raggruppare
+orizzontalmente le sottoespressioni (<code>mrow</code>)]</a>); la
+regola descritta qui &egrave; particolarmente rilevante per la
+generazione automatica del MathML per conversione da altri formati per
+la matematica visualizzata, come T<sub>E</sub>X, che non sempre
+specificano come si annidano le sottoespressioni. </p>
+
+<p>Il formato delle voci della tabella &egrave;: il contenuto
+dell'elemento <code>&lt;mo&gt;</code> tra doppi apici (tag di apertura
+e di chiusura non mostrati), seguito dalla lista degli attributi in
+formato XML, iniziando con l'attributo <code>form</code>, seguito
+dagli attributi predefiniti di riproduzione che devono essere usati
+per elementi <code>mo</code> con il dato contenuto e il dato attributo
+<code>form</code>. </p>
+
+<p>Ogni attributo non elencato per una voce ha il suo valore
+predefinito, che &egrave; dato tra parentesi nella tabella degli
+attributi nella <a href="chapter3.html#presm:mo">Sezione&nbsp;3.2.4
+[Operatore, parentesi, separatore o accento (<code>mo</code>)]</a>.
+</p>
+
+<p>Si noti che i caratteri &amp; e &lt; sono rappresentati nelle
+seguenti voci di tabella rispettivamente dai riferimenti ad
+entit&agrave; <code>&amp;amp;</code> e <code>&amp;lt;</code>, come
+sarebbe necessario se apparissero nel contenuto di un elemento
+<code>mo</code> reale (o in qualunque altro elemento MathML o XML).
+</p>
+
+<p>Per esempio, la prima voce,
+</p>
+<pre>
+"(" form="prefix" fence="true" stretchy="true" lspace="0em" rspace="0em"
+</pre>
+<p>
+potrebbe essere espressa come elemento <code>mo</code> da:
+</p>
+<pre>
+&lt;mo form=&quot;prefix&quot; fence=&quot;true&quot; stretchy=&quot;true&quot; lspace=&quot;0em&quot; rspace=&quot;0em&quot;&gt; ( &lt;/mo&gt;
+</pre>
+<p>
+(si noti la mancanza di doppi apici intorno al contenuto, e gli spazi
+bianchi aggiunti intorno al contenuto per leggibilit&agrave;, cosa
+opzionale nel MathML). </p>
+
+<p>Questa voce significa che, per riproduttori MathML che usano questo
+dizionario degli operatori consigliato, dare l'elemento <code>&lt;mo
+form=&quot;prefix&quot;&gt; ( &lt;/mo&gt;</code> da solo, o
+semplicemente <code>&lt;mo&gt; ( &lt;/mo&gt;</code> in una posizione
+per la quale sarebbe inferito <code>form=&quot;prefix&quot;</code> (si
+veda sotto), &egrave; equivalente a dare l'elemento con tutti gli
+attributi mostrati sopra. </p>
+
+<h2>
+<a name="oper-dict:index"></a>D.2 Indicizzazione del dizionario degli
+operatori </h2>
+
+<p>Si noti che il dizionario &egrave; indicizzato non solo a seconda
+del contenuto degli elementi, ma a seconda del contenuto degli
+elementi e del valore dell'attributo <code>form</code>, insieme. Gli
+operatori con pi&ugrave; di una forma possibile hanno pi&ugrave; di
+una voce. Le specifiche del MathML descrivono come il riproduttore
+sceglie (`inferisce') quale forma usare quando non &egrave; dato un
+attributo <code>form</code>; si veda la <a
+href="chapter3.html#presm:formdefval">Sezione&nbsp;3.2.4.7.2. [Valore
+predefinito dell'attributo <code>form</code>]</a>. </p>
+
+<p>Avendo fatto questa scelta, o con l'attributo <code>form</code>
+specificato esplicitamente nel tag iniziale dell'elemento
+<code>&lt;mo&gt;</code>, il riproduttore MathML usa gli attributi
+rimanenti dalla voce del dizionario per la sola forma appropriata di
+tale operatore, ignorando le voci per altre forme possibili. </p>
+
+<h2>
+<a name="oper-dict:names"></a>D.3 Scelta dei nomi delle entit&agrave;
+</h2>
+
+<p>I caratteri estesi in MathML (e nel dizionario degli operatori in
+seguito) sono rappresentati da riferimenti ad entit&agrave; in stile
+XML usando la sintassi <code>&amp;nome-del-carattere;</code>, l'elenco
+completo dei caratteri e dei nomi dei caratteri &egrave; dato nel <a
+href="chapter6.html">Capitolo&nbsp;6 [Caratteri, entit&agrave; e
+font]</a>. A molti caratteri si pu&ograve; fare riferimento con
+pi&ugrave; di un nome; spesso, in MathML sono forniti nomi facili da
+ricordare composti da parole intere, come pure uno o pi&ugrave; nomi
+usati in altri standard, come l'Unicode. I caratteri negli operatori
+in questo dizionario sono elencati generalmente sotto il loro nome a
+parole intere, quando esiste. Per esempio, l'operatore integrale
+&egrave; chiamato in seguito con la sequenza di un carattere
+<code>&amp;Integral;</code>, ma potrebbe altrettanto bene essere
+chiamato <code>&amp;int;</code>. La scelta di un nome per un dato
+carattere in MathML non ha effetto sulla sua presentazione. </p>
+
+<p>Si intende che ogni entit&agrave; nominata in seguito appare da
+qualche parte nel <a href="chapter6.html">Capitolo&nbsp;6 [Caratteri,
+entit&agrave; e font]</a>. Se questo non &egrave; vero, &egrave; un
+errore in queste specifiche. Se tale errore esiste, deve essere
+considerato come definitivo il capitolo sopra nominato, piuttosto che
+questa appendice. </p>
+
+<h2>
+<a name="oper-dict:space"></a>D.4 Note sugli attributi
+<code>lspace</code> e <code>rspace</code> </h2>
+
+<p>I valori per <code>lspace</code> e <code>rspace</code> dati qui
+variano da 0 a <code>verythickmathspace</code>, che ha un valore
+predefinito di 6/18 em. Per gli operatori invisibili il cui contenuto
+&egrave; <code>&amp;InvisibleTimes;</code> o
+<code>&amp;ApplyFunction;</code>, si consiglia che i riproduttori
+MathML scelgano la spaziatura in un modo dipendente dal contesto (che
+&egrave; un'eccezione ai valori statici dati nella seguente tabella).
+Per <code>&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;</code>, la
+spaziatura totale (<code>lspace</code>+<code>rspace</code>) in
+espressioni come `sin <i>x</i>' (dove l'operando a destra non inizia
+con una parentesi) deve essere maggiore di zero; per
+<code>&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;</code>, la spaziatura
+totale deve essere maggiore di zero quando entrambi gli operandi (o i
+token pi&ugrave; vicini da ogni lato, se sulla linea di base) sono
+identificatori visualizzati in un font non inclinato (ovvero, sotto le
+regole consigliate, quando entrambi gli operandi sono identificatori
+multi-carattere). </p>
+
+<p>Alcuni riproduttori possono non voler usare nessuna spaziatura per
+la maggior parte degli operatori che appaiono negli apici e nei pedici
+(ovvero quando <code>scriptlevel</code> &egrave; maggiore di 0; si
+veda la <a href="chapter3.html#presm:mstyle">Sezione&nbsp;3.3.4
+[Modifiche allo stile (<code>mstyle</code>)]</a>), come &egrave; il
+caso in T<sub>E</sub>X. </p>
+
+<h2>
+<a name="oper-dict:entries"></a>D.5 Voci del dizionario degli
+operatori </h2>
+<pre>
+"("                                  form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+")"                                  form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"["                                  form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"]"                                  form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"{"                                  form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"}"                                  form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;CloseCurlyDoubleQuote;"            form="postfix" fence="true"  lspace="0em" rspace="0em"
+"&amp;CloseCurlyQuote;"                  form="postfix" fence="true"  lspace="0em" rspace="0em"
+"&amp;LeftAngleBracket;"                 form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;LeftBracketingBar;"                form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;LeftCeiling;"                      form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;LeftDoubleBracket;"                form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;LeftDoubleBracketingBar;"          form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;LeftFloor;"                        form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;OpenCurlyDoubleQuote;"             form="prefix"  fence="true"  lspace="0em" rspace="0em"
+"&amp;OpenCurlyQuote;"                   form="prefix"  fence="true"  lspace="0em" rspace="0em"
+"&amp;RightAngleBracket;"                form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;RightBracketingBar;"               form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;RightCeiling;"                     form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;RightDoubleBracket;"               form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;RightDoubleBracketingBar;"         form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;RightFloor;"                       form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;LeftSkeleton;"                     form="prefix"  fence="true"  lspace="0em" rspace="0em"
+"&amp;RightSkeleton;"                    form="postfix" fence="true"  lspace="0em" rspace="0em"
+"&amp;InvisibleComma;"                   form="infix"   separator="true"  lspace="0em" rspace="0em"
+","                                  form="infix"   separator="true"  lspace="0em" rspace="verythickmathspace"
+"&amp;HorizontalLine;"                   form="infix"   stretchy="true" minsize="0"  lspace="0em" rspace="0em"
+"&amp;VerticalLine;"                     form="infix"   stretchy="true" minsize="0"  lspace="0em" rspace="0em"
+";"                                  form="infix"   separator="true"  lspace="0em" rspace="thickmathspace"
+";"                                  form="postfix" separator="true"  lspace="0em" rspace="0em"
+":="                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Assign;"                           form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Because;"                          form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Therefore;"                        form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;VerticalSeparator;"                form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"//"                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Colon;"                            form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;"                              form="prefix"   lspace="0em" rspace="thickmathspace"
+"&amp;"                              form="postfix"  lspace="thickmathspace" rspace="0em"
+"*="                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"-="                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"+="                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"/="                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"-&gt;"                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+":"                                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+".."                                 form="postfix"  lspace="mediummathspace" rspace="0em"
+"..."                                form="postfix"  lspace="mediummathspace" rspace="0em"
+"&amp;SuchThat;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DoubleLeftTee;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DoubleRightTee;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DownTee;"                          form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftTee;"                          form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightTee;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Implies;"                          form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RoundImplies;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"|"                                  form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"||"                                 form="infix"    lspace="mediummathspace" rspace="mediummathspace"
+"&amp;Or;"                               form="infix"   stretchy="true"  lspace="mediummathspace" rspace="mediummathspace"
+"&amp;&amp;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;And;"                              form="infix"   stretchy="true"  lspace="mediummathspace" rspace="mediummathspace"
+"&amp;"                              form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"!"                                  form="prefix"   lspace="0em" rspace="thickmathspace"
+"&amp;Not;"                              form="prefix"   lspace="0em" rspace="thickmathspace"
+"&amp;Exists;"                           form="prefix"   lspace="0em" rspace="thickmathspace"
+"&amp;ForAll;"                           form="prefix"   lspace="0em" rspace="thickmathspace"
+"&amp;NotExists;"                        form="prefix"   lspace="0em" rspace="thickmathspace"
+"&amp;Element;"                          form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotElement;"                       form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotReverseElement;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSquareSubset;"                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSquareSubsetEqual;"             form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSquareSuperset;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSquareSupersetEqual;"           form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSubset;"                        form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSubsetEqual;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSuperset;"                      form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSupersetEqual;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;ReverseElement;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SquareSubset;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SquareSubsetEqual;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SquareSuperset;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SquareSupersetEqual;"              form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Subset;"                           form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SubsetEqual;"                      form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Superset;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SupersetEqual;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DoubleLeftArrow;"                  form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DoubleLeftRightArrow;"             form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DoubleRightArrow;"                 form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DownLeftRightVector;"              form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DownLeftTeeVector;"                form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DownLeftVector;"                   form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DownLeftVectorBar;"                form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DownRightTeeVector;"               form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DownRightVector;"                  form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DownRightVectorBar;"               form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftArrow;"                        form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftArrowBar;"                     form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftArrowRightArrow;"              form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftRightArrow;"                   form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftRightVector;"                  form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftTeeArrow;"                     form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftTeeVector;"                    form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftVector;"                       form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftVectorBar;"                    form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LowerLeftArrow;"                   form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LowerRightArrow;"                  form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightArrow;"                       form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightArrowBar;"                    form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightArrowLeftArrow;"              form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightTeeArrow;"                    form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightTeeVector;"                   form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightVector;"                      form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightVectorBar;"                   form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;ShortLeftArrow;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;ShortRightArrow;"                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;UpperLeftArrow;"                   form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;UpperRightArrow;"                  form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"="                                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&lt;"                               form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&gt;"                                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"!="                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"=="                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&lt;="                              form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&gt;="                                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Congruent;"                        form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;CupCap;"                           form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DotEqual;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;DoubleVerticalBar;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Equal;"                            form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;EqualTilde;"                       form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Equilibrium;"                      form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;GreaterEqual;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;GreaterEqualLess;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;GreaterFullEqual;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;GreaterGreater;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;GreaterLess;"                      form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;GreaterSlantEqual;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;GreaterTilde;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;HumpDownHump;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;HumpEqual;"                        form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftTriangle;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftTriangleBar;"                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LeftTriangleEqual;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;le;"                               form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LessEqualGreater;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LessFullEqual;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LessGreater;"                      form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LessLess;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LessSlantEqual;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;LessTilde;"                        form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NestedGreaterGreater;"             form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NestedLessLess;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotCongruent;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotCupCap;"                        form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotDoubleVerticalBar;"             form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotEqual;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotEqualTilde;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotGreater;"                       form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotGreaterEqual;"                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotGreaterFullEqual;"              form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotGreaterGreater;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotGreaterLess;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotGreaterSlantEqual;"             form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotGreaterTilde;"                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotHumpDownHump;"                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotHumpEqual;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLeftTriangle;"                  form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLeftTriangleBar;"               form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLeftTriangleEqual;"             form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLess;"                          form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLessEqual;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLessFullEqual;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLessGreater;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLessLess;"                      form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLessSlantEqual;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotLessTilde;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotNestedGreaterGreater;"          form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotNestedLessLess;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotPrecedes;"                      form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotPrecedesEqual;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotPrecedesSlantEqual;"            form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotPrecedesTilde;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotRightTriangle;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotRightTriangleBar;"              form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotRightTriangleEqual;"            form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSucceeds;"                      form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSucceedsEqual;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSucceedsSlantEqual;"            form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotSucceedsTilde;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotTilde;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotTildeEqual;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotTildeFullEqual;"                form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotTildeTilde;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;NotVerticalBar;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Precedes;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;PrecedesEqual;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;PrecedesSlantEqual;"               form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;PrecedesTilde;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Proportion;"                       form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Proportional;"                     form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;ReverseEquilibrium;"               form="infix"   stretchy="true"  lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightTriangle;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightTriangleBar;"                 form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;RightTriangleEqual;"               form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Succeeds;"                         form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SucceedsEqual;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SucceedsSlantEqual;"               form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SucceedsTilde;"                    form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;Tilde;"                            form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;TildeEqual;"                       form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;TildeFullEqual;"                   form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;TildeTilde;"                       form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;UpTee;"                            form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;VerticalBar;"                      form="infix"    lspace="thickmathspace" rspace="thickmathspace"
+"&amp;SquareUnion;"                      form="infix"   stretchy="true"  lspace="mediummathspace" rspace="mediummathspace"
+"&amp;Union;"                            form="infix"   stretchy="true"  lspace="mediummathspace" rspace="mediummathspace"
+"&amp;UnionPlus;"                        form="infix"   stretchy="true"  lspace="mediummathspace" rspace="mediummathspace"
+"-"                                  form="infix"    lspace="mediummathspace" rspace="mediummathspace"
+"+"                                  form="infix"    lspace="mediummathspace" rspace="mediummathspace"
+"&amp;Intersection;"                     form="infix"   stretchy="true"  lspace="mediummathspace" rspace="mediummathspace"
+"&amp;MinusPlus;"                        form="infix"    lspace="mediummathspace" rspace="mediummathspace"
+"&amp;PlusMinus;"                        form="infix"    lspace="mediummathspace" rspace="mediummathspace"
+"&amp;SquareIntersection;"               form="infix"   stretchy="true"  lspace="mediummathspace" rspace="mediummathspace"
+"&amp;Vee;"                              form="prefix"  largeop="true" movablelimits="true" stretchy="true"  lspace="0em" rspace="thinmathspace"
+"&amp;CircleMinus;"                      form="prefix"  largeop="true" movablelimits="true"  lspace="0em" rspace="thinmathspace"
+"&amp;CirclePlus;"                       form="prefix"  largeop="true" movablelimits="true"  lspace="0em" rspace="thinmathspace"
+"&amp;Sum;"                              form="prefix"  largeop="true" movablelimits="true" stretchy="true"  lspace="0em" rspace="thinmathspace"
+"&amp;Union;"                            form="prefix"  largeop="true" movablelimits="true" stretchy="true"  lspace="0em" rspace="thinmathspace"
+"&amp;UnionPlus;"                        form="prefix"  largeop="true" movablelimits="true" stretchy="true"  lspace="0em" rspace="thinmathspace"
+"lim"                                form="prefix"  movablelimits="true"  lspace="0em" rspace="thinmathspace"
+"max"                                form="prefix"  movablelimits="true"  lspace="0em" rspace="thinmathspace"
+"min"                                form="prefix"  movablelimits="true"  lspace="0em" rspace="thinmathspace"
+"&amp;CircleMinus;"                      form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;CirclePlus;"                       form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;ClockwiseContourIntegral;"         form="prefix"  largeop="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;ContourIntegral;"                  form="prefix"  largeop="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;CounterClockwiseContourIntegral;"  form="prefix"  largeop="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;DoubleContourIntegral;"            form="prefix"  largeop="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;Integral;"                         form="prefix"  largeop="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;Cup;"                              form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;Cap;"                              form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;VerticalTilde;"                    form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;Wedge;"                            form="prefix"  largeop="true" movablelimits="true" stretchy="true"  lspace="0em" rspace="thinmathspace"
+"&amp;CircleTimes;"                      form="prefix"  largeop="true" movablelimits="true"  lspace="0em" rspace="thinmathspace"
+"&amp;Coproduct;"                        form="prefix"  largeop="true" movablelimits="true" stretchy="true"  lspace="0em" rspace="thinmathspace"
+"&amp;Product;"                          form="prefix"  largeop="true" movablelimits="true" stretchy="true"  lspace="0em" rspace="thinmathspace"
+"&amp;Intersection;"                     form="prefix"  largeop="true" movablelimits="true" stretchy="true"  lspace="0em" rspace="thinmathspace"
+"&amp;Coproduct;"                        form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;Star;"                             form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;CircleDot;"                        form="prefix"  largeop="true" movablelimits="true"  lspace="0em" rspace="thinmathspace"
+"*"                                  form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;InvisibleTimes;"                   form="infix"    lspace="0em" rspace="0em"
+"&amp;CenterDot;"                        form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;CircleTimes;"                      form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;Vee;"                              form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;Wedge;"                            form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;Diamond;"                          form="infix"    lspace="thinmathspace" rspace="thinmathspace"
+"&amp;Backslash;"                        form="infix"   stretchy="true"  lspace="thinmathspace" rspace="thinmathspace"
+"/"                                  form="infix"   stretchy="true"  lspace="thinmathspace" rspace="thinmathspace"
+"-"                                  form="prefix"   lspace="0em" rspace="veryverythinmathspace"
+"+"                                  form="prefix"   lspace="0em" rspace="veryverythinmathspace"
+"&amp;MinusPlus;"                        form="prefix"   lspace="0em" rspace="veryverythinmathspace"
+"&amp;PlusMinus;"                        form="prefix"   lspace="0em" rspace="veryverythinmathspace"
+"."                                  form="infix"    lspace="0em" rspace="0em"
+"&amp;Cross;"                            form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"**"                                 form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;CircleDot;"                        form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;SmallCircle;"                      form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;Square;"                           form="prefix"   lspace="0em" rspace="verythinmathspace"
+"&amp;Del;"                              form="prefix"   lspace="0em" rspace="verythinmathspace"
+"&amp;PartialD;"                         form="prefix"   lspace="0em" rspace="verythinmathspace"
+"&amp;CapitalDifferentialD;"             form="prefix"   lspace="0em" rspace="verythinmathspace"
+"&amp;DifferentialD;"                    form="prefix"   lspace="0em" rspace="verythinmathspace"
+"&amp;Sqrt;"                             form="prefix"  stretchy="true"  lspace="0em" rspace="verythinmathspace"
+"&amp;DoubleDownArrow;"                  form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DoubleLongLeftArrow;"              form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DoubleLongLeftRightArrow;"         form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DoubleLongRightArrow;"             form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DoubleUpArrow;"                    form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DoubleUpDownArrow;"                form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DownArrow;"                        form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DownArrowBar;"                     form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DownArrowUpArrow;"                 form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;DownTeeArrow;"                     form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LeftDownTeeVector;"                form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LeftDownVector;"                   form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LeftDownVectorBar;"                form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LeftUpDownVector;"                 form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LeftUpTeeVector;"                  form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LeftUpVector;"                     form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LeftUpVectorBar;"                  form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LongLeftArrow;"                    form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LongLeftRightArrow;"               form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;LongRightArrow;"                   form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;ReverseUpEquilibrium;"             form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;RightDownTeeVector;"               form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;RightDownVector;"                  form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;RightDownVectorBar;"               form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;RightUpDownVector;"                form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;RightUpTeeVector;"                 form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;RightUpVector;"                    form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;RightUpVectorBar;"                 form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;ShortDownArrow;"                   form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;ShortUpArrow;"                     form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;UpArrow;"                          form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;UpArrowBar;"                       form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;UpArrowDownArrow;"                 form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;UpDownArrow;"                      form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;UpEquilibrium;"                    form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;UpTeeArrow;"                       form="infix"   stretchy="true"  lspace="verythinmathspace" rspace="verythinmathspace"
+"^"                                  form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"&lt;&gt;"                              form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"'"                                  form="postfix"  lspace="verythinmathspace" rspace="0em"
+"!"                                  form="postfix"  lspace="verythinmathspace" rspace="0em"
+"!!"                                 form="postfix"  lspace="verythinmathspace" rspace="0em"
+"~"                                  form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"@"                                  form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"--"                                 form="postfix"  lspace="verythinmathspace" rspace="0em"
+"--"                                 form="prefix"   lspace="0em" rspace="verythinmathspace"
+"++"                                 form="postfix"  lspace="verythinmathspace" rspace="0em"
+"++"                                 form="prefix"   lspace="0em" rspace="verythinmathspace"
+"&amp;ApplyFunction;"                    form="infix"    lspace="0em" rspace="0em"
+"?"                                  form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"_"                                  form="infix"    lspace="verythinmathspace" rspace="verythinmathspace"
+"&amp;Breve;"                            form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;Cedilla;"                          form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalGrave;"                 form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalDot;"                   form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalDoubleAcute;"           form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalLeftArrow;"             form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalLeftRightArrow;"        form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalLeftRightVector;"       form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalLeftVector;"            form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalAcute;"                 form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalRightArrow;"            form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalRightVector;"           form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;DiacriticalTilde;"                 form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;DoubleDot;"                        form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;DownBreve;"                        form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;Hacek;"                            form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;Hat;"                              form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;OverBar;"                          form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;OverBrace;"                        form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;OverBracket;"                      form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;OverParenthesis;"                  form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;TripleDot;"                        form="postfix" accent="true"  lspace="0em" rspace="0em"
+"&amp;UnderBar;"                         form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;UnderBrace;"                       form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;UnderBracket;"                     form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+"&amp;UnderParenthesis;"                 form="postfix" accent="true" stretchy="true"  lspace="0em" rspace="0em"
+</pre>
+
+<p class="minitoc">
+  Descrizione sommaria: <a href="overview.html">Linguaggio di
+  marcatura matematica (MathML) Versione 2.0</a>
+<br>
+  Precedente: C <a href="appendixc.html">Definizioni degli elementi di
+  contenuto</a>
+<br>
+  Successivo: E <a href="appendixe.html">Modello a oggetti dei
+  documenti per il MathML</a> (Non normativa) <br>
+</p>
+</body>
+</html>

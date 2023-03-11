@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Linguaggio di marcatura matematica (MathML) Versione 2.0</title>
+<link rel="stylesheet" type="text/css"
+      href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+
+  .attribute-Name { background: #F9F5C0; }
+  .method-Name { background: #C0C0F9; }
+  .IDL-definition { border-style: solid; 
+               border-width: 1px ; 
+               color: #001000;
+               background: #E0FFE0; 
+               border-color: #206020;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  .baseline {vertical-align: baseline}
+
+  #eqnoc1 {width: 10%}
+  #eqnoc2 {width: 80%; text-align: center; }
+  #eqnoc3 {width: 10%; text-align: right; }
+          
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<div class="head">
+<a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home.gif"
+   alt="W3C" height="48" width="72"></a>
+<h1>Linguaggio di marcatura matematica (MathML) Versione 2.0</h1>
+<h2>Bozza di lavoro del W3C 28 marzo 2000</h2>
+<dl>
+<dt>Questa versione (in lingua inglese): </dt>
+<dd>
+<a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/">http://www.w3.org/TR/2000/WD-MathML2-20000328</a>
+<br>Disponibile anche come: <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/WD-MathML2-20000328.zip">archivio
+zip HTML</a>, <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/XHTML-MathML-20000328.zip">archivio
+zip XHTML</a>, <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/XML-MathML-20000328.zip">archivio
+zip XML</a>, <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/PDF-s-MathML-20000328.pdf">PDF
+(schermo)</a>, <a
+href="http://www.w3.org/TR/2000/WD-MathML2-20000328/PDF-p-MathML-20000328.pdf">PDF
+(carta)</a>
+</dd>
+<dt>Ultima versione (in lingua inglese): </dt>
+<dd>
+<a href="http://www.w3.org/TR/MathML2">http://www.w3.org/TR/MathML2</a>
+<br>
+</dd>
+<dt>Versioni precedenti (in lingua inglese): </dt>
+<dd>
+<a href="http://www.w3.org/TR/2000/WD-MathML2-20000211/">http://www.w3.org/TR/2000/WD-MathML2-20000211</a>
+<br>
+<a href="http://www.w3.org/TR/1999/WD-MathML2-19991222/">http://www.w3.org/TR/1999/WD-MathML2-19991222</a>
+<br>
+<a href="http://www.w3.org/TR/1999/WD-MathML2-19991201/">http://www.w3.org/TR/1999/WD-MathML2-19991201</a>
+<br>
+</dd>
+<dt>Curatori:
+  </dt>
+<dd>
+Nico Poppelier
+
+  (Penta Scope)
+
+<br>
+Robert Miner
+
+  (Geometry Technologies, Inc.)
+
+<br>
+Patrick Ion
+
+  (Riviste matematiche, Societ&agrave; Matematica Americana)
+
+<br>
+David Carlisle
+
+  (NAG)
+
+<br>
+</dd>
+<dt>Autori principali:
+  </dt>
+<dd>Ron Ausbrooks, Stephen Buswell, St&eacute;phane Dalmas, Stan Devitt,
+Angel Diaz, Roger Hunter, Bruce Smith, Neil Soiffer, Robert Sutor, Stephen
+Watt </dd>
+</dl>
+<p class="copyright">
+<a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">
+   Copyright</a>&nbsp;&copy;&nbsp;1998-2000&nbsp;<a
+href="http://www.w3.org/"><abbr title="World Wide Web
+Consortium">W3C</abbr></a><sup>&reg;</sup><a
+href="http://www.lcs.mit.edu/"><abbr title="Massachusetts Institute of
+Technology">MIT</abbr></a>,
+  <a href="http://www.inria.fr/"><abbr lang="fr" title="Institut
+National de Recherche en Informatique et
+Automatique">INRIA</abbr></a>,
+  <a href="http://www.keio.ac.jp/">Keio</a>), tutti i diritti
+riservati. Si applicano le regole del W3C in materia di
+  <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">responsabilit&agrave;</a>,
+  <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">marchi
+registrati</a>,
+<a
+href="http://www.w3.org/Consortium/Legal/copyright-documents-19990405">uso
+dei documenti</a> e <a
+href="http://www.w3.org/Consortium/Legal/copyright-software-19980720">licenza
+del software</a>. </p>
+<hr>
+</div>
+<h2>
+<a name="abstract">Nota introduttiva</a>
+</h2>
+<p>Queste specifiche definiscono il Linguaggio di Marcatura
+Matematica, o <a name="td-mathml"></a>MathML. Il MathML &egrave;
+un'applicazione dell'XML per descrivere la notazione matematica e
+catturarne sia la struttura che il contenuto. L'obiettivo del MathML
+&egrave; far s&igrave; che testi matematici possano essere trasmessi,
+ricevuti ed elaborati sul Web, come <a name="td-html"></a>l'HTML ha
+reso possibile questa funzionalit&agrave; per i testi. </p>
+
+<p>Queste specifiche del linguaggio di marcatura MathML sono intese
+principalmente per un pubblico di lettori che consiste di coloro che
+svilupperanno o implementeranno riproduttori o programmi di scrittura
+che lo useranno, o software che comunicher&agrave; usando il MathML
+come protocollo per l'ingresso o per l'uscita. <i>Non</i> sono una
+Guida per l'Utente ma piuttosto un documento di riferimento. </p>
+
+<p>Questo documento inizia con informazioni di sfondo sulla notazione
+matematica, sui problemi che essa pone e sulla filosofia su cui si
+basano le soluzioni proposte dal MathML. Il MathML pu&ograve; essere
+usato per codificare sia la notazione matematica che il contenuto
+matematico. Circa trenta dei tag di MathML descrivono strutture
+notazionali astratte, mentre altri cento forniscono un modo di
+specificare in maniera non ambigua il significato che si intende dare
+ad un'espressione. Capitoli aggiuntivi discutono di come interagiscono
+gli elementi MathML di contenuto e di presentazione, e come potrebbero
+essere implementati e devono interagire con i browser i riproduttori
+MathML. Infine, questo documento tratta del problema del caratteri
+MathML e la loro relazione con i font. </p>
+
+<p>Sebbene il MathML sia leggibile, &egrave; anticipato che, salvo nei
+casi pi&ugrave; semplici, gli autori useranno programmi di scrittura
+di equazioni, programmi di conversione e altri strumenti software
+specializzati per generare il MathML. Esistono gi&agrave; varie
+versioni precedenti di tali strumenti MathML, e svariate altre, sia
+software liberamente disponibile che prodotti commerciali, sono in
+fase di sviluppo. </p>
+<h2>
+<a name="status">Status di questo documento</a>
+</h2>
+<p>Questa &egrave; l'Ultima Bozza di Lavoro delle specifiche MathML
+2.0 preparate dal Gruppo di Lavoro per la Matematica del W3C. Il
+periodo di revisione finisce il 30 aprile 2000. Il Gruppo di Lavoro
+per la Matematica ha deciso di procedere all'Ultima Chiamata con
+questa bozza al suo recente incontro faccia a faccia ad Ann Arbor (<a
+href="http://lists.w3.org/Archives/Member/w3c-math-wg/2000JanMar/0358.html">verbali</a>).
+</p>
+
+<p>Questa &egrave; una Bozza di Lavoro del W3C per la revisione da
+parte dei membri del W3C e di altre parti interessate. E' una bozza e
+pu&ograve; essere aggiornata, sostituita o resa obsoleta da altri
+documenti in ogni momento. E' inappropriato usare le bozze di lavoro
+del W3C come materiale di riferimento o citarli in modo diverso da
+`lavoro in progresso'. Questo &egrave; lavoro in progresso e non
+implica clausole aggiuntive, o il consenso, del W3C o dei partecipanti
+al Gruppo di Lavoro per la Matematica. </p>
+
+<p>Questo documento &egrave; stato prodotto dal <a
+href="http://www.w3.org/Math/">Gruppo di Lavoro per la Matematica del
+W3C</a>. </p>
+
+<p>Un elenco degli attuali Resoconti Tecnici del W3C pu&ograve; essere
+trovato all'URL <a
+href="http://www.w3.org/TR/">http://www.w3.org/TR</a>. </p>
+
+<p>Questo documento &egrave; stato prodotto come parte
+dell'attivit&agrave; del <a href="http://www.w3.org/UI/">Dominio per
+le Interfacce Utenti del W3C</a>. Gli obiettivi del Gruppo di Lavoro
+per la Matematica del W3C sono discussi nello <a
+href="http://www.w3.org/Math/W3CDocs/mathcharter.html">Statuto del GL
+per la Matematica del W3C</a> (riveduto febbraio 2000 dall'originale
+dell'11 giugno 1998). E' disponibile un elenco dei <a
+href="appendixg.html#contributors">partecipanti al Gruppo di Lavoro
+per la Matematica del W3C</a>. </p>
+
+<p>La presente bozza &egrave; una revisione della precedente <a
+href="http://www.w3.org/1999/07/REC-MathML-19990707/">Direttiva MathML
+1.01 del W3C</a> corretta. Differisce da essa nel fatto che tutti i
+capitoli sono stati aggiornati e due sono stati aggiunti. </p>
+
+<p>I Capitoli 1 e 2, che sono materiale introduttivo, sono stati
+riveduti per riflettere i cambiamenti altrove nel documento, e nel
+contesto Web in rapida evoluzione. I Capitoli 3 e 4 sono stati estesi
+per descrivere nuove funzionalit&agrave; aggiunte, come pure piccoli
+miglioramenti del materiale gi&agrave; proposto. Il Capitolo 5
+&egrave; stato riscritto nuovamente per riflettere i cambiamenti della
+tecnologia disponibile. Le tabelle maggiori del Capitolo 6 sono state
+rigenerate per riflettere un elenco migliorato dei caratteri Unicode
+utili per la matematica, e il testo riveduto per riflettere la nuova
+forma preferita per accedere ad essi. Il Capitolo 7 &egrave; stato
+completamente riveduto perch&eacute; &egrave; cambiata la tecnologia
+del Web. E' stato aggiunto un nuovo Capitolo 8 sul DOM del MathML;
+quest'ultimo punta ad una nuova appendice E per un elenco
+dettagliato. </p>
+
+<p>Le appendici sono state riorganizzate in gruppi normativi e non
+normativi. Le appendici E ed H sono completamente nuove.
+</p>
+
+<p>Commenti su questo documento devono essere inviati alla <a
+href="mailto:www-math@w3.org">mailing list pubblica del Gruppo di
+Lavoro per la Matematica</a>. </p>
+
+<h2>
+<a name="contents">Indice</a>
+</h2>
+<p>1 <a href="chapter1.html">Introduzione</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1.1 <a
+href="chapter1.html#intro:notation">La matematica e la sua
+notazione</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1.2 <a
+href="chapter1.html#intro:origin">Origini ed obiettivi</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1.3 <a href="chapter1.html#intro:role">Il
+ruolo del MathML sul Web</a>
+<br>2 <a href="chapter2.html">Fondamenti del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;2.1 <a
+href="chapter2.html#fund:overview">Descrizione sommaria del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;2.2 <a
+href="chapter2.html#fund:examples">Alcuni esempi di MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;2.3 <a
+href="chapter2.html#fund:syntax">Sintassi e grammatica del MathML</a>
+<br>3 <a href="chapter3.html">Marcatura di presentazione</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.1 <a
+href="chapter3.html#presm:intro">Introduzione</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.2 <a
+href="chapter3.html#presm:tokel">Elementi token</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.3 <a
+href="chapter3.html#presm:genlayout">Schemi generali di
+disposizione</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.4 <a
+href="chapter3.html#presm:scrlim">Schemi di apici, pedici e limiti</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.5 <a
+href="chapter3.html#presm:tabmat">Tabelle e matrici</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.6 <a
+href="chapter3.html#presm:enliven">Espressioni vivacizzanti</a>
+<br>4 <a href="chapter4.html">Marcatura di contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;4.1 <a
+href="chapter4.html#contm:intro">Introduzione</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;4.2 <a
+href="chapter4.html#contm:usage">Guida all'uso degli elementi di
+contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;4.3 <a
+href="chapter4.html#contm:attrib">Attributi degli elementi di
+contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;4.4 <a href="chapter4.html#contm:elem">Gli
+elementi della marcatura di contenuto</a>
+<br>5 <a href="chapter5.html">Combinare marcatura di presentazione e
+di contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;5.1 <a
+href="chapter5.html#mixing:why">Perch&eacute; due tipi diversi di
+marcatura?</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;5.2 <a
+href="chapter5.html#mixing:markup">Marcatura mista</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;5.3 <a
+href="chapter5.html#mixing:parallel">Marcatura parallela</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;5.4 <a
+href="chapter5.html#mixing:tools">Strumenti, fogli di stile e macro
+per la marcatura combinata</a>
+<br>6 <a href="chapter6.html">Caratteri, entit&agrave; e font</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;6.1 <a
+href="chapter6.html#chars:intro">Introduzione</a>
+<br>7 <a href="chapter7.html">L'interfaccia del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;7.1 <a
+href="chapter7.html#interf:embed">Incorporare il MathML in altri
+documenti</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;7.2 <a
+href="chapter7.html#interf:genproc">Generare, elaborare ed
+interpretare il MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;7.3 <a
+href="chapter7.html#interf:future">Estensioni future</a>
+<br>8 <a href="chapter8.html">Modello a oggetti dei documenti per il
+MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;8.1 <a
+href="chapter8.html#dom-intro:intro">Introduzione</a>
+<br>
+</p>
+<h3>Appendici</h3>
+<p>A <a href="appendixa.html">Analisi del MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;A.1 <a
+href="appendixa.html#parsing:dtd">La DTD del MathML</a>
+<br>B <a href="appendixb.html">Grammatica di convalida della marcatura
+di contenuto</a>
+<br>C <a href="appendixc.html">Definizioni degli elementi di
+contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;C.1 <a href="appendixc.html#cedef:about">A
+proposito degli elementi della marcatura di contenuto</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;C.2 <a
+href="appendixc.html#cedef:def">Definizioni degli elementi di
+contenuto del MathML</a>
+<br>D <a href="appendixd.html">Dizionario degli operatori</a> (Non
+normativa)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.1 <a
+href="appendixd.html#oper-dict:format">Formato delle voci nel
+dizionario degli operatori</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.2 <a
+href="appendixd.html#oper-dict:index">Indicizzazione del dizionario
+degli operatori</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.3 <a
+href="appendixd.html#oper-dict:names">Scelta dei nomi delle
+entit&agrave;</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.4 <a
+href="appendixd.html#oper-dict:space">Note sugli attributi
+<code>lspace</code> e <code>rspace</code></a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.5 <a
+href="appendixd.html#oper-dict:entries">Voci del dizionario degli
+operatori</a>
+<br>E <a href="appendixe.html">Modello a oggetti dei documenti per il
+MathML</a> (Non normativa)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;E.1 <a
+href="appendixe.html#dom:interfaces">Interfacce IDL</a>
+<br>F <a href="appendixf.html">Glossario</a> (Non normativa)
+<br>G <a href="appendixg.html">Membri del Gruppo di Lavoro</a> (Non
+normativa)
+<br>H <a href="appendixh.html">Modifiche</a> (Non normativa)
+<br>I <a href="appendixi.html">Riferimenti</a> (Non normativa) <br>
+
+</p>
+<hr>
+
+</body>
+</html>
