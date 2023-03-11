@@ -1,0 +1,111 @@
+/* Custom css */
+
+body, html
+{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5
+{
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #956939;
+}
+
+h1
+{
+	color: #af8554;
+}
+
+p
+{
+	color: #555555;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+/* Twitter widget */
+div.Recent_Tweets_widget div.widget-title h3
+{
+	background: url(images/custom/icon_twit.gif) top left no-repeat;
+	padding-left: 50px;
+}
+
+
+/* Customizzazione widgetsulla destra */
+td.right
+{
+}
+
+td.right div.widget
+{
+}
+
+td.right div.widget ul
+{
+}
+
+td.right div.widget ul li
+{
+	margin: 0 0 0 4px !important;
+}
+
+/* Box nella parte centrale della home */
+#center_widget_area
+{
+}
+
+#center_widget_area div.widget_text
+{
+	width: 170px;
+	height: 90px;
+	overflow: hidden;
+	border: none;
+	padding: 134px 30px 0 30px;
+	margin: 0 15px 15px 0;
+	font-size: 13px;
+	text-align: center;
+	color: white;
+	float: left;
+	background-color: transparent;
+}
+
+#center_widget_area div.widget_text div.textwidget
+{
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+#center_widget_area div.widget_text p
+{
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 19px;
+	text-align: center;
+	color: white;
+	background-color: transparent;
+}
+
+#center_widget_area div.widget_text a
+{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#center_widget_area #text-3
+{
+	background: url(images/custom/box_adotta_azienda.jpg) top left no-repeat;
+}
+
+
+#center_widget_area #text-6
+{
+	background: url(images/custom/box_idee.jpg) top left no-repeat;
+}
+
+#center_widget_area #text-7
+{
+	background: url(images/custom/box_giuristi.jpg) top left no-repeat;
+}

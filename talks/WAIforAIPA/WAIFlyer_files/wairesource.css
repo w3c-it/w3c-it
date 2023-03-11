@@ -1,0 +1,106 @@
+BODY {
+	BACKGROUND: #fffff6; COLOR: black; MARGIN: 1em 1em 1em 50px
+}
+BODY {
+	FONT-FAMILY: Arial, sans-serif
+}
+P {
+	FONT-FAMILY: Arial, sans-serif
+}
+UL {
+	FONT-FAMILY: Arial, sans-serif
+}
+OL {
+	FONT-FAMILY: Arial, sans-serif
+}
+LI {
+	FONT-FAMILY: Arial, sans-serif
+}
+H1 {
+	FONT-FAMILY: Arial, sans-serif
+}
+H2 {
+	FONT-FAMILY: Arial, sans-serif
+}
+H3 {
+	FONT-FAMILY: Arial, sans-serif
+}
+H4 {
+	FONT-FAMILY: Arial, sans-serif
+}
+DT {
+	FONT-FAMILY: Arial, sans-serif
+}
+.navbar {
+	FONT-FAMILY: Arial, sans-serif
+}
+.intnavbar {
+	FONT-FAMILY: Arial, sans-serif
+}
+.policyfooter {
+	FONT-FAMILY: Arial, sans-serif
+}
+H1 {
+	COLOR: #000066
+}
+H2 {
+	COLOR: #000066
+}
+H3 {
+	COLOR: #000066
+}
+H4 {
+	COLOR: #000066
+}
+
+@media All    
+{
+A:link IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none
+}
+A:visited IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none
+}
+    }
+A:link {
+	COLOR: #000066
+}
+A:visited {
+	COLOR: #660066
+}
+H1 {
+	FONT-WEIGHT: bold
+}
+H2 {
+	BACKGROUND: #f6f6bb; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 140%; PADDING-LEFT: 1em; WIDTH: 100%
+}
+.extnavbar {
+	COLOR: #000066
+}
+.intnavbar {
+	FONT-WEIGHT: bold
+}
+.suitenav {
+	BACKGROUND: #eef6ff; FONT-WEIGHT: bold
+}
+.policyfooter {
+	FONT-SIZE: 90%
+}
+.discuss {
+	BACKGROUND: #e6ddee; FONT-WEIGHT: bold
+}
+.present {
+	BACKGROUND: #ffd6ee; FONT-WEIGHT: bold
+}
+.demo {
+	BACKGROUND: #ffddcc; FONT-WEIGHT: bold
+}
+.exercise {
+	BACKGROUND: #ddffcf; FONT-WEIGHT: bold
+}
+.resource {
+	BACKGROUND: #eef6ff
+}
+.disseminate {
+	BACKGROUND: #f6f6bb; FONT-WEIGHT: bold
+}

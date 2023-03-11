@@ -1,0 +1,569 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+         xmlns:qh="http://www.weblab.isti.cnr.it/projects/QH/properties/"> 
+  <rdf:Description rdf:nodeID="a1">
+      <qh:localName>books</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">books</qh:label>
+      <qh:label xml:lang="it">libri</qh:label>
+      <qh:longDescription xml:lang="en">The books in the collection</qh:longDescription >
+      <qh:longDescription xml:lang="it">I libri presenti nella collezione</qh:longDescription >
+      <qh:fullyQualifiedName>books</qh:fullyQualifiedName>
+  </rdf:Description>
+  
+  <rdf:Description rdf:nodeID="a11">
+      <qh:localName>book</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">book</qh:label>
+      <qh:label xml:lang="it">libro</qh:label> 
+      <qh:longDescription xml:lang="en">The book item</qh:longDescription >
+      <qh:longDescription xml:lang="it">Il libro</qh:longDescription >
+      <qh:fullyQualifiedName>books/book</qh:fullyQualifiedName>
+  </rdf:Description>
+  
+  <rdf:Description rdf:nodeID="a111">
+      <qh:localName>metadata</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">metadata</qh:label>
+      <qh:label xml:lang="it">metadati</qh:label>
+      <qh:longDescription xml:lang="en">Metadata of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Metadati del libro</qh:longDescription >
+      <qh:fullyQualifiedName>books/book/metadata</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+  <rdf:Description rdf:nodeID="a112">
+      <qh:localName>content</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">content</qh:label>
+      <qh:label xml:lang="it">contenuto</qh:label>
+      <qh:longDescription xml:lang="en">Book content</qh:longDescription >
+      <qh:longDescription xml:lang="it">Contenuti del libro</qh:longDescription >
+      <qh:fullyQualifiedName>books/book/content</qh:fullyQualifiedName>
+  </rdf:Description>
+  
+  <rdf:Description rdf:nodeID="a11attr1">
+      <qh:localName>number</qh:localName>
+      <qh:kind>attribute</qh:kind>
+      <qh:label xml:lang="en">number</qh:label>
+      <qh:label xml:lang="it">numero</qh:label>
+      <qh:longDescription xml:lang="en">Book number</qh:longDescription >
+      <qh:longDescription xml:lang="it">Numero del libro nella collezione</qh:longDescription >
+      <qh:fullyQualifiedName>books/book@number</qh:fullyQualifiedName>
+  </rdf:Description>
+
+  <rdf:Description rdf:nodeID="a1111">
+      <qh:localName>title</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">title</qh:label>
+      <qh:label xml:lang="it">titolo</qh:label>
+      <qh:longDescription xml:lang="en">The title of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Titolo del libro</qh:longDescription>
+      <qh:recfm>short</qh:recfm>
+         <qh:fullyQualifiedName>books/book/metadata/title</qh:fullyQualifiedName>
+  </rdf:Description> 
+	
+  <rdf:Description rdf:nodeID="a1111attr1">
+      <qh:localName>shortTitle</qh:localName>
+      <qh:kind>attribute</qh:kind>
+      <qh:label xml:lang="en">shortTitle</qh:label>
+      <qh:label xml:lang="it">titoloBreve</qh:label>
+      <qh:longDescription xml:lang="en">The short title of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Titolo breve del libro</qh:longDescription >
+      <qh:fullyQualifiedName>books/book/metadata/title@shortTitle</qh:fullyQualifiedName>
+   </rdf:Description> 
+  
+   <rdf:Description rdf:nodeID="a1112">
+      <qh:localName>authors</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">authors</qh:label>
+      <qh:label xml:lang="it">autori</qh:label>
+      <qh:longDescription xml:lang="en">The authors of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Gli autori del libro</qh:longDescription >
+      <qh:fullyQualifiedName>books/book/metadata/authors</qh:fullyQualifiedName>
+  </rdf:Description> 
+	
+  <rdf:Description rdf:nodeID="a1113">
+      <qh:localName>publicationInfo</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">publicationInfo</qh:label>
+      <qh:label xml:lang="it">informazioniPubblicazione</qh:label>
+      <qh:longDescription xml:lang="en">Publication Info</qh:longDescription >
+      <qh:longDescription xml:lang="it">Informazioni sulla pubblicazione</qh:longDescription >
+      <qh:fullyQualifiedName>books/book/metadata/publicationInfo</qh:fullyQualifiedName>
+  </rdf:Description> 
+	
+  <rdf:Description rdf:nodeID="a1114">
+      <qh:localName>price</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">price</qh:label>
+      <qh:label xml:lang="it">prezzo</qh:label>
+      <qh:longDescription xml:lang="en">The price of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Il prezzo del libro</qh:longDescription >
+      <qh:fullyQualifiedName>books/book/metadata/price</qh:fullyQualifiedName>
+   </rdf:Description> 	
+	
+   <rdf:Description rdf:nodeID="a1115">
+      <qh:localName>subjects</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">subjects</qh:label>
+      <qh:label xml:lang="it">argomenti</qh:label>
+      <qh:longDescription xml:lang="en">The subjects of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Argomenti trattati nel libro</qh:longDescription >
+      <qh:fullyQualifiedName>books/book/metadata/subjects</qh:fullyQualifiedName>
+   </rdf:Description> 
+	
+	<rdf:Description rdf:nodeID="a1115attr1">
+	<qh:localName>xml:lang</qh:localName>
+      <qh:kind>attribute</qh:kind>
+	<qh:label xml:lang="en">language</qh:label>
+      <qh:label xml:lang="it">lingua</qh:label>
+      <qh:longDescription xml:lang="en">The language of the subjects</qh:longDescription >
+      <qh:longDescription xml:lang="it">Il linguaggio in cui sono espressi gli argomenti trattati nel libro</qh:longDescription>
+      <qh:controlledBy>
+        <rdf:Description>
+        <qh:mode>localList</qh:mode>
+        <qh:valueList>
+        <rdf:Description>
+          <qh:vI>it</qh:vI>
+          <qh:vI>en</qh:vI>
+          <qh:vI>fr</qh:vI> 
+        </rdf:Description>
+        </qh:valueList>
+        </rdf:Description>
+</qh:controlledBy> 
+<qh:fullyQualifiedName>books/book/metadata/subjects@xml:lang</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+  <rdf:Description rdf:nodeID="a11121">
+      <qh:localName>author</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">author</qh:label>
+      <qh:label xml:lang="it">autore</qh:label>
+      <qh:longDescription xml:lang="en">An author of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Un autore del libro</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/metadata/authors/author</qh:fullyQualifiedName>
+      <qh:order>relevant</qh:order>
+  </rdf:Description>  
+	
+	<rdf:Description rdf:nodeID="a11151">
+      <qh:localName>subject</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">subject</qh:label>
+      <qh:label xml:lang="it">argomento</qh:label>
+      <qh:longDescription xml:lang="en">A subject of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Un argomento trattato nel libro</qh:longDescription>
+	<qh:controlledBy>
+	<rdf:Description>
+        <qh:mode>thesaurus</qh:mode>
+        <qh:serviceParms>http://www.weblab.isti.cnr.it/projects/QH/demo/services/thsgeo.xml</qh:serviceParms>
+      </rdf:Description>
+      </qh:controlledBy>
+      <qh:controlledBy>
+        <rdf:Description>
+        <qh:mode>externalList</qh:mode>
+        <qh:serviceParms>http://www.weblab.isti.cnr.it/projects/QH/demo/services/subjectList.xml</qh:serviceParms>
+      </rdf:Description>
+      </qh:controlledBy>        
+      <qh:fullyQualifiedName>books/book/metadata/subjects/subject</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11131">
+      <qh:localName>place</qh:localName>
+      <qh:kind>element</qh:kind>
+	<qh:label xml:lang="en">place</qh:label>
+      <qh:label xml:lang="it">luogo</qh:label>
+      <qh:longDescription xml:lang="en">Place of Publication</qh:longDescription >
+      <qh:longDescription xml:lang="it">Luogo di pubblicazione</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/metadata/publicationInfo/place</qh:fullyQualifiedName>
+  </rdf:Description> 
+	
+	<rdf:Description rdf:nodeID="a11132">
+      <qh:localName>publisher</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">publisher</qh:label>
+      <qh:label xml:lang="it">editore</qh:label>
+      <qh:longDescription xml:lang="en">Publisher</qh:longDescription >
+      <qh:longDescription xml:lang="it">Editore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/metadata/publicationInfo/publisher</qh:fullyQualifiedName>
+  </rdf:Description> 
+	
+	<rdf:Description rdf:nodeID="a11133">
+      <qh:localName>dateIssue</qh:localName>
+      <qh:kind>element</qh:kind>
+	<qh:label xml:lang="en">dateIssue</qh:label>
+      <qh:label xml:lang="it">dataPubblicazione</qh:label>
+      <qh:longDescription xml:lang="en">Date of Publication</qh:longDescription >
+      <qh:longDescription xml:lang="it">Data di pubblicazione</qh:longDescription>
+<qh:constrains>
+  <qh:constraint>
+    <qh:element>a11134</qh:element>
+    <qh:constraintExpr xml:lang="en">
+    The value of this element must be less than the value of dateRevised
+    </qh:constraintExpr>
+    <qh:constraintExpr xml:lang="it">
+    Il valore di questo elemento deve essere minore del valore immesso per l'elemento dataRevisione
+    </qh:constraintExpr>
+  </qh:constraint>
+</qh:constrains>      
+<qh:elementaryType>xs:gYear</qh:elementaryType> 
+     <qh:fullyQualifiedName>books/book/metadata/publicationInfo/dateIssue</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11134">
+      <qh:localName>dateRevised</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">dateRevised</qh:label>
+      <qh:label xml:lang="it">dataRevisione</qh:label>
+      <qh:longDescription xml:lang="en">Date of revision</qh:longDescription >
+      <qh:longDescription xml:lang="it">Data di revisione</qh:longDescription>
+      <qh:elementaryType>xs:gYear</qh:elementaryType>
+      
+      <qh:constrainedBy>
+        <qh:constraint>
+          <qh:element>a1113e</qh:element>
+          <qh:constraintExpr xml:lang="en">
+          The value of this element must be more than the value of dateIssue
+          </qh:constraintExpr>
+          <qh:constraintExpr xml:lang="it">
+          Il valore di questo elemento deve essere maggiore del valore immesso per l'elemento dataPubblicazione
+          </qh:constraintExpr>
+        </qh:constraint>
+</qh:constrainedBy>      
+     
+
+      <qh:fullyQualifiedName>books/book/metadata/publicationInfo/dateRevised</qh:fullyQualifiedName>
+     	</rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a1121">
+      <qh:localName>introduction</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">introduction</qh:label>
+      <qh:label xml:lang="it">introduzione</qh:label>
+      <qh:longDescription xml:lang="en">Introduction</qh:longDescription >
+      <qh:longDescription xml:lang="it">Introduzione</qh:longDescription>
+      <qh:recfm>short</qh:recfm>
+	<qh:fullyQualifiedName>books/book/content/introduction</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a1122">
+      <qh:localName>part</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">part</qh:label>
+      <qh:label xml:lang="it">parte</qh:label>
+      <qh:longDescription xml:lang="en">Part</qh:longDescription >
+      <qh:longDescription xml:lang="it">Parte</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a1122attr1">
+      <qh:localName>number</qh:localName>
+      <qh:kind>attribute</qh:kind>
+      <qh:label xml:lang="en">number</qh:label>
+      <qh:label xml:lang="it">numero</qh:label>
+      <qh:longDescription xml:lang="en">Number</qh:longDescription >
+      <qh:longDescription xml:lang="it">Numero</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part@number</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11211">
+      <qh:localName>author</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">author</qh:label>
+      <qh:label xml:lang="it">autore</qh:label>
+      <qh:longDescription xml:lang="en">Author of the introduction</qh:longDescription >
+      <qh:longDescription xml:lang="it">Autore dell'introduzione</qh:longDescription>
+		  <qh:fullyQualifiedName>books/book/content/introduction/author</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11212">
+      <qh:localName>p</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">paragraph</qh:label>
+      <qh:label xml:lang="it">paragrafo</qh:label>
+      <qh:longDescription xml:lang="en">Paragraph</qh:longDescription >
+      <qh:longDescription xml:lang="it">Paragrafo</qh:longDescription>
+      <qh:moreDescendents>no</qh:moreDescendents>
+      <qh:fullyQualifiedName>books/book/content/introduction/p</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a112121">
+      <qh:localName>b</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:searchable>no</qh:searchable>
+      <qh:fullyQualifiedName>books/book/content/introduction/p/b</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a112122">
+      <qh:localName>emph</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:searchable>no</qh:searchable>
+      <qh:fullyQualifiedName>books/book/content/introduction/p/emph</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a112123">
+      <qh:localName>i</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:searchable>no</qh:searchable>
+      <qh:fullyQualifiedName>books/book/content/introduction/p/i</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11221">
+      <qh:localName>container</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">container</qh:label>
+      <qh:label xml:lang="it">contenitore</qh:label>
+      <qh:longDescription xml:lang="en">Container</qh:longDescription >
+      <qh:longDescription xml:lang="it">Contenitore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/container</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11221atrr1">
+      <qh:localName>type</qh:localName>
+      <qh:kind>attribute</qh:kind>
+			<qh:label xml:lang="en">type</qh:label>
+      <qh:label xml:lang="it">tipo</qh:label>
+      <qh:longDescription xml:lang="en">Type of the container</qh:longDescription >
+      <qh:longDescription xml:lang="it">Tipo di contenitore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/container@type</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11222">
+      <qh:localName>title</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">title</qh:label>
+      <qh:label xml:lang="it">titolo</qh:label>
+      <qh:longDescription xml:lang="en">Title of the part</qh:longDescription >
+      <qh:longDescription xml:lang="it">Titolo della parte</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/title</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11223">
+      <qh:localName>introduction</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">introduction</qh:label>
+      <qh:label xml:lang="it">intruduzione</qh:label>
+      <qh:longDescription xml:lang="en">Introduction of the part</qh:longDescription >
+      <qh:longDescription xml:lang="it">Introduzione della parte</qh:longDescription>
+			<!--non so se può andare e se può essere gestita-->
+			<!--<qh:sameTypeOf rdf:nodeID="a1121"/>     --> 
+      <qh:fullyQualifiedName>books/book/content/part/introduction</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	
+	
+	<rdf:Description rdf:nodeID="a112231">
+      <qh:localName>author</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">author</qh:label>
+      <qh:label xml:lang="it">autore</qh:label>
+      <qh:longDescription xml:lang="en">Author of the introduction</qh:longDescription >
+      <qh:longDescription xml:lang="it">Autore dell'introduzione</qh:longDescription>
+		  <qh:fullyQualifiedName>books/book/content/part/introduction/author</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a112232">
+      <qh:localName>p</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">paragraph</qh:label>
+      <qh:label xml:lang="it">paragrafo</qh:label>
+      <qh:longDescription xml:lang="en">Paragraph</qh:longDescription >
+      <qh:longDescription xml:lang="it">Paragrafo</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/introduction/p</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a1122321">
+      <qh:localName>b</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:searchable>no</qh:searchable>
+      <qh:fullyQualifiedName>books/book/content/part/introduction/p/b</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a1122322">
+      <qh:localName>emph</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:searchable>no</qh:searchable>
+      <qh:fullyQualifiedName>books/book/content/part/introduction/p/emph</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a1122323">
+      <qh:localName>i</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:searchable>no</qh:searchable>
+      <qh:fullyQualifiedName>books/book/content/part/introduction/p/i</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	
+	
+	<rdf:Description rdf:nodeID="a11224">
+      <qh:localName>chapter</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">chapter</qh:label>
+      <qh:label xml:lang="it">capitolo</qh:label>
+      <qh:longDescription xml:lang="en">Chapter</qh:longDescription >
+      <qh:longDescription xml:lang="it">Capitolo</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/chapter</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	
+	<rdf:Description rdf:nodeID="a11225">
+      <qh:localName>component</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">component</qh:label>
+      <qh:label xml:lang="it">componente</qh:label>
+      <qh:longDescription xml:lang="en">Component</qh:longDescription >
+      <qh:longDescription xml:lang="it">Componente</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a112241">
+      <qh:localName>title</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">title</qh:label>
+      <qh:label xml:lang="it">titolo</qh:label>
+      <qh:longDescription xml:lang="en">Title of the chapter</qh:longDescription >
+      <qh:longDescription xml:lang="it">Titolo del capitolo</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/chapter/title</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a112242">
+      <qh:localName>p</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">paragraph</qh:label>
+      <qh:label xml:lang="it">paragrafo</qh:label>
+      <qh:longDescription xml:lang="en">Paragraph of the chapter</qh:longDescription >
+      <qh:longDescription xml:lang="it">Paragrafo del capitolo</qh:longDescription>
+			<!--proprietà per indicare che non si permette di ricercare esplicitamente in sottocomponenti-->
+      <qh:fullyQualifiedName>books/book/content/part/chapter/p</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	
+	
+	
+	<rdf:Description rdf:nodeID="a112251">
+      <qh:localName>container</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">container</qh:label>
+      <qh:label xml:lang="it">contenitore</qh:label>
+      <qh:longDescription xml:lang="en">Container</qh:longDescription >
+      <qh:longDescription xml:lang="it">Contenitore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/container</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a112251atrr1">
+      <qh:localName>type</qh:localName>
+      <qh:kind>attribute</qh:kind>
+			<qh:label xml:lang="en">type</qh:label>
+      <qh:label xml:lang="it">tipo</qh:label>
+      <qh:longDescription xml:lang="en">Type of the container</qh:longDescription >
+      <qh:longDescription xml:lang="it">Tipo di contenitore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/container@type</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a112252">
+      <qh:localName>componentTitle</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">title</qh:label>
+      <qh:label xml:lang="it">titolo</qh:label>
+      <qh:longDescription xml:lang="en">Title of the component</qh:longDescription >
+      <qh:longDescription xml:lang="it">Titolo del componente</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/componentTitle</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+		
+	<rdf:Description rdf:nodeID="a112253">
+      <qh:localName>subComponent</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">component</qh:label>
+      <qh:label xml:lang="it">componente</qh:label>
+      <qh:longDescription xml:lang="en">Component</qh:longDescription >
+      <qh:longDescription xml:lang="it">Componente</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/subComponent</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	
+ <rdf:Description rdf:nodeID="a1122531">
+      <qh:localName>container</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">container</qh:label>
+      <qh:label xml:lang="it">contenitore</qh:label>
+      <qh:longDescription xml:lang="en">Container</qh:longDescription >
+      <qh:longDescription xml:lang="it">Contenitore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/subComponent/container</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a1122531atrr1">
+      <qh:localName>type</qh:localName>
+      <qh:kind>attribute</qh:kind>
+			<qh:label xml:lang="en">type</qh:label>
+      <qh:label xml:lang="it">tipo</qh:label>
+      <qh:longDescription xml:lang="en">Type of the container</qh:longDescription >
+      <qh:longDescription xml:lang="it">Tipo di contenitore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/subComponent/container@type</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+ 
+	<rdf:Description rdf:nodeID="a1122532">
+      <qh:localName>componentTitle</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">title</qh:label>
+      <qh:label xml:lang="it">titolo</qh:label>
+      <qh:longDescription xml:lang="en">Title of the component</qh:longDescription >
+      <qh:longDescription xml:lang="it">Titolo del componente</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/subComponent/componentTitle</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+
+	<rdf:Description rdf:nodeID="a1122533">
+      <qh:localName>subSubComponent</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">component</qh:label>
+      <qh:label xml:lang="it">componente</qh:label>
+      <qh:longDescription xml:lang="en">Component</qh:longDescription >
+      <qh:longDescription xml:lang="it">Componente</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/subComponent/subSubComponent</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11225331">
+      <qh:localName>container</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">container</qh:label>
+      <qh:label xml:lang="it">contenitore</qh:label>
+      <qh:longDescription xml:lang="en">Container</qh:longDescription >
+      <qh:longDescription xml:lang="it">Contenitore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/subComponent/subSubComponent/container</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11225331atrr1">
+      <qh:localName>type</qh:localName>
+      <qh:kind>attribute</qh:kind>
+			<qh:label xml:lang="en">type</qh:label>
+      <qh:label xml:lang="it">tipo</qh:label>
+      <qh:longDescription xml:lang="en">Type of the container</qh:longDescription >
+      <qh:longDescription xml:lang="it">Tipo di contenitore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/subComponent/subSubComponent/container@type</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11225331">
+      <qh:localName>container</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:description xml:lang="en">Container</qh:description>
+      <qh:description xml:lang="it">contenitore</qh:description>
+      <qh:fullyQualifiedName>books/book/content/part/container/component/subComponent/suSubComponent/container</qh:fullyQualifiedName>
+  </rdf:Description>
+ 
+ 
+		
+	<rdf:Description rdf:nodeID="a11225332">
+      <qh:localName>componentTitle</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">title</qh:label>
+      <qh:label xml:lang="it">titolo</qh:label>
+      <qh:longDescription xml:lang="en">Title of the component</qh:longDescription >
+      <qh:longDescription xml:lang="it">Titolo del componente</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/content/part/component/subComponent/subSubComponent/componentTitle</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+</rdf:RDF>
+
+

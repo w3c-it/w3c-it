@@ -1,0 +1,77 @@
+<svg width="750" height="390">
+<rect style="fill:white" rx="0" ry="0" width="750" height="390"/>
+
+<circle id="circle" cx="15" cy="50" r="10" style="fill:green">
+<animate attributeName="cx" values="15;600" keyTimes="0;1" keySplines="0 0 1 1" begin="1s" calcMode="spline" dur="5s"  repeatCount="5" />
+</circle>
+
+
+<circle id="circle" cx="15" cy="100" r="10" style="fill:red">
+<animate attributeName="cx" values="15;600" keyTimes="0;1" keySplines=".5 0 .5 1" begin="1s" calcMode="spline" dur="5s"   repeatCount="5" />
+</circle>
+
+
+<circle id="circle" cx="15" cy="150" r="10" style="fill:blue">
+<animate attributeName="cx" values="15;600" keyTimes="0;1" keySplines="0 .75 .25 1" begin="1s" calcMode="spline" dur="5s"   repeatCount="5" />
+</circle>
+
+
+<circle id="circle" cx="15" cy="200" r="10" style="fill:maroon">
+<animate attributeName="cx" values="15;600" keyTimes="0;1" keySplines="1 0 .25 .25" begin="1s" calcMode="spline" dur="5s"  repeatCount="5" />
+</circle>
+
+<text style="font-size:20" x="630" y="50">0 0 1 1</text>
+<text style="font-size:20"  x="630" y="100">.5 0 .5 1</text>
+<text style="font-size:20"  x="630" y="150">0 .75 .25 1</text>
+<text style="font-size:20"  x="630" y="200">1 0 .25 .25</text>
+
+<line x1="620" y1="20" x2="620" y2="220" style="stroke:red;stroke-width:3" />
+<line x1="5" y1="20" x2="5" y2="220" style="stroke:red;stroke-width:3" />
+
+<g transform="translate(50,340)">
+
+<path d="M0,0C0,0,80,-80,80,-80" style="stroke:green;stroke-width:3;fill:none" />
+<path d="M0,-80L0,0,80,0" style="fill:none;stroke:black;stroke-width:2;" />
+<text x="0" y="30" style="font-size:20;text-anchor:end">(0,0)</text>
+<text x="80" y="-80" style="font-size:20;text-anchor:start">(1,1)</text>
+<circle cx="0" cy="0" r="5" style="fill:gray;stroke:none;opacity:0.5" />
+<circle cx="80" cy="-80" r="5" style="fill:lime;stroke:none;opacity:0.5" />
+</g>
+
+
+<g transform="translate(200,340)">
+
+<path d="M0,0C40,0,40,-80,80,-80" style="stroke:red;stroke-width:3;fill:none" />
+<path d="M0,-80L0,0,80,0" style="fill:none;stroke:black;stroke-width:2;" />
+<text x="0" y="30" style="font-size:20;text-anchor:end">(0,0)</text>
+<text x="80" y="-80" style="font-size:20;text-anchor:start">(1,1)</text>
+<circle cx="40" cy="0" r="5" style="fill:gray;stroke:none;opacity:0.5" />
+<circle cx="40" cy="-80" r="5" style="fill:lime;stroke:none;opacity:0.5" />
+</g>
+
+<g transform="translate(350,340)">
+
+<path d="M0,0C0,-60,20,-80,80,-80" style="stroke:blue;stroke-width:3;fill:none" />
+<path d="M0,-80L0,0,80,0" style="fill:none;stroke:black;stroke-width:2;" />
+<text x="0" y="30" style="font-size:20;text-anchor:end">(0,0)</text>
+<text x="80" y="-80" style="font-size:20;text-anchor:start">(1,1)</text>
+<circle cx="0" cy="-60" r="5" style="fill:gray;stroke:none;opacity:0.5" />
+<circle cx="20" cy="-80" r="5" style="fill:lime;stroke:none;opacity:0.5" />
+</g>
+
+<g transform="translate(500,340)">
+
+<path d="M0,0C80,0,20,-60,80,-80" style="stroke:maroon;stroke-width:3;fill:none" />
+<path d="M0,-80L0,0,80,0" style="fill:none;stroke:black;stroke-width:2;" />
+<text x="0" y="30" style="font-size:20;text-anchor:end">(0,0)</text>
+<text x="80" y="-80" style="font-size:20;text-anchor:start">(1,1)</text>
+<circle cx="80" cy="0" r="5" style="fill:gray;stroke:none;opacity:0.5" />
+<circle cx="20" cy="-60" r="5" style="fill:lime;stroke:none;opacity:0.5" />
+</g>
+
+
+
+
+</svg>
+
+

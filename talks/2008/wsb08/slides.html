@@ -1,0 +1,1862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <title>
+      wsb08
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; Oreste Signore" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link rel="stylesheet" href="./slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+div.slide pre { 
+     color: purple;
+     line-height: 110%;
+   /*  margin: 1em;  */
+     padding-bottom: 0em;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     padding-left: 1em;
+     background-color: #dbdcde;
+     font-size: 80%;
+     border: solid thin black;
+  }
+.emph2 {
+   background-color: #ffffff;
+   }
+div.slide code {
+   color: #ff0099;
+   font-size: 100%;
+   font-weight: bold;
+   font-style: normal;
+   }
+-->
+/*]]>*/
+</style>
+<script src="./slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <!--  ========================================================== -->
+    <div class="slide">
+      <h1>
+        Introduzione al Semantic Web
+      </h1>
+      <p>
+        <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3.org">oreste@w3.org</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <em><a href="http://websenzabarriere.uniroma2.it/">Web
+        Senza Barriere &lsquo;08</a></em>
+      </p>
+      <p>
+        Roma, 7-8-9 maggio 2008
+      </p>
+      <hr />
+      <!-- <p><em>Presentazione e abstract saranno disponibili a breve</em></p> -->
+      <p>
+        Presentazione: <a href="./slides.html" hreflang="it"
+        title=
+        "wsb08 - presentazione">http://www.w3c.it/talks/2008/wsb08/slides.html</a><br />
+
+        Documento pdf: <a href=
+        "http://www.w3c.it/papers/wsb08.pdf" hreflang="it" title=
+        "wsb08 - documento">http://www.w3c.it/papers/wsb08.pdf</a><br />
+
+        <!--  Abstract: <a href="./abstract.pdf" hreflang="it" title=
+        "wsb08 - abstract">http://www.w3c.it/talks/2008/wsb08/abstract.pdf</a> -->
+      </p><a href="http://www.w3c.it/"><img src=
+      "./slidy/itlogo-20010115.png" alt=
+      "Cover page W3C Office Logo" /></a> <a href=
+      "http://www.weblab.isti.cnr.it/"><img src=
+      "./slidy/weblabWithText.jpg" alt=
+      "Cover page Weblab Logo" /></a> <a href=
+      "http://validator.w3.org/check/referer"><img src=
+      "./slidy/valid-xhtml10.png" alt="Valid XHTML 1.0!" height=
+      "31" width="88" /></a> <a href=
+      "http://jigsaw.w3.org/css-validator/"><img src=
+      "./slidy/valid-css.png" alt="Valid CSS!" height="31" width=
+      "88" /></a>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Ringraziamenti
+      </h1>
+      <ul>
+        <li>Questa presentazione &egrave; basata in gran parte
+        sul materiale di presentazioni tenute da <a href=
+        "http://www.w3.org/People/all#ivan">Ivan Herman</a>, W3C
+        Semantic Web Activity Lead
+        </li>
+        <li>Il materiale di questa presentazione pu&ograve;
+        essere riutilizzato nel rispetto delle leggi sul
+        copyright e delle regole del W3C
+        </li>
+        <li>Un particolare ringraziamento agli organizzatori di
+        <a href="http://websenzabarriere.uniroma2.it/">Web Senza
+        Barriere '08</a> per avermi invitato a tenere questo
+        seminario
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Lo cerco sul Web&hellip;
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        I limiti del Web attuale
+      </h1>
+      <ul>
+        <li>Nel <em>web tradizionale</em> si rappresenta l'
+        informazione utilizzando:
+          <ul>
+            <li>linguaggio naturale
+            </li>
+            <li>grafica, elementi multimediali, struttura della
+            pagina
+            </li>
+          </ul>
+        </li>
+        <li>Spesso &egrave; necessario <em>combinare le
+        informazioni</em> (provenienti da fonti diverse)
+        </li>
+        <li>
+          <em>Per gli esseri umani &egrave; facile ...</em>
+          <ul>
+            <li>dedurre fatti da informazioni incomplete
+            </li>
+            <li>creare e seguire associazioni mentali
+            </li>
+            <li>provare varie esperienze sensoriali
+            </li>
+            <li>aggregare le informazioni indipendentemente dalle
+            tecnologie utilizzate
+            </li>
+          </ul>
+        </li>
+        <li>... ma <em>le macchine non sono intelligenti</em>!
+          <ul>
+            <li>non possono utilizzare informazioni parziali
+            </li>
+            <li>hanno difficolt&agrave; ad aggregare informazioni
+            strutturate in forma diversa
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ==================================================================== -->
+    <div class="slide">
+      <h1>
+        L' integrazione dei dati
+      </h1><img src="images/rdfInTheMiddleSimple.png" style=
+      "width: 100%; max-width:924px;" alt=
+      "esportazione dei dati semplificata" />
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Una versione semplificata di una biblioteca (Dataset "A")
+      </h1>
+      <dl>
+        <dt>
+          Tabella Book
+        </dt>
+        <dd>
+          <table border="1" width="90%" summary=
+          "esempio tabella Book">
+            <tbody>
+              <tr>
+                <th>
+                  ID
+                </th>
+                <th>
+                  Author
+                </th>
+                <th>
+                  Title
+                </th>
+                <th>
+                  Publisher
+                </th>
+                <th>
+                  Year
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  ISBN 0-00-651409-X
+                </td>
+                <td>
+                  id_xyz
+                </td>
+                <td>
+                  The Glass Palace
+                </td>
+                <td>
+                  id_qpr
+                </td>
+                <td>
+                  2000
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </dd>
+        <dt>
+          Tabella Author
+        </dt>
+        <dd>
+          <table border="1" summary="esempio tabella Author">
+            <tbody>
+              <tr>
+                <th>
+                  ID
+                </th>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Home page
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  id_xyz
+                </td>
+                <td>
+                  Amitav Ghosh
+                </td>
+                <td>
+                  http://www.amitavghosh.com/
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </dd>
+        <dt>
+          Tabella Publisher
+        </dt>
+        <dd>
+          <table border="1" summary="esempio tabella Publisher">
+            <tbody>
+              <tr>
+                <th>
+                  ID
+                </th>
+                <th>
+                  Publisher Name
+                </th>
+                <th>
+                  City
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  id_qpr
+                </td>
+                <td>
+                  Harper Collins
+                </td>
+                <td>
+                  London
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </dd>
+      </dl>
+    </div>
+    <!-- ==================================================================== -->
+    <div class="slide">
+      <h1>
+        Rappresentata come grafo &hellip;
+      </h1><img src="./images/englishData.png" width="100%"
+      style="max-width: 900px" alt=
+      "The previous table in an RDF format" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Alcune osservazioni sull' esportazione dei dati
+      </h1>
+      <ul>
+        <li>Le relazioni formano un <em>grafo</em>
+          <ul>
+            <li>i nodi individuano dati "reali" o contengono
+            caratteri ("literal")
+            </li>
+            <li>&egrave; inessenziale il modo in cui i grafi sono
+            rappresentati nella macchina
+            </li>
+          </ul>
+        </li>
+        <li>L' esportazione dei dati <em>non</em> comporta
+        necessariamente una trasformazione fisica
+          <ul>
+            <li>le relazioni possono essere generate
+            dinamicamente al momento della richiesta
+              <ul>
+                <li>con SQL "bridges"
+                </li>
+                <li>scraping di pagine HTML
+                </li>
+                <li>estrazione di dati da fogli Excel
+                </li>
+                <li>etc.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>L' esportazione dei dati pu&ograve; essere
+        <em>parziale</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Un' altra biblioteca (dataset "F")
+      </h1>
+      <dl>
+        <dt>
+          Tabella Livre
+        </dt>
+        <dd>
+          <table xml:lang="fr" border="1" lang="fr" width="95%"
+          summary="esempio tabella Livre">
+            <tbody>
+              <tr>
+                <th>
+                  ID
+                </th>
+                <th>
+                  Titre
+                </th>
+                <th>
+                  Auteur
+                </th>
+                <th>
+                  Traducteur
+                </th>
+                <th>
+                  Original
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  ISBN 2020386682
+                </td>
+                <td>
+                  Le Palais des miroirs
+                </td>
+                <td>
+                  i_abc
+                </td>
+                <td>
+                  i_qrs
+                </td>
+                <td>
+                  ISBN 0-00-651409-X
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </dd>
+        <dt>
+          Tabella Auteur
+        </dt>
+        <dd>
+          <table xml:lang="fr" border="1" lang="fr" summary=
+          "esempio tabella Auteur">
+            <tbody>
+              <tr>
+                <th>
+                  ID
+                </th>
+                <th>
+                  Nom
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  i_abc
+                </td>
+                <td>
+                  Amitav Ghosh
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  i_qrs
+                </td>
+                <td>
+                  Christiane Besse
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </dd>
+      </dl>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Secondo passo: esportare il secondo insieme di dati
+      </h1><img src="./images/frenchData.png" width="100%" style=
+      "max-width: 900px" alt="The French data in RDF" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Terzo passo: Merging dei dati
+      </h1><img src="./images/mergeStart.png" width="100%" style=
+      "max-width: 900px" alt=
+      "The French and English data side by side" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Terzo passo: Merging dei dati (cont.)
+      </h1><img src="./images/mergeStartPlusID.png" width="100%"
+      style="max-width: 900px" alt=
+      "The merged data with nodes with identical URI-s pointed out" />
+      </div>
+      <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Merging delle risorse identiche
+      </h1><img src="./images/merged.png" width="100%" style=
+      "max-width: 1011px" alt=
+      "The merged data with one of the nodes merged with common URI" />
+      </div>
+      <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Le Query pi&ugrave; semplici&hellip;
+      </h1>
+      <ul>
+        <li>L' utente dei dati "F" pu&ograve; ora formulare query
+        del tipo: "<span lang="fr" xml:lang="fr"><em>donnes-moi
+        le titre de l'original</em></span>" o "<span lang="en"
+        xml:lang="en"><em>give me the title of the
+        original</em></span>" <!-- <ul>
+            <li xml:lang="fr" lang="fr">"donnes-moi le titre de
+            l'original"
+            </li>
+            <li xml:lang="en" lang="en">"give me the title of the
+            original"
+            </li>
+          </ul> -->
+        </li>
+        <li>Questa informazione non &egrave; nel dataset
+        "F"&hellip;
+        </li>
+        <li class="noBullet">&hellip;ma pu&ograve; essere
+        ritrovata grazie al merging con il dataset "A"!
+        </li>
+      </ul><img alt=
+      "The merged data with one of the nodes merged with common URI"
+      src="./images/merged.png" width="100%" style=
+      "max-width: 1011px; float: right;" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        &hellip;ma si pu&ograve; avere di pi&ugrave;
+      </h1>
+      <ul>
+        <li>Abbiamo la "<em>sensazione</em>" che
+        <code>a:author</code> e <code>f:auteur</code> siano la
+        stessa cosa
+        </li>
+        <li>Ma un <em>processo automatico</em> non se ne
+        pu&ograve; accorgere!
+        </li>
+        <li>Aggiungiamo un po' di <em>informazione
+        addizionale</em> ai dati combinati:
+          <ul>
+            <li>
+              <code>a:author</code> same as <code>f:auteur</code>
+            </li>
+            <li>entrambi identificano una "<em>Person</em>", che
+            &egrave; un termine che una comunit&agrave;
+            pu&ograve; aver gi&agrave; definito:
+              <ul>
+                <li>una "<em>Person</em>" &egrave; definita
+                univocamente dal suo nome e email, o codice
+                fiscale
+                </li>
+                <li>pu&ograve; essere usato come
+                "<em>categoria</em>" per certi tipi di risorse
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>e si pu&ograve; utilizzare la conoscenza extra
+        <em>unendo altri grafi</em>&hellip;
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Sorpresi?
+      </h1>
+      <ul>
+        <li>Forse, ma in realt&agrave; no
+        </li>
+        <li>&Egrave; esattamente quanto avviene normalmente a
+        tutti gli utenti del Web (ma in questo caso grazie a un
+        processo <em>automatico</em>)
+        </li>
+        <li>La <em>differenza</em>: &egrave; necessario un po'
+        pi&ugrave; di rigore (per es. <em>dare un nome</em> alle
+        associazioni) perch&eacute; le macchine possano
+        riuscirci.
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        In relt&agrave; cosa abbiamo fatto?
+      </h1>
+      <ul>
+        <li>Abbiamo combinato dataset diversi
+          <ul>
+            <li>ognuno di essi pu&ograve; provenire da un
+            <em>qualunque sito web</em>
+            </li>
+            <li>possono avere originariamente <em>formati
+            differenti</em> (MySQL, fogli excel, XHTML, etc)
+            </li>
+            <li>possono avere <em>nomi diversi per le
+            relazioni</em> (multilinguismo)
+            </li>
+          </ul>
+        </li>
+        <li>Li abbiamo potuti combinare perch&eacute; avevano
+        <em>lo stesso URI</em> (l' ISBN nell' esempio)
+        </li>
+        <li>Possiamo aggiungere <em>conoscenza addizionale</em>,
+        utilizzando terminologie comuni definite dalle varie
+        comunit&agrave;
+        </li>
+        <li>Di conseguenza, &egrave; stato possibile identificare
+        e utilizzare <em>nuove relazioni</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        E il processo pu&ograve; essere anche pi&ugrave; ricco
+      </h1>
+      <ul>
+        <li>La conoscenza addizionale pu&ograve; essere anche
+        molto complessa
+        </li>
+        <li>&Egrave; qui che entrano in gioco le
+        <em>ontologie</em>, le <em>regole</em>, etc.
+        </li>
+        <li>Il processo di <em>astrazione</em> &egrave;
+        vantaggioso perch&eacute; la rappresentazione come
+        <em>grafo</em> &egrave; indipendente dalle strutture dati
+        sottostanti
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        E il Semantic Web?
+      </h1>
+      <ul>
+        <li>
+          <em>Il Semantic Web fornisce le tecnologie per rendere
+          possibile questa integrazione</em>
+        </li>
+        <li class="noBullet">(il quadro dovrebbe essere chiaro
+        alla fine di questo tutorial)
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        L' architettura del Semantic Web
+      </h1><img class="floatleft" alt=
+      "immagine dei livelli del semantic web" src=
+      "images/layerCake.png" width="45%" style=
+      "max-width: 600px" />
+      <dl>
+        <dt>
+          Il Semantic Web ...
+        </dt>
+        <dd>
+          <ul>
+            <li>&egrave; un' infrastruttura basata su metadati
+            per poter svolgere <em>ragionamenti</em> sul Web
+            </li>
+            <li>
+              <em>estende</em>, non sostituisce il web attuale
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          I metadati sono:
+        </dt>
+        <dd>
+          <ul>
+            <li>Informazioni, elaborabili automaticamente
+            (<em>machine understandable</em>), relative a una
+            risorsa web o a qualche altra cosa
+            </li>
+            <li>... <em>data about data</em>
+            </li>
+            <li>... informazioni che possono essere utilizzate da
+            <em>intelligent software agents</em> per fare un uso
+            appropriato delle risorse
+            </li>
+            <li>... <em>dati</em> ...
+            </li>
+            <li>... che possono essere <em>descritti da altri
+            metadati</em> ...
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ======================================================== =-->
+    <div class="slide">
+      <h1>
+        Perch&eacute; i metadati?
+      </h1>
+      <ul>
+        <li>Nel Web di oggi tutte le informazioni sono "
+        <em>machine readable</em>"
+        </li>
+        <li>Nel Semantic Web le informazioni devono essere " <em>
+          machine understandable</em>". Quindi occorrono:
+          <ul>
+            <li>
+              <em>nomi non ambigui</em> per le risorse (URI)
+            </li>
+            <li>un <em>data model condiviso</em> per esprimere i
+            metadati (RDF)
+            </li>
+            <li>un modo per <em>accedere ai metadati</em> sul Web
+            </li>
+            <li>
+              <em>vocabolari</em> condivisi (<em>ontologie</em>)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================= -->
+    <div class="slide">
+      <h1>
+        Elementi di RDF
+      </h1>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Cosa &egrave; RDF?
+      </h1>
+      <ul>
+        <li>L' uso efficace dei metadati richiede la definizione
+        di convenzioni per:
+          <ul>
+            <li>
+              <em>semantica</em> (definita dalle singole
+              comunit&agrave; disciplinari)
+            </li>
+            <li>
+              <em>sintassi</em> (organizzazione dei data element
+              per l' elaborazione automatica)
+            </li>
+            <li>
+              <em>struttura</em> (vincolo formale sulla sintassi)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>RDF</strong>:
+          <ul>
+            <li>
+              <em>Resource Description Framework</em>
+            </li>
+            <li>strumento base per <em>codifica</em>,
+            <em>scambio</em> e <em>riutilizzo</em> di metadati
+            strutturati
+            </li>
+            <li>consente l' <em>interoperabilit&agrave;</em> tra
+            applicazioni che si scambiano sul Web informazioni
+            <em>machine-understandable</em>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <em>RDF &egrave; per il Semantic Web ci&ograve; che HTML
+        &egrave; stato per il web</em>
+      </p>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide" id="RDFBasic-1">
+      <h1>
+        Triple RDF
+      </h1>
+      <ul>
+        <li>Proviamo a formalizzare!
+          <ul>
+            <li>abbiamo "collegato" i dati
+            </li>
+            <li>ma non basta collegare due informazioni, occorre
+            dare un nome al collegamento
+            </li>
+            <li>quindi le triple RDF sono: un <em>un collegamento
+            etichettato (labelled connection) tra due
+            risorse</em>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide" id="RDFBasic-2">
+      <h1>
+        Triple RDF (cont.)
+      </h1>
+      <ul>
+        <li>Una tripla RDF (s,p,o) &egrave; definita in modo che:
+          <ul>
+            <li>"s", "p" sono URI, cio&egrave; risorse sul Web;
+            "o" &egrave; un URI o un "literal"
+            </li>
+            <li>dal punto di vista concettuale: "<code>p</code>"
+            <em>collega</em>, o <em>mette in relazione</em>
+            "<code>s</code>" e "<code>o</code>"
+            </li>
+            <li>si noti che vengono utilizzati URI per denotare i
+            nomi: per esempio, possiamo utilizzare
+            <code>http://www.example.org/original</code>
+            </li>
+            <li>ecco la codifica completa della tripla:
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <pre>
+(&lt;http://&hellip;isbn 6682&gt;, &lt;http://&hellip;/original&gt;, &lt;http://&hellip;isbn 409X&gt;)
+</pre>
+      <ul>
+        <li>
+          <em>RDF</em> &egrave; un modello generale per queste
+          triple (con un formato machine readable come RDF/XML,
+          Turtle, n3, RXR)
+        </li>
+        <li class="noBullet">
+          <em>ed &egrave; tutto qui!</em> (semplice, dopo tutto
+          <img src="./images/wink.gif" alt="winking smiley" />)
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide" id="RDFBasic-3">
+      <h1>
+        Triple RDF (cont.)
+      </h1>
+      <ul>
+        <li>Le triple RDF sono anche dette <em>"triplets"</em>, o
+        <em>"statement"</em>
+        </li>
+        <li>Le risorse <code>s</code>, <code>p</code>,
+        <code>o</code> vengono anche dette:<br />
+          <em>"subject"</em>, <em>"predicate"</em>,
+          <em>"object"</em>,<br />
+          oppure<br />
+          <em>"subject"</em>, <em>"property"</em>,
+          <em>"object"</em>
+        </li>
+        <li>Le risorse possono usare <em>un qualunque</em> URI.
+        Per esempio, possono denotare un elemento
+        <em>interno</em> a un file XML sul Web, non solo una
+        risorsa "completa":
+          <ul>
+            <li>
+              <code>http://www.example.org/file.xml#xpointer(id('home'))</code>
+            </li>
+            <li>
+              <code>http://www.example.org/file.html#home</code>
+            </li>
+          </ul>
+        </li>
+        <li>Le triple RDF formano un <em>grafo orientato
+        etichettato</em>, o <em>"directed, labelled graph"</em>
+        (&egrave; questo il modo migliore per considerarle!)
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div id="simpleExample" class="slide">
+      <h1>
+        Un esempio semplice di RDF (in RDF/XML)
+      </h1>
+      <div style="text-align: center;">
+        <img src="./images/SimpleExample.png" alt=
+        "A Simple RDF Graph with full URI-s" width="100%" style=
+        "max-width: 900px" />
+      </div>
+      <pre>
+&lt;rdf:Description rdf:about="http://&hellip;/isbn/2020386682"&gt;
+    &lt;f:titre xml:lang="fr"&gt;Le palais des mirroirs&lt;/f:titre&gt;
+    &lt;f:original rdf:resource="http://&hellip;/isbn/000651409X"/&gt;
+&lt;/rdf:Description&gt;
+</pre>
+      <p>
+        (Nota: per semplificare gli URI sono stati usati i
+        namespace)
+      </p>
+    </div>
+    <!-- ================================================================ -->
+    <div id="simpleExample-t" class="slide">
+      <h1>
+        Un esempio semplice di RDF (in Turtle)
+      </h1>
+      <div style="text-align: center;">
+        <img src="./images/SimpleExample.png" alt=
+        "A Simple RDF Graph with full URI-s" width="100%" style=
+        "max-width: 900px" />
+      </div>
+      <pre>
+&lt;http://&hellip;/isbn/2020386682&gt;
+    f:titre "Le palais des mirroirs"@fr;
+    f:original &lt;http://&hellip;/isbn/000651409X&gt;.
+</pre>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Quale sintassi?
+      </h1>
+      <ul>
+        <li>La sintassi (RDF/XML, Turtle) &egrave; semplicemente
+        <em>sintassi</em>
+        </li>
+        <li>La cosa importante sono il <em>modello</em>
+        sottostante e i <em>concetti</em>
+        </li>
+        <li>Non tratteremo in dettaglio gli aspetti sintattici
+        (abbiamo comunque gi&agrave; visto alcuni esempi in
+        Turtle e in RDF/XML)
+          <ul>
+            <li>si tratta di trasformazioni meccaniche, ben
+            documentate e supportate da molti tool
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div id="RoleURI" class="slide">
+      <h1>
+        Il ruolo fondamentale degli URI
+      </h1>
+      <ul>
+        <li>Gli URI hanno reso possibile il <em>merge</em>
+        </li>
+        <li>
+          <em>Chiunque</em> pu&ograve; creare (meta)dati su
+          <em>qualunque</em> risorsa sul Web, per esempio:
+          <ul>
+            <li>lo <em>stesso</em> file XHTML pu&ograve; essere
+            annotato con altri termini
+            </li>
+            <li>&egrave; possibile <em>aggiungere semantica</em>
+            alle risorse Web esistenti utilizzando URI
+            </li>
+            <li>gli URI rendono possibile <em>collegare</em> (con
+            <em>propriet&agrave;</em>) i dati tra di loro
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Gli URI sono la base del ruolo di RDF nel Web</em>
+          <ul>
+            <li>si pu&ograve; reperire l' informazione
+            utilizzando tool gi&agrave; esistenti
+            </li>
+            <li>per questo motivo il "Semantic Web", &egrave; il
+            &hellip; "Semantic <em>Web</em>"
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Nodi "interni"
+      </h1>
+      <ul>
+        <li>Consideriamo lo statement:
+          <ul>
+            <li>"l' editore &egrave; una "<em>cosa</em>" che ha
+            un nome e un indirizzo"
+            </li>
+          </ul>
+        </li>
+        <li>Negli esempi precedenti, i nodi erano identificati da
+        URI. Ma&hellip;
+        </li>
+        <li>&hellip;qual &egrave; l' URI di "<em>cosa</em>"?
+        </li>
+      </ul><img src="./images/blankNodeIntro.png" width="100%"
+      style="max-width: 900px;" alt=
+      "A graph with a blank node in the middle (labelled with &quot;?&quot;)" />
+      <p>
+        <em>Extra URI</em> &hellip; oppure &hellip; <em>blank
+        nodes</em>
+      </p>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        RDFSchema
+      </h1>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Perch&eacute; RDF Schema?
+      </h1>
+      <ul>
+        <li>RDF &egrave; un linguaggio universale per descrivere
+        le risorse usando il proprio vocabolario
+        </li>
+        <li>&Egrave; possibile scrivere statement (triple s-p-o)
+        RDF sintatticamente corretti, che possono essere sensati:
+          <pre>
+Leonardo        autoreDi       Gioconda
+Cimabue         maestroDi      Giotto
+</pre>o privi di senso
+          <pre>
+Michelangelo    autoreDi      Leonardo    
+</pre>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div id="RDFS" class="slide">
+      <h1>
+        Perch&eacute; RDF Schema?
+      </h1>
+      <ul>
+        <li>Alcune cose essenziali per descrivere la nostra "
+        <em>conoscenza addizionale</em>":
+          <ul>
+            <li>
+              <em>definire</em> le "cose" che vogliamo descrivere
+              (<em>istanze e classi</em>)
+            </li>
+            <li>definire le eventuali <em>restrizioni</em> (es.
+            dominio e codominio)
+            </li>
+            <li>
+              <em>relazioni addizionali</em> (e
+              sottopropriet&agrave;)
+            </li>
+          </ul>
+        </li>
+        <li>Questo &egrave; il ruolo di <em>RDF Schema</em>
+          <ul>
+            <li>ufficialmente: "<em>RDF Vocabulary Description
+            Language</em>"
+            </li>
+            <li>il termine "<em>Schema</em>" sopravvive per
+            ragioni storiche&hellip;
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div id="RDFS1" class="slide">
+      <h1>
+        Classi, Risorse, &hellip;
+      </h1>
+      <ul>
+        <li>Consideriamo un esempio classico delle ontologie:
+          <ul>
+            <li>prendiamo il termine "<em>cane</em>"
+            </li>
+            <li>"<em>ogni cane</em> &egrave; un mammifero"
+            </li>
+            <li>"<em>&laquo;Attila&raquo; &egrave; un cane</em>"
+            </li>
+            <li>etc.
+            </li>
+          </ul>
+        </li>
+        <li>RDFS definisce <em>risorse</em> e <em>classi</em>:
+          <ul>
+            <li>qualunque cosa in RDF &egrave; una "risorsa"
+            </li>
+            <li>le "classi" sono risorse, ma&hellip;
+            </li>
+            <li>&hellip;sono anche collezione di possibili
+            risorse (quindi "<em>individuals</em>")
+              <ul>
+                <li>"mammifero", "cane", &hellip;
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div id="RDFS2" class="slide">
+      <h1>
+        Classi, Risorse, &hellip; (cont.)
+      </h1>
+      <ul>
+        <li>Le relazioni sono definite tra classi/risorse:
+          <ul>
+            <li>"<em>typing</em>": un individuo appartiene a una
+            specifica classe ("&laquo;Attila&raquo; &egrave; un
+            cane")
+              <ul>
+                <li>per essere pi&ugrave;precisi:
+                "<code>&laquo;anag:96RCI&raquo; is-an-instance-of
+                cane</code>"
+                </li>
+              </ul>
+            </li>
+            <li>"<em>subclassing</em>": le istanze di una classe
+            sono anche istanze dell' altra ("ogni cane &egrave;
+            un mammifero")
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>RDFS formalizza queste relazioni in RDF</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div id="RDFS3" class="slide">
+      <h1>
+        Classi, Risorse in RDF(S)
+      </h1><img src="./images/bookWithSchema.png" width="100%"
+      style="max-width: 900px" alt=
+      "A slide showing the book with its own Schema and the RDFS entitites, all merged" />
+      <ul>
+        <li>RDFS definisce <code>rdfs:Resource</code>,
+        <code>rdfs:Class</code> come nodi; <code>rdf:type</code>,
+        <code>rdfs:subClassOf</code> come propriet&agrave;
+          <ul>
+            <li class="noBullet">(sono tutti URI speciali, usiamo
+            il namespace per semplicit&agrave;)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>rdfs:Class</code> &egrave; la &ldquo;<em>classe
+          di tutte le classi</em>&rdquo; cio&egrave; qualunque
+          classe &egrave; un' istanza di <code>rdfs:Class</code>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Un esempio di RDFS in RDF/XML
+      </h1>
+      <ul>
+        <li>La parte dello schema:
+          <pre>
+&lt;rdf:Description rdf:ID="Novel"&gt;
+  &lt;rdf:type rdf:resource= "http://www.w3.org/2000/01/rdf-schema#Class"/&gt;
+&lt;/rdf:Description&gt;
+</pre>
+        </li>
+        <li>I dati RDF per una specifica istanza:
+          <pre>
+&lt;rdf:Description rdf:about="http://&hellip;/isbn/000651409X"&gt;
+   &lt;rdf:type rdf:resource="http://&hellip;/bookSchema.rdf#Novel"/&gt;
+&lt;/rdf:Description&gt;
+</pre>
+        </li>
+        <li>Nel KR tradizionale questi due componenti sono spesso
+        identificati come: "<em>Terminological axioms</em>" and
+        "<em>Assertions</em>" (<code>T-box</code> e
+        <code>A-box</code>)
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div id="RDFSInferred" class="slide">
+      <h1>
+        Inferenza delle propriet&agrave;
+      </h1><img src="./images/Inferred.png" width="100%" style=
+      "max-width: 900px" alt=
+      "A slide showing an inferred property" />
+      <ul>
+        <li class="noBullet">
+          <code>&lt;http://&hellip;/isbn/000651409X&gt; rdf:type
+          #Fiction&gt;</code>
+        </li>
+        <li>
+          <em>non</em> &egrave; nei dati RDF originali&hellip;
+        </li>
+        <li>&hellip;ma pu&ograve; essere <em>dedotta</em> dalle
+        regole RDFS
+        </li>
+        <li>I migliori ambienti RDF restituiscono anche questa
+        tripla
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div id="RDFSProperties" class="slide">
+      <h1>
+        Propriet&agrave;
+      </h1>
+      <ul>
+        <li>Property &egrave; una classe speciale:
+        <code>rdf:Property</code>, che &egrave; la
+        &ldquo;<em>classe di tutte le
+        propriet&agrave;</em>&ldquo;
+          <ul>
+            <li>
+              <em>le propriet&agrave; sono anch' esse risorse,
+              identificate da URI</em>
+            </li>
+          </ul>
+        </li>
+        <li>La propriet&agrave; hanno dei <em>vincoli</em> di
+        <em>dominio</em> (<em>domain</em>) e <em>codominio</em>
+        (<em>range</em>)
+          <ul>
+            <li>quali elementi (individual) possono comnparire
+            come object o subject
+            </li>
+          </ul>
+        </li>
+        <li>&Egrave; anche possibile definire delle
+        "<code>sub-property</code>"
+          <ul>
+            <li>tutte le risorse connesse da una sub-property
+            sono anche connesse dalla property
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Propriet&agrave; (cont.)
+      </h1>
+      <ul>
+        <li>
+          <em>Le propriet&agrave; sono anch' esse risorse,
+          identificate da URI&hellip;</em>
+        </li>
+        <li>Quindi le <em>propriet&agrave; di
+        propriet&agrave;</em> possono essere espresse
+        come&hellip; <em>RDF properties</em>
+          <ul>
+            <li>&egrave; una cosa un po' sofisticata, ma viene
+            usata spesso
+            </li>
+          </ul>
+        </li>
+        <li>Per esempio, <code>(P rdfs:range C)</code> significa
+        che:
+          <ol>
+            <li>
+              <code>P</code> &egrave; una propriet&agrave;,
+              cio&egrave; un' istanza della classe
+              <code>rdf:Property</code>
+            </li>
+            <li>
+              <code>C</code> &egrave; una classe, cio&egrave; un'
+              istanza della classe <code>rdfs:Class</code>
+            </li>
+            <li>le risorse denotate dagli oggetti delle triple
+            che hanno come predicato <code>P</code> <em>sono
+            istanze</em> della classe <code>C</code>
+            </li>
+          </ol>questo &egrave; uno statement RDF con subject
+          <code>P</code>, object <code>C</code>, e property
+          <code>rdfs:range</code>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Anche un po' di RDFS pu&ograve; dare enormi
+        vantaggi&hellip;
+      </h1>
+      <ul>
+        <li>Ritornando all' esempio iniziale del merge
+        </li>
+        <li>potremmo aver usato:
+          <ul>
+            <li>
+              <code>f:auteur</code> subproperty-of
+              <code>a:author</code> e viceversa
+            </li>
+          </ul>
+        </li>
+        <li class="noBullet">(ma vedremo che c'&egrave; un altro
+        modo per farlo&hellip;)
+        </li>
+        <li>In alcuni casi, &egrave; necessario gestire
+        conoscenza pi&ugrave; sofisticata (vedi in
+        seguito&hellip;)
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Alcune Classi e propriet&agrave; predefinite
+      </h1>
+      <ul>
+        <li>RDF(S) ha alcune classi e propriet&agrave;
+        predefinite
+        </li>
+        <li>Non sono "concetti" nuovi nel <code>RDF Model</code>,
+        ma solo risorse con una semantica definita
+        </li>
+        <li>Esempi:
+          <ul>
+            <li>collections (o liste)
+            </li>
+            <li>containers: sequence, bag, alternatives
+            </li>
+            <li>reification
+            </li>
+            <li>
+              <code>rdfs:comment</code>,
+              <code>rdf:seeAlso</code>, <code>rdf:value</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Ontologie (OWL)
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Ontologie
+      </h1>
+      <ul>
+        <li>RDFS &egrave; utile, ma non &egrave; in grado di
+        soddisfare tutti i requisiti
+        </li>
+        <li>Applicazioni complesse hanno ulteriori
+        necessit&agrave;:
+          <ul>
+            <li>un programma pu&ograve; <em>ragionare</em> su
+            alcuni termini? Per es.:
+              <ul>
+                <li>"if &laquo;Person&raquo; resources
+                &laquo;A&raquo; e &laquo;B&raquo; hanno la stessa
+                &laquo;foaf:email&raquo; property, then
+                &laquo;A&raquo; e &laquo;B&raquo; sono identici"
+                </li>
+              </ul>
+            </li>
+            <li>se qualcun altro definisce un insieme di termini,
+            possiamo sapere se sono gli stessi gi&agrave; noti?
+            </li>
+            <li>
+              <em>costruire</em> classi, non limitarsi a dar loro
+              un nome
+            </li>
+            <li>restringere il codominio (range) di una
+            propriet&agrave; <em>quando usata per una specifica
+            classe</em>
+            </li>
+            <li>classi disgiunte o equivalenti
+            </li>
+            <li>etc.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Ontologie (cont.)
+      </h1>
+      <ul>
+        <li>Occorre il supporto di <em>ontologie</em> nel
+        Semantic Web:
+          <blockquote>
+            <p>
+              "definisce i concetti e le relazioni usate per
+              descrivere e rappresentare un dominio di
+              conoscenza"
+            </p>
+          </blockquote>
+        </li>
+        <li>Occorre un <em>Web Ontology Languages</em>
+          <ul>
+            <li>RDFS pu&ograve; essere considerato un Web
+            Ontology Language semplice
+            </li>
+            <li>
+              <em>OWL</em> offre un insieme pi&ugrave; ampio e
+              complesso di possibilit&agrave;
+            </li>
+          </ul>
+        </li>
+        <li>I linguaggi devono essere un compromesso tra:
+          <ul>
+            <li>semantica ricca per applicazioni complesse
+            </li>
+            <li>fattibilit&agrave;, implementabilit&agrave;
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Cos'&egrave; un' ontologia?
+      </h1>
+      <p>
+        Jim Hendler
+      </p>
+      <blockquote>
+        <p>
+          A set of <em>knowledge terms</em>, including the
+          vocabulary, the <em>semantic interconnections</em> and
+          some <em>simple rules</em> of inference and logic for
+          some particular topic
+        </p>
+      </blockquote>
+      <p>
+        Studer et al. (1998) 
+        <!-- Rudi Studer and V. Richard Benjamins and Dieter Fensel in
+        <em>Knowledge Engineering: Principles and Methods</em>,
+        Data Knowl. Eng. 25(1-2): 161-197 (1998) -->
+      </p>
+      <blockquote>
+        <p>
+          An ontology is a formal, explicit specification of a
+          shared conceptualisation.<br />
+          A '<em>conceptualisation</em>' refers to an abstract
+          model of some phenomenon in the world by having
+          identified the relevant concepts of that
+          phenomenon.<br />
+          '<em>Explicit</em>' means that the type of concepts
+          used, and the constraints on their use are explicitly
+          defined. For example, in medical domains, the concepts
+          are diseases and symptoms, the relations between them
+          are causal and a constraint is that a disease cannot
+          cause itself.<br />
+          '<em>Formal</em>' refers to the fact that the ontology
+          should be machine readable, which excludes natural
+          language.<br />
+          '<em>Shared</em>' reflects the notion that an ontology
+          captures consensual knowledge, that is, it is not
+          private to some individual, but accepted by a group.
+        </p>
+      </blockquote>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Disaccordo o accordo?
+      </h1>
+      <ul>
+        <li>Definizioni <em>diverse</em>, ma <em>accordo</em> sul
+        concetto
+        </li>
+        <li>Un' ontologia include non solo i termini che sono
+        <em>esplicitamente</em> definiti in essa, ma anche la
+        <em>conoscenza</em> che ne pu&ograve; essere
+        <em>derivata</em> mediante un processo di
+        <em>inferenza</em>
+        </li>
+        <li>Un' ontologia cattura <em>conoscenza consensuale</em>
+        </li><!--  <li>Le ontologie possono essere: <em>molto
+        informali</em>, <em>semi-informali</em>,
+        <em>semi-formali</em>, <em>rigorosamente formali</em>
+        </li>
+        <li>
+          <em>Vocabolari</em> e <em>thesauri</em> nella parte
+          bassa delle ontologie <em>informali</em>
+        </li>
+        <li>Ontologie semi-formali utili per <em>information
+        integration</em>
+        </li>
+        <li>Ontologie semi-formali <em>meno costose</em> e
+        <em>pi&ugrave; diffuse</em> (informazione parziale e non
+        completamente coerente)
+        </li> -->
+        <li>"<em>Little semantics goes a long way</em>" (Jim
+        Hendler)
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Semantic Web: la visione del W3C
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Ipotesi e sfide
+        </dt>
+        <dd>
+          <ul>
+            <li>il Web &egrave; intrinsecamente
+            <em>distribuito</em>
+            </li>
+            <li>le macchine possono accedere ad un <em>insieme
+            strutturato di informazioni</em> e a un insieme di
+            <em>regole di inferenza</em> da utilizzare per il
+            <em>ragionamento automatico</em>
+            </li>
+            <li>per ragionare sui dati occorrono le
+            <em>ontologie</em>
+            </li>
+            <li>fornire un <em>linguaggio</em> per esprimere dati
+            e regole per ragionare sui dati
+            </li>
+            <li>
+              <em>esportare</em> sul web delle regole da
+              qualunque sistema di rappresentazione della
+              conoscenza
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Metadati
+        </dt>
+        <dd>
+          <ul>
+            <li>informazioni, <em>comprensibili dalla
+            macchina</em>, relative a una risorsa web o a qualche
+            altra cosa
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Ontologie sul Web
+      </h1>
+      <ul>
+        <li>Le ontologie sono <em>sul Web</em>. Quindi:
+          <ul>
+            <li>le applicazioni possono utilizzare varie
+            ontologie differenti, oppure ... ...
+            </li>
+            <li>... le stesse ontologie, ma espresse in lingue
+            diverse
+            </li>
+            <li>le equivalenze tra termini, e le relazioni
+            intercorrenti tra di loro, possono diventare un
+            problema non banale
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ==================================================================== -->
+    <div class="slide">
+      <h1>
+        Il Semantic Web: le tecnologie W3C
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Resource Description Framework (RDF)
+        </dt>
+        <dd>
+          <ul>
+            <li>strumento base per la <em>codifica</em>, lo <em>
+              scambio</em> e il <em>riutilizzo</em> di metadati
+              strutturati
+            </li>
+            <li>consente l'<em>interoperabilit&agrave;</em> tra
+            applicazioni che si scambiano sul web informazioni
+            <em>machine-understandable</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Web Ontology Language (OWL)
+        </dt>
+        <dd>
+          <ul>
+            <li>linguaggio per <em>descrivere</em>
+            propriet&agrave;, vincoli, cardinalit&agrave;, etc.
+            </li>
+            <li>permette di <em>esportare ontologie</em> in modo
+            interoperabile
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        OWL: tre sottolinguaggi
+      </h1>
+      <dl>
+        <dt>
+          OWL Lite
+        </dt>
+        <dd>
+          per rappresentare <em>classificazioni gerarchiche</em>
+          e <em>vincoli semplici</em>. Permette una migrazione
+          rapida per thesauri e altre tassonomie.
+        </dd>
+        <dt>
+          OWL DL
+        </dt>
+        <dd>
+          per utenti che desiderano la <em>massima potenza
+          espressiva</em> garantendo comunque la <em>completezza
+          computazionale</em> (tutte le conclusioni sono
+          computabili) e la <em>decidibilit&agrave;</em> (tutte
+          le computazioni terminano in un tempo finito)
+        </dd>
+        <dt>
+          OWL Full
+        </dt>
+        <dd>
+          per utenti che desiderano la <em>massima potenza
+          espressiva</em> e la libert&agrave; sintattica di
+          RDF.<br />
+          Non fornisce garanzie sui tempi di computazione, e
+          difficilmente sar&agrave; supportato nella sua
+          interezza da software che implementano il ragionamento
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Relazioni di sottoclasse tra alcune primitive RDF/RDFS e
+        OWL
+      </h1><img src="./images/primitiveRdfOwl.png" width="100%"
+      style="max-width: 867px;" alt="RDFandOWL" />
+    </div>
+    <!--  ============================================================= -->
+    <div id="ClassesInOWL" class="slide">
+      <h1>
+        Le classi in OWL
+      </h1>
+      <ul>
+        <li>In RDFS, &egrave; possibile unicamente definire
+        sottoclassi di classi esistenti
+        </li>
+        <li>In OWL, si possono <em>costruire</em> classi a
+        partire da quelle esistenti:
+          <ul>
+            <li>enumerazione
+            </li>
+            <li>intersezione, unione, complemento
+            </li>
+            <li>mediante restrizioni delle propriet&agrave;
+            (valori ammissibili, cardinalit&agrave;, simmetria,
+            transitivit&agrave;, dipendenza funzionale)
+            </li>
+          </ul>
+        </li>
+        <li>Per questo, OWL introduce i suoi elementi
+        <code>Class</code> e <code>Thing</code> per distinguere
+        le <em>classi</em> dalle <em>istanze</em> <img src=
+        "./images/OWLClassAndThing.png" width="100%" style=
+        "max-width: 900px" alt="OWL Resource and Thing" />
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div id="OWLPropChar" class="slide">
+      <h1>
+        Caratterizzazione delle propriet&agrave;
+      </h1>
+      <ul>
+        <li>In OWL &egrave; possibile caratterizzare il
+        <em>comportamento</em> delle propriet&agrave;
+        (simmetrica, transitiva, dipendenza funzionale,
+        dipendenza funzionale inversa,&hellip;)
+        </li>
+        <li>OWL mantiene separate le propriet&agrave; dei dati
+          <ul>
+            <li>"datatype property" significa che il codominio
+            &egrave; una costante <em>tipata</em> <img src=
+            "./images/OWLProperties.png" width="100%" style=
+            "max-width: 900px" alt=
+            "The top level OWL property definitions" />
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Object e Datatype Property
+      </h1>
+      <dl>
+        <dt>
+          <code>owl:ObjectProperty</code>
+        </dt>
+        <dd>
+          <ul>
+            <li>consentono di mettere in relazione tra di loro
+            gli oggetti (es.: possiede, insegna, etc.)
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <code>owl:DatatypeProperty</code>
+        </dt>
+        <dd>
+          <ul>
+            <li>consentono di mettere in relazione gli oggetti
+            con i valori (es. numeroDiTelefono, nome,
+            dataDiNascita, etc.)
+            </li>
+            <li>non esistono tipi predefiniti
+            </li>
+            <li>&egrave; possibile utilizzare i data type di XML
+            Schema, restando cos&igrave; aderenti all'
+            architettura a strati del Semantic Web
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Caratterizzazione delle propriet&agrave;
+      </h1>
+      <dl>
+        <dt>
+          <code>owl:minCardinality</code>
+        </dt>
+        <dt>
+          <code>owl:maxCardinality</code>
+        </dt>
+        <dt>
+          <code>owl:SymmetricProperty</code>
+        </dt>
+        <dt>
+          <code>owl:TransitiveProperty</code>
+        </dt>
+        <dt>
+          <code>owl:FunctionalProperty</code>
+        </dt>
+        <dd>
+          <ul>
+            <li>ha al massimo un valore per ogni oggetto (es.
+            dataDiNascita, peso, nome)
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <code>owl:InverseFunctionalProperty</code>
+        </dt>
+        <dd>
+          <ul>
+            <li>propriet&agrave; per cui due oggetti diversi non
+            possono avere lo stesso valore (es.
+            &egrave;CodiceFiscaleDi, &egrave;NumeroDiMatricolaDi,
+            etc.)
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div id="OWLPropChar2" class="slide">
+      <h1>
+        Un esempio di caratterizzazione delle propriet&agrave;
+      </h1>
+      <ul>
+        <li>"foaf:email" &egrave; <code>inverse functional</code>
+        <img src="./images/InverseFunctional.png" width="100%"
+        style="max-width: 900px" alt=
+        "definition of inverse functional" />
+        </li><!-- <li>Un propriet&agrave; pu&ograve; anche essere
+        <code>FunctionalProperty</code>,
+        <code>TransitiveProperty</code>,
+        <code>SymmetricProperty</code>
+        </li> -->
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Equivalenza e Relazioni tra termini
+      </h1>
+      <ul>
+        <li>Per le classi:
+          <ul>
+            <li>
+              <code>owl:equivalentClass</code>: due classi sono
+              costituite dagli stessi elementi
+            </li>
+            <li>
+              <code>owl:disjointWith</code>: non esistono istanze
+              in comune
+            </li>
+          </ul>
+        </li>
+        <li>Per le propriet&agrave;:
+          <ul>
+            <li>
+              <code>owl:equivalentProperty</code>
+              <ul>
+                <li>abbiamo visto il caso di
+                <code>a:author</code> e <code>f:auteur</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>owl:inverseOf</code>: relazione inversa
+            </li>
+          </ul>
+        </li>
+        <li>Per le istanze:
+          <ul>
+            <li>
+              <code>owl:sameAs</code>: due URI fanno riferimento
+              alla stessa istanza (per es. un concetto)
+            </li>
+            <li>
+              <code>owl:differentFrom</code>: negazione di
+              <code>owl:sameAs</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div id="OWLConnect" class="slide">
+      <h1>
+        Esempio: equivalenza inglese-francese
+      </h1><img src="./images/equivalence.png" width="100%"
+      style="max-width: 900px" alt=
+      "Example of equivalence between English and Hungarian terms" />
+      </div>
+      <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        L' integrazione dei dati: il ruolo delle tecnologie
+      </h1><img src="images/rdfInTheMiddle.png" style=
+      "width: 100%; max-width:946px;" alt=
+      "integrazione dei dati con indicazione delle tecnologie" />
+    </div>
+    <!-- ================================================================= -->
+    <!-- <div class="slide">
+      <h1>
+        Esempi pratici
+      </h1>
+    </div> -->
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Conclusioni
+      </h1>
+      <ul>
+        <li>La rappresentazione della conoscenza &egrave;
+        essenziale per una elaborazione automatica delle
+        informazioni esistenti sul web
+        </li>
+        <li>Le <em>tecnologie del Semantic Web</em> (RDF, RDFS,
+        OWL) consentono di <em>rappresentare</em>,
+        <em>esportare</em> e <em>condividere</em> la conoscenza
+        in maniera interoperabile
+        </li>
+        <li>
+          <a href="http://www.w3c.it/joining/" title=
+          "come diventare membri W3C">Associatevi al W3C</a> per
+          essere competitivi e attori dello sviluppo
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p><!-- <p>
+        ... e <a href="blowing.mp3">risposte</a>
+      </p> -->
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/talks/2008/wsb08/">http://www.w3c.it/talks/2008/wsb08/</a>)<br />
+
+        e il <em>documento</em>: <a href=
+        "http://www.w3c.it/papers/wsb08.pdf" hreflang="it" title=
+        "wsb08 - documento">http://www.w3c.it/papers/wsb08.pdf</a>
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>

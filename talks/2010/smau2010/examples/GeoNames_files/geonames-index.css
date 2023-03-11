@@ -1,0 +1,94 @@
+#top {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  height: 30px;
+  clear: both;
+  overflow: hidden;
+}
+#top a {
+  color: #363;
+  font-weight: bold;
+}
+#top #login-search {
+  float: right;
+  padding: 8px;
+}
+
+.frontpagetitle {
+  height: 120px;
+  margin: 0 auto 0 auto;
+  width: 500px;
+}
+
+.frontpagetitle h1 {
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: left;
+  color: #363;
+  margin: 0 auto 0 auto;
+  height: 50px;
+  width: 250px;
+  padding: 5px 0 0 60px;
+  background: url(img/globe.gif) no-repeat top left;
+}
+
+#search {
+  background: url(img/background.gif) repeat-x;
+  height: 100px;
+  padding: 20px 0 0 0;
+  margin: 0 0 20px 0;
+  clear: both;
+}
+
+#overview {
+  background: url(img/background.gif) repeat-x;
+  margin: 40px auto 0 auto 0;
+  padding: 8px 0 0 0;
+  clear: both;
+  overflow: hidden;
+  text-align: left;
+}
+#overview .overview-wrapper {
+  width: 650px;
+  margin: 0 auto 0 auto;
+}
+#overview h2 {
+  font-family: Arial, Helvetica, Sans-Serif;
+  color: #363;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+#overview .col {
+  width: 200px;
+  float: left;
+  margin-right: 10px;
+}
+#overview ul {
+  padding: 0 0 0 1.3em;
+  margin: 0 0 20px 0;
+}
+#overview li {
+  margin: 4px 0 8px 0;
+}
+
+#license {
+  width: 500px;
+  margin: 80px auto 0 auto;
+  text-align: left;
+}
+#license img,
+#license p {
+  float: left;
+  margin-right: 10px;
+}
+#license p {
+  width: 300px;
+  margin: 1px;
+  padding: 0;
+}
+#license p a {
+  display: block;
+}

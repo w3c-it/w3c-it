@@ -1,0 +1,60 @@
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+P {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+UL {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+OL {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+LI {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+DIV {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+TD {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+TH {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+ADDRESS {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+BLOCKQUOTE {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+NOBR {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+B {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+I {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+buttontext {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 13px
+}
+H1 {
+	COLOR: #ffb54e; FONT-FAMILY: sans-serif
+}
+H2 {
+	COLOR: #ffb54e; FONT-FAMILY: sans-serif
+}
+H3 {
+	COLOR: #ffb54e; FONT-FAMILY: sans-serif
+}
+H4 {
+	COLOR: #ffb54e; FONT-FAMILY: sans-serif
+}
+H1 {
+	FONT-SIZE: 21px; FONT-WEIGHT: bold
+}
+P.color {
+	COLOR: #ffb54e; FONT-FAMILY: sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+         xmlns:qh="http://www.weblab.isti.cnr.it/projects/QH/properties/"> 
+    
+  ...
+	
+	<rdf:Description rdf:nodeID="a11151">
+      <qh:localName>subject</qh:localName>
+      <qh:kind>element</qh:kind>
+      <qh:label xml:lang="en">subject</qh:label>
+      <qh:label xml:lang="it">argomento</qh:label>
+      <qh:longDescription xml:lang="en">A subject of the book</qh:longDescription >
+      <qh:longDescription xml:lang="it">Un argomento trattato nel libro</qh:longDescription>
+	    <qh:controlledBy>
+	      <rdf:Description>
+          <qh:mode>thesaurus</qh:mode>
+          <qh:serviceParms>http://www.weblab.isti.cnr.it/projects/QH/demo/services/thsgeo.xml</qh:serviceParms>
+        </rdf:Description>
+      </qh:controlledBy>       
+      <qh:fullyQualifiedName>books/book/metadata/subjects/subject</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+  ...
+	
+</rdf:RDF>

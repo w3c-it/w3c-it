@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang=
+"en">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <meta content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-type" content=
+    "text/html; charset=utf-8" />
+    <meta content="Wec accessibility" name="dc.title" />
+    <meta content="Oreste Signore, W3C Office in Italy" name=
+    "dc.author" />
+    <meta content="Oreste Signore, W3C Office in Italy" name=
+    "dc.creator" />
+    <meta content="10 February 2006" name="dc.date" />
+    <meta content="W3C Office in Italy" name="dc.publisher" />
+    <meta content=
+    "http://www.w3.org/Consortium/Legal/copyright-documents"
+    name="dc.rights" />
+    <link href="http://www.weblab.isti.cnr.it/people/oreste/"
+    rel="Author" />
+    <title>
+      km11
+    </title>
+    <meta name="copyright" content=
+    "Copyright &copy; 2005 W3C (MIT, ERCIM, Keio)" />
+    <link rel="stylesheet" href="../slidy/slideStyle.css" type=
+    "text/css" media="screen, projection" />
+    <link rel="stylesheet" href="../slidy/show.css" type=
+    "text/css" media="screen, projection" />
+    <link rel="stylesheet" href="../slidy/print.css" type=
+    "text/css" media="print" />
+    <link media="print" href='../slidy/slidyPrintAddon.css' type=
+    'text/css' rel='stylesheet' />
+    <link rel="stylesheet" href="../slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection" />
+    <link rel="stylesheet" href="../slidy/slidy-toc.css" type=
+    "text/css" media="screen, projection" />
+    <link media='screen, projection' href=
+    '../slidy/slidyAddon.css' type='text/css' rel='stylesheet' />
+    <!-- da Ivan -->
+
+<style type='text/css'>
+    /*<![CDATA[*/
+     /*  
+      .tbd      { color: blue; font-style:italic }
+      .greenish { color: green; fill:green !important; } 
+      .reddish  { color: red; fill:red !important; }
+      */
+      /*]]>*/
+</style>
+<style type='text/css'>
+    /*<![CDATA[*/
+    .withSVG { display: none }
+    /*]]>*/
+</style><!--  -->
+
+<script src="../slidy/slidy.js" type="text/javascript">
+    //<![CDATA[
+        
+    //]]>
+</script>
+<script src="../slidy/slidy-toc.js" type="text/javascript">
+    //<![CDATA[
+        
+    //]]>
+</script>
+  </head>
+  <body>
+    <div class="background">
+      <!-- L' indentazione determina la comparsa dell' attributo name= e la violazione dello Strict -->
+      <img alt="icona decorativa" id="head-icon" src=
+      "../slidy/icon-blue.png"  /> 
+      <!-- <img alt="WebLab logo" id="head-icon" src=
+      "../slidy/logos/weblabSmall.jpg"  />  -->
+       <img alt="logo Ufficio" src="../slidy/itlogo-20010115.png"
+      id="head-logo"  />
+    </div>
+    <!--  ================================================================ -->
+    <!--    <div class="slide ">
+       <h1>
+          Qualit&agrave; nella ricerca dell' informazione: il
+          ruolo delle ontologie
+        </h1>
+      <p>
+      
+        <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3.org">oreste@w3.org</a>&gt;
+         
+        <br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+        
+      </p>
+      <hr />
+        <p>
+       
+          <a href="http://www.jekpot.com/pagine/km11.htm">11&deg;
+          KNOWLEDGE MANAGEMENT FORUM</a>
+        <br />
+          Organizzato da <a href=
+          "http://www.jekpot.com/">Jekpot</a><br />
+          23-24-25 Novembre 2006<br />
+          Palazzo delle Stelline - C.so Magenta 61 - 20123 Milano
+                
+        </p>
+        <hr />
+        <p>
+          Presentazione: <a href=
+          "http://www.w3c.it/talks/2006/km11/" hreflang="it"
+          title=
+          "presentazione - Qualit&agrave; nella ricerca dell' informazione: il ruolo delle ontologie">
+          http://www.w3c.it/talks/2006/km11/</a><br />
+    Documento: <a href=
+          "http://www.w3c.it/papers/km11.pdf"
+          hreflang="it" title=
+          "documento - Qualit&agrave; nella ricerca dell' informazione: il ruolo delle ontologie">
+          http://www.w3c.it/papers/km11.pdf</a> 
+        </p>
+       
+      <hr />
+<a href=
+        "http://www.weblab.isti.cnr.it/"><img src=
+        "../slidy/weblabWithText.jpg" alt=
+        "Cover page Weblab Logo"  width="10%"  /></a> <a href="http://www.w3c.it/"><img src=
+        "../slidy/itlogo-20010115.png" alt=
+        "Cover page W3C Office Logo"   width="20%" /></a>
+       <a href=
+        "http://validator.w3.org/check/referer"><img src=
+        "../slidy/logos/valid-xhtml10.png" alt="Valid XHTML 1.0!"
+        height="31" width="88" /></a> <a href=
+        "http://jigsaw.w3.org/css-validator/"><img src=
+        "../slidy/logos/valid-CSS.png" alt="Valid CSS!" height=
+        "31" width="88" /></a>
+    </div> -->
+    <!--  ================================================================ -->
+    <div class="slide cover">
+      <div class="column30">
+        <p>
+          <a href="http://www.w3c.it/"><img src=
+          "../slidy/itlogo-20010115.png" alt=
+          "Cover page W3C Office Logo" /></a>
+        </p>
+        <p>
+          <a href="http://www.weblab.isti.cnr.it/"><img src=
+          "../slidy/weblabWithText.jpg" alt=
+          "Cover page Weblab Logo" /></a><br />
+        </p><!--  <br
+                                                                  id="clearBoth" />
+                                                                </p> -->
+        <p>
+          <a href=
+          "http://validator.w3.org/check/referer"><img src=
+          "../slidy/logos/valid-xhtml10.png" alt=
+          "Valid XHTML 1.0!" height="31" width="88" /></a>
+        </p>
+        <p>
+          <!--  ===valid CSS ==== -->
+           <a href=
+          "http://jigsaw.w3.org/css-validator/"><img src="../slidy/logos/valid-CSS.png"
+          alt="Valid CSS!" height="31" width="88" /></a>
+        </p>
+      </div>
+      <div class="column70">
+        <h1>
+          Qualit&agrave; nella ricerca dell' informazione: il
+          ruolo delle ontologie
+        </h1>
+        <p>
+          <a href=
+          "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+          Signore</a>, &lt;<a href=
+          "mailto:oreste@w3.org">oreste@w3.org</a>&gt;<br />
+          Responsabile Ufficio Italiano W3C<br />
+          Area della Ricerca CNR<br />
+          via Moruzzi, 1<br />
+          56124 Pisa
+        </p>
+        <hr />
+        <h2>
+          <a href="http://www.jekpot.com/pagine/km11.htm">11&deg;
+          KNOWLEDGE MANAGEMENT FORUM</a>
+        </h2>
+        <p>
+          Organizzata da <a href=
+          "http://www.jekpot.com/">Jekpot</a><br />
+          23-24-25 Novembre 2006<br />
+          Palazzo delle Stelline - C.so Magenta 61 - 20123 Milano
+        </p>
+        <hr />
+        <p>
+          Presentazione: <a href=
+          "http://www.w3c.it/talks/2006/km11/" hreflang="it"
+          title=
+          "presentazione - Qualit&agrave; nella ricerca dell' informazione: il ruolo delle ontologie">
+          http://www.w3c.it/talks/2006/km11/</a><br />
+          Documento: <a href="http://www.w3c.it/papers/km11.pdf"
+          hreflang="it" title=
+          "documento - Qualit&agrave; nella ricerca dell' informazione: il ruolo delle ontologie">
+          http://www.w3c.it/papers/km11.pdf</a>
+        </p><!--  <p>
+          <em>La presentazione completa sar&agrave; disponibile a
+          breve</em>
+        </p> -->
+      </div>
+    </div>
+    <!--  ================================================================== -->
+    <div class="slide">
+      <h1>
+        Cosa significa qualit&agrave; dell' informazione?
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Utente
+        </dt>
+        <dd>
+          <ul>
+            <li>Posso comprare la <em>benzina</em> per il
+            tagliaerba portando una <em>bottiglia</em> da
+            riempire?
+            </li>
+            <li>Il <em>mixer</em> del robot da cucina
+            <em>LoChefPerfetto</em> non <em>funziona</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Il CRM
+        </dt>
+        <dd>
+          <ul>
+            <li>&Egrave; vietato cedere a terzi
+            <em>carburanti</em> in <em>recipienti</em> non a
+            norma
+            </li>
+            <li>Il <em>miscelatore</em> del <em>Mod.
+            CR/XXX32-123</em> pu&ograve; presentare degli
+            <em>inconvenienti</em> al sistema di accensione e
+            regolazione della velocit&agrave;
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Information Retrieval: modello funzionale
+      </h1>
+      <ul>
+        <li>Individua la <em>corrispondenza</em> tra l' insieme
+        delle domande e l' insieme dei documenti
+        </li>
+        <li>Utilizza un linguaggio intermedio, detto
+        <em>linguaggio di indicizzazione</em> o <em>linguaggio di
+        classificazione</em>
+        </li>
+        <li>Il processo:
+          <ul>
+            <li>analisi e indicizzazione dei documenti
+            </li>
+            <li>analisi e formalizzazione delle domande degli
+            utenti
+            </li>
+            <li>determinazione della somiglianza tra
+            rappresentazione della domanda e rappresentazione del
+            documento
+            </li>
+            <li>reperimento e restituzione dei documenti
+            </li>
+          </ul>
+        </li>
+        <li>Indicizzazione
+          <ul>
+            <li>normalmente estrazione di tutte le parole, tranne
+            le pi&ugrave; comuni
+            </li>
+            <li>processo essenzialmene sintattico
+            </li>
+            <li>problemi derivanti da sinonimie, polisemie,
+            iperonimie, iponimie
+            </li>
+          </ul>
+        </li>
+        <li>Lo spazio vettoriale dei documenti
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Information Retrieval: efficacia
+      </h1>
+      <dl class="incremental">
+        <dt>
+          P (Precisione o Precision)
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <em>rapporto</em> (numero compreso tra 0 e 1) tra
+              il numero di documenti <em>reperiti e
+              pertinenti</em> e il numero di documenti
+              <em>reperiti</em>
+            </li>
+            <li>esperienza <em>comune</em> ("effetto
+            <em>rumore</em>")
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          R (Richiamo o Recall)
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <em>rapporto</em> (numero compreso tra 0 e 1) tra
+              il numero di documenti <em>reperiti e
+              pertinenti</em> e il numero di documenti
+              <em>pertinenti</em> esistenti
+            </li>
+            <li>effetto <em>spesso non percepito</em> ("effetto
+            <em>silenzio</em>") e <em>difficile da
+            individuare</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Cause di una bassa efficacia
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <em>non</em> difetti del sistema
+            </li>
+            <li>caratteristiche del <em>processo di
+            indicizzazione</em> (scelta di un "buon" termine
+            indice)
+            </li>
+            <li>l' utente cerca <em>concetti</em>, non parole
+            (approccio <em>semantico</em>, non
+            <em>sintattico</em>)
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Per una maggiore efficacia &hellip;
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Scelta dei termini indice
+        </dt>
+        <dd>
+          <ul>
+            <li>non troppo <em>specifici</em> (frequenza bassa)
+            </li>
+            <li>non troppo <em>generici</em> (frequenza alta)
+            </li>
+            <li>
+              <em>trasformazione di frase</em> (da alta a bassa
+              frequenza)
+            </li>
+            <li>
+              <em>trasformazione di thesaurus</em>(da bassa ad
+              alta)
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Base di conoscenza
+        </dt>
+        <dd>
+          <ul>
+            <li>di <em>adeguato</em> livello di
+            complessit&agrave;
+            </li>
+            <li>deve essere <em>condivisa</em> tra indicizzatore
+            e utente
+            </li>
+            <li>con una rappresentazione <em>formale</em>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Ricerca di informazioni sul Web
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Approccio attuale
+        </dt>
+        <dd>
+          <ul>
+            <li>basato sul <em>term matching</em>
+            </li>
+            <li>
+              <em>ranking</em> (tf/idf o Google PageRank)
+            </li>
+            <li>approccio <em>sintattico</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Semantic Search
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <em>applicazione del Semantic Web</em> alla ricerca
+              di informazioni
+            </li>
+            <li>gli utenti preferiscono formulare query
+            utilizzando <em>concetti semantici</em> ad alto
+            livello, pi&ugrave; coerenti con la conoscenza
+            <em>tacita</em>
+            </li>
+            <li>
+              <em>navigational search</em>: restituzione di
+              documenti che <em>contengono i termini</em>
+              specificati dall' utente
+            </li>
+            <li>
+              <em>research search</em>: restituzione dell'
+              insieme di documenti che nel loro complesso
+              <em>sono in grado di fornire l' informazione</em>
+              desiderata
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Semantic Search e ontologie
+      </h1>
+      <ul>
+        <li>Migliori risultati grazie alla
+        <em>disponibilit&agrave; di conoscenza strutturata</em>
+        comprensibile dalla macchina (<em>machine
+        understandable</em>)
+        </li>
+        <li>Migliore <em>definizione dei concetti</em> da
+        ricercare
+        </li>
+        <li>
+          <em>Arricchimento</em> della lista dei risultati
+        </li>
+        <li>
+          <em>Comprensione del testo</em>
+        </li>
+        <li>Utilizza <em>ontologie</em> di supporto
+        </li>
+        <li>Modellazione ontologica degli interessi dell'
+        <em>utente</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Cos'&egrave; un' ontologia? (1)
+      </h1>
+      <p>
+        Neches et al. (1991) 
+        <!-- Neches, R., Fikes, R., Finin, T., Gruber, T., Patil, R.,
+        Senator, T., and Swartout, W. R. (1991) in <em>Enabling
+        Technology for Knowledge Sharing</em>. AI Magazine, 12(3)
+        pp. 16-36 -->
+      </p>
+      <blockquote>
+        <p>
+          An ontology defines the basic terms and relations
+          comprising the <em>vocabulary</em> of a topic area as
+          well as the <em>rules</em> for combining terms and
+          relations to define <em>extensions</em> to the
+          vocabulary.
+        </p>
+      </blockquote>
+      <p>
+        Studer et al. (1998) 
+        <!-- Rudi Studer and V. Richard Benjamins and Dieter Fensel in
+        <em>Knowledge Engineering: Principles and Methods</em>,
+        Data Knowl. Eng. 25(1-2): 161-197 (1998) -->
+      </p>
+      <blockquote>
+        <p>
+          An ontology is a formal, explicit specification of a
+          shared conceptualisation. A
+          '<em>conceptualisation</em>' refers to an abstract
+          model of some phenomenon in the world by having
+          identified the relevant concepts of that phenomenon.
+          '<em>Explicit</em>' means that the type of concepts
+          used, and the constraints on their use are explicitly
+          defined. For example, in medical domains, the concepts
+          are diseases and symptoms, the relations between them
+          are causal and a constraint is that a disease cannot
+          cause itself. '<em>Formal</em>' refers to the fact that
+          the ontology should be machine readable, which excludes
+          natural language. '<em>Shared</em>' reflects the notion
+          that an ontology captures consensual knowledge, that
+          is, it is not private to some individual, but accepted
+          by a group.
+        </p>
+      </blockquote>
+      <p>
+        Guarino (1998)
+      </p>
+      <blockquote>
+        <p>
+          A set of <em>logical axioms</em> designed to account
+          for the <em>intended meaning</em> of a vocabulary.
+        </p>
+      </blockquote>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Cos'&egrave; un' ontologia? (2)
+      </h1>
+      <ul>
+        <li>Definizioni <em>diverse</em>, ma <em>accordo</em> sul
+        concetto
+        </li>
+        <li>Un' ontologia include non solo i termini che sono
+        <em>esplicitamente</em> definiti in essa, ma anche la
+        <em>conoscenza</em> che ne pu&ograve; essere
+        <em>derivata</em> mediante un processo di
+        <em>inferenza</em>
+        </li>
+        <li>Un' ontologia cattura <em>conoscenza consensuale</em>
+        </li>
+        <li>Le ontologie possono essere: <em>molto
+        informali</em>, <em>semi-informali</em>,
+        <em>semi-formali</em>, <em>rigorosamente formali</em>
+        </li>
+        <li>
+          <em>Vocabolari</em> e <em>thesauri</em> nella parte
+          bassa delle ontologie <em>informali</em>
+        </li>
+        <li>Ontologie semi-formali utili per <em>information
+        integration</em>
+        </li>
+        <li>Ontologie semi-formali <em>meno costose</em> e
+        <em>pi&ugrave; diffuse</em> (informazione parziale e non
+        completamente coerente)
+        </li>
+        <li>"<em>Little semantics goes a long way</em>" (Jim
+        Hendler)
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Semantic Web: la visione del W3C
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Ipotesi e sfide
+        </dt>
+        <dd>
+          <ul>
+            <li>il Web &egrave; intrinsecamente
+            <em>distribuito</em>
+            </li>
+            <li>le macchine possono accedere ad un <em>insieme
+            strutturato di informazioni</em> e a un insieme di
+            <em>regole di inferenza</em> da utilizzare per il
+            <em>ragionamento automatico</em>
+            </li>
+            <li>per ragionare sui dati occorrono le
+            <em>ontologie</em>
+            </li>
+            <li>fornire un <em>linguaggio</em> per esprimere dati
+            e regole per ragionare sui dati
+            </li>
+            <li>
+              <em>esportare</em> sul web delle regole da
+              qualunque sistema di rappresentazione della
+              conoscenza
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Metadati
+        </dt>
+        <dd>
+          <ul>
+            <li>informazioni, <em>comprensibili dalla
+            macchina</em>, relative a una risorsa web o a qualche
+            altra cosa
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Semantic Web: le tecnologie W3C
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Resource Description Framework (RDF)
+        </dt>
+        <dd>
+          <ul>
+            <li>strumento base per la <em>codifica</em>, lo <em>
+              scambio</em> e il <em>riutilizzo</em> di metadati
+              strutturati
+            </li>
+            <li>consente l'<em>interoperabilit&agrave;</em> tra
+            applicazioni che si scambiano sul web informazioni
+            <em>machine-understandable</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Web Ontology Language (OWL)
+        </dt>
+        <dd>
+          <ul>
+            <li>linguaggio per <em>descrivere</em>
+            propriet&agrave;, vincoli, cardinalit&agrave;, etc.
+            </li>
+            <li>permette di <em>esportare ontologie</em> in modo
+            interoperabile
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Ontologie per &hellip;
+      </h1>
+      <dl>
+        <dt>
+          Ricerca pi&ugrave; efficace
+        </dt>
+        <dd>
+          <ul>
+            <li>ulteriori vantaggi rispetto a <em>dizionari</em>
+            e <em>thesauri</em>
+            </li>
+            <li>esempio <a href="http://www.gopubmed.org/"
+            hreflang="en" title="portale GoPUbMed">GoPubMed</a>:
+            <em>ampliamento</em> dei termini per la ricerca, <em>
+              ordinamento</em> dei risultati in base all'
+              ontologia
+            </li>
+            <li>
+              <em>condivisione della base di conoscenza</em> tra
+              indicizzatore e fruitore
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Miglior qualit&agrave; dell' informazione
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <em>arricchire</em> la lista di documenti
+              restituiti, sfruttando le <em>relazioni</em>
+              definite a livello ontologico
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Personalizzazione
+        </dt>
+        <dd>
+          <ul>
+            <li>si pu&ograve; definire un <em>profilo utente</em>
+            che ne rappresenti ontologicamente gli interessi
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Ontologie per &hellip;
+      </h1>
+      <dl>
+        <dt>
+          Arricchimento delle informazioni esistenti
+        </dt>
+        <dd>
+          <ul>
+            <li>comprendere il <em>significato</em> dei documenti
+            e corredarli di <em>metadati</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Data integration
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <em>ontologie</em> espresse in OWL possono essere
+              <em>distribuite</em> sul Web
+            </li>
+            <li>
+              <em>condivisione</em> di conoscenza
+            </li>
+            <li>reperimento di informazioni espresse in
+            <em>lingue diverse</em> o con riferimenti a
+            <em>ontologie diverse</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Intelligent Semantic Search
+        </dt>
+        <dd>
+          <ul>
+            <li>spazio vettoriale dei concetti
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          &hellip;
+        </dt>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Conclusioni
+      </h1>
+      <ul>
+        <li>L' approccio tradizionale al reperimento dell'
+        informazione &egrave; essenzialmente <em>sintattico</em>
+        </li>
+        <li>Gli utenti sono interessati all' aspetto
+        <em>semantico</em> dell' informazione
+        </li>
+        <li>La <em>qualit&agrave; dell' informazione</em>
+        pu&ograve; essere migliorata se i sistemi utilizzano le
+        ontologie
+        </li>
+        <li>Le <em>tecnologie del Semantic Web</em> sono la
+        chiave per sfruttare queste potenzialit&agrave;
+        </li>
+        <li>
+          <a href="http://www.w3c.it/joining/" title=
+          "come diventare membri W3C">Associatevi al W3C</a> per
+          essere competitivi e attori dello sviluppo
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p><!-- <p>
+        ... e <a href="blowing.mp3">risposte</a>
+      </p> -->
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/talks/2006/km11/">http://www.w3c.it/talks/2006/km11/</a>)<br />
+
+        e il <em>documento</em> (<a href=
+        "http://www.w3c.it/papers/km11.pdf" hreflang="it" title=
+        "documento - km11">http://www.w3c.it/papers/km11.pdf</a>)
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>

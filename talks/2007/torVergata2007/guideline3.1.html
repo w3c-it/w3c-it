@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Guideline 3.1 - esempio</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+code           { font-family: monospace; }
+
+div.constraint,
+div.issue,
+div.note,
+div.notice,
+div.example    { margin-left: 1.5em; margin-bottom: .5em; }
+
+ol.enumar      { list-style-type: decimal; margin-top: 0; }
+ol.enumla      { list-style-type: lower-alpha; }
+ol.enumlr      { list-style-type: lower-roman; }
+ol.enumua      { list-style-type: upper-alpha; }
+ol.enumur      { list-style-type: upper-roman; }
+
+  li p {
+    margin-top: 0;                  
+    margin-bottom: 0; 
+  }
+
+p {
+    margin-top: 0;                  
+    margin-bottom: .5em; 
+  }
+  
+p.prefix, p.sctxt {
+    margin-top: .25em;  
+    margin-bottom: 0;
+}
+
+strong.sc-handle {
+  font-size: .9em;
+}
+
+dd.prefix p {
+    margin-bottom: 0;                  
+}
+        dd {
+    margin-bottom: .5em;                  
+  }
+  dt.label {padding-top: .5em;}
+div.sc ul {
+    margin-top: 0;                  
+}
+
+h4, h5 {margin-bottom: .5em;}
+
+    .revnote {
+        background-color : #adff2f;
+        color : black;
+      }
+    p.revnote , div.revnote {
+        padding : 0.5em;
+        margin : 0;
+      }
+    .informative {
+        color : #000000;
+        background : #ffffff;
+        padding-bottom : 0.5em;
+        padding-left : 1em;
+        margin-top : 0.5em;
+        margin-left : 2em;
+        padding-right : 0.5em;
+        border-style : solid;
+        border-width : thin;
+        border-color : #f1f1f1;
+      }
+      
+    .principle {  
+    padding: .5em;  
+    border: thin solid #666666;   
+    background-color: #FFFFFF;  
+    color: #000000;   
+    font-weight: bold; 
+  }
+       
+    .guideline {
+        border: thin solid #000066;   
+        background-color: #CFE8EF;  
+        padding: .5em .5em .5em .5em;   
+        margin-bottom: 0;   
+        color: #000000;   
+      }
+      
+    .req, .bp, .additional, .terms, .section {            
+      display: block; 
+      border-bottom: thin solid #666666;
+      margin-left: 1em;
+      padding-bottom: .5em;
+     } 
+     
+     .terms, .section {           
+      display: block; 
+      border-bottom: thin solid #666666;
+      margin-left: 0;
+     } 
+     
+  div.sc {
+     margin-left: 1em;
+  } 
+  
+    .bigger {
+        font-weight : bold;
+      }
+    .smaller {
+        font-size : 75%;
+      }
+    .termref {
+        color : #006400;
+        background : white;
+      }
+    a.termref:link {
+        color : #006400;
+        background : transparent;
+      }
+    a.termref:hover {
+        background-color : #fafad2;
+        color : #006400;
+      }
+  table.checklist {
+    empty-cells: show;
+    width: 94%;
+    margin-bottom: 1em;
+  }
+            
+  .termref {  
+    color: #006400;   
+    background: white;
+  } 
+  
+   a:link.termref {   
+     color: #006400;  
+     background: transparent;   
+  }   
+  
+  a:hover.termref {   
+    background-color: #FAFAD2;  
+    color: #006400;
+  }
+      .sorethumb {color: red
+   }
+  table.checklist {
+    empty-cells: show;
+    width: 94%;
+    margin-bottom: 1em;
+  }
+           
+p.sc {font-size: 100%; font-weight: bold; display: inline;}
+
+p.i, p.v {display: inline;}
+
+tr.scrule {
+font-size: 95%; 
+}
+
+tr.scrule:hover {
+background-color: #DCDCDC;
+}
+
+tr.scrule {
+background-color: #98FB98;
+}
+
+tbody.reqcl {
+  background-color: #CFE8EF;
+}
+tbody.bpcl {
+  background-color: #FFFFCC;
+}
+tbody.additionalcl {
+  background-color: #DDFDDF;
+}
+
+th.reqcl {
+  background-color: #CFE8EF;
+}
+th.bpcl {
+  background-color: #FFFFCC;
+}
+th.additionalcl {
+  background-color: #DDFDDF;
+}
+
+th {
+background-color: #E0E0E0;
+}
+
+hr.divider {
+  background-color: #000066;
+  height: 30px;
+}
+
+ p.instructions {
+    padding: 1em;
+    border: 1px dashed #2f6fab;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+    margin-left: 1em;
+    margin-right: 1em;
+   }
+       caption.guideline {
+        border : thin solid #000066;
+        background-color : #ffffff;
+        border-bottom-width : 3px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+      color : #000000;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    width: 100%;
+      }
+      
+ ul.nobullet {
+  list-style-type: none;
+ }
+ /* BBC - There are some experimental images in the sources/output directory that may be of use below at some point down the road */
+a.HTMlink, a.HTMlink:visited { 
+  display: inline;
+  font: .9em Arial, Helvetica, sans-serif;
+  padding: 0px 0px 2px 15px;
+/*    background: url(images/BG_li.gif) top left no-repeat; */
+  }
+a.HTMlink:hover { 
+  display: inline;
+  font: .9em Arial, Helvetica, sans-serif;
+  padding: 0px 0px 2px 15px;
+  background-color: transparent;
+/*  background: url(images/BG_li_hover.gif) top left no-repeat; */
+  }
+
+
+/*]]>*/
+</style>
+</head>
+<body>
+<h1>Esempio preso dalle WCAG20-20070517</h1>
+<p><a href="http://www.w3.org/TR/WCAG20/#meaning">Guideline
+3.1</a>(in questo estratto locale i link interni che rimandano al
+glossario non funzionano)</p>
+<div class="div2">
+<h2 class="principle"><a id="understandable" name=
+"understandable"></a> <span>Principle 3: Understandable -
+Information and operation of user interface must be
+understandable by users</span></h2>
+</div>
+<div class="div3">
+<h3 class="guideline"><a id="meaning" name="meaning"></a>
+Guideline 3.1 <span>Make text content readable and
+understandable</span> <a class="HTMlink" href=
+"http://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html#meaning">
+Understanding Guideline 3.1</a></h3>
+<div class="req">
+<div id="meaning-doc-lang-id" class="sc">
+<p class="sctxt"><strong class="sc-handle">3.1.1 Language of
+Page:</strong> The <span>default</span> <a title=
+"definition: human language" href="#human-langdef" class=
+"termref">human language</a> of <span>each</span> <a title=
+"definition: Web page" href="#webpagedef" class="termref">Web
+page</a> <span>within the content</span> can be <a title=
+"definition: programmatically determined" href=
+"#programmaticallydetermineddef" class="termref">programmatically
+determined</a>. (Level A) <a class="HTMlink" href=
+"http://www.w3.org/WAI/WCAG20/quickref/20070517/Overview.php#meaning-doc-lang-id">
+How to meet 3.1.1</a></p>
+</div>
+</div>
+<div class="bp">
+<div id="meaning-other-lang-id" class="sc">
+<p class="sctxt"><strong class="sc-handle">3.1.2 Language of
+Parts:</strong> The <a title="definition: human language" href=
+"#human-langdef" class="termref">human language</a> of each
+passage or phrase in the <span>content</span> can be <a title=
+"definition: programmatically determined" href=
+"#programmaticallydetermineddef" class="termref">programmatically
+determined</a>. (Level AA) <a class="HTMlink" href=
+"http://www.w3.org/WAI/WCAG20/quickref/20070517/Overview.php#meaning-other-lang-id">
+How to meet 3.1.2</a></p>
+<div class="note">
+<p class="prefix">Note: This requirement does not apply to
+individual words. It also does not apply to proper names, to
+technical terms or to phrases that have become part of the
+language of the context in which they are used.</p>
+</div>
+</div>
+</div>
+<div class="additional">
+<div id="meaning-idioms" class="sc">
+<p class="sctxt"><strong class="sc-handle">3.1.3 Unusual
+Words:</strong> A <a title="definition: mechanism" href=
+"#mechanismdef" class="termref">mechanism</a> is available for
+identifying specific definitions of words or phrases <a title=
+"definition: used in an unusual or restricted way" href=
+"#unusual-restricteddef" class="termref">used in an unusual or
+restricted way</a>, including <a title="definition: idiom" href=
+"#idiomsdef" class="termref">idioms</a> and <a title=
+"definition: jargon" href="#jargondef" class=
+"termref">jargon</a>. (Level AAA) <a class="HTMlink" href=
+"http://www.w3.org/WAI/WCAG20/quickref/20070517/Overview.php#meaning-idioms">
+How to meet 3.1.3</a></p>
+</div>
+<div id="meaning-located" class="sc">
+<p class="sctxt"><strong class="sc-handle">3.1.4
+Abbreviations:</strong> A <a title="definition: mechanism" href=
+"#mechanismdef" class="termref">mechanism</a> for finding the
+expanded form <span>or meaning</span> of <a title=
+"definition: abbreviation" href="#abbreviationsdef" class=
+"termref">abbreviations</a> is available. (Level AAA) <a class=
+"HTMlink" href=
+"http://www.w3.org/WAI/WCAG20/quickref/20070517/Overview.php#meaning-located">
+How to meet 3.1.4</a></p>
+</div>
+<div id="meaning-supplements" class="sc">
+<p class="sctxt"><strong class="sc-handle">3.1.5 Reading
+Level:</strong> When text requires reading ability more advanced
+than the <a title="definition: lower secondary education level"
+href="#lowseceddef" class="termref">lower secondary education
+level</a>, <a title="definition: supplemental content" href=
+"#suppcontentdef" class="termref">supplemental content</a>
+<span>or an <a title="definition: alternate version" href=
+"#alternate-versiondef" class="termref">alternate
+version</a></span> is available that does not require reading
+ability more advanced than the lower secondary education level.
+(Level AAA) <a class="HTMlink" href=
+"http://www.w3.org/WAI/WCAG20/quickref/20070517/Overview.php#meaning-supplements">
+How to meet 3.1.5</a></p>
+</div>
+<div id="meaning-pronunciation" class="sc">
+<p class="sctxt"><strong class="sc-handle">3.1.6
+Pronunciation:</strong> A <a title="definition: mechanism" href=
+"#mechanismdef" class="termref">mechanism</a> is available for
+identifying specific pronunciation of words where meaning
+<span>is ambiguous without knowing the pronunciation</span>.
+(Level AAA) <a class="HTMlink" href=
+"http://www.w3.org/WAI/WCAG20/quickref/20070517/Overview.php#meaning-pronunciation">
+How to meet 3.1.6</a></p>
+</div>
+</div>
+<div>
+<p><button id="back" onclick="history.go(-1)">Torna alla
+presentazione</button></p>
+</div>
+</div>
+</body>
+</html>

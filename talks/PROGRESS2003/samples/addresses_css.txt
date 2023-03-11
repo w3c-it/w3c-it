@@ -1,0 +1,24 @@
+Person 		     		{display: block; }
+Name 		     			{display: block; color: red; margin-top: 1em}
+Address	 			{display: block; margin-left: 1em}
+Address:before 			{content: "Address: "; font-weight: bold}
+City 					{display: block; margin-left: 1em }
+City:before 			{content: "City: "; font-weight: bold }
+Country 				{display: block; margin-left: 1em }
+Country:before 			{content: "Country: "; font-weight: bold }
+Zip 					{display: block; margin-left: 1em }
+Zip:before 				{content: "Zip: "; font-weight: bold }
+Tel 					{display: block; margin-left: 1em }
+Tel[where ~= "office"]:before		{content: "Phone (office): "; font-weight: bold }
+Tel[where ~= "home"]:before			{content: "Phone (home): "; font-weight: bold }
+Tel[where ~= "mobile"]:before		{content: "Phone (mobile): "; font-weight: bold }
+Fax 					{display: block; margin-left: 1em }
+Fax:before				{content: "Fax: "; font-weight: bold }
+Email 				{display: block; margin-left: 1em }
+Email:before			{content: "Email: "; font-weight: bold }
+Picture 				{display: none; }
+Notes 				{display: block; margin-left: 1em }
+Notes:before			{content: "Notes: "; font-style: italic }
+a         				{display: inline; }
+
+

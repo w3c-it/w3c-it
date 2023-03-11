@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+   <!-- This is the top level element, just like for the DTD -->
+	<xs:element name="Addresses">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Person" type="PersonType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string"/>
+			<xs:anyAttribute namespace="http://www.w3.org/XML/1998/namespace"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Content of the Person element. Note, eg, maxOccurs="3" -->
+	<xs:complexType name="PersonType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Address" type="xs:string"/>
+			<xs:element name="City" type="xs:string"/>
+			<xs:element name="Zip" type="xs:string" minOccurs="0"/>
+			<xs:element name="Country" type="xs:string"/>
+			<xs:element name="Tel" type="TelType" maxOccurs="3"/>
+			<xs:element name="Fax" type="TelNumber" minOccurs="0"/>
+			<xs:element name="Email" type="EmailType"/>
+			<xs:element name="Picture" type="PictureType" minOccurs="0"/>
+			<xs:element name="Notes" type="NotesType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Picture type: defines the type usable for the attributes -->
+	<xs:complexType name="PictureType">
+		<xs:attribute name="width" type="xs:positiveInteger" use="required"/>
+		<xs:attribute name="height" type="xs:positiveInteger" use="required"/>
+		<xs:attribute name="src" type="xs:anyURI" use="required"/>
+	</xs:complexType>
+	<!-- Hyperlinks: the 'a' element can include all attributes in the XLink namespace! -->
+	<xs:complexType name="aType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:anyAttribute namespace="http://www.w3.org/1999/xlink"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- Restriction for a phone number. Note the usage of a regular expression -->
+	<xs:simpleType name="TelNumber">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\+[0-9 -.]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- A telephone number is a TelNumber (like above), but which has a required attribute which can take one of three values -->
+	<xs:complexType name="TelType">
+		<xs:simpleContent>
+			<xs:extension base="TelNumber">
+				<xs:attribute name="where" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="mobile"/>
+							<xs:enumeration value="home"/>
+							<xs:enumeration value="office"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="EmailType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z0-9_-]+@w3.org"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="NotesType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="a" type="aType"/>
+		</xs:choice>
+	</xs:complexType>
+</xs:schema>

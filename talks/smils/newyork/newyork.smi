@@ -1,0 +1,38 @@
+<smil>
+  <head>
+    <meta name="title" content="Enjoy New York with SMILe"/>
+    <meta name="author" content="Pietro Marchisio"/>
+
+    <layout>
+      <root-layout width="800" height="600" background-color="blue"/>
+      <region id="banner" left="0" top="0" width="800" height="120"/>
+      <region id="bigimg" left="160" top="120" width="640" height="480"/>
+      <region id="index" left="0" top="120" width="160" height="480" background-color="teal"/>
+
+      <region id="butt1" left="20" top="220" width="200" height="60" z-index="1"/>
+      <region id="butt2" left="20" top="320" width="200" height="60" z-index="1"/>
+      <region id="butt3" left="20" top="420" width="200" height="60" z-index="1"/>
+
+      <region id="butthelp" left="742" top="542" width="48" height="48" z-index="1"/>
+    </layout>
+  </head>
+
+  <body>
+    <par>
+        <img src="banner.rp" region="banner" fill="freeze"/>
+        <img src="bitmap1/skyline1.jpg?bitrate=600000" region="bigimg" fill="freeze"/>
+        <a href="voice.smi"> 
+          <img src="bitmap0/buttvoice.jpg?bitrate=200000" region="butt1" fill="freeze" begin="1s"/>
+        </a>
+        <a href="movies.smi"> 
+          <img src="bitmap0/buttmovie.jpg?bitrate=200000" region="butt2" fill="freeze" begin="1s"/>
+        </a>
+        <a href="slides.smi"> 
+          <img src="bitmap0/buttphoto.jpg?bitrate=200000" region="butt3" fill="freeze" begin="1s"/>
+        </a>
+        <a href="help.smi"> 
+           <img src="help/butthelp.rp" region="butthelp" fill="freeze" begin="2s"/>
+        </a>
+    </par>
+  </body>
+</smil>

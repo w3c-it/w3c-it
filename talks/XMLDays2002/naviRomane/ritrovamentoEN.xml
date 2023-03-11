@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="ritrovamentoEN-HTML4.01.xsl" ?>
+
+<pagina>
+
+<head>
+  <title>Lo scavo archeologico - Il ritrovamento</title>
+  <link rel="stylesheet" href="stile.css" type="text/css" />
+</head>
+
+<body>
+<immagineIntestazione width="450" height="54">
+  <src>immaginiStruttura/barraScavo.jpg</src>
+  <alt>Lo scavo archeologico</alt>
+</immagineIntestazione>
+
+<immagineIntestazione width="616" height="82">
+  <src>titoliSezioni/ritrovamento.jpg</src>
+  <alt>Il ritrovamento3</alt>
+</immagineIntestazione>
+
+
+<notizia id="pi1" lang="en">
+  <titolo>The Museum of Ancient Shipping.</titolo>
+  <corpo>
+    <testo>
+      Four well-preserved Roman ships have been found in Pisa, Italy, by builders digging 
+      the foundation for new offices at one of the city's train stations. 
+      Following Italian law, work was suspended and archaeologists were called 
+      in after the first ship was discovered. 
+      Moving quickly because construction could not resume until 
+      they were done, excavators found three more ships, cargo and 
+      other artifacts, and part of an ancient quay.
+      One hull, 46 by 20 feet, is in particularly good condition. 
+      &quot;The wood seems to have been buried almost yesterday,&quot; says a project volunteer. 
+      &quot;The planking is still fastened to the frame with copper nails.&quot;
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia id="pi2" lang="en">
+  <corpo>
+    <testo>
+      Potsherds found nearby date the ship to the mid-second century A.D. 
+      According to project director Stefano Bruni of the Archaeological 
+      Superintendency of Tuscany, the design of the hull suggests that it is   
+      a warship. 
+      If this is the case, says Bruni, &quot;it will be the first known imperial 
+      warship whose structure survives relatively intact, contributing
+      immensely to knowledge of the Roman fleet.&quot;
+      This ship was empty, but the cargo of another vessel, 
+      dating from the first century B.C., was nearly intact. 
+      Amphoras (two of which were stolen from the excavation) contained a 
+      liquid residue (possibly wine); remains of cherries, plums, and olives; 
+      as well as sand from the Bay of Naples. Another freighter's hull was 
+      very well preserved, but no cargo was found. Near a fourth, smaller boat, 
+      a wicker basket, a leather sandal, and a coil of rope were discovered.
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia id="ritrovamento" lang="it">
+  <titolo>Lo scavo archeologico delle antiche navi.</titolo>
+  <corpo>
+    <testo>
+      Nel corso dei lavori per la realizzazione delle fondazioni di un nuovo 
+      centro direzionale delle Ferrovie dello Stato, nell'area della stazione 
+      di &quot;Pisa San Rossore&quot;, a poco più di cinquecento metri 
+      in linea d'area dalla piazza del Duomo, nei primi giorni di dicembre 
+      del 1998 sono stati riportati in luce i resti del <b>porto urbano della 
+      città etrusca e romana</b>.
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia id="conservazione" lang="it">
+  <corpo>
+    <testo>
+      Una serie di circostanze casuali, come la presenza di una copiosa acqua 
+      di falda superficiale e l'assenza di ossigeno nei livelli sabbiosi, 
+      hanno permesso ad una rilevantissima serie di reperti archeologici di 
+      giungere fino a noi.
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia id="reperti" lang="it">
+  <corpo>
+    <a href="c_ritrovamentonotturno.htm" title="Il ritrovamento di notte">
+      <immagine width="300" height="197" align="left" border="0">
+        <src>immaginiArcheologia/PSR3-Area-totale-notturna.jpg</src>
+        <alt>Vista del ritrovamento di notte</alt>
+      </immagine>
+    </a>
+    <testo>
+      Lo scavo condotto dall'equipe della Soprintendenza ai Beni Archeologici 
+      della Toscana, con i resti delle sue almeno sedici imbarcazioni (di cui 
+      otto in corso di scavo), il loro carico, le strutture portuali (moli, 
+      un pontile, una palizzata frangiflutti), di epoche diverse e in ottimo 
+      stato di conservazione, si configura come un unicum nel panorama dei ritrovamenti 
+      archeologici almeno degli ultimi cento anni.
+    </testo>
+    <testo>
+      I reperti individuati fino ad oggi ci permettono di <b>documentare la 
+      vita del porto pisano nell'arco di 10 secoli</b> (dal V sec. A.C 
+      al V. sec. D.C.)
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia id="scoperta" lang="it">
+  <corpo>
+    <testo>
+      Già nel <b>1997</b> in quest'area fu eseguita 
+      una serie di <b>saggi</b> che a causa della copiosa acqua di falda superficiale 
+      non avevano potuto raggiungere i livelli più profondi e si erano 
+      limitati ad individuare, al di sotto dello strato antropico moderno, i 
+      resti del catasto rinascimentale e - limitatamente al settore più 
+      meridionale - consistenti tracce della centuriazione di età
+      imperiale.
+    </testo>
+    <testo>
+      A partire dalla fine del novembre 1998 l'impianto del sistema logistico 
+      del cantiere FF.SS. ha permesso di raggiungere i livelli più profondi. 
+      Si è cosi giunti nei primissimi giorni del <b>dicembre 1998</b> 
+      alla scoperta del <b>primo relitto</b>, in parte tagliato dal sistema 
+      di palancole e well points che consente di operare.
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia id="cantiere" lang="it">
+  <corpo>
+    <a href="c_ritrovamentourbano.htm" title="Il ritrovamento urbano">
+      <immagine width="256" height="190" align="right" border="0">
+        <src>old/INSERIMENTO-URBANO-t.jpg</src>
+        <alt>Inserimento Urbano</alt>
+      </immagine>
+    </a>
+    <testo>
+      Al frequentatore abituale di scavi archeologici, l'aspetto del cantiere 
+      archeologico di Pisa San Rossore apparirà, quanto meno, inconsueto: 
+      disceso da una scaletta fino alla profondità di cinque metri, si 
+      ritroverà in un recinto di ferro, ad ammirare i relitti che emergono 
+      isole di terra in un mare uniforme di cemento. Tutto questo necessita 
+      di una spiegazione: il &quot;recinto&quot; che coincide con il perimetro 
+      di quello che doveva essere il costruendo edificio delle FFSS, è 
+      in realtà un palancolato, formato da elementi modulari di 11 metri, 
+      conficcati nel terreno allo scopo di &quot;tagliare&quot; l'acqua di falda e di 
+      eliminarla grazie ad un sistema di pompe well point. Quello 
+      che poi appare ad un primo sguardo come cemento, è in realtà 
+      un impasto di malte, estremamente tenero e quindi facilmente rimovibile, 
+      gettato sul terreno alla profondità di cinque metri, per evitare 
+      all'acqua di risalire e rendere il terreno impraticabile.
+    </testo>
+    <testo>
+      Essendo i relitti venuti in luce tutti più o meno al limite della 
+      quota di sicurezza, si è reso necessario cercare di delimitarne 
+      i contorni per posizionare attorno ad essi un secondo palancolato che 
+      permettesse di scendere ad una maggiore profondità. Si sono venuti 
+      in tal modo a creare dei settori di scavo, ognuno dei quali ospita al 
+      suo interno uno o più relitti. 
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia id="settori" lang="it">
+  <titolo align="left">I settori di scavo</titolo>  
+  <corpo>
+    <immagine width="270" height="525" align="right">
+      <src>immaginiArcheologia/planimetria.jpg</src>
+      <alt>Planimetria</alt>
+    </immagine>
+    <testo>
+      <b>L'Area 1</b> situata al limite nord-est, ospita il primo relitto venuto alla 
+      luce, la <b>nave oneraria A</b>; ritenuta in un primo momento un caso 
+      isolato, le Ferrovie decisero, d'accordo con la Soprintendenza, di 
+      spostare il perimetro stesso dell'edificio di 8 metri verso sud, 
+      e lasciare agli archeologi il tempo e il modo di scavare con tutta tranquillità. 
+    </testo>
+    <testo>
+      <b>Le Aree 2 e 3</b> sono comprese all'interno di un recinto di palancole 
+      assieme all'area 1; all'area 3 è pertinente il <b>relitto 
+      B</b>, all'area 2 <b>l'imbarcazione F</b>, la &quot;<b>piroga</b>&quot;, 
+      mentre al confine fra i due settori, confine artificiale creato per motivi 
+      pratici di rilievo e documentazione, troviamo la<b> Nave E</b>. <br />
+      <b>L'Area 4</b> al centro dell'area generale di scavo, comprendeva 
+      in un primo momento solo due strutture lignee, rinvenute a quota -4.50 
+      metri circa. Queste nel proseguire degli scavi si sono rivelate pertinenti 
+      ad un'unica struttura, un barcone da pesca di notevoli dimensioni, detto 
+      nave C.
+    </testo>
+    <testo>
+      <b>L'Area 5</b>, a nord dell'area generale di scavo, ospita 
+      all'interno del proprio palancolato la <b>nave D</b>. Al di sotto 
+      di essa sono state individuate almeno altre due imbarcazioni.
+    </testo>
+  
+    <immagine width="300" height="198">
+      <src>immaginiArcheologia/NAVE_D.jpg</src>
+      <alt>Immagine di una nave</alt>
+      <descrizione>La nave D al momento del ritrovamento</descrizione>
+    </immagine>
+  </corpo>
+</notizia>
+
+<notizia align="center" id="naveEllenistica" lang="it"> 
+  <corpo>
+    <testo>
+      <b>L'Ampliamento sud</b>, costituiva la rampa di accesso ai mezzi 
+      meccanici ed è stato quindi l'ultimo settore ad essere scavato, 
+      e l'unico dove lo scavo è stato concluso. Di forma stretta 
+      e allungata, è stato suddiviso in tre sotto settori, denominati 
+      1, 2 e 3, contenenti rispettivamente i resti della <b>nave ellenistica</b>, 
+      il molo e la palizzata frangiflutti.
+    </testo>
+    <immagine width="300" height="209">
+      <src>immaginiArcheologia/NAVE_D_BN.jpg</src>
+      <alt>La nave D</alt>
+      <descrizione>La nave D</descrizione>
+      <autore>Foto Gianni Berti - CoIDRA</autore>
+    </immagine>    
+  </corpo>
+</notizia>
+
+<notizia align="center" id="area3" lang="it">
+  <titolo>Lo scavo e la documentazione</titolo>
+  <corpo>
+    <immagine align="right">
+      <src>immaginiArcheologia/PSR3-Area-3.jpg</src>
+      <descrizione>L'area 3</descrizione>
+      <autore>Phillippe Plailly</autore>
+      <concessione>Eurelios - press agency</concessione>
+    </immagine>
+  </corpo>
+</notizia>
+
+<notizia align="center" id="metodoStratigrafico" lang="it">
+  <corpo>
+    <testo>
+      Il metodo di scavo adottato è stato 
+      naturalmente per tutte le aree quello <b>stratigrafico</b>, ulteriormente 
+      perfezionato per la grande mole di materiali rinvenuti.
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia align="center" id="metodologie" lang="it">
+  <corpo>
+    <testo>
+      Per quello che riguarda la metodologia, 
+      è cercato di privilegiare, all'interno dei settori, lo<b> 
+      scavo in estensione</b>, tranne nei casi in cui motivi di sicurezza della 
+      struttura lignea ha reso necessaria l'applicazione di metodologie 
+      diverse come ad esempio nell'area 5, in cui si è dovuto operare 
+      per saggi alternati, lasciando un risparmio di terreno fra l'uno 
+      e l'altro, a causa della posizione della nave, rinvenuta rovesciata, 
+      priva della chiglia e fortemente inclinata verso nord. Questo ha permesso 
+      di poter puntellare la struttura in modo che non creare pericoli di collasso. 
+    </testo>
+    <testo>
+      Per quello che riguarda lo scavo e la documentazione grafica dei relitti 
+      la metodologia è invece più complessa, determinata dalla 
+      necessità di un'immediata resinatura a scopo conservativo: 
+      si è così operato in &quot;equipe&quot;, con squadre alternate 
+      a rotazione di archeologi, rilevatori e resinatori: lo strato era scavato 
+      per piccole porzioni, mettendo in luce le parti corrispondenti del relitto 
+      sottostante; queste venivano rilevate ed in seguito, dopo il collaudo, 
+      sottoposte al procedimento di resinatura; è chiaro che con questo 
+      metodo si è privilegiato il parametro della sicurezza a scapito 
+      di una visione globale.
+    </testo>
+    <testo>
+      Per quanto riguarda la documentazione grafica, precluso il rilievo fotogrammetrico, 
+      la scelta obbligata è stata quella del rilievo strumentale, che 
+      permetterà sia una restituzione bidimensionale dell'oggetto 
+      rilevato, sia la realizzazione di modelli tridimensionali digitali. Ogni 
+      singolo relitto quindi può essere ricostruito virtualmente.
+    </testo>
+  </corpo>
+</notizia>
+
+<notizia id="scavoE">  
+  <corpo align="center">
+    <immagine width="492" height="306">
+      <src>immaginiArcheologia/Pisa-e-scavo.jpg</src>
+      <alt>Scavo E</alt>
+    </immagine>
+  </corpo>
+</notizia>
+
+<bibliografia>
+  <titolo>Sullo scavo si veda per ora</titolo>
+  
+  <riferimento>
+    <autore>S. BRUNI</autore>
+    <sezione>Appunti preliminari sullo scavo nell'area del complesso 
+        ferroviario di &quot;Pisa-San Rossore&quot;</sezione>
+    <libro>in Le navi antiche di San Rossore</libro>
+    <luogoPubblicazione>Firenze</luogoPubblicazione>
+    <dataPubblicazione>1999</dataPubblicazione>
+    <pagine>11 s.</pagine>
+  </riferimento>
+
+  <riferimento>
+    <autore>S. BRUNI</autore>
+    <sezione>Pisa, il porto urbano e i relitti del complesso ferroviario 
+        di &quot;Pisa-San Rossore&quot;</sezione>
+    <libro>Appunti su uno scavo ancora in corso, 
+        in Bollettino Storico Pisano LXIX</libro>
+    <dataPubblicazione>2000</dataPubblicazione>
+    <pagine>p. 275 s.</pagine>
+  </riferimento>
+  
+  <riferimento>
+    <autore>S. BRUNI</autore>
+    <sezione>il porto urbano di Pisae e i relitti del complesso ferroviario 
+        di &quot;Pisa-San Rossore&quot;</sezione>
+    <libro>il porto urbano di Pisae e i relitti del complesso ferroviario 
+        di &quot;Pisa-San Rossore&quot;</libro>
+    <luogoPubblicazione>Firenze</luogoPubblicazione>
+    <dataPubblicazione>2000</dataPubblicazione>
+    <pagine>p. 21 s.</pagine>
+  </riferimento>
+
+  <riferimento>
+    <autore>S. BRUNI</autore>
+    <sezione>Porti e approdi di Pisa. Nuovi dati alla luce degli scavi 
+        nell'area del complesso ferroviario di &quot;Pisa-San Rossore&quot;</sezione>
+    <libro>in corso di stampa nel volume Naxos 999. Archeologia subacquea, Atti della 
+        rassegna internazionale Giardini di Naxos</libro>
+    <dataPubblicazione>29-31 ottobre 1999</dataPubblicazione>
+  </riferimento>
+  
+  <riferimento>
+    <autore>S. BRUNI</autore>
+    <sezione>Die Hafen von Pisa</sezione>
+    <libro>in In Poseidons Reich, Atti della Sesta Conferenza</libro>
+    <dataPubblicazione>3-4 Marzo 2001</dataPubblicazione>
+  </riferimento>
+  
+  <riferimento>
+    <autore>S. BRUNI</autore>
+    <sezione>The Urban Port of Pisae and the Wrecks of the &quot;Pisa-San 
+      Rossore&quot;</sezione>
+    <libro>in The Ancient Ships of Pisa, catalogo della mostra United 
+      NationsBuldings</libro>
+    <dataPubblicazione>2001</dataPubblicazione>
+    <luogoPubblicazione>New York</luogoPubblicazione>
+    <pagine>p. 66s.</pagine>
+  </riferimento>
+  
+</bibliografia>
+
+
+</body>
+</pagina>

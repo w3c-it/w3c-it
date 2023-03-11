@@ -1,0 +1,87 @@
+div.slide { 
+	page-break-before: always; 
+	page-break-inside: avoid;
+}
+
+div.slide titlepage {
+	page-break-before: auto; 
+	page-break-inside: avoid;
+}
+
+div.slide h1 {
+	margin-left: 0pt;
+	/* background: lightgray;  errore nella validazione CSS: d3d3d3 è uguale */
+	background: #d3d3d3;
+	color: #0050B2;
+}
+
+pre { 
+	/* color: rgb(0,128,0);  */
+	color: purple;
+	line-height: 100%;
+	margin-bottom:0px;
+	margin-top: 0px;
+	margin-left: 1em;
+	margin-right: 2em;
+	padding-bottom: 0.09em;
+	padding-top: 0.09em;
+	background: #E9FFFF;
+	font-size: 90%;
+}
+
+/* add-on */
+code {
+	color: purple;
+	font-weight: bold;
+}
+
+/* Add-on */
+img {
+	border: 2px solid #c60;
+	padding: 4px;
+}
+
+a:visited, a:link { color: blue }
+
+/* reduced the margins a bit */
+div dt
+{
+	margin-left: 0;
+	margin-top: 0.2em;
+	margin-bottom: 0em;
+}
+
+/* I am not sure why it was good to add a padding for a slide. With a yellow background on the
+   title it should be enough 
+*/
+div.slide { padding-top: 0em; }
+
+
+.emph1 { 
+   color: blue;
+}
+.emph2 { 
+   color: #006400;
+}
+.emph3 { 
+   color: #cc0066;
+} 
+.emph4 { 
+   color: #ff00cc;
+}
+.emph5 { 
+   color:red;
+}
+
+
+/* These are needed for the leftover of my scripts... */
+.svgOnly { 
+	display: none; 
+	visibility: hidden;
+}
+
+.center, .centre { 
+	text-align: center; 
+} 
+
+

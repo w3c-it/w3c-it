@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<?xml-stylesheet href="StyleSheet.css" type="text/css"?>
+
+<!DOCTYPE svg
+  PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xml:space="preserve"
+ onload="focus()"
+ onkeypress="key_press(evt)">
+<desc>
+	<Slide id="Info" NumAnimaz="1" />
+</desc>
+<script xlink:href="SlideControl.js"/>
+<rect x="0" y="0" width="800"  height="600" ry="50" rx="50" fill="grey" opacity="0.1" />
+
+<defs>
+<path id="curve" d="M0 100 Q200,40 400,110 T800 100" style="stroke:blue;stroke-opacity:0.2;stroke-width:2;fill:none"/>
+</defs>
+<text style="font-size:25;fill:blue;text-anchor:left">
+<textPath id="result" method="align" spacing="auto" startOffset="100%" xlink:href="#curve">
+	<tspan dy="-10">Una applicazione concreta delle tecnologie W3C</tspan>
+	<animate id="animaz1" begin="undefined" dur="3s" attributeName="startOffset" values="100%;15%" fill="freeze" restart="never"/>
+</textPath>
+</text>
+<use xlink:href="#curve"/>
+
+
+
+   <g style="opacity:0.1">
+     <image id="Logo" x="50" y="50" width="800" height="800" xlink:href="./ImgSVG/Logo.svg" />
+   </g>	
+
+
+<rect id="rettangolo" x="50" y="120" width="700"  height="200" ry="20" rx="20" fill="blue" opacity="0.1" />
+
+
+<text  class="Inizio" x="100" y="200">
+	<tspan >Descrizione e gestione di  </tspan> 
+	<tspan dx="-600" dy="1em">workflow documentali con una </tspan> 
+	<tspan dx="-650" dy="1em">applicazione basata su XML</tspan> 
+</text>
+
+
+<text x="100" y="450">Maurizio Tesconi</text>
+<text x="100" y="500">Andrea Marchetti</text>
+<text x="100" y="550">Oreste Signore</text>
+
+</svg>

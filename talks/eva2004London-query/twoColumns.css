@@ -1,0 +1,37 @@
+@import url("../tools/w3ctalk-800-whitebackground.css");
+
+.navColumn{ margin-left:1%;
+margin-right:1%;           
+        float: left;
+	width: 20%;
+	background: white;
+}
+
+
+.fullPage { margin-right:1%;
+        margin-left:1%;
+        float: left;
+	width: 96%;
+}
+
+.imageColumn { margin-right:0%;
+	margin-left:1%;
+  float: left;
+	width: 70%;
+	background: white;
+}
+
+.textColumn { margin-right:1%;
+	margin-left:1%;
+  float: left;
+	width: 25%;
+	background: white;
+}
+
+.footer{ margin-left:1%;
+        margin-right:1%;                      
+        float: left;
+        width: 94%;
+	background: white;
+}
+

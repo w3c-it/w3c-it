@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>link</title>
+<link href="../../tools/w3ctalk-800-whitebackground.css"
+rel="stylesheet" type="text/css" title="W3C Talk" />
+</head>
+<body>
+<h1>Clarity of links</h1>
+<ul>
+<li>Text must be meaningful even out of context</li>
+<li>Deprecate: "<em>Details</em>", "<em>Continue</em>",
+"<em>pdf</em>"</li>
+<li>Using a screen reader, user can get the list of links.<br />
+Examples produced using the Jaws "insert+f6" command on a page
+where it is possible to download files in 
+different formats (html, doc, pdf)</li>
+</ul>
+<h2>Meaningless links</h2>
+<table
+summary="esempio di link poco significativi: a sinistra lo screen shot, a destra le spiegazioni">
+<tr>
+<td><img src="link01.jpg"
+alt="screenshot di link poco significativi" /></td>
+<td>
+<ul>
+<li>The text of links is simply:  "pdf", or "doc" or
+"html"</li>
+<li>User must scan the entire page</li>
+</ul>
+</td>
+</tr>
+</table>
+<h2>Better, but not really usable</h2>
+<table
+summary="esempio di link significativi ma poco usabili: a sinistra lo screen shot, a destra le spiegazioni">
+<tr>
+<td><img src="link02.jpg"
+alt="screenshot di link modificati ma non sufficientemente usabili" />
+</td>
+<td>
+<ul>
+<li>Using the <em>&lt;title&gt;</em> attribute</li>
+<li>A text like: "<em>link to doc - english</em>" is useless,
+all the links begin with the same letter</li>
+</ul>
+</td>
+</tr>
+</table>
+<h2>Appropriate modification</h2>
+<table
+summary="esempio di link significativi e usabili: a sinistra lo screen shot, a destra le spiegazioni">
+<tr>
+<td><img src="link03.jpg"
+alt="screenshot di link modificati in modo adeguato" /></td>
+<td>
+<ul>
+<li>A text like: "<em>english - html format</em>" allows grouping links
+to documents written in the same language</li>
+<li>Using the  <em>&lt;title&gt;</em> or
+<em>&lt;alt&gt;</em> attribute the appearance on the screen
+is left unmodified, while the text in the status bar (showed 
+on mouse over) is</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>

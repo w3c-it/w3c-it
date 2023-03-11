@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://www.comune.pi.it/naviromane/c_ritrovamento.htm -->
+<HTML><HEAD><TITLE>Untitled Document</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<SCRIPT language=JavaScript>
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</SCRIPT>
+<LINK href="ritrovamentoOriginale_files/stile.css" rel=stylesheet type=text/css>
+<META content="MSHTML 5.00.3103.1000" name=GENERATOR></HEAD>
+<BODY bgColor=#eaeaea link=#6666cc 
+onload="MM_preloadImages('rollovers/back_on.jpg')" text=#000000 vLink=#660099>
+<P><IMG height=82 src="ritrovamentoOriginale_files/barra_scavo.jpg" width=616> 
+</P>
+<P><IMG height=54 src="ritrovamentoOriginale_files/ritrovamento.jpg" 
+width=450></P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="90%">
+  <TBODY>
+  <TR>
+    <TD colSpan=2 vAlign=top>
+      <P class=titoletto>Lo scavo archeologico delle antiche navi</P>
+      <P class=corpo><BR>Nel corso dei lavori per la realizzazione delle 
+      fondazioni di un nuovo centro direzionale delle Ferrovie dello Stato, 
+      nell&#8217;area della stazione di &#8220;Pisa San Rossore&#8221;, a poco più di cinquecento 
+      metri in linea d&#8217;area dalla piazza del Duomo, nei primi giorni di dicembre 
+      del 1998 sono stati riportati in luce i resti del <B>porto urbano della 
+      città etrusca e romana</B>.</P>
+      <P class=corpo><BR>Una serie di circostanze casuali, come la presenza di 
+      una copiosa acqua di falda superficiale e l&#8217;assenza di ossigeno nei 
+      livelli sabbiosi, hanno permesso ad una rilevantissima serie di reperti 
+      archeologici di giungere fino a noi.</P>
+      <P class=corpo><BR><A 
+      href="http://www.comune.pi.it/naviromane/c_ritrovamentonotturno.htm" 
+      target=_self><IMG align=left border=0 height=197 
+      src="ritrovamentoOriginale_files/PSR3-Area-totale-notturna.jpg" 
+      width=300></A>Lo scavo condotto dall&#8217;equipe della Soprintendenza ai Beni 
+      Archeologici della Toscana, con i resti delle sue almeno sedici 
+      imbarcazioni (di cui otto in corso di scavo), il loro carico, le strutture 
+      portuali (moli, un pontile, una palizzata frangiflutti), di epoche diverse 
+      e in ottimo stato di conservazione, si configura come un unicum nel 
+      panorama dei ritrovamenti archeologici almeno degli ultimi cento 
+      anni.<BR>I reperti individuati fino ad oggi ci permettono di 
+      <B>documentare la vita del porto pisano nell&#8217;arco di 10 secoli</B> (dal V 
+      sec. A.C al V. sec. D.C.)</P>
+      <P class=corpo>Già nel <B>1997</B> in quest&#8217;area fu eseguita una serie di 
+      <B>saggi</B> che a causa della copiosa acqua di falda superficiale non 
+      avevano potuto raggiungere i livelli più profondi e si erano limitati ad 
+      individuare, al di sotto dello strato antropico moderno, i resti del 
+      catasto rinascimentale e - limitatamente al settore più meridionale - 
+      consistenti tracce della centuriazione di età imperiale.<BR>A partire 
+      dalla fine del novembre 1998 l&#8217;impianto del sistema logistico del cantiere 
+      FF.SS. ha permesso di raggiungere i livelli più profondi. Si è cosi giunti 
+      nei primissimi giorni del <B>dicembre 1998</B> alla scoperta del <B>primo 
+      relitto</B>, in parte tagliato dal sistema di palancole e well points che 
+      consente di operare. </P>
+      <P align=center><SPAN class=corpo><A 
+      href="http://www.comune.pi.it/naviromane/c_ritrovamentourbano.htm" 
+      target=_self><IMG align=right border=0 height=190 
+      src="ritrovamentoOriginale_files/INSERIMENTO-URBANO-t.jpg" 
+      width=256></A>Al frequentatore abituale di scavi archeologici, l&#8217;aspetto 
+      del cantiere archeologico di Pisa San Rossore apparirà, quanto meno, 
+      inconsueto: disceso da una scaletta fino alla profondità di cinque metri, 
+      si ritroverà in un recinto di ferro, ad ammirare i relitti che emergono 
+      entro isole di terra in un mare uniforme di cemento. Tutto questo 
+      necessita di una spiegazione: il &#8220;recinto&#8221; che coincide con il perimetro 
+      di quello che doveva essere il costruendo edificio delle FFSS, è in realtà 
+      un palancolato, formato da elementi modulari di 11 metri, conficcati nel 
+      terreno allo scopo di &#8220;tagliare&#8221; l&#8217;acqua di falda e di eliminarla grazie 
+      ad un sistema di pompe well point. Quello che poi appare ad un primo 
+      sguardo come cemento, è in realtà un impasto di malte, estremamente tenero 
+      e quindi facilmente rimovibile, gettato sul terreno alla profondità di 
+      cinque metri, per evitare all&#8217;acqua di risalire e rendere il terreno 
+      impraticabile. <BR>Essendo i relitti venuti in luce tutti più o meno al 
+      limite della quota di sicurezza, si è reso necessario cercare di 
+      delimitarne i contorni per posizionare attorno ad essi un secondo 
+      palancolato che permettesse di scendere ad una maggiore profondità. Si 
+      sono venuti in tal modo a creare dei settori di scavo, ognuno dei quali 
+      ospita al suo interno uno o più relitti. </SPAN></P>
+      <P align=center class=corpo>&nbsp;</P>
+      <P align=left class=titoletto>I settori di scavo</P>
+      <P align=center class=corpo><BR><B><IMG align=right height=525 
+      src="ritrovamentoOriginale_files/PLANIMETRA.jpg" width=270>L&#8217;Area 1</B> 
+      situata al limite nord-est, ospita il primo relitto venuto alla luce, la 
+      <B>nave oneraria A</B>; ritenuta in un primo momento un caso isolato, le 
+      Ferrovie decisero, d&#8217;accordo con la Soprintendenza, di spostare il 
+      perimetro stesso dell&#8217;edificio di 8 metri verso sud, e lasciare agli 
+      archeologi il tempo e il modo di scavare con tutta tranquillità. <BR><B>Le 
+      Aree 2 e 3</B> sono comprese all&#8217;interno di un recinto di palancole 
+      assieme all&#8217;area 1; all&#8217;area 3 è pertinente il <B>relitto B</B>, all&#8217;area 
+      2 <B>l&#8217;imbarcazione F</B>, la &#8220;<B>piroga</B>&#8221;, mentre al confine fra i due 
+      settori, confine artificiale creato per motivi pratici di rilievo e 
+      documentazione, troviamo la<B> Nave E</B>. <BR><B>L&#8217;Area 4</B> al centro 
+      dell&#8217;area generale di scavo, comprendeva in un primo momento solo due 
+      strutture lignee, rinvenute a quota &#8211;4.50 metri circa. Queste nel 
+      proseguire degli scavi si sono rivelate pertinenti ad un'unica struttura, 
+      un barcone da pesca di notevoli dimensioni, detto nave C.<BR><B>L&#8217;Area 
+      5</B>, a nord dell&#8217;area generale di scavo, ospita all&#8217;interno del proprio 
+      palancolato la <B>nave D</B>. Al di sotto di essa sono state individuate 
+      almeno altre due imbarcazioni.</P>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height=193 width=300>
+        <TBODY>
+        <TR>
+          <TD><IMG height=198 src="ritrovamentoOriginale_files/NAVE_D.jpg" 
+            width=300></TD></TR>
+        <TR>
+          <TD class=corpo height=31>
+            <P>La nave D al momento del ritrovamento</P></TD></TR></TBODY></TABLE>
+      <P align=center class=corpo><BR><B>L&#8217;Ampliamento sud</B>, costituiva la 
+      rampa di accesso ai mezzi meccanici ed è stato quindi l&#8217;ultimo settore ad 
+      essere scavato, e l&#8217;unico dove lo scavo è stato concluso. Di forma stretta 
+      e allungata, è stato suddiviso in tre sotto settori, denominati 1, 2 e 3, 
+      contenenti rispettivamente i resti della <B>nave ellenistica</B>, il molo 
+      e la palizzata frangiflutti.</P>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=300>
+        <TBODY>
+        <TR>
+          <TD><IMG height=209 src="ritrovamentoOriginale_files/NAVE_D_BN.jpg" 
+            width=300></TD></TR>
+        <TR>
+          <TD class=corpo>La nave D<BR>Foto Gianni Berti - 
+      CoIDRA</TD></TR></TBODY></TABLE>
+      <P>&nbsp;</P>
+      <P align=center class=corpo><SPAN class=titoletto>Lo scavo e la 
+      documentazione</SPAN></P>
+      <TABLE align=right border=0 cellPadding=0 cellSpacing=0 width=300>
+        <TBODY>
+        <TR>
+          <TD><IMG height=201 
+            src="ritrovamentoOriginale_files/PSR3-Area-3.jpg" width=300></TD></TR>
+        <TR>
+          <TD>
+            <DIV align=right><FONT face="Times New Roman, Times, serif">foto di 
+            Phillippe Plailly <BR>per gentile concessione Eurelios - press 
+            agency</FONT></DIV></TD></TR></TBODY></TABLE>
+      <P align=center class=corpo>Il metodo di scavo adottato è stato 
+      naturalmente per tutte le aree quello <B>stratigrafico</B>, ulteriormente 
+      perfezionato per la grande mole di materiali rinvenuti. <BR></P>
+      <P align=center class=corpo>Per quello che riguarda la metodologia, è 
+      cercato di privilegiare, all&#8217;interno dei settori, lo<B> scavo in 
+      estensione</B>, tranne nei casi in cui motivi di sicurezza della struttura 
+      lignea ha reso necessaria l&#8217;applicazione di metodologie diverse come ad 
+      esempio nell&#8217;area 5, in cui si è dovuto operare per saggi alternati, 
+      lasciando un risparmio di terreno fra l&#8217;uno e l&#8217;altro, a causa della 
+      posizione della nave, rinvenuta rovesciata, priva della chiglia e 
+      fortemente inclinata verso nord. Questo ha permesso di poter puntellare la 
+      struttura in modo che non creare pericoli di collasso. <BR>Per quello che 
+      riguarda lo scavo e la documentazione grafica dei relitti la metodologia è 
+      invece più complessa, determinata dalla necessità di un&#8217;immediata 
+      resinatura a scopo conservativo: si è così operato in &#8220;equipe&#8221;, con 
+      squadre alternate a rotazione di archeologi, rilevatori e resinatori: lo 
+      strato era scavato per piccole porzioni, mettendo in luce le parti 
+      corrispondenti del relitto sottostante; queste venivano rilevate ed in 
+      seguito, dopo il collaudo, sottoposte al procedimento di resinatura; è 
+      chiaro che con questo metodo si è privilegiato il parametro della 
+      sicurezza a scapito di una visione globale. <BR>Per quanto riguarda la 
+      documentazione grafica, precluso il rilievo fotogrammetrico, la scelta 
+      obbligata è stata quella del rilievo strumentale, che permetterà sia una 
+      restituzione bidimensionale dell&#8217;oggetto rilevato, sia la realizzazione di 
+      modelli tridimensionali digitali. Ogni singolo relitto quindi può essere 
+      ricostruito virtualmente.</P>
+      <P align=center><IMG height=306 
+      src="ritrovamentoOriginale_files/Pisa-e-scavo.jpg" width=492></P>
+      <P class=titoletto>Bibliografia</P>
+      <P class=corpo>Sullo scavo si veda per ora <B><BR>S. BRUNI</B>, <I>Appunti 
+      preliminari sullo scavo nell&#8217;area del complesso ferroviario di &#8220;Pisa-San 
+      Rossore&#8221;</I>, in Le navi antiche di San Rossore, Firenze 1999, p.11 s.; 
+      <BR><B>IDEM</B>, <I>Pisa, il porto urbano e i relitti del complesso 
+      ferroviario di &#8220;Pisa-San Rossore&#8221;</I>. Appunti su uno scavo ancora in 
+      corso, in Bollettino Storico Pisano LXIX, 2000, p. 275 
+      s.;<BR><B>IDEM</B>,<I> il porto urbano di Pisae e i relitti del complesso 
+      ferroviario di &#8220;Pisa-San Rossore&#8221;</I>. Primi dati (molto) preliminari, in 
+      Le navi antiche di Pisa. Ad un anno dall&#8217;inizio delle ricerche, Firenze 
+      2000, p. 21 s.; <BR><B>IDEM</B>,<I> Porti e approdi di Pisa. Nuovi dati 
+      alla luce degli scavi nell&#8217;area del complesso ferroviario di &#8220;Pisa-San 
+      Rossore&#8221;</I>, in corso di stampa nel volume Naxos 999. Archeologia 
+      subacquea, Atti della rassegna internazionale Giardini di Naxos 29-31 
+      ottobre 1999;<BR><B>IDEM</B>, <I>Die Hafen von Pisa</I>, in In Poseidons 
+      Reich, Atti della Sesta Conferenza, Erlangen 3-4 marzo 2001, in stampa in 
+      Skillis. Zeitschrift fur Unterwasserarchaeologie 4, 2001; <BR><B>IDEM</B>, 
+      <I>The Urban Port of Pisae and the Wrecks of the &#8220;Pisa-San Rossore&#8221;</I>, 
+      in The Ancient Ships of Pisa, catalogo della mostra United 
+      NationsBuldings, New York 2001, Pisa 2001, p. 66s.</P>
+      <P align=center>&nbsp;</P></TD></TR>
+  <TR>
+    <TD height=30 vAlign=top width="67%">&nbsp;</TD>
+    <TD height=30 vAlign=top width="33%">
+      <DIV align=right><A href="http://www.comune.pi.it/naviromane/c_scavo.htm" 
+      onmouseout=MM_swapImgRestore() 
+      onmouseover="MM_swapImage('Image3','','rollovers/back_on.jpg',1)" 
+      target=_self><IMG border=0 height=54 name=Image3 
+      src="ritrovamentoOriginale_files/back_off.jpg" 
+  width=120></A></DIV></TD></TR></TBODY></TABLE>
+<P align=right>&nbsp;</P>
+<P> </P></BODY></HTML>

@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <title>
+      smau2010
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; Oreste Signore" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link rel="stylesheet" href="./slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<style type="text/css">
+/*<![CDATA[*/
+div.slide pre em { 
+  background-color: #ffffff;
+  font-style: normal;
+  color: #0000ff;
+  font-weight: bold;
+   }
+<!-- 
+.dataset {
+      font-size: 120%;
+      font-weight: bold;
+      color: #0000ff;
+    /*  background-color: #cccccc;   */
+      font-family: "Lucida Handwriting", Arial; 
+} 
+
+.semtech {
+      font-size: 110%;
+      font-weight: bold;
+      color: #ff0000;
+    /*  background-color: #cccccc;   */
+      font-family: Arial; 
+}
+-->
+/*]]>*/
+</style>
+<script src="./slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <!--  ========================================================== -->
+    <div class="slide">
+      <h1>
+        Un'introduzione al Semantic Web e ai Linked Data
+      </h1>
+      <p>
+        <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3c.it">oreste@w3c.it</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <a href=
+        "http://www.smau.it/milano10/schedules/unintroduzione-al-semantic-web-e-ai-linked-data/">
+        SMAU</a><br />
+        Milano, 22 ottobre 2010
+      </p>
+      <hr />
+      <p class="slidesAt">
+        Slides: <a href="./slides.html" hreflang="it" title=
+        "slides - introduzione al semantic web e ai linked data">http://www.w3c.it/talks/2010/smau2010/slides.html</a><br />
+
+        <!--  Versione pdf: [ <a href="./slides.pdf" hreflang="it"
+        title=
+        "pdf slides - cultura senza barriere - Tecnologie del Web Semantico per le Digital Libraries ">
+        pagina singola</a>] [ <a href="./slides2p.pdf" hreflang=
+        "it" title=
+        "pdf slides - cultura senza barriere - Tecnologie del Web Semantico per le Digital Libraries ">
+        due pagine</a>] -->
+      </p><a href="http://www.w3c.it/"><img src=
+      "./slidy/itlogo-20010115.png" alt=
+      "Cover page W3C Office Logo" /></a> <a href=
+      "http://www.weblab.isti.cnr.it/"><img src=
+      "./slidy/weblabWithText.jpg" alt=
+      "Cover page Weblab Logo" /></a> <a href=
+      "http://validator.w3.org/check/referer"><img src=
+      "./slidy/valid-xhtml10.png" alt="Valid XHTML 1.0!" height=
+      "31" width="88" /></a> <a href=
+      "http://jigsaw.w3.org/css-validator/check/referer"><img src=
+      "./slidy/valid-css.png" alt="Valid CSS!" height="31" width=
+      "88" /></a>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Ringraziamenti
+      </h1>
+      <ul>
+        <li>Questa presentazione &egrave; basata in gran parte
+        sul materiale di presentazioni tenute da <a href=
+        "http://www.w3.org/People/all#ivan">Ivan Herman</a>, W3C
+        Semantic Web Activity Lead
+        </li>
+        <li>Il materiale di questa presentazione pu&ograve;
+        essere riutilizzato nel rispetto delle leggi sul
+        copyright e delle regole del W3C
+        </li>
+        <li><em>Giuseppe Cabrino</em> ha registrato la presentazione che
+        &egrave; accessibile su YouTube:
+          <ul>
+            <li>
+              <a href=
+              "http://www.youtube.com/watch?v=FwxRJ7HcofU">Part1</a>
+              (slides 1-10)
+            </li>
+            <li>
+              <a href=
+              "http://www.youtube.com/watch?v=NqKv_LebcRQ&amp;feature=related">
+              Part2</a> (slides 11-24)
+            </li>
+            <li>
+              <a href=
+              "http://www.youtube.com/watch?v=rReaAQpLyjI&amp;feature=related">
+              Part3</a> (slides 25-33)
+            </li>
+            <li>
+              <a href=
+              "http://www.youtube.com/watch?v=2Q_fRRfnT34&amp;feature=related">
+              Part4</a> (slides 33-40 + Q&amp;A)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>Il Web Semantico: principi e tecnologie
+          <ul>
+            <li>Searching the Web&hellip; un esempio
+            </li>
+            <li>RDF
+            </li>
+          </ul>
+        </li>
+        <li>Linked Data
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Semantic Web e data integration
+      </h1><img alt=
+      "Three layer figure; from top to bottom: applications, graph, and all kinds of data in different formats, labelled in general terms"
+      src="images/rdfInTheMiddleSimple.png" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        I vantaggi del processo di astrazione&hellip;
+      </h1>
+      <ul>
+        <li>&hellip;la rappresentazione come grafo &egrave; <em>
+          indipendente</em> dalla struttura <em>reale</em> dei
+          dati (per esempio nel daabase)
+        </li>
+        <li>&hellip;modifiche apportate agli schemi locali del
+        database, alle strutture XHTML, etc. <em>non hanno
+        influenza</em> a livello generale, ma solo a livello del
+        passo di esportazione dei dati (<em>schema
+        independence</em>)
+        </li>
+        <li>&hellip;&egrave; possibile <em>aggiungere</em> nuovi
+        dati, ulteriori connessioni, senza soluzione di
+        continuit&agrave;, <em>indipendentemente</em> dalla
+        struttura delle altre fonti di dati
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Un esempio semplice&hellip;
+      </h1>
+      <div class="column50">
+        <img src="images/theGlassPalace.png" alt="" style=
+        "float: right; width: 90%; max-width: 325px;" />
+      </div>
+      <div class="column50">
+        <img src="images/lePalaisDesMiroirs.png" alt="" style=
+        "float: left; width: 90%; max-width: 274px;" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Dal dataset <span class="dataset">A</span>, come
+        grafo&hellip;
+      </h1><img src="./images/englishData.png" width="100%"
+      style="max-width: 900px" alt=
+      "The previous table in an RDF format" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Dal dataset <span class="dataset">F</span>&hellip;
+      </h1><img src="./images/frenchData.png" style=
+      "max-height:80%;" alt="The French data in RDF" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Merging dei dati
+      </h1><img src="./images/mergeStartPlusID.png" width="100%"
+      style="max-width: 900px" alt=
+      "The merged data with nodes with identical URI-s pointed out" />
+      </div>
+      <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Merging delle risorse identiche
+      </h1><img src="./images/merged.png" style=
+      "max-height:80%; max-width: 1011px;" alt=
+      "The merged data with one of the nodes merged with common URI" />
+      </div>
+      <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Le Query pi&ugrave; semplici&hellip;
+      </h1><img alt=
+      "The merged data with one of the nodes merged with common URI"
+      src="./images/merged.png" width="70%" style=
+      "max-width: 1011px; float: right;" />
+      <ul>
+        <li>L'utente dei dati <span class="dataset">F</span>
+        pu&ograve; ora formulare query del tipo: "<span lang="fr"
+          xml:lang="fr"><em>donnes-moi le titre de
+          l'original</em></span>" o "<span lang="en" xml:lang=
+          "en"><em>give me the title of the original</em></span>"
+          <!-- <ul>
+            <li xml:lang="fr" lang="fr">"donnes-moi le titre de
+            l'original"
+            </li>
+            <li xml:lang="en" lang="en">"give me the title of the
+            original"
+            </li>
+          </ul> -->
+        </li>
+        <li>Questa informazione non &egrave; nel dataset
+        <span class="dataset">F</span>&hellip;
+        </li>
+        <li class="noBullet">&hellip;ma pu&ograve; essere
+        ritrovata grazie al merging con il dataset <span class=
+        "dataset">A</span>!
+        </li>
+        <li>&hellip;ma si pu&ograve; ottenre di pi&ugrave;
+        utilizzando <em>informazione aggiuntiva</em>&hellip;
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Grazie alla conoscenza &ldquo;extra&rdquo;&hellip;
+      </h1><img alt=
+      "The merged data with extra nodes identified as a result of identifying same as properties"
+      src="images/mergedRevisited.png" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        &hellip;possiamo formulare delle query pi&ugrave; ricche!
+      </h1><img alt=
+      "The merged data with one of the nodes merged with common URI"
+      src="images/mergedRevisited.png" width="50%" style=
+      "float: right; margin: 2em; margin-top: 0em;" />
+      <ul>
+        <li>L'utente del dataset <span class="dataset">F</span>
+        pu&ograve; ora formulare domande del tipo:
+          <ul>
+            <li xml:lang="fr" lang="fr">donnes-moi la page
+            d'accueil de l'auteur de l'original
+            </li>
+            <li class="noBullet">give me the home page of the
+            original's author
+            </li>
+          </ul>
+        </li>
+        <li>I dati necessari non sono nel dataset <span class=
+        "dataset">F</span>&hellip;
+        </li>
+        <li>&hellip;ma sono stati resi disponibili grazie a:
+          <ul>
+            <li>merging dei dataset <span class=
+            "dataset">A</span> e <span class="dataset">F</span>
+            </li>
+            <li>aggiunta di tre proposizioni semplici come
+            ulteriore &ldquo;collante&rdquo;
+            </li>
+            <li>utilizzo di terminologie esistenti come
+            componente del &ldquo;collante&rdquo;
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        &hellip;e combinare le informazioni con alri dataset: con
+        Wikipedia&hellip;
+      </h1><img alt=
+      "The merged data with a reference to a Wikipedia entry on the author plus other books he wrote"
+      src="images/mergedWithWikipedia-2.png" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        &hellip;e con Google Maps
+      </h1><img alt=
+      "The merged data with a reference to a Wikipedia entry on the author plus other books he wrote plus a reference to Calcutta referreing to the google map entry"
+      src="images/mergedWithWikipedia-3.png" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Sorprendente?
+      </h1>
+      <ul>
+        <li>In realt&agrave; no
+        </li>
+        <li>&Egrave; esattamente quanto avviene normalmente a
+        tutti gli utenti del Web (ma in questo caso grazie a un
+        processo <em>automatico</em>)
+        </li>
+        <li>La <em>differenza</em>: &egrave; necessario un po'
+        pi&ugrave; di rigore (per es. <em>dare un nome</em> alle
+        associazioni) perch&eacute; le macchine possano
+        riuscirci.
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        In realt&agrave; cosa abbiamo fatto?
+      </h1>
+      <ul>
+        <li>Abbiamo combinato dataset diversi
+          <ul>
+            <li>ognuno di essi pu&ograve; provenire da un
+            <em>qualunque sito web</em>
+            </li>
+            <li>possono avere originariamente <em>formati
+            differenti</em> (MySQL, fogli excel, XHTML, etc)
+            </li>
+            <li>possono avere <em>nomi diversi per le
+            relazioni</em> (multilinguismo)
+            </li>
+          </ul>
+        </li>
+        <li>Li abbiamo potuti combinare perch&eacute; avevano
+        <em>lo stesso URI</em> (l'ISBN nell'esempio)
+        </li>
+        <li>Possiamo aggiungere <em>conoscenza addizionale</em>,
+        utilizzando terminologie comuni definite dalle varie
+        comunit&agrave;
+        </li>
+        <li>Di conseguenza, &egrave; stato possibile identificare
+        e utilizzare <em>nuove relazioni</em>
+        </li>
+        <li>
+          <em>&hellip; e il processo pu&ograve;
+          continuare&hellip;</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Cosa ci fornisce il Semantic Web?
+      </h1>
+      <ul>
+        <li>Le <em>tecnologie</em> per rendere possibile questa
+        integrazione! Per esempio:
+          <ul>
+            <li>un <em>modello astratto</em> per i grafi e le
+            relazioni tra dati <span class="semtech">RDF</span>
+            </li>
+            <li>mezzi per <em>estrarre informazione</em> RDF da
+            pagine XML (per es. XHTML): <span class=
+            "semtech">GRDDL</span>
+            </li>
+            <li>mezzi per <em>aggiungere informazione</em>
+            strutturata a pagine XHTML: <span class=
+            "semtech">RDFa</span>
+            </li>
+            <li>un linguaggio di <em>query</em> per interrogare i
+            grafi: <span class="semtech">SPARQL</span>
+            (<em>S</em>PARQL <em>P</em>rotocol <em>a</em>nd <em>
+              R</em>DF <em>Q</em>uery <em>L</em>anguage)
+            </li>
+            <li>varie tecnologie per <em>caratterizzare le
+            relazioni</em> e assegnare una categoria alle
+            risorse: <span class="semtech">RDFS</span> (RDF
+            Schemas), <span class="semtech">OWL</span> (Web
+            Ontology Language), <span class=
+            "semtech">SKOS</span>, <span class="semtech">Rule
+            Interchange Format</span>
+              <ul>
+                <li>in funzione della complessit&agrave;
+                necessaria, le applicazioni possono scegliere tra
+                le varie tecnologie
+                </li>
+                <li>alcune sono relativamente semplici, con tool
+                tool semplici (RDFS), mentre altre richiedono
+                sistemi pi&ugrave; sofisticati (OWL, Rules)
+                </li>
+              </ul>
+            </li>
+            <li>
+              <img src="images/SmileysTransp.gif" alt="" style=
+              "float: right; margin: 2em; margin-top: 0em;" />
+              <em>riuso di &ldquo;ontologie&rdquo;</em>
+              esistenti, definite da altri (nell'esempio
+              precedente abbiamo usato <a href=
+              "http://xmlns.com/foaf/spec/index.rdf">FOAF</a>)
+            </li>
+          </ul>
+        </li>
+        <li>alcune tecnologie sono stabili, mentre altre sono
+        ancora in fase di sviluppo
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Il ruolo del Semantic Web nel processo di integrazione
+      </h1><img alt=
+      "Three layer figure; from top to bottom: applications, graph, and all kinds of data in different formats, labelled with SW technology names"
+      src="images/rdfInTheMiddle.png" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        L'architettura del Semantic Web
+      </h1><img alt="immagine dei livelli del semantic web" src=
+      "images/layerCake.png" width="45%" style=
+      "max-width: 600px; margin: 2em; float: right;" />
+      <dl>
+        <dt>
+          Il Semantic Web &hellip;
+        </dt>
+        <dd>
+          <ul>
+            <li>&egrave; un'infrastruttura basata su metadati per
+            poter svolgere <em>ragionamenti</em> sul Web
+            </li>
+            <li>
+              <em>estende</em>, non sostituisce il web attuale
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          I metadati sono:
+        </dt>
+        <dd>
+          <ul>
+            <li>Informazioni, elaborabili automaticamente
+            (<em>machine understandable</em>)
+            </li>
+            <li>
+              <em>vocabolari</em> (<em>ontologie</em>) condivisi
+            </li>
+            <li>un <em>data model</em> condiviso
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Gli standard tecnologici
+        </dt>
+        <dd>
+          <ul>
+            <li>RDF, OWL, SKOS,&hellip;
+            </li>
+          </ul>
+          <p>
+            <em>&hellip;solo un aspetto tecnico</em>
+          </p>
+        </dd>
+      </dl>
+    </div>
+    <!-- ======================================================== =-->
+    <div class="slide">
+      <h1>
+        Elementi di RDF
+      </h1>
+      <p>
+        <em>Resource Description Framework (RDF) &egrave; per il
+        Semantic Web quello che HTML &egrave; stato per il
+        Web</em>
+      </p><img alt="immagine dei livelli del semantic web" src=
+      "images/sw-vert-w3c.jpg" width="25%" style=
+      "max-width: 540px; margin: 2em; float: left;" /> <img alt=
+      "immagine dei livelli del semantic web" src=
+      "images/layerCake.png" width="25%" style=
+      "max-width: 600px; margin: 2em; float: right;" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Cosa &egrave; RDF?
+      </h1><img alt="immagine dei livelli del semantic web" src=
+      "images/layerCake.png" width="20%" style=
+      "max-width: 600px; margin: 0.5em; float: right;" />
+      <img alt="immagine dei livelli del semantic web" src=
+      "images/sw-vert-w3c.jpg" width="10%" style=
+      "max-width: 540px; margin: 0.5em; float: right;" />
+      <ul>
+        <li>Strumento base per <em>codifica</em>,
+        <em>scambio</em> e <em>riutilizzo</em> di metadati
+        strutturati
+        </li>
+        <li>Consente l'<em>interoperabilit&agrave;</em> tra
+        applicazioni che si scambiano sul Web informazioni
+        <em>machine-understandable</em>
+        </li>
+        <li>Modello generale basato su <em>triple</em>, dette
+        <em>"triplets"</em>, o <em>"statement"</em>
+        ("proposizioni", "dichiarazioni") con un formato
+        &ldquo;machine readable&rdquo; (quindi
+        <em>comprensibile</em> dalle macchine) come RDF/XML,
+        Turtle, n3, RXR)
+        </li>
+        <li class="noBullet">
+          <em>ed &egrave; tutto qui!</em> (semplice, dopo tutto
+          <img src="./images/wink.gif" alt="winking smiley" />)
+        </li>
+        <li>La sintassi (RDF/XML, Turtle) &egrave; semplicemente
+        <em>sintassi</em>
+        </li>
+        <li>La cosa importante sono il <em>modello</em>
+        sottostante e i <em>concetti</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Triple RDF
+      </h1>
+      <ul>
+        <li>Una tripla RDF <code>(s,p,o)</code> &egrave; un <em>
+          un collegamento etichettato (labelled connection) tra
+          due risorse</em>
+        </li>
+        <li>Le triple RDF sono anche dette <em>"triplets"</em>, o
+        <em>"statement"</em>
+        </li>
+        <li>Le risorse <code>s</code>, <code>p</code>,
+        <code>o</code> vengono anche dette:<br />
+          <em>"subject"</em>, <em>"predicate"</em>,
+          <em>"object"</em>,<br />
+          oppure<br />
+          <em>"subject"</em>, <em>"property"</em>,
+          <em>"object"</em><br />
+          (in italiano: <em>"soggetto"</em>,
+          <em>"predicato"</em>, <em>"oggetto"</em>)
+        </li>
+        <li>Le triple RDF formano un <em>grafo orientato
+        etichettato</em>, o <em>"directed, labelled graph"</em>
+        (&egrave; questo il modo migliore per considerarle!)
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide" id="RDFBasic-3">
+      <h1>
+        Triple RDF (cont.)
+      </h1>
+      <ul>
+        <li>
+          <img src="images/SimpleExample.png" alt="" style=
+          "float: right; margin: 1em; margin-top: 0em; width: 50%; max-width: 615px" />
+           Una tripla RDF <code>(s,p,o)</code> &egrave; definita
+          in modo che:
+          <ul>
+            <li>"<code>s</code>", "<code>p</code>" sono URI,
+            cio&egrave; risorse sul Web; "<code>o</code>"
+            &egrave; un URI o un "literal"
+            </li>
+            <li>dal punto di vista concettuale: "<code>p</code>"
+            <em>collega</em>, o <em>mette in relazione</em>
+            "<code>s</code>" e "<code>o</code>"
+            </li>
+            <li>si noti che vengono utilizzati URI per denotare i
+            nomi, quindi possono denotare un elemento
+            <em>interno</em> a un file XML sul Web, non solo una
+            risorsa "completa".<br />
+              Per esempio, supponendo di avere un file HTML
+              ("<strong>risorsa</strong>") contenente tutti i
+              requisiti della L. 4/2004, possiamo
+              utilizzare<br />
+              <code>http://www.weblab.isti.cnr.it/projects/coesa/requisiti.html#R01</code><br />
+
+              per denotare il <em>Requisito 01</em>
+            </li>
+            <li>ecco la codifica completa della tripla che
+            rappresenta il fatto che <em>la tecnica
+            link-text</em> (<strong>soggetto</strong>)
+            <em>soddisfa</em> (<strong>predicato</strong>) il
+            <em>requisito R03</em> (<strong>oggetto</strong>):
+              <pre>
+(&lt;<a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-text"
+title=
+"http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-text">http://&hellip;#link-text</a>&gt;, &lt;<a href="http://www.weblab.isti.cnr.it/projects/coesa/coesa.owl#satisfies"
+title=
+"http://www.weblab.isti.cnr.it/projects/coesa/coesa.owl#satisfies">http://&hellip;/soddisfa</a>&gt;, &lt;<a href="http://www.weblab.isti.cnr.it/projects/coesa/requisiti.html#R03"
+title=
+"http://www.weblab.isti.cnr.it/projects/coesa/requisiti.html#R03">http://&hellip;#R03</a>&gt;)
+</pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div id="RoleURI" class="slide">
+      <h1>
+        Il ruolo fondamentale degli URI
+      </h1>
+      <ul>
+        <li>Gli URI hanno reso possibile il <em>merge</em>
+        </li>
+        <li>
+          <em>Chiunque</em> pu&ograve; creare (meta)dati su
+          <em>qualunque</em> risorsa sul Web, per esempio:
+          <ul>
+            <li>lo <em>stesso</em> file XHTML pu&ograve; essere
+            annotato con altri termini
+            </li>
+            <li>&egrave; possibile <em>aggiungere semantica</em>
+            alle risorse Web esistenti utilizzando URI
+            </li>
+            <li>gli URI rendono possibile <em>collegare</em> (con
+            <em>propriet&agrave;</em>) i dati tra di loro
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Gli URI sono la base del ruolo di RDF nel Web</em>
+          <ul>
+            <li>si pu&ograve; reperire l'informazione utilizzando
+            tool gi&agrave; esistenti
+            </li>
+            <li>per questo motivo il "Semantic Web", &egrave; il
+            &hellip; "Semantic <em>Web</em>"
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Le altre tecnologie (in breve)
+      </h1>
+      <dl>
+        <dt>
+          RDFS (RDF Vocabulary Description Language)
+        </dt>
+        <dd>
+          <ul>
+            <li>RDF &egrave; un <em>linguaggio universale</em>
+            per descrivere le risorse usando il proprio
+            vocabolario
+            </li>
+            <li>&Egrave; possibile scrivere statement (triple
+            s-p-o) RDF <em>sintatticamente corretti</em>, ma <em>
+              privi di senso</em>
+            </li>
+            <li>RDFS consente di definire eventuali
+            <em>restrizioni</em> (es. dominio e codominio),
+            relazioni di <em>classe-sottoclasse</em>, e
+            supportare ragionamenti basati su processi di
+            <em>inferenza</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          OWL (Web Ontology Language)
+        </dt>
+        <dd>
+          <ul>
+            <li>RDFS &egrave; utile, ma <em>non</em> &egrave; in
+            grado di soddisfare tutti i requisiti
+            </li>
+            <li>Applicazioni complesse hanno ulteriori
+            necessit&agrave;: <em>ragionare</em> sui termini,
+            <em>costruire</em> classi, identificare classi
+            <em>disgiunte</em> o <em>equivalenti</em>, etc.
+            </li>
+            <li>Nel Semantic Web occorre il supporto di
+            <em>ontologie</em>, per definire i concetti e le
+            relazioni usati per descrivere e rappresentare un
+            <em>dominio di conoscenza</em>
+            </li>
+            <li>In OWL si possono <em>costruire</em> classi a
+            partire da quelle esistenti, per enumerazione,
+            intersezione, unione, complemento, mediante
+            restrizioni delle propriet&agrave; (valori
+            ammissibili, cardinalit&agrave;, simmetria,
+            transitivit&agrave;, dipendenza funzionale)
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Aggiungiamo (ed estraiamo) semantica alle pagine Web
+      </h1>
+      <dl>
+        <dt>
+          GRDDL <img src="images/sw-grddl-orange.png" alt=
+          "logo grddl" style=
+          "margin-left: 2em; width: 100%; max-width: 80px;" />
+        </dt>
+        <dd>
+          <ul class="incremental">
+            <li>
+              <a href="http://www.w3.org/TR/grddl/" rel=
+              "rddl.normative-reference"><cite class=
+              "dc-title">Gleaning Resource Descriptions from
+              Dialects of Languages (GRDDL)</cite>, W3C
+              Recommendation <abbr title="2007-09-11" class=
+              "dc.date">11 September 2007</abbr></a>
+            </li>
+            <li>Vedi il comunicato stampa: <a href=
+            "http://www.w3c.it/pr/2007/grddl-pressrelease-it.html">
+              http://www.w3c.it/pr/2007/grddl-pressrelease-it.html</a>
+            </li>
+            <li>&Egrave; il ponte per <em>trasformare</em> i dati
+            espressi in un formato XML (come XHTML) in dati
+            Semantic Web
+            </li>
+            <li>Vedi anche: <a href=
+            "http://www.w3c.it/talks/2007/km12/slides.html#(20)">
+              http://www.w3c.it/talks/2007/km12/slides.html#(20)</a>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          RDFa <img src="images/sw-rdfa-orange.png" alt=
+          "logo RDFa" style=
+          "margin-left: 2em; width: 100%; max-width: 80px;" />
+        </dt>
+        <dd>
+          <ul class="incremental">
+            <li>
+              <a href=
+              "http://www.w3.org/TR/xhtml-rdfa-primer/">RDFa
+              Primer</a>
+            </li>
+            <li>
+              <pre>
+&lt;div xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+   &lt;h2 <em>property="dc:title"</em>&gt;The trouble with Bob&lt;/h2&gt;
+   &lt;h3 <em>property="dc:creator"</em>&gt;Alice&lt;/h3&gt;
+   ...
+&lt;/div&gt;
+</pre>
+            </li>
+            <li>
+              <img src="images/title-and-author.png" alt=
+              "title-and-author" style=
+              "float: right; margin: 1em; margin-top: 0em; width: 70%; max-width: 615px" />
+               Il diagramma che connette URI e "properties"
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il &ldquo;Web of Data&rdquo;
+      </h1><img src="images/swCycleXXL.png" alt="" style=
+      "float: right; width: 50%; max-width: 524px; padding: 1em; padding-top: 0em;" />
+      <ul>
+        <li>Il Semantic Web estende i principi del Web dai
+        documenti ai dati, creando un &ldquo;<em>Web of
+        Data</em>&rdquo;
+        </li>
+        <li>Dati, ontologie, vocabolari, etc, possono (anzi
+        dovrebbero!) venir condivisi e riutilizzati,
+        possibilmente a livello dell'intero Web
+        </li>
+        <li>RDF fornisce uno strato di astrazione per
+        l'integrazione dei dati sul Web
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        I linked data
+      </h1><img src="images/lod-datasets_2010-09-22_colored.png"
+      width="50%" alt="lod-datasets_2010-09-22_colored" style=
+      "float:right;" />
+      <blockquote>
+        <p>
+          A term used to describe a recommended best practice for
+          exposing, sharing, and connecting pieces of data,
+          information, and knowledge on the Semantic Web using
+          URIs and RDF
+        </p>
+        <p style="text-align: right;">
+          (citato come definizione data da Wikipedia)
+        </p>
+      </blockquote>
+      <p>
+        Vedi anche:<br />
+        <a href=
+        "http://linkeddata.org/">http://linkeddata.org/</a><br />
+        e:<br />
+        <a href=
+        "http://www.w3.org/standards/semanticweb/data">http://www.w3.org/standards/semanticweb/data</a>
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        The Linking Open Data cloud diagram
+      </h1><a href=
+      "images/lod-datasets_2010-09-22_colored.png"><img src=
+      "images/lod-datasets_2010-09-22_colored.png" alt=
+      "Linking Open Data cloud diagram, by Richard Cyganiak and Anja Jentzsch. http://lod-cloud.net/"
+      title=
+      "Linking Open Data cloud diagram, by Richard Cyganiak and Anja Jentzsch. http://lod-cloud.net/"
+      style="max-height:80%;" /></a>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Linking Open Data Project
+      </h1>
+      <ul>
+        <li>Obiettivo: "esporre" in RDF dataset aperti
+        </li>
+        <li>
+          <em>Impostare link RDF tra data items</em> appartenenti
+          a dataset diversi
+        </li>
+        <li>Impostare dei <em>query endpoints</em>
+        </li>
+        <li>Miliardi di triple, milioni di &rdquo;link&ldquo;
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Le quattro regole per pubblicare dati sul Web
+      </h1>
+      <ol>
+        <li>Use URIs as names for things
+        </li>
+        <li>Use HTTP URIs so that people can look up those names.
+        </li>
+        <li>When someone looks up a URI, provide useful
+        information, using the standards (RDF*, SPARQL)
+        </li>
+        <li>Include links to other URIs. so that they can
+        discover more things.
+        </li>
+      </ol>
+      <p>
+        (TBL, Design Issues)
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        DBPedia
+      </h1><a href="http://wiki.dbpedia.org/"><img src=
+      "images/263px-DBpediaLogo.svg.png" width="30%" alt=
+      "263px-DBpediaLogo.svg" style=
+      "float: right; margin: 2em; margin-top: 0em; max-width:263px;" />
+      </a>
+      <ul>
+        <li>The DBpedia project extracts various kinds of
+        <em>structured information</em> from <em>Wikipedia</em>
+        editions in 92 languages and <em>combines this
+        information</em> into a huge, cross-domain knowledge
+        base.
+        </li>
+        <li>DBpedia uses the <em>Resource Description Framework
+        (RDF)</em> as a flexible data model for representing
+        extracted information and for publishing it on the Web.
+        </li>
+        <li>The DBpedia knowledge base currently describes
+        <em>more than 3.4 million things</em>, out of which 1.5
+        million are classified in a consistent <a href=
+        "examples/dbpediaOntology.html">Ontology</a>, including
+        312,000 persons, 413,000 places (including 310,000
+        populated places), 94,000 music albums, 49,000 films,
+        15,000 video games, 140,000 organizations (including
+        31,000 companies and 31,000 educational institutions),
+        146,000 species and 4,600 diseases. The DBpedia data set
+        features labels and abstracts for these 3.2 million
+        things in up to 92 different languages; <em>841,000 links
+        to images</em> and <em>5,081,000 links to external web
+        pages</em>; <em>9,393,000 external links into other RDF
+        datasets</em>, 565,000 Wikipedia categories, and 75,000
+        <a href=
+        "http://www2007.org/papers/paper391.pdf"><acronym title="Yet Another Great Ontology">
+          YAGO</acronym></a> categories. The DBpedia knowledge
+          base altogether consists of <em>over 1 billion pieces
+          of information (RDF triples)</em> out of which 257
+          million were extracted from the English edition of
+          Wikipedia and 766 million were extracted from other
+          language editions.
+        </li>
+        <li>Alcuni esempi:
+          <ul>
+            <li>Il signore degli anelli [<a href=
+            "examples/The_Lord_of_the_Rings.html">local</a>]
+            [<a href=
+            "http://dbpedia.org/page/The_Lord_of_the_Rings">web</a>]
+            </li>
+            <li>Tetris (con Marble) [<a href=
+            "examples/Marbles-Tetris.html">local</a>] [
+              <a href="http://www5.wiwiss.fu-berlin.de/marbles/?uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris">
+              web</a>]
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Geonames
+      </h1>
+      <ul>
+        <li>The GeoNames geographical database covers all
+        countries and contains over <em>eight million</em>
+        placenames that are available for download free of
+        charge.
+        </li>
+        <li>GeoNames [<a href=
+        "http://www.geonames.org/">http://www.geonames.org/</a>]
+        [<a href="examples/GeoNames.html">versione locale</a>]
+        </li>
+        <li>GeoNames Ontology - Geo Semantic Web [<a href=
+        "http://www.geonames.org/ontology/">http://www.geonames.org/ontology/</a>]
+        [ <a href=
+        "examples/GeoNames%20Ontology%20-%20Geo%20Semantic%20Web.html">
+          versione locale</a>]
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        http://www.data.gov/
+      </h1><img src="images/wwwDataGov.png" width="98%" alt=
+      "wwwDataGov" />
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        http://data.gov.uk/
+      </h1><a href=
+      "examples/Opening%20up%20government%20data%20_%20data.gov.uk.html">
+      <img src="images/wwwDataGovUk.png" width="98%" alt=
+      "wwwDataGovUk" /></a>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        http://www.linkedopencamera.it/
+      </h1><a href=
+      "examples/Linked%20Open%20Camera-Home.html"><img src=
+      "images/linkedOpenCamera.png" width="98%" alt=
+      "linkedOpenCamera" /></a>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Qualche riferimento utile
+      </h1>
+      <ul>
+        <li>
+          <a href=
+          "http://www.w3.org/DesignIssues/LinkedData.html" title=
+          "http://www.w3.org/DesignIssues/LinkedData.html">Linked
+          Data (Tim Berners-Lee)</a>
+        </li>
+        <li>
+          <a href=
+          "http://www.ted.com/talks/tim_berners_lee_on_the_next_web.html"
+          title=
+          "http://www.ted.com/talks/tim_berners_lee_on_the_next_web.html">
+          Tim Berners-Lee on the next Web</a> (presentazione a
+          TED2009, con sottotitoli in varie lingue)
+        </li>
+        <li>
+          <a href=
+          "http://esw.w3.org/LinkedData">http://esw.w3.org/LinkedData</a>
+          (Wiki W3C)
+        </li>
+        <li>
+          <a href=
+          "http://linkeddata.org/">http://linkeddata.org/</a>
+        </li>
+        <li>
+          <a href=
+          "http://tomheath.com/papers/bizer-heath-berners-lee-ijswis-linked-data.pdf"
+          title=
+          "http://tomheath.com/papers/bizer-heath-berners-lee-ijswis-linked-data.pdf">
+          Linked Data - The Story So Far</a> (Bizer,
+          Heath,Berners-Lee) - preprint
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Conclusioni
+      </h1>
+      <ul>
+        <li>Le <em>tecnologie del Semantic Web</em> (RDF, RDFS,
+        OWL) consentono di <em>rappresentare</em>,
+        <em>esportare</em> e <em>condividere</em> la conoscenza
+        in maniera interoperabile
+        </li>
+        <li>Il Semantic Web <em>non</em> &egrave; semplicemente
+        ricerca accademica!
+        </li>
+        <li>&hellip;ma il Web &egrave; nato in un ambiente di
+        <em>ricerca</em> di base
+        </li>
+        <li>Il W3C ha <em>lanciato</em> l'idea del Semantic Web
+        (1989 o 1999?) e dei Linked Data (2007)
+        </li>
+        <li>Queste idee si vanno <em>diffondendo</em> e sono
+        ormai una <em>realt&agrave;</em>
+        </li>
+        <li>
+          <a href="http://www.w3c.it/joining/" title=
+          "come diventare membri W3C">Associatevi al W3C</a> per
+          essere competitivi e attori dello sviluppo
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Grazie per l'attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p>
+      <p>
+        ... e <a href="answer.mp3">risposte</a>
+      </p>
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell'Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/talks/2010/smau2010/slides.html">http://www.w3c.it/talks/2010/smau2010/slides.html</a>)<br />
+
+        e un <em>documento</em>: <a href=
+        "http://www.w3c.it/papers/wsb08.pdf" hreflang="it" title=
+        "wsb08 - documento">http://www.w3c.it/papers/wsb08.pdf</a>
+        utile
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>

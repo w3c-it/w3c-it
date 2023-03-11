@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+         xmlns:qh="http://www.weblab.isti.cnr.it/projects/QH/properties/"> 
+   ...
+	<rdf:Description rdf:nodeID="a11133">
+      <qh:localName>dateIssue</qh:localName>
+      <qh:kind>element</qh:kind>
+	    <qh:label xml:lang="en">dateIssue</qh:label>
+      <qh:label xml:lang="it">dataPubblicazione</qh:label>
+      <qh:longDescription xml:lang="en">Date of Publication</qh:longDescription >
+      <qh:longDescription xml:lang="it">Data di pubblicazione</qh:longDescription>
+      <qh:constrains>
+        <qh:constraint>
+           <qh:element>a11134</qh:element>
+           <qh:constraintExpr xml:lang="en">
+               The value of this element must be less than the value of dateRevised
+           </qh:constraintExpr>
+           <qh:constraintExpr xml:lang="it">
+               Il valore di questo elemento deve essere minore del valore immesso per l'elemento dataRevisione
+           </qh:constraintExpr>
+        </qh:constraint>
+      </qh:constrains>      
+      <qh:elementaryType>xs:gYear</qh:elementaryType> 
+      <qh:fullyQualifiedName>books/book/metadata/publicationInfo/dateIssue</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+	<rdf:Description rdf:nodeID="a11134">
+      <qh:localName>dateRevised</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">dateRevised</qh:label>
+      <qh:label xml:lang="it">dataRevisione</qh:label>
+      <qh:longDescription xml:lang="en">Date of revision</qh:longDescription >
+      <qh:longDescription xml:lang="it">Data di revisione</qh:longDescription>
+      <qh:elementaryType>xs:gYear</qh:elementaryType>
+      <qh:constrainedBy>
+        <qh:constraint>
+          <qh:element>a1113e</qh:element>
+          <qh:constraintExpr xml:lang="en">
+             The value of this element must be grater than the value of dateIssue
+          </qh:constraintExpr>
+          <qh:constraintExpr xml:lang="it">
+             Il valore di questo elemento deve essere maggiore del valore immesso per l'elemento dataPubblicazione
+          </qh:constraintExpr>
+        </qh:constraint>
+      </qh:constrainedBy>      
+      <qh:fullyQualifiedName>books/book/metadata/publicationInfo/dateRevised</qh:fullyQualifiedName>
+  </rdf:Description>
+	  ...
+</rdf:RDF>

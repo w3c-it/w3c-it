@@ -1,0 +1,299 @@
+body {
+  margin-left: 2%;
+  margin-right: 2%;
+  
+  /* background: #ffffcc;  giallo pallido */
+	background: #ffffff;
+  color: #000000;
+  
+  
+  /* ---- */
+  /* font-size: 22pt;  */
+	font-size: 150%; 
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif;
+}
+div.slidebody {
+  margin: 0;
+ /* height: 512px;  */
+	 /* height: 70%; */
+}
+
+img {
+  border: 0;
+}
+
+code, pre {
+  color: #000000;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+
+code.example, pre.example {
+  color: red;
+  font-size:80%;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+
+code.exmpl, pre.exmpl {
+  /* color: #000000;  */
+	 color: blue;
+  font-size:80%;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+
+code.exmpl, pre.exmplSmall {
+/* color: #000000;  */
+	 color: blue;
+  font-size:70%;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+code.def, pre.def {
+ /* color: #000000;  */
+	 color: blue;
+  font-size:90%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif;
+}
+
+p.author  { 
+  font-size: 80%;
+  font-style: italic;
+}
+
+p.top { 
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+blockquote {
+  font-style: italic;
+  margin-left: 5%;
+  margin-right: 5%;
+	font-size: 120%;
+  /* color: #eeffee; */
+	color: blue;
+}
+
+blockquote span.attribution {
+  font-style: normal;
+  font-weight: bold;
+}
+
+em { 
+  /* color: #000000; */
+  /* color: red; */
+	color: blue;
+  font-style:italic; 
+	
+}
+
+ul, ol { 
+  color: #000000;
+  margin-left: 24pt;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  font-size: 90%;
+}
+
+dl p, ul p, ol p,
+dl ol, dl ul, dl dl,
+ol ol, ol dl, ol ul,
+ul dl, ul ol, ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* dt {color:yellow} */
+dt {color:blue}
+
+tt { 
+  color: #FF9;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+
+/* Inside PRE, use SPAN.keyword, SPAN.comment and SPAN.string to
+highlight features of code */
+
+pre span.keyword {
+  color: #FAA;
+}
+
+pre span.comment {
+  color: #AFA;
+  font-weight: normal;
+  font-style: italic;
+}
+
+pre span.string {
+  color: #AAF;
+}
+
+hr { 
+  /*margin-top: 0.01em;*/
+  color: #666;
+  /* color: #666; */
+}
+
+hr.top {
+  margin-bottom: 0.4em;
+}
+
+hr.bottom {
+  /* margin-top: 0.4em; */
+	 margin-top: 1%;
+	 margin-bottom: 1%;
+	
+}
+
+.title{
+  color: blue ;
+  font-size: 130%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+}
+
+.event {
+  color: red ;
+  font-size: 110%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+}
+
+.questions {
+  color: red ;
+  font-size: 800%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+	text-align: center;
+	 margin-top: 1%;
+	 margin-bottom: 1%;
+}
+.bigEmphasis {
+  color: red ;
+  font-size: 200%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+	/* text-align: center;  */
+}
+
+.paperAuthor{
+  color: blue ;
+  font-size: 110%;
+  font-weight: bold;
+	font-style: italic;
+  font-family: arial, helvetica, sans-serif; 
+}
+.author{
+  color: blue ;
+  font-size: 80%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+}
+
+h1 {
+  color: blue ;
+  font-size: 150%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+}
+
+h1.slide { 
+  font-size: 130&;	
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+
+h1.slidelist { 
+  text-align: center;
+  /* font-size: 80%; */
+}
+
+h2 {
+  color: black;
+  font-size: 120%;
+  font-family: arial, helvetica, sans-serif;
+}
+
+h3 {
+  color: black;
+  font-size: 110%;
+  font-family: arial, helvetica, sans-serif;
+}  
+
+h4 {
+  color: black;
+  font-size: 100%;
+  font-family: arial, helvetica, sans-serif;
+}
+
+table {
+  /* color: white ;  */
+  font-size: 100%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+}
+
+thead {
+  color:lime;
+}
+
+
+author:link { 
+  /* color: orange;  */ 
+	color: blue; 
+  text-decoration:underline; 
+  font-size:50%;  
+  font-weight:bold;}
+
+a:link { 
+  /* color: orange;  */ 
+	color: purple; 
+  text-decoration:underline; 
+  font-size:100%;  
+  font-weight:bold;}
+a:visited { 
+  /* color: orange;  */ 
+	color: purple; 
+  text-decoration:underline; 
+  font-size:100%;  
+  font-weight:bold;}
+a:offsite { 
+/* color: orange;  */ 
+	color: purple; 
+  text-decoration:underline;
+  font-size:100%;
+  font-weight:bold;}
+a:active { 
+  /* color: orange;  */ 
+	color: purple; 
+  text-decoration:underline;
+  font-size:100%;
+  font-weight:bold;}
+
+span.link { 
+  /* color: orange;  */ 
+	color: purple; 
+  text-decoration:underline;
+  font-size:100%; 
+  font-weight:bold;}
+
+p.index { font-size: 10pt; }
+
+div.object { 
+  text-align: center;
+  /* font-size: 80%; */
+}
+
+
+.emph1 { color:red }
+.emph2 { color:lime }
+.emph3 { color:purple }
+.emph4 { color:orange }
+.emph5 { color:yellow }

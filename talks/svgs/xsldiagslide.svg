@@ -1,0 +1,257 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="http://www.w3c.it/talks/svgs/slide.css" ?> 
+
+<svg width="800" height="400">
+
+<!-- 
+
+  ============== Stylesheet inserted to cope with external reference problems ============== 
+
+-->
+<defs>
+<style type="text/css">
+<![CDATA[
+/* Style sheet for the presentation slides */
+/** The slides should have a rectangle with the background colour of the slide.
+* This might be a temporary measure, but is currently necessary if one wants to print,
+* ie, generate PDF files, from the slides!!!
+*/
+rect.background {fill:lightblue; stroke: none}
+
+/* *************** The names are just an indication for the way it looks like on a dark blue background **** */
+.yellowish      {stroke:black; fill:#FDFED3; color:#FDFED3; }
+.darkYellowish  {stroke:black; fill:#ffff99; color:#ffff99; }
+.greenish       {stroke:black; fill:#00bb55; color:#00bb55; }
+.limish         {stroke:black; fill:lime;    color:lime; }
+.whitish        {stroke:black; fill:white;   color:white;   }
+.reddish        {stroke:black; fill:red;     color:red;     }
+.pinkish        {stroke:black; fill:#ff33ff; color:#ff33ff; }
+.pinkish2       {stroke:black; fill:#ff6699; color:#ff6699; }
+.grayish        {stroke:black; fill:#c0c0c0; color:#c0c0c0; }
+
+line.yellowish,     path.yellowish     { stroke: #FDFED3; }
+line.darkYellowish, path.darkYellowish { stroke: #ffff99; }
+line.greenish,      path.greenish      { stroke: #00bb55; }
+line.limish,        path.limish        { stroke: lime; }
+line.whitish,       path.whitish       { stroke: white; }
+line.reddish,       path.reddish       { stroke: red; }
+line.pinkish,       path.pinkish       { stroke: #ff33ff; }
+line.pinkish2,      path.pinkish2      { stroke: #ff6699; }
+line.grayish,       path.grayish       { stroke: #c0c0c0; }
+
+text.greenish       {stroke:none; }
+text.limish         {stroke:none; }
+text.yellowish      {stroke:none; }
+text.darkYellowish  {stroke:none; }
+text.whitish        {stroke:none; }
+text.reddish        {stroke:none; }
+text.pinkish        {stroke:none; }
+text.pinkish2       {stroke:none; }
+text.grayish        {stroke:none; }
+
+
+
+/* Various line styles */
+line            {stroke:red; stroke-width:3}
+path.arrow      {fill:red}
+path.arrowLine  {stroke:red;stroke-width:3;}
+line.arrow      {stroke:red;stroke-width:4;}
+path.greenarrow {fill:green}
+line.greenarrow {stroke:green;stroke-width:4;}
+line.title      {stroke:#0C469C;stroke-width:6}
+
+.dashed     {stroke-dasharray: 10 4;}
+
+/* Ellipses */
+ellipse           {fill:white; stroke:black; stroke-width:3}
+ellipse.basic     {fill:lemonchiffon; stroke:black; stroke-width:3}
+
+/* **************** Animation control circle ********************** */
+circle.animationControl { fill:grey; stroke:none; }
+
+/* Various rectangle styles */
+
+rect                 {stroke:black; fill:white;}
+rect.table           {stroke:black; fill:lemonchiffon}
+rect.membershipTable {fill:#bbffbb; stroke:none}
+
+rect.ac    {stroke:none; fill:#fff8dc}
+rect.ui    {stroke:none; fill:#FFC1C1}
+rect.ts    {stroke:none; fill:#C1C1FF}
+rect.arc   {stroke:none; fill:#FFFFC1}
+rect.in    {stroke:none; fill:#fff8dc}
+rect.title {fill:white;  stroke:none}
+rect.empty {fill:none; stroke:yellow; stroke-width:2 }
+
+/* Membership table rectangles */
+rect.americas { fill:rgb( 255, 215, 0)   }
+rect.europe   { fill:rgb( 238, 130, 238) }
+rect.pacific  { fill:rgb( 64, 224, 208)  }
+
+
+/* All kinds of texts... */
+text                   {font-family:Arial; font-size:20; font-weight:bold; color:#0C469C}
+text.general           {color:white} 
+
+/* Texts on the W3C Overview slide */
+text.centre            {text-anchor:middle; color:seagreen}
+text.right             {text-anchor:end;    color:navy}
+text.left              {text-anchor:start;  color:seagreen}
+text.list              {text-anchor:start;  color:white}
+text.listMinor         {font-size:24; font-weight:bold; color:white}
+text.listMajor         {font-size:32; font-weight:bold; color:white}
+text.onTable           {color:blue}
+
+text.major             {font-size:32; font-weight:bold;}
+text.minor             {font-size:24; font-weight:bold;}
+text.onBackground      {font-size:32;font-weight:bold; color:yellow}
+text.onBackgroundMinor {font-size:24;font-weight:bold; color:yellow}
+text.normal            {font-size:20; font-weight:bold; color:yellow }
+text.note              {text-anchor:middle; font-size:16; }                   
+
+text.title             {font-family:Arial;font-size:36; font-weight:bold; color:#0C469C}
+
+text.rec               {text-anchor:middle;}
+text.recOnBackground   {color:#FDFED3; text-anchor:middle }
+text.cprec             {text-anchor:middle;color:green}
+text.wd                {text-anchor:middle;color:red}
+text.cm                {text-anchor:middle;color:blue}
+
+text.signature         {font-family:Arial;  font-size:24;
+                        font-style:italic;  font-weight:bold; color:#0C469C}
+text.ac                {text-anchor:middle; color:rgb(100, 149, 197)}
+text.ui                {text-anchor:middle; color:lime}
+text.ts                {text-anchor:middle; color:yellow}
+text.arc               {text-anchor:middle; color:red}
+text.year              {text-anchor:middle; color:lime }
+
+/* ************* Some style settings are for specific figures ******************* */
+/* *** for the http 1.1 time diagram: http1p1.svg *** */
+
+.packets    {stroke:#FDFED3; color: #FDFED3; fill:#FDFED3}
+.msecs      {stroke:rgb(100, 149, 197); color: rgb(100, 149, 197); fill:rgb(100, 149, 197)}
+
+/* *** for the overview slide in the Overview set *** */
+rect.demo { fill:blue; stroke:none }  /* The small demo rectangles, put on a rect of class 'yellowish' */
+]]>
+</style>
+</defs>
+
+<!-- 
+==========   end of Stylesheet inserted to cope with external reference problems =======
+-->
+
+
+
+  <title>Schematic view of an XSLT Transformation process</title>
+	<desc>Boxes with arrows: XML to a box on XSLT, which also inputs from a box with XSLT Definition and XPath;
+	this box points to an XML output, which in turns points at an XSL FO box. The XML output box has also
+	a back link to the beginning</desc>
+  <rect width="800" height="400" class="background" />
+  <g transform="scale(0.9) translate(0,-120)">
+    <g transform="translate(10,110)">
+      <g transform="translate(230,10)">
+        <rect class="yellowish" width="180" height="70" />
+        <text x="10" y="30" class="reddish">XSLT Definition</text>
+        <text x="10" y="60" class="reddish">XPath Pattern</text>
+      </g>
+
+      <line class="arrow" x1="320" y1="80" x2="320" y2="160" />
+
+      <g transform="translate(320,160)">
+        <g transform="rotate(90)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(10,160)">
+        <rect class="yellowish" width="180" height="70" />
+        <text x="10" y="40">XML
+        Document</text>
+      </g>
+
+      <line class="arrow" x1="190" y1="195" x2="230" y2="195" />
+
+      <g transform="translate(230,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(230,160)">
+        <rect class="yellowish" width="180" height="70" />
+
+        <text x="10" y="30">XSLT</text>
+
+        <text x="10" y="60">
+        Transformation</text>
+      </g>
+
+      <line class="arrow" x1="410" y1="195" x2="460" y2="195" />
+
+      <g transform="translate(460,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(460,160)">
+        <rect class="yellowish" width="150" height="70" />
+
+        <text x="10" y="30">Result</text>
+
+        <text x="10" y="60">Tree</text>
+      </g>
+
+      <line class="arrow" x1="610" y1="195" x2="670" y2="195" />
+
+      <g transform="translate(670,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(670,160)">
+        <rect class="yellowish" width="180" height="70" />
+
+        <text x="10" y="30" class="reddish">XSL-FO</text>
+        <text x="10" y="60" class="reddish">
+        Formatting</text>
+      </g>
+
+      <line class="arrow" x1="535" y1="230" x2="535" y2="270" />
+
+      <g transform="translate(535,270)">
+        <g transform="rotate(90)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(460,270)">
+        <rect class="yellowish" width="180" height="140" />
+
+        <text x="10" y="30">XML</text>
+
+        <text x="10" y="60">XSL</text>
+
+        <text x="10" y="90">(X)HTML</text>
+
+        <text x="10" y="120">Documents</text>
+      </g>
+
+      <line x1="460" y1="340" x2="100" y2="340" />
+
+      <line class="arrow" x1="100" y1="340" x2="100" y2="230" />
+
+      <g transform="translate(100,230)">
+        <g transform="rotate(270)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+

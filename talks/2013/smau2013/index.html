@@ -1,0 +1,2652 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML5: sei pronto per la Open Web Platform?</title>
+		<meta name="description" content="HTML5 - Web Technologies">
+		<meta name="keywords" content= "HTML5" />
+		<meta name="author" content="massimo at w3c dot it">
+		<meta name="author" content= "Massimo dot Martinelli at isti dot cnr dot it" />
+		<meta name="dcterms.rights" content="Copyright (c) 2013 Massimo Martinelli - Creative Commons Attribution 3.0 License BY-NC-ND" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- <meta name="Language" content="it" /> -->
+		<!-- <meta name="font-size-adjustment" content="-2" /> -->
+		<link rel="stylesheet" href="./css/massimo.css" type="text/css" media="screen, projection, print" />
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="./lib/css/zenburn.css">
+
+		<!-- font -->
+		<link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+<!--		<link rel="stylesheet" href="./webgl/webgl.css" type="text/css"> -->
+
+	<style>#slidenumber{font-size:0.5em;color:blue;opacity:0.6 !important;position:-relative;left:0em} #defaultCountdown{font-size:0.5em;color:blue;opacity:0.6 !important;position:-relative;left:5em}</style>
+</head>
+
+	<body>
+		<script>var minuti=0;var tempototale=50;</script>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+					<section data-background="white">
+						<h1 class="tredim">HTML5</h1>
+						<h2 class="maintitle">sei pronto per la Open Web Platform?</h2>
+<!--
+						<canvas id="glcanvas" width="192" height="256">
+							Your browser does not support the HTML5 &lt;canvas&gt; element.
+						</canvas> 
+-->						
+
+
+						<!-- <embed style="width:380px;height:300px;overflow:hidden;margin-bottom:-50px;background-image:url('./img/logosmaumilanocity.png');background-repeat:no-repeat;background-position:-5px" src="http://www1.isti.cnr.it/~Martinelli/education/2013/SMAU/webgl/webgl-cube.html" /> -->
+
+						<!-- <div class="right"><img src="./img/html5_logo.png" alt="HTML5" style="max-width: 400px;" /></div> -->
+						
+						<div style="margin-left:auto;margin-right:auto;width:380px;height:280px;overflow:hidden;background-image:url('./img/logosmaumilanocity.png');background-repeat:no-repeat;background-position:-6px"><object type="text/html" data="http://www1.isti.cnr.it/~Martinelli/education/2013/SMAU/webgl/webgl-cube.html" style="width:100%;height:100%;margin:0;padding:0"></object></div>
+
+						
+						<div style="margin-top:-1em">
+							<small><a href="http://www.isti.cnr.it/People/M.Martinelli">Massimo Martinelli</a> / <a href="mailto:massimo@w3c.it">massimo@w3c.it</a>, <a href="mailto:massimo.martinelli@isti.cnr.it">massimo.martinelli@isti.cnr.it</a> / <a href="https://twitter.com/massimowww">@massimowww</a></small>
+							<br />
+							<small><a href="http://www.w3c.it/">Ufficio Italiano W3C</a>, <a href="http://www.isti.cnr.it/">Consiglio Nazionale delle Ricerche</a>, Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa</small>
+						
+							<p><a href="http://www.w3c.it/"><img src="./img/w3c-it-logo.png" alt="HTML5" style="max-width: 450px;" /></a></p>	
+						</div>
+						
+						
+						
+						<p><a href="http://www.w3.org/html/logo/">
+								<img src="./img/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png" width="357" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage"></a>
+						</p>
+						<p><small>Creative Commons Attribution 3.0 License BY-NC-ND</small></p>
+					</section>
+					
+
+				<!-- ===================================================================== -->
+<!--
+				<section >
+					<h2>World Wide Web Consortium - W3C</h2>
+					<ul>
+						<li>Missione: guidare il Web verso il suo pieno potenziale</li>
+						<li>Diretto dall'inventore del Web Tim Berners-Lee dal 1994</li>
+						<li>Standard: HTML5, Web APIs, XML, Web Services, RDF, VoiceXML, ...</li>
+						<li>Consorzio con ~380 membri</li>
+						<li>Organizzazione internazionale (Europa, USA, Giappone, Cina)</li>
+					</ul>
+				
+					<h2>Valore proposto dal W3C</h2>
+					<ul>
+						<li>“Un Web”: Desktop, Mobile, TV, Auto, ...</li>
+						<li>Forum neutrale per la collaborazione tra industrie e le comunità</li>
+						<li>Politica dei brevetti senza diritti d'autore</li>
+						<li>Personale esperto che partecipa al lavoro</li>
+					</ul>
+				</section>
+-->					
+				<!-- ===================================================================== -->
+
+				<section data-state="countdown">
+					<h2>HTML5</h2>
+					<p>Un linguaggio e API associate per HTML e XHTML<br />
+					alla base del <strong>nuovo Web</strong><br />
+					quello che il W3C identifica con "<strong>Un Web per Tutti</strong>"</p>
+					<p><img src="./img/html5-display-small.png" alt="html5 logo" style="height:35%" /></p>
+					<ul>
+						<li>Interoperabilità</li>
+						<li>Dispositivi eterogenei</li>
+						<li>Un Web più attraente, interattivo e intelligente</li>
+						<li>Open Web Platform</li>
+					</ul>
+
+<!--
+					What is and what are HTML5 advantages?
+
+					The markup language that is the basis of the new Web,
+					meaning by this expression in a generic what W3C is identified as "One Web".
+
+					Therefore, a Web that includes all the existing devices, 
+					with particular emphasis at present on mobile devices and on the car, 
+					but without neglecting other important areas of application or utility, and beware of those who will be future devices.
+
+					Basti pensare all’importanza che assume, in alcuni paesi avanzati, il “Web signage” o alla funzione strategica di reti di dispositivi
+					in grado di comunicare, per esempio per rilevare anomalie correlabili a catastrofi naturali.
+
+					Ma oltre a ciò ci sono le iniziative nel settore dell’editoria elettronica, dei giochi, dell’intrattenimento digitale, e altro ancora.
+
+					Insomma, in un Web che è sempre più pervasivo, per il quale il W3C ha definito la Open Web Platform,
+					HTML5 costituisce un elemento fondamentale e unificante, garantendo la realizzabilità di applicazioni cross-platform,
+					mantenendo le sue caratteristiche originarie di semplicità e linearità.
+
+					In particolare, viene lteriormente enfatizzata la distinzione tra organizzazione e strutturazione dei contenuti,
+					propria di HTML, e le caratteristiche di presentazione, gestite dalla specifica CSS (Cascading Style Sheets).
+
+					HTML5 è una specifica che ha avuto una gestazione abbastanza lunga,
+					allo scopo di recepire le esigenze più significative provenienti dalle componenti “vive” del Web.
+
+					La complessità del lavoro ha portato alla decisione di identificare un sottoinsieme di caratteristiche su cui c’era piena convergenza,
+					da considerare quindi “stabili” al punto di poter rilasciare la specifica,
+					che peraltro contiene anche alcunielementi considerati “a rischio” perché potrebbero essere cancellati
+					nel caso in cui la loro implementazione e supporto risultassero troppo onerosi o complessi. -->
+ 				</section>
+
+
+
+				
+				<!-- ===================================================================== -->
+<!--				
+				<section>
+					<h2>HTML5</h2>
+				Si propone come piattaforma aperta per lo sviluppo di applicazioni web interoperabili anche sui nuovi dispositivi come tablet e smartphone, i quali, a loro volta, stanno dando un forte impulso al suo sviluppo. 
+				Non solo: Html5 è anche alla base dello sviluppo della nuova televisione, la Smart T. A questo proposito il W3C ha costituito un nuovo gruppo di lavoro Web&amp;TV. Si parla inoltre di impieghi di Html5 nel settore automobilistico”.
+
+Le nuove funzionalità permettono agli utenti di realizzare siti più attraenti, interattivi ed intelligenti. Elementi innovativi, video e audio, sono stati proposti in modo da potenziare la gestione delle informazioni multimediali ora gestite “nativamente” dai browser, evitando la necessità di installare plugin dedicati. 
+In pratica quei browser che adottano il linguaggio Html5 danno l’opportunità agli utenti di vedere direttamente video online senza costringerli a scaricarsi programmi come Real Player o simili.  
+
+				</section>
+	-->			
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Il processo di standardizzazione</h2>
+					
+					<p>Richiede una serie di passi, in cooperazione tra i membri W3C e l'intera comunità Web W3C</p>
+					
+					<ul>
+						<li>Working Draft</li> 
+						<li class="fragment">Last Call Working Draft</li>
+						<li class="fragment"><span class="red">Candidate Recommendation</span> (<a href="http://dev.w3.org/html5/decision-policy/html5-2014-plan.html">HTML5 in questo momento</a>)<br />
+						<em>certifica che la specifica ha raggiunto uno stato stabile<br />
+						inizio di una fase di test per verificare attuabilità e interoperabilità<br />
+						devono essere prodotte almeno due implementazioni interoperabili su due piattaforme diverse<br />
+						si evolverà (piccole modifiche) verso lo stato di recommendation</em>
+						 </li>
+						<li class="fragment">Proposed Recommendation</li>
+						<li class="fragment">Recommendation</li> 
+					 </ul>
+					<p>&nbsp;</p>
+					 <table class="fragment specifica">
+					  <tbody>
+						<tr>
+						  <th rowspan="1" colspan="1">Specifica</th>
+						  <th rowspan="1" colspan="1"><abbr title="First Working Draft">1st WD</abbr></th>
+						  <th rowspan="1" colspan="1"><abbr title="Last Call Working Draft">Last Call</abbr></th>
+						  <th rowspan="1" colspan="1"><abbr title="Canditate Recommendation">CR</abbr></th>
+						  <th rowspan="1" colspan="1"><abbr title="Proposed Recommendation">PR</abbr></th>
+						  <th rowspan="1" colspan="1"><abbr title="Recommendation">Rec</abbr></th>
+						</tr>
+						<tr>
+						  <th rowspan="1" colspan="1">HTML5</th>
+						  <td class="WD1" rowspan="1" colspan="1">2008</td>
+						  <td class="LC" rowspan="1" colspan="1">2011 Q2</td>
+						  <td class="CR" rowspan="1" colspan="1">2012 Q4</td>
+						  <td class="PR" rowspan="1" colspan="1">2014 Q4</td>
+						  <td class="REC" rowspan="1" colspan="1"><span class="red">2014 Q4</span></td>
+						</tr>
+						<tr>
+						  <th rowspan="1" colspan="1">HTML 5.1</th>
+						  <td class="WD1" rowspan="1" colspan="1">2012 Q4</td>
+						  <td class="LC" rowspan="1" colspan="1">2014 Q3</td>
+						  <td class="CR" rowspan="1" colspan="1">2015 Q1</td>
+						  <td class="PR" rowspan="1" colspan="1">2016 Q4</td>
+						  <td class="REC" rowspan="1" colspan="1">2016 Q4</td>
+						</tr>
+						<tr>
+						  <th rowspan="1" colspan="1">HTML 5.2</th>
+						  <td class="WD1" rowspan="1" colspan="1">2015</td>
+						  <td class="LC" rowspan="1" colspan="1"></td>
+						  <td class="CR" rowspan="1" colspan="1"></td>
+						  <td class="PR" rowspan="1" colspan="1"></td>
+						  <td class="REC" rowspan="1" colspan="1"></td>
+						</tr>
+					  </tbody>
+					</table>
+
+
+				</section>
+				
+				<!-- ===================================================================== -->
+<!--
+				<section>
+					<h2>HTML5: Candidate Recommendation</h2>
+					Sviluppatori, utenti,  produttori di browser, possono così programmare la loro attvità di sviluppo sulla base di specifiche affidabili,
+					e i rischi vengono notevolmente ridotti.
+
+					Appare evidente, così, il vantaggio di essere membri W3C e aver partecipato alla definizione delle specifiche.
+					Aver portato il proprio contributo di idee, valutando anche di volta in volta quanto la strategia aziendale
+					differisse dalle prevedibili linee di sviluppo, conoscere bene la specifica e la sua evoluzione nel corso del tempo,
+					consente di realizzare prodotti e applicazioni in tempo utile per arrivare sul mercato in posizione di leader.
+
+					Vale purtroppo la pena di sottolineare come la presenza di imprese italiane nel W3C sia ampiamente al di sotto di quanto
+					ci si dovrebbe aspettare da un paese industrialmente avanzato,
+					e come tanti meccanismi tendano a privilegiare di fatto tecnologie e approcci “conservativi” rispetto alla conformità agli standard,
+					costituendo di fatto un freno all’innovazione e alla crescita.
+
+				</section>
+				-->
+				<!-- ===================================================================== -->
+
+				<section>
+					<section>
+						<h2>Utilizzo di HTML5</h2>
+						<p>Recommendation: sarà pubblicata nel quarto quadrimestre del 2014</p>
+						
+						<p><a href="http://caniuse.com/">Posso utilizzare</a> HTML5 già adesso?</p>
+						<p class="fragment"><strong>SI </strong> <a href="http://html5test.com/">Posso!</a></p>
+						<p class="fragment">(<em>con qualche eccezione...</em>)<br /><img src="./img/Yes...I_Can.jpg" alt="Yes i can, with some exceptions" /></p>
+						<p class="fragment"><a href="http://modernizr.com/docs/#polyfills">polyfill</a> aggiungono una "zeppa" JavaScript per i browser che non supportano l'API standard</p>
+						
+	<!--							(even if now in Italy is illegal! :-O &quot;<em>Create pages and objects within them using technologies defined by formal grammars published in the latest versions available when supported by user programs&quot;</em><br />
+								Browsers already supports HTML5 (<em>that is this presentation is made with HTML5</em>) --> 
+					</section>
+						<section>
+								<h2>Questa presentazione è realizzata con HTML5</h2>
+								<p style="font-family: 'Pinyon Script', cursive;font-size:2em">Utilizza Web fonts</p>
+								<canvas id="textCanvas" height="50" width="500" style="border: 1px solid #000;"></canvas>
+								<script>
+									var canvas = document.getElementById('textCanvas');
+									var context = canvas.getContext('2d');
+									context.font = 'italic 20pt Calibri';
+									context.fillText('Canvas', 150, 40);
+								</script>
+								<p>grafica WebGL</p>
+								<p><small>e altri elementi introdotti con l'ultima versione del linguaggio...</small></p>
+								<p>&nbsp;</p>
+								<p><a href="http://www.w3.org/html/logo/">
+									<img src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png" width="357" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage">
+								</a></p>
+							</section>
+				</section>
+				
+				<!-- ===================================================================== -->
+				
+				<section data-state="dove">
+					<h2>Dove viene utilizzato HTML5?</h2> 
+					<div class="left">
+						<!-- <button onclick="typewriter();" type="button">.</button> -->
+					<img  src="./img/html5where.png" alt="" /></div>
+					<div class="left">
+						<p>&nbsp;</p>
+						<p class="red">OPEN WEB PLATFORM</p>
+						<p>&nbsp;</p>
+						<p>I've seen the &nbsp;F U T U R E<br />
+						<span class="big"></span><br />
+						<p>It's in my</p>
+						<div id="typewrite"></div>
+					</div>
+					
+					
+					<ul style="font-size:90%">
+						<li>browser su pc, notebook, tablet, mobile</li>
+						<li>sistemi operativi (firefox os, tizen): <a href="https://www.infoworld.com/d/mobile-technology/5-new-smartphone-oses-bet-html5-and-improved-uis-210992">http://bit.ly/151ZIOk</a></li>
+						<li>libri elettronici: <a href="http://www.w3.org/QA/2012/11/w3c_and_digital_publishing.html">http://www.w3.org/QA/2012/11/w3c_and_digital_publishing.html</a></li>
+						<li>televisioni: <a href="http://www.w3.org/standards/webofdevices/tv">http://www.w3.org/standards/webofdevices/tv</a></li>
+						<li>automobili<!-- <img src="./img/automotive.png" alt="" /> -->: <a href="http://www.w3.org/wiki/Web_and_Automotive">http://www.w3.org/wiki/Web_and_Automotive</a>, <a href="http://www.youtube.com/watch?v=2gqZj1_n58Y">http://www.youtube.com/watch?v=2gqZj1_n58Y</a>
+							<!-- http://www.ecnmag.com/articles/2012/12/smartphone-cloud-and-automobile -->
+						</li>
+						<li>giochi: <a href="http://www.netmagazine.com/features/top-10-html5-games-2012">http://www.netmagazine.com/features/top-10-html5-games-2012</a></li>
+						<li>pervasivo: lo vedremo presto su molti dispositivi, è inesorabile!</li>
+					
+						<li>Scrivo il codice una volta, raggiungo le persone ovunque</li>
+						<li>Le applicazioni Web riducono costi e complessità</li>
+					</ul>
+				</section>
+
+				<!-- ===================================================================== -->				
+
+				<section>
+					<h2>Accesso a dispositivi e sensori</h2>
+					<ul>
+						<li>Videocamera: <a href="http://www1.isti.cnr.it/~Martinelli/XML/HTML5//photo/takeAphotoAndPlay2.html">scatta una foto e gioca</a> v2 (Chrome desktop e mobile, Firefox)</li>
+						<li><a href="http://www.w3c.it/talks/2013/smau2013/webserver/JSARToolKit-master/demos/AugmentedReality/demo.html">Realtà Aumentata</a></li>
+						<li>Riconoscimento vocale <a href="http://www1.isti.cnr.it/~Martinelli/education/2013/SMAU/esempi/speech/index_it.html">italiano</a>, <a href="http://www1.isti.cnr.it/~Martinelli/education/2013/SMAU/esempi/speech/index.html">inglese</a></li>
+						<li>Sintesi vocale <a href="http://bit.ly/191wWwN">italiano</a> - <a href="http://www1.isti.cnr.it/~Martinelli/education/2013/SMAU/esempi/mespeak/index.html">inglese</a></li>
+						<li>giroscopio (palmare/tablet): <a href="http://www1.isti.cnr.it/~Martinelli/XML/HTML5/deviceorientation.html">esempio con Chrome</a></li>
+						<li>bussola  (palmare/tablet): <a href="http://www1.isti.cnr.it/~Martinelli/education/2013/SMAU/esempi/compass.html">esempio con Opera</a></li>
+						<li>batteria: <a href="http://www1.isti.cnr.it/~Martinelli/XML/HTML5/firefox-checkbattery.html">esempio con Firefox</a></li>
+						<li><a href="http://www.html5rocks.com/en/tutorials/doodles/gamepad/gamepad-tester/tester.html">gamepad/joistick api</a></li>
+					</ul>
+<!--					<p>&nbsp;</p>
+					<p>Smartphone: forte impeto allo sviluppo di HTML5</p> -->
+				</section>
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Devices API</h2>
+					<ul>
+						<li>Application Registration</li>
+						<!-- <li>Battery</li>
+						<li>Beep</li>  -->
+						<li>Calendar</li>
+						<li>Touch</li>
+						<li>Contacts</li>
+						<li>Gallery</li>
+						<!-- <li>Generic sensor</li> -->
+						<li>Media</li>
+						<li>Menu</li>
+						<li>Messages (sms, mms, ...)</li>
+						<li>Notification</li>
+						<li>Network Information</li>
+						<li>Tasks</li>
+						<li>Vibration</li>
+					</ul>
+				
+				</section>
+				
+				<!-- ===================================================================== -->
+<!--
+				<section>
+					<h2>Mobile</h2>
+					<p>Mobile smartphones: strong impetus to the development of HTML5</p>
+					<p>App example: smartphone sensors</p>
+					<p><img src="img/bussola.png" alt="mobile compass app" />
+				</section>
+-->
+
+
+				<!-- ===================================================================== -->				
+				
+<!--
+				<section>
+					<h2>Strategic evolution</h2>
+					<p>2013 according to Gartner<br />
+					<em>(multinational company, world leader in strategic consulting, research and analysis in the IT field,<br /> with more than 60,000 customers worldwide)</em></p>
+					<img src="./img/strategictech2013.png" alt="strategic evolution for 2013 according to Gartner" />
+				</section>
+-->
+				<!-- ===================================================================== -->
+<!--
+				<section class="pagina85">
+					<h2>Memorandum</h2>
+					<div class="right">
+						<img src="img/segnalicontraddittori.jpg" alt="segnali contraddittori" /> <!--
+						<!-- <img src="img/parcheggioOdivietoDiSosta.png" alt="segnale stradale che indica al tempo stesso parcheggio e divieto di sosta" />
+						<img src="img/Contre-indication.jpg" alt="segnale stradale che indica direzione " /> -->
+<!--					</div>
+
+					<div class="left">
+						<ul>
+							<li>Maggior parte pagine Web<br /> non compatibili al 100% con le recommendation W3C</li>
+							<li>Come se leggendo un libro trovassimo frasi tipo<br /> &quot;ndo i; otec aa lg, lib&quot;</li>
+							<li>User-agent deve tener conto delle eccezioni<br /> più codice da interpretare errori e rappresentare il rappresentabile</li>
+							<li>Più della metà degli utenti può avere problemi a consultare il Web<br /> (non parliamo di sistemi automatici...)</li>
+							<li>Consiglio: scrivere sempre in XHTML(1...5...n) (<a href="http://dev.w3.org/html5/html-xhtml-author-guide/">HTML5 polyglot</a> HTML valido & XML ben formato)</li>
+							<li>Vediamo qualche novità (X)HTML5 ...</li>
+						</ul>
+					</div>
+				</section>
+-->			
+
+				<!-- ===================================================================== -->
+				<section data-background="./img/badgeorange_w.png">
+					<h2>HTML 5: principali novità #1</h2>
+					<ul>
+						<li>nuovi elementi per strutturare il contenuto</li>
+						<li class="fragment">nuovi controlli e nuovi elementi di input per i form </li>
+						<li class="fragment">accesso file/hardware : maggiore integrazione con il sistema operativo</li>
+						<li class="fragment">estensione degli attributi di accessibilità a tutti gli elementi HTML5</li>
+						<li class="fragment">grafica: nuovo elemento &quot;canvas&quot; supporta javascript per animazioni, 
+						ampio supporto alla gestione dello schermo,
+						miglior supporto  per SVG</li>
+					</ul>
+				</section>
+				
+				
+				<!-- ===================================================================== -->
+				<section data-background="./img/badgeorange_w.png">
+					<h2>HTML 5: principali novità #2</h2>
+					<ul>
+						<li>media: supporto nativo, semplificazione e potenziamento della gestione di audio e video</li>
+						<li class="fragment">accesso ai sensori del computer / palmare / tablet / ...</li>
+						<li class="fragment">local storage: memorizzazione persistente e di sessione sul browser (miglioramento vs cookie)</li>
+						<li class="fragment">database locale: memorizzazione in database </li>
+						<li class="fragment">Web Sockets: canali di comunicazione full-duplex bi-direzionale</li>
+						<li class="fragment">Web workers: script in background e in parallelo</li>
+					</ul>
+				</section>
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>HTML5: un esempio di documento </h2>
+					<pre class="double">
+<em>&lt;!DOCTYPE html&gt;</em>  &lt;!-- dichiarazione semplificata --&gt;
+&lt;html <em>lang=&quot;it&quot;</em>&gt;  &lt;!-- dichiarazione linguaggio --&gt;
+  &lt;head&gt;
+    &lt;title>HTML5&lt;/title&gt;
+    <em>&lt;meta charset=&quot;utf-8&quot; /&gt;</em>  &lt;!-- set di caratteri unicode --&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+  &lt;p>Ciao mondo!&lt;/p&gt;
+&lt;/body&gt;
+&lt;html&gt;
+</pre>
+				</section>
+
+
+		
+
+
+				<!--  ================================================================ -->
+
+				<section>
+					<h2>Nuovi elementi strutturali</h2>
+					 <!-- style="background-position:0 -232px;background-image:url('./img/icons-2.png');display:block;height:116px;left:0;margin-right:-20px;overflow:hidden;padding-right:20px;position:relative;top:0;width:116px;" -->
+					<div>
+						<div style="float:left"><img style="max-width:500px" src="img/nuovi_elementi_strutturali.png"  alt="" /></div>
+						<span style="font-size:medium"><em>Specifica W3C</em><br /><br />
+						The <strong>article</strong> element represents a component of a page that consists of a self-contained composition in a document, page, application, or site and that is intended to be independently distributable or reusable, e.g. in syndication. <br />This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content<br />
+						
+						<br /><br />
+						The <strong>section</strong> element represents a generic document or application section&hellip;<br />
+						is not a generic container element. <br />
+						When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.
+						
+						
+						<br /><br />
+						Pensiamo ad un quotidiano: sezione cronaca, sottosezione con articolo e foto relative</span>
+					</div>
+					<p>&nbsp;</p>
+					<p><small><a href="https://developers.google.com/webmasters/state-of-the-web/2005/classes">Statistica pagine Web: valori dell'attributo <strong>class</strong></a></small></p>
+
+				</section>
+
+				<!-- ===================================================================== -->
+<!--
+					<p>
+						HTML 5 diventerà recomendation nel 2014
+					</p>
+					<p>
+						La specifica HTML5.0 è stata definita in modo da poter giungere al rilascio della Recommendation entro il 2014.
+						Contemporaneamente, si sta procedendo alla definizione della specifica HTML5.1, che comprenderà gli elementi rimasti per ora in fase di discussione,
+						e per i quali non era prevedibile raggiungere un accordo in tempo utile per rispettare la scadenza del 2014.
+					</p>
+
+
+
+					HTML WG
+
+					Encrypted Media Extensions
+					Media Source Extensions
+					The srcset attribute  (This specification extends HTMLMediaElement to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.)
+					The picture Element
+					&lt;main&gt; - Rationale and use cases
+					A11y TF
+
+					longdesc - discussion
+
+				</section>
+-->
+				<!-- ===================================================================== -->
+<!--				
+				
+				
+				<section>
+					<h2>elemento &lt;main&gt; (HTML5.1)</h2>
+	
+					
+					The main element represents the main content section of the body of a document or application. The main content section consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application.
+
+					The main element is not sectioning content and has no effect on the document outline
+
+					The main content section of a document includes content that is unique to that document and excludes content that is repeated across a set of documents such as site navigation links, copyright information, site logos and banners and search forms (unless the document or applications main function is that of a search form).
+
+					Authors must not include more than one main element in a document.
+
+					Authors must not include the main element as a child of an article, aside, footer, header or nav element.
+				
+					https://dvcs.w3.org/hg/html-extensions/raw-file/tip/maincontent/index.html
+				</section>
+-->
+				<!--  ================================================================ -->
+
+				<!--  ================================================================ -->
+				<section>
+					<h2>HTML5 file system API</h2>
+					<p>capacità di leggere e scrivere un file system locale in modalità sandbox (sicura e protetta)</p>
+					<p>Un FileEntry ha proprietà e metodi tipici di un filesystem standard</p>		
+<pre><code>// crea e accede un filesystem
+window.requestFileSystem(window.PERSISTENT /* window.TEMPORARY */, 5*1024*1024 /* dimensione in MegaByte */, 
+	function(filesystem) { fs = filesystem;})
+	
+// crea un file nel filesystem
+fs.root.getFile('log.txt', {create: true, exclusive: true /* errore se esiste */}, 
+	  
+
+// Crea un oggetto FileWriter per il nostro FileEntry (es.: log.txt)
+fileEntry.createWriter(
+	// scrive un nuovo oggetto Blob object nel file
+	fileWriter.write(new Blob(['Lorem Ipsum'], {type: 'text/plain'})
+); 
+
+// altri metodi per fileEntry
+remove, copyTo, moveTo
+
+// proprietà di fileEntry
+isFile: True se un file
+isDirectory: True se una directory</code></pre>
+				</section>
+				
+				<!--  ================================================================ -->
+				
+				<section>
+					<h2>HTML5 file system API</h2>
+					
+					<div style="margin-left:auto;margin-right:auto;width:700px;height:280px"><object type="text/html" data="http://www1.isti.cnr.it/~Martinelli/XML/HTML5/html5rock-fileapi-it.html" style="width:100%;height:100%"></object></div>
+					<!-- <embed style="width:20em; height:10em" src="http://www1.isti.cnr.it/~Martinelli/XML/HTML5/html5rock-fileapi-it.html" /> -->
+					<p><small><em>da Eric Bidelman (<a href="http://www.html5rocks.com/en/tutorials/file/filesystem/">html5rocks</a>), autore del libro "Using the HTML5 Filesystem API"</em></small></p>
+				</section>
+				
+				<!--  ================================================================ -->
+				<!--
+				<section>
+					<h2>HTML5 file system API (Chrome)</h2>
+					<div id="fscommands">
+      <button>Add some files</button> <button>List files</button> <button>Remove all files</button>
+      <ul id="message"></ul>
+	</div>
+<script>		
+window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+var fs = null;
+
+function errorHandler(e) {
+  var msg = '';
+  switch (e.code) {
+    case FileError.QUOTA_EXCEEDED_ERR:
+      msg = 'QUOTA_EXCEEDED_ERR';
+      break;
+    case FileError.NOT_FOUND_ERR:
+      msg = 'NOT_FOUND_ERR';
+      break;
+    case FileError.SECURITY_ERR:
+      msg = 'SECURITY_ERR';
+      break;
+    case FileError.INVALID_MODIFICATION_ERR:
+      msg = 'INVALID_MODIFICATION_ERR';
+      break;
+    case FileError.INVALID_STATE_ERR:
+      msg = 'INVALID_STATE_ERR';
+      break;
+    default:
+      msg = 'Unknown Error';
+      break;
+  };
+  document.querySelector('#message').innerHTML = 'Error: ' + msg;
+}
+
+
+function initFS() {
+  window.requestFileSystem(window.TEMPORARY, 2*1024*1024 /*2 MegaBytes */, function(filesystem) {
+    fs = filesystem;
+  }, errorHandler);
+}
+
+var buttons = document.querySelectorAll('#fscommands button');
+var filelist = document.querySelector('#message');
+
+if (buttons.length >= 3) {
+  buttons[0].addEventListener('click', function(e) {
+    if (!fs) {
+      return;
+    }
+    fs.root.getFile('log.txt', {create: true}, null, errorHandler);
+    fs.root.getFile('song.mp3', {create: true}, null, errorHandler);
+    fs.root.getDirectory('mypictures', {create: true}, null, errorHandler);
+    filelist.innerHTML = 'Files created.';
+  }, false);
+
+  buttons[1].addEventListener('click', function(e) {
+    if (!fs) {return;}
+
+    var dirReader = fs.root.createReader();
+    dirReader.readEntries(function(entries) {
+      if (!entries.length) {filelist.innerHTML = 'Filesystem is empty.';
+      } else {filelist.innerHTML = '';}
+
+      var fragment = document.createDocumentFragment();
+      for (var i = 0, entry; entry = entries[i]; ++i) {
+        var img = entry.isDirectory ? '<img src="http://www.html5rocks.com/static/images/tutorials/icon-folder.gif">' :
+                                      '<img src="http://www.html5rocks.com/static/images/tutorials/icon-file.gif">';
+        var li = document.createElement('li');
+        li.innerHTML = [img, '<span>', entry.name, '</span>'].join('');
+        fragment.appendChild(li);
+      }
+      filelist.appendChild(fragment);
+    }, errorHandler);
+  }, false);
+
+  buttons[2].addEventListener('click', function(e) {
+    if (!fs) {return;}
+
+    var dirReader = fs.root.createReader();
+    dirReader.readEntries(function(entries) {
+      for (var i = 0, entry; entry = entries[i]; ++i) {
+        if (entry.isDirectory) {entry.removeRecursively(function() {}, errorHandler);
+        } else {entry.remove(function() {}, errorHandler);}
+      }
+      filelist.innerHTML = 'Directory emptied.';
+    }, errorHandler);
+  }, false);
+}
+
+// Initiate filesystem on page load.
+if (window.requestFileSystem) {initFS();}
+</script>
+
+				
+				</section>
+				-->
+
+
+
+				<!--  ================================================================ -->
+
+				<section>
+					<h2>SVG2</h2>
+
+			<pre><code>&lt;DOCTYPE html&gt;&lt;html&gt;
+... &lt;!-- SVG inline in HTML5 --&gt;
+&lt;svg width="12cm" height="4cm" viewBox="0 0 800 400"&gt;
+  &lt;desc>Example circle01 - circle filled with red and stroked with blue&lt;/desc&gt;
+  &lt;circle cx="600" cy="200" r="100" fill="red" stroke="blue" stroke-width="10"  /&gt;
+&lt;/svg&gt;
+&lt;rect x="1" y="1" width="448" height="198" fill="none" stroke="blue" stroke-width="2"/&gt;
+&lt;g transform="translate(50,150)" fill="red" font-size="7"&gt;
+  &lt;text id="TextElement"&gt;SVG2&lt;/text&gt;
+&lt;/g&gt;
+...
+&lt;animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" /&gt;
+&lt;animateColor attributeName="fill" from="red" to="blue" begin="1s" dur="5s" fill="freeze" /&gt;
+&lt;/svg&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+
+<div>
+<svg width="8cm" height="5cm" viewBox="0 0 400 700">
+  <rect id="rec" x="300" y="100" width="300" height="100" style="fill:lime"> 
+    <animate attributeName="x" begin="0s" dur="6s" fill="freeze" from="300" to="0" /> 
+    <animate attributeName="y" begin="0s" dur="6s" fill="freeze" from="100" to="0" /> 
+    <animate attributeName="width" begin="0s" dur="6s" fill="freeze" from="300" to="800" /> 
+    <animate attributeName="height" begin="0s" dur="6s" fill="freeze" from="100" to="300" /> 
+    <animateColor attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze" />
+  </rect>
+  <g transform="translate(100,100)"> 
+    <text id="TextElement"  x="0" y="0" style="font-family:Verdana;font-size:24; visibility:hidden">This is SVG2!
+      <set attributeName="visibility" attributeType="CSS" to="visible" begin="1s" dur="5s" fill="freeze" />
+      <animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" />
+      <animateColor attributeName="fill" from="red" to="blue" begin="1s" dur="5s" fill="freeze" /> 
+      <animateTransform attributeName="transform" type="rotate" from="-30" to="0" begin="1s" dur="5s" fill="freeze" /> 
+      <animateTransform attributeName="transform" type="scale" from="1" to="3" additive="sum" begin="1s" dur="5s" fill="freeze" /> 
+    </text> 
+  </g>
+  <circle cx="570" cy="180" r="130" fill="none" stroke="green" stroke-width="10"  />
+</svg>
+
+
+<!--
+<svg width="5cm" height="2cm" viewBox="0 0 400 200" onload="StartAnimation(evt)">
+  <script type="application/ecmascript"><![CDATA[
+    var timevalue=0; var timer_increment=50; var max_time=5000; var text_element;
+    function StartAnimation(evt) {
+      text_element = evt.target.ownerDocument.getElementById("TextElement");
+      ShowAndGrowElement();
+    }
+    function ShowAndGrowElement() {
+      timevalue = timevalue + timer_increment;
+      if (timevalue > max_time)
+        return;
+
+      // Scale the text string gradually until it is 20 times larger
+      scalefactor = (timevalue * 20.) / max_time;
+      text_element.setAttribute("transform", "scale(" + scalefactor + ")");
+      // Make the string more opaque
+      opacityfactor = timevalue / max_time;
+      text_element.setAttribute("opacity", opacityfactor);
+
+      // Call ShowAndGrowElement again <timer_increment> milliseconds later.
+      setTimeout("ShowAndGrowElement()", timer_increment)
+    }
+    window.ShowAndGrowElement = ShowAndGrowElement
+  ]]></script>
+  <rect x="1" y="1" width="448" height="198" fill="none" stroke="blue" stroke-width="2"/>
+  <g transform="translate(50,150)" fill="red" font-size="7">
+    <text id="TextElement">SVG2</text>
+  </g>
+</svg>
+-->
+<svg width="8cm" height="4cm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>HTML5 Logo Badge</title>
+  <path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/>
+  <path fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/>
+  <path fill="#EBEBEB" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
+  <path fill="#FFF" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
+</svg>
+
+</div>
+			<ul>
+				<li>2D vettoriale in formato XML, indipendente dalla risoluzione</li></li>
+				<li>Supporto migliorato</li>
+				<!-- <li><a href="http://net.tutsplus.com/tutorials/html-css-techniques/using-inline-svgs-with-html5/">article</a></li> -->
+				<li><a href="http://www.learnsvg.com/tutorials/tutorialScripting/anime.svg">esempi</a></li>
+				 <li><a href="http://www.w3.org/TR/SVG2/changes.html">SVG2 cambiamenti da SVG 1.1</a></li>
+				</ul>	
+				</section>
+
+				<!--  ================================================================ -->
+				<section data-background="./img/telaetavolozza.png">
+					<h2>canvas</h2>
+					<ul>
+						<li>L'elemento &lt;canvas&gt; consente di realizzare grafica dipendente dalla risoluzione (bitmap) tramite l'uso di script</li>
+						<li>Può essere utilizzato per rendering, giochi, o altre immagini create on the fly</li>
+						<li>Fornisce oggetti, metodi e proprietà per disegnare e manipolare grafica su una superficie di disegno (tela)</li>
+						<li>Grafica dinamica, rendering di script di forme 2D e immagini raster (bitmap)</li>
+					</ul>
+					<pre>
+<code class="xml">&lt;canvas id="myCanvas" width="300" height="200"&gt; &lt;/canvas&gt;
+&lt;script&gt;var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d'); // 'webgl' = 3d
+ctx.fillStyle = "rgb(255,0,0)";
+ctx.fillRect(200,100,50,50);
+ctx.fillStyle = "rgba(0, 0, 200, 0.3)";
+ctx.fillRect (230, 40, 55, 50);
+ctx.arc(75, 150, 20, 0, Math.PI*2, true);
+ctx.arc(175, 150, 20, 0, Math.PI, true);
+ctx.fill();&lt;/script&gt;</code></pre>					
+
+
+ <canvas id="myCanvas" width="300" height="100"></canvas>
+
+
+					<script>
+						var canvas = document.getElementById('myCanvas');
+						var ctx = canvas.getContext('2d');
+						ctx.fillStyle = "rgb(255,0,0)";
+						ctx.fillRect(200, 10, 60, 40);
+						ctx.fillStyle = "rgba(0, 0, 200, 0.3)";
+						ctx.fillRect(230, 10, 55, 50);
+						ctx.fillStyle = '#00FF00';
+						ctx.arc(75, 80, 20, 0, Math.PI * 2, true);
+						ctx.arc(175, 80, 20, 0, Math.PI, true);
+						ctx.fill();
+					</script>
+
+				</section>
+				
+				<!-- ===================================================================== -->
+<!--
+
+				<section>
+					<h2>SVG vs Canvas</h2>
+					
+					<div>
+						<div class="left">
+							<p>SVG</p>
+							
+							<ul>
+								<li>2D vettoriale</li>
+								<li>formato XML</li>
+								<li>Resolution-independent Web application user interfaces</li>
+								<li>preferable for drawings of large size</li>
+								<li>Highly interactive animated user interfaces</li>
+								<li>Data charts and plots</li>
+								<li>Vector image editing</li>
+							</ul>
+						</div>
+
+						<div class="left">
+							<p>Canvas</p>
+							<ul>
+								<li>2D bitmap</li>
+								<li>javascript</li>
+								<li>Resolution-dependent Web application user interfaces</li>
+								<li>faster than svg, preferable for intensive graphic work</li>
+								<li>Interactive image editing: cropping, resizing, filters (think red eye removal, sepia, colorize, etc.)</li>
+								<li>Generating raster graphics: data visualizations, data plots, rendering fractals, function plots</li>
+								<li>Image analysis: read pixels to gather data for histograms, color usage, and anything else you can imagine</li>
+								<li>Rendering game graphics, such as sprites and backgrounds</li>
+							</ul>
+						
+						</div>
+					</div>
+					
+
+
+
+				</section>
+-->
+				<!-- ===================================================================== -->
+
+				<section data-state="countdown2">
+					<h2>WebGL - 3D Nativo</h2>
+					<ul>
+						<li>WebGL (Web Graphics Library): JavaScript API per rappresentare grafica interattiva 2D e 3D</li>
+						<li>Basato su OpenGL ES 2.0</li>
+						<li>NESSUN plug-in, integrato nel browser consente l'utilizzo di acceleratore grafico GPU per elaborazione di immagini</li>						
+						<li><em><small><a href="http://helloracer.com/webgl/">Helloracer</a></small></em></li>					
+					</ul>
+						
+					
+					
+
+					<!-- <div class="left"><embed style="width: 380px; height: 250px; overflow:hidden; " src="http://www1.isti.cnr.it/~Martinelli/education/2013/SMAU/webgl/webgl-cube.html" /></div>
+					<!-- <p><small>il cubo rotante con il logo HTML5 logo nella prima slide è realizzato con WebGL</small></p> -->
+					<!--
+					<p class="center">
+						<iframe width="770" height="480" src="http://helloracer.com/webgl/"  ></iframe>
+					</p>
+					-->
+					<div class="left"><object type="text/html" data="http://www1.isti.cnr.it/~Martinelli/education/2013/SMAU/webgl/webgl-cube.html" style="width:310px;height:250px;margin:0;padding:0;"></object></div>
+					<div class="left" style="margin: 0 auto; width:800px; height:480px;"><object type="text/html" data="http://helloracer.com/webgl/" style="width:100%;height:480px;margin:0;padding:0"></object></div>
+				</section>
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>WebGL</h2>
+					
+					<ul>
+						<li><a href="http://www.gnuplot.info/demo_canvas/">Esempi di grafici (plot)</a></li>
+						<li><a href="http://www.benjoffe.com/code/demos/canvascape/">grafica 3D (Canvas), una base per implementare giochi</a></li>
+						<li><a href="http://users.atw.hu/wolf3d/">Wolfenstein 3D</a></li>
+						<li><a href="http://www.quaddicted.com/stuff/WebQuake/Client/WebQuake.htm">Web Quake</a> ( <a href="https://github.com/SiPlus/WebQuake">codice</a>)</li>
+						<li><a href="https://developer.mozilla.org/en-US/demos/detail/bananabread">Bananabread</a> (Mozilla)</li>
+						<li><a href="http://www.unrealengine.com/html5/">Unreal 3D</a> - <a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=BV32Cs_CMqo">video</a></li>
+					</ul>
+					<p style="margin-top:2em"><img src="./img/WebGL_logo.png" alt="logo WebGL" /></p>
+				</section>
+
+
+<!-- ===================================================================== -->
+<!--
+				<section>
+					<h2>Video</h2>
+					<div>
+					<p style="float:left"><a href="http://www.trapaninostra.it/Edicola/Trapani_Nuova_1962_anno_04_n_025.pdf"><img src="./img/telefoni2000.png" alt="newspaper of 1962 talking about phones" /></a></p>
+					<video style="float:left" src="./video/RamboEitelefoni-NidoDelCuculo_Censurato.mp4#t=2,46" controls="controls">
+						Your browser does not support the video tag. You can download the video at the following address <a href="./video/boia_de.mp4">.</a>
+					</video> 
+-->
+<!--					<video style="float:left" src="./video/boia_de.mp4#t=19,70" controls="controls">
+						Your browser does not support the video tag. You can download the video at the following address <a href="./video/boia_de.mp4">.</a>
+					</video> -->
+<!--					</div>
+				</section>
+-->			
+
+			<!-- ===================================================================== -->
+
+				<section>
+					<h2>Video</h2>
+				
+					<p>Nessun plugin necessario per includere media: supporto nativo, implementato dai browser</p>
+			
+					<pre><code>&lt;video id='myvideo' poster="image.jpg" controls='controls'&gt;
+   &lt;source src="filmato1.ogg" type="video/ogg" /&gt;
+   &lt;source src="filmato2.mp4" type='video/mp4; codecs="mp4v.20.240, mp4a.40.2"' /&gt;
+   &lt;track label="Sottotitoli in italiano" kind="subtitles" srclang="it" src="sottotitoli-it.vtt" default="default" /&gt;
+ Il tuo browser non supporta il tag video. Puoi scaricare il video al seguente indirizzo &hellip;
+&lt;/video&gt;
+var v = document.getElementsByTagName("video")[0];
+v.play();
+&lt;button onclick="document.getElementById('myvideo').play()"&gt;riproduzione&lt;/button&gt;
+&lt;button onclick="document.getElementById('myvideo').pause()"&gt;pausa&lt;/button&gt;</code></pre>
+
+
+				<div style="margin-left:auto;margin-right:auto;width:400px;height:100%;overflow:hidden"><object type="text/html" data="http://html5.w3.it:8080/video/" style="width:100%;height:100%;margin:0;padding:0"></object></div>
+
+<!--
+					<video id="myvideo" src="./video/RamboEitelefoni-NidoDelCuculo_Censurato.mp4#t=2,46" controls="controls">
+						Il tuo browser non supporta il tag video. Puoi scaricare il video al seguente indirizzo <a href="./video/video.ogg">.</a>
+					</video> -->
+
+					<video id="myvideo" controls="controls">
+						<source src="./webserver/video/EnzoJannacciFacevailpalo.avi.mp4#t=4,39" type="video/mp4; codecs="mp4v.20.240, mp4a.40.2"></source> 
+						<track default="" srclang="it" kind="subtitles" label="Sottotitoli in italiano" src="./webserver/video/video-sottotitoli-it.vtt"></track>
+						Il tuo browser non supporta il tag video. Puoi scaricare il video al seguente indirizzo <a href="./video/EnzoJannacciFaceva il palo.mp4">.</a>
+					</video>
+					<!--
+						<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="treeOfLife/video/developerStories-en.webm"></source>
+						<track default="" srclang="en" kind="subtitles" label="English subtitles" src="treeOfLife/tracks/developerStories-subtitles-en.vtt"></track>
+					-->
+<!--					
+					<button onclick="document.getElementById('myvideo').play()">riproduzione</button>
+					<button onclick="document.getElementById('myvideo').pause()">pausa</button>
+-->
+					<p>semplificazione e miglioramento rispetto alle precedenti recommendation</p>
+
+				</section>
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>audio</h2>
+					<pre><code>&lt;audio id='myaudio' controls='controls' autoplay='true' loop='true'&gt; // preload='none | metadata | auto'
+  &lt;source src='RAI70-GuglielmoTell-Rossini.ogg#t=6,40' type='audio/ogg; codecs=vorbis' /&gt;
+  &lt;source src='RAI70-GuglielmoTell-Rossini.mp3#t=6,40' type='audio/mpeg' /&gt;
+  Yuor browser does not support the audio tag
+&lt;/audio&gt;</code></pre>
+
+<audio id="myaudio" controls="controls">  
+  <source src="./audio/RAI70-GuglielmoTell-Rossini.ogg#t=6,40" />
+  <source src="./audio/RAI70-GuglielmoTell-Rossini.mp3#t=6,40" />
+  Il tuo browser non supporta il tag audio
+</audio> <span id="audioriprodotto" style="font-size:0.7em"></span>
+<br />
+<button onclick="document.getElementById('myaudio').play()">riproduzione</button>
+<button onclick="document.getElementById('myaudio').pause();document.getElementById('audioriprodotto').innerHTML='Secondi riprodotti: '+document.getElementById('myaudio').played.end(0);">pausa</button>
+<button onclick="document.getElementById('myaudio').volume+=0.1">alza volume</button>
+<button onclick="document.getElementById('myaudio').volume-=0.1">abbassa volume</button>
+
+<pre><code>var myaudio = document.getElementById('myaudio');
+myaudio.seekable.start(0);  // Restituisce il numero di secondi dell'inizio della riproduzione
+myaudio.seekable.end(0);    // Restituisce il numero di secondi della fine riproduzione
+myaudio.currentTime = 122; // posizionamento al 122° secondo
+myaudio.played.end(0);      // Restituisce il numero di secondi riprodotti
+
+&lt;button onclick="document.getElementById('myaudio').play()"&gt;riproduzione&lt;/button&gt;
+&lt;button onclick="document.getElementById('myaudio').pause();
+	document.getElementById('audioriprodotto').innerHTML='Secondi riprodotti: '
+	+document.getElementById('myaudio').played.end(0);"&gt;pause&lt;/button&gt;
+&lt;button onclick="document.getElementById('myaudio').volume+=0.1"&gt;alza volume&lt;/button&gt;
+&lt;button onclick="document.getElementById('myaudio').volume-=0.1"&gt;abbassa volume&lt;/button&gt;
+</code></pre>
+
+
+				</section>
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Web audio</h2>
+				
+					<p>Audio API</p>
+					<ul>
+						<li><a href="http://chromium.googlecode.com/svn/trunk/samples/audio/shiny-drum-machine.html">Drum Machine</a></li>
+						<li><a href="http://www1.isti.cnr.it/~Martinelli/XML/HTML5/audio3.html">Audio Histogram</a> <small>(by Jos Dirksen)</small>	</li>
+					</ul>
+					<p style="margin-top:2em"><img src="./img/audio.png" alt="" /></p>
+				</section>
+
+				<!-- ===================================================================== -->
+<!--				<section>
+					<h2>Formati Audio e Video</h2>
+					<p><q cite="http://html5.org/tools/web-apps-tracker?from=1142&amp;to=1143">Sarebbe utile per l'interoperabilità, che tutti i browser supportassero gli stessi codec.<br />Al momento non ci sono codec che soddisfano tutti i player: <br /> c'è la necessità di un codec di qualità sufficiente per essere utilizzabile<br /> che sia compatibile con il modello di sviluppo open source, <br /> <br /></q></p>
+				
+					<p><a hreflang="en" href="http://www.longtailvideo.com/html5/">lo stato di HTML5 video</a> (EN)</p>
+				</section>
+-->			
+				
+				<!-- ===================================================================== -->
+<!--
+				<section>
+					<h2>Immagini adattabili</h2>
+					<p>Riutilizzo del meccanismo "media queries" del CSS3</p>
+				
+					<pre><code>&lt;picture width="500px" height="500px"&gt;
+   &lt;source media="(min-width: 45em)" srcset="larga-1.png 1x, larga-2.png 2x"&gt;
+   &lt;source media="(min-width: 18em)" srcset="media-1.jpg 1x, media-2.jpg 2x"&gt;
+   &lt;source srcset="piccola-1.jpg 1x, piccola-2.jpg 2x"&gt;
+   &lt;img src="piccola-1.jpg" alt=""&gt;
+   &lt;p&gt;Accessible text&lt;/p&gt;
+&lt;/picture&gt;</code></pre>
+
+<p>se l'area di visualizzazione è di larghezza minima...  se il dispositivo supporta immagini a singola densità .... la doppia</p>
+
+
+					
+				</section>
+-->				
+
+				<!-- ===================================================================== -->
+<!--				
+				<section>
+					<h2>Acquisizione e Stream di Media</h2>
+					
+					<ul>
+						<li>Definition of a set of JavaScript APIs that allow local media, including audio and video, to be requested from a platform</li>
+						<li>Access to multimedia streams (video, audio, or both) from local devices (video cameras, microphones, Web cams) can have a number of uses, such as real-time communication, recording, and surveillance</li>
+						<li>Defines the APIs used to get access to local devices that can generate multimedia stream data</li>
+						<li>Defines the stream API by which JavaScript is able to manipulate the stream data or otherwise process it</li>
+						<li>Example: the Opera Mobile example shown initially</li>
+					</ul>
+				</section>
+
+				<!-- ===================================================================== -->
+				
+				<section>
+					<h2>WebRTC - Comunicazione in Tempo Reale</h2>
+					<p><img src="./img/webrtc.png" alt="WebRTC" />
+					</p>
+<!--
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+Documentation
+https://www.webrtc-experiment.com/
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+-->
+
+
+
+
+
+
+					<ul>
+						<li>WebRTC (<a href="http://www.w3.org/TR/webrtc/">http://www.w3.org/TR/webrtc/</a>) (<strong>Web Real-Time Communication</strong>)</li>
+						<!-- <li>An API that provides the ability or realizing applications <strong>for voice calling, video chat and P2P file sharing</li> -->
+						<!-- <li>A free, open project enabling Web browsers with Real-Time Communications (RTC) capabilities</li> -->
+						<li>Basata su Javascript e HTML5, <strong>non necessita di plugin</strong></li>
+						<li>Consente a chiunque di produrre video streaming su Internet in tempo reale utilizzando solo un browser</li>
+						<li>Consente di effettuare videochiamate, chat testuali, condivisione di file <a href="https://webrtc-experiment.appspot.com/">https://webrtc-experiment.appspot.com/</a></li>
+						<li>Per l'audio utilizza il codec iSAC (connessioni veloce) e iLBC (per connessioni lente) e il codec VP8 per il video</li>
+						<li>App Engine based 1:1 <strong><a href="http://apprtc.appspot.com/">video calling app</a></strong> <!-- <a href="http://code.google.com/p/webrtc-samples/source/browse/trunk/apprtc/">source code</a> --> - <small>by Justin Uberti, Chrome-WebRTC team member</small></li>
+					</ul>
+				</section>
+				
+				<!-- ===================================================================== -->
+				
+				<section>
+					<h2>HTML5 & WebRTC</h2>
+					<p><strong><a href="http://www.shinydemos.com/facekat/">FaceKat</a> controllo basato su head tracking</strong></p>
+					<p><a href="http://auduno.github.io/headtrackr/examples/targets.html">esempio di head tracking</a></p>
+					<p><a href="http://dev.opera.com/articles/view/head-tracking-with-webrtc/">Articolo (Opera) Head tracking con WebRTC </a></p>
+					<p><a href="https://github.com/auduno/headtrackr/">headtrackr javascript library</a></p>
+					<p><a href="http://nicolas-beauvais.com/Snake/">altro demo head tracking</a></p>
+					<p><strong><a href="http://www.soundstep.com/blog/experiments/jsdetection/">esempio xylofono magico</a></strong></p>
+					<p><a href="http://techslides.com/object-detection-with-html5-getusermedia/">articoli e demo sul rilevamento di oggetti </a></p>
+					
+					<p><a href="http://neave.github.io/face-detection/">Rilevamento del volto</a> (<em>funziona solo con browser compatibili con WebRTC</em>)</p>
+						<p><a href="http://www.barbafan.de/html5video?video=tron">Elaborazione video</a>
+							<!-- <a href="http://neave.com/webcam/html5/">Video processing</a> -->
+							<!-- http://blog.gingertech.net/wp-content/uploads/2011/01/LCA_MM_AVProc2011/#slide1 -->
+						</p>
+					<p><strong>Alveare (Web Audio API) controllato da api collegate in P2P via WebRTC <a href="http://greweb.me/2013/09/beez/">articolo e video</a></strong> (<a href="http://beez.greweb.fr:9444/">demo</a>)</p>
+				    
+				</section>
+				
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Archiviazione locale - Local storage</h2>
+					<ul>
+						<li>nuovo metodo per registrare informazioni</li>
+						<li>vantaggi rispetto ai cooki per la banda, velocità e la sicurezza: <br />
+						ogni cookie viene spedito avanti e indietro per ogni richiesta e per ogni file incluso (html,immmagine,css, javascript,...)<br />
+						una richiesta può richiedere molti secondi, è accessibile a pagine su qualsiasi server in un dominio/sottodominio. </li>
+						<li>In generale (a seconda del browser) il Local storage fornisce (<em>fino a 5MB</em>) di memorizzazione persistente dei dati (on in sessione del browser se specificato)</li>
+						<li>informazioni memorizzate utilizzando storage locale non accessibili da un altro host</li>
+					</ul>
+<pre><code>&lt;script&gt;
+localStorage.setItem('name', 'Hello world!'); // registra nel local storage la coppia chiave/valore
+document.write(localStorage.getItem('name')); // Hello world
+localStorage.removeItem('name'); // cancella la voce corrispondente dallo storage locale
+&lt;/script&gt;</code></pre>
+
+					<script>
+						localStorage.setItem("name", "Hello world!");
+						document.write(localStorage.getItem("name"));
+						localStorage.removeItem("name");
+					</script>
+				</section>
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>IndexedDB</h2>
+					<p><em>Per chi ha bisogno di informazioni strutturate e di più spazio</em></p>
+						<ul>
+							<li>DB di tipo NoSQL</li>
+							<li>Javascript Native storage</li>
+							<li>DB di rercord mantengono valori semplici e oggetti gerarchici</li>
+							<li>Ciascun recordo consiste di una coppia chiave-valore</li>
+							<li>DB gestisce indici sui record che memorizza</li>
+							<li>Posizione dei record recuperata sia per chiave che per indice</li>
+							<li>Utilizzo asincrono: operazioni sono sempre transazioni dato che l'accesso può essere effettuato nello stesso momento da pagine differenti </li>
+							<li>Abilità di gestire oggetti blob (Binary Large Object)</li>
+							<li>Un DB creato da una pagina non può essere acceduto da un'altro host (per sicurezza)</li>
+						<!--	<li>Javascript Native storage, no SQL injection attacks (XSS maybe)</li> -->
+						</ul>		
+				</section>
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Esempio IndexedDB  #1</h2>
+					<pre style="font-size:0.5em"><code>var request = indexedDB.open(dbName); // // create a database
+request.onsuccess = function(event) {   // gestore della richiesta in caso di successo
+  // gestione risultato
+};
+					
+request.onerror = function(event) {   // gestore della richiesta in caso di errore
+  alert("Errore DB: " + event.target.errorCode); 
+};
+
+
+request.onupgradeneeded = function(event) { //  necessario per modificare la struttura di un DB. Qui possiamo creare/cancellare objectStore e indici
+  var myDB = event.target.result;
+
+  // create the object stores   (una tabella in SQL)
+  var personStore = myDB.createObjectStore("Person", {keyPath: "id"}); 
+
+  // cre un indice per cercare persone per email, nessun duplicato ammissibile 
+  personStore.createIndex("emailIndex", "email", { unique: true });
+
+  // crea una transazione e registra un record
+  var transaction = indexedDB.transaction("Person", "readwrite");
+  var store = transaction.objectStore("Person");
+  store.put({"id": "I2", "given_name" : "Anna", "family_name" : "Bianchi","email" : "anna.bianchi@w3c.it",... });
+  &hellip;</code></pre>
+
+				</section>
+
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Esempio IndexedDB #2</h2>
+					<pre style="font-size:0.5em"><code>store.get("I3") // ottiene un record dato l'ID
+
+  // ottiene un record per Nome
+  var range = IDBKeyRange.only("Massimo");
+  var index = store.index("givennameIndex");
+  index.get(range)
+
+  // utilizza un cursore per ottenere i primi quattro record in ordine decrescente
+  personStore.openCursor(IDBKeyRange.bound(0, 5, true, false),"prev").onsuccess = function(event) {
+    var cursor = event.target.result;
+    if (cursor) { 
+      alert("Chiave: " + cursor.key + " valore: " + cursor.value.name);
+      cursor.continue();
+    }
+    else {
+      alert("Non ci sono più voci!");
+    }
+  };
+	
+  store.clear() // cancella lo store
+  myDB.deleteDatabase(dbName); // cancella il database
+  &hellip;
+}</code></pre>
+
+				</section>
+
+
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Esempio IndexedDB</h2>
+					
+					<p><small>Esempio, <em>leggermente modificato da "<a href="http://www.ibm.com/developerworks/library/wa-indexeddb/">Using the HTML5 IndexedDB API</a>" by Brian J Stewart, IBM DeveloperWorks</em></small></p>
+					
+					<button class="bluebutton" onclick="createDB()">Crea DB</button>
+					<button class="bluebutton" onclick="openDB()">Apri DB</button>
+					<button class="bluebutton" onclick="populateDB()">Popola DB</button>
+					<button class="bluebutton" onclick="getPersonByID()">Ottieni persona per ID</button>
+					<button class="bluebutton" onclick="updatePerson()">Aggiorna persona</button>
+					<button class="bluebutton" onclick="addPerson()">Aggiungi persona</button>
+					<button class="bluebutton" onclick="getPersonByEmail()">Ottieni persona per email</button>
+					<button class="bluebutton" onclick="getPersonByGivenName()">Ottieni persona per nome</button>
+					<button class="bluebutton" onclick="getPersonByFamilyName()">Ottieni persona per cognome</button>
+					<button class="bluebutton" onclick="getPersonsFromPisa()">Ottieni persone di Pisa</button>
+					<button class="bluebutton" onclick="getAllPersons()">Ottieni tutte le persone</button>
+					<button class="bluebutton" onclick="clearAllPersons()">Cancella tutte le persone</button>
+					<div id="indexeddbresult"></div>
+
+
+<script>
+var myLocalDB = {};
+var dbName = "StaffDB";
+myLocalDB.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+myLocalDB.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange;
+myLocalDB.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction;
+
+myLocalDB.indexedDB.onerror = function (e) {
+	console.log("DB error: " + e.target.errorCode);
+};
+
+function openDB() {
+	var openRequest = myLocalDB.indexedDB.open(dbName);
+	openRequest.onerror = function(e) {
+		console.log("DB error: " + e.target.errorCode);
+	};
+	openRequest.onsuccess = function(event) {
+		myLocalDB.db = openRequest.result;
+	};	
+}
+
+function createDB() {
+	console.log('Cancello DB locali preesistenti');
+	var deleteDbRequest = myLocalDB.indexedDB.deleteDatabase(dbName);
+	deleteDbRequest.onsuccess = function (event) {
+   		console.log('DB cancellato');
+   		var openRequest = myLocalDB.indexedDB.open(dbName,1);
+		
+		openRequest.onerror = function(e) {
+			console.log("Errore DB: " + e.target.errorCode);
+		};
+		openRequest.onsuccess = function(event) {
+			console.log("DB creato");
+			myLocalDB.db = openRequest.result;
+		};	
+		openRequest.onupgradeneeded = function (evt) {   
+			console.log('Creo object store');
+	    	var personStore = evt.currentTarget.result.createObjectStore("Person", {keyPath: "id"});
+			personStore.createIndex("givennameIndex", "given_name", { unique: false });
+			personStore.createIndex("familynameIndex", "family_name", { unique: false });
+			personStore.createIndex("emailIndex", "email", { unique: true });
+			personStore.createIndex("cityIndex", "city", { unique: false });
+        };
+        deleteDbRequest.onerror = function (e) {
+        	console.log("Errore DB: " + e.target.errorCode);
+        };
+    
+	};
+}
+
+
+function populateDB() {
+	console.log("popolo il database");
+	var transaction = myLocalDB.db.transaction("Person", "readwrite");
+	var store = transaction.objectStore("Person");                    
+  
+	if (myLocalDB != null && myLocalDB.db != null) {
+		var request = store.put({
+			"id": "I1",
+			"given_name" : "Giuseppe",
+			"family_name" : "Verdi",
+			"email" : "giuseppe.verdi@w3c.it",
+			"street" : "Corso Italia 100",
+			"city" : "Pisa",
+			"country" : "Italy",
+			"zip_code" : "56124",
+		});
+		request.onsuccess = function(e) {
+			console.log("Aggiunto I1");
+		};
+		
+		request.onerror = function(e) {
+			console.log(e.value);
+		};
+		
+		request = store.put({
+			"id": "I2",
+			"given_name" : "Anna",
+			"family_name" : "Bianchi",
+			"email" : "anna.bianchi@w3c.it",
+			"street" : "Piazza XX settembre 20",
+			"city" : "Livorno",
+			"country" : "Italy",
+			"zip_code" : "10016",
+		});
+		request.onsuccess = function(e) {
+			console.log("Aggiunto I2");
+		};
+		
+		request.onerror = function(e) {
+			console.log(e.value);
+		};
+		request = store.put({
+			"id": "I3",
+			"given_name" : "Mario",
+			"family_name" : "Rossi",
+			"email" : "mario.rossi@w3c.it",
+			"street" : "Via Giuseppe Moruzzi 1",
+			"city" : "Pisa",
+			"country" : "Italy",
+			"zip_code" : "57100",
+		});
+		request.onsuccess = function(e) {
+			console.log("Aggiunto I3");
+		};
+		
+		request.onerror = function(e) {
+			console.log(e.value);
+		};
+		
+	}
+}
+
+function addPerson() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		
+		var transaction = myLocalDB.db.transaction("Person", "readwrite");
+		var store = transaction.objectStore("Person");                    
+	  
+		if (myLocalDB != null && myLocalDB.db != null) {
+			var request = store.add({
+				"id": "I4",
+				"given_name" : "Azzurro",
+				"family_name" : "Azzurri",
+				"email" : "azzurro.azzurri@w3c.it",
+				"street" : "Piazza della Stazione 1",
+				"city" : "Pisa",
+				"country" : "Italy",
+				"zip_code" : "56124",
+			});
+			request.onsuccess = function(e) {
+				result.innerHTML = "Record Persona aggiunto con successo.";;
+			};
+			
+			request.onerror = function(e) {
+				console.log(e.value);
+				result.innerHTML = "Record Persona non aggiunto.";
+			};
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+function updatePerson() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		
+		var transaction = myLocalDB.db.transaction("Person", "readwrite");
+		var store = transaction.objectStore("Person");                    
+	  	var jsonStr;
+	  	var person;
+	  	
+		if (myLocalDB != null && myLocalDB.db != null) {
+			
+			store.get("I3").onsuccess = function(event) {
+				person = event.target.result;
+				// save old value
+				jsonStr = "VECCHIO: " + JSON.stringify(person);
+				result.innerHTML = jsonStr;
+				
+				// update record
+				person.email = "massimo.viviani@w3c.it";
+				person.given_name = "Massimo";
+				person.family_name = "Viviani";
+				person.street = "Via Barlume 1",
+				person.city = "Pisa";
+					
+				var request = store.put(person);
+					
+				request.onsuccess = function(e) {
+				};
+				
+				request.onerror = function(e) {
+					console.log(e.value);
+				};				
+
+				// get record again
+				store.get("I3").onsuccess = function(event) {
+					person = event.target.result;
+					jsonStr = "<br/>NUOVO: " + JSON.stringify(person);
+					result.innerHTML = result.innerHTML  + jsonStr;
+				};
+			}; // get person first time
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+function clearAllPersons() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		
+		if (myLocalDB != null && myLocalDB.db != null) {
+			var store = myLocalDB.db.transaction("Person", "readwrite").objectStore("Person");                    
+		  
+			store.clear().onsuccess = function(event) {
+				result.innerHTML = "Object store Persona cancellato";
+			};
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+function getPersonByID() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		if (myLocalDB != null && myLocalDB.db != null) {
+			var store = myLocalDB.db.transaction("Person").objectStore("Person");
+			store.get("I3").onsuccess = function(event) {
+				var person = event.target.result;
+				if (person == null) {
+					result.innerHTML = "persona non trovato";
+				}
+				else {					
+					var jsonStr = JSON.stringify(person);
+					result.innerHTML = jsonStr;
+				}
+			};
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+function getAllPersons() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		
+		if (myLocalDB != null && myLocalDB.db != null) {
+			var store = myLocalDB.db.transaction("Person").objectStore("Person");
+			var request = store.openCursor();
+			request.onsuccess = function(evt) {  
+			    var cursor = evt.target.result;  
+			    if (cursor) {
+			    	var person = cursor.value;
+			    	var jsonStr = JSON.stringify(person);
+			    	result.innerHTML = result.innerHTML + "<br/>" + jsonStr;         
+			        cursor.continue();  
+			    }  
+			};
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+function getPersonsFromPisa() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		
+		if (myLocalDB != null && myLocalDB.db != null) {
+			var range = IDBKeyRange.only("Pisa");
+			 
+			var store = myLocalDB.db.transaction("Person").objectStore("Person");
+			var index = store.index("cityIndex");
+			
+			index.openCursor(range).onsuccess = function(evt) {  
+			    var cursor = evt.target.result;    
+			    if (cursor) {
+			    	var person = cursor.value;
+			    	var jsonStr = JSON.stringify(person);
+			    	result.innerHTML = result.innerHTML + "<br/>" + jsonStr;         
+			        cursor.continue();  
+			    }  
+			};
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+function getPersonByEmail() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		
+		if (myLocalDB != null && myLocalDB.db != null) {
+			var range = IDBKeyRange.only("anna.bianchi@w3c.it");
+			 
+			var store = myLocalDB.db.transaction("Person").objectStore("Person");
+			var index = store.index("emailIndex");
+
+			index.get(range).onsuccess = function(evt) {
+				var person = evt.target.result; 
+		    	var jsonStr = JSON.stringify(person);
+		    	result.innerHTML = jsonStr;   
+			};
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+
+function getPersonByGivenName() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		
+		if (myLocalDB != null && myLocalDB.db != null) {
+			var range = IDBKeyRange.only("Massimo");
+			 
+			var store = myLocalDB.db.transaction("Person").objectStore("Person");
+			var index = store.index("givennameIndex");
+
+			index.get(range).onsuccess = function(evt) {
+				var person = evt.target.result; 
+		    	var jsonStr = JSON.stringify(person);
+		    	result.innerHTML = jsonStr;   
+			};
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+
+
+function getPersonByFamilyName() {
+	try {
+		var result = document.getElementById("indexeddbresult");
+		result.innerHTML = "";
+		
+		if (myLocalDB != null && myLocalDB.db != null) {
+			var range = IDBKeyRange.lowerBound("Anna");
+			 
+			var store = myLocalDB.db.transaction("Person").objectStore("Person");
+			var index = store.index("familynameIndex");
+
+			index.get(range).onsuccess = function(evt) {
+				var person = evt.target.result;
+				document.getElementById("indexeddbresult").innerHTML="<p>ID:"+person.id+" given_name: " +person.given_name+ " family_name:"+person.family_name +" email:" + person.email+ " street:" +person.street + " city:" + person.city + " country:" +person.country + " </p>";				
+				 
+		    	//var jsonStr = JSON.stringify(person);
+		    	//result.innerHTML = jsonStr;   
+			};
+		}
+	}
+	catch(e){
+		console.log(e);
+	}
+}
+
+</script>
+
+				
+				
+				
+				</section>				
+
+	
+				<!-- ===================================================================== -->
+<!--
+<section>
+					<h2>WebSQL</h2>
+					<ul>
+						<li>Included in a 1st draft of HTML5, now removed in favour of indexedDB</li> 
+						<li><a href="http://lists.w3.org/Archives/Public/www-tag/2013Feb/0003.html">http://lists.w3.org/Archives/Public/www-tag/2013Feb/0003.html</a></li> 
+						<li><strong>"Beware. This specification is no longer in active maintenance and the WebApplications Working Group does not intend to maintain it further"</strong></li>
+						<li>Even if most browsers start implemented it and they still have, but they are all saying to use it with extreme caution!</li>
+					</ul>
+
+<pre><code>var db = openDatabase('dbregistry', '1.0', 'registry database', 2 * 1024 * 1024);
+  db.transaction(function (tx) {
+  tx.executeSql('CREATE TABLE IF NOT EXISTS users (id integer primary key, name text)');
+  tx.executeSql('INSERT INTO users (id, name) VALUES (1, "Giuseppe Verdi")');
+  tx.executeSql('INSERT INTO users (id, name) VALUES (2, "Anna Bianchi")');
+  tx.executeSql('INSERT INTO users (id, name) VALUES (3, "Mario Rossi")');
+});</code></pre>
+
+
+<script>
+var db = window.openDatabase("dbregistry", "1.0", "registry database", 2* 1024 * 1024);
+window.onload = function() {
+  if (!window.openDatabase) {
+    status("Database not supported");
+    return;
+  }
+  db.transaction(function(tx) {
+    // tx.executeSql("drop table if exists users");
+    tx.executeSql("create table if not exists users ("
+      + "id integer primary key,"
+      + "name text"
+      + ")",null,null, logger);
+    showRecords();
+    console.log("query executed");
+  });
+
+  function status(status) {
+    document.getElementById("status").innerHTML = status;
+  }
+  function logger(tx, error) {
+    console.log("Error", error.message);
+  }
+  function logArguments() {
+    console.log(arguments);
+  }
+  function $_(selector) {
+    return document.querySelector(selector);
+  }
+
+  $_("#save").onclick = function() {
+    db.transaction(function(tx) {
+      console.log("running2");
+      tx.executeSql(
+          "INSERT INTO users (id, name) "
+        + "values (?,?)", [$_("#code").value, $_("#name").value],
+        null, logger
+      );
+      console.log("inserted");
+      showRecords();
+    });
+  };
+
+  $_("#name").onkeyup = function(ev) {
+    if (ev.keyCode==13) $_("#save").onclick();
+  };
+
+  $_("#records").onclick = function(ev) {
+    if (ev.target.className!="remove") return;
+    var recordID = ev.target.id;
+    console.log(recordID);
+    db.transaction(function(tx) {
+      tx.executeSql("delete from users where id=?", [recordID], null, logger);
+      showRecords();
+    });
+  }
+
+  function showRecords() {
+    console.log("db", db);
+    html = "";
+    db.transaction(function(tx) {
+      tx.executeSql("select * from users", [], function(tx, results) {
+        for (var i=0; i<results.rows.length; i++) {
+          var record = results.rows.item(i);
+          html+="<button id='"+record.id+"' class='remove'>x</button> "
+            +record.id+" - "+record.name + "<br/>";
+        }
+        $_("#records").innerHTML = html;
+      });
+    });
+  }
+
+};
+</script>
+
+<p><strong>Web SQL Database Demo (Chrome or Opera)</strong></p>
+
+<p>Registration is offline type (data remain even after page reloading)</p>
+
+<p>Using Chrome's Developer Tools (Command-Option/Shift-J), you can see the contents of the DB</p>
+
+<input id="code" value="1" /> 
+<input id="name" value="Giuseppe Verdi" /> 
+<button id="save">Save</button>
+<p id="records"></p>
+
+<div id="status">
+</div>
+
+
+</section>
+
+-->
+
+<!-- ===================================================================== -->
+
+
+				<section>
+					<h2>Posizione Geografica - Geolocation</h2>
+					<p id="location"></p>
+					<pre><code>&lt;script&gt;
+function getPosition(position){
+  var lat = position.coords.latitude;
+  var long = position.coords.longitude;
+  var altezza = position.coords.altitude;
+}
+</code></pre>
+
+
+<script>
+function getPosition(position)
+{
+  var infoposition = "Latitude: "+position.coords.latitude+"<br />";
+  infoposition += "Longitude: "+position.coords.longitude+"<br />";
+  infoposition += "Altitude: "+position.coords.altitude+"<br />";
+ 
+  document.getElementById("myposition").innerHTML = infoposition;
+}
+ 
+function myPosition()
+{
+  navigator.geolocation.getCurrentPosition(getPosition);
+}
+</script>
+<!--
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+http://www.sitepoint.com/html5-geolocation/
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+-->
+<iframe style="width:100%;height:7em;margin:0;padding:0" src="http://www1.isti.cnr.it/~Martinelli/XML/HTML5/geolocation.html"></iframe>
+
+					<button onClick="myPosition()">ottieni la mia posizione (locale)</button> <em>(in locale non funziona con Chrome)</em><br />
+					<p>&nbsp;</p>
+					<div id="myposition"></div>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p><a href="http://www1.isti.cnr.it/~Martinelli/XML/HTML5/geomap.html">Esempio su mappa</a></p>
+				</section>
+
+
+<!-- ===================================================================== -->
+
+
+				<section>
+					<h2>Form</h2>
+<!--					
+					<p>aggiungere http://www.wufoo.com/html5/</p>
+					https://miketaylr.com/code/input-type-attr.html
+http://www.wufoo.com/html5/attributes/17-spellcheck.html
+http://www.wufoo.com/html5/elements/4-keygen.html					
+					<p>&nbsp;</p>
+										<p>&nbsp;</p>
+															<p>&nbsp;</p>
+																			<p>&nbsp;</p>
+	-->					
+					<form class="form_test">
+					  <p><label>url:<input type="url" placeholder="http://www.w3c.it/" /></label> - <label>email:<input type="email" placeholder="massimo@w3c.it/" /></label></p>
+					  <p><label>number <em>(0-10 step 2)</em>:<input type="number" min="0" max="10" step="2" value="3" /></label></p>
+					  <p><label>date:<input type="date" /></label> - <label>month:<input type="month"></label></p>
+					  <p><label>week:<input type="week"></label> - <label>time:<input type="time"></label></p>
+					  <p><label>datetime-local: <input type="datetime-local"></label>- <label>color:<input type="color"></label></p>
+					  <p><label>required: <input required name="req"></label></p>
+					  <p><label>range <em>(0-100 step 5)</em>: <input type="range" id="rangeinput" value="50" min="0" max="100" step="5" onchange="rangevalue.value=value" /> <output id="rangevalue">50</output></label></p>
+					  <p><label>pattern: <input type="text" pattern="[A-z]{3}.[0-9]{2}-[A-z]{1,}" placeholder="Abc.12.Bxxxxxx-" /></label></p>
+					  
+					  <p><label>tel: <input type="tel" placeholder="phone" /></label></p>
+					  <p><label>search: <input type="search" placeholder="search" /></label></p>
+					  <!-- <p><label>speech: <input type="text" x-webkit-speech="x-webkit-speech" placeholder="speech"/></label></p> -->
+					  
+					 <p><label>datalist:<input list="cities" name="cities" > <em>(fixed autocomplete options)</em>
+						<datalist id="cities">
+							<option value="Arezzo">
+							<option value="Firenze">
+							<option value="Livorno">
+							<option value="Pisa">
+						</datalist></label></p>
+					  <p><label>autocomplete off:<input type="text" name="autocompleteoff" autocomplete="off" /></label> - <label>autocomplete on: <input type="text" name="autocompleteon" autocomplete="on" /> </label></p>
+					  <p><input type="submit" value="Submit"></p>
+					</form>
+					<progress max="1000"></progress>
+					
+				</section>
+				
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Form</h2>
+					<pre><code>&lt;form&gt;
+  &lt;p&gt;&lt;label&gt;url:&lt;input type="url" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;email:&lt;input type="email" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;number:&lt;input type="number" min="0" max="10" step="2" value="6" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;range:&lt;input type="range" min="0" max="10" step="2" value="6" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;date:&lt;input type="date" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;month:&lt;input type="month"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;week:&lt;input type="week"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;time:&lt;input type="time"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;datetime:&lt;input type="datetime"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;color:&lt;input type="color"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;required:&lt;input required name="req"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;range&lt;input type="range" id="rangeinput" value="50" min="0" max="100" step="5" onchange="rangevalue.value=value"/>&lt;/label&gt; &lt;output id="rangevalue"&gt;50&lt;/output&gt; <em>(output: result of a calculation)</em>&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;pattern: &lt;input type="text" pattern="[A-z]{3}.[0-9]{2}-[A-z]{1,}" placeholder="Abc.12.Bxxxxxx-" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;tel: &lt;input type="tel" placeholder="phone" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;search: &lt;input type="search" placeholder="search" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;datalist:&lt;input list="cities" name="cities" &gt; &lt;em&gt;(autocomplete)&lt;/em&gt;
+  &lt;datalist id="cities"&gt;
+	&lt;option value="Arezzo"&gt; &lt;option value="Firenze"&gt;  &lt;option value="Livorno"&gt; &lt;option value="Pisa"&gt;
+  &lt;/datalist&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;autocomplete off:&lt;input type="text" name="autocompleteoff" autocomplete="off" /&gt;&lt;/label&gt; - &lt;label&gt;autocomplete on: &lt;input type="text" name="autocompleteon" autocomplete="on" /&gt; &lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Go"&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;progress max="1000"&gt;&lt;/progress&gt;
+</code></pre>
+
+ 
+				</section>
+				
+				
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Application Cache / Applicazioni Web Offline</h2>
+					<p>Indicare al browser cosa salvare nella cache di applicazion (una specifica non la cache normale)</p>
+					<p>Permette anche di navigare un sito offline</p>
+			<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html manifest="clock.appcache"&gt;
+...
+&lt;/html&gt;
+</code></pre>	
+
+<pre><code>CACHE MANIFEST
+# 2012-03-08:v1
+ 
+# risorse esplicitamente in cache 
+index.html
+./style/clock.css
+./script/clock.js
+
+# se offline mostra offline.html  
+FALLBACK:
+/ /offline.html
+
+# risorse richieste in una connessione online
+NETWORK:
+some.cgi
+
+# risorse addizionali da mettere in cache
+CACHE:
+./images/clock.png</code></pre>
+
+
+<a href="./esempi/appcache/clock.html">Esempio</a>
+				</section>
+				
+				
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Application Cache / Applicazioni Web Offline</h2>
+			
+
+<p>Impostare il MIME type su Apache:</p>
+<pre><code># in httpd.conf  the MIME can be associated with to a specific extension: 
+	# Apache mimetype configuration
+    # APACHE_HOME/conf/mime.types
+    text/cache-manifest manifest
+    
+#set the Web server so that the manifest file is never cached
+    # Cache settings for the manifest file
+    &lt;IfModule mod_expires.c&gt;
+    Header set cache-control: public
+    ExpiresActive on
+    # Prevent receiving a cached manifest
+    ExpiresByType text/cache-manifest "access plus 0 seconds"
+    &lt;/IfModule&gt;
+    
+# manifest file must be served with the mime-type text/cache-manifest
+	AddType text/cache-manifest .appcache</code></pre>
+
+				<!--
+				http://developer.blackberry.com/bbos/html5/documentation/html_best_practices.html  !!! <br />
+				
+				http://www.w3.org/TR/2011/WD-html5-20110525/offline.html   (esempio di clock.js)<br />
+				
+				http://www.html5today.it/tutorial/html5-application-cache-tutorial-navigare-offline-html5 <br />
+				http://www.htmlgoodies.com/html5/tutorials/introduction-to-offline-web-applications-using-html5.html<br />
+				http://www.html5rocks.com/en/features/offline
+				
+				http://diveintohtml5.info/offline.html
+-->
+
+					</section>
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Applicazioni installabili da Web</h2>
+
+<ul>
+<li>Applicazioni HTML5 che funzionano come se fossero applicazioni native</li>
+<li class="fragment">Recommendation <a href="http://dev.w3.org/2006/waf/widgets/">Packaged Web Apps (Widgets)</a> specifica come confezionarle</li>
+<li class="fragment">Opera (pre-WebKit) supportava le widgets, ora browser utilizzano formati proprietari</li>
+
+<li class="fragment">Esempi di Applicazioni installabili da Web: WebCam Toy (desktop) - <strong>Battery</strong>, <strong>Chess</strong> (palmare)</li>
+
+<li class="fragment">Nuovo WD definisce un <a href="http://www.w3.org/2008/webapps/manifest/">manifest di tipo JSON</a>
+per specificare una Web Application e indirizzare tutti verso una versione comune</li>
+</ul>
+<pre class="fragment"><code>{
+  "name": "The Example App",
+  "short_name": "Example",
+  "description": "Exciting Open Web development action!",
+  "launch_path": "/",
+  "version": "1.0",
+  "icons": {
+    "16": "/img/icon_16.png",
+    "48": "/img/icon_48.png",
+    "128": "/img/icon_128.png"
+  },
+  "developer": {
+    "name": "Foo Corp.",
+    "url": "http://example.org/dev"
+  },
+  "appcache_path": "/cache.manifest",
+  "locales": {
+    "es": {
+      "description": "¡Emocionante desarrollo Open Web en acción!",
+      "developer": {
+        "url": "https://example.org/dev/es-ES"
+      }
+    }
+  },
+  "default_locale": "en",
+  "permissions": {
+    "contacts": {
+      "description": "Required for auto-completion in the share screen",
+      "access": "read"
+    }
+}</code>
+</pre>
+				</section>
+
+
+				<!-- ===================================================================== -->
+				
+				
+
+				<section>
+					<h2>Web Socket</h2>
+					<ul>
+						<li>Nuovo protocollo di comunicazione full-duplex, può rimanere attivo permanentemente</li>
+						<li>Consente lo scambio di informazioni client / server</li>
+						<li>Inizialmente la connessione richiede uno scambio HTTP, dopo prosegue col nuovo protocollo <strong>ws</strong> o <strong>wss</strong> (ssl)</li>
+						<li>La richiesta parte del client: il client ottiene informazioni e poi chiude la connessione</li>
+						<li>Le connessioni con altri protocolli (es, SMTP / FTP / ...) non sono permesse da un WebSocket (sicurezza)</li>
+						<li><strong>Video</strong> e <strong>foto</strong> veicolo sottomarino</li>
+					</ul>
+					
+					<!--
+					da mokabyte:
+					http://www2.mokabyte.it/cms/article.run?permalink=mb163_html5mobile-6
+
+					Attualmente, per ottenere qualcosa di vagamente somigliante a una interazione Publish-Subscribe, si utilizzano due tecniche basate sull’ormai onnipresente AJAX: Short Polling e Long Polling.
+
+					Lo Short Polling, denominato comunemente AJAX Polling, è la forma più semplice di polling, nel quale il client si incarica di effettuare regolarmente delle chiamate al server, per ottenere dati aggiornati. Convenzionalmente, se non vi sono dati aggiornati, il server risponderà con un messaggio vuoto. Come tutte le declinazioni di polling, questo metodo, sebbene sia il più semplice e il più diffuso, implica uno spreco di risorse computazionali, sia sul server che sul client, e un notevole utilizzo della banda per l’invio di mesaggi request-response il cui contenuto sarà, per la maggior parte, irrilevante (messaggio di risposta vuoto). Se concettualmente possiamo affermare che con questo approccio l’attesa è delegata al client, esiste anche una metodologia di comunicazione denominata polling lungo, nella quale idealmente l’attesa viene delegata invece al server.
+
+					Il Long Polling, familiarmente conosciuto come Reverse AJAX, è un modello di comunicazione web nel quale, a fronte di una singola richiesta di inizializzazione, si cerca di mantenere una connessione HTTP costantemente aperta fra client e server. Quando il server dovrà notificare ai client, non farà altro che inviare dei chunk di dati sulla connessione persistente. Nella sua forma più diffusa il Long Polling è implementato mediante l’utilizzo di un IFRAME nascosto, nel quale il client richiede una determinata pagina (azione di subscribe) e il server risponde servendo una pagina HTML a chunk distruibuiti nel tempo. Questa implementazione è nota come Comet, ed è quella che possiamo facilmente incontrare per gestire, ad esempio, gli instant messaging HTTP che si possono trovare sui vari social network. Ogni qualvolta il server desidera inviare un evento, aggiunge un chunk alla pagina Comet contente un blocco <script> con del codice da eseguire: il client riceve il blocco JavaScript come contenuto della sua pagina sapientemente centellinata e lo manda in esecuzione nientedimeno come fosse una funzione di callback. Simulando l’invio di una pagina estremamente lenta o grande, si riesce a mantenere aperta la connessione.
+
+					Che si tratti di Short o Long Polling, la natura da "workaround" dei due approcci è abbastanza palese: si pensi che esistono implementazioni di fallback basate persino su Flash o Siverlight, e la padronanza di queste metodologie può risultare in un ulteriore aggravio di tempo e risorse, anche se mitigate da librerie JavaScript wrapper che riescano a nasconderne la complessità.
+
+					Nella mente degli sviluppatori è chiaro che, anche se questo approccio comunque funziona, sarebbe necessario mettere finalmente a punto una soluzione veramente pulita a queste problematiche: è lo scopo che, in un futuro prossimo, dovrebbero raggiungere le WebSocket.
+					( ne’ il server ne’ il browser si fanno carico del canale, la cui gestione è delegata, con tutti i suoi pro e i suoi contro, interamente al programmatore. Ammettiamo che per qualche ragione una connessione ballerina faccia traballare la vostra socket: nonesiste alcun meccanismo per capire se la chiusura di una socket sia voluta o accidentale, non esiste una politica da seguire nel caso di un fallimento, non esistono politiche di riconnessione o di time-out detection)
+					-->
+				</section>
+
+				<section>
+					<h2>Web Socket</h2>
+					<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script type='text/javascript'&gt;
+            var ws = new WebSocket('ws://localhost:8080/TomcatWebSockets/testWebSocket');
+            ws.onmessage = function (message) {
+                console.log("message received : " + message.data);
+                var messages = document.getElementById('messages');
+                messages.innerHTML += "&lt;br&gt;[in] " + message.data;
+            };
+
+
+            ws.onopen = function() {
+                console.log("Websocket Ready!!");
+                //sendMessage();
+            };
+
+
+            ws.onerror = function (error) {
+                console.log('WebSocket Error ' + error);
+            };
+
+
+            sendmsg = function() {
+                var message = document.getElementById('message_to_send').value
+                document.getElementById('message_to_send').value = ''
+                ws.send(message);
+                console.log("message sent");
+                var messages = document.getElementById('messages');
+                messages.innerHTML += "&lt;br&gt;[out] " + message;
+            };
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form action="javascript:sendmsg()"&gt;
+            &lt;input type="text" id="message_to_send" name="msg"/&gt;
+            &lt;input type="button" name="btn" id="sendMsg" value="Send" onclick="javascript:sendmsg();"&gt;
+            &lt;div id="messages"&gt;&lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					
+       
+
+
+		<ul>
+			<li>vedi esempio TomcatWebSockets (Netbeans)</strong></li>
+		</ul>
+				
+				
+				</section>
+				
+				
+				
+				
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Push API (Server Sent Events)</h2>
+					
+					<p>Server diffonde (push) informazioni ai browser</p>
+					
+					<pre><code>
+// javascript
+var source = new EventSource('http://localhost:8080/ServerSideEvents/SSE');  
+// register an SSE
+
+source.onmessage=function(event){ // where a message arrives
+ 	document.getElementById("result").innerHTML=event.data;   // show it
+}</code></pre>
+
+<pre><code>
+public class SSE extends HttpServlet {
+public void doPost(HttpServletRequest request, HttpServletResponse response){
+response.setContentType("text/event-stream");
+PrintWriter pw = response.getWriter();
+pw.write(information_i_want_to_push + "\n\n");
+pw.close();
+}</code></pre>
+
+
+<p>vedi esempio ServerSentEvents (netbeans)</p>
+    			
+				</section>
+				
+				
+				
+				<!-- ===================================================================== -->
+<!--
+				<section>
+					<h2>Websockets vs Server Sent Events</h2>
+				
+					<ul>
+						<li>In both cases server and browserscommunicate in real time</li>
+						<li>SSE uses HTTP, designed for pushing informations from Server to </li>
+						<li>Websockets uses an ad-hoc protocol, a full-duplex communication</li>
+					</ul>
+  
+    			
+				</section>
+-->
+			
+				<!-- ===================================================================== -->
+<!--
+<section>
+	
+	<h2>Examples</h2>
+
+<pre>
+&lt;input type="file" accept="image/*" capture="camera" /&gt;
+
+&lt;input type="file" accept="image/*" capture /&gt;
+</pre>
+
+by Tomoni Imura (Mobile Web Real Life Examples of HTML5 (W3Conf 2013) 
+
+file api: returning the photo as a file object
+<pre>
+var input = document.querySelector('input[type=file])'
+camera.addEventListener('change', function() {
+   var localFile = input.files[0];
+   var reader = new FileReader();
+   reader.readAsDataURL(localFile);
+   reader.onload = function(e) {
+      preview.src = e.target.result;
+   }
+}, false);
+</pre>
+
+vedi XMLHttpRequest Level2 
+http://www.html5rocks.com/en/tutorials/file/xhr2/
+					
+				</section>
+-->			
+
+				<!-- ===================================================================== -->
+
+
+				<section>
+					<h2>Web Workers</h2>
+					<ul>
+						<li>programmi Javascript che girano background independentemente</li>
+						<li>L'URI di uno script viene passato come parametro ad un costruttore Worker</li>
+						<li>Il worker restituisce informazioni tramite un metodo 'postMessage', questo evento può essere catturato utilizzando il metodo 'onmessage'</li>
+					</ul>
+					<pre><code>var worker = new Worker('code_we_want_to_run_in_background.js');
+worker.onmessage = function(event) {  
+ console.log('Worker message: ' + event.data);  
+};</code></pre>
+
+					<p><a href="./esempi/numeri_primi.html">Esempio numeri primi</a> (firefox)</p>
+
+				</section>
+
+
+				
+
+				<!-- ===================================================================== -->
+
+				<section>
+					<h2>Esempi</h2>
+	<!--				
+					<p>
+					http://www.developerdrive.com/2013/09/using-html5-drag-and-drop-to-create-a-shopping-cart/?utm_content=buffer7ffb3&utm_source=buffer&utm_medium=twitter&utm_campaign=Buffer
+					</p>
+					
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+		-->			
+					<ul>
+<!--						<li><a href="http://www.html5rocks.com/en/tutorials/doodles/gamepad/gamepad-tester/tester.html">gamepad/joistick api</a></li>
+						<li><a href="esempi/deviceorientation.html">device orientation (see on mobile)</a></li> -->
+						<li><a href="esempi-HTML5/drag-and-drop/index.html">drag and drop 1</a></li>
+						<li><a href="esempi/draganddrop.html">drag and drop 2</a></li>
+						<li><a href="esempi/offlineonlinedetection.html">percezione offline online</a></li>
+						<li><a href="http://html5demos.com/">vari</a></li>
+						
+						<!-- <li><a href="http://www.findmebyip.com/litmus/#target-selector">HTML5 & CSS3 Implementation state</a></li> -->
+						
+						<li>&hellip;</li>
+					</ul>
+				</section>
+
+				<!-- ===================================================================== -->
+
+				
+				
+				<section>
+					<h2>E non finisce qui!</h2>
+					<p>Altre API</p>
+					<ul>
+						<li>Fullscreen (espande la pagina a riempire l'intero schermo)</li>
+						<!-- <li>Gamepad<img src="./img/gamepad.png" alt="" /></li> -->
+						<li>Orientamento dello Schermo</li>
+						<li>Server-Sent</li>
+						<li>Sensori di movimento (accelerometro, giroscopio, magnetometro)</li>
+						<li>HTML5 Form Virtual Keyboards</li>
+						<li>XMLHttpRequest 2.0</li>
+						<!-- <li><a href="http://www.w3.org/TR/push-api/">Push</a></li> -->
+						<li>Navigation Timing </li>
+						<li>Network Information</li>
+						<li>Media Capture API</li>
+						<li>Remote Debugger API</li>
+						
+						<li>History</li>
+						<li>...</li>
+						<li>Verso la Open Web Platform!</li>
+					</ul>
+				</section>
+				
+				<!-- ===================================================================== -->
+<!--
+				<section>
+					<h2>Applicazioni Web: il futuro prossimo <img src="img/enterprisepic.png" alt="star trek enterprise" /></h2>
+					<ul>
+						<li>
+							Realizzazione sistemi operativi basati quasi interamente sulla tecnologia Web
+							<br />
+							(componenti nativi ancora utilizzati per gli strati inferiori)
+						</li>
+						<li>
+							<ul>
+								<li>
+									<a href="http://www.ubuntu.com/tour/">Ubuntu tour</a> interamente realizzato in HTML5 pu&ograve; dare un'idea
+								</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Situazione</strong>: due progetti guidano standardizzazione W3C:
+							<ul>
+								<li>
+									<a href="https://wiki.mozilla.org/B2G">Boot To Gecko</a> (B2G) di Mozilla
+								</li>
+								<li>
+									<a href="https://www.tizen.org/">Tizen</a> di Intel e Samsung
+								</li>
+							</ul>
+						<li>
+							Una demo di B2G: iframe width="560" height="315" src="http://www.youtube.com/embed/Erd_oEdHc58"  /iframe
+						</li>
+						<li>
+							Alcune immagini di Tizen <img src="img/tizen.jpg" alt=""/>
+						</li>
+					</ul>
+				</section>
+-->
+				<section>
+					<h1>World Wide Web Consortium</h1>
+					<p><strong><a href="http://www.w3.org/participate/faq.html">Aderite e partecipate al W3C</a></strong></p>
+					<p>Per contribuire a decidere a sviluppare un <em>Web per Tutti</em>!</p>
+					<img src="./img/EinsteinHTML5.png" alt="Einstein and HTML5" />
+				</section>
+
+				<!-- ===================================================================== -->
+				
+				
+				
+				<section>
+					<h2>Ufficio Italiano W3C: Prossime iniziative </h2>
+					<ul>
+						<li>
+							Marzo(?) 2014: <a href="http://www.w3devcampus.com/">Buone prassi per il Web Mobile</a>: corso online
+							<!-- <br /><small>Insegnanti: <a href="">Massimo Martinelli</a>, <a href="">Angelo Mario Del Grosso</a></small> -->
+							<br /><img src="./img/BuonePrassiWebMobile.jpg" alt="" />
+						</li>
+						<li>25-20-15 Tre anniversari nel 2014: Web, W3C, W3C.IT - State sintonizzati su <a href="http://www.w3c.it/">www.w3c.it</a> </li>
+					</ul>
+
+				</section>
+				<!--  ================================================================ -->
+
+				<section data-background="white">					
+					<h2>Grazie per l'attenzione</h2>
+					Grazie all'organizzazione di <img src="./img/smau-bg-small.png" alt="SMAU" /> e a <img src="./img/logo_iwa.png" alt="IWA" /><br />
+					<h3>Domande?</h3>
+					<hr />
+					<p><em>Se non è sul Web</em></p> 
+					<!-- <pit does not exist ...</p> -->
+					
+					<canvas id="textCanvas2" height="240" width="600"></canvas>
+						<script>
+								var canvas = document.getElementById('textCanvas2');
+								var context = canvas.getContext('2d');
+								context.font = 'italic 20pt Calibri';
+								
+								// context.rotate(0.1);
+								// context.fillStyle = 'blue';
+								context.font = "bold 1em sans-serif";
+								context.shadowColor = "rgb(190, 190, 190)";
+								context.shadowOffsetX = 10;
+								context.shadowOffsetY = 10;
+								context.shadowBlur = 10;
+								
+								var gradient = ctx.createLinearGradient(0, 0, 150, 100);
+								gradient.addColorStop(0, "rgb(0, 255, 255)");
+								gradient.addColorStop(1, "rgb(255, 0, 0)");
+								context.fillStyle = gradient;
+								// context.fillText('non esiste ...', 150, 40);
+								
+								
+								setInterval(function(){
+									context.save();
+									context.clearRect(0, 0, canvas.width*3, canvas.height*3);
+									context.rotate( 0.25*Math.sin( (new Date)*1/1000 )  );
+									context.fillText('non esiste ...', 150, 130);
+									context.restore();
+								},50);
+						</script>
+					<p> ...troverete <a href="http://www.w3c.it/talks/2013/smau2013/">le slides all'indirizzo http://www.w3c.it/talks/2013/smau2013/</a></p>
+					<p>Aprire la presentazione impostata con lo stile per la stampa in formato <a href="index.html?print-pdf">PDF</a></p>
+				</section>
+
+				<!--
+				<section>
+				<h2>Heads Up</h2>
+				<p>
+				reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
+				support for CSS 3D transforms to see it in its full glory.
+				</p>
+
+				<aside class="notes">
+				Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+				</aside>
+				</section>
+
+				<section>
+				<h2>Point of View</h2>
+				<p>
+				Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+				</p>
+				</section>
+
+				<section id="transitions">
+				<h2>Transition Styles</h2>
+				<p>
+				You can select from different transitions, like: <br>
+				<a href="?transition=cube#/transitions">Cube</a> -
+				<a href="?transition=page#/transitions">Page</a> -
+				<a href="?transition=concave#/transitions">Concave</a> -
+				<a href="?transition=zoom#/transitions">Zoom</a> -
+				<a href="?transition=linear#/transitions">Linear</a> -
+				<a href="?transition=none#/transitions">None</a> -
+				<a href="?#/transitions">Default</a>
+				</p>
+				</section>
+
+				<section id="themes">
+				<h2>Themes</h2>
+				<p>
+				Reveal.js comes with a few themes built in: <br>
+				<a href="?theme=sky#/themes">Sky</a> -
+				<a href="?theme=beige#/themes">Beige</a> -
+				<a href="?theme=simple#/themes">Simple</a> -
+				<a href="?theme=serif#/themes">Serif</a> -
+				<a href="?theme=night#/themes">Night</a> -
+				<a href="?#/themes">Default</a>
+				</p>
+				<p>
+				<small>
+				* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+				</small>
+				</p>
+				</section>
+
+				<section>
+				<section data-state="alert">
+				<h2>Global State</h2>
+				<p>
+				Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+				will be added as a class to the document element when the slide is open. This lets you
+				apply broader style changes, like switching the background.
+				</p>
+				<a href="#" class="image navigate-down">
+				<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+				</a>
+				</section>
+				<section data-state="blackout">
+				<h2>"blackout"</h2>
+				<a href="#" class="image navigate-down">
+				<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+				</a>
+				</section>
+				<section data-state="soothe">
+				<h2>"soothe"</h2>
+				<a href="#" class="image navigate-next">
+				<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(-90deg);">
+				</a>
+				</section>
+				</section>
+
+				<section>
+				<h2>Intergalactic Interconnections</h2>
+				<p>
+				You can link between slides internally,
+				<a href="#/2/3">like this</a>.
+				</p>
+				</section>
+
+				<section>
+				<section>
+				<h2>Fragmented Views</h2>
+				<p>Hit the next arrow...</p>
+				<p class="fragment">... to step through ...</p>
+				<ol>
+				<li class="fragment"><code>any type</code></li>
+				<li class="fragment"><em>of view</em></li>
+				<li class="fragment"><strong>fragments</strong></li>
+				</ol>
+
+				<aside class="notes">
+				This slide has fragments which are also stepped through in the notes window.
+				</aside>
+				</section>
+				<section>
+				<h2>Fragment Styles</h2>
+				<p>There's a few styles of fragments, like:</p>
+				<p class="fragment grow">grow</p>
+				<p class="fragment shrink">shrink</p>
+				<p class="fragment roll-in">roll-in</p>
+				<p class="fragment fade-out">fade-out</p>
+				<p class="fragment highlight-red">highlight-red</p>
+				<p class="fragment highlight-green">highlight-green</p>
+				<p class="fragment highlight-blue">highlight-blue</p>
+				</section>
+				</section>
+
+				<section>
+				<h2>Spectacular image!</h2>
+				<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
+				<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
+				</a>
+				</section>
+
+				<section>
+				<h2>Export to PDF</h2>
+				<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
+				<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+				<script>
+				document.getElementById('slideshare').attributeName = 'allowfullscreen';
+				</script>
+				</section>
+
+				<section>
+				<h2>Take a Moment</h2>
+				<p>
+				Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
+				during a presentation.
+				</p>
+				</section>
+				-->
+
+			</div>
+
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script>var numeroslide=42;</script>  <!-- fissa una variabile globale, viene calcolata sotto -->
+		<!--
+		<script>
+			$(document).ready( function (){
+				var numeroslide = $("section").length -2;
+				console.log('Numero slide:' + numeroslide);
+			});
+		</script>
+-->
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		
+<!--        <script src="./js/jquery.countdown.js"></script>
+		<script type="text/javascript">
+		$(function () {
+		  var austDay = new Date();
+		  austDay = new Date(austDay.getFullYear(), 10 - 1, 20);
+		austDay = new Date($.countdown.UTCDate(120, 2013, 10-1, 23, 16, 00, 0, 0));
+		  $('#defaultCountdown').countdown({until: austDay});
+		  $('#year').text(austDay.getFullYear());
+		});
+		</script>
+-->
+
+		<script>
+		function countdown(){						
+			var_anno=2013;var_mese=10;var_giorno=23;var_ore=16;var_minuti=51;var_secondi=0;
+			data_scandenza= new Date(var_anno,var_mese-1,var_giorno,var_ore,var_minuti,var_secondi);
+			data_oggi= new Date();
+			differenza=(data_scandenza-data_oggi);
+			giorni=parseInt(differenza/86400000);
+			differenza=differenza-(giorni*86400000);
+			ore=parseInt(differenza/3600000);
+			differenza=differenza-(ore*3600000);
+			minuti=parseInt(differenza/60000);
+			differenza=differenza-(minuti*60000);
+			secondi=parseInt(differenza/1000);
+			differenza=differenza-(secondi*1000);
+			<!-- if (giorni <= "0" && ore <= "0" && minuti <= "0" && secondi <= "0"){$("#defaultCountdown").html("");}else{$("#defaultCountdown").html('in '+giorni +' days '+ore+' hours '+minuti+' min '); -->
+			if (giorni <= "0" && ore <= "0" && minuti <= "0" && secondi <= "0"){$("#defaultCountdown").html("");}else{$("#defaultCountdown").html(minuti+'\'');
+			setTimeout("countdown()",1000)}
+		}
+		</script>
+		
+		<script>
+			function slidenumber(event){
+			  var totalslides = document.querySelectorAll( '.reveal .slides section:not(.stack)' ).length;
+			  var current_slide = 0;
+
+			  var horizontal_slides = document.querySelectorAll( '.reveal .slides>section' );
+			  for (var i = 0; i < event.indexh; i++) {
+				// get subslides
+				var subslides = horizontal_slides[i].querySelectorAll('section');
+
+				// if subslides.length is 0, add 1 for horizontal slide, else add subslides.length
+				current_slide += (subslides.length === 0) ? 1 : subslides.length;
+			  }
+
+			  current_slide += event.indexv+1;
+			  return current_slide.toString()+"/"+totalslides.toString();
+			}
+			
+			Reveal.addEventListener('slidechanged', function(event){
+			  numeroslide = $("section").length -2;
+			  // console.log('Numero slide:' + numeroslide);
+
+				
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+				var slidemancanti=numeroslide-event.indexh;
+				var tempo1slide=tempototale/numeroslide;
+				var tempomancante=slidemancanti*tempo1slide;
+				var differenzatempo=minuti-tempomancante;
+				//document.querySelector("#slidenumber").innerText=slidenumber(event);
+				document.querySelector("#slidenumber").innerText=parseInt(differenzatempo);
+				
+				//console.log('diff:' + parseInt(differenzatempo)+ ' tempo1slide:' + tempo1slide  + ' tempomancante:' + tempomancante + ' min:' + minuti + ' curr:' + event.indexh + ' numslide:' + numeroslide);
+				//$("#defaultCountdown").html(minuti+'\' '+event.currentSlide+ ' '+event.indexv)
+			});
+			
+			Reveal.addEventListener('ready', function(event){
+			  //document.querySelector("#slidenumber").innerText=slidenumber(event);
+			  
+			  numeroslide = $("section").length -2;
+			  console.log('Numero slide:' + numeroslide);
+			  
+			  var slidemancanti=numeroslide-event.indexh;
+				var tempo1slide=tempototale/numeroslide;
+				var tempomancante=slidemancanti*tempo1slide;
+				var differenzatempo=minuti-tempomancante;
+				//document.querySelector("#slidenumber").innerText=slidenumber(event);
+				document.querySelector("#slidenumber").innerText=parseInt(differenzatempo);
+			  //document.querySelector("#slidenumber").innerText=minuti*(numeroslide-event.indexh/numeroslide);
+			});
+		</script>
+
+		<div style="position: absolute; bottom: 10px; left: 50%; margin-left: -205px; z-index: 20;" class="share-HTML5">
+			
+			<!--  -->
+		
+			<script>
+				// Full list of configuration options available here:
+				// https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+					controls : true,
+					progress : true,
+					history : true,
+					center : false,
+
+					theme : Reveal.getQueryHash().theme, // available themes are in /css/theme
+					transition : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+					// Optional libraries used to extend on reveal.js
+					dependencies : [{
+						src : 'lib/js/classList.js',
+						condition : function() {
+							return !document.body.classList;
+						}
+					}, {
+						src : 'plugin/markdown/showdown.js',
+						condition : function() {
+							return !!document.querySelector('[data-markdown]');
+						}
+					}, {
+						src : 'plugin/markdown/markdown.js',
+						condition : function() {
+							return !!document.querySelector('[data-markdown]');
+						}
+					}, {
+						src : 'plugin/highlight/highlight.js',
+						async : true,
+						callback : function() {
+							hljs.initHighlightingOnLoad();
+						}
+					}, {
+						src : 'plugin/zoom-js/zoom.js',
+						async : true,
+						condition : function() {
+							return !!document.body.classList;
+						}
+					}, {
+						src : 'plugin/notes/notes.js',
+						async : true,
+						condition : function() {
+							return !!document.body.classList;
+						}
+					}
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+					]
+				});
+
+			</script>
+			<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+			
+			<script>
+			Reveal.addEventListener( 'countdown', function() {
+				console.log( '"countdown" has fired' );
+				countdown();
+			} );
+			
+			
+			Reveal.addEventListener( 'countdown2', function() {
+				console.log( '"countdown2" has fired' );
+				countdown();
+			} );
+				
+			Reveal.addEventListener( 'dove', function() {
+				console.log( '"dove" has fired' );
+				typewriter();
+			} );
+			
+			
+			var index=0; var text="BROWSER"; var conta=0;
+			function typewriter(){
+				document.getElementById("typewrite").innerHTML+=text.charAt(index);index+=1;
+				if( index<text.length ) {
+					var t = setTimeout("typewriter()",200);
+				} else { untypewriter(); }
+			}
+			function untypewriter(){
+				document.getElementById("typewrite").innerHTML=text.substring(0,index);
+					
+				if (index==text.length-1) { sleep(20000); }
+				index-=1;
+				if ( index>-1 ) {
+					var t = setTimeout("untypewriter()",100);
+				} else {
+					switch(conta){
+						case -1: text="BROWSER"; conta++; typewriter(); break;
+						case 0: text="AUTO"; conta++; typewriter(); break;
+						case 1: text="TELEVISION"; conta++; typewriter(); break;
+						case 2: text="SMARTPHONE"; conta++; typewriter(); break;
+						case 3: text="EBOOK"; conta++; typewriter(); break;
+						case 4: text="GAME"; conta=0; conta--; typewriter(); break;
+						default: 
+							break;
+					}	
+				}
+			}
+
+			function sleep(milliseconds) {
+			  var start = new Date().getTime();
+			  for (var i = 0; i < 1e7; i++) {
+				if ((new Date().getTime() - start) > milliseconds){
+				  break;
+				}
+			  }
+			}			
+			</script>
+			
+		</div>
+	</body>
+</html>

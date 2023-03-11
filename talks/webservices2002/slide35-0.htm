@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<title>La Web Services Activity del W3C - slide "Esempio di un messaggio SOAP version 1.2"</title>
+<link rel="next" href="slide36-0.htm" title="Next">
+<link rel="previous" href="slide34-0.htm" title="Previous">
+<link rel="contents" href="overview.htm" title="Contents">
+<link href="../tools/w3ctalk-800.css" rel="stylesheet" type="text/css" title="W3C Talk">
+</head>
+<body>
+<table class="navbar" cellspacing="0" cellpadding="0" border="0" width="97%" summary="navigation buttons">
+<tr valign="top">
+<td align="left"><a href="http://www.w3c.it/"><img src="http://www.w3c.it/siteutilities/logos/itlogo-20010115.png" border="0" alt="W3C Office in Italy "></a></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide34-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;SOAP version 1.2: un protocollo XML-based&#34;"></a><a rel="contents" href="overview.htm" accesskey="C"><img src="../icons/toc.png" border="0" width="32" height="32" alt=" contents" title="Table of Contents"></a><a rel="next" href="slide36-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Lo stato di  SOAP version 1.2&#34;"></a></div>
+</td>
+</tr>
+</table>
+
+<h1 class="slide">Esempio di un messaggio SOAP version 1.2</h1>
+
+<hr class="top">
+
+<div class="slidebody">
+
+<pre>&lt;?xml version='1.0' ?&gt;
+&lt;env:Envelope xmlns:env="http://www.w3.org/2002/06/soap-envelope"&gt; 
+&lt;env:Header&gt;
+<span style="color: green">&lt;m:reservation xmlns:m="http://travelcompany.example.org/reservation" 
+env:role="http://www.w3.org/2002/06/soap-envelope/role/next"
+env:mustUnderstand="true"&gt;
+&lt;m:reference&gt;uuid:093a2da1-q345-739r-ba5d-pqff98fe8j7d&lt;/reference&gt;
+&lt;m:dateAndTime&gt;2001-11-29T13:20:00.000-05:00&lt;/m:dateAndTime&gt;
+&lt;/m:reservation&gt;
+&lt;n:passenger xmlns:n="http://mycompany.example.com/employees"
+env:role="http://www.w3.org/2002/06/soap-envelope/role/next"
+env:mustUnderstand="true"&gt;
+&lt;n:name&gt;John Q. Public&lt;/n:name&gt;
+&lt;/n:passenger&gt;</span>
+<span style="color: red">&lt;z:travelPolicy 
+xmlns:z="http://mycompany.example.com/policies" 
+env:mustUnderstand="true"&gt;
+&lt;z:class&gt;economy&lt;/z:class&gt;
+&lt;z:fareBasis&gt;non-refundable&lt;z:fareBasis&gt;
+&lt;z:exceptions&gt;none&lt;/z:exceptions&gt;
+&lt;/z:travelPolicy&gt;</span>
+&lt;/env:Header&gt;
+&lt;env:Body&gt;
+<span style="color: green">&lt;p:itinerary 
+xmlns:p="http://travelcompany.example.org/reservation/travel"&gt;
+&lt;p:departure&gt;
+&lt;p:departing&gt;New York&lt;/p:departing&gt;
+&lt;p:arriving&gt;Los Angeles&lt;/p:arriving&gt;
+&lt;p:departureDate&gt;2001-12-14&lt;/p:departureDate&gt;
+&lt;p:departureTime&gt;late afternoon&lt;/p:departureTime&gt;
+&lt;p:seatPreference&gt;aisle&lt;/p:seatPreference&gt;
+&lt;/p:departure&gt;
+&lt;p:return&gt;
+&lt;p:departing&gt;Los Angeles&lt;/p:departing&gt;
+&lt;p:arriving&gt;New York&lt;/p:arriving&gt;
+&lt;p:departureDate&gt;2001-12-20&lt;/p:departureDate&gt;
+&lt;p:departureTime&gt;mid morning&lt;/p:departureTime&gt;
+&lt;p:seatPreference/&gt;
+&lt;/p:return&gt;
+&lt;/p:itinerary&gt;
+&lt;q:lodging 
+xmlns:q="http://travelcompany.example.org/reservation/hotels"&gt;
+&lt;q:preference&gt;none&lt;/q:preference&gt;
+&lt;/q:lodging&gt;</span>
+&lt;/env:Body&gt;
+&lt;/env:Envelope&gt;</pre>
+
+
+
+</div>
+
+<hr class="bottom">
+
+<table class="footer" cellspacing="0" cellpadding="0" border="0" width="97%" summary="footer">
+<tr valign="bottom">
+<td> <p class="author"><a href="mailto:oreste@w3.org">Oreste Signore, Manager of W3C Office in Italy</a></p> </td>
+<td align="left"><p class="index">35 of 43</p></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide34-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;SOAP version 1.2: un protocollo XML-based&#34;"></a><a rel="next" href="slide36-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Lo stato di  SOAP version 1.2&#34;"></a></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

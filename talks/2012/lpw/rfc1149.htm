@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index,follow">
+    <meta name="creator" content="rfcmarkup version 1.74">
+    <link rel="icon" href="http://tools.ietf.org/images/rfc.png" type="image/png">
+    <link rel="shortcut icon" href="http://tools.ietf.org/images/rfc.png" type="image/png">
+    <title>RFC 1149 - Standard for the transmission of IP datagrams on avian carriers</title>
+    
+    <style type="text/css">
+	body {
+	    margin: 0px 8px;
+            font-size: 1em;
+	}
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	    font-weight: bold;
+            line-height: 0pt;
+            display: inline;
+            white-space: pre;
+            font-family: monospace;
+            font-size: 1em;
+	    font-weight: bold;
+        }
+        pre {
+            font-size: 1em;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+	.pre {
+	    white-space: pre;
+	    font-family: monospace;
+	}
+	.header{
+	    font-weight: bold;
+	}
+        .newpage {
+            page-break-before: always;
+        }
+        .invisible {
+            text-decoration: none;
+            color: white;
+        }
+        @media print {
+            body {
+                font-size: 10.5pt;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 10.5pt;
+            }
+        
+            a:link, a:visited {
+                color: inherit;
+                text-decoration: none;
+            }
+            .noprint {
+                display: none;
+            }
+        }
+	@media screen {
+	    .grey, .grey a:link, .grey a:visited {
+		color: #777;
+	    }
+            .docinfo {
+                background-color: #EEE;
+            }
+            .top {
+                border-top: 7px solid #EEE;
+            }
+            .bgwhite  { background-color: white; }
+            .bgred    { background-color: #F44; }
+            .bggrey   { background-color: #666; }
+            .bgbrown  { background-color: #840; }            
+            .bgorange { background-color: #FA0; }
+            .bgyellow { background-color: #EE0; }
+            .bgmagenta{ background-color: #F4F; }
+            .bgblue   { background-color: #66F; }
+            .bgcyan   { background-color: #4DD; }
+            .bggreen  { background-color: #4F4; }
+
+            .legend   { font-size: 90%; }
+            .cplate   { font-size: 70%; border: solid grey 1px; }
+	}
+    </style>
+
+    <script type="text/javascript"><!--
+    function addHeaderTags() {
+	var spans = document.getElementsByTagName("span");
+	for (var i=0; i < spans.length; i++) {
+	    var elem = spans[i];
+	    if (elem) {
+		var level = elem.getAttribute("class");
+                if (level == "h1" || level == "h2" || level == "h3" || level == "h4" || level == "h5" || level == "h6") {
+                    elem.innerHTML = "<"+level+">"+elem.innerHTML+"</"+level+">";		
+                }
+	    }
+	}
+    }
+    var legend_html = "Colour legend:<br />      <table>         <tr><td>Unknown:</td>          <td><span class='cplate bgwhite'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Draft:</td>            <td><span class='cplate bgred'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Informational:</td>    <td><span class='cplate bgorange'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Experimental:</td>     <td><span class='cplate bgyellow'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Best Common Practice:</td><td><span class='cplate bgmagenta'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Proposed Standard:</td><td><span class='cplate bgblue'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Draft Standard:</td>   <td><span class='cplate bgcyan'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Standard:</td>         <td><span class='cplate bggreen'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Historic:</td>         <td><span class='cplate bggrey'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Obsolete:</td>         <td><span class='cplate bgbrown'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>     </table>";
+    function showElem(id) {
+        var elem = document.getElementById(id);
+        elem.innerHTML = eval(id+"_html");
+        elem.style.visibility='visible';
+    }
+    function hideElem(id) {
+        var elem = document.getElementById(id);
+        elem.style.visibility='hidden';        
+        elem.innerHTML = "";
+    }
+    // -->
+    </script>
+<style type="text/css" id="accessibar-pref-focus">*:focus { -moz-outline: 3px solid #10bae0; -moz-outline-offset: 1px; -moz-outline-radius: 5px; }
+button:focus::-moz-focus-inner { border-color: transparent; }
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+border: 1px dotted transparent;
+}
+textarea:focus, button:focus, select:focus, input:focus { -moz-outline-offset: -1px; }
+input[type="radio"]:focus {-moz-outline-radius: 12px; -moz-outline-offset: 0px; }
+a:focus { -moz-outline-offset: 0px; }</style></head><body onload="addHeaderTags()">
+   <div style="height: 13px;">
+      <div onmouseover="this.style.cursor='pointer';" onclick="showElem('legend');" onmouseout="hideElem('legend')" style="height: 6px; position: absolute; cursor: pointer;" class="pre noprint docinfo bgyellow" title="Click for colour legend.">                                                                        </div>
+      <div id="legend" class="docinfo noprint pre legend" style="border: 1px solid rgb(51, 68, 85); padding: 4px 9px 5px 7px; position: absolute; top: 4px; left: 4ex; visibility: hidden; background-color: white;" onmouseover="showElem('legend');" onmouseout="hideElem('legend');"></div>
+   </div>
+<span class="pre noprint docinfo top">[<a href="http://tools.ietf.org/html/" title="Document search and retrieval page">RFCs/IDs</a>] [<a href="http://tools.ietf.org/rfc/rfc1149.txt" title="Plaintext version of this document">Plain</a>]                                                      </span><br>
+<span class="pre noprint docinfo">                                                                        </span><br>
+<span class="pre noprint docinfo">Updated by: <a href="http://tools.ietf.org/html/rfc2549">2549</a>                                            EXPERIMENTAL</span><br>
+<span class="pre noprint docinfo">                                                                        </span><br>
+<p class="bigParagraph">
+          <button id="back-top" onclick="history.go(-1)" style="font-weight: bold; background-color: #ffff66; font-size: 110%;">Torna alla
+          presentazione</button>
+        </p>
+
+<pre>Network Working Group                                        D. Waitzman
+Request for Comments: 1149                                       BBN STC
+                                                            1 April 1990
+
+
+   <span class="h1"><h1>A Standard for the Transmission of IP Datagrams on Avian Carriers</h1></span>
+
+Status of this Memo
+
+   This memo describes an experimental method for the encapsulation of
+   IP datagrams in avian carriers.  This specification is primarily
+   useful in Metropolitan Area Networks.  This is an experimental, not
+   recommended standard.  Distribution of this memo is unlimited.
+
+Overview and Rational
+
+   Avian carriers can provide high delay, low throughput, and low
+   altitude service.  The connection topology is limited to a single
+   point-to-point path for each carrier, used with standard carriers,
+   but many carriers can be used without significant interference with
+   each other, outside of early spring.  This is because of the 3D ether
+   space available to the carriers, in contrast to the 1D ether used by
+   IEEE802.3.  The carriers have an intrinsic collision avoidance
+   system, which increases availability.  Unlike some network
+   technologies, such as packet radio, communication is not limited to
+   line-of-sight distance.  Connection oriented service is available in
+   some cities, usually based upon a central hub topology.
+
+Frame Format
+
+   The IP datagram is printed, on a small scroll of paper, in
+   hexadecimal, with each octet separated by whitestuff and blackstuff.
+   The scroll of paper is wrapped around one leg of the avian carrier.
+   A band of duct tape is used to secure the datagram's edges.  The
+   bandwidth is limited to the leg length.  The MTU is variable, and
+   paradoxically, generally increases with increased carrier age.  A
+   typical MTU is 256 milligrams.  Some datagram padding may be needed.
+
+   Upon receipt, the duct tape is removed and the paper copy of the
+   datagram is optically scanned into a electronically transmittable
+   form.
+
+Discussion
+
+   Multiple types of service can be provided with a prioritized pecking
+   order.  An additional property is built-in worm detection and
+   eradication.  Because IP only guarantees best effort delivery, loss
+   of a carrier can be tolerated.  With time, the carriers are self-
+
+
+
+<span class="grey">Waitzman                                                        [Page 1]</span>
+</pre><pre class="newpage"><a name="page-2" id="page-2" href="#page-2" class="invisible"> </a>
+<span class="grey"><a href="http://tools.ietf.org/html/rfc1149">RFC 1149</a>             IP Datagrams on Avian Carriers         1 April 1990</span>
+
+
+   regenerating.  While broadcasting is not specified, storms can cause
+   data loss.  There is persistent delivery retry, until the carrier
+   drops.  Audit trails are automatically generated, and can often be
+   found on logs and cable trays.
+
+Security Considerations
+
+   Security is not generally a problem in normal operation, but special
+   measures must be taken (such as data encryption) when avian carriers
+   are used in a tactical environment.
+
+Author's Address
+
+   David Waitzman
+   BBN Systems and Technologies Corporation
+   BBN Labs Division
+   10 Moulton Street
+   Cambridge, MA 02238
+
+   Phone: (617) 873-4323
+
+   EMail: dwaitzman@BBN.COM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Waitzman                                                        [Page 2]
+</pre><pre class="newpage"></pre><br>
+<span class="noprint"><small><small>Html markup produced by rfcmarkup 1.74, available from
+<a href="http://tools.ietf.org/tools/rfcmarkup/">http://tools.ietf.org/tools/rfcmarkup/</a>
+</small></small></span>
+</body><script type="text/javascript"><!--
+function __RP_Callback_Helper(str, strCallbackEvent, splitSize, func){var event = null;if (strCallbackEvent){event = document.createEvent('Events');event.initEvent(strCallbackEvent, true, true);}if (str && str.length > 0){var splitList = str.split('|');var strCompare = str;if (splitList.length == splitSize)strCompare = splitList[splitSize-1];var pluginList = document.plugins;for (var count = 0; count < pluginList.length; count++){var sSrc = '';if (pluginList[count] && pluginList[count].src)sSrc = pluginList[count].src;if (strCompare.length >= sSrc.length){if (strCompare.indexOf(sSrc) != -1){func(str, count, pluginList, splitList);break;}}}}if (strCallbackEvent)document.body.dispatchEvent(event);}function __RP_Coord_Callback(str){var func = function(str, index, pluginList, splitList){pluginList[index].__RP_Coord_Callback = str;pluginList[index].__RP_Coord_Callback_Left = splitList[0];pluginList[index].__RP_Coord_Callback_Top = splitList[1];pluginList[index].__RP_Coord_Callback_Right = splitList[2];pluginList[index].__RP_Coord_Callback_Bottom = splitList[3];};__RP_Callback_Helper(str, 'rp-js-coord-callback', 5, func);}function __RP_Url_Callback(str){var func = function(str, index, pluginList, splitList){pluginList[index].__RP_Url_Callback = str;pluginList[index].__RP_Url_Callback_Vid = splitList[0];pluginList[index].__RP_Url_Callback_Parent = splitList[1];};__RP_Callback_Helper(str, 'rp-js-url-callback', 3, func);}function __RP_TotalBytes_Callback(str){var func = function(str, index, pluginList, splitList){pluginList[index].__RP_TotalBytes_Callback = str;pluginList[index].__RP_TotalBytes_Callback_Bytes = splitList[0];};__RP_Callback_Helper(str, null, 2, func);}function __RP_Connection_Callback(str){var func = function(str, index, pluginList, splitList){pluginList[index].__RP_Connection_Callback = str;pluginList[index].__RP_Connection_Callback_Url = splitList[0];};__RP_Callback_Helper(str, null, 2, func);}
+//--></script>
+<p class="bigParagraph">
+          <button id="back-bottom" onclick="history.go(-1)" style="font-weight: bold; background-color: #ffff66; font-size: 110%;">Torna alla
+          presentazione</button>
+        </p>
+
+</html>

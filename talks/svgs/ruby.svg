@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+	<?xml-stylesheet type="text/css" href="http://www.w3c.it/talks/svgs/slide.css" ?> 
+
+<svg height="58" width="160">
+	<rect x="0" y="0" height="80" width="160" style="fill:white"/>
+	<defs>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby2" begin="ruby1.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby1" begin="ruby1.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby3" begin="ruby2.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby2" begin="ruby2.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby4" begin="ruby3.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby3" begin="ruby3.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby1" begin="ruby4.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby4" begin="ruby4.click"/>
+	</defs>
+  <image id="ruby1" y="10" x="10" xlink:href="../gifs/rubyjpex.gif" height="33" width="140">
+<desc>Ruby text for the shinkanzen</desc>
+</image>
+  <image id="ruby2" visibility="hidden" y="10" x="10" xlink:href="../gifs/rubyjpex2.gif" height="49" width="149">
+<desc>Ruby text for the shinkanzen, including the latin version</desc></image>
+  <image id="ruby3" visibility="hidden" y="10" x="10" xlink:href="../gifs/rubyjpex3.gif" height="46" width="131">
+<desc>W3C Associate chairman</desc>
+</image>
+  <image id="ruby4" visibility="hidden" y="10" x="10" xlink:href="../gifs/bopomofo.gif" height="42" width="138"><desc>Bopomofo</desc></image>
+
+</svg>

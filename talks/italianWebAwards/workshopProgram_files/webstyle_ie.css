@@ -1,0 +1,66 @@
+.input {
+	BORDER-RIGHT: #003366 thin solid; BORDER-TOP: #003366 thin solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: #003366 thin solid; COLOR: #003366; BORDER-BOTTOM: #003366 thin solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #cccccc; TEXT-DECORATION: none
+}
+.menubianco {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menugiallo {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffcc00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menublu {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menubiancolato {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menunero {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.testonero {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menublu:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ff6600; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menubiancolato:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menubianco:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; COLOR: #ff9900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menunero:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.titoli {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menublugiallo {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ff6600; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.menublugiallo:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.titolipiccoli {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.moltopiccolo {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.salaA {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #003366; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.salaB {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.salaA:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #003366; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.salaB:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.inputbianco {
+	BORDER-RIGHT: #999999 double; BORDER-TOP: #999999 double; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: #999999 double; COLOR: #003366; BORDER-BOTTOM: #999999 double; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+BODY {
+	MARGIN: 0px; COLOR: #000000; BACKGROUND-COLOR: #ffffff
+}

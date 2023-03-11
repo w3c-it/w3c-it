@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<title>sns2004 - slide "The XCDE search engine"</title>
+<link rel="next" href="slide13-0.htm" title="Next">
+<link rel="previous" href="slide11-0.htm" title="Previous">
+<link rel="contents" href="overview.htm" title="Contents">
+<link href="../tools/w3ctalk-800-whitebackground.css" rel="stylesheet" type="text/css" title="W3C Talk">
+</head>
+<body>
+<table class="navbar" cellspacing="0" cellpadding="0" border="0" width="97%" summary="navigation buttons">
+<tr valign="top">
+<td align="left"><a href="http://www.w3c.it"><img src="../logos/itlogo-20010115.png" border="0" alt="Ufficio Italiano W3C"></a>&nbsp;
+<a href="http://www.weblab.isti.cnr.it/"><img src="../logos/weblabSmall.jpg" border="0" alt="WebLab Logo"></a></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide11-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;The XML document collection&#34;"></a><a rel="contents" href="overview.htm" accesskey="C"><img src="../icons/toc.png" border="0" width="32" height="32" alt=" contents" title="Table of Contents"></a><a rel="next" href="slide13-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Demo&#34;"></a></div>
+</td>
+</tr>
+</table>
+
+<h1 class="slide">The XCDE search engine</h1>
+
+<hr class="top">
+
+<div class="slidebody">
+
+<ul>
+<li><a href="/projects/QH/docs/XCDE.pdf">XCDE</a> library
+developed at the Department of Computer Science, University of
+Pisa (prof. Paolo Ferragina).</li>
+<li>Best suited for collections of a <em>limited number</em> of
+<em>large size</em> documents</li>
+<li>Query language oriented mainly to the processing and
+management of <em>textual data</em></li>
+<li>Query syntax: 
+<ul>
+<li>similar to SQL: <em>SELECT-FROM-RETURN</em></li>
+<li><em>SELECT</em> clause specified by means of an <em>XML piece
+of well-formed text</em></li>
+<li>implements most of the <em>IR functionalities</em> detailed
+in the W3C Working Draft of <a href=
+"http://www.w3.org/TR/xquery-full-text-requirements/">XQuery and
+XPath Full-Text Requirements</a>, as well as other powerful
+string-based queries (regular expressions and error
+matches).</li>
+<li>output of the query (the snippet) can be formatted within the
+<em>RETURN</em> clause which, again, includes an <em>XML piece of
+well-formed text</em>.</li>
+<li>A special attribute named xml_var (<em>pivot</em>) is added
+to elements within the SELECT clause in order to identify some
+"interesting points" in each document subtree that matches the
+query.<br>
+Pivots are used in the RETURN clause to indicate the way in which
+these points in the <em>matching subtree</em> must be
+visualized.</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+
+<hr class="bottom">
+
+<table class="footer" cellspacing="0" cellpadding="0" border="0" width="97%" summary="footer">
+<tr valign="bottom">
+<td> <p class="author"><a href="mailto:oreste@w3.org">Oreste Signore</a></p> </td>
+<td align="left"><p class="index">12 of 15</p></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide11-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;The XML document collection&#34;"></a><a rel="next" href="slide13-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Demo&#34;"></a></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

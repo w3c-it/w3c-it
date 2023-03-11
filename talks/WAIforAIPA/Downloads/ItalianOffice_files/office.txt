@@ -1,0 +1,336 @@
+BODY {
+	BACKGROUND: white; COLOR: black; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-RIGHT: 0px; BORDER-TOP: 0px
+}
+BLOCKQUOTE {
+	COLOR: #003366; FONT-STYLE: italic
+}
+Q {
+	COLOR: #003366; FONT-STYLE: italic
+}
+TH {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+P {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+DIV {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+UL P {
+	MARGIN-BOTTOM: 0em; MARGIN-TOP: 0em
+}
+OL P {
+	MARGIN-BOTTOM: 0em; MARGIN-TOP: 0em
+}
+DD P {
+	MARGIN-BOTTOM: 0em; MARGIN-TOP: 0em
+}
+H1 {
+	TEXT-ALIGN: left
+}
+H2 {
+	TEXT-ALIGN: left
+}
+H3 {
+	TEXT-ALIGN: left
+}
+H4 {
+	TEXT-ALIGN: left
+}
+H5 {
+	TEXT-ALIGN: left
+}
+H6 {
+	TEXT-ALIGN: left
+}
+H1 {
+	COLOR: #005a9c
+}
+H2 {
+	COLOR: #005a9c
+}
+H3 {
+	COLOR: #005a9c
+}
+H1.title {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 300%; FONT-WEIGHT: bold
+}
+H1 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 180%; FONT-WEIGHT: bold
+}
+H2 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 140%; FONT-WEIGHT: bold
+}
+H3 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 120%; MARGIN-TOP: 0.2em
+}
+H4 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: bold
+}
+H5 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 100%; FONT-STYLE: italic
+}
+H6 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 300%; FONT-VARIANT: small-caps
+}
+.eventLocation {
+	FONT-SIZE: 180%; TEXT-ALIGN: center
+}
+H3.navhead {
+	FONT-SIZE: 100%
+}
+.main P {
+	TEXT-INDENT: 17px
+}
+:link {
+	COLOR: #037
+}
+:visited {
+	COLOR: #551a8b
+}
+:active {
+	BACKGROUND: #ffc; COLOR: #900; TEXT-DECORATION: none
+}
+.center {
+	TEXT-ALIGN: center
+}
+.signature {
+	TEXT-ALIGN: right
+}
+#logo {
+	TEXT-ALIGN: left
+}
+#OfficeName {
+	TEXT-ALIGN: left
+}
+#slogan {
+	FONT-FAMILY: Times, "Times New Roman", serif; FONT-SIZE: 120%; MARGIN-TOP: -5px; TEXT-ALIGN: left
+}
+.headline {
+	BACKGROUND: #fff; COLOR: #900
+}
+.hide {
+	DISPLAY: none
+}
+DIV.banner {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-WEIGHT: bold; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; PADDING-BOTTOM: 0.1em; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; PADDING-TOP: 0.1em; TEXT-ALIGN: center
+}
+TD.navbar {
+	BACKGROUND: #eeeeee; COLOR: #000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD.navbar :link {
+	BACKGROUND: #eeeeee; COLOR: #037
+}
+TD.navbar :visited {
+	BACKGROUND: #eeeeee; COLOR: #551a8b
+}
+TD.navbar :active {
+	BACKGROUND: #eeeeee; COLOR: #900; TEXT-DECORATION: none
+}
+INPUT {
+	FONT-FAMILY: Geneva, Arial, sans-serif; FONT-SIZE: 83%
+}
+P.copyright {
+	FONT-SIZE: small; MARGIN: 0px 0.5em
+}
+TABLE.coloured {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TABLE.colored {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TABLE.coloured TD {
+	BACKGROUND: #ccffff
+}
+TD.coloured {
+	BACKGROUND: #ccffff
+}
+TABLE.colored TD {
+	BACKGROUND: #ccffff
+}
+TD.colored {
+	BACKGROUND: #ccffff
+}
+TABLE.coloured TH {
+	BACKGROUND: #c0c0c4; FONT-WEIGHT: bold; TEXT-ALIGN: center
+}
+TABLE.colored TH {
+	BACKGROUND: #c0c0c4; FONT-WEIGHT: bold; TEXT-ALIGN: center
+}
+DL.coloured DT {
+	COLOR: #006699; FONT-WEIGHT: bold
+}
+DL.colored DT {
+	COLOR: #006699; FONT-WEIGHT: bold
+}
+
+@media Screen    
+{
+SPAN.noscreen {
+	DISPLAY: none
+}
+
+}
+
+@media Print    
+{
+SPAN.noscreen {
+	COLOR: #006699; FONT-STYLE: italic
+}
+.newPage {
+	PAGE-BREAK-BEFORE: always
+}
+H2 {
+	page-break-inside: avoid
+}
+H3 {
+	page-break-inside: avoid
+}
+H4 {
+	page-break-inside: avoid
+}
+H5 {
+	page-break-inside: avoid
+}
+H6 {
+	page-break-inside: avoid
+}
+BLOCKQUOTE {
+	page-break-inside: avoid
+}
+PRE {
+	page-break-inside: avoid
+}
+UL {
+	
+}
+OL {
+	
+}
+DL {
+	
+}
+.navbar {
+	BACKGROUND-COLOR: #fff; BORDER-BOTTOM-COLOR: #000; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #000; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #000; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #000; BORDER-TOP-WIDTH: 1px
+}
+A.navlink {
+	FONT-WEIGHT: normal
+}
+TR {
+	orphans: 2; widows: 2
+}
+TH {
+	orphans: 2; widows: 2
+}
+TD {
+	orphans: 2; widows: 2
+}
+P {
+	orphans: 2; widows: 2
+}
+
+}
+
+@media Aural    
+{
+H1 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H2 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H3 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H4 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H5 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H6 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H1 {
+	pitch: x-low; pitch-range: 90
+}
+H2 {
+	pitch: x-low; pitch-range: 80
+}
+H3 {
+	pitch: low; pitch-range: 70
+}
+H4 {
+	pitch: medium; pitch-range: 60
+}
+H5 {
+	pitch: medium; pitch-range: 50
+}
+H6 {
+	pitch: medium; pitch-range: 40
+}
+LI {
+	richness: 60; pitch: medium
+}
+DT {
+	richness: 60; pitch: medium
+}
+DD {
+	richness: 60; pitch: medium
+}
+DT {
+	stress: 80
+}
+PRE {
+	stress: 0; richness: 80; pitch: medium; pitch-range: 0
+}
+CODE {
+	stress: 0; richness: 80; pitch: medium; pitch-range: 0
+}
+TT {
+	stress: 0; richness: 80; pitch: medium; pitch-range: 0
+}
+EM {
+	stress: 60; richness: 50; pitch: medium; pitch-range: 60
+}
+STRONG {
+	stress: 90; richness: 90; pitch: medium; pitch-range: 60
+}
+DFN {
+	stress: 60; pitch: high; pitch-range: 60
+}
+S {
+	richness: 0
+}
+STRIKE {
+	richness: 0
+}
+I {
+	stress: 60; richness: 50; pitch: medium; pitch-range: 60
+}
+B {
+	stress: 90; richness: 90; pitch: medium; pitch-range: 60
+}
+U {
+	richness: 0
+}
+A:link {
+	voice-family: harry, male
+}
+A:visited {
+	voice-family: betty, female
+}
+A:active {
+	voice-family: betty, female; pitch: x-high; pitch-range: 80
+}
+
+}

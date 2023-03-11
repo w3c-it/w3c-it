@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<title>W3C Technologies: a Key for Interoperability - slide "The address book revisited"</title>
+<link rel="next" href="slide30-0.htm" title="Next">
+<link rel="previous" href="slide28-0.htm" title="Previous">
+<link rel="contents" href="overview.htm" title="Contents">
+<link href="../tools/w3ctalk-1024.css" rel="stylesheet" type="text/css" title="W3C Talk">
+</head>
+<body>
+<table class="navbar" cellspacing="0" cellpadding="0" border="0" width="97%" summary="navigation buttons">
+<tr valign="top">
+<td align="left"><a href="http://www.w3c.it/"><img src="../../siteutilities/logos/itlogo-20010115.png" border="0" alt="W3C Office in Italy "></a></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide28-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;Example for XSLT Transformation&#34;"></a><a rel="contents" href="overview.htm" accesskey="C"><img src="../icons/toc.png" border="0" width="32" height="32" alt=" contents" title="Table of Contents"></a><a rel="next" href="slide30-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Presentation of Information - Visually&#34;"></a></div>
+</td>
+</tr>
+</table>
+
+<h1 class="slide">The address book revisited</h1>
+
+<hr class="top">
+
+<div class="slidebody">
+
+<p>We will define our simple address example used for HTML V1.0
+so that content and presentation are separated.</p>
+<p>We start by defining the data in XML according to its
+hierarchical structure:</p>
+<pre class="example">
+&lt;Addresses&gt;
+...
+
+        &lt;Person&gt;
+                &lt;Name&gt;Herman, Iv&#225;n&lt;/Name&gt;
+                &lt;Address&gt;W3C at the W3C Dutch Office at CWI, Kruislaan 413&lt;/Address&gt;
+                &lt;City&gt;Amsterdam&lt;/City&gt;
+                &lt;Zip&gt;1098 SJ&lt;/Zip&gt;
+                &lt;Country&gt;Netherlands&lt;/Country&gt;
+                &lt;Tel  where="mobile"&gt;+33 6 0887 2517&lt;/Tel&gt;
+                &lt;Tel where="home"&gt;+31 20 647 8592&lt;/Tel&gt;
+                &lt;Tel where="office"&gt;+31 20 592 4163&lt;/Tel&gt;
+                &lt;Fax&gt;+31-20-592 4312&lt;/Fax&gt;
+                &lt;Email&gt;ivan@w3.org&lt;/Email&gt;
+                &lt;Picture width="281" height="266" src="pngs/ivan.png"/&gt;
+        &lt;/Person&gt;
+...
+                
+&lt;/Addresses&gt;
+</pre>
+
+<p>We want to define what can be in an Address, and what their
+data types are as well as later wanting to use Namespaces - use
+<em>XML Schema</em></p>
+
+<p><a href="samples/schema.xsd">Example schema for the address
+file</a></p>
+
+<p>which can be <a href="samples/addresses.xml">bound to the XML
+data file</a></p>
+
+<p>We want to say how the address list should be presented, so we
+use <em>CSS</em> to define <a href="samples/addresses_css.txt">a
+style sheet for each of the elements defined in the schema</a>.
+<a href="samples/addressesCss.xml">This can then be
+viewed</a></p>
+
+<p><em>We now have the same information presentation as the few
+lines of HTML V1.0 gave us at the start</em>. But it is derived
+from Data that we can safely transform in other ways.</p>
+
+
+
+</div>
+
+<hr class="bottom">
+
+<table class="footer" cellspacing="0" cellpadding="0" border="0" width="97%" summary="footer">
+<tr valign="bottom">
+<td> <p class="author"><a href="mailto:oreste@w3.org">Oreste Signore, Manager of W3C Office in Italy</a></p> </td>
+<td align="left"><p class="index">29 of 60</p></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide28-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;Example for XSLT Transformation&#34;"></a><a rel="next" href="slide30-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Presentation of Information - Visually&#34;"></a></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

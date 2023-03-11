@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0048)http://www.karto.ethz.ch/~an/cartography/vienna/ -->
+<HTML><HEAD><TITLE>Stadtgeo-Uebung</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type><LINK 
+href="styles.css" rel=stylesheet type=text/css>
+<STYLE type=text/css>#headline {
+	LEFT: 540px; POSITION: absolute; TOP: 20px; VISIBILITY: visible
+}
+#mapelements {
+	LEFT: 540px; POSITION: absolute; TOP: 55px; VISIBILITY: visible
+}
+#mapcheckboxes {
+	LEFT: 540px; POSITION: absolute; TOP: 75px; VISIBILITY: visible
+}
+#selectvariablehead {
+	LEFT: 540px; POSITION: absolute; TOP: 130px; VISIBILITY: visible
+}
+#selectvariable {
+	LEFT: 540px; POSITION: absolute; TOP: 154px; VISIBILITY: visible
+}
+#selectnrclasseshead {
+	LEFT: 540px; POSITION: absolute; TOP: 190px; VISIBILITY: visible
+}
+#selectnrclasses {
+	LEFT: 540px; POSITION: absolute; TOP: 213px; VISIBILITY: visible
+}
+#svgvalues {
+	LEFT: 540px; POSITION: absolute; TOP: 260px; VISIBILITY: visible
+}
+#svgplugin {
+	LEFT: 10px; POSITION: absolute; TOP: 10px; VISIBILITY: visible
+}
+#svglegend {
+	LEFT: 10px; POSITION: absolute; TOP: 440px; VISIBILITY: visible
+}
+#author {
+	LEFT: 540px; POSITION: absolute; TOP: 440px; VISIBILITY: visible
+}
+#author1 {
+	LEFT: 540px; POSITION: absolute; TOP: 460px; VISIBILITY: visible
+}
+</STYLE>
+
+<SCRIPT language=JavaScript src="scripts.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 5.00.2314.1000" name=GENERATOR></HEAD>
+<BODY onload=colorit();>
+<DIV id=headline>
+<H1>Vienna - Social patterns and structures</H1></DIV>
+<DIV id=mapelements>
+<P class=color>Select Map Layers</P></DIV>
+<DIV id=mapcheckboxes>
+<P>
+<FORM name=checkboxForm><INPUT name=unbebautCheck 
+onclick="toggleSVGElements('unbebaut',this.checked)" 
+type=checkbox>&nbsp;Unpopulated Areas,&nbsp; <INPUT name=grundzeitCheck 
+onclick="toggleSVGElements('grundzeitgrenze',this.checked)" 
+type=checkbox>&nbsp;Gründerzeit-Borders,<BR><INPUT CHECKED name=bezirkCheck 
+onclick="toggleSVGElements('bezgrenze',this.checked)" 
+type=checkbox>&nbsp;District-Borders,&nbsp; <INPUT CHECKED name=zbzCheck 
+onclick="toggleSVGElements('bebaut',this.checked)" 
+type=checkbox>&nbsp;Subdistricts </FORM></P></DIV>
+<DIV id=selectvariablehead>
+<P class=color>Select a Variable:</P></DIV>
+<DIV id=selectvariable>
+<P>
+<FORM name=selectVarForm><SELECT name=myVar onchange=colorit() size=1> <OPTION 
+  selected>Perc. of people older than 60 (1971)<OPTION>Perc. of people older 
+  than 60 (1981)<OPTION>Perc. of people older than 60 (1991)<OPTION>Perc. of 
+  single parents (1971)<OPTION>Perc. of single parents (1981)<OPTION>Perc. of 
+  single parents (1991)<OPTION>Perc. of Austrians with Secondary Education 
+  (1971)<OPTION>Perc. of Austrians with Secondary Education (1981)<OPTION>Perc. 
+  of Austrians with Secondary Education (1991)<OPTION>Perc. of Foreigners with 
+  Secondary Education (1971)<OPTION>Perc. of Foreigners with Secondary Education 
+  (1981)<OPTION>Perc. of Foreigners with Secondary Education (1991)<OPTION>Perc. 
+  of Austrians with High-School/Univ. Education (1971)<OPTION>Perc. of Austrians 
+  with High-School/Univ. Education (1981)<OPTION>Perc. of Austrians with 
+  High-School/Univ. Education (1991)<OPTION>Perc. of "Gründerzeit" Flats - built 
+  before 1918 (1991)<OPTION>Perc. of Sub-Standard Flats - Category D and E 
+  (1991)<OPTION>Perc. of Sponsored Flats - Gemeindewohnungen 
+(1991)</OPTION></SELECT> </FORM></P></DIV>
+<DIV id=selectnrclasseshead>
+<P class=color>Select Nr of Classes:</P></DIV>
+<DIV id=selectnrclasses>
+<P>
+<FORM name=selectClassesForm><SELECT name=myClass onchange=colorit() size=1> 
+  <OPTION value=2>Two<OPTION value=3>Three<OPTION selected value=4>Four<OPTION 
+  value=5>Five</OPTION></SELECT> &nbsp;&nbsp;(Calculated using Quantiles) 
+</FORM></P></DIV><!-- SVG Plugin (Values Display) -->
+<DIV id=svgvalues><EMBED height=80 name=svgVal 
+pluginspage=http://www.adobe.com/svg/viewer/install/ src=svgvalues.svg 
+type=image/svg width=300> </DIV><!-- SVG Plugin (Map) -->
+<DIV id=svgplugin><EMBED height=400 name=svgFile1 
+pluginspage=http://www.adobe.com/svg/viewer/install/ src=vienna.svg 
+type=image/svg width=514> </DIV><!-- SVG Plugin (Legend) -->
+<DIV id=svglegend><EMBED height=100 name=svgFile2 
+pluginspage=http://www.adobe.com/svg/viewer/install/ src=legend.svg 
+type=image/svg width=514> </DIV>
+<DIV id=author>
+<P class=color>Author</P></DIV>
+<DIV id=author1>
+<P>Andreas Neumann<BR>course in 
+urban geography with Gerhard 
+Hatz
+</P></DIV></BODY></HTML>

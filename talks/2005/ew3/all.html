@@ -1,0 +1,774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ew3</title>
+<link href="../tools/summary.css" rel="stylesheet"
+type="text/css" />
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<!-- ================================================================ -->
+<h1>Verso il Web of Trust</h1>
+<p class="paperAuthor">Oreste Signore</p>
+<p>Ufficio Italiano W3C presso il C.N.R.<br />
+ Area della Ricerca di Pisa San Cataldo - Via G. Moruzzi, 1 -
+56124 Pisa<br />
+ Email: <a href="mailto:oreste@w3.org">oreste@w3.org</a></p>
+<p class="event">Etica di Internet<br />
+<a href="http://www.france-italia.it/"
+title="ambasciata di Francia inItalia">Incontri italo-francesi
+2005</a><br />
+Euristica e semantica del Web: quali basi teoriche per un web di
+fiducia?<br />
+Roma, 17 giugno 2005</p>
+<hr />
+<p><span class="slidesAt">Slides URI: <a
+href="http://www.w3c.it/talks/2005/ew3/">http://www.w3c.it/talks/2005/ew3/</a></span><br />
+<!-- <em>La presentazione sar&agrave; disponibile al pi&ugrave;
+presto</em> -->
+</p>
+<!-- <p><span class="slidesAt">Paper URI: <a
+href="http://www.w3c.it/papers/ew3.pdf">http://www.w3c.it/papers/ew3.pdf</a></span></p> -->
+<!-- ===================================================================== -->
+<h1 class="yes">Contenuto</h1>
+<ul>
+<li><em>Il Web e il W3C</em></li>
+<li>Il Semantic Web</li>
+<li>Il Web Policy Aware</li>
+</ul>
+<!-- ===================================================================== -->
+<h1 class="yes">Il World Wide Web</h1>
+<div class="column40"><img
+alt="Web connects people, applications, devices"
+src="../pngsNew/Globe.png" width="100%" /></div>
+<div class="column60">
+<ul>
+<li><em>World Wide Web Consortium</em> (W3C - <a
+href="http://www.w3.org/">http://www.w3.org/</a>) 
+<ul>
+<li>3 host (<a href="http://www.csail.mit.edu/"><acronym
+title="Massachusetts Institute of Technology">MIT</acronym></a>,
+<a href="http://www.ercim.org/"><acronym
+title="European Research Consortium for Informatics and Mathematics">
+ERCIM</acronym></a>, <a
+href="http://www.keio.ac.jp/">Keio</a>)</li>
+<li>14 <a
+href="http://www.w3.org/Consortium/Offices/">offices</a> ( <a
+href="http://w3c.dstc.edu.au/AustralianW3COffice.htm"
+title="Description of the Australian Office staff and host">Australia</a>,
+<a href="http://www.w3c.nl/staff/"
+title="Description of the Benelux Office staff and host"
+class="navlink">Benelux</a>, <a
+href="http://www.w3c.tut.fi/w3c-finland-office-en.html"
+title="Description of the Finnish Office staff and host"
+class="navlink">Finland</a>, <a
+href="http://www.w3.org/Consortium/Offices/Germany/Misc/german.html"
+ title="Description of the German/Austrian Office staff and host"
+class="navlink">Germany and Austria</a>, <a
+href="http://www.w3c.gr/about.html"
+title="Description of the Greek Office staff and host"
+class="navlink">Greece</a>, <a
+href="http://www.w3c.org.hk/contact.html"
+title="Description of the Hong Kong Office staff and host"
+class="navlink">Hong Kong</a>, <a
+href="http://www.w3c.hu/office.html"
+title="Description of the Hungarian Office staff and host"
+class="navlink">Hungary</a>, <a
+href="http://www.w3.org/Consortium/Offices/israel.html"
+title="Description of the Israel Office staff and host"
+class="navlink">Israel</a>, <a
+href="http://www.w3c.it/contacts.html"
+title="Description of the Italian Office staff and host"
+class="navlink">Italy</a>, <a
+href="http://www.w3c.or.kr/contact.html"
+title="Description of the Korean Office staff and host"
+class="navlink">Korea</a>, <a
+href="http://www.w3c.org.ma/contact.en.html"
+title="Description of the Morocco Office staff and host"
+class="navlink">Morocco</a>, <a
+href="http://www.w3c.es/cardoffice.html"
+title="Description of the Spanish staff and host"
+class="navlink">Spain</a>, <a
+href="http://www.w3c.se/w3c-Sweden.html"
+title="Description of the Swedish staff and host"
+class="navlink">Sweden</a>, <a
+href="http://www.w3c.rl.ac.uk/ukofficepageoffw3c.html"
+title="Description of the UK/Ireland Office staff and host"
+class="navlink">United Kingdom and Ireland</a>)</li>
+</ul>
+</li>
+<li>Basato sul "<em>consensus"</em></li>
+<li>Regole definite nel <em>Process Document</em> (<a
+href="http://www.w3.org/Consortium/Process/">http://www.w3.org/Consortium/Process/</a>)</li>
+</ul>
+<ul>
+<li>La "<a
+href="http://www.w3.org/Consortium/Overview.html#mission">mission</a>":
+<em>Leading the Web to its Full Potential</em></li>
+<li>"Enable web access for <em>anyone</em>, <em>anywhere</em>,
+<em>anytime</em>, using <em>any device</em>"</li>
+</ul>
+</div>
+<div class="column90">
+<p><em>I membri W3C guidano l' evoluzione del Web</em></p>
+</div>
+<!-- =================================================================== -->
+<h1 class="yes">Alcuni elementi importanti</h1>
+<ul>
+<li>Quando qualcuno, da qualche parte, rende disponibile un'
+informazione, questa deve essere accessibile da
+<em>chiunque</em>, con <em>qualsiasi computer</em>, in
+<em>qualsiasi paese</em> (a meno di problemi di
+autorizzazione)</li>
+<li>Il Web &egrave; uno spazio informativo universale, in cui
+ognuno pu&ograve; accedere all' informazione e modificarla
+(<em>browser/editor</em>)</li>
+<li>Ambiente totalmente <em>decentralizzato</em></li>
+<li><em>Interoperabilit&agrave;</em> tecnologica e semantica</li>
+<li>Non <em>autorit&agrave;</em>, ma <em>autorevolezza</em></li>
+</ul>
+<!-- ===================================================================== -->
+<h1 class="yes">W3C: gli obiettivi a lungo termine</h1>
+<dl>
+<dt id="universal-access1">Web for Everyone</dt>
+<dd>
+<ul>
+<li><em>valore sociale</em> del Web: comunicazione
+interpersonale, commercio, condivisione di conoscenza</li>
+<li>rendere questi benefici disponibili a <em>tutti</em>,
+indipendentemente da hardware, software, infrastruttura di rete,
+lingua madre, cultura, posizione geografica, capacit&agrave;
+fisiche o mentali</li>
+<!-- <li>W3C investe per supportare l' estensione delle tecnologie web
+e dei relativi benefici.<a href="http://www.w3.org/WAI/"
+shape="rect">Web accessibility</a>, <a
+href="http://www.w3.org/International/"
+shape="rect">internazionalizzazione</a>, <a
+href="http://www.w3.org/2001/di/" shape="rect">device
+independence</a> sono particolarmente importanti.</li> -->
+<!-- <li>traduzioni di specifiche, notizie, comunicati stampa in varie
+lingue</li>
+<li>gli <a href="http://www.w3.org/Consortium/Offices/"
+shape="rect">Uffici W3C</a></li> -->
+</ul>
+</dd>
+<dt id="universal-access">Web on Everything</dt>
+<dd>
+<ul>
+<li><em>nuovi dispositivi</em> sono in grado di accedere al Web 
+<!-- (mobile
+phones, smart phones, PDA, sistemi televisivi interattivi,
+sistemi di risposta vocale, chioschi, alcuni dispositivi
+domestici) -->
+</li>
+<li>rendere l' accesso al web da qualsiasi dispositivo
+<em>semplice, facile e comodo</em> come da un normale
+desktop</li>
+</ul>
+</dd>
+<dt id="advanced-data">Knowledge Base</dt>
+<dd>
+<ul>
+<li>il Web <em>non &egrave; soltanto</em> un immenso
+<em>contenitore</em> dal quale attingere informazioni</li>
+<li>le <em>macchine</em> possono svolgere del lavoro utile,
+noioso e lungo per gli esseri umani</li>
+</ul>
+</dd>
+<dt id="policy">Trust and Confidence</dt>
+<dd>
+<ul>
+<li>le persone devono potersi <em>fidare</em> di chi ha avuto la
+loro fiducia</li>
+<li>la <em>tecnologia</em> non pu&ograve; dare garanzie di
+fiducia, ma pu&ograve; consentire transazioni con partner nei
+quali si ha fiducia (<em>trust</em>)</li>
+<li>promuovere tecnologie che favoriscano un ambiente pi&ugrave;
+cooperativo, in cui siano <em>garantite</em> individuazione delle
+responsabilit&agrave;, sicurezza, fiducia e segretezza</li>
+</ul>
+</dd>
+</dl>
+<!-- ================================================================= -->
+<h1 class="yes">Contenuto</h1>
+<ul>
+<li>Il Web e il W3C</li>
+<li><em>Il Semantic Web</em></li>
+<li>Il Web Policy Aware</li>
+</ul>
+<!-- ===================================================================== -->
+<h1 class="yes">La proposta originaria</h1>
+<p>Nel 1989 Tim Berners-Lee propose il World Wide Web</p>
+<p class="figure" align="center"><img
+alt="image of tim b-l original web proposal"
+src="../gifs/timbl-1989-image.gif" /></p>
+<!-- ========================================================== -->
+<h1 class="yes">Evoluzione del World Wide Web</h1>
+<p><img alt="Evoluzione dal web tradizionale al web di domani"
+src="../pngs/W3C_block_specs.png" /><br />
+Dalla <em>man-machine interaction</em> alla <em>machine to
+machine interaction</em></p>
+<!-- ============================================================ -->
+<h1>I limiti attuali</h1>
+<ul>
+<li>Nel <em>web tradizionale</em> si rappresenta l' informazione
+utilizzando: 
+<ul>
+<li>linguaggio naturale</li>
+<li>grafica, elementi multimediali, struttura della pagina</li>
+</ul>
+</li>
+<li>Spesso &egrave; necessario <em>combinare le informazioni</em>
+(provenienti da fonti diverse)</li>
+<li><em>Per gli esseri umani &egrave; facile ...</em> 
+<ul>
+<li>dedurre fatti da informazioni incomplete</li>
+<li>creare e seguire associazioni mentali</li>
+<li>provarie varie esperienze sensoriali</li>
+<li>aggregare le informazioni indipendentemente dalle tecnologie
+utilizzate</li>
+</ul>
+</li>
+<li>... ma <em>le macchine non sono intelligenti</em>! 
+<ul>
+<li>non possono utilizzare informazioni parziali</li>
+<li>hanno difficolt&agrave; ad aggregare informazioni strutturate
+in forma diversa</li>
+</ul>
+</li>
+</ul>
+<!-- ==================================================================== -->
+<h1 class="yes">I have a dream ...</h1>
+<p>"The entertainment system was belting out the Beatles "We Can
+Work It Out" when the phone rang. When Pete answered, his phone
+turned the sound down by sending a message to all other
+<em>local</em> devices that had a <em>volume control</em>. "</p>
+<p>...</p>
+<p>His sister, Lucy, was on the line from the doctor&rsquo;s
+office At the doctor&rsquo;s office, Lucy instructed her
+<em>Semantic Web agent</em> through her <em>handheld Web
+browser</em>. The <em>agent</em> promptly <em>retrieved
+information</em> about ...&rdquo;</p>
+<p>(From: The Semantic Web, by Tim Berners-Lee, James Hendler and
+Ora Lassila, Scientific American, May 2001)</p>
+<p><a
+href="http://www.scientificamerican.com/2001/0501issue/0501berners-lee.html">
+http://www.scientificamerican.com/2001/0501issue/0501berners-lee.html</a></p>
+<!-- ======================================================== =-->
+<h1 class="yes">L' architettura del Semantic Web</h1>
+<div class="column60">
+<p><img alt="immagine dei livelli del semantic web"
+src="images/swStack.png" /></p>
+</div>
+<div class="column40">
+<dl>
+<dt>Il Semantic Web ...</dt>
+<dd>
+<ul>
+<li>&egrave; un' infrastruttura basata su metadati per poter
+svolgere <em>ragionamenti</em> sul Web</li>
+<li><em>estende</em>, non sostituisce il web attuale</li>
+</ul>
+</dd>
+</dl>
+</div>
+<!-- ======================================================== =-->
+<!-- <h1>Resources and metadata</h1>
+<ul>
+<li><em>Navigating</em> the web, we follow <em>links</em></li>
+<li>When we <em>de-reference a URI</em>, we get (formally) a
+<em>resource</em></li>
+<li>Resources are also referred to as: 
+<ul>
+<li><em>document</em> (to emphasize that it is human
+readable)</li>
+<li><em>object</em> (to emphasize that it is something which is
+more machine readable in nature or has hidden state)</li>
+</ul>
+</li>
+<li><em>Resources</em>, when you retrieve them, <em>do not stand
+simply by themselves</em> without explanation, but <em>there is
+information about the resource</em></li>
+<li><em>Information about information</em> is generally known as
+<em>Metadata</em></li>
+</ul> -->
+<!-- ==================================================================== -->
+<h1>Cosa sono i metadati?</h1>
+<ul>
+<li>Informazioni, elaborabili automaticamente (<em>machine
+understandable</em>), relative a una risorsa web o a qualche
+altra cosa</li>
+<li>... <em>data about data</em></li>
+<li>... informazioni che possono essere utilizzate da
+<em>intelligent software agents</em> per fare un uso appropriato
+delle risorse</li>
+<li>... <em>dati</em> ...</li>
+<li>... che possono essere <em>descritti da altri metadati</em>
+...</li>
+</ul>
+<!-- ========================================================== -->
+<h1>Perch&eacute; i metadati?</h1>
+<ul>
+<li>Nel Web di oggi tutte le informazioni sono "<em>machine
+readable</em>"</li>
+<li>Nel Semantic Web le informazioni devono essere "<em>machine
+understandable</em>". Quindi occorrono: 
+<ul>
+<li><em>nomi non ambigui</em> per le risorse (URI)</li>
+<li>un <em>data model condiviso</em> per esprimere i metadati
+(RDF)</li>
+<li>un modo per <em>accedere ai metadati</em> sul Web</li>
+<li><em>vocabolari</em> condivisi (<em>ontologie</em>)</li>
+</ul>
+</li>
+</ul>
+<!-- ========================================================= -->
+<h1 class="yes">Cosa &egrave; RDF?</h1>
+<ul>
+<li>L' uso efficace dei metadati richiede la definizione di
+convenzioni per: 
+<ul>
+<li><em>semantica</em> (definita dalle singole comunit&agrave;
+disciplinari)</li>
+<li><em>sintassi</em> (organizzazione dei data element per l'
+elaborazione automatica)</li>
+<li><em>struttura</em> (vincolo formale sulla sintassi)</li>
+</ul>
+</li>
+<li><strong>RDF</strong>: 
+<ul>
+<li><em>Resource Description Framework</em></li>
+<li>strumento base per <em>codifica</em>, <em>scambio</em> e
+<em>riutilizzo</em> di metadati strutturati</li>
+<li>consente l' <em>interoperabilit&agrave;</em> tra applicazioni
+che si scambiano sul Web informazioni
+<em>machine-understandable</em></li>
+</ul>
+</li>
+</ul>
+<p><em>RDF &egrave; per il Semantic Web ci&ograve; che HTML
+&egrave; stato per il web</em></p>
+<!-- ========================================================== -->
+<h1 class="yes">RDF Data Model: resources</h1>
+<ul>
+<li>Qualunque cosa descritta da una espressione RDF viene detta
+risorsa (<em>resource</em>)</li>
+<li>Una risorsa pu&ograve; essere: 
+<ul>
+<li>una pagina web</li>
+<li>una parte di pagina web</li>
+<li>un elemento XML all' interno del documento sorgente</li>
+<li>una collezione di pagine web</li>
+<li>un oggetto non direttamente accessibile sul web (libro,
+dipinto, oggetto, ...)</li>
+</ul>
+</li>
+<li>Le risorse sono sempre individuate da un <em>Universal
+Resource Identifier</em> (URI)</li>
+</ul>
+<!-- ========================================================== -->
+<!-- <h1 class="yes">RDF Data Model RDF: properties</h1>
+<p><em>Directed relations between two resources</em></p>
+<ul>
+<li>A <em>property</em> is a specific aspect, characteristic, attribute, 
+or relation used to describe a resource</li>
+<li>Each <em>property</em>: 
+<ul>
+<li>has a <em>specific meaning</em></li>
+</ul>
+<p>defines:</p>
+<ul>
+<li>its <em>permitted values</em></li>
+<li>the <em>types of resources it can describe</em></li>
+<li>its <em>relationship with other properties</em></li>
+</ul>
+</li>
+<li>Each property is identified by a <em>name</em>, and takes some <em>values</em></li>
+</ul> -->
+<!-- ========================================================== -->
+<h1 class="yes">Il Data Model RDF: gli statement</h1>
+<p>Il concetto fondamentale:</p>
+<ul>
+<li><span class="emph1">Statement</span>: una tupla di un
+<em>subject</em> (o resource), un <em>predicato</em> (o
+propriet&agrave;) e un <em>value</em> (o object).</li>
+</ul>
+<p>ovvero:</p>
+<ul>
+<li>Una risorsa, con una propriet&agrave; distinta da un nome, e
+un valore della propriet&agrave; per quella specifica risorsa,
+costituisce un RDF statement</li>
+</ul>
+<p>L' oggetto di uno statement pu&ograve; essere un' espressione,
+o anche un' altra risorsa.</p>
+<!-- <p>The graphical representation:</p>
+<p><img alt="RDF Generic Model of Statement"
+src="images/rdfGenericModel.gif" /></p> -->
+<!-- ========================================================== -->
+<!-- <h1 class="yes">RDF Data Model RDF: graphical representation</h1>
+<p><em>Directed labelled graphs</em>, where:</p>
+<ul>
+<li><em>resources</em> are the <em>node</em>, and are represented 
+as <em>ellipses</em></li>
+<li><em>properties</em> are represented as
+<em>labelled edges</em></li>
+<li><em>literals</em> are drawn as
+<em>rectangles</em></li>
+</ul>
+<p><img alt="RDF Generic Model of Statement"
+src="images/rdfGenericModel.gif" /></p> -->
+<!-- ========================================================== -->
+<h1 class="yes">Un esempio banale</h1>
+<p>Due <em>espressioni equivalenti</em> in linguaggio
+naturale:</p>
+<ul>
+<li><em>Oreste Signore is the author of DocX</em></li>
+<li><em>The author of DocX is Oreste Signore</em></li>
+</ul>
+<p>In RDF:</p>
+<table border="1"
+summary="text representation of a RDF statement">
+<tbody>
+<tr>
+<td>Resource</td>
+<td><em>http://www.w3c.it/Oreste/DocX</em></td>
+</tr>
+<tr>
+<td>Property</td>
+<td><em>author</em></td>
+</tr>
+<tr>
+<td>Value</td>
+<td><em>Oreste Signore</em></td>
+</tr>
+</tbody>
+</table>
+<p>Con questa rappresentazione grafica:</p>
+<p><img alt="RDF Simple Statement"
+src="images/rdfSimpleStatement.gif" /></p>
+<!-- ===================================================================================== -->
+<h1 class="yes">Un esempio di statement</h1>
+<p><span class="emph1">La persona identificata dal Codice Fiscale
+SGNRST99A99X111Y has Name Oreste Signore, Email oreste@w3.org, e
+Affiliation C.N.R.. La risorsa http://www.w3c.it/Oreste/DocX has
+Author questa persona</span> .</p>
+<p><img alt="RDF structured property diagram"
+src="images/rdfStructuredPropertyWithIdentifier.gif" /></p>
+<!-- ===================================================================================== -->
+<h1 class="yes">Grafi e Web: prima di RDF</h1>
+<div class="column50">
+<p><img alt="before rdf" src="images/web.png"  /></p>
+</div>
+<div class="column50">
+<p><em>Per le macchine: milioni di risorse collegate ...</em></p>
+<p><em>... nessuna informazione sul tipo di risorse e di
+relazioni</em></p>
+</div>
+<!-- ==================================================================== -->
+<h1 class="yes">Grafi e Web: dopo RDF</h1>
+<div class="column60">
+<p><img alt="after rdf" src="images/sweb.png"   /></p>
+</div>
+<div class="column40">
+<p><em>Per le macchine: milioni di risorse collegate ...</em></p>
+<p><em>... con informazioni sul tipo di risorse e di
+relazioni</em></p>
+<p>RDF : un linguaggio per <em>descrivere il significato</em>
+delle risorse</p>
+<p>&Egrave; possibile <em>ricercare</em> le risorse in base alle
+loro <em>propriet&agrave;</em></p>
+</div>
+<!-- ==================================================================== -->
+<!-- <h1 class="yes">Ontologies</h1>
+<ul>
+<li>RDFS is useful, but does not solve all the issues</li>
+<li>Complex applications may want more possibilities: 
+<ul>
+<li>can a program <em>reason</em> about some terms? E.g.: 
+<ul>
+<li>"if &laquo;A&raquo; is left of &laquo;B&raquo; and
+&laquo;B&raquo; is left of &laquo;C&raquo;, is &laquo;A&raquo;
+left of &laquo;C&raquo;?"</li>
+<li>obviously true for humans, not obvious for a program ...</li>
+<li>... programs should be able to <em>deduce</em> such
+statements</li>
+</ul>
+</li>
+<li>if somebody else defines a set of terms: are they the same? 
+<ul>
+<li>obvious issue in an international context</li>
+</ul>
+</li>
+<li><em>construct</em> classes, not just name them</li>
+<li>restrict a property range <em>when used for a specific
+class</em></li>
+<li>etc.</li>
+</ul>
+</li>
+</ul> -->
+<!-- ==================================================================== -->
+<h1 class="yes">Ontologie</h1>
+<ul>
+<li>Il Semantic Web ha bisogno di <em>ontologie</em>:<br />
+ "<em>definisce i concetti e le relazioni usate per descrivere e
+rappresentare un dominio di conoscenza</em>"</li>
+<li>Serve quindi un <em>Web Ontologies Language</em> per
+definire: 
+<ul>
+<li>la terminologia usata in un contesto specifico</li>
+<li>vincoli e propriet&agrave;</li>
+<li>le caratteristiche logiche delle propriet&agrave;</li>
+<li>l' equivalenza dei termini tra le varie ontologie</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>Il linguaggio deve essere un compromesso tra: 
+<ul>
+<li>ricchezza semantica</li>
+<li>fattibilit&agrave;, implementabilit&agrave;</li>
+</ul>
+</li>
+</ul>
+<p><em>Web Ontology Language (OWL) &egrave; la W3C
+Recommendation</em></p>
+<!-- ==================================================================== -->
+<h1 class="yes">Ontologie sul Web</h1>
+<ul>
+<li>Le ontologie sono <em>sul Web</em>. Quindi: 
+<ul>
+<li>le applicazioni possono utilizzare varie ontologie
+differenti, oppure ... ...</li>
+<li>... le stesse ontologie, ma espresse in lingue diverse</li>
+<li>le equivalenze tra termini, e le relazioni intercorrenti tra
+di loro, possono diventare un problema non banale</li>
+</ul>
+</li>
+</ul>
+<!-- ==================================================================== -->
+<h1 class="yes">Il Semantic Web (ricapitolando)</h1>
+<ul>
+<li>Interazione machine-to-machine</li>
+<li>Intelligent software agents</li>
+<li>Metadati</li>
+<li>Decentralizzazione</li>
+<li>Armonizzazione delle ontologie</li>
+<li>Reasoning</li>
+<li>Interoperabilit&agrave; semantica</li>
+<li>Fiducia</li>
+<li>Searching the Web</li>
+</ul>
+<p><em>Molte delle tecnologie necessarie sono gi&agrave;
+disponibili</em></p>
+<p><em>La conoscenza pu&ograve; essere espressa ed esportata
+utilizzando un formalismo interoperabile</em></p>
+<!-- ====================================================================== -->
+<h1 class="yes">Alcuni problemi</h1>
+<dl>
+<dt>Ontologie</dt>
+<dd>
+<ul>
+<li>definizione</li>
+<li>condivisione</li>
+<li>armonizzazione</li>
+</ul>
+</dd>
+<dt>Grafi RDF</dt>
+<dd>
+<ul>
+<li>memorizzazione</li>
+<li>query</li>
+<li>autentica (signing graphs)</li>
+<li>ripudio</li>
+</ul>
+</dd>
+<dt>Trust</dt>
+<dd>
+<ul>
+<li><em>policy aware web</em></li>
+</ul>
+</dd>
+</dl>
+<!-- ======================================================== =-->
+<h1 class="yes">Contenuto</h1>
+<ul>
+<li>Il Web e il W3C</li>
+<li>Il Semantic Web</li>
+<li><em>Il Web Policy Aware</em></li>
+</ul>
+<!-- ===================================================================== -->
+<h1 class="yes">Successi e insuccessi del Web</h1>
+<dl>
+<dt>I successi</dt>
+<dd>
+<ul>
+<li>disseminazione dell' informazione</li>
+<li>accesso all' informazione</li>
+<li>diffusione in ambienti commerciali e accademici</li>
+</ul>
+</dd>
+<dt>Gli insuccessi</dt>
+<dd>
+<ul>
+<li>protezione della privacy</li>
+<li>approccio equilibrato alla tutela della propriet&agrave;
+intellettuale</li>
+<li>esigenze di base per la sicurezza e il controllo dell'
+accesso</li>
+</ul>
+</dd>
+<dt>Le soluzioni possibili</dt>
+<dd>
+<ul>
+<li>legali: non sono sufficienti</li>
+<li>tecnologiche: non banali</li>
+</ul>
+</dd>
+</dl>
+<!-- ====================================================================== -->
+<h1 class="yes">Perch&eacute; un Web "Policy Aware"</h1>
+<p>(fa riferimento al lavoro:
+<em>Creating a Policy-Aware Web: Discretionary, Rule-based
+Access for the World Wide Web</em>, 
+di 
+Daniel J. Weitzner, Jim Hendler, Tim Berners-Lee, Dan Connolly)
+</p>
+<ul>
+<li>Sviluppo del Web come <em>spazio informativo sociale</em>
+frenato da: 
+<ul>
+<li>mancanza di sistemi sofisticati per il <em>controllo</em>
+della condivisione dell' informazione</li>
+<li>necessit&agrave; di definire <em>a priori</em> la
+politica</li>
+<li><em>granularit&agrave;</em> alta</li>
+</ul>
+</li>
+<li>Vantaggi di un Web "<em>Policy aware</em>" 
+<ul>
+<li>politiche definite in modo <em>dichiarativo</em></li>
+<li>maggior <em>trasparenza</em> senza bisogno di accordi
+preventivi</li>
+<li>maggior <em>controllo</em> da parte dei detentori dell'
+informazione</li>
+</ul>
+</li>
+</ul>
+<p><em>Le tecnologie del Semantic Web possono rendere il Web un
+ambiente sociale pi&ugrave; ricco</em></p>
+<!-- ======================================================== =-->
+<h1 class="yes">I requisiti per un Web Policy Aware</h1>
+<dl>
+<dt>Trasparenza</dt>
+<dd>
+<ul>
+<li>persone e macchine devono essere in grado di comprendere le
+regole che disciplinano le risorse</li>
+<li>varie proposte: Platform for Privacy Preferences
+(<em>P3P</em>), Security Assertions Markup Language
+(<em>SAML</em>), Enterprise Privacy Authorization Language
+(<em>EPAL</em>), eXtensible Access Control Markup Language
+(<em>XACML</em>)</li>
+</ul>
+</dd>
+<dt>Meccanismi di conformit&agrave;</dt>
+<dd>
+<ul>
+<li>esprimere le regole in modo formale e machine-readable</li>
+</ul>
+</dd>
+<dt>Identificazione delle responsabilit&agrave;</dt>
+<dd>
+<ul>
+<li>le regole possono essere violate (inavvertitamente o 
+dolosamente)</li>
+<li>occorre poter rilevare le violazioni e identificare gli
+autori</li>
+</ul>
+</dd>
+</dl>
+<!-- ======================================================== =-->
+<h1 class="yes">Le differenze</h1>
+<p><em>Il Web Policy Aware &egrave; diverso da un tradizionale
+sistema di controllo degli accessi</em></p>
+<dl>
+<dt>Approccio tradizionale (crittografia)</dt>
+<dd>
+<ul>
+<li>definizione <em>preventiva</em> delle politiche</li>
+<li><em>impegno</em> gestionale per il mantenimento della PKI
+(Public Key Infrastructure)</li>
+<li><em>accettabile</em> in alcuni contesti (banche, intelligence)</li>
+<li>troppo <em>gravosa</em> per le realt&agrave; piccole</li>
+<li>spesso si <em>rinuncia</em> alla protezione</li>
+</ul>
+</dd>
+<dt>Policy Aware Web</dt>
+<dd>
+<ul>
+<li>politiche di sicurezza <em>descrittive</em></li>
+<li>carico (basso) della verifica a carico del <em>client web</em></li>
+<li>accesso basato su regole codificato a livello dei <em>protocolli web</em></li>
+<li>enfasi sulla <em>decentralizzazione</em></li>
+</ul>
+</dd>
+</dl>
+<!-- ======================================================== =-->
+<h1 class="yes">P3P</h1>
+<p><img src="images/p3p.jpg" alt="p3p"  /></p>
+<!-- ======================================================== =-->
+<h1 class="yes">L' accesso basato su regole</h1>
+<dl>
+<dt>Caratteristiche</dt>
+<dd>
+<ul>
+<li>insieme di regole dichiarative per definire le regole di accesso "<em>a grana fine</em>"</li>
+<li>per accedere all' informazione bisogna <em>dimostrare</em> il diritto all' accesso</li>
+<li>MAC (<em>Mandatory Access Control</em>): il sistema definisce a priori i criteri di protezione</li>
+<li>DAC (<em>Discretionary Access Control</em>): il detentore dell' informazione definisce a livello locale le politiche di accesso</li>
+</ul>
+</dd>
+<dt>I problemi tecnici</dt>
+<dd>
+<ul>
+<li><em>interoperabilit&agrave;</em></li>
+<li><em>variet&agrave;</em> di applicazioni</li>
+<li>necessit&agrave; di un meccanismo di <em>dimostrazione</em>
+(proof)</li>
+<li>gestire le possibili <em>incoerenze</em></li>
+<li><em>scalabilit&agrave;</em></li>
+</ul>
+</dd>
+</dl>
+<!-- ======================================================== =-->
+<h1 class="yes">Un esempio: il sito W3C</h1>
+<p><img src="images/elisaaccess.png" alt="elisaaccess" /></p>
+<!-- ======================================================== =-->
+<h1 class="yes">Decentralizzazione della dimostrazione</h1>
+<p><img src="images/ruleAndProofExchange.png"
+alt="ruleAndProofExchange" /></p>
+<!-- ===================================================================== -->
+<h1 class="yes">Conclusioni</h1>
+<ul>
+<li>I membri del W3C guidano l' evoluzione del Web</li>
+<li><em>Leading the web at its full potential</em></li>
+<li>Il Semantic Web &egrave; l' evoluzione del Web attuale</li>
+<li>Molte tecnologie sono ad un buon punto di sviluppo</li>
+<li>Alcune di esse possono essere la base per la soluzione di
+problemi importanti</li>
+<li>&Egrave; possibile <em>controllare l' accesso</em> nel Web usando <em>HTTP</em> per realizzare 
+un meccanismo <em>scalabile</em>
+per lo <em>scambio di regole e dimostrazioni</em>.</li>
+</ul>
+<!-- ===================================================================== -->
+<h1 class="yes">Grazie per l&rsquo; attenzione</h1>
+<p class="questions">?</p>
+<p><em>Se non &egrave; sul web non esiste</em> ...<br />
+ ... troverete sul sito dell' Ufficio (<a
+href="http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+ questa <em>presentazione</em> alla URI:<a title="presentazione - Verso il Web of Trust"
+href="http://www.w3c.it/talks/2005/ew3/">http://www.w3c.it/talks/2005/ew3/</a></p>
+<!-- ===================================================================== -->
+</body>
+</html>

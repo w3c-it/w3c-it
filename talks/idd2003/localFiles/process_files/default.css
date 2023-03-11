@@ -1,0 +1,41 @@
+body { background-color : white;
+       color: black }
+
+.time-interval { background-color: white; 
+                 color: #FFA780;
+                 font-weight: bold }
+
+p.copyright { font-size: smaller }
+
+
+h2 { font-family : Helvetica, sans-serif }
+h3 { font-family : Helvetica, sans-serif }
+
+div.navbar { text-align: center }
+
+.toc { text-indent: 0 }
+
+ul.toc, ol.toc, ul.longtoc, ol.longtoc {
+  list-style: disc;		/* Mac NS has problem with 'none' */
+  list-style: none;
+}
+div.longtoc li.tocline2 {font-weight: bold}
+li.tocline2 {font-weight: normal}
+li.tocline3 {font-weight: normal}
+li.tocline4 {font-weight: normal}
+li.tocline5 {font-weight: normal}
+
+div.toc, div.longtoc, dt {
+    text-align: left
+}
+
+cite { font-style: normal }
+
+.rfc2119 {
+  text-transform: lowercase;
+  font-weight: bold
+}
+
+@media print {
+.noprint { display: none }
+}

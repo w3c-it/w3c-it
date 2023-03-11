@@ -1,0 +1,28 @@
+
+BODY {background: #FFFFF6; color: black; margin: 1em 1em 1em 50px; } 
+/* absolute unit used instead of relative for right margin because
+of display problem in some browsers */ BODY, P, UL, OL, LI, H1, H2, H3, H4,
+DT, .navbar, .intnavbar, .policyfooter { font-family: Arial, sans-serif;
+} H1, H2, H3, H4 { color: #000066; } @media all { A:link IMG, A:visited IMG
+{ border: none } } A:link { color: #000066; } A:visited { color: #660066;
+} H1 { font-weight: bold; } H2 { font-size: 140%; background: #F6F6bb; border:
+none; padding-left: 1em; width: 100%; } .extnavbar { color: #000066; } .intnavbar
+{font-weight: bold; } .suitenav { background: #eef6ff; font-weight: bold;
+} .policyfooter { font-size: 90% } .discuss { font-weight: bold; background:
+#e6ddee; } .present { font-weight: bold; background: #ffd6ee; } .demo {
+font-weight: bold; background: #ffddcc; } .exercise {font-weight: bold;
+background: #ddffcf; } .resource { background: #eef6ff; } .disseminate {
+font-weight: bold; background: #f6f6bb; }
+.wainav2, .suitenav1, .suitenav2, .pagenav, .note, .hide { font-family: Arial, sans-serif; }
+.wainav2, .suitenav1, .pagenav, .note { font-size: 90%; }
+.wainav1 { float: left; width: 290px }
+.wainav2 { float: right; text-align: right; width: 23em; vertical-align: top }
+.suitenav1 { clear: both; padding-top: 1em }
+.note, .suitenav2 { background: #eef6ff; }
+.wainav2 a:hover, .wainav2 a:active, .suitenav1 a:hover, .suitenav1 a:active,
+.pagenav a:hover, .pagenav a:hover, .suitenav2 a:hover, .suitenav2 a:active { background: #ffa; text-decoration: none; }
+.suitenav1 img { margin-left: -18px }
+.note { background: #eef6ff; }
+.hide { display: none; }
+
+

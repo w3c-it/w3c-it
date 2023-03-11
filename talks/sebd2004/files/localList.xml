@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+         xmlns:qh="http://www.weblab.isti.cnr.it/projects/QH/properties/"> 
+  
+	...
+  
+	<rdf:Description rdf:nodeID="a1115attr1">
+	  <qh:localName>xml:lang</qh:localName>
+    <qh:kind>attribute</qh:kind>
+	  <qh:label xml:lang="en">language</qh:label>
+    <qh:label xml:lang="it">lingua</qh:label>
+    <qh:longDescription xml:lang="en">The language of the subjects</qh:longDescription >
+    <qh:longDescription xml:lang="it">Il linguaggio in cui sono espressi gli argomenti trattati nel libro</qh:longDescription>
+    <qh:controlledBy>
+        <rdf:Description>
+        <qh:mode>localList</qh:mode>
+        <qh:valueList>
+        <rdf:Description>
+          <qh:vI>it</qh:vI>
+          <qh:vI>en</qh:vI>
+          <qh:vI>fr</qh:vI> 
+        </rdf:Description>
+        </qh:valueList>
+        </rdf:Description>
+    </qh:controlledBy> 
+    <qh:fullyQualifiedName>books/book/metadata/subjects@xml:lang</qh:fullyQualifiedName>
+  </rdf:Description>
+	
+ ...
+	
+</rdf:RDF>
+
+

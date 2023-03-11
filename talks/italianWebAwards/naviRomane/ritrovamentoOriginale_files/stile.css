@@ -1,0 +1,15 @@
+.corpo_piccolo {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.titolo_bianco {
+	COLOR: #cccccc; FONT-FAMILY: "Times New Roman", Times, serif; FONT-SIZE: 18px
+}
+.corpo_bianco {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: justify
+}
+.corpo {
+	COLOR: #000000; FONT-FAMILY: "Times New Roman", Times, serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px; TEXT-ALIGN: justify
+}
+.titoletto {
+	COLOR: #666666; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 18px
+}

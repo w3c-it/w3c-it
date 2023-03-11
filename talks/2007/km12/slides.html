@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <title>
+      km12
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; Oreste Signore" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link rel="stylesheet" href="./slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+div.slide pre { 
+     color: purple;
+     line-height: 110%;
+   /*  margin: 1em;  */
+     padding-bottom: 0em;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     padding-left: 1em;
+     background-color: #dbdcde;
+     font-size: 80%;
+     border: solid thin black;
+  }
+  div.slide pre em { 
+  background-color: #ffffff;
+  font-style: normal;
+  color: #0000ff;
+  font-weight: bold;
+   }
+.emph2 {
+   background-color: #ffffff;
+   }
+.emph1 {
+   background-color: #ffff66;
+   }
+.floatright {
+   float: right;
+   }
+.floatleft {
+   float: left;
+   }
+.divright {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         float: right;
+}
+.divleft {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         float: left;
+}
+.divcenter {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         text-align: center;;
+}
+div.slide code {
+   color: #ff0099;
+   font-size: 100%;
+   font-weight: bold;
+   }
+   
+div.slide a:visited { color: #990099; text-decoration: underline; }
+div.slide a:link { color: #990099; text-decoration: underline; }
+div.slide a:hover { color: red; text-decoration: underline; }
+div.slide a:active { color: red; text-decoration: underline; }
+
+-->
+/*]]>*/
+</style>
+<script src="./slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <!-- <div class="background"><img alt="" id="head-icon"
+src="./slidy/icon-blue.png" /><object id="head-logo"
+data="w3c-logo-blue.svg" type="image/svg+xml"
+title="W3C logo"><a href="http://www.w3.org/"><img
+alt="W3C logo" id="head-logo-fallback"
+src="./slidy/w3c-logo-blue.gif" /></a></object></div>
+ -->
+    <!-- <div class="background slanty">
+<img src="./slidy/w3c-logo-slanted.jpg" alt="slanted W3C logo" />
+</div> -->
+    <!-- hidden style graphics to ensure they are saved with other content -->
+    <!-- <div class="slide cover title"> 
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+ </div> -->
+    <!-- <img src="keys.jpg" alt=
+"Cover page images (keys)" class="cover" /><br clear="all" />
+<h1>HTML Slidy: Slide Shows in XHTML</h1>
+
+<p><a href="http://www.w3.org/People/Raggett/">Dave Raggett</a>,
+&lt;<a href="mailto:dsr@w3.org">dsr@w3.org</a>&gt;<br />
+<br />
+<br />
+<br />
+<br /><em>Hit the space bar for next slide</em></p>
+</div> -->
+    <!-- <div class="handout">
+<p>For handouts, its often useful to include extra notes using a
+div element with class="handout" following each slide, as in:</p>
+
+<pre>
+&lt;div class="slide"&gt; 
+ <em>... your slide content ...</em>
+&lt;/div&gt;
+
+&lt;div class="handout"&gt;
+ <em>... stuff that only appears in the handouts ...</em>
+&lt;/div&gt;
+</pre>
+</div> -->
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Knowledge creation: integrazione di HTML e Semantic Web
+      </h1>
+      <p>
+        <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3.org">oreste@w3.org</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <em><a href="http://www.jekpot.com/pagine/km12.htm">The
+        12th KNOWLEDGE MANAGEMENT FORUM</a></em><br />
+        Organised by <a href="http://www.jekpot.com/">JEKPOT</a>
+      </p>
+      <p>
+        Milano, Italy, 26 - 28 November 2007
+      </p>
+      <hr />
+      <p>
+        Presentazione: <a href="./slides.html" hreflang="it"
+        title=
+        "km12 - presentazione">http://www.w3c.it/talks/2007/km12/slides.html</a><br />
+
+        Versione pdf: <a href=
+        "http://www.w3c.it/talks/2007/km12/slides.pdf" hreflang=
+        "it" title=
+        "km12 - pdf presentazione">http://www.w3c.it/talks/2007/km12/slides.pdf</a><br />
+
+        <!--   Abstract: <a href="./abstract.pdf" hreflang="it" title=
+        "km12 - abstract">http://www.w3c.it/talks/2007/km12/abstract.pdf</a><br /> -->
+         Documento: <a href="http://www.w3c.it/papers/km12.pdf"
+        hreflang="it" title=
+        "km12 - documento">http://www.w3c.it/papers/km12.pdf</a>
+      </p><a href="http://www.weblab.isti.cnr.it/"><img src=
+      "./slidy/weblabWithText.jpg" alt="Cover page Weblab Logo"
+      width="30%" style="max-width: 234px" /></a> <a href=
+      "http://www.w3c.it/"><img src="./slidy/itlogo-20010115.png"
+      alt="Cover page W3C Office Logo" width="40%" style=
+      "max-width: 279px" /></a> <a href=
+      "http://validator.w3.org/check/referer"><img src=
+      "./slidy/valid-xhtml10-blue.png" alt="Valid XHTML 1.0!"
+      width="25%" style=
+      "max-width: 88px; max-height:31px;" /></a> <a href=
+      "http://jigsaw.w3.org/css-validator/"><img src=
+      "./slidy/valid-css-blue.png" alt="Valid CSS!" width="25%"
+      style="max-width: 88px; max-height:31px;" /></a>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Ringraziamenti
+      </h1>
+      <ul>
+        <li>Questa presentazione utilizza anche materiale:
+          <ul>
+            <li>predisposto da <em>Ivan Herman</em> (<em>W3C
+            Semantic Web Activity Lead</em>)
+            </li>
+            <li>contenuto nella <em>documentazione tecnica
+            W3C</em>
+            </li>
+          </ul>
+        </li>
+        <li>Il materiale di questa presentazione pu&ograve;
+        essere riutilizzato nel <em>rispetto</em> dei diritti di
+        propriet&agrave; intellettuale, secondo la normale
+        <em>prassi scientifica</em>, e delle <em>regole del
+        W3C</em>
+        </li>
+        <li>Un ringraziamento a <em>Jekpot</em> per avermi
+        offerto l' opportunit&agrave; di tenere questa
+        presentazione
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Knowledge creation: integrazione di HTML e Semantic Web
+      </h1>
+      <p>
+        <span class="bigEmphasis">Web e W3C</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Il Web &egrave; ambiente sociale
+      </h1>
+      <blockquote lang="en" xml:lang="en">
+        <p>
+          &ldquo;The Web is more a <em>social</em> creation than
+          a technical one. I designed it for a social effect - to
+          <em>help people work together</em> - and not as a
+          technical toy. The ultimate goal of the Web is to
+          <em>support and improve our weblike existence</em> in
+          the world.&rdquo;<br />
+          (Tim Berners-Lee - Weaving the Web, p. 123)
+        </p>
+      </blockquote><!--
+      <ul class="incremental">
+        <li>
+          <em>Valore sociale del Web</em>: comunicazione
+          interpersonale, commercio, condivisione di conoscenza
+        </li>
+        <li>Rendere questi benefici <em>disponibili a tutti</em>,
+        indipendentemente da hardware, software, infrastruttura
+        di rete, lingua madre, cultura, posizione geografica,
+        capacit&agrave; fisiche o mentali
+        </li>
+      <li>W3C investe per supportare l' estensione delle
+        tecnologie web e dei relativi benefici.<a href=
+        "http://www.w3.org/WAI/" shape="rect">Web
+        accessibility</a>, <a href=
+        "http://www.w3.org/International/" shape=
+        "rect">internazionalizzazione</a>, <a href=
+        "http://www.w3.org/2001/di/" shape="rect">device
+        independence</a> sono particolarmente importanti.
+        </li> 
+      </ul>
+      -->
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        World Wide Web Consortium (W3C)
+      </h1><img src="./images/tbl-so.jpeg" style="float:right"
+      height="267" width="180" alt="Photo of TBL" class=
+      "withBorder" />
+      <blockquote>
+        <p>
+          &ldquo;To lead the World Wide Web to its full potential
+          by developing protocols and guidelines that ensure
+          long-term growth for the Web&rdquo;
+        </p>
+      </blockquote>
+      <ul>
+        <li>Fondato da Tim Berners-Lee <a href=
+        "http://www.w3.org/Consortium/history.html" title=
+        "The history pages of W3C">in 1994</a>
+        </li>
+        <li>Definisce <em>Recommendation</em> aperte (Web
+        Standards)
+        </li>
+        <li>
+          <em>&Egrave; un forum neutrale per creare consenso
+          sugli standard web</em>
+        </li>
+        <li>Gli standard proposti <em>non derivano da posizioni
+        dominanti sul mercato</em>
+        </li>
+        <li>Gli obiettivi a lungo termine
+          <ul>
+            <li>
+              <em>Web for Everyone</em>
+            </li>
+            <li>
+              <em>Web on Everything</em>
+            </li>
+            <li>
+              <em>Knowledge Base, Advanced data searching and
+              sharing</em>
+            </li>
+            <li>
+              <em>Trust and Confidence</em>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        Knowledge creation: integrazione di HTML e Semantic Web
+      </h1>
+      <p>
+        <span class="bigEmphasis">Condividere la
+        conoscenza</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        L' integrazione dei dati
+      </h1><img src="images/rdfInTheMiddleSimple.png" style=
+      "width: 100%; max-width:924px;" alt=
+      "esportazione dei dati semplificata" />
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        I limiti del Web attuale
+      </h1>
+      <ul>
+        <li>Nel <em>web tradizionale</em> si rappresenta l'
+        informazione utilizzando:
+          <ul>
+            <li>linguaggio naturale
+            </li>
+            <li>grafica, elementi multimediali, struttura della
+            pagina
+            </li>
+          </ul>
+        </li>
+        <li>Spesso &egrave; necessario <em>combinare le
+        informazioni</em> (provenienti da fonti diverse)
+        </li>
+        <li>
+          <em>Per gli esseri umani &egrave; facile ...</em>
+          <ul>
+            <li>dedurre fatti da informazioni incomplete
+            </li>
+            <li>creare e seguire associazioni mentali
+            </li>
+            <li>provare varie esperienze sensoriali
+            </li>
+            <li>aggregare le informazioni indipendentemente dalle
+            tecnologie utilizzate
+            </li>
+          </ul>
+        </li>
+        <li>... ma <em>le macchine non sono intelligenti</em>!
+          <ul>
+            <li>non possono utilizzare informazioni parziali
+            </li>
+            <li>hanno difficolt&agrave; ad aggregare informazioni
+            strutturate in forma diversa
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ==================================================================== -->
+    <div class="slide">
+      <h1>
+        L' architettura del Semantic Web
+      </h1><img class="floatleft" alt=
+      "immagine dei livelli del semantic web" src=
+      "images/swStack2006.png" style=
+      "float:left; max-width: 590px; max-height: 590px;" width=
+      "60%" />
+      <dl>
+        <dt>
+          Il Semantic Web ...
+        </dt>
+        <dd>
+          <ul>
+            <li>&egrave; un' infrastruttura basata su metadati
+            per poter svolgere <em>ragionamenti</em> sul Web
+            </li>
+            <li>
+              <em>estende</em>, non sostituisce il web attuale
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          I metadati sono:
+        </dt>
+        <dd>
+          <ul>
+            <li>Informazioni, elaborabili automaticamente
+            (<em>machine understandable</em>), relative a una
+            risorsa web o a qualche altra cosa
+            </li>
+            <li>... <em>data about data</em>
+            </li>
+            <li>... informazioni che possono essere utilizzate da
+            <em>intelligent software agents</em> per fare un uso
+            appropriato delle risorse
+            </li>
+            <li>... <em>dati</em> ...
+            </li>
+            <li>... che possono essere <em>descritti da altri
+            metadati</em> ...
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ======================================================== =-->
+    <div class="slide">
+      <h1>
+        Perch&eacute; i metadati?
+      </h1>
+      <ul>
+        <li>Nel Web di oggi tutte le informazioni sono "
+        <em>machine readable</em>"
+        </li>
+        <li>Nel Semantic Web le informazioni devono essere " <em>
+          machine understandable</em>". Quindi occorrono:
+          <ul>
+            <li>
+              <em>nomi non ambigui</em> per le risorse (URI)
+            </li>
+            <li>un <em>data model condiviso</em> per esprimere i
+            metadati (RDF)
+            </li>
+            <li>un modo per <em>accedere ai metadati</em> sul Web
+            </li>
+            <li>
+              <em>vocabolari</em> condivisi (<em>ontologie</em>)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================= -->
+    <div class="slide">
+      <h1>
+        Cos'&egrave; un' ontologia?
+      </h1>
+      <p>
+        Jim Hendler
+      </p>
+      <blockquote>
+        <p>
+          A set of <em>knowledge terms</em>, including the
+          vocabulary, the <em>semantic interconnections</em> and
+          some <em>simple rules</em> of inference and logic for
+          some particular topic
+        </p>
+      </blockquote>
+      <p>
+        Studer et al. (1998) 
+        <!-- Rudi Studer and V. Richard Benjamins and Dieter Fensel in
+        <em>Knowledge Engineering: Principles and Methods</em>,
+        Data Knowl. Eng. 25(1-2): 161-197 (1998) -->
+      </p>
+      <blockquote>
+        <p>
+          An ontology is a formal, explicit specification of a
+          shared conceptualisation.<br />
+          A '<em>conceptualisation</em>' refers to an abstract
+          model of some phenomenon in the world by having
+          identified the relevant concepts of that
+          phenomenon.<br />
+          '<em>Explicit</em>' means that the type of concepts
+          used, and the constraints on their use are explicitly
+          defined. For example, in medical domains, the concepts
+          are diseases and symptoms, the relations between them
+          are causal and a constraint is that a disease cannot
+          cause itself.<br />
+          '<em>Formal</em>' refers to the fact that the ontology
+          should be machine readable, which excludes natural
+          language.<br />
+          '<em>Shared</em>' reflects the notion that an ontology
+          captures consensual knowledge, that is, it is not
+          private to some individual, but accepted by a group.
+        </p>
+      </blockquote>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Disaccordo o accordo?
+      </h1>
+      <ul>
+        <li>Molte definizioni <em>diverse</em>, ma
+        <em>accordo</em> sul concetto
+        </li>
+        <li>Un' ontologia include non solo i termini che sono
+        <em>esplicitamente</em> definiti in essa, ma anche la
+        <em>conoscenza</em> che ne pu&ograve; essere
+        <em>derivata</em> mediante un processo di
+        <em>inferenza</em>
+        </li>
+        <li>Un' ontologia cattura <em>conoscenza consensuale</em>
+        </li>
+        <li>"<em>Little semantics goes a long way</em>" (Jim
+        Hendler)
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <!-- 
+    <div class="slide">
+      <h1>
+        Il Semantic Web: la visione del W3C
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Ipotesi e sfide
+        </dt>
+        <dd>
+          <ul>
+            <li>il Web &egrave; intrinsecamente
+            <em>distribuito</em>
+            </li>
+            <li>le macchine possono accedere ad un <em>insieme
+            strutturato di informazioni</em> e a un insieme di
+            <em>regole di inferenza</em> da utilizzare per il
+            <em>ragionamento automatico</em>
+            </li>
+            <li>per ragionare sui dati occorrono le
+            <em>ontologie</em>
+            </li>
+            <li>fornire un <em>linguaggio</em> per esprimere dati
+            e regole per ragionare sui dati
+            </li>
+            <li>
+              <em>esportare</em> sul web delle regole da
+              qualunque sistema di rappresentazione della
+              conoscenza
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Metadati
+        </dt>
+        <dd>
+          <ul>
+            <li>informazioni, <em>comprensibili dalla
+            macchina</em>, relative a una risorsa web o a qualche
+            altra cosa
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div> 
+    -->
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Semantic Web: le tecnologie W3C
+      </h1><img src="images/sw-vert-w3c.png" alt=
+      "logo W3C semantic web" style=
+      "float: right; margin-right: 2em; width: 100%; max-width: 72px;" />
+      <dl class="incremental">
+        <dt>
+          Resource Description Framework (RDF)
+        </dt>
+        <dd>
+          <ul>
+            <li>strumento base per la <em>codifica</em>, lo <em>
+              scambio</em> e il <em>riutilizzo</em> di metadati
+              strutturati
+            </li>
+            <li>consente l'<em>interoperabilit&agrave;</em> tra
+            applicazioni che si scambiano sul web informazioni
+            <em>machine-understandable</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Web Ontology Language (OWL)
+        </dt>
+        <dd>
+          <ul>
+            <li>linguaggio per <em>descrivere</em>
+            propriet&agrave;, vincoli, cardinalit&agrave;, etc.
+            </li>
+            <li>permette di <em>esportare ontologie</em> in modo
+            interoperabile
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        L' integrazione dei dati: il ruolo delle tecnologie
+      </h1><img src="images/rdfInTheMiddle.png" style=
+      "width: 100%; max-width:946px;" alt=
+      "esportazione dei dati con indicazione delle tecnologie" />
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Knowledge creation: integrazione di HTML e Semantic Web
+      </h1>
+      <p>
+        <span class="bigEmphasis">Come creare i metadati?</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Dove sono i metadati?
+      </h1>
+      <ul>
+        <li>I metadati <em>sono gi&agrave; nelle pagine
+        (X)HTML</em>
+          <ul>
+            <li>eventi, persone, localizzazione geografica,
+            didascalie, copyright, etc.
+            </li>
+            <li>es: <a href="agendaOreste.html">agendaOreste</a>
+            </li>
+          </ul>
+        </li>
+        <li>Normalmente espressi in maniera:
+          <ul>
+            <li>
+              <em>comprensibile</em> agli esseri <em>umani</em>
+            </li>
+            <li>
+              <em>non comprensibile</em> per le <em>macchine</em>
+            </li>
+            <li>i tag tradizionali <em>non hanno semantica</em>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Il Web 2.0 e il "mashup"
+      </h1>
+      <ul>
+        <li>Molte applicazioni si basano sull' uso combinato di
+        <em>varie tipologie</em> di dati
+        </li>
+        <li>Si sono sviluppate pratiche "<em>sociali</em>"
+        </li>
+        <li>Gli sviluppatori hanno trovato utile
+        "<em>taggare</em>" le informazioni
+        </li>
+        <li>Molte informazioni possono essere catturate mediante
+        i "<em>Microformati</em>"
+        </li>
+        <li>&Egrave; possibile <em>condividere la conoscenza</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Come includere i metadati nelle pagine HTML?
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Microformati
+        </dt>
+        <dd>
+          <ul>
+            <li>approccio <em>web-based</em> alla formattazione
+            dei dati
+            </li>
+            <li>
+              <em>riutilizza</em> come metadati il <em>contenuto
+              esistente</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          embedded RDF
+        </dt>
+        <dd>
+          <ul>
+            <li>si inserisce nell' (X)HTML un <em>sottoinsieme di
+            RDF</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          RDFa
+        </dt>
+        <dd>
+          <ul>
+            <li>si esprimono i dati strutturati usando gli
+            <em>attributi RDF</em> e alcuni <em>nuovi
+            attributi</em> definiti ad hoc
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Un esempio di microformato
+      </h1>
+      <dl>
+        <dt>
+          Con il markup tradizionale
+        </dt>
+        <dd>
+          <pre>
+&lt;div&gt;
+   &lt;div&gt;Oreste Signore&lt;/div&gt;
+   &lt;div&gt;Ufficio Italiano W3C - CNR&lt;/div&gt;
+   &lt;div&gt;+39 (050) 315 2995&lt;/div&gt;
+   &lt;a href="http://www.w3c.it/"&gt;http://www.w3c.it/&lt;/a&gt;
+ &lt;/div&gt;
+</pre>
+        </dd>
+        <dt>
+          Con il formato di markup hCard
+        </dt>
+        <dd>
+          <pre>
+&lt;div <em>class="vcard"</em>&gt;
+   &lt;div <em>class="fn"</em>&gt;Oreste Signore&lt;/div&gt;
+   &lt;div <em>class="org"</em>&gt;Ufficio Italiano W3C - CNR&lt;/div&gt;
+   &lt;div <em>class="tel</em>"&gt;+39 (050) 315 2995&lt;/div&gt;
+   &lt;a <em>class="url"</em> href="http://www.w3c.it/"&gt;http://www.w3c.it/&lt;/a&gt;
+ &lt;/div&gt;
+</pre>
+        </dd>
+      </dl>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Knowledge creation: integrazione di HTML e Semantic Web
+      </h1>
+      <p>
+        <span class="bigEmphasis">GRDDL: esempi</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        GRDDL
+      </h1><img src="images/sw-grddl-orange.png" alt="logo grddl"
+      style=
+      "float: right; margin-right: 2em; width: 100%; max-width: 80px;" />
+      <ul>
+        <li>
+          <a href="http://www.w3.org/TR/grddl/" rel=
+          "rddl.normative-reference"><cite class=
+          "dc-title">Gleaning Resource Descriptions from Dialects
+          of Languages (GRDDL)</cite>, W3C Recommendation
+          <abbr title="2007-09-11" class="dc.date">11 September
+          2007</abbr></a>
+        </li>
+        <li>Vedi il comunicato stampa: <a href=
+        "http://www.w3c.it/pr/2007/grddl-pressrelease-it.html">http://www.w3c.it/pr/2007/grddl-pressrelease-it.html</a>
+        </li>
+        <li>&Egrave; il ponte per <em>trasformare</em> i dati
+        espressi in un formato XML (come XHTML) in dati Semantic
+        Web
+        </li>
+        <li>Un software pu&ograve; <em>automaticamente estrarre
+        l'informazione</em> da pagine Web strutturate, per
+        renderla parte del <em>Semantic Web</em>
+        </li>
+        <li>Chi utilizza dati strutturati con microformati in
+        XHTML pu&ograve; aumentarne il valore trasferendoli nel
+        Semantic Web, con <em>costi minimi</em>
+        </li>
+        <li>Una volta che i dati sono parte del Semantic Web,
+        possono essere <em>fusi</em> con altri dati (per esempio,
+        una base di dati relazionale) per query, inferenze, e
+        conversione ad altri formati
+        </li>
+        <li>Introduce un <em>markup</em> per dichiarare che un
+        documento XML <em>include dati che possono essere
+        estratti</em>, e per indicare quale <em>algoritmo</em>,
+        normalmente scritto in XSLT, va utilizzato per estrarre i
+        dati RDF dal documento
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Combinare agende
+      </h1>
+      <dl>
+        <dt>
+          Il problema
+        </dt>
+        <dd>
+          <ul>
+            <li>Un utente utilizza un <em>calendaring
+            service</em> che pubblica la sua agenda sotto forma
+            di feed RSS 1.0
+            </li>
+            <li>Vuole <em>organizzare un incontro</em> con tre
+            colleghi che vivono in altre citt&agrave;, ma seguono
+            spesso le stesse conferenze.
+            </li>
+            <li>Supponiamo che ognuno di questi
+            <em>pubblichi</em> la sua agenda personale,
+            utilizzando <em>meccanismi diversi</em> (microformato
+            hCalendar, eRDF e RDFa).
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          La soluzione
+        </dt>
+        <dd>
+          <img src="images/Calendar.png" alt="" style=
+          "max-width: 518px; width: 100%; float: right;" />
+          <ul>
+            <li>Tutte le agende possono essere utilizzate come
+            <em>input per GRDDL</em> e <em>convertite in RDF</em>
+            </li>
+            <li>Un <em>GRDDL-aware agent</em> identifica le
+            trasformazioni necessarie per estrarre
+            automaticamente i dati
+            </li>
+            <li>I dati vengono caricati in un <em>RDF store</em>
+            e combinati in un unico modello
+            </li>
+            <li>Il modello risultante pu&ograve; essere
+            interrogato con <em>SPARQL</em> (<span class=
+            "acronym">S</span>imple <span class=
+            "acronym">P</span>rotocol <span class=
+            "acronym">A</span>nd <span class="acronym">R</span>DF
+            <span class="acronym">Q</span>uery <span class=
+            "acronym">L</span>anguage)
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Accesso a dati clinici
+      </h1><img src="images/clinical.png" alt=
+      "esempio di combinazione di dati clinici" style=
+      "max-width: 312px; float: right; width: 100%" />
+      <ul class="incremental">
+        <li>Ricercatore nel settore <em>biomedico</em>
+        </li>
+        <li>Ambiente <em>decentralizzato</em>
+        </li>
+        <li>Necessit&agrave; di accedere ai dati clinici dei
+        pazienti, memorizzati in <em>formato XML</em>
+        </li>
+        <li>Proficuo utilizzare delle <em>query RDF</em> per le
+        sue attivit&agrave; di ricerca
+        </li>
+        <li>La conversione dei dati XML in grafi RDF permette di
+        avere accesso alla conoscenza contenuta in
+        <em>ontologie</em> come <em>HL7</em>&hellip;
+        </li>
+        <li>&hellip;ma pone problemi di <em>elaborazione</em>,
+        <em>spazio</em> e <em>sincronizzazione</em>
+        </li>
+        <li>Con l' approccio <em>GRDDL</em> &egrave; possibile
+        affrontare questi problemi:
+          <ul>
+            <li>per ogni tipo di documento sorgente viene
+            definita una <em>trasformazione</em> che estrae i
+            dati clinici e li rappresenta in RDF
+            </li>
+            <li>utilizzo di un <em>vocabolario universale</em>,
+            &hellip;quindi&hellip;
+            </li>
+            <li>
+              <em>integrazione</em> dei dati e
+              <em>interoperabilit&agrave;</em>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        GRDDL con i microformati: la tecnica
+      </h1>
+      <pre>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it"&gt;
+  <em>&lt;head profile="http://www.w3.org/2003/g/data-view"&gt;</em>
+    &lt;title&gt;Agenda Oreste Signore&lt;/title&gt;
+    <em>&lt;link rel="transformation" href="http://www.w3.org/2002/12/cal/glean-hcal"/&gt;</em>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ol class="schedule"&gt;
+      &lt;li&gt;2006
+         [&hellip;]
+      &lt;/li&gt;
+      &lt;li&gt;2007
+        &lt;ol&gt;
+          [&hellip;]
+          &lt;li class="vevent"&gt;
+            &lt;strong class="summary"&gt;Conferenza KM12&lt;/strong&gt; in 
+            &lt;span class="location"&gt;Milano, Italia&lt;/span&gt;: da
+            &lt;abbr class="dtstart" title="2007-11-27 09:00"&gt;27 nov&lt;/abbr&gt; a 
+            &lt;abbr class="dtend" title="2007-11-28 17:00"&gt;28 nov&lt;/abbr&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        GRDDL con i microformati: il meccanismo di trasformazione
+      </h1>
+      <p>
+        <img src="images/hCalendar.png" alt=
+        "processo per la conversione di calendari" style=
+        "max-width: 886px; width: 100%" />
+      </p>
+      <ul>
+        <li>elemento <code>profile</code>: indica che il software
+        che riceve il documento pu&ograve; cercare una
+        <em>trasformazione</em> da eseguire sui dati tra quelle
+        specificate nell' elemento <code>link</code>
+        </li>
+        <li>elemento <code>link</code> con attributo
+        <code>rel="transformation"</code>: specifica la
+        trasformazione da usare
+        </li>
+        <li>vedi: <a href=
+        "http://esw.w3.org/topic/CustomRdfDialects" hreflang="en"
+          title=
+          "elenco trasformazioni GRDDL">http://esw.w3.org/topic/CustomRdfDialects</a>
+        </li>
+        <li>Esempio: l'<a href=
+        "agendaOresteMicroformati.html">agenda</a> vista con un
+        <em>GRDDL-aware</em> agent (esempio con Firefox e plugin
+        Operator 0.8)
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        La trasformazione in RDF &hellip;
+      </h1>
+      <p>
+        <em>Comprensibile alle macchine, non pensata per esseri
+        umani!</em>
+      </p>
+      <pre>
+
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt; 
+&lt;rdf:RDF xmlns:_6="http://www.w3.org/2002/12/cal/icaltzd#" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+&lt;rdf:Description rdf:nodeID="jTCXOrie6"&gt;
+  &lt;_6:<em>location</em> xml:lang="it"&gt;<em>Milano, Italia</em>&lt;/_6:location&gt; 
+  &lt;rdf:type rdf:resource="http://www.w3.org/2002/12/cal/icaltzd#Vevent" /&gt; 
+  &lt;_6:url rdf:resource="http://www.w3c.it/calendar/oreste-hcal-grddl.html" /&gt; 
+  &lt;_6:<em>summary</em> xml:lang="it"&gt;<em>Conferenza KM12</em>&lt;/_6:summary&gt; 
+  &lt;_6:<em>dtstart</em> rdf:datatype="http://www.w3.org/2001/XMLSchema#date"&gt;<em>2007-11-27</em>&lt;/_6:dtstart&gt; 
+  &lt;_6:<em>dtend</em> rdf:datatype="http://www.w3.org/2001/XMLSchema#date"&gt;<em>2007-11-28</em>&lt;/_6:dtend&gt; 
+  &lt;/rdf:Description&gt;
+  &lt;/rdf:RDF&gt;
+
+
+</pre>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        &hellip;e il grafo RDF risultante
+      </h1><img src="images/grafoRDF.png" style=
+      "max-width: 1027px; width: 100%" alt="il grafo RDF" />
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Knowledge creation: integrazione di HTML e Semantic Web
+      </h1>
+      <p>
+        <span class="bigEmphasis">Riflessioni e
+        conclusioni</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Conclusioni
+      </h1>
+      <ul>
+        <li>Il <em>Semantic Web</em> &egrave; un' evoluzione del
+        web attuale che apre <em>prospettive</em> enormi e
+        facilita la <em>condivisione della conoscenza</em>
+        </li>
+        <li>Molta conoscenza &egrave; <em>gi&agrave;
+        contenuta</em> nelle pagine web esistenti
+        </li>
+        <li>Approcci come <em>GRDDL</em> consentono di
+        <em>estrarre</em> questa conoscenza e renderla <em>parte
+        integrante del Semantic Web</em>
+        </li>
+        <li>Il W3C guida l' evoluzione del Web: <em>attori o
+        spettatori?</em>
+        </li>
+      </ul>
+      <p class="incremental">
+        Non chiedetevi:<br />
+        <span class="bigEmphasis">cosa pu&ograve; fare il web per
+        me?</span><br />
+        <em>&hellip;ma&hellip;</em><br />
+        <span class="bigEmphasis">cosa posso fare io per il
+        Web?</span><br />
+        <img src="./images/w3cmember.gif" height="48" width="72"
+        alt="W3C Member Logo" class="withBorder" /> <a href=
+        "http://www.w3.org/Consortium/sup" hreflang="en" title=
+        "w3c supporters program">&hellip; e il supporters
+        program</a>
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p>
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/talks/2007/km12/">http://www.w3c.it/talks/2007/km12/</a>)<br />
+
+        e il <em>documento</em> (<a href=
+        "http://www.w3c.it/papers/km12.pdf" hreflang="it" title=
+        "documento - km12">http://www.w3c.it/papers/km12.pdf</a>)
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>

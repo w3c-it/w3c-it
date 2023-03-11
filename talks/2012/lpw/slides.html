@@ -1,0 +1,2575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <title>
+      lpw
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; Oreste Signore" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link rel="stylesheet" href="./slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+div.slide pre { 
+     color: purple;
+     line-height: 110%;
+   /*  margin: 1em;  */
+     padding-bottom: 0em;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     padding-left: 1em;
+     background-color: #dbdcde;
+     font-size: 80%;
+     border: solid thin black;
+  }
+  div.slide pre em { 
+  background-color: #ffffff;
+  font-style: normal;
+  color: #0000ff;
+  font-weight: bold;
+   }
+.emph2 {
+   background-color: #ffffff;
+   }
+.emph1 {
+   background-color: #ffff66;
+   }
+.floatright {
+   float: right;
+   }
+.floatleft {
+   float: left;
+   }
+.divright {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         float: right;
+}
+.divleft {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         float: left;
+}
+.divcenter {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         text-align: center;;
+}
+div.slide code {
+   color: #ff0099;
+   font-size: 100%;
+   font-weight: bold;
+   }
+-->
+/*]]>*/
+</style>
+<script src="./slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <!--  ========================================================== -->
+    <div class="slide">
+      <h1>
+        Origini, principi e futuro del World Wide Web
+      </h1>
+      <p>
+        <img src="images/mimose.gif" width="45%" alt=
+        "albero di mimosa" style=
+        "max-width: 640px; float:right;" /> <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3.org">oreste@w3.org</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <a href=
+        "http://didawiki.cli.di.unipi.it/doku.php/bdd-infuma/start">
+        Laboratorio Progettazione Web</a><br />
+        Aula Magna della Facolt&agrave; di Scienze, Edificio
+        E<br />
+        Universit&agrave; di Pisa<br />
+        8 marzo 2012 - ore 14
+      </p>
+      <hr />
+      <p>
+        Presentazione: <a href="./slides.html" hreflang="it"
+        title=
+        "la presentazione">http://www.w3c.it/talks/2012/lpw/slides.html</a><br />
+
+        Versione pdf: <a href=
+        "http://www.w3c.it/talks/2012/lpw/lpw.pdf" hreflang="it"
+        title=
+        "storia - pdf presentazione">http://www.w3c.it/talks/2012/lpw/lpw.pdf</a>
+      </p>
+      <p>
+        <a href="http://www.w3c.it/"><img src=
+        "./slidy/itlogo-20010115.png" alt=
+        "Cover page W3C Office Logo" style=
+        "width:40%; max-width: 279px" /></a> <a href=
+        "http://www.weblab.isti.cnr.it/"><img src=
+        "./slidy/weblabWithText.jpg" alt="Cover page Weblab Logo"
+        style="width:10%; max-width: 150px" /></a> <a href=
+        "http://validator.w3.org/check/referer"><img src=
+        "./slidy/valid-xhtml10-blue.png" alt="Valid XHTML 1.0!"
+        style="width:15%; max-width: 88px" /></a> <a href=
+        "http://jigsaw.w3.org/css-validator/"><img src=
+        "./slidy/valid-css-blue.png" alt="Valid CSS!" style=
+        "width:15%; max-width: 88px" /></a>
+      </p>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Ringraziamenti
+      </h1>
+      <ul>
+        <li>Questa presentazione utilizza anche materiale
+        proveniente da:
+          <ul>
+            <li>presentazioni tenute da <a href=
+            "http://www.w3.org/People/all#ivan">Ivan Herman</a>,
+            W3C Semantic Web Activity Lead
+            </li>
+            <li>presentazioni e articoli scritti da <a href=
+            "http://www.btinternet.com/~frank.hopgood/">F. R. A.
+            (Bob) Hopgood</a>, Visiting Professor, School of
+            Technology, Oxford Brookes University
+            </li>
+            <li>pagine Web (Wikipedia e altre)
+            </li>
+          </ul>
+        </li>
+        <li>Il materiale di questa presentazione pu&ograve;
+        essere riutilizzato nel rispetto delle leggi sul
+        copyright e delle regole del W3C
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>Come e perch&eacute; nasce: dall'idea ad HTML
+        </li>
+        <li>Il W3C: i principi guida e le Recommendation
+        </li>
+        <li>Gli aspetti sociali: W3F e WAI
+        </li>
+        <li>Web 2.0 e Web 3.0
+        </li>
+        <li>One Web
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il World Wide Web
+      </h1>
+      <dl>
+        <dt>
+          Non pi&ugrave;:
+        </dt>
+        <dd>
+          L'ho sentito in <em>televisione</em>
+        </dd>
+        <dt>
+          ma:
+        </dt>
+        <dd>
+          L'ho <em>trovato</em> sul Web<br />
+          Lo <em>cerco</em> sul Web
+        </dd>
+        <dt>
+          o ancora:
+        </dt>
+        <dd>
+          Lo <em>metto</em> sul Web
+        </dd>
+        <dt>
+          e in futuro:
+        </dt>
+        <dd>
+          &hellip;
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        L&rsquo;invenzione del web
+      </h1>
+      <ul>
+        <li>
+          <em>Non un Eureka</em>
+        </li>
+        <li>
+          <em>non la mitica mela di Newton</em>
+        </li>
+        <li>la potenza di <em>combinare</em> le idee in modo <em>
+          libero</em> ("weblike") ...
+        </li>
+        <li>risposta a una <em>sfida</em>
+        </li>
+        <li>combinazione di idee e realizzazioni da parte anche
+        di <em>molti altri</em>
+        </li>
+        <li>finalmente un' <em>idea nuova</em>, stimolata da un
+        ambiente di ricerca di altissimo livello: <em>combinare
+        in modo libero le idee</em>
+        </li>
+      </ul>
+      <p>
+        Un <em>processo di accrescimento</em>, non la soluzione
+        lineare di una serie di problemi ben definiti.
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Le radici del Web
+      </h1>
+      <div class="divcenter">
+        <img src="images/webOrigins.png" width="100%" alt=
+        "le origini del Web: Esigenze (CERN), Tools (SGML, Internet, Hypertext) permettono a Tim Berners-Lee di inventare il World Wide Web e poi fondare il W3C"
+        style="max-width: 714px" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Internet
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Tutto comincia guardando alla luna&hellip;
+      </h1>
+      <div class="column50">
+        <img src="images/600px-Moon_PIA00302.jpg" width="100%"
+        alt="" style="max-width: 600px;" />
+      </div>
+      <div class="column50">
+        <img src="images/600px-Moon_PIA00304.jpg" width="100%"
+        alt="" style="max-width: 600px;" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;e con la gara per lo spazio
+      </h1>
+      <div class="divcenter">
+        <p>
+          <img src="images/732px-Sputnik_asm.jpg" width="100%"
+          alt="foto dello Sputnik" style="max-width: 732px;" />
+        </p>
+        <p>
+          4 ottobre 1957: lancio dello <a href=
+          "http://it.wikipedia.org/wiki/Sputnik_1">Sputnik</a>
+        </p>
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        ARPANET&hellip;
+      </h1>
+      <ul>
+        <li>4 ottobre 1957: lancio dello <em><a href=
+        "http://it.wikipedia.org/wiki/Sputnik_1">Sputnik</a></em>
+        </li>
+        <li>7 febbraio 1958: il dipartimento della difesa USA
+        avvia il progetto <em>ARPA</em> (Advanced Research
+        Project Agency per: &ldquo; provide within the Department
+        of Defense an agency for the direction and performance of
+        certain advanced research and development projects
+        &rdquo;
+        </li>
+        <li>1962: J.C.R. <em>Licklider</em> capo di ARPA per
+        migliorare l' uso militare della computer technology
+        </li>
+        <li>1969: <em>il primo collegamento</em>: UCLA-Stanford
+        </li>
+        <li>1970: le prime <em>LAN</em> (ethernet a Xerox PARC)
+        </li>
+        <li>1972: prima dimostrazione pubblica di
+        <em>ARPANET</em>: la prima rete operativa basata sulla
+        tecnologia della commutazione di pacchetto (<em>packet
+        switching</em>) invece che sulla commutazione di
+        circuito.
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        &hellip; nel 1969&hellip;
+      </h1><img src="images/arpanet1969.png" width="100%" alt=
+      "arpanet nel 1969" style=
+      "max-width: 685px; float:right;" />
+      <ol>
+        <li>UCLA: Network Measurement Center
+        </li>
+        <li>SRI: Network Information Center
+        </li>
+        <li>UCSB: Culler-Fried interactive mathematics
+        </li>
+        <li>Utah: 3D graphics <!-- (hidden line removal) -->
+        </li>
+      </ol>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;nel 1971&hellip;
+      </h1>
+      <div class="divcenter">
+        <img src="images/arpanet71.gif" width="100%" alt=
+        "arpanet nel 1971" style="max-width: 529px;" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;Ray Tomlinson: la magica @&hellip;
+      </h1>
+      <div class="column40">
+        <p>
+          <img src="images/TM2121.jpg" alt="TM2121" style=
+          "max-width: 230px;" />
+        </p>
+        <p>
+          <img src="images/firstEmail.jpg" alt=
+          "computer who sent the first email" width="100%" style=
+          "max-width: 640px;" /><br />
+          (Fotografia di <a href="http://www.opost.com/dlm/">Dan
+          Murphy</a>)
+        </p>
+      </div>
+      <div class="column60">
+        <p>
+          home page: <a href=
+          "http://openmap.bbn.com/~tomlinso/ray/home.html">http://openmap.bbn.com/~tomlinso/ray/home.html</a>
+        </p>
+        <ul>
+          <li>estate-autunno 1971: crea <em>SNDMSG</em>, un
+          programma di posta per inviare messaggi su una rete
+          distribuita
+          </li>
+          <li>fine (dicembre?) 1971: estende il programma agli
+          utenti ARPANET, usando il simbolo "<em>@</em>" come
+          parte dell' indirizzo
+          </li>
+          <li>
+            <a href=
+            "http://openmap.bbn.com/~tomlinso/ray/firstemailframe.html">
+            perch&eacute; "<em>@</em>"?</a><br />
+            (vedi <a href=
+            "http://openmap.bbn.com/~tomlinso/ray/mistakes.html">le
+            false leggende</a> e la <a href=
+            "http://www.pdp8.net/asr33/pics/kbd_top_nocover.shtml?large">
+            tastiera</a> della ASR 33 Teletype)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        &hellip;verso TCP/IP&hellip;
+      </h1>
+      <ul>
+        <li>1973: Kahn e Cerf
+          <ul>
+            <li>iniziano a lavorare su <em>modelli aperti per
+            l'interconnessione</em> per progettare la generazione
+            successiva dei protocolli per ARPANET
+            </li>
+            <li>le differenze di protocollo vengono mascherate
+            usando un <em>internetwork protocol</em> comune
+            </li>
+            <li>responsabilit&agrave; dell'affidabilit&agrave;
+            della trasmissione dei messaggi demandata agli
+            <em>host</em>
+            </li>
+            <li>ruolo della rete <em>ridotto al minimo</em> (vedi
+            <a href="http://tools.ietf.org/html/rfc1149"
+              hreflang="en">IETF RFC 1149</a> del 1990-04-01:
+              <em>A Standard for the Transmission of IP Datagrams
+              on Avian Carriers</em>) [<a href=
+              "rfc1149.htm">local file rfc1149</a>]
+            </li>
+          </ul>
+        </li>
+        <li>Dicembre 1974: prima specifica di <em>TCP</em>
+        (Transfer Control Protocol) per internetworking
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;e Internet
+      </h1>
+      <ul>
+        <li>luglio 1977: dimostrazione a grande scala di
+        <em>internetworking</em> mediante ARPANET
+        </li>
+        <li>
+          <em>ISO/OSI</em> (Open System Interconnection)
+        </li>
+        <li>Internet al CERN
+          <ul>
+            <li>CERNET: protocolli definiti su base locale
+            </li>
+            <li>1981-83: IP per comunicazione via satellite (RAL,
+            CERN e Pisa)
+            </li>
+            <li>1983: Ethernet al CERN
+            </li>
+            <li>1984: implementazione pilota di TCP/IP
+            </li>
+            <li>1989: CERN connesso a Internet
+            </li>
+            <li>1990: CERN pi&ugrave; grosso sito Internet in
+            Europa
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        Nel 1989 Tim Berners-Lee pu&ograve; creare il World Wide
+        Web basato su <em>distributed computing</em> e
+        <em>Internet</em>.
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        SGML (breve storia del markup)
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il text retrieval
+      </h1>
+      <div class="column20">
+        <img src="images/naturalisHistoria.jpg" alt=
+        "Naturalis Historia - frontespizio" width="100%" style=
+        "max-width: 235px" />
+      </div>
+      <div class="column60">
+        <ul>
+          <li>La <em>Naturalis Historia</em> di Plinio il Vecchio
+          </li>
+          <li>In 37 libri
+          </li>
+          <li>Pubblicata nel 77 d.C.
+          </li>
+          <li>Il primo libro, pubblicato nel 79 d.C. dal nipote
+          Plinio il Giovane, contiene il <em>sommario dei libri
+          successivi</em> ed un <em>elenco delle fonti</em> per
+          ciascun libro
+          </li>
+          <li>
+            <em>I primi metadati?</em>
+          </li>
+        </ul>
+      </div>
+      <div class="column20">
+        <img src="images/plinioIlVecchio.jpg" alt=
+        "Plinio il Vecchio-immagine" width="100%" style=
+        "max-width: 178px" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        In principio fu lo scriptorium&hellip;
+      </h1>
+      <div class="divcenter">
+        <img src="images/Escribano.jpg" alt=
+        "miniatura di un amanuense" width="100%" style=
+        "max-width: 600px" />
+        <p>
+          <em>stat rosa pristina nomine, nomina nuda tenemus</em>
+        </p>
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;e i manoscritti
+      </h1>
+      <p>
+        <img src="images/t15b.jpg" alt="manoscritto" title=
+        "Bibbia, in latino. Manoscritto in pergamena della prima met&agrave; del sec. XIII - fonte: http://www.regione.sicilia.it/beniculturali/bibliotecacentrale/tesori/immagini/t15.jpg"
+        class="floatright" height="70%"  style=
+        "max-width: 465px; height: 70%" /> <img src=
+        "images/t14a.jpg" alt="manoscritto" title=
+        "Bibbia, in latino. Manoscritto in pergamena della prima met&agrave; del sec. XIII - fonte: http://www.regione.sicilia.it/beniculturali/bibliotecacentrale/tesori/immagini/t14a.jpg"
+        class="floatleft" height="70%" style=
+        "max-width: 471px; height: 70%" /> Bibbia, in
+        latino.<br />
+        Manoscritto in pergamena (prima met&agrave; del sec.
+        XIII)
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Poi venne Gutenberg&hellip;
+      </h1><img src="images/Gutenberg_Bible.jpg" alt=
+      "Gutenberg - la Bibbia" height="70%" width="100%" style=
+      "max-width: 925px" /> 
+      <!-- <img src="images/Gutenberg_Bible_(page).JPG" alt=
+      "Gutenberg - la Bibbia" /> -->
+      <p>
+        (http://upload.wikimedia.org/wikipedia/commons/b/b0/Gutenberg_Bible.jpg)
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip; e nacque il markup
+      </h1>
+      <ul>
+        <li>Il temine deriva dalla pratica dell' editoria
+        tradizionale
+        </li>
+        <li>Il <em>marking up</em> dei manoscritti consiste nell'
+        aggiungere istruzioni simboliche a margine dei
+        manoscritti
+        </li>
+        <li>A cura di personale specializzato e correttori di
+        bozze<br />
+        </li>
+      </ul>
+      <table border="1" summary="alcuni simboli di markup">
+        <tr>
+          <td>
+            <img src="./images/paragrph.gif" alt="paragrafo" />
+          </td>
+          <td>
+            Paragrafo
+          </td>
+          <td>
+            <img src="./images/closeup.gif" alt=
+            "pi&ugrave; vicino" />
+          </td>
+          <td>
+            Diminuire lo spazio orizzontale
+          </td>
+          <td>
+            <img src="./images/insrtcpy.gif" alt=
+            "inserire annotazione a margine" />
+          </td>
+          <td>
+            Inserire il testo a margine
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="./images/uppcase.gif" alt="in maiuscolo" />
+          </td>
+          <td>
+            In maiuscolo
+          </td>
+          <td>
+            <img src="./images/moveleft.gif" alt="a sinistra" />
+          </td>
+          <td>
+            Spostare a sinistra
+          </td>
+          <td>
+            <img src="./images/moverigh.gif" alt="a destra" />
+          </td>
+          <td>
+            Spostare a destra
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Poi venne la tecnologia
+      </h1>
+      <ul>
+        <li>La macchina da scrivere IBM (la <a href=
+        "images/IBM_Selectric.jpg">Golfball Typewriter</a> con la
+        "<a href=
+        "images/IBM_Selectric_Globe_Wiki.jpg">pallina</a>",
+        peraltro preceduta dalla <a href=
+        "images/Blickensderfer_typewriter.jpg">Blickensderfer</a>)
+        con la qualit&agrave; di stampa
+        </li>
+        <li>I sistemi in timesharing (editing e markup
+        interattivo) [<a href="images/ibm_2741_terminal.jpg">il
+        terminale IBM2741</a>]
+        </li>
+        <li>E nacquero vari sistemi di markup (proprietari)
+        </li>
+        <li>
+          <em>Il markup era mescolato al contenuto</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Nasce il "generic coding"
+      </h1>
+      <ul>
+        <li>
+          <em>William Tunnicliffe</em> della Graphic
+          Communications Association (GCA)
+          <ul>
+            <li>compagnia privata
+            </li>
+            <li>edizione delle pagine gialle
+            </li>
+            <li>impaginazione ex novo ogni anno
+            </li>
+            <li>presentazione dal titolo: "<em>The Separation of
+            Information Content of Documents from their
+            Format</em>" ad un meeting del Canadian Government
+            Printing Office nel <em>settembre 1967</em>
+            </li>
+          </ul>
+        </li>
+        <li>GCA inizia il progetto <em>GenCode</em>
+          <ul>
+            <li>markup generalizzato basato sulla struttura
+            gerarchica del documento
+            </li>
+            <li>tentativo di standardizzazione di un insieme di
+            elementi comuni
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        GML
+      </h1>
+      <ul>
+        <li>Charles <span class="acronym">G</span>oldfarb, Edward
+        <span class="acronym">M</span>osher e Raymon
+          <span class="acronym">L</span>orie in IBM iniziano lo
+          sviluppo di <em><span class=
+          "acronym">G</span>eneralized <span class=
+          "acronym">M</span>arkup <span class=
+          "acronym">L</span>anguage</em> (GML)
+        </li>
+        <li>Possibilit&agrave; di definire il proprio markup
+        </li>
+        <li>Possibilit&agrave; di validare il documento rispetto
+        ad una Document Type Definition
+        </li>
+        <li>Per la prima volta tagging gerarchico con apertura e
+        chiusura
+        </li>
+        <li>Quali tag sono ammessi e dove
+        </li>
+        <li>I tag possono essere omessi se la loro posizione
+        &egrave; ovvia
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        GML: un esempio
+      </h1>
+      <pre>
+<em>:book.</em>
+<em>:body.</em>
+<em>:h1.</em>Introduzione
+<em>:p.</em>Il GML supportava contenitori gerarchici, come
+<em>:ol.</em>
+<em>:li.</em>Liste ordinate (come questa),
+<em>:li.</em>Liste non ordinate, e
+<em>:li.</em>Liste di definizione
+<em>:eol.</em>
+<em>:p.</em>e strutture semplici
+<em>:p.</em>&Egrave; stato possibile omettere i tag di chiusura 
+   per gli elementi "h1" e "p", grazie al principio di minimalizzazione.
+</pre>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        SGML
+      </h1>
+      <ul>
+        <li>Vedi <a href="./historySGML.html">Storia</a>
+        </li>
+        <li>1978: ANSI inizia il lavoro su uno standard per la
+        descrizione di testi basata su GML (con il supporto di
+        GCA)
+        </li>
+        <li>Tunnicliffe convince la US Navy a standardizzarsi
+        sull' initial SGML Draft
+        </li>
+        <li>1983: Working Draft accettato da DoD e IRS (US
+        Internal Revenue Service)
+        </li>
+        <li>1984: Passaggio all' ISO
+        </li>
+        <li>1985: Draft International Standard (DIS)
+        </li>
+        <li>Anders Berglund al CERN implementa il DIS e usa SGML
+        per il testo dell' IS
+        </li>
+        <li>1986: SGML (ISO 8879)
+          <ul>
+            <li>
+              <em>SGML declaration</em>: definisce i delimitatori
+              per il markup
+            </li>
+            <li>
+              <em>Document Type Definition</em>: struttura e
+              regole per il markup del documento
+            </li>
+            <li>
+              <em>Documento</em>: fa riferimento ai due
+              precedenti, input manuale, tagging non strettamente
+              vincolante, parser pi&ugrave; complesso
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        SGML al CERN
+      </h1>
+      <pre>
+<em>&lt;BODY&gt;</em>
+<em>&lt;H1&gt;</em>Introduction
+This manual describes how to build a distributed system using the
+Remote Procedure Call system developed in the Online Group
+of the DD Division of CERN, the European Particle Physics Laboratory.
+<em>&lt;h2&gt;</em> The system
+The remote procedure call product consists of two essential parts:
+an RPC compiler which is used during development of an application,
+and the RPC run time system, which is part of the run time code.
+Target systems supported are
+<em>&lt;ul&gt;</em>
+<em>&lt;li&gt;</em>VAX/VMS,
+<em>&lt;li&gt;</em>Unix (Berkley 4.3 or Ultrix or equivalent)
+<em>&lt;li&gt;</em>stand-alone M680x0 (MoniCa) systems (Valet-Plus, etc)
+<em>&lt;li&gt;</em>stand-alone M6809 systems
+<em>&lt;li&gt;</em>M680x0 systems running RMS68K
+<em>&lt;li&gt;</em>M680x0 systems running OS9
+<em>&lt;li&gt;</em>The IBM-PC running TurboPascal or Turbo-C
+<em>&lt;li&gt;</em>The Macintosh running TurboPascal or MPW
+<em>&lt;/ul&gt;</em>
+</pre>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Tipi di markup
+      </h1>
+      <p>
+        James H. Coombs, Allen H. Renear, Steven J. DeRose:
+        <em>Markup Systems and the Future of Scholarly Text
+        Processing</em> (Communications of the ACM 30, November
+        1987; 933-47)
+      </p>
+      <ul class="outline">
+        <li>Punctuational
+          <ul>
+            <li>molte differenze stilistiche, ambiguo per il text
+            formatting
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Presentational</em>
+          <ul>
+            <li>spaziatura orizzontale e verticale, interruzioni
+            di pagina, numerazione dei paragrafi
+            </li>
+            <li>in genere affidata al text formatter per le parti
+            ripetitive, ma integrata da modifiche "locali"
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Procedural</em>
+          <ul>
+            <li>comandi che specificano come formattare il testo,
+            es. <code>.sk 3 a; .in +10 -10; .ls 0; .cp 2;</code>
+            </li>
+            <li>tipicamente associato ad un formattatore batch
+            (nroff/troff, TeX)
+            </li>
+            <li>in molti sistemi coesistono comandi di editing
+            "presentational" e "dot commands"
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Descriptive</em>
+          <ul>
+            <li>gli autori identificano il <em>tipo</em> di
+            porzioni di testo
+            </li>
+            <li>per preparare la versione per la presentazione il
+            text formatter legge un insieme di regole scritte in
+            un sistema di "procedural markup"
+            </li>
+            <li>presentazioni diverse si ottengono modificando le
+            regole
+            </li>
+            <li>la metafora dello style sheet orienta gli autori
+            verso la presentazione piuttosto che verso il ruolo
+            delle entit&agrave; nel documento
+            </li>
+          </ul>
+        </li>
+        <li>Referential
+          <ul>
+            <li>fa riferimento a entit&agrave; esterne al
+            documento
+            </li>
+            <li>viene sostituito da queste entit&agrave; nella
+            fase di processing
+            </li>
+          </ul>
+        </li>
+        <li>Metamarkup
+          <ul>
+            <li>controllo dell' interpretazione del markup
+            </li>
+            <li>estensione del vocabolario del markup descrittivo
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Hypertext
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Vannevar Bush
+      </h1>
+      <div class="column30">
+        <p>
+          <img src="images/bush2.gif" alt="bush2" width="100%"
+          style="max-width: 173px" />
+        </p>
+        <p>
+          <img src="images/vb21.gif" alt="vb21" width="100%"
+          style="max-width: 239px" />
+        </p>
+        <!-- <p><img src="images/analyser.jpg" alt="analyser" /></p> -->
+      </div>
+      <div class="column70">
+        <ul>
+          <li>1927: computer analogico per la risoluzione di
+          equazioni
+          </li>
+          <li>1930: Analizzatore differenziale (meccanico)
+          </li>
+          <li>1935: Analizzatore differenziale
+          (elettro-meccanico):
+            <ul>
+              <li>100 tonnellate,
+              </li>
+              <li>2000 valvole,
+              </li>
+              <li>150 motori,
+              </li>
+              <li>oltre 300 Km di cavi.
+              </li>
+              <li>Utilizzato nel progetto Manhattan.
+              </li>
+            </ul>
+          </li>
+          <li>circa 1940: Rapid Selector, memorizzazione di
+          microfilm e information retrieval
+          </li>
+          <li>1945: <em>As We May Think</em> (in Atlantic
+          Monthly, Luglio 1945))
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Il Memex
+      </h1>
+      <div class="divcenter">
+        <img src="images/memexlg.jpg" alt="memexlg" width="100%"
+        style="max-width: 501px" />
+      </div>
+      <blockquote>
+        <p>
+          A memex is a device in which an individual stores his
+          books, records and communications and which is
+          mechanized so that it may be consulted with exceeding
+          <em>speed and flexibility</em>. It is an enlarged
+          intimate <em>supplement to his memory</em>.
+        </p>
+        <p>
+          The memex "affords an immediate step, however, to
+          <em>associative indexing</em>, the basic idea of which
+          is a provision whereby any item may be caused at will
+          to select immediately and automatically another. This
+          is the essential feature of the memex. <em>The process
+          of tying two items together is the important
+          thing</em>."
+        </p>
+      </blockquote>
+      <p>
+        (Una riproduzione dell' articolo a: <a href=
+        "http://www.multimedialab.be/doc/citations/bush_aswemaythink.pdf"
+        hreflang=
+        "en">http://www.multimedialab.be/doc/citations/bush_aswemaythink.pdf</a>
+        o copia locale a: <a href=
+        "bush_aswemaythink.pdf">bush_aswemaythink</a>)
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Douglas (Doug) Englebart
+      </h1>
+      <div class="column20">
+        <p>
+          <img src="images/engelbart.gif" alt="englebart" width=
+          "100%" style="max-width: 180px" />
+        </p>
+        <p>
+          <img src="images/englebart2.gif" alt="englebart2"
+          width="100%" style="max-width: 169px" />
+        </p>
+      </div>
+      <div class="column80">
+        <ul>
+          <li>Sempre in anticipo sui tempi
+          </li>
+          <li>Nel 1960 inventa il mouse
+          </li>
+          <li>"augmenting human intellect"
+          </li>
+          <li>Tra il 1960 e il 1970 sviluppa il sistema
+          <em>NLS</em> (o<em>N</em><em>L</em>ine
+          <em>S</em>ystem), prima implementazione dell'
+          ipertesto.
+          </li>
+          <li>NLS &egrave; ilprimo sistema che utilizza il
+          <em>mouse</em>
+          </li>
+          <li>Famosa la <a href=
+          "http://sloan.stanford.edu/MouseSite/1968Demo.html">demo</a>
+          del 1968 alla Fall Joint Computer Conference in San
+          Francisco
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Ted Nelson e la definizione di ipertesto (1965)
+      </h1>
+      <p>
+        <img src="images/tednelson.jpg" alt="tednelson" width=
+        "100%" style="max-width: 400px; float:right;" /> <em>A
+        body of written or pictorial material interconnected in a
+        complex way that it could not be conveniently represented
+        on paper. It may contain summaries or maps of its
+        contents and their interrelations; it may contain
+        annotations, additions and footnotes from scholars who
+        have examined it.</em>
+      </p>
+      <p>
+        Per saperne di pi&ugrave; su ted Nelson:<br />
+        <a href=
+        "http://ted.hyperland.com/">http://ted.hyperland.com/</a>,
+        <a href=
+        "http://xanadu.com.au/ted/">http://xanadu.com.au/ted/</a>
+      </p>
+      <p>
+        Progetto Xanadu (1965-1999):
+      </p>
+      <ul>
+        <li>Pay-per-link
+        </li>
+        <li>Bi-directional links
+        </li>
+        <li>Universo dei documenti
+        </li>
+        <li>Progetto durato oltre 32 anni
+        </li>
+      </ul>
+      <hr />
+      <p>
+        <em>Talvolta i risultati migliori si ottengono
+        ridimensionando gli obiettivi</em>
+      </p>
+      <p>
+        Tim e Ted si incontrano nel 1992, e Tim salda il debito
+        per la copia di <em>Literary Machines</em> (pubblicato
+        nel 1981)
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Tim Berners-Lee
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Brevi note biografiche
+      </h1>
+      <div class="column30">
+        <p>
+          <img src="images/tbl-300high.jpg" alt="tbl-300high"
+          width="100%" style="max-width: 171px" />
+        </p>
+        <p>
+          <img src="images/tim.png" alt="tim" width="100%" style=
+          "max-width: 352px" />
+        </p>
+      </div>
+      <div class="column70">
+        <ul>
+          <li>
+            <a href=
+            "http://www.w3.org/People/Berners-Lee/Longer.html">Biografia
+            di Tim</a>
+          </li>
+          <li>nato a Londra, l' 8 giugno 1955
+          </li>
+          <li>figlio di Mary Lee e Conway Berners-Lee, due
+          matematici che lavoravano nel gruppo che sviluppava il
+          Ferranti Mark 1
+          </li>
+          <li>1973-76: laurea in fisica (Queens College, Oxford)
+          </li>
+          <li>1980: breve lavoro di consulenza al CERN
+          </li>
+          <li>1984: di nuovo al CERN
+          </li>
+          <li>1989: presenta una proposta di progetto
+          </li>
+          <li>1990: scrive il brimo browser
+          </li>
+          <li>1994: fonda il World Wide Web Consortium
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Il tarlo del meccanismo associativo
+      </h1>
+      <p>
+        Una volta discusse con il padre come rendere intuitivo il
+        computer, e metterlo in grado di realizzare le
+        <em>associazioni</em> tipiche della mente umana
+      </p>
+      <p>
+        Nel 1980, durante il primo soggiorno al CERN, matura il
+        concetto:<br />
+        <em>Suppose all the information stored on computers
+        everywhere were linked. Suppose I could program my
+        computer to create a space in which anything could be
+        linked to anything.</em>
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Qui puoi trovare tutto ...
+      </h1>
+      <div class="column40">
+        <img src="images/enquire.jpg" alt="" width="100%" style=
+        "max-width: 376px" />
+      </div>
+      <div class="column60">
+        <p>
+          I suoi genitori avevano una copia del libro di epoca
+          Vittoriana. Ne aveva ricevuta un' altra copia in regalo
+          dal suo padrino.
+        </p>
+        <p>
+          <em>Staying in a House without Staff</em>
+        </p>
+        <p>
+          It is for the guest to be as unobtrusively helpful to
+          host and hostess. The simplest thing is to ask exactly
+          how you may do this and also remember that there are
+          times when even the most saught-after guest may get in
+          the way of the routine domestic chores - it is often
+          easier, for example, to opt for breakfast in bed while
+          the hostess copes with the early morning routine.
+        </p>
+        <p>
+          In any household (even that of a millionaire), the
+          thoughtful guest does not make free with the
+          establishment's drinks, cigarettes, postal and
+          telephone facilities, nor does he or she demand
+          numerous additional services from the staff.
+        </p>
+      </div>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        La sfida dei gruppi di lavoro al CERN
+      </h1>
+      <ul>
+        <li>Grossi gruppi distribuiti
+        </li>
+        <li>Progettazione e realizzazione di apparecchiature
+        complesse
+        </li>
+        <li>Progetti di lunga durata
+        </li>
+        <li>Analisi distribuita dei risultati
+        </li>
+        <li>Le difficolt&agrave; negli anni 80
+          <ul>
+            <li>Variet&agrave; di computer e di sistemi di rete
+            </li>
+            <li>Accesso in modo diverso ai vari tipi di
+            informazione
+            </li>
+            <li>Grossi investimenti in termini di energie umane
+            </li>
+            <li>Frustrazione e inefficienza
+            </li>
+          </ul>
+        </li>
+        <li>Una <em>sfida</em> per Tim Berners-Lee: <em>come
+        consentire l' accesso alle varie fonti di informazione in
+        maniera semplice e coerente</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Il primo periodo al CERN (1980)
+      </h1>
+      <p>
+        <em>Programmatore a contratto</em>
+      </p>
+      <ul>
+        <li>Difficolt&agrave; nel mantenere traccia delle
+        persone, dei programmi, dei vari sistemi
+        </li>
+        <li>Scrive, nel tempo libero, un programma per uso
+        personale: "<em>Enquire-Within-Upon-Everything</em>"
+        </li>
+        <li>Nodi e link
+        </li>
+        <li>Per creare un nuovo nodo occorre creare un link che
+        parte da un nodo <em>gi&agrave; esistente</em>
+        </li>
+        <li>Tutti i nodi possono essere collegati da link
+        </li>
+        <li>Occorre specificare il <em>tipo</em> di link
+        </li>
+        <li>Ogni nodo ha un <em>titolo</em>, un <em>tipo</em>, e
+        una lista di <em>link tipati bidirezionali</em>
+        </li>
+        <li>"ENQUIRE" era scritto in Pascal e girava su una Norsk
+        Data con sistema operativo SINTRAN-III
+        </li>
+        <li>Non usato su vasta scala
+        </li>
+        <li>Versione originale andata perduta
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Il secondo periodo al CERN (1984-89)
+      </h1>
+      <ul>
+        <li>Scrive Tangle
+        </li>
+        <li>Scrive una procedura RPC
+        </li>
+        <li>Cerca di ricreare Enquire sul suo portatile (solo
+        link interni)
+        </li>
+        <li>1989: scrive la proposta&hellip;
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        &ldquo;Vague but exciting&rdquo;
+      </h1>
+      <ul>
+        <li>Marzo 1989: <a href=
+        "http://www.w3.org/History/1989/proposal.html"
+          hreflang="en">Information Management: A Proposal</a>
+        </li>
+        <li>Il suo capo, Mike Sendall, la giudica:
+          &ldquo;<a href="images/proposal.gif">Vague, but
+          exciting</a>&rdquo;, e la proposta non riceve risposta
+        </li>
+        <li>Maggio 1990: ripresenta la proposta, di nuovo senza
+        successo
+        </li>
+        <li>Compare sul mercato la NEXT, con caratteristiche
+        interessanti per sviluppare il progetto
+        </li>
+        <li>TBL chiede a Mike Sendall di acquistargliene una
+        e&hellip;
+        </li>
+        <li>Mike Sendall acconsente, e gli propone di utilizzarla
+        per sviluppare il suo progetto
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Nasce il Web&hellip;
+      </h1>
+      <div class="divcenter">
+        <img src="images/timbl-1989-image.gif" alt="tbl original"
+        width="100%" style="max-width: 512px" />
+      </div>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        &hellip;e HTML
+      </h1>
+      <ul>
+        <li>Nel 1989 Tim Berners-Lee propone la <em>condivisione
+        di documenti</em>
+        </li>
+        <li>Anders Berglund consiglia di adottare lo <em>standard
+        SGML</em>
+        </li>
+        <li>Viene definita una semplice <em>DTD SGML</em>, basata
+        sulla prima DTD pubblica, scritta da Charles Goldfarb,
+        sviluppandone una versione ipertestuale chiamata HTML
+        </li>
+        <li>
+          <em>HTML</em> nasce in tempi brevissimi
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <h1>
+      Il secondo periodo al CERN (1989-1994)
+    </h1>
+    <ul>
+      <li>La proposta del marzo 1989: <a href=
+      "http://www.w3.org/History/1989/proposal.html">"Information
+      Management: A Proposal"</a> contiene i tre elementi
+      fondamentali:
+        <ul>
+          <li>
+            <em>universal resource locator</em>
+          </li>
+          <li>
+            <em>protocollo per il fetch dei documenti</em>
+          </li>
+          <li>
+            <em>document mark-up</em>
+          </li>
+        </ul>
+      </li>
+      <li>Implementa su una macchina Next il primo World Wide Web
+      server, &ldquo;<em>httpd</em>&rdquo;, e il primo client,
+      &ldquo;<em>WorldWideWeb</em>&rdquo; un
+      what-you-see-is-what-you-get hypertext
+      <em>browser/editor</em>
+        <ul>
+          <li>&ldquo; designed to allow people to <em>work
+          together</em> by <em>combining their knowledge</em> in
+          a <em>web of hypertext documents</em> &rdquo;
+          </li>
+          <li>
+            <em>ottobre 1990</em>: inizio dello sviluppo
+          </li>
+          <li>
+            <em>dicembre 1990</em>: il programma
+            &ldquo;<em>WorldWideWeb</em>&rdquo; reso disponibile
+            al CERN
+          </li>
+          <li>
+            <em>estate 1991</em>: il programma
+            &ldquo;<em>WorldWideWeb</em>&rdquo; reso disponibile
+            su Internet
+          </li>
+        </ul>
+      </li>
+      <li>1991-93: Continua la progettazione e lo sviluppo del
+      Web al CERN
+      </li>
+      <li>Raffinamento delle specifiche iniziali di <em>URI</em>,
+      <em>HTTP</em> e <em>HTML</em>
+      </li>
+    </ul>
+    <!-- ===================================================================== -->
+    <h1>
+      Il primo Web Browser (1)
+    </h1>
+    <p>
+      <img src="images/firstBrowser.gif" alt=
+      "screen shot of Next Browser" width="100%" style=
+      "max-width: 1120px" />
+    </p>
+    <!-- ===================================================================== -->
+    <h1>
+      Il primo Web Browser (2)
+    </h1>
+    <p>
+      <img src="images/timsEditor.jpg" alt="editor web di Tim"
+      width="100%" style="max-width: 1120px" />
+    </p>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1 class="yes">
+        L&rsquo;approccio
+      </h1>
+      <p>
+        Dalla fisica:<br />
+        Trovate le <em>regole semplici</em> che descrivono il
+        comportamento di oggetti <em>semplici e piccoli</em>
+        ...<br />
+        ... si ha la chiave per spiegare il comportamento di
+        sistemi molto <em>complessi e grandi</em>
+      </p>
+      <p>
+        Definire le poche e semplici regole comuni dei
+        <em>protocolli</em> che permettono ai computer di
+        parlarsi tra di loro.
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1 class="yes">
+        Tre concetti essenziali
+      </h1>
+      <dl>
+        <dt>
+          URI
+        </dt>
+        <dd>
+          <em>Universal Resource Identifier</em>: cosa significa
+          come indirizzo.<br />
+          &Egrave; l' innovazione pi&ugrave;
+          <em>fondamentale</em> del Web.<br />
+          Qualunque programma Web lo utilizza quando segue un
+          link.<br />
+          Una volta che un documento ha un URI, pu&ograve; essere
+          <em>memorizzato</em> su un server e <em>ritrovato</em>
+          da un browser.<br />
+          Non esiste un archivio centralizzato di URI.
+        </dd>
+        <dt>
+          HTTP
+        </dt>
+        <dd>
+          <em>Hypertext Transfer Protocol</em>: la sequenza con
+          cui i computer interagiscono e si scambiano
+          informazioni.<br />
+          La <em>format negotiation</em> permette la coesistenza
+          di tutti i tipi di formato.
+        </dd>
+        <dt>
+          HTML
+        </dt>
+        <dd>
+          <em>Hypertext Markup Language</em>: se due computer
+          usano lo stesso software per rappresentare i dati,
+          possono scambiarli in modo nativo, altrimenti, li
+          possono tradurre in HTML.<br />
+          HTML descrive la <em>struttura</em>, non la
+          presentazione.<br />
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1 class="yes">
+        Tutto qui?
+      </h1>
+      <ul>
+        <li>Quando qualcuno, da qualche parte, rende disponibile
+        un' informazione, questa deve essere accessibile da <em>
+          chiunque</em>, con <em>qualsiasi computer</em>, in
+          <em>qualsiasi paese</em> (a meno di problemi di
+          autorizzazione)
+        </li>
+        <li>L' <em>ipertesto globale</em> era una prospettiva del
+        tutto nuova: accesso mediante <em>navigazione</em>
+        </li>
+        <li>La possibilit&agrave; di puntare a qualsiasi risorsa
+        permette di implementare il meccanismo
+        <em>associativo</em>
+        </li>
+        <li>Il Web &egrave; uno spazio informativo universale, in
+        cui ognuno pu&ograve; accedere all' informazione e
+        modificarla (<em>browser/editor</em>)
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide">
+      <h1 class="yes">
+        Quello che fa la differenza&hellip;
+      </h1>
+      <ul>
+        <li>Ambiente totalmente <em>decentralizzato</em>
+        </li>
+        <li>
+          <em>Interoperabilit&agrave;</em>
+        </li>
+        <li>Non <em>autorit&agrave;</em>, ma
+        <em>autorevolezza</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide">
+      <h1>
+        Qualche curiosit&agrave;
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Come nasce il nome World Wide Web
+      </h1>
+      <dl class="incremental">
+        <dt>
+          Mesh o Information Mesh
+        </dt>
+        <dd>
+          troppo simile a <em>mess</em>
+        </dd>
+        <dt>
+          Mine of Information (MOI)
+        </dt>
+        <dd>
+          troppo egocentrico
+        </dd>
+        <dt>
+          The Information Mine (TIM)
+        </dt>
+        <dd>
+          anche pi&ugrave; egocentrico!!
+        </dd>
+        <dt>
+          World Wide Web
+        </dt>
+        <dd>
+          nonostante molti pareri contrari
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        URI/URL
+      </h1>
+      <ul>
+        <li>Universal Resource Identifier
+        </li>
+        <li>Nel meeting IETF (1992) vengono sollevate opposizioni
+        al termine <em>Universal</em>
+        </li>
+        <li>Pragmaticamente, accetta <em>Uniform</em> invece di
+        Universal, e quindi nasce: <em>Uniform Resource
+        Locator</em> (<em>URL</em>)
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <!-- <div class="slide">
+      <h1>
+        URL, URN, URI: chi sono costoro?
+      </h1>
+      <ul>
+        <li>
+        ??????????????????????????????????????????????????????????????????
+        </li>
+      </ul>
+    </div> -->
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Il rapporto con l&rsquo; accademia: Hypertext91
+      </h1><img src="images/poster.jpg" alt="poster" width="100%"
+      style="max-width: 400px; float:right;" />
+      <ul>
+        <li>Il lavoro viene <em>rifiutato</em>
+        </li>
+        <li>Almeno uno dei revisori afferma che:<br />
+          <em>il sistema proposto viola i principi architetturali
+          su cui si basano tutti i sistemi ipertestuali</em>
+        </li>
+        <li>Riesce a ottenere la possibilit&agrave; di dare una
+        <em>dimostrazione</em>
+        </li>
+        <li>Non tutti comprendono il <em>fattore di scala</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        L'importanza del contesto
+      </h1>
+      <p>
+        <img src="images/proposal.gif" alt=
+        "web proposal: vague but interesting" title=
+        "web proposal: vague but interesting" style=
+        "float:left; width:40%; max-width: 459px; margin-left:1em; margin-right:1em; margin-bottom:1ex; margin-top:1ex;" />
+         &ldquo; The people who built the Internet and Web have a
+        real appreciation of the <em>value of individuals</em>
+        and the value of systems in which individuals play their
+        role, with both a firm sense of their own identity and a
+        firm sense of some common good.<br />
+        [&hellip;]<br />
+        <img src="images/unitarianUniversalists.jpg" alt=
+        "The first Unitarian Universalists church in Cambridge (USA)"
+        title=
+        "The first Unitarian Universalists church in Cambridge (USA) - Photo by Oreste Signore"
+        style=
+        "float:right; width:40%; max-width: 459px; margin-left:1em; margin-right:0em; margin-bottom:1ex; margin-top:1ex;" />
+         I was very lucky, in working at CERN, to be in an
+        environment that <a href="http://www.uua.org/">Unitarian
+        Universalists</a> and physicists would equally
+        appreciate: one of <em>mutual respect</em>, and of
+        building something very great through <em>collective
+        effort</em> that was well beyond the means of any one
+        person - <em>without a huge bureaucratic
+        regime</em>.<br />
+        [&hellip;]<br />
+        The system produced a weird and wonderful machine, which
+        needed care to maintain, but could take advantage of the
+        <em>ingenuity</em>, <em>inspiration</em>, and
+        <em>intuition</em> of individuals in a special way.
+        <em>That, from the start, has been my goal for the World
+        Wide Web</em>. &rdquo;
+      </p>
+      <p style="float:right">
+        (Tim Berners-Lee - Weaving the Web, p. 208-209)
+      </p>
+    </div>
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        Tim e il successo economico
+      </h1>
+      <p>
+        People have sometimes asked me whether I am upset that I
+        have not made a lot of money from the Web. In fact, I
+        made some conscious decisions about which way to take my
+        life. These I would not change - though I am making no
+        comment on what I might do in the future. What does
+        distress me, though, is how important a question it seems
+        to be to some. This happens mostly in America, not
+        Europe. <em>What is maddening is the terrible notion that
+        a person's value depends on how important and financially
+        successful they are, and that is measured in terms of
+        money. That suggests disrespects for the researchers
+        across the globe developing ideas for the next leaps in
+        science and technology.</em><br />
+        Core in my upbringing was a value system that put
+        monetary gain well in its place, <em>behind things like
+        doing what I really want to do</em>. To use net worth as
+        a criterion by which judge people is to set out our
+        children's sights on cash rather than on things that will
+        actually make them happy.
+      </p>
+      <p>
+        It can be occasionally frustrating to think about things
+        my family could have done with a lot of money. But in
+        general I'm fairly happy to let other people be in the
+        Royal Family role (as it were), as long as they <em>don't
+        abuse the power they have as a result</em>. It's not as
+        if I can just make decisions that change the Web ... but
+        I can try to get an entire industry to do it. My priority
+        is to see the Web develop in a way that will hold us in
+        good stead for a long time. <em>If someone tries to
+        monopolize the Web - by, for example, pushing a
+        proprietary variation of network protocols - they're in
+        for fight</em>.
+      </p>
+      <p>
+        [da <em>Weaving the Web</em>, p. 107-108]
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Il W3C
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        World Wide Web Consortium (W3C)
+      </h1><img src="./images/tbl-so.jpeg" style="float:right"
+      height="267" width="180" alt="Photo of TBL" class=
+      "withBorder" />
+      <blockquote>
+        <p>
+          &ldquo;To lead the World Wide Web to its full potential
+          by developing protocols and guidelines that ensure
+          long-term growth for the Web&rdquo;
+        </p>
+      </blockquote>
+      <ul>
+        <li>Fondato da Tim Berners-Lee nel <a href=
+        "http://www.w3.org/Consortium/history.html" title=
+        "The history pages of W3C">1994</a>
+        </li>
+        <li>Definisce <em>Recommendation</em> aperte (<a href=
+        "http://www.w3.org/TR/" title=
+        "Link to the W3C Publications">Web Standards</a>)
+        </li>
+        <li>Svolge attivit&agrave; di formazione, sviluppa linee
+        guida&hellip;
+        </li>
+        <li>
+          <em>&Egrave; un forum neutrale per creare consenso
+          sugli standard web</em>
+        </li>
+        <li>Gli standard proposti <em>non derivano da posizioni
+        dominanti</em> sul mercato
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        I principi guida del W3C
+      </h1>
+      <ul>
+        <li>Web for <em>All</em>
+        </li>
+        <li>Web on <em>Everything</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il W3C &egrave; internazionale
+      </h1><!-- <div class="column60">
+        <img src="./images/World.png" width="100%" style=
+        "max-width: 732px" alt=
+        "The Globe, with dots denoting the hosts, the offices, and team residences" />
+        <p>
+          (W3C - <a href=
+          "http://www.w3.org/">http://www.w3.org/</a>)
+        </p>
+      </div>
+      <div class="column40"> -->
+      <ul>
+        <li>
+          <em>World Wide Web Consortium</em>
+          <ul class="incremental">
+            <li>3 host (<a href=
+            "http://www.csail.mit.edu/"><acronym title=
+            "Massachusetts Institute of Technology">MIT</acronym></a>,
+            <a href="http://www.ercim.org/"><acronym title=
+            "European Research Consortium for Informatics and Mathematics">
+              ERCIM</acronym></a>, <a href=
+              "http://www.keio.ac.jp/">Keio</a>)
+            </li>
+            <li>20 <a href=
+            "http://www.w3.org/Consortium/Offices/">offices</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>I membri W3C</em>
+          <ul class="incremental">
+            <li>sono la forza del W3C
+            </li>
+            <li>sviluppano le <em>Recommendation</em>
+            </li>
+            <li>guidano l' evoluzione del Web (<a href=
+            "./images/w3c-flier-v1.6.3A4.pdf">Pieghevole</a>)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il ruolo degli Uffici
+      </h1>
+      <ul>
+        <li>
+          <em>Reclutare gli stake-holder</em> nell'area specifica
+        </li>
+        <li>
+          <em>Fornire supporto</em> ai membri presenti nell'area
+          di competenza
+        </li>
+        <li>
+          <em>Fornire un feedback</em> al W3C su problematiche
+          locali (per esempio supportando la <a href=
+          "http://www.w3.org/International/">Internationalization
+          Activity</a>) del W3C
+        </li>
+        <li>Promuovere l'adozione delle Recommendation W3C
+        prestanto particolare attenzione a <em>lingua e cultura
+        locali</em>
+        </li>
+        <li>Avviare le <em>traduzioni</em> e aiutare gli altri
+        nella traduzione del materiale W3C promuovendone la
+        disseminazione
+        </li>
+      </ul>
+    </div>
+    <!-- =============================================================== -->
+    <div class="slide">
+      <h1>
+        Il W3C: i membri
+      </h1>
+      <ul>
+        <li>Sono la forza del W3C
+        </li>
+        <li>Sviluppano le <em>Recommendation</em>
+        </li>
+        <li>Guidano l' evoluzione del Web
+        </li>
+        <li>Non esiste una forma associativa individuale. I
+        singoli si possono associare come &ldquo;<em>Affiliate
+        Member</em>&rdquo;
+        </li>
+        <li>Diritti:
+          <ul>
+            <li>partecipazione all'Advisory Committee
+            </li>
+            <li>accesso alle informazioni riservate
+            </li>
+            <li>possibilit&agrave; di sottomettere proposte
+            </li>
+            <li>revisione delle proposte
+            </li>
+            <li>uso del logo
+            </li>
+            <li>partecipazione ai Working Group, Interest Group e
+            Coordination Group
+            </li>
+            <li>partecipazione a Workshop e simposi
+            </li>
+            <li>possibilit&agrave; di lavorare con il Team come
+            W3C Fellow
+            </li>
+          </ul>
+        </li>
+        <li>Tutti i membri godono degli <em>stessi diritti</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        I membri italiani
+      </h1>
+      <ol>
+        <li>
+          <a id="cnr" title="cnr" href="http://www.cnr.it/" name=
+          "cnr">CNR - Consiglio Nazionale delle Ricerche</a>
+        </li>
+        <li>
+          <a id="unibz" title="unibz" href=
+          "http://www.inf.unibz.it/" name="unibz">Libera
+          Universit&agrave; di Bolzano (Freie Universit&auml;t
+          Bozen)</a>
+        </li>
+        <li>
+          <a id="irifor" title="irifor" href=
+          "http://irifor.uiciechi.it" name="irifor">Istituto per
+          la Ricerca, la Formazione e la Riabilitazione - Onlus
+          (I.Ri.Fo.R.)</a>
+        </li>
+        <li>
+          <a id="loquendo" title="loquendo" href=
+          "http://www.loquendo.it/it/company/index.htm" name=
+          "loquendo">Loquendo, S.p.A.</a>
+        </li>
+        <li>
+          <a id="prometheo" title="prometheo" href=
+          "http://www.prometheo.it/" name="prometheo">Prometheo
+          Srl</a>
+        </li>
+        <li>
+          <a id="telecom" title="telecom" href=
+          "http://www.telecomitalia.it/cgi-bin/tiportale/TIPortale/ep/start.do?LANG=IT&amp;access=direct&amp;BV_UseBVCookie=Yes"
+          name="telecom">Telecom Italia S.p.A.</a>
+        </li>
+        <li>
+          <a id="polimi" title="polimi" href=
+          "http://www.dei.polimi.it" name="polimi">Politecnico di
+          Milano - Dipartimento di Elettronica e Informazione</a>
+        </li>
+        <li>&hellip;
+        </li>
+      </ol>
+    </div>
+    <!--  ============================================================= -->
+    <!-- <div class="slide">
+<h1>W3C: gli obiettivi a lungo termine</h1>
+<img src="images/WaiOnSP910.png" style="float:right" height="320"
+width="208" alt="The WAI home page on a SP910 phone" class=
+"withBorder" />
+<ul>
+<li><span class="reddish">Web for Everyone</span>
+<ul class="incremental">
+<li>indipendentemente da hardware, software, infrastruttura di
+rete, lingua madre, cultura, posizione geografica,
+capacit&agrave; fisiche o mentali, &hellip;</li>
+</ul>
+</li>
+<li><span class="reddish">Web on Everything</span>
+<ul class="incremental">
+<li>non solo PC, ma anche Cellulari, PDA,
+Televisione,&hellip;</li>
+</ul>
+</li>
+<li><span class="reddish">Knowledge Base, Advanced data searching
+and sharing</span>
+<ul class="incremental">
+<li>informazione utilizzabile da esseri umani <em>e anche</em>
+macchine</li>
+</ul>
+</li>
+<li><span class="reddish">Trust and Confidence</span>
+<ul class="incremental">
+<li>tecnologie per un ambiente collaborativo</li>
+<li>un Web con identificazione delle responsabilit&agrave;,
+sicurezza, fiducia, riservatezza</li>
+</ul>
+</li>
+</ul>
+</div> -->
+    <!--  ============================================================= -->
+    <!-- <div class="slide">
+<h1>Lo stack delle tecnologie W3C</h1>
+<div style="text-align:center"><img src="./images/RecsFigure.png"
+width="100%" style="max-width: 693px" alt=
+" Technology stack, see http://www.w3.org/Consortium/techstack-desc.html for more details" />
+</div>
+</div> -->
+    <!-- =============================================================== -->
+    <div class="slide">
+      <h1>
+        L' attivit&agrave; dei Working Group
+      </h1>
+      <div style="text-align:center">
+        <img src="./images/groupProcess.png" alt=
+        "Stages of a WG life in a stacked diagram" width="100%"
+        style="max-width: 803px" />
+      </div>
+    </div>
+    <!-- =============================================================== -->
+    <div class="slide">
+      <h1>
+        Nascita di una Recommendation
+      </h1>
+      <div style="text-align:center">
+        <img src="./images/documentProcess.png" alt=
+        "Stages of the Recommendation process in a stacked diagram"
+        width="100%" style="max-width: 803px" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Qualche riferimento
+      </h1>
+      <ul>
+        <li>Una presentazione completa a: <a href=
+        "http://www.w3c.it/talks/2009/bologna/slides.html#(31)">
+          http://www.w3c.it/talks/2009/bologna/slides.html#(31)</a>
+        </li>
+        <li>Il <a href="http://www.w3.org/Consortium/Process/"
+        hreflang="en">Process Document</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/" hreflang="en">Il sito
+          W3C</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/Consortium/Overview.html"
+          hreflang="en">Overview</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/Consortium/future" hreflang=
+          "en">Future</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/Consortium/activities"
+          hreflang="en">W3C Activities</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/2005/Incubator/" hreflang=
+          "en">Incubator Activity</a>
+        </li>
+        <li>Due nuovi modi per <a href=
+        "http://www.w3.org/participate/">partecipare</a>:<br />
+          <img src="images/community-group-logo.png" alt=
+          "" /><a href="http://www.w3.org/community/" hreflang=
+          "en">W3C Community and Business Groups</a>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        L'evoluzione del Web
+      </h1>
+      <div class="column40">
+        <img alt=
+        "Il Web connette persone, applicazioni, dispositivi"
+        title=
+        "Il Web connette persone, applicazioni, dispositivi"
+        width="100%" style="max-width: 439px" src=
+        "./images/worldWeb.png" />
+      </div>
+      <div class="column60">
+        <ul>
+          <li>Da un Web di:
+            <ul>
+              <li>linked documents
+              </li>
+              <li>creatori &amp; consumatori
+              </li>
+            </ul>
+          </li>
+          <li>&hellip;a <em>One Web</em>
+            <ul>
+              <li>of Linked Data
+              </li>
+              <li>on Everything
+              </li>
+              <li>for Everyone
+              </li>
+            </ul>
+            <p>
+              Le stesse informazioni devono essere disponibili
+              per tutti gli utenti, indipendentemente da
+              <em>chi</em> siano, <em>dove</em> si trovino, quale
+              <em>sistema</em> usino, o da quale modalit&agrave;
+              di <em>connessione</em> usino
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Web e i suoi aspetti sociali
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Web non &egrave; solo tecnologia
+      </h1>
+      <blockquote lang="en" xml:lang="en">
+        <p>
+          &ldquo;The Web is more a <em>social</em> creation than
+          a technical one. I designed it for a social effect - to
+          <em>help people work together</em> - and not as a
+          technical toy. The ultimate goal of the Web is to
+          <em>support and improve our weblike existence</em> in
+          the world.&rdquo;<br />
+          (Tim Berners-Lee - Weaving the Web, p. 123)
+        </p>
+      </blockquote>
+      <ul class="incremental">
+        <li>
+          <em>Valore sociale del Web</em>: comunicazione
+          interpersonale, commercio, <em>condivisione di
+          conoscenza</em>
+        </li>
+        <li>Rendere questi benefici <em>disponibili a tutti</em>,
+        indipendentemente da hardware, software, infrastruttura
+        di rete, lingua madre, cultura, posizione geografica,
+        capacit&agrave; fisiche o mentali
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Qualche riferimento per l'accessibilit&agrave;
+      </h1>
+      <ul>
+        <li>
+          <a href=
+          "http://www.w3c.it//projects/aquarius/presentazioni/aquarius-wai/slides.html#(29)">
+          http://www.w3c.it//projects/aquarius/presentazioni/aquarius-wai/slides.html#(29)</a>
+        </li>
+        <li>Fra i tanti, due principi di base:
+          <ul>
+            <li>l'interazione deve essere sempre possibile con
+            una interfaccia di &ldquo;tipo tastiera&rdquo;
+            </li>
+            <li>l'informazione deve essere sempre presentabile
+            mediante un'alternativa testuale
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Dal Web al Web Semantico
+      </h1>
+      <div class="divcenter">
+        <img src="images/sw-vert-w3c.jpg" style=
+        "width: 100%; max-width: 540px; heigth: 100%; max-height: 548px;"
+        alt="W3C SW logo" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <!--   <div class="slide">
+      <h1>
+        I limiti del Web attuale
+      </h1>
+      <ul>
+        <li>Nel <em>web tradizionale</em> si rappresenta l'
+        informazione utilizzando:
+          <ul>
+            <li>linguaggio naturale
+            </li>
+            <li>grafica, elementi multimediali, struttura della
+            pagina
+            </li>
+          </ul>
+        </li>
+        <li>Spesso &egrave; necessario <em>combinare le
+        informazioni</em> (provenienti da fonti diverse)
+        </li>
+        <li>
+          <em>Per gli esseri umani &egrave; facile ...</em>
+          <ul>
+            <li>dedurre fatti da informazioni incomplete
+            </li>
+            <li>creare e seguire associazioni mentali
+            </li>
+            <li>provare varie esperienze sensoriali
+            </li>
+            <li>aggregare le informazioni indipendentemente dalle
+            tecnologie utilizzate
+            </li>
+          </ul>
+        </li>
+        <li>... ma <em>le macchine non sono intelligenti</em>!
+          <ul>
+            <li>non possono utilizzare informazioni parziali
+            </li>
+            <li>hanno difficolt&agrave; ad aggregare informazioni
+            strutturate in forma diversa
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div> -->
+    <!-- ==================================================================== -->
+    <!--  <div class="slide">
+      <h1>
+        L' integrazione dei dati
+      </h1><img src="images/rdfInTheMiddleSimple.png" style=
+      "width: 100%; max-width:924px;" alt=
+      "esportazione dei dati semplificata" />
+    </div> -->
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        L' architettura del Semantic Web
+      </h1><img class="floatleft" alt=
+      "immagine dei livelli del semantic web" src=
+      "images/layerCake.png" width="45%" style=
+      "max-width: 600px" />
+      <dl>
+        <dt>
+          Il Semantic Web ...
+        </dt>
+        <dd>
+          <ul>
+            <li>&egrave; un' infrastruttura basata su metadati
+            per poter svolgere <em>ragionamenti</em> sul Web
+            </li>
+            <li>
+              <em>estende</em>, non sostituisce il web attuale
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          I metadati sono:
+        </dt>
+        <dd>
+          <ul>
+            <li>Informazioni, elaborabili automaticamente
+            (<em>machine understandable</em>), relative a una
+            risorsa web o a qualche altra cosa
+            </li>
+            <li>... <em>data about data</em>
+            </li>
+            <li>... informazioni che possono essere utilizzate da
+            <em>intelligent software agents</em> per fare un uso
+            appropriato delle risorse
+            </li>
+            <li>... <em>dati</em> ...
+            </li>
+            <li>... che possono essere <em>descritti da altri
+            metadati</em> ...
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ======================================================== =-->
+    <div class="slide">
+      <h1>
+        L' integrazione dei dati: il ruolo delle tecnologie
+      </h1><img src="images/rdfInTheMiddle.png" style=
+      "width: 100%; max-width:946px;" alt=
+      "esportazione dei dati con indicazione delle tecnologie" />
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Il Web 2.0: un fenomeno sociale
+      </h1>
+      <dl>
+        <dt>
+          Pro
+        </dt>
+        <dd>
+          <ul>
+            <li>Social networking
+            </li>
+            <li>User Generated Content
+            </li>
+            <li>Social tagging e folksonomy
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Contro
+        </dt>
+        <dd>
+          <ul>
+            <li>Mantenere viva l'attenzione utente:
+              <ul>
+                <li>Telecommunications bandwidth is not a
+                problem; human bandwidth is
+                </li>
+              </ul>
+            </li>
+            <li>Utente &ldquo;dipendente&ldquo; dal sito
+              <ul>
+                <li>problemi di migrazione, duplicazione del
+                lavoro
+                </li>
+              </ul>
+            </li>
+            <li>Frazionamento su pi&ugrave; reti
+              <ul>
+                <li>Legge di Metcalfe: il valore di una rete
+                &egrave; proporzionale al quadrato del numero di
+                nodi presenti
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Web 2.0 o Web Semantico?
+      </h1>
+      <dl>
+        <dt>
+          Web 2.0
+        </dt>
+        <dd>
+          <ul>
+            <li>livello d'ingresso meno costoso
+            </li>
+            <li>orizzonti limitati
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Web Semantico
+        </dt>
+        <dd>
+          <ul>
+            <li>investimenti iniziali rilevanti
+            </li>
+            <li>potenziale superiore
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Long Live the Web&hellip;
+      </h1><img src="images/tbl-longLiveWeb.png" width="100%"
+      style="max-width: 1458px;" alt="tbl-longLiveWeb" />
+      <p>
+        Tim Berners-Lee: &ldquo; <a href=
+        "http://www.scientificamerican.com/article.cfm?id=long-live-the-web">
+        Long Live the Web: A Call for Continued Open Standards
+        and Neutrality: Scientific American</a>&rdquo;,
+        Scientific American Magazine, December 2010 [<a href=
+        "tbl-LongLiveWeb-ScAm.pdf">local version</a>]
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Long Live the Web: i principi
+      </h1>
+      <ul class="incremental">
+        <li>Universality Is the Foundation
+        </li>
+        <li>Open Standards Drive Innovation
+        </li>
+        <li>Keep the Web separate from Internet
+        </li>
+        <li>Electronic Human Rights
+        </li>
+        <li>No Snooping
+        </li>
+        <li>Linking to the Future
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Universality Is the Foundation
+      </h1>
+      <ul>
+        <li>
+          <em>You can link anything</em>
+        </li>
+        <li>The web should be usable by people with
+        <em>disabilities</em>
+        </li>
+        <li>Decentralization
+          <ul>
+            <li>You <em>do not</em> have to get approved from
+            <em>any central authority</em>
+            </li>
+          </ul>
+        </li>
+        <li>URI is the key to universality
+        </li>
+        <li>
+          <em>Social networking</em> issues
+          <ul>
+            <li>
+              <em>capture</em> information from users
+            </li>
+            <li>organize it and provide value-added-service but
+            <em>only within their sites</em>
+            </li>
+            <li>
+              <em>each site is a silo</em>
+            </li>
+          </ul>
+        </li>
+        <li>The <em>isolation</em> occurs because each piece of
+        information <em>does not have a URI</em>
+        </li>
+        <li>A related <em>danger</em> is that one
+        social-networking site &mdash;or one search engine or one
+        browser&mdash; gets so big that it becomes a
+        <em>monopoly</em>, which tends to limit innovation
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Open Standards Drive Innovation
+      </h1>
+      <ul>
+        <li>The basic Web technologies that individuals and
+        companies need to develop powerful services must be
+        available for <em>free</em>, with <em>no royalties</em>
+        </li>
+        <li>
+          <em>Open standards</em>
+        </li>
+        <li>You can build your own Web site or company
+        <em>without anyone&rsquo;s approval</em>
+        </li>
+        <li>Open, royalty-free standards <em>do not mean</em>
+        that a company or individual <em>cannot</em> devise a
+        blog or photo-sharing program and <em>charge you to use
+        it</em>
+        </li>
+        <li>Not using open standards creates <em>closed
+        worlds</em>
+          <ul>
+            <li>Apple&rsquo;s iTunes system, for example,
+            identifies songs and videos using <em>URI</em>s that
+            are <em>open</em>
+            </li>
+            <li>But instead of &ldquo;<em>http:</em>&rdquo; the
+            addresses begin with &ldquo;<em>itunes:</em>&rdquo;
+            which is proprietary
+            </li>
+            <li>You can access an &ldquo;itunes:&rdquo; link <em>
+              only</em> using Apple&rsquo;s proprietary iTunes
+              program
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Keep the Web separate from Internet
+      </h1>
+      <ul>
+        <li>The <em>separation of layers</em>, partitions the
+        design of the Web from that of the Internet.
+        </li>
+        <li>The <em>Web is an application that runs on the
+        Internet</em>, which is an electronic network that
+        transmits packets of information among millions of
+        computers according to a few open protocols
+        </li>
+        <li>The two layers of technology work together but can
+        <em>advance independently</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Electronic Human Rights
+      </h1>
+      <ul>
+        <li>A Web user is also an Internet user and therefore
+        relies on an Internet that is <em>free from
+        interference</em>
+        </li>
+        <li>
+          <em>Net neutrality</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        No Snooping
+      </h1>
+      <ul>
+        <li>Accessing the information within an Internet packet
+        is equivalent to wiretapping a phone or <em>opening
+        postal mail</em>
+        </li>
+        <li>Free speech should be protected, too.<br />
+          The Web should be like a white sheet of paper: ready to
+          be written on, <em>with no control over what is
+          written</em>
+        </li>
+        <li>
+          <em>Totalitarian governments aren&rsquo;t the only
+          ones</em> violating the network rights of their
+          citizens
+        </li>
+        <li>When your network rights are violated, <em>public
+        outcry is crucial</em>
+        </li>
+        <li>In October 2010, Finland made <em>broadband
+        access</em>, at 1 Mbps, a <em>legal right</em> for all
+        its citizens.
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Linking to the Future
+      </h1>
+      <ul>
+        <li>As long as the web's <em>basic principles are
+        upheld</em>, its ongoing evolution is <em>not</em> in the
+        hands of any one person or organization.<br />
+          If we can preserve the principles, the Web promises
+          some fantastic future capabilities
+        </li>
+        <li>
+          <em>HTML5</em> is not just a markup language but a
+          <em>computing platform</em> that will make Web apps
+          even more powerful than they are now
+        </li>
+        <li>
+          <em>Wireless access</em> will be a particular boon to
+          developing countries, where many people do not have
+          connectivity by wire or cable but do have it wirelessly
+        </li>
+        <li>Linked Data (vedi: <a href=
+        "http://www.w3c.it/talks/2010/smau2010/">http://www.w3c.it/talks/2010/smau2010/</a>)
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Conclusioni
+      </h1>
+      <ul>
+        <li>Il <em>World Wide Web</em>
+          <ul>
+            <li>Un' invenzione a portata di mano
+            </li>
+            <li>Frutto del <em>lavoro di tutti</em> (come afferma
+            lo stesso Tim)
+            </li>
+            <li>Ancora molti margini di evoluzione (<em>leading
+            the Web to its full potential</em>)
+            </li>
+            <li>L' importanza del <em>contesto</em>
+            </li>
+            <li>Motivazioni tecniche e <em>ideali</em>
+            </li>
+          </ul>
+        </li>
+        <li>Il <em>W3C</em>
+          <ul>
+            <li>Il <em>W3C</em> guida l' evoluzione del Web,
+            grazie al contributo dei suoi <em>membri</em>
+            </li>
+            <li>Le <em>tecnologie del Semantic Web</em> (RDF,
+            RDFS, OWL) consentono di <em>rappresentare</em>, <em>
+              esportare</em> e <em>condividere</em> la conoscenza
+              in maniera interoperabile
+            </li>
+            <li>Le scelte strategiche, se tengono conto dell'
+            evoluzione della tecnologia, garantiscono la
+            <em>salvaguardia dell' investimento</em>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Sono orgoglioso di ...
+      </h1>
+      <!-- <div class="column30"><img src="timAndOreste.jpg" alt=""
+width="100%" /></div> -->
+      <div class="column50">
+        <p>
+          <img src="images/w3cBirthday.jpg" alt="" width="100%"
+          style="max-width: 1280px" />
+        </p>
+        <p>
+          Happy birthday, W3C
+        </p>
+      </div>
+      <div class="column50">
+        <p>
+          <img src="images/timAndOreste.jpg" alt="" width="100%"
+          style="max-width: 1280px" />
+        </p>
+        <p>
+          Tim Berners-Lee e Oreste Signore
+        </p>
+      </div>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p>
+      <p>
+        ... e <a href="answer.mp3">risposte</a>
+      </p>
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/talks/2012/lpw/">http://www.w3c.it/talks/2012/lpw/</a>)<br />
+
+        <!--     e il <em>documento</em> (<a href=
+        "http://www.w3c.it/papers/km11.pdf" hreflang="it" title=
+        "documento - km11">http://www.w3c.it/papers/km11.pdf</a>) -->
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>

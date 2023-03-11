@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><HTML><HEAD><noscript>mmmm</noscript><script language=javascript>function WindowOpen(address,name) { thisWin=window.open(address,name, 'toolbar=no,scrollbars=yes,location=no,status=no,menubar=yes,resizable=yes,width=500,height=600');thisWin.focus();void(0);}function WindowHelp(address,name) { thisWin=window.open(address,name, 'toolbar=yes,scrollbars=yes,location=no,status=no,menubar=yes,resizable=yes,width=500,height=600');thisWin.focus();void(0);}
+/*
+  Local javascript functions
+*/
+function urlencode(strText) {
+            var isObj;
+	    var trimReg;
+	    if( typeof(strText) == "string" ) {
+	        if( strText != null ) {
+                    trimReg = /(^\s+)|(\s+$)/g;
+                    strText = strText.replace( trimReg, '');
+                    for(i=128;i<256;i++) {
+                        strText = strText.replace(String.fromCharCode(i),escape(String.fromCharCode(i)));
+                    }
+               }
+            }
+            return strText;
+}
+function AutoWindowOpen(address,name) {
+
+	address=urlencode(address);
+
+        if (window.name=="Doc") name="Doc1";
+        else if (window.name=="Doc1") name="Doc2";
+        else if (window.name=="Doc2") name="Doc1";
+        thisWin=window.open(address,name, 'toolbar=no,scrollbars=yes,location=no,status=no,menubar=yes,resizable=yes,width=500,height=600');
+        thisWin.focus();
+        void(0);
+}
+
+function doCheckAll0()
+{
+  with (document.Boxes0) {
+    for (var i=0; i < elements.length; i++) {
+        if (elements[i].type == 'checkbox' && elements[i].name == 'Checker')
+           elements[i].checked = true;
+    }
+  }
+}
+
+function doCheckAll1()
+{
+  with (document.Boxes1) {
+    for (var i=0; i < elements.length; i++) {
+        if (elements[i].type == 'checkbox' && elements[i].name == 'Checker')
+           elements[i].checked = true;
+    }
+  }
+}
+
+function doCheckAll2()
+{
+  with (document.Boxes2) {
+    for (var i=0; i < elements.length; i++) {
+        if (elements[i].type == 'checkbox' && elements[i].name == 'Checker')
+           elements[i].checked = true;
+    }
+  }
+}
+
+function doCheckAll3()
+{
+  with (document.Boxes3) {
+    for (var i=0; i < elements.length; i++) {
+        if (elements[i].type == 'checkbox' && elements[i].name == 'Checker')
+           elements[i].checked = true;
+    }
+  }
+}
+
+function doCheckAll()
+{
+  with (document.Boxes) {
+    for (var i=0; i < elements.length; i++) {
+        if (elements[i].type == 'checkbox' && elements[i].name == 'Checker')
+           elements[i].checked = true;
+    }
+  }
+}
+
+function GetFromBoxes0(){
+   var undefined = "undefined";
+   var tempstring = "";
+   var newurl = "/Isis/servlet/Isis?Conf=/home/admin/unipi/unipiConf/unipi.sys.file";
+   var pft0 = "&Obj=@unipiRTF.pft";
+   var pft1 = "&Obj=@unipiRTFbox.pft";
+   var oti = "&Opt=get&Type=Doc&Id=";
+   var k=0;
+
+   if (document.Boxes0.Checker.length==undefined){
+        newurl=newurl+pft0+oti+document.Boxes0.Checker.value;
+   } else {
+
+        for (i = 0; i < document.Boxes0.Checker.length; i++) {
+                if (document.Boxes0.Checker[i].checked) {
+                        k++;
+                        tempstring = tempstring + document.Boxes0.Checker[i].value + ",";
+                }
+        }
+
+// Next statement commented because in error.... !
+//      if (tempstring=="") tempstring = document.Boxes0.Checker[0].value + ",";
+
+        if (tempstring=="") tempstring = document.Boxes0.Checker.value + ",";
+        if (k<=1) newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);
+        else newurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);
+   }
+   AutoWindowOpen(newurl,"Doc");
+}
+
+function GetFromBoxes1(){
+   var undefined = "undefined";
+   var tempstring = "";
+   var newurl = "/Isis/servlet/Isis?Conf=/home/admin/unipi/unipiConf/sns.sys.file";
+   var pft0 = "&Obj=@unipiRTF.pft";
+   var pft1 = "&Obj=@unipiRTFbox.pft";
+   var oti = "&Opt=get&Type=Doc&Id=";
+   var k=0;
+
+   if (document.Boxes1.Checker.length==undefined){
+        newurl=newurl+pft0+oti+document.Boxes1.Checker.value;
+   } else {
+
+        for (i = 0; i < document.Boxes1.Checker.length; i++) {
+                if (document.Boxes1.Checker[i].checked) {
+                        k++;
+                        tempstring = tempstring + document.Boxes1.Checker[i].value + ",";
+                }
+        }
+
+// Next statement commented because in error.... !
+//      if (tempstring=="") tempstring = document.Boxes1.Checker[0].value + ",";
+
+        if (tempstring=="") tempstring = document.Boxes1.Checker.value + ",";
+        if (k<=1) newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);
+        else newurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);
+   }
+   AutoWindowOpen(newurl,"Doc");
+}
+
+function GetFromBoxes2(){
+   var undefined = "undefined";
+   var tempstring = "";
+   var newurl = "/Isis/servlet/Isis?Conf=/home/admin/unipi/unipiConf/sssup.sys.file";
+   var pft0 = "&Obj=@unipiRTF.pft";
+   var pft1 = "&Obj=@unipiRTFbox.pft";
+   var oti = "&Opt=get&Type=Doc&Id=";
+   var k=0;
+
+   if (document.Boxes2.Checker.length==undefined){
+        newurl=newurl+pft0+oti+document.Boxes2.Checker.value;
+   } else {
+
+        for (i = 0; i < document.Boxes2.Checker.length; i++) {
+                if (document.Boxes2.Checker[i].checked) {
+                        k++;
+                        tempstring = tempstring + document.Boxes2.Checker[i].value + ",";
+                }
+        }
+
+// Next statement commented because in error.... !
+//      if (tempstring=="") tempstring = document.Boxes2.Checker[0].value + ",";
+
+        if (tempstring=="") tempstring = document.Boxes2.Checker.value + ",";
+        if (k<=1) newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);
+        else newurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);
+   }
+   AutoWindowOpen(newurl,"Doc");
+}
+
+function GetFromBoxes3(){
+   var undefined = "undefined";
+   var tempstring = "";
+   var newurl = "/Isis/servlet/Isis?Conf=/home/admin/unipi/unipiConf/cnr.sys.file";
+   var pft0 = "&Obj=@unipiRTF.pft";
+   var pft1 = "&Obj=@unipiRTFbox.pft";
+   var oti = "&Opt=get&Type=Doc&Id=";
+   var k=0;
+
+   if (document.Boxes3.Checker.length==undefined){
+        newurl=newurl+pft0+oti+document.Boxes3.Checker.value;
+   } else {
+
+        for (i = 0; i < document.Boxes3.Checker.length; i++) {
+                if (document.Boxes3.Checker[i].checked) {
+                        k++;
+                        tempstring = tempstring + document.Boxes3.Checker[i].value + ",";
+                }
+        }
+
+// Next statement commented because in error.... !
+//      if (tempstring=="") tempstring = document.Boxes3.Checker[0].value + ",";
+
+        if (tempstring=="") tempstring = document.Boxes3.Checker.value + ",";
+        if (k<=1) newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);
+        else newurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);
+   }
+   AutoWindowOpen(newurl,"Doc");
+}
+
+function GetFromBoxes(){
+   var undefined = "undefined";
+   var tempstring = "";
+   var newurl = "/Isis/servlet/Isis?Conf=./Conf/AIXnotlogic0.pisa.recovery.sys.file";
+   var pft0 = "&Obj=@unipiRTF.pft";
+   var pft1 = "&Obj=@unipiRTFbox.pft";
+   var oti = "&Opt=get&Type=Doc&Id=";
+   var k=0;
+
+   if (document.Boxes.Checker.length==undefined){
+        newurl=newurl+pft0+oti+document.Boxes.Checker.value;
+   } else {
+
+        for (i = 0; i < document.Boxes.Checker.length; i++) {
+                if (document.Boxes.Checker[i].checked) {
+                        k++;
+                        tempstring = tempstring + document.Boxes.Checker[i].value + ",";
+                }
+        }
+
+// Next statement commented because in error.... !
+//      if (tempstring=="") tempstring = document.Boxes.Checker[0].value + ",";
+
+        if (tempstring=="") tempstring = document.Boxes.Checker.value + ",";
+        if (k<=1) newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);
+        else newurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);
+   }
+   AutoWindowOpen(newurl,"Doc");
+}
+
+ 
+function GetFromAixBoxes(){
+   var undefined = "undefined";
+   var tempstring = "";
+/* so to access the local server
+   var newurl = "/Isis/servlet/Isis?Conf=./Conf/AIXnotlogic0.pisa.recovery.sys.file";
+*/
+// so to access a crossreferenced server
+   var newurl = "http://193.205.80.141:8080/metaopac/servlet/Isis?Conf=/home/metaopac/Conf/AIXnotlogic0.pisa.sys.file";
+   var pft = "&Obj=@unipilTiL.countpft,SortedBy:@Sti.pft";
+   var oti = "&Opt=search&Field0=&Field1=&Field2=";
+   var AUoti = "&Opt=search&Field0=&Field1=&Field2=";
+   var SUoti = "&Opt=search&Field0=&Field1=&Field2=&Field3=";
+   var k=0;
+   var MaxElement=16;
+ 
+   if (document.Boxes.AixType.value=="AU") oti=AUoti;
+   else if (document.Boxes.AixType.value=="SU") oti=SUoti;
+ 
+   if (document.Boxes.Checker.length==undefined){
+        newurl=newurl+pft+oti+document.Boxes.Checker.value;
+   } else {
+ 
+        for (i = 0; i < document.Boxes.Checker.length && k<MaxElement; i++) {
+                if (document.Boxes.Checker[i].checked) {
+                        k++;
+                        tempstring = tempstring + document.Boxes.Checker[i].value + " or ";
+                }
+        }
+ 
+        if (tempstring=="") tempstring = document.Boxes.Checker.value + " or ";
+        newurl=newurl+pft+oti+tempstring.substring(0,tempstring.length-4);
+   }
+   AutoWindowOpen(newurl,"Doc");
+}
+ 
+function IsisGasLoadPrefix1(){
+        var newurl;
+	var s="&PftAix=@unipiAix.pft&kwt=zz&kwf=";
+        var localurl="/Isis/servlet/Isis?Conf=./Conf/AIXnotlogic0.pisa.recovery.sys.file&SrcWin=1&Opt=browse&Gizmo=no";
+        var b=0;
+        if(document.IsisGasForm01.xtipo[0].checked) b=0;
+        else if(document.IsisGasForm01.xtipo[1].checked) b=1;
+	  else if(document.IsisGasForm01.xtipo[2].checked) b=2;
+
+        var m=b;
+        if (m==0) localurl=localurl+"&Obj=@unipiAixAu.xrfpft&DbAix=aixau"+s;
+        else if (m==1) localurl=localurl+"&Obj=@unipiAixSu.xrfpft&DbAix=aixsu"+s;
+        else if (m==2) localurl=localurl+"&Obj=@unipiAixTi.xrfpft&DbAix=aixti"+s;
+
+/*
+	if (m==1 && document.IsisGasForm01.Startname.value=="")  newurl=localurl+"1";
+
+        else newurl=localurl + document.IsisGasForm01.Startname.value;
+*/
+        newurl=localurl + document.IsisGasForm01.Startname.value;
+        WindowOpen(newurl,"_top");
+}
+
+function IsisGasLoadPrefix0(){
+        var newurl;
+        var localurl="/Isis/servlet/Isis?Conf=./Conf/AIXnotlogic0.pisa.recovery.sys.file&SrcWin=1&Opt=browse&Type=Inv";
+        var b=0;
+        if(document.IsisGasForm00.xtipo[0].checked) b=0
+        else if(document.IsisGasForm00.xtipo[1].checked) b=1
+        else if(document.IsisGasForm00.xtipo[2].checked) b=2
+        else if(document.IsisGasForm00.xtipo[3].checked) b=3
+        else if(document.IsisGasForm00.xtipo[4].checked) b=4
+        else if(document.IsisGasForm00.xtipo[5].checked) b=5;
+        else if(document.IsisGasForm00.xtipo[6].checked) b=6;
+        else if(document.IsisGasForm00.xtipo[7].checked) b=7;
+        else if(document.IsisGasForm00.xtipo[8].checked) b=8;
+        else if(document.IsisGasForm00.xtipo[9].checked) b=9;
+        var m=b;
+        if (m==0) localurl=localurl+"&Obj=@codexK.pft&kwt=k=zz&kwf=k="
+        else if(m==1) localurl=localurl+"&Obj=@codexC.pft&kwt=c=zz&kwf=c="
+        else if(m==2) localurl=localurl+"&Obj=@codexX.pft&kwt=x=zz&kwf=x="
+        else if(m==3) localurl=localurl+"&Obj=@codexT.pft&kwt=t=zz&kwf=t="
+        else if(m==4) localurl=localurl+"&Obj=@codexA.pft&kwt=a=zz&kwf=a="
+        else if(m==5) localurl=localurl+"&Obj=@codexB.pft&kwt=b=zz&kwf=b="
+        else if(m==6) localurl=localurl+"&Obj=@codexV.pft&kwt=v=zz&kwf=v="
+        else if(m==7) localurl=localurl+"&Obj=@codexW.pft&kwt=w=zz&kwf=w="
+        else if(m==8) localurl=localurl+"&Obj=@codexD.pft&kwt=d=zz&kwf=d="
+        else if(m==9) localurl=localurl+"&Obj=@codexL.pft&kwt=l=zz&kwf=l="
+	if (m==7 || m==6) newurl=localurl;
+        else newurl=localurl + document.IsisGasForm00.Startname.value;
+        WindowOpen(newurl,"_top");
+}
+
+function WindowImg(address,name) {
+	thisWin=window.open(address,name,'toolbar=yes,scrollbars=yes,location=no,status=no,menubar=yes,resizable=yes,width=700,height=600');
+	thisWin.focus();
+	void(0);
+}
+</script>
+<noscript>mmmm</noscript>
+<TITLE>Isis is working</TITLE> <META NAME="Author" CONTENT=" Isis System">
+</HEAD>
+<BODY aLink=red bgColor=#FBE7CB link=blue vLink=red><FONT size=1><CENTER>
+<!-- img src=/Isis/sfondi/pisa-flag.gif   -->
+<FONT size=4><b>MetaOpac Pisano (MOP)</b></a></FONT><br><FONT size=1>(test version)</FONT></CENTER><br>
+<TABLE ALIGN=CENTER border=0 cellPadding=0 cellSpacing=0 width=700><TBODY>
+<TR><TD VALIGN=TOP bgColor="#CCCC99"><a href="javascript:parent.history.go(-1);void(0);">Indietro</a></TD><TD VALIGN=TOP bgColor="#CCCC99"><a href="javascript:parent.history.go(+1);void(0);">Avanti</a></TD><TD VALIGN=TOP ALIGN=LEFT bgColor="#CCCC99"><a href="javascript:top.WindowHelp('/Isis/Isis.Helpfile.html','Help');">Aiuto</a></TD></TR></TBODY></TABLE>
+<TABLE ALIGN=CENTER border=0 cellPadding=0 cellSpacing=0 width=700><TBODY><TD>
+<TD VALIGN=TOP ><TABLE border=0 cellPadding=0 cellSpacing=0 width=243><TR><TD><FORM method=GET name=IsisGasForm00 action=/Isis/servlet/Isis><FONT size=1><br>Massimo numero di record da selezionare:<select name="Dsfor"><option>2000<option>1000<option>500<option>300<option selected>100<option>50<option>10</select><br><b>Seleziona un formato</b><br><hr><input type=radio name=Obj value=@unipilTiL.countpft,SortedBy:@Sti.pft CHECKED>Lista ordinata dei titoli <br><input type=radio name=Obj value=@unipilTiLns.countpft>Lista dei titoli <br><input type=radio name=Obj value=@unipiShproof.countpft>Lista dei titoli <b>proof format</b><hr><b>Inserisci la richiesta</b> - <b>Operatore logico</b><select name="glOp"><option selected>and<option>or<option>not</select><br><hr><b>Cataloghi</b><br> <input type=checkbox name="db" value=0 CHECKED> <a href="http://biblio.unipi.it:8080/TIsis/servlet/Isis?Conf=/home/admin/unipi/Conf/unipi.sys.file" target="db0">UNIPI</a><input type=checkbox name="db" value=1 CHECKED> <a href="http://opacbib.sns.it:8180/Isis/servlet/Isis?Conf=/home/beppe/snsConf/sns.sys.file" target="db1">SNS</a><input type=checkbox name="db" value=2 CHECKED> <a href="http://leonardo.isti.cnr.it/Isis/servlet/Isis?Conf=./Conf/cnr.sys.file" target="db2">CNR</a><br><input type=checkbox name="db" value=3 CHECKED> <a href="http://193.205.80.141:8080/metaopac/servlet/Isis?Conf=/home/metaopac/sssupConf/sssup.sys.file" target="db3">SSSA</a><input type=checkbox name="db" value=4 CHECKED> <a href="http://biblio.unipi.it:8080/TIsis/servlet/Isis?Conf=/home/admin/unipi/ppi01Conf/ppi01.sys.file" target="db4">B.C&P.P</a><input type=checkbox name="db" value=5 CHECKED> <a href="http://www.domusgalilaeana.it:8080/metaopac/servlet/Isis?Conf=/home/metaopac/domusConf/domus.sys.file" target="db5">DOMUS</a><br><input type=checkbox name="db" value=6 CHECKED> <a  href="http://leonardo.isti.cnr.it/metaopac/servlet/Isis?Conf=/export/home/metaopac/mpisa/BunipConf/Bunip.sys.file"   target="db6">Bunip</a> <input type=checkbox name="db" value=7 CHECKED> <a href="http://leonardo.isti.cnr.it/metaopac/servlet/IsisConf=/export/home/metaopac/mpisa/biblndConf/biblnd.sys.file" target="db7">BiblioLandia</a><input type=checkbox name="db" value=8 CHECKED> <a href="http://leonardo.isti.cnr.it/metaopac/servlet/Isis?Conf=/export/home/metaopac/mpisa/cathConf/cath.sys.file" target="db8">BibCATH</a><br><input type=checkbox name="db" value=9 CHECKED> <a href="http://leonardo.isti.cnr.it/metaopac/servlet/Isis?Conf=/export/home/metaopac/mpisa/bfsConf/bfs.sys.file" target="db9">BFS</a><input type=checkbox name="db" value=10 CHECKED> <a href="http://leonardo.isti.cnr.it/metaopac/servlet/Isis?Conf=/export/home/metaopac/mpisa/cnsConf/cns.sys.file" target="db10">BibCNS</a><hr><input type=hidden name=Opt value="search">Tutti i campi<br><input name=Field0><br>Titolo<br><input name=Field1><br>Autore<br><input name=Field2><br>Soggetto<br><input name=Field3><br>Luogo/Editore/Anno di pubblicazione<br><input name=Field4><br>Serie, Collana<br><input name=Field5></FONT><input type=hidden name=Conf value="./Conf/AIXnotlogic0.pisa.recovery.sys.file"><input type=hidden name=SrcWin value="1"><input type=hidden name=Dsfr value="1"><hr>  <input class=button type="submit" value="Inizia la ricerca"><input class=button type="reset" value="Ripristina i valori "><hr></FORM></TD></TR><TR><TD><FORM method=GET name=IsisGasForm01 action="javascript:IsisGasLoadPrefix1();"><FONT size=2><b>Accesso agli Indici da: </b></FONT><FONT size=1> <input name=Startname value="" size=10><br></FONT><FONT size=2><input type=radio name=xtipo CHECKED>Autore <br> <input type=radio name=xtipo>Soggetto <br> <input type=radio name=xtipo>Titolo <br></FONT><p>&nbsp;<input class=button type="submit" value="Inizia la ricerca"><input class=button type="reset" value="Ripristina i valori"></FORM><hr><FONT size=1 color=red>Il software &egrave; a cura di <a href=mailto:romano@isti.cnr.it><i>Beppe Romano</i></a> dell'Istituto ISTI/CNR</FONT></TD></TR></TABLE></TD>
+<TD VALIGN=TOP bgColor="#CCCC99"><TABLE border=0 cellPadding=0 cellSpacing=0 width=4><TR><TD></TD></TR></TABLE>
+<TD VALIGN=TOP ><TABLE border=0 cellPadding=0 cellSpacing=0 width=453><TR><TD>
+<p><br><br>
+<center>Informazioni generali</Center>
+<ol>
+<p>
+Attenzione: questo messaggio viene inviato, solamente, al momento della connessione al servizio.
+<p>
+La ricerca avviene sempre per parola o insiemi di parole connesse da operatori logici.
+<p>
+All'interno dello stesso campo sono definiti operatori default
+<p>
+Tra campi diversi l'operatore default &egrave; "and"
+<p>
+Di default, la richiesta &egrave; eseguita su tutti i cataloghi:
+<FONT size=1>
+<table>
+<tr><td><strong>UNIPI</strong></td><td>Universit&agrave; di Pisa</td></tr>
+<tr><td><strong>SNS</strong></td><td>Scuola Normale Superiore</td></tr>
+<tr><td><strong>CNR</strong></td><td>Consiglio Nazionale delle Ricerche; Area della Ricerca di Pisa</td></tr>
+<tr><td><strong>SSSA</strong></td><td>Scuola Superiore Sant'Anna</td></tr>
+<tr><td><strong>B.C&P.P</strong></td><td>Biblioteca Comunale e Provinciale di Pisa</td></tr>
+<tr><td><strong>DOMUS</strong></td><td>Domus Galil&aelig;ana</td></tr>
+<tr><td><strong>Bunip</strong></td><td>Biblioteca Universitaria: Polo SBN</td></tr>
+<tr><td><strong>Bibliolandia</strong></td><td>Biblioteche della Valdera, Basso Valdarno e Alta Valdicecina</td></tr>
+<tr><td><strong>BibCATH</strong></td><td>Biblioteca Cathariniana di Pisa</td></tr>
+<tr><td><strong>BFS</strong></td><td>Biblioteca Franco Serantini - Pisa</td></tr>
+<tr><td><strong>BibCNS</strong></td><td>Biblioteca Istituzione Centro Nord-Sud della Provincia di Pisa</td></tr>
+</table>
+</FONT>
+</ol>
+</TD></TR></TABLE></TD>
+</TR></TBODY></TABLE></FONT></HTML>

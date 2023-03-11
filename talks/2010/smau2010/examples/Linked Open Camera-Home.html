@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<link rel="stylesheet" href="Linked%20Open%20Camera-Home_files/a.css" type="text/css" media="all">
+<title>Linked Open Camera « Home</title>
+<meta name="description" content="Come spende i nostri soldi la camera dei deputati? Mettiamo a disposizione i dati grezzi, in formato rdf, su contratti e previsioni di spesa per stimolare la trasparenza e la cittadinanza attiva. Vogliamo favorire il riuso di questi dati da parte di cittadini e imprese. Per farlo abbiamo bisogno del tuo aiuto.">
+<meta name="keywords" content="Camera dei deputati, Dati, Spese, linkeddata, rdf, open data">
+<link rel="shortcut icon" href="http://www.linkedopencamera.it/wp-content/themes/atahualpa/images/favicon/loc_favicon.ico"><link rel="canonical" href="http://www.linkedopencamera.it/"><link rel="alternate" type="application/rss+xml" title="Linked Open Camera RSS Feed" href="http://www.linkedopencamera.it/index.php/feed">
+<link rel="alternate" type="application/atom+xml" title="Linked Open Camera Atom Feed" href="http://www.linkedopencamera.it/index.php/feed/atom">
+<link rel="pingback" href="http://www.linkedopencamera.it/xmlrpc.php">
+				
+	<script src="Linked%20Open%20Camera-Home_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.06 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-18472939-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	// End of Google Analytics for WordPress by Yoast v4.0
+	//]]></script>
+<script type="text/javascript" src="Linked%20Open%20Camera-Home_files/jquery.js"></script>
+<script type="text/javascript" src="Linked%20Open%20Camera-Home_files/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.linkedopencamera.it/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.linkedopencamera.it/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="Linked Open Camera" href="http://www.linkedopencamera.it/">
+<link rel="prev" title="Blog" href="http://www.linkedopencamera.it/index.php/blog">
+<link rel="next" title="I dati" href="http://www.linkedopencamera.it/index.php/i-dati">
+<link rel="canonical" href="http://www.linkedopencamera.it/">
+
+<!-- using Like-Button-Plugin-For-Wordpress [v4.2.3] | by http://www.gb-world.net -->
+<meta property="og:site_name" content="Linked Open Camera">
+<meta property="og:type" content="non_profit">
+<meta property="og:title" content="Linked Open Camera">
+<!-- using Like-Button-Plugin-For-Wordpress [v4.2.3] | by http://www.gb-world.net -->
+	<script type="text/javascript">
+//<![CDATA[
+
+
+
+/* JQUERY */
+
+jQuery(document).ready(function(){  
+
+ 
+	/* For IE6 */
+	if (jQuery.browser.msie && /MSIE 6\.0/i.test(window.navigator.userAgent) && !/MSIE 7\.0/i.test(window.navigator.userAgent) && !/MSIE 8\.0/i.test(window.navigator.userAgent)) {
+
+		/* Max-width for images in IE6 */		
+		var centerwidth = jQuery("td#middle").width(); 
+		
+		/* Images without caption */
+		jQuery(".post img").each(function() { 
+			var maxwidth = centerwidth - 10 + 'px';
+			var imgwidth = jQuery(this).width(); 
+			var imgheight = jQuery(this).height(); 
+			var newimgheight = (centerwidth / imgwidth * imgheight) + 'px';	
+			if (imgwidth > centerwidth) { 
+				jQuery(this).css({width: maxwidth}); 
+				jQuery(this).css({height: newimgheight}); 
+			}
+		});
+		
+		/* Images with caption */
+		jQuery("div.wp-caption").each(function() { 
+			var captionwidth = jQuery(this).width(); 
+			var maxcaptionwidth = centerwidth + 'px';
+			var captionheight = jQuery(this).height();
+			var captionimgwidth =  jQuery("div.wp-caption img").width();
+			var captionimgheight =  jQuery("div.wp-caption img").height();
+			if (captionwidth > centerwidth) { 
+				jQuery(this).css({width: maxcaptionwidth}); 
+				var newcaptionheight = (centerwidth / captionwidth * captionheight) + 'px';
+				var newcaptionimgheight = (centerwidth / captionimgwidth * captionimgheight) + 'px';
+				jQuery(this).css({height: newcaptionheight}); 
+				jQuery("div.wp-caption img").css({height: newcaptionimgheight}); 
+				}
+		});
+		
+		/* sfhover for LI:HOVER support in IE6: */
+		jQuery("ul li").
+			hover( function() {
+					jQuery(this).addClass("sfhover")
+				}, 
+				function() {
+					jQuery(this).removeClass("sfhover")
+				} 
+			); 
+
+	/* End IE6 */
+	}
+	
+	jQuery(".post table tr").
+		mouseover(function() {
+			jQuery(this).addClass("over");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("over");
+		});
+
+	
+	jQuery(".post table tr:even").
+		addClass("alt");
+
+	
+	jQuery("input.text, input.TextField, input.file, input.password, textarea").
+		focus(function () {  
+			jQuery(this).addClass("highlight"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("highlight"); 
+		})
+	
+	jQuery("input.inputblur").
+		focus(function () {  
+			jQuery(this).addClass("inputfocus"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("inputfocus"); 
+		})
+
+		
+
+	
+	jQuery("input.button, input.Button").
+		mouseover(function() {
+			jQuery(this).addClass("buttonhover");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("buttonhover");
+		});
+
+	/* toggle "you can use these xhtml tags" */
+	jQuery("a.xhtmltags").
+		click(function(){ 
+			jQuery("div.xhtml-tags").slideToggle(300); 
+		});
+
+	/* For the Tabbed Widgets plugin: */
+	jQuery("ul.tw-nav-list").
+		addClass("clearfix");
+
+		
+	
+});
+
+//]]>
+</script>
+<link rel="stylesheet" href="Linked%20Open%20Camera-Home_files/loc.css" type="text/css"><!--[if IE 6]>
+<script type="text/javascript" src="http://www.linkedopencamera.it/wp-content/themes/atahualpa/js/DD_roundies.js"></script>
+<script type="text/javascript">DD_roundies.addRule('a.posts-icon, a.comments-icon, a.email-icon, img.logo');</script>
+<![endif]-->
+</head><body class="home page page-id-30 page-template page-template-default">
+<div id="wrapper">
+<div id="container">
+<table id="layout" border="0" cellpadding="0" cellspacing="0">
+<colgroup>
+<col class="coltwo">
+<col class="colthree"></colgroup> 
+	<tbody><tr>
+
+		<!-- Header -->
+		<td id="header" colspan="2">
+
+		<table id="logoarea" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td rowspan="2" class="logoarea-logo" valign="middle"><a href="http://www.linkedopencamera.it/"><img class="logo" src="Linked%20Open%20Camera-Home_files/loc_header.jpg" alt="Linked Open Camera"></a></td><td class="feed-icons" align="right" valign="middle"><div class="clearfix rss-box"><a class="comments-icon" rel="nofollow" href="http://www.linkedopencamera.it/index.php/comments/feed" title="Subscribe to the COMMENTS feed">Comments</a><a class="posts-icon" rel="nofollow" href="http://www.linkedopencamera.it/index.php/feed" title="Subscribe to the POSTS feed">Posts</a></div></td></tr><tr><td class="search-box" align="right" valign="bottom"><div class="searchbox">
+				<form method="get" class="searchform" action="http://www.linkedopencamera.it/">
+				<div class="searchbox-form">
+					<input class="text inputblur" onfocus="this.value=''" value="Cerca nel sito" onblur="this.value='Cerca nel sito'" name="s" type="text"></div>
+				</form>
+			</div>
+			</td></tr></tbody></table> <div id="menu1"><ul id="rmenu2" class="clearfix rMenu-hor rMenu">
+<li class="page_item page-item-30 current_page_item"><a href="http://www.linkedopencamera.it/">Home</a></li>
+<li class="page_item page-item-14"><a href="http://www.linkedopencamera.it/index.php/il-progetto">Il progetto</a></li>
+<li class="page_item page-item-91"><a href="http://www.linkedopencamera.it/index.php/i-dati">I dati</a></li>
+<li class="page_item page-item-16"><a href="http://www.linkedopencamera.it/index.php/collabora-2">Collabora</a></li>
+<li class="page_item page-item-18"><a href="http://www.linkedopencamera.it/index.php/chi-siamo-2">Chi siamo</a></li>
+<li class="page_item page-item-23"><a href="http://www.linkedopencamera.it/index.php/blog">Blog</a></li>
+<li class="page_item page-item-103"><a href="http://www.linkedopencamera.it/index.php/press">Press</a>
+<ul class="children">
+	<li class="page_item page-item-134"><a href="http://www.linkedopencamera.it/index.php/press/comunicato-stampa">Comunicato stampa</a></li>
+	<li class="page_item page-item-132"><a href="http://www.linkedopencamera.it/index.php/press/dicono-di-noi">Dicono di noi</a></li>
+</ul>
+</li>
+</ul></div>
+ <div class="horbar1">&nbsp;</div>
+		</td>
+		<!-- / Header -->
+
+	</tr>
+
+	<!-- Main Body -->	
+	<tr id="bodyrow">
+
+		
+				
+
+		<!-- Main Column -->
+		<td id="middle">
+
+	
+
+<div id="top_center_area" class="bfa_widget_area"></div>
+		
+		 
+
+		
+<div class="post-30 page type-page hentry post" id="post-30">
+
+
+<div class="post-headline">		<h1>Home</h1>
+		</div>
+
+<div class="post-bodycopy clearfix"><h2>Come spende i nostri soldi la camera dei deputati?</h2>
+<p>Mettiamo a disposizione i dati grezzi su contratti e previsioni di 
+spesa per stimolare la trasparenza e la cittadinanza attiva. Vogliamo 
+favorire il riuso di questi dati da parte di cittadini e imprese. Per 
+farlo abbiamo bisogno del<a href="http://www.linkedopencamera.it/blog/?page_id=16"> tuo aiuto</a>.</p>
+<h3>Semantic Web e Linked Data</h3>
+<p><a href="http://www.linkedopencamera.it/wp-content/uploads/rdf.jpg"><img class="alignleft size-medium wp-image-46" style="margin-top: 0px; margin-bottom: 0px;" title="rdf" src="Linked%20Open%20Camera-Home_files/rdf-274x300.jpg" alt="" height="70" width="65"></a>I dati sulle previsioni di spesa della camera sono stati <a href="http://servizi.radicalparty.org/freshinstall/cameraspese/tutte" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','servizi.radicalparty.org/freshinstall/cameraspese/tutte']);">pubblicati dalla parlamentare Rita Bernardini</a>, che li ha ottenuti in formato cartaceo e digitalizzati.</p>
+<p>Noi abbiamo corretto e arricchito quei dati per renderli parte del 
+Semantic Web e li abbiamo trasformati in formati standard secondo le 
+linee guida <a title="Linked Data Website" href="http://linkeddata.org/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','linkeddata.org/']);">Linked Data</a>.</p>
+<p>Lo scopo del nostro progetto non è tanto costruire un bel sito web in
+ cui l’utente finale possa consultare i dati, quanto piuttosto rendere i
+ dati grezzi disponibili a chiunque voglia utilizzarli per integrarli 
+nelle proprie applicazioni, creare nuove modalità di visualizzazione, 
+incrociarli ad altri dati, praticare il cosiddetto “Civil Hacking”.</p>
+<p>Per saperne di più consulta la pagina <a href="http://www.linkedopencamera.it/index.php/il-progetto" target="_self">Il Progetto</a>.</p>
+<p>Malgrado tutto, abbiamo creato&nbsp;<a href="http://131.114.79.25:8080/facelet" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','131.114.79.25:8080/facelet']);">un’applicazione grafic</a>a&nbsp;che, sebbene non sia facilissima da utilizzare, permette a tutti di consultare i dati.</p>
+<p>Aspettiamo che siate voi a sviluppare applicazioni migliori!</p>
+</div>
+
+
+</div><!-- / Post -->						
+	
+	<div id="center_widget_area" class="bfa_widget_area"><div id="text-3" class="widget widget_text">			<div class="textwidget"><p>Contribuisci alla richiesta della visura camerale di una delle aziende coinvolte.<br>
+<a href="http://www.linkedopencamera.it/?page_id=16">Leggi</a></p>
+</div>
+		</div><div id="text-6" class="widget widget_text">			<div class="textwidget"><p>Hai un’idea da realizzare? Hai critiche o suggerimenti?</p>
+<p><a href="mailto:linkedopencamera@gmail.com">Scrivici!</a> </p>
+</div>
+		</div><div id="text-7" class="widget widget_text">			<div class="textwidget"><p>Abbiamo bisogno dell'aiuto di giuristi in grado di supportare il nostro progetto.<br>
+<a href="mailto:linkedopencamera@gmail.com">Contattaci!</a></p>
+</div>
+		</div></div>
+
+
+		
+			
+
+
+
+</td>
+<!-- / Main Column -->
+
+
+<!-- Right Sidebar -->
+<td id="right">
+
+			<div id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title"><h3>Ultimi Post</h3></div>		<ul>
+				<li><a href="http://www.linkedopencamera.it/index.php/2010/hello-world" title="Ci siamo!">Ci siamo!</a></li>
+				</ul>
+		</div><div id="recent-tweets" class="widget Recent_Tweets_widget"><div class="widget-title"><h3>Tweet recenti</h3></div><style type="text/css">
+#twitter_update_list li {
+list-style-type: none;
+padding-top: 10px;
+}</style>
+<div id="twitter_update_list"><li><span>"Open Government Data and the Right to Reuse" interessante draft report di Access Info Europe e Open Knowledge Foundation...</span> <a style="font-size: 85%;" href="http://twitter.com/lod_camera/statuses/27915478576">about 12 hours ago</a></li><li><span>Pubblicato elenco di articoli e post che parlano di noi all'indirizzo <a href="http://bit.ly/8XcCGv">http://bit.ly/8XcCGv</a> se ci è sfuggito qualcosa segnalatecelo!</span> <a style="font-size: 85%;" href="http://twitter.com/lod_camera/statuses/26640402052">13 days ago</a></li></div><br><a href="http://twitter.com/lod_camera">Follow @lod_camera</a><br></div><div id="facebook-like-button-generator" class="widget Facebook-Like-Button-Generator"><div class="widget-title"><h3>Pagina Facebook</h3></div><!-- using Like-Button-Plugin-For-Wordpress-Sidebar-Widget [v4.2.3] | by http://www.gb-world.net --><div class="padding-top:20px;"><iframe src="Linked%20Open%20Camera-Home_files/like.htm" allowtransparency="false" style="border: medium none; overflow: hidden; width: 184px; height: 100px;" scrolling="no" frameborder="10"></iframe>
+</div><!-- using Like-Button-Plugin-For-Wordpress-Sidebar-Widget [v4.2.3] | by http://www.gb-world.net --></div>
+</td>
+<!-- / Right Sidebar -->
+
+</tr>
+<!-- / Main Body -->
+<tr>
+
+<!-- Footer -->
+<td id="footer" colspan="2">
+
+    <p>
+    <a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/"><img alt="Licenza Creative Commons" style="border-width: 0pt;" src="Linked%20Open%20Camera-Home_files/88x31.png"></a><br><br>Tutti i contenuti pubblicati in <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.linkedopencamera.it/blog" property="cc:attributionName" rel="cc:attributionURL">questo sito</a>, eccetto quando diversamente specificato, sono soggetti a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/">Licenza Creative Commons Attribution 2.5 Italy</a>.<br><br>Powered by <a href="http://wordpress.org/">WordPress</a> &amp; the <a href="http://wordpress.bytesforall.com/" title="Customizable WordPress themes">Atahualpa Theme</a> by <a href="http://www.bytesforall.com/" title="BFA Webdesign">BytesForAll</a>. Discuss on our <a href="http://forum.bytesforall.com/" title="Atahualpa &amp; WordPress">WP Forum</a>    </p>
+    
+    
+    <script type="text/javascript">
+/* <![CDATA[ */
+var wpAjax = {
+	noPerm: "You do not have permission to do that.",
+	broken: "An unidentified error has occurred."
+};
+try{convertEntities(wpAjax);}catch(e){};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Linked%20Open%20Camera-Home_files/wp-ajax-response.js"></script>
+<script type="text/javascript" src="Linked%20Open%20Camera-Home_files/wp-lists.js"></script>
+
+</td>
+<!-- / Footer -->
+
+</tr>
+</tbody></table><!-- / layout -->
+</div><!-- / container -->
+</div><!-- / wrapper -->
+</body></html>

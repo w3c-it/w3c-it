@@ -1,0 +1,299 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="../../svgs/slide.css" ?>
+<svg width="922" height="576">
+  <title>General Overview of W3C as an organization</title>
+
+  <desc>This is, actually, a collection of several slides in one, descriptions are
+  given separately.</desc>
+
+  <rect width="922" height="576" class="background" />
+
+  <g transform="scale(0.9)">
+    <g transform="translate(0,-100)">
+      <g transform="translate(20,130)">
+        <desc>Prehistory of the web</desc>
+        <rect x="-10" width="400" height="90" class="empty" />
+        <text class="list" y="24">1989: invented by Tim Berners-Lee</text>
+        <text class="list" y="44">1993: Mosaic Browser</text>
+        <text class="list" y="64">1994/5: take-off</text>
+        <text class="list" y="84">1995: Regulation needed</text>
+      </g>
+
+      <line class="arrow" x1="160" y1="220" x2="160" y2="250" />
+
+      <g transform="translate(160,250)">
+        <g transform="rotate(90)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(20,250)">
+        <desc>Establishment of hosts and offices</desc>
+        <rect x="-10" width="480" height="100" class="empty" />
+        <text class="list" y="24">1994: W3C formed, MIT Host</text>
+        <text class="list" y="44">1995: European Host at INRIA</text>
+        <text class="list" y="64">1996: Japanese Host at Keio</text>
+        <text class="list" y="84">1997: Offices Established</text>
+        <a xlink:href="../Offices/slide1-0.htm">
+          <g transform="translate(285,45)">
+            <desc>A table of the current offices</desc>
+            <g transform="scale(0.4)">
+              <rect class="table" width="450" height="120" />
+              <g transform="translate(5,0)">
+                <text y="24" class="left">Australia: DSTC</text>
+                <text y="44" class="left">Germany: GMD</text>
+                <text y="64" class="left">Greece: FORTH</text>
+                <text y="84" class="left">Israel: Un. of Jerusalem</text>
+                <text y="104" class="left">Italy: CNUCE</text>
+              </g>
+
+              <g transform="translate(235,0)">
+                <text y="24" class="left">Hong Kong: HKUST</text>
+                <text y="44" class="left">Morocco: EMI</text>
+                <text y="64" class="left">Netherlands: CWI</text>
+                <text y="84" class="left">Sweden: SICS</text>
+                <text y="104" class="left">UK: RAL</text>
+              </g>
+            </g>
+          </g>
+        </a>
+      </g>
+
+      <line class="arrow" x1="160" y1="350" x2="160" y2="380" />
+
+      <g transform="translate(160,380)">
+        <g transform="rotate(90)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(10,380)">
+        <desc>Membership data</desc>
+        <rect width="440" height="280" class="empty" />
+        <text x="3" y="24" class="listMinor">1994-2001 Membership Growth to 500</text>
+
+        <g transform="translate(10,30)">
+          <desc>A table of current membership data</desc>
+
+          <g transform="scale(0.4)">
+            <rect class="table" width="480" height="160" />
+            <g transform="translate(10,0)">
+              <text y="24" class="left">Type</text>
+              <text y="54" class="left">Full</text>
+              <text y="84" class="left">Affiliate</text>
+              <text y="114" class="left">Hosts</text>
+              <text y="154" class="left">Total</text>
+            </g>
+
+            <g transform="translate(145,0)">
+              <text class="centre" y="24">Americas</text>
+              <text class="right" y="54">58</text>
+              <text class="right" y="84">230</text>
+              <text class="right" y="114">1</text>
+              <text class="right" y="154">289</text>
+            </g>
+
+            <g transform="translate(240,0)">
+              <text class="centre" y="24">Europe</text>
+              <text class="right" y="54">30</text>
+              <text class="right" y="84">121</text>
+              <text class="right" y="114">1</text>
+              <text class="right" y="154">152</text>
+            </g>
+
+            <g transform="translate(340,0)">
+              <text class="centre" y="24">Pacific</text>
+              <text class="right" y="54">16</text>
+              <text class="right" y="84">42</text>
+              <text class="right" y="114">1</text>
+              <text class="right" y="154">59</text>
+            </g>
+
+            <g transform="translate(440,0)">
+              <text class="centre" y="24">Total</text>
+              <text class="right" y="54">104</text>
+              <text class="right" y="84">393</text>
+              <text class="right" y="114">3</text>
+              <text class="right" y="154">500</text>
+            </g>
+          </g>
+        </g>
+
+        <g transform="translate(10,100)">
+          <desc>A list of some of the members' names</desc>
+          <g transform="scale(0.4)">
+            <rect class="table" width="555" height="430" />
+            <g transform="translate(10,0)">
+              <text y="24" class="left">Americas</text>
+              <text y="54" class="onTable">Adobe, Akamai, AOL, Apple, AT&amp;T,
+              Boeing, Corel, HP,</text>
+              <text y="84" class="onTable">IBM, IEEE CS, Library of Congress,
+              Lucent, NASA Ames,</text>
+              <text y="114" class="onTable">Microsoft, MIT, OMG, Openwave, Sun,
+              Waterloo Maple,</text>
+              <text y="144" class="onTable">Web3D,...</text>
+							
+              <text y="174" class="left">Asia</text>
+              <text y="204" class="onTable">Academia Sinica, Fujitsu, Hitachi, Hong
+              Kong S &amp; T Un.,</text>
+              <text y="234" class="onTable">iDA, NEC, NTT DoCoMo, Mitsubishi, Sharp,
+              Toshiba,...</text>
+							
+              <text y="264" class="left">Australia</text>
+              <text y="294" class="onTable">CSIRO, DSTC, IPR, National Library, Un.
+              of NSW,...</text>
+
+              <text y="324" class="left">Europe</text>
+              <text y="354" class="onTable">Agfa, BBC, BT, Bull, CERN,
+              DaimlerChrysler, GMD,</text>
+              <text y="384" class="onTable">Elsevier, Ericcson, EUnet, INRIA, Nokia,
+              Philips, Reuters,</text>
+              <text y="414" class="onTable">Siemens, Software AG, Thomson
+              Multimedia, ...</text>
+            </g>
+          </g>
+        </g>
+
+<!-- *****************Membership Growth table **************** -->
+        <g transform="translate(250,50)">
+          <desc>Membership growth table</desc>
+
+          <g transform="scale(0.2)">
+            <rect y="-50" class="membershipTable" width="850" height="550" />
+
+            <g transform="translate(0,60)">
+              <desc>The statistical data of membership growth between 1997 and 2001</desc>
+
+							<g>
+  							<desc>Axes and labels for the statistical figure</desc>
+                <line x1="150" y1="10" x2="150" y2="380" />
+                <line x1="150" y1="380" x2="750" y2="380" />
+                <text x="10" y="170" class="onTable">W3C</text>
+                <text x="10" y="200" class="onTable">Affiliate</text>
+                <text x="10" y="230" class="onTable">Members</text>
+                <line x1="200" y1="380" x2="200" y2="400" />
+                <line x1="320" y1="380" x2="320" y2="400" />
+                <line x1="440" y1="380" x2="440" y2="400" />
+                <line x1="560" y1="380" x2="560" y2="400" />
+                <line x1="680" y1="380" x2="680" y2="400" />
+							</g>
+<!-- 1997 -->
+              <g>
+                <desc>1997 data</desc>
+                <rect x="170" y="344" width="18" height="36" class="americas" />
+                <rect x="190" y="372" width="18" height="8" class="europe" />
+                <rect x="210" y="380" width="18" height="0" class="pacific" />
+                <text x="170" y="340" class="onTable">18</text>
+                <text x="190" y="370" class="onTable">4</text>
+                <text x="210" y="370" class="onTable">0</text>
+              </g>
+
+<!-- 1998 -->
+              <g>
+                <desc>1998 data</desc>
+                <rect x="290" y="172" width="18" height="208" class="americas" />
+                <rect x="310" y="314" width="18" height="66" class="europe" />
+                <rect x="330" y="356" width="18" height="24" class="pacific" />
+                <text x="280" y="170" class="onTable">104</text>
+                <text x="310" y="310" class="onTable">33</text>
+                <text x="330" y="350" class="onTable">12</text>
+              </g>
+
+<!-- 1999 -->
+              <g>
+                <desc>1999 data</desc>
+                <rect x="410" y="96" width="18" height="284" class="americas" />
+                <rect x="430" y="262" width="18" height="118" class="europe" />
+                <rect x="450" y="326" width="18" height="54" class="pacific" />
+                <text x="400" y="90" class="onTable">142</text>
+                <text x="430" y="250" class="onTable">59</text>
+                <text x="450" y="320" class="onTable">27</text>
+              </g>
+
+<!-- 2000 -->
+              <g>
+                <desc>2000 data</desc>
+                <rect x="530" y="-56" width="18" height="436" class="americas" />
+                <rect x="550" y="162" width="18" height="218" class="europe" />
+                <rect x="570" y="290" width="18" height="90" class="pacific" />
+                <text x="530" y="-70" class="onTable">218</text>
+                <text x="550" y="160" class="onTable">109</text>
+                <text x="570" y="290" class="onTable">45</text>
+              </g>
+
+<!-- 2001 -->
+              <g>
+                <desc>Data for 2001</desc>
+                <rect x="650" y="-68" width="18" height="448" class="americas" />
+                <rect x="670" y="148" width="18" height="232" class="europe" />
+                <rect x="690" y="288" width="18" height="92" class="pacific" />
+                <text x="650" y="-80" class="onTable">230</text>
+                <text x="670" y="144" class="onTable">121</text>
+                <text x="690" y="288" class="onTable">42</text>
+              </g>
+
+              <g>
+                <desc>Labels on the x axis</desc>
+                <text x="180" y="420">1997</text>
+                <text x="300" y="420">1998</text>
+                <text x="420" y="420">1999</text>
+                <text x="540" y="420">2000</text>
+                <text x="660" y="420">2001</text>
+              </g>
+
+              <g>
+                <desc>Legend</desc>
+                <rect x="160" y="100" width="25" height="25" class="americas" />
+                <text x="190" y="120" class="onTable">Americas</text>
+                <rect x="160" y="130" width="25" height="25" class="europe" />
+                <text x="190" y="150" class="onTable">Europe</text>
+                <rect x="160" y="160" width="25" height="25" class="pacific" />
+                <text x="190" y="180" class="onTable">Pacific</text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+
+<!-- *********************Process*************************** -->
+      <g transform="translate(520,150)">
+        <desc>Short list of what W3C delivers</desc>
+        <rect width="460" height="220" class="empty" />
+        <text x="0" y="-10" class="onBackground">W3C Delivers:</text>
+        <text x="3" y="24" class="listMinor">Recommendations</text>
+        <text class="general" x="23" y="44">Members support for industry-wide adoption</text>
+        <text class="general" x="23" y="64">Web "standards"</text>
+
+        <text x="3" y="94" class="listMinor">Sample Code</text>
+        <text class="general" x="23" y="114">Jigsaw server</text>
+        <text class="general" x="23" y="134">Amaya browser</text>
+
+        <text x="3" y="164" class="listMinor">Assistance</text>
+        <text class="general" x="23" y="184">Validators</text>
+        <text class="general" x="23" y="204">Design guides, etc</text>
+      </g>
+
+      <g transform="translate(520,420)">
+        <desc>Short overview of the W3C Process</desc>
+        <rect x="-10" width="380" height="310" class="empty" />
+        <text y="-10" class="onBackground">W3C Process:</text>
+        <g transform="translate(190,0)">
+          <desc>List of the process steps</desc>
+          <text y="30" class="normal" style="text-anchor:middle">Members make Submissions</text>
+          <text y="60" class="normal" style="text-anchor:middle">Workshops define need</text>
+          <text y="90" class="wd">Activity Defined</text>
+          <text y="120" class="normal" style="text-anchor:middle">Working Groups achieve consensus</text>
+          <text y="150" class="normal" style="text-anchor:middle">Proof of Concept implementations</text>
+          <text y="180" class="wd">Working Draft</text>
+          <text y="210" class="normal" style="text-anchor:middle">Candidate Recommendation</text>
+          <text y="240" class="normal" style="text-anchor:middle">Proposed Recommendation</text>
+          <text y="270" class="wd">Voting</text>
+          <text y="300" class="normal" style="text-anchor:middle">W3C Recommendation</text>
+        </g>
+<!-- *********************End Process*************************** -->
+      </g>
+    </g>
+  </g>
+</svg>
+

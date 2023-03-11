@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang=
+"en">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <title>
+      mww
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; Oreste Signore" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link rel="stylesheet" href="./slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="./slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<style type="text/css">
+/*<![CDATA[*/
+div.slide pre em { 
+  background-color: #ffffff;
+  font-style: normal;
+  color: #0000ff;
+  font-weight: bold;
+   }
+<!-- 
+.dataset {
+      font-size: 120%;
+      font-weight: bold;
+      color: #0000ff;
+    /*  background-color: #cccccc;   */
+      font-family: "Lucida Handwriting", Arial; 
+} 
+
+.evidence {
+      font-size: 110%;
+      font-weight: bold;
+      color: #0000ff;
+      background-color: #ffff99;    
+      font-family: Arial; 
+}
+-->
+/*]]>*/
+</style>
+<script src="./slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <!--  ========================================================== -->
+    <div class="slide">
+      <h1>
+        Is the Web really a &ldquo;Web for All&rdquo;?
+      </h1>
+      <p>
+        <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3c.it">oreste@w3c.it</a>&gt;<br />
+        Manager W3C Italy<br />
+      </p>
+      <hr />
+      <p>
+        <a href=
+        "http://www.multilingualweb.eu/documents/pisa-workshop/program">
+        Content on the Multilingual Web</a><br />
+        4-5 April 2011, Pisa, Italy
+      </p>
+      <hr />
+      <p class="slidesAt">
+        Slides: <a href="./slides.html" hreflang="it" title=
+        "slides - is the web a web for all?">http://www.w3c.it/talks/2010/mww/slides.html</a><br />
+
+        <!--  Versione pdf: [ <a href="./slides.pdf" hreflang="it"
+        title=
+        "pdf slides - mww - is the web a web for all?">
+        pagina singola</a>] [ <a href="./slides2p.pdf" hreflang=
+        "it" title=
+        "pdf slides - mww - is the web a web for all?">
+        due pagine</a>] -->
+      </p><a href="http://www.w3c.it/"><img src=
+      "./slidy/itlogo-20010115.png" alt=
+      "Cover page W3C Office Logo" style=
+      "width:40%; max-width: 279px" /></a> <a href=
+      "http://www.weblab.isti.cnr.it/"><img src=
+      "./slidy/weblabWithText.jpg" alt="Cover page Weblab Logo"
+      style="width:10%; max-width: 150px" /></a> <a href=
+      "http://www.w3c.it/projects/aquarius/"><img src=
+      "./images/logoCoesa200.png" alt="Cover page Aquarius Logo"
+      style="width:10%; max-width: 200px" /></a> <a href=
+      "http://validator.w3.org/check/referer"><img src=
+      "./slidy/valid-xhtml10.png" alt="Valid XHTML 1.0!" style=
+      "width:15%; max-width: 88px" /></a> <a href=
+      "http://jigsaw.w3.org/css-validator/"><img src=
+      "./slidy/valid-css.png" alt="Valid CSS!" style=
+      "width:15%; max-width: 88px" /></a>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Acknowledgements
+      </h1>
+      <ul>
+        <li>Steve Bratt
+        </li>
+        <li>Richard Ishida
+        </li>
+        <li>Jos&eacute; Manuel Alonso
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        This was the start&hellip;
+      </h1>
+      <p>
+        <img src="images/proposal.gif" alt=
+        "web proposal: vague but interesting" title=
+        "web proposal: vague but interesting" style=
+        "float:left; width:40%; max-width: 459px; margin-left:1em; margin-right:1em; margin-bottom:1ex; margin-top:1ex;" />
+         &ldquo; The people who built the Internet and Web have a
+        real appreciation of the <em>value of individuals</em>
+        and the value of systems in which individuals play their
+        role, with both a firm sense of their own identity and a
+        firm sense of some common good.<br />
+        [&hellip;]<br />
+        <img src="images/unitarianUniversalists.jpg" alt=
+        "The first Unitarian Universalists church in Cambridge (USA)"
+        title=
+        "The first Unitarian Universalists church in Cambridge (USA) - Photo by Oreste Signore"
+        style=
+        "float:right; width:40%; max-width: 459px; margin-left:1em; margin-right:0em; margin-bottom:1ex; margin-top:1ex;" />
+         I was very lucky, in working at CERN, to be in an
+        environment that <a href="http://www.uua.org/">Unitarian
+        Universalists</a> and physicists would equally
+        appreciate: one of <em>mutual respect</em>, and of
+        building something very great through <em>collective
+        effort</em> that was well beyond the means of any one
+        person - <em>without a huge bureaucratic
+        regime</em>.<br />
+        [&hellip;]<br />
+        The system produced a weird and wonderful machine, which
+        needed care to maintain, but could take advantage of the
+        <em>ingenuity</em>, <em>inspiration</em>, and
+        <em>intuition</em> of individuals in a special way.
+        <em>That, from the start, has been my goal for the World
+        Wide Web</em>. &rdquo;
+      </p>
+      <p style="float:right">
+        (Tim Berners-Lee - Weaving the Web, p. 208-209)
+      </p>
+    </div>
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        World Wide Web Consortium (W3C)
+      </h1><img src="./images/tbl-so.jpeg" style="float:right"
+      height="267" width="180" alt="Foto di TBL" title=
+      "Tim Berners-Lee" class="withBorder" />
+      <blockquote>
+        <p>
+          &ldquo;To lead the World Wide Web to its full potential
+          by developing protocols and guidelines that ensure
+          long-term growth for the Web&rdquo;
+        </p>
+      </blockquote>
+      <ul>
+        <li>Founded in <a href=
+        "http://www.w3.org/Consortium/history.html" title=
+        "The history pages of W3C">1994</a> by Tim Berners-Lee
+        </li>
+        <li>Fair and effective process
+        </li>
+        <li>Royalty-free patent policy
+        </li>
+        <li>Global focus
+        </li>
+        <li>
+          <em>One Web</em>, based on free &amp; open standards
+          (<em><a href="http://www.w3.org/TR/" title=
+          "Link to the W3C Publications">Recommendations</a></em>)
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        The Recommendation Track
+      </h1>
+      <div style="text-align:center">
+        <img src="./images/documentProcess.png" alt=
+        "Stages of the Recommendation process in a stacked diagram"
+        width="100%" style="max-width: 803px" />
+      </div>
+      <div class="divright">
+        <p style="float:right">
+          <a href="images/imageCreditRecTrack.html">Credits and
+          description</a>
+        </p>
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Vision for the future of the Web
+      </h1>
+      <div class="column40">
+        <img alt=
+        "Il Web connette persone, applicazioni, dispositivi"
+        title=
+        "Il Web connette persone, applicazioni, dispositivi"
+        width="100%" style="max-width: 439px" src=
+        "./images/worldWeb.png" />
+      </div>
+      <div class="column60">
+        <ul>
+          <li>Expanding from a Web of:
+            <ul>
+              <li>linked documents
+              </li>
+              <li>creators &amp; consumers
+              </li>
+            </ul>
+          </li>
+          <li>&hellip;to <em>One Web</em>
+            <ul>
+              <li>of Linked Data
+              </li>
+              <li>on Everything
+              </li>
+              <li>for Everyone
+              </li>
+            </ul>
+            <p>
+              <em>The same information is available to all users,
+              regardless of who they are, where they are, what
+              system they use, or how they are connected</em>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <!--  <div class="slide">
+      <h1>
+        What does &ldquo;One Web&rdquo; mean?
+      </h1>
+      <p>
+             <span class="bigEmphasis">The same information is available to all users,
+              regardless of who they are, where they are, what
+              system they use, or how they are connected</span>
+            </p>
+    </div> -->
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        One Web: For Everyone, Connecting &amp; Empowering All
+        People
+      </h1>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        The Web is a social environment
+      </h1>
+      <blockquote lang="en" xml:lang="en">
+        <p class="midEmphasis">
+          <img src="images/worldHumanity.png" width="15%" style=
+          "float:right; width:15%;" alt="worldHumanity" />
+          &ldquo;The Web is more a <em>social</em> creation than
+          a technical one. I designed it for a social effect - to
+          <em>help people work together</em> - and not as a
+          technical toy. The ultimate goal of the Web is to
+          <em>support and improve our weblike existence</em> in
+          the world.&rdquo;<br />
+        </p>
+      </blockquote>
+      <blockquote lang="en" xml:lang="en">
+        <p class="midEmphasis">
+          The social value of the Web is that it enables human
+          communication, commerce, and opportunities to share
+          knowledge [and] to <em>make these benefits available to
+          all people</em>, whatever their hardware, software,
+          network infrastructure, <em>native language</em>,
+          <em>culture</em>, geographical location, or physical or
+          mental ability.
+        </p>
+      </blockquote>
+      <p style="float:right">
+        <em>(Tim Berners-Lee - Director of W3C and inventor of
+        the Web)</em>
+      </p>
+    </div>
+    <!--  ================================================================ -->
+    <!--  <div class="slide">
+      <h1>
+        Web for Everyone
+      </h1>
+      <blockquote lang="en" xml:lang="en">
+        <p>
+          &ldquo;The Web is more a <em>social</em> creation than
+          a technical one. I designed it for a social effect - to
+          <em>help people work together</em> - and not as a
+          technical toy. The ultimate goal of the Web is to
+          <em>support and improve our weblike existence</em> in
+          the world.&rdquo;<br />
+          (Tim Berners-Lee - Weaving the Web, p. 123)
+        </p>
+      </blockquote>
+      <blockquote lang="en" xml:lang="en">
+        <p>
+          The social <em>value of the Web</em> is that it enables
+          human communication, commerce, and opportunities to
+          share knowledge [and] to make these <em>benefits
+          available to all people</em>, whatever their hardware,
+          software, network infrastructure, native language,
+          culture, geographical location, or physical or mental
+          ability
+        </p>
+      </blockquote>
+    </div> -->
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Is the Web 2.0 really a social environment?
+      </h1><img src="images/walls.png" alt=
+      "vari ambienti di social web" title=
+      "I vari ambienti di social network potrebbero non essere in grado di comunicare tra di loro"
+      width="100%" style="max-width:804px; margin-left:1em;" />
+      <p>
+        David Simonds, The Economist
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Could everyone have access to the Web?
+      </h1>
+      <div class="column50">
+        <p>
+          <img alt=
+          "Al largo della costa di Kerala (India): utilizzo di un cellulare da un' imbarcazione"
+          title=
+          "Al largo della costa di Kerala (India): utilizzo di un cellulare da un' imbarcazione"
+          src="./images/india_boat_phone.jpg" style=
+          "max-width:600px;" width="100%" /><br />
+          <span style="font-size: x-small;">(Fonte: <a href=
+          "http://www.flickr.com/photos/sdawara/244299040/">NY
+          Times</a> )</span>
+        </p>
+      </div>
+      <p>
+        <span class="bigEmphasis">Digital Divide</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        How can the Web help humanity?
+      </h1>
+      <dl>
+        <dt>
+          Some figures (to think about&hellip;)
+        </dt>
+        <dd>
+          <ul>
+            <li>Not using the Web: ~5.000.000.000
+            </li>
+            <li>Living on $1.25/day or less: ~1.400.000.000
+            </li>
+            <li>Under-nourished: ~920,000,000
+            </li>
+            <li>Illiterate: ~900,000,000
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Many ather barriers and threats:
+        </dt>
+        <dd>
+          <ul>
+            <li>Lack of support for <em>languages</em> and
+            <em>fonts</em>
+            </li>
+            <li>Lack of support for <em>people with
+            disabilities</em> (reduced functionaality)
+            </li>
+            <li>Poprietary solutions vs open standards
+            </li>
+            <li>
+              <em>Censorship</em>, <em>discriminatory access</em>
+            </li>
+            <li>Understanding of how the Web works
+            </li>
+            <li>Understanding of how the Web can best empower
+            people
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p>
+        <em>(numbers from 2007/2008)</em>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Mission of the World Wide Web Foundation
+      </h1><img src="images/w3f.jpg" title=
+      "World Wide Web Foundation logo" alt="w3f logo" />
+      <ul>
+        <li>
+          <a href=
+          "http://www.webfoundation.org/">http://www.webfoundation.org/</a>
+        </li>
+        <li>
+          <em>Advance</em> the Web
+        </li>
+        <li>
+          <em>Connect</em> humanity
+        </li>
+        <li>
+          <em>Empower</em> people
+        </li>
+        <li>&ldquo;The Web Foundation will <em>break-down the
+        barriers</em> that now prevent billions of people from
+        being connected and empowered by the Web, while
+        <em>advancing future technologies</em> leading toward a
+        <em>more capable, useful and usable Web for all people on
+        the planet</em>.&rdquo;
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Web accessibility
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Why accessible?
+      </h1>
+      <ul>
+        <li>Web <em>sites</em> and web <em>applications</em> <em>
+          must</em> be accessible
+        </li>
+        <li>The Web has rapidly become a <em>pervasive
+        presence</em> in many countries
+        </li>
+        <li>Web important facilitator of <em>e-Government</em>
+        services (even in countries that are newer to the Web)
+        </li>
+        <li>United Nations <em>Convention on Rights of Persons
+        with Disabilities</em>
+        </li>
+        <li>Explosion of <em>Web 2.0</em>, <em>Rich Internet
+        Applications</em> (RIA) and <em>social networking</em>
+        make <em>e-Inclusion imperative</em>, and exclusion of
+        people with disabilities and older people has become
+        unconscionable
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        WCAG 2.0
+      </h1>
+      <div class="divcenter">
+        <img src="images/wcag20.png" alt="wcag20" width="100%"
+        style="width:100%; max-width:631px" />
+      </div>
+      <div class="divright">
+        <p style="float:right">
+          <a href="images/imageCreditWCAG2.html">Credits and
+          description</a>
+        </p>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        WCAG 2.0 in a nutshell
+      </h1>
+      <ul>
+        <li>general <em>principles</em> (long lasting)
+        </li>
+        <li>
+          <em>guidelines</em>
+        </li>
+        <li>
+          <em>testable</em> Success Criteria (SC)
+        </li>
+        <li>
+          <em>not</em> tied to specific technologies
+        </li>
+        <li>addressing <em>new (and future) technologies</em>
+        </li>
+        <li>involvement of <em>experts from all the world</em>
+        </li>
+        <li>
+          <em>Web Standard</em>: doesn't fragment the Web
+        </li>
+      </ul>
+    </div>
+    <!-- ============================================================== -->
+    <!--  <div class="slide">
+      <h1>
+        Adopting WCAG 2.0 in national policies
+      </h1>
+      <dl>
+        <dt>
+          WCAG intended for:
+        </dt>
+        <dd>
+          <ul>
+            <li>Professionals (Web developers, Web designers,
+            developers of authoring tool &amp; evaluation tool)
+            asking for a <em>technical standard</em>
+            </li>
+            <li>People <em>aiming</em> to develop
+            <em>accessible</em> web sites and web applications
+            &hellip;
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          National regulations intended for people:
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <em>Having</em> to develop web sites and web
+              applications
+            </li>
+            <li>Who <em>must conform</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Generic reference to guidelines is not enough. We need:
+        </dt>
+        <dd>
+          <ul>
+            <li>A reference text in <em>national language</em>
+            (possible as <em>authorized translation</em>)
+            </li>
+            <li>Rules to respect to be <em>conformant</em>
+            (possibly at different <em>levels</em>, considering
+            <em>cost</em> issues)
+            </li>
+            <li>
+              <em>Objectively</em> testable an unambiguous
+              criteria (consider the <em>legal</em>
+              aspect).<br />
+              <em>WCAG 2.0 Success Criteria are testable</em>
+            </li>
+            <li>
+              <em>Harmonization</em> at international level
+            </li>
+            <li>
+              <em>Monitoring</em> the sites
+            </li>
+            <li>Spreading and increasing the <em>culture of
+            accessibility</em> (maybe the <em>most important</em>
+            item)
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div> -->
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        Components of Web Accessibility
+      </h1>
+      <div class="divright" style="width:50%; max-width:50em;">
+        <p>
+          <img src="images/specs.png" alt=
+          "componenti della Web Accessibility" style=
+          "float:right; width:100%; max-width:484px;" />
+        </p>
+        <p style="float:right">
+          <a href="images/imageCredit.html">Credits and
+          description</a>
+        </p>
+      </div>
+      <dl>
+        <dt>
+          Content
+        </dt>
+        <dd>
+          Text, images, forms, multimedia, applications, etc.
+        </dd>
+        <dt>
+          Developers
+        </dt>
+        <dd>
+          Using authoring tools, editors, validators, CMS
+          (Content Management Systems).<br />
+          <em>Should be accessible</em> and <em>produce
+          accessible content</em>
+        </dd>
+        <dt>
+          Users
+        </dt>
+        <dd>
+          Use <em>User Agent</em> (browser, media player, etc.)
+          to access <em>content</em>.<br />
+          Less effort by web designers, if User Agents follow the
+          accessibility rules
+        </dd>
+      </dl>
+      <ul>
+        <li>W3C develops:
+          <ul>
+            <li>accessibility <em>guidelines</em> (for Authoring
+            Tools, Web Content, User Agents)
+            </li>
+            <li>
+              <em>techical specifications</em> (HTML, XML, CSS,
+              SVG, SMIL, etc.)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide">
+      <h1>
+        Multilingual Web
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        It's not just a matter of language translation!
+      </h1>
+      <p>
+        <span class="bigEmphasis">Some issues</span>
+      </p>
+      <ul>
+        <li>Encoding
+        </li>
+        <li>Colors
+        </li>
+        <li>Navigation
+        </li>
+      </ul>
+      <p>
+        (<em>Quoting</em> <a href=
+        "http://www.designer-daily.com/thoughts-on-multilingual-web-design-5442">
+        http://www.designer-daily.com/thoughts-on-multilingual-web-design-5442</a>)<br />
+
+        <em>About the author</em>: Christian Arno is the founder
+        of global <a href=
+        "http://www.lingo24.com/">translations</a> company and
+        website localization specialists Lingo24. In the past
+        twelve months, Lingo24 translated over thirty million
+        words for companies in sixty countries and their turnover
+        in 2009 was $6.1m USD.
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Some issues: Unicode
+      </h1><img src="images/unicode-picture.jpg" title=
+      "unicode picture - from http://www.designer-daily.com/wp-content/uploads/2010/01/unicode-picture.jpg"
+      alt="picture of UNICODE" style=
+      "float:right; width:40%; max-width:450;" />
+      <ul class="incremental">
+        <li>
+          <em>Computing industry standard</em> that enables
+          computers to consistently display <span class=
+          "evidence">     text</span> in most of the alphabets
+          and writings systems of the world
+        </li>
+        <li>
+          <em>Adopted</em> by leaders from the IT industry
+        </li>
+        <li>
+          <em>Supported</em> in most of the standard operating
+          systems and internet browsers
+        </li>
+        <li>Most popular <em>design applications</em> facilitate
+        the development of Unicode web pages
+        </li>
+        <li>The <em>best option</em> when creating websites for
+        international markets, as it allows you to use characters
+        from many different alphabets and languages
+        </li>
+        <!-- <li>In the simplest terms, use Unicode if you plan to
+        adapt your website for non-English speaking countries
+        </li> -->
+      </ul>
+      <p class="incremental">
+        However, quoting some colleagues of mine:<br />
+        <span class="evidence">Don't mind about UTF-8, ISO-8859-1
+        is yet much more than we need!</span>
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Some issues: Colors
+      </h1><img src="images/color.jpg" title=
+      "http://www.designer-daily.com/wp-content/uploads/2010/01/color.jpg"
+      alt="vvv" style="float:right; width:40%; max-width:450;" />
+      <ul class="incremental">
+        <li>Color can play a significant role
+        </li>
+        <li>Choice of colors can be related to the site content:
+          <ul>
+            <li>environmental organization? maybe a lot of
+            <span class="evidence">green</span>
+            </li>
+            <li>water sports equipment? maybe a lot of
+            <span class="evidence">aqua blue</span>
+            </li>
+          </ul>
+        </li>
+        <li>But be aware of target country and <em>culture</em>!
+        </li>
+        <li>
+          <span class="evidence">Red</span> can denote
+          <em>danger</em> or <em>love</em> in western cultures,
+          whilst can signify <em>purity</em> in India and
+          <em>good luck</em> in China.
+        </li>
+        <li>
+          <span class="evidence">Purple</span> can signify
+          &ldquo;<em>royalty</em>&rdquo; in the west, or
+          &ldquo;<em>mourning</em>&rdquo; in some eastern
+          countries (Thailand).
+        </li>
+        <li>
+          <span class="evidence">Black</span> denotes
+          <em>death</em> in Western cultures, but in many Eastern
+          countries, <span class="evidence">white</span> is used
+          for this
+        </li>
+        <li>
+          <a href="images/imageCreditGreenHat.html"><img src=
+          "images/greenHat.jpg" title=
+          "click for image credit and explanation" alt="vvv"
+          style="float:right; width:20%; max-width:500;" /></a>
+          <span class="evidence">Green</span> represents the
+          <em>natural world</em> in many cultures, but would you
+          put an illustration of a green hat on your site, if you
+          are addressing the China market? (<a href=
+          "images/imageCreditGreenHat.html">Click image for
+          details</a>)
+        </li>
+        <li>When launching into new markets, or designing for a
+        worlwide organization, <em>carefully consider</em> the
+        website&rsquo;s <em>color scheme</em> from the very
+        beginning
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Some issues: Navigation
+      </h1><img src="images/website-navigation.jpg" title=
+      "http://www.designer-daily.com/wp-content/uploads/2010/01/website-navigation.jpg"
+      alt="" style="float:right; width:40%; max-width:450;" />
+      <ul>
+        <li>A <em>crucial aspect</em> of any website&rsquo;s
+        design
+          <ul>
+            <li>
+              <em>Good navigation</em> keeps visitors <em>on
+              track</em> to reach their goal.
+            </li>
+            <li>
+              <em>Bad navigation</em>: likely will <em>lose</em>
+              visitors
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Vertical menu</em> on the left of your
+          English-language website?
+          <ul>
+            <li>consider switching it to the opposite side for
+            languages that read &ldquo;right to left&rdquo;, such
+            as Arabic
+            </li>
+            <li>not essential, but consider as the site will
+            appear to the visitors
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Horizontal menu</em>
+          <ul>
+            <li>more consistent
+            </li>
+            <li>no need to make alterations
+            </li>
+          </ul>
+        </li>
+        <li>Using <em>IP2Country services</em> to detect the
+        location of the visitor based on their IP address,
+        altering the display to suit the layout and language of
+        the visitor?
+          <ul>
+            <li>not 100% dependable
+            </li>
+            <li>best allowing the user to select their language
+            manually (clearly labeled options at the top of the
+            page, <em>no flags</em>!)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Where is multilingualism in W3C Standards?
+      </h1>
+      <p>
+        <img src="images/WorldMapW3C.png" alt="" />
+      </p>
+      <ul>
+        <li>Worldwide (3 hosts, 18 Offices)
+        </li>
+        <li>Official language: American English!
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        Just a reminder
+      </h1>
+      <ul>
+        <li>
+          <a href=
+          "http://www.w3.org/Consortium/contact#region">W3C
+          Offices</a>
+        </li>
+        <li>
+          <a href=
+          "http://www.w3.org/Consortium/Translation/">Translations</a>
+          (also &ldquo;<a href=
+          "http://www.w3.org/2005/02/TranslationPolicy.html">authorized
+          translations</a>&rdquo;)
+        </li>
+        <li>
+          <a href="http://www.w3.org/International/">W3C
+          Internationalization (I18n) Activity</a>
+        </li>
+        <li>See the excellent <a href=
+        "http://www.w3.org/International/talks/1010-madrid/">Richard's
+        talk in Madrid</a>
+        </li>
+        <li>Unicode support
+        </li>
+        <li>URI/IRI
+        </li>
+        <li>Language tags
+        </li>
+        <li>
+          <a href=
+          "http://www.w3.org/TR/speech-synthesis11/">Speech
+          Synthesis Markup Language (SSML)</a>
+        </li>
+        <li>CSS3 - Vertical text
+        </li>
+        <li>Web Fonts
+        </li>
+        <li>Language declaration
+        </li>
+        <li>&hellip;
+        </li>
+      </ul>
+    </div>
+    <!-- ========================================================== -->
+    <div class="slide">
+      <h1>
+        An example: the Ruby annotation
+      </h1>
+      <ul class="incremental">
+        <li>A W3C <a href=
+        "http://www.w3.org/TR/ruby/">Recommendation</a> (31 <sup>
+          st</sup> may 2001) <img src=
+          "images/shinkansen-top-bottom.gif" title="xy" alt=""
+          style="width:10%; max-width:149;" /> <img src=
+          "images/chairman.gif" style="max-width:131; width:10%"
+          alt="chairman" />
+        </li>
+        <li>Beware of a <em>multilingual/multicultural</em>
+        issue:
+          <ul class="incremental">
+            <li>it's different from the other Ruby&hellip;
+            </li>
+            <li>
+              <img src="images/ruby-large.jpg" title=
+              "A photo of Ruby (Karima El Mahroug), from her facebook profile (ANSA) - taken from: http://blog.panorama.it/italia/files/2010/11/ruby-large.jpg"
+              alt="Ruby (Karima El Mahroug)" style=
+              "width:20%; max-width:250;" /> &hellip;very popular
+              in Italy
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Conclusion
+      </h1>
+      <ul class="incremental">
+        <li>The Web is&hellip; <img src=
+        "images/worldHumanity.png" width="15%" style=
+        "float:right; width:15%;" alt="worldHumanity" />
+          <ul>
+            <li>not just technology, but&hellip;
+            </li>
+            <li>
+              <em>Humanity Connected by Technology</em>
+            </li>
+            <li>&hellip;and what that technology and those links
+            can do to empower all people
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>One web</em> (multilingual, multicultural)
+        </li>
+        <li>
+          <img src="images/w3cmember.gif" style=
+          "width:15%; max-width: 88px" alt="w3cmember" />
+          <a href="http://www.w3c.it/joining/" title=
+          "come diventare membri W3C">Get involved!</a> become a
+          first class actor to drive the evolution of the Web
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Thanks for your attention and participation
+      </h1>
+      <p class="questions">
+        Questions?
+      </p>
+      <p>
+        &hellip;and <a href="slidy/answer.mp3">answers</a>
+      </p>
+      <hr />
+      <p>
+        <em>If it isn't on the Web it doesn't exist</em> ...
+      </p>
+      <p>
+        ... you will find on the office site (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        these <em>slides</em> (<a href=
+        "http://www.w3c.it/talks/2011/mww">http://www.w3c.it/talks/2011/mww</a>)
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>

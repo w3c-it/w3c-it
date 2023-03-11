@@ -1,0 +1,35 @@
+<smil>
+  <head>
+    <layout type="text/smil-basic-layout" >
+      <root-layout height="600" width="800" background-color="blue" />
+      <region id="c1" top="2" left="480" width="320" height="240" />
+      <region id="c2" top="313" left="5" width="790" height="287" />
+      <region id="c3" top="2" left="80" width="321" height="58" />
+      <region id="c4" top="70" left="10" width="270" height="265" />
+      <region id="c5" top="340" left="300" width="480" height="226" />
+      <region id="c6" top="340" left="2" width="291" height="226" />
+      <region id="c7" top="70" left="0" width="492" height="228" z-index="2" />
+      <region id="c8" top="300" left="256" width="513" height="298" z-index="2" />
+      <region id="c9" top="20" left="520" width="153" height="210"  />
+      <region id="c10" top="340" left="40" width="200" height="200" />
+      <region id="c11" top="220" left="10" width="527" height="369" />
+    </layout>
+  </head>
+  <body>
+    <par>
+       <audio src="roadtrain.mp3" begin="0s" dur="102s" />
+       <img id="i1" src="cairnsflipping.gif" begin="2s" dur="58s" region="c1" />
+       <img id="i2" src="barrierreef1.jpg" begin="4s" dur="14s" region="c2" />
+       <img id="i3" src="nameplate.jpg" begin="6s" dur="86s" region="c3" />
+       <img id="i4" src="andycollins.jpg" begin="8s" dur="29s" region="c4" />
+       <img id="i5" src="why.jpg" begin="10s" dur="36s" region="c5" />
+       <img id="i6" src="andycd.jpg" begin="16s" dur="59s" region="c6" />
+      <img id="i7" src="img14.gif" begin="38s" dur="56s" region="c7" /> 
+      <img id="i8" src="img16.gif" begin="77s" dur="19s" region="c8" /> 
+      <img id="i9" src="frah.gif" begin="70s" dur="28s" region="c9" /> 
+      <img id="i10" src="theend.jpeg" begin="88s" dur="12s" region="c10" /> 
+      <img id="i11" src="v-p18.gif" begin="0s" dur="4s" region="c11" /> 
+    </par>
+  </body>
+</smil>
+

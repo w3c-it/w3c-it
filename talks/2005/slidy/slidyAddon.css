@@ -1,0 +1,198 @@
+/* SlidyAddon.css
+
+   Copyright (c) 2005 W3C (MIT, ERCIM, Keio), All Rights Reserved.
+   W3C liability, trademark, document use and software licensing
+   rules apply, see:
+
+   http://www.w3.org/Consortium/Legal/copyright-documents
+   http://www.w3.org/Consortium/Legal/copyright-software
+
+   Slidy is one of the slide generation/display tools at W3C, developed by Dave Raggett. It has
+   a 'canonical' style sheet at http://www.w3.org/2005/03/{slideshow,w3c-blue}.css. This style
+   sheets adds some classes and slightly modifies some of the settings in the canonical set for
+   my own slides.
+   
+   Ivan Herman
+   
+*/
+
+
+ol li { 
+	margin: 0.1em 0em 0.6em 1.5em;
+	padding: 0 0 0 0px;
+	line-height: 140%;
+	list-style-type: decimal;
+}
+
+/*
+div.slide h2 {
+	color: black;
+	background: transparent;
+}
+commentato da oreste   */
+
+code {
+	color: purple;
+	font-weight: bold;
+}
+/* lista compatta: diminuisce lo spazio tra le righe della lista	*/
+	ol li.compact { 
+     margin: 0.1em 0em 0.6em 1.5em;
+     padding: 0 0 0 0px;
+     line-height: 100%;
+		 list-style-type: decimal;
+  }
+
+	ul li.compact { 
+     margin: 0.1em 0em 0.3em 1.5em;
+     padding: 0 0 0 0px;
+     line-height: 100%;
+  }
+	
+li li { 
+	font-size: 95%; 
+	font-style: normal;
+}
+li li li { 
+	font-size: 95%; 
+}
+li li li li {
+	list-style-type: disc;
+	background: transparent;
+	padding: 0 0 0 0;
+}
+
+ol li ul li {
+	list-style-type: disc;
+}
+
+p,pre,ul,ol,blockquote, dl {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+a:hover { 
+	color: red;
+	background: yellow;
+}
+
+div.slide.cover a:hover {
+	color: red;
+}
+
+div.slide dt
+{
+	margin-left: 0;
+	margin-top: 0.2em;
+	margin-bottom: 0em;
+	color:#006699;
+}
+
+/*
+em {
+	color: maroon;
+}
+commentato da oreste   */
+
+
+.emph1 { 
+	color: blue;
+}
+.emph2 { 
+	color: #006400;
+}
+.emph3 { 
+	color: #cc0066;
+} 
+.emph4 { 
+	color: #ff00cc;
+}
+.emph5 { 
+	color:red;
+}
+
+ol.toc li {
+	font-size: 60%;
+	background: transparent;
+	padding: 0 0 0 0px;
+	line-height: 100%;
+}
+
+/* The pre style of Dave is nice but creates problems with my converted things for now... */
+pre {
+	border: none;
+	background: khaki;
+}
+
+div.preDiv {
+	/* background: #dbdcde; */
+	background: khaki;
+	margin: 1em;
+}
+div.preDiv pre.preFirst {
+	background: khaki;
+	border-top: solid thin black;
+	border-left: solid thin black;
+	border-right: solid thin black;
+	border-bottom-width: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin: 0;
+}
+
+div.preDiv pre.preMiddle {
+	background: khaki;
+	border-left: solid thin black;
+	border-right: solid thin black;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 100%;
+	margin: 0;
+}
+
+div.preDiv pre.preLast {
+	background: khaki;
+	border-bottom: solid thin black;
+	border-left: solid thin black;
+	border-right: solid thin black;
+	border-top-width: 0;
+	margin-top: 0;
+	padding-top: 0;
+	margin: 0;
+}
+
+div.preDiv pre.preFirst.preLast {
+	background: khaki;
+	border: solid thin black;
+	margin-top: 0;
+	padding-top: 0;
+	margin: 0;
+}
+
+
+/* These are needed for the leftover of my scripts... */
+.svgOnly { 
+	display: none; 
+	visibility: none;
+}; 
+
+.center, .centre { 
+	text-align: center; 
+} 
+
+li.noBullet {
+	list-style: none;
+	background: transparent;
+}
+	
+div.tocref {
+		font-size:80%;
+}
+div.tocentry {
+		font-size:80%;
+}
+

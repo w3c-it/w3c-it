@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<title>W3C Technologies: a Key for Interoperability - slide "Presentation of Information - Aurally"</title>
+<link rel="next" href="slide32-0.htm" title="Next">
+<link rel="previous" href="slide30-0.htm" title="Previous">
+<link rel="contents" href="overview.htm" title="Contents">
+<link href="../tools/w3ctalk-1024.css" rel="stylesheet" type="text/css" title="W3C Talk">
+</head>
+<body>
+<table class="navbar" cellspacing="0" cellpadding="0" border="0" width="97%" summary="navigation buttons">
+<tr valign="top">
+<td align="left"><a href="http://www.w3c.it/"><img src="../../siteutilities/logos/itlogo-20010115.png" border="0" alt="W3C Office in Italy "></a></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide30-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;Presentation of Information - Visually&#34;"></a><a rel="contents" href="overview.htm" accesskey="C"><img src="../icons/toc.png" border="0" width="32" height="32" alt=" contents" title="Table of Contents"></a><a rel="next" href="slide32-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Transforming information: some considerations&#34;"></a></div>
+</td>
+</tr>
+</table>
+
+<h1 class="slide">Presentation of Information - Aurally</h1>
+
+<hr class="top">
+
+<div class="slidebody">
+
+
+<ul>
+<li>"Web approach" lowers telephone service development cost</li>
+
+<li>On small mobile devices (3G) 
+<ul>
+<li>voice input instead of keyboard</li>
+
+<li>voice output instead of screen</li>
+</ul>
+</li>
+</ul>
+
+<p>What a voice browser does for you:</p>
+
+<ul>
+<li>Browser: "What is your departure airport ?"</li>
+
+<li>Caller: "Nice"</li>
+
+<li>Browser: "Where do you want to fly to ?"</li>
+
+<li>Caller: "Paris"</li>
+
+<li>Browser: "At what time ?"</li>
+
+<li>...</li>
+</ul>
+
+<h3  class="yes">System Architecture</h3>
+
+<p><img alt="Voice browser architecture" src=
+"images/arch.jpg"></p>
+
+<h3>Voice Browser Architecture</h3>
+
+<p><img alt="voice browser architecture" src=
+"images/voice-b-architecture.gif"></p>
+
+<h3>W3C XML Markup Languages for Voice</h3>
+
+<ul>
+<li>Dialogue Control: VoiceXML</li>
+
+<li>Speech Recognition: Speech Recognition Grammar Syntax</li>
+
+<li>Speech Synthesis: Speech Synthesis Markup Language</li>
+</ul>
+
+<h2>VoiceXML</h2>
+
+<ul>
+<li>XML-based programming language for voice applications</li>
+
+<li>Need to describe 
+<ul>
+<li>System prompt</li>
+
+<li>Expected user response</li>
+
+<li>Action on expected response</li>
+
+<li>Action on inexpected response</li>
+</ul>
+</li>
+</ul>
+
+<h3>Example: Prompt</h3>
+
+<pre class="example">
+&lt;prompt&gt;
+  &lt;audio&gt;
+    Welcome to the &lt;say-as type="acronym"&gt;W3C&lt;/say-as&gt;
+    Voice &lt;say-as type="acronym"&gt;XML&lt;/say-as&gt; server.
+    Would you like to have more information about the
+    architecture domain, the document formats domain, the 
+    interaction domain, the technology and society domain 
+    or the Web Accessibility Initiative ?
+  &lt;/audio&gt;
+&lt;/prompt&gt;
+</pre>
+
+<h3>Techniques to Improve User Interface</h3>
+
+<ul>
+<li>"Barge-In": User can interupt prompt with answer</li>
+
+<li>Alternate prompts: Vary prompt for input</li>
+
+<li><a href="http://www.w3.org/TR/voicexml/#s6.5">"Mixed
+Dialogue"</a>: User can give response that does not answer
+question 
+<p>Browser: When will you arrive at the hotel ?</p>
+
+<p>User: I need to rent a car</p>
+
+<p>Browser: Which company do you prefer ?</p>
+
+<p>...</p>
+</li>
+
+<li>See <a href="http://www.w3.org/TR/voicexml20/">VoiceXML 2.0
+Working Draft</a></li>
+</ul>
+
+<h2>Speech Recognition Grammar</h2>
+
+<p><img alt="speech recognizer" src=
+"images/speech-recogniser.png"></p>
+
+<h3>Example Rule</h3>
+
+<pre class="example">
+&lt;rule id="city"&gt;
+  &lt;one-of&gt;
+     &lt;item&gt;Rio de Janeiro&lt;/item&gt;
+     &lt;item&gt;Rio&lt;/item&gt;
+     &lt;item&gt;Paris&lt;/item&gt;
+     ...
+  &lt;/one-of&gt;
+&lt;/rule&gt;
+</pre>
+
+<h2>Speech Synthesis Markup Language</h2>
+
+<p>To be used for Speech Synthesis, Voice Browser or
+Text-to-Speech applications</p>
+
+<p>You can say what you want spoken and in what language</p>
+
+<pre class="example">
+&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis"
+         xml:lang="en-US"&gt;
+  &lt;paragraph&gt;I don't speak Japanese.&lt;/paragraph&gt;
+  &lt;paragraph xml:lang="ja"&gt;Nihongo-ga wakarimasen.&lt;/paragraph&gt;
+&lt;/speak&gt;
+</pre>
+
+<p>You can set the speaker tone of the voice</p>
+
+<pre class="example">
+&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;speak version="1.0" xml:lang="en-US"
+xmlns="http://www.w3.org/2001/10/synthesis"&gt;   
+  &lt;voice gender="female"&gt;Mary had a little lamb,&lt;/voice&gt;
+  &lt;!-- now request a different female child's voice --&gt;
+  &lt;voice gender="female" variant="2"&gt;
+    It's fleece was white as snow.
+  &lt;/voice&gt;
+  &lt;!-- platform-specific voice selection --&gt;
+  &lt;voice name="Mike"&gt;I want to be like Mike.&lt;/voice&gt;
+&lt;/speak&gt;
+</pre>
+
+<p>You can set a contour to the speech to get the right
+intonation</p>
+
+<pre class="example">
+&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;speak version="1.0" xml:lang="en-US"
+xmlns="http://www.w3.org/2001/10/synthesis"&gt;
+  &lt;prosody contour="(0%,+20)(10%,+30%)(40%,+10)"&gt;
+    good morning
+  &lt;/prosody&gt;
+&lt;/speak&gt;
+</pre>
+
+
+
+
+</div>
+
+<hr class="bottom">
+
+<table class="footer" cellspacing="0" cellpadding="0" border="0" width="97%" summary="footer">
+<tr valign="bottom">
+<td> <p class="author"><a href="mailto:oreste@w3.org">Oreste Signore, Manager of W3C Office in Italy</a></p> </td>
+<td align="left"><p class="index">31 of 60</p></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide30-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;Presentation of Information - Visually&#34;"></a><a rel="next" href="slide32-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Transforming information: some considerations&#34;"></a></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

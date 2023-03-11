@@ -1,0 +1,186 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="../../svgs/slide.css" ?>
+<svg width="922" height="576">
+  <rect width="922" height="576" class="background" />
+	<title>Animated overview of various Rec-s over the years</title>
+  <desc>The various recs are put up on the screen, animated year by year</desc>
+  <g transform="scale(0.9) translate(0,-100)">
+    <g transform="translate(-50,130)">
+		  <g>
+  			<desc>Axis for years</desc>
+        <line x1="200" x2="200" y2="500" />
+        <line x1="400" x2="400" y2="500" />
+        <line x1="600" x2="600" y2="500" />
+        <line x1="800" x2="800" y2="500" />
+        <line x1="1000" x2="1000" y2="500" />
+        <g transform="translate(0,520)">
+          <text class="year" x="200">1997</text>
+          <text class="year" x="400">1998</text>
+          <text class="year" x="600">1999</text>
+          <text class="year" x="800">2000</text>
+          <text class="year" x="1000">2001</text>
+        </g>
+			</g>
+
+      <g style="opacity:0">
+        <text class="arc" x="100" y="330">HTTP 1.0</text>
+
+        <animate attributeName="opacity" attributeType="CSS"
+        to="1" begin="1s" dur="1s" fill="freeze" />
+      </g>
+
+      <g style="opacity:0">
+        <text class="arc" x="100" y="330">HTTP 1.0</text>
+
+        <text class="ts" x="150" y="30">PICS</text>
+
+        <text class="ui" x="150" y="130">PNG</text>
+
+        <text class="ui" x="150" y="190">HTML 3.2</text>
+
+        <text class="ui" x="190" y="160">CSS1</text>
+
+        <animate attributeName="opacity" attributeType="CSS"
+        to="1" begin="2s" dur="1s" fill="freeze" />
+      </g>
+
+      <g style="opacity:0">
+        <text class="ts" x="380" y="30">PICS</text>
+
+        <text class="ts" x="380" y="55">Rules</text>
+
+        <text class="arc" x="420" y="360">XML</text>
+
+        <text class="ts" x="480" y="30">DSig</text>
+
+        <text class="ui" x="480" y="160">CSS2</text>
+
+        <text class="ui" x="500" y="220">SMIL 1.0</text>
+
+        <animate attributeName="opacity" attributeType="CSS"
+        to="1" begin="3s" dur="1s" fill="freeze" />
+      </g>
+
+      <g style="opacity:0">
+        <text class="arc" x="540" y="300">HTTP 1.1</text>
+
+        <text class="arc" x="560" y="270">DOM 1.0</text>
+
+        <text class="ui" x="600" y="130">Web CGM</text>
+
+        <text class="arc" x="600" y="330">XML</text>
+
+        <text class="arc" x="600" y="360">Namespaces</text>
+
+        <text class="ts" x="620" y="30">RDF</text>
+
+        <animate attributeName="opacity" attributeType="CSS"
+        to="1" begin="3s" dur="1s" fill="freeze" />
+      </g>
+
+      <g style="opacity:0">
+        <text class="ac" x="680" y="430">CAG</text>
+
+        <text class="ui" x="720" y="130">MathML 1.0</text>
+
+        <text class="arc" x="780" y="330">XSLT</text>
+
+        <text class="arc" x="780" y="300">XPath</text>
+
+        <text class="ui" x="790" y="190">HTML 4.0</text>
+
+        <text class="ui" x="820" y="160">XHTML</text>
+
+        <text class="ac" x="840" y="430">ATAG</text>
+
+        <animate attributeName="opacity" attributeType="CSS"
+        to="1" begin="4s" dur="1s" fill="freeze" />
+      </g>
+
+      <g style="opacity:0">
+        <text class="ts" x="960" y="30">RDF Schemas</text>
+
+        <text class="ts" x="960" y="60">P3P</text>
+
+        <text class="ts" x="980" y="90">XML Signatures</text>
+
+        <text class="ts" x="980" y="120">Canonical XML</text>
+
+        <text class="ac" x="980" y="460">UAAG</text>
+
+        <text class="ui" x="980" y="210">SVG</text>
+
+        <text class="ui" x="980" y="160">MathML 2.0</text>
+
+        <text class="ui" x="980" y="190">SMIL 2.0</text>
+
+        <text class="arc" x="980" y="300">XSL</text>
+
+        <text class="arc" x="980" y="360">DOM 2.0</text>
+
+        <animate attributeName="opacity" attributeType="CSS"
+        to="1" begin="5s" dur="1s" fill="freeze" />
+      </g>
+
+      <g style="opacity:0">
+        <text class="arc" x="1000" y="330">XML Schemas</text>
+
+        <text class="arc" x="1000" y="390">XLink</text>
+
+        <text class="arc" x="1000" y="420">XPointer</text>
+
+        <animate attributeName="opacity" attributeType="CSS"
+        to="1" begin="6s" dur="1s" fill="freeze" />
+      </g>
+
+      <g transform="translate(980,220)">
+        <g transform="scale(0.2)">
+          <g style="opacity:0">
+            <rect class="table" x="-10" width="400"
+            height="300" />
+
+            <text y="30" class="onTable">XML Query</text>
+
+            <text y="60" class="onTable">APPEL</text>
+
+            <text y="90" class="onTable">CSS3</text>
+
+            <text y="120" class="onTable">XForms</text>
+
+            <text y="150" class="onTable">XInclude</text>
+
+            <text y="180" class="onTable">XBase</text>
+
+            <text y="210" class="onTable">CC/PP</text>
+
+            <text y="240" class="onTable">XML Infoset</text>
+
+            <text y="270" class="onTable">SSML</text>
+
+            <g transform="translate(150,0)">
+  					  <desc>A small table containing further recs; just to show that there is no place to
+  						show too much on the screen any more!</desc>
+              <text y="30" class="onTable">XHTML Basic</text>
+
+              <text y="60" class="onTable">XHTML Events
+              Module</text>
+
+              <text y="90" class="onTable">XML Fragment</text>
+
+              <text y="120" class="onTable">Ruby</text>
+
+              <text y="150" class="onTable">XML Process</text>
+
+              <text y="180" class="onTable">XHTML 1.1</text>
+            </g>
+
+            <animate attributeName="opacity" attributeType="CSS"
+            to="1" begin="7s" dur="1s" fill="freeze" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+

@@ -1,0 +1,1214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en-US" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" xmlns:fresnelview="http://beckr.org/fresnelview/" xmlns:functx="http://www.functx.com" lang="en-US"><head>
+
+   
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Marbles - Tetris</title>
+      <title>Marbles - </title>
+      <link rel="stylesheet" type="text/css" href="Marbles-Tetris_files/fresnelView.css">
+      <link rel="stylesheet" type="text/css" href="Marbles-Tetris_files/defaultPurposeStyle.css">
+      <link rel="icon" type="image/png" href="http://www5.wiwiss.fu-berlin.de/marbles/img/marbles-small.png">
+      <!--[if lte IE 6]>
+					<link href="http://www5.wiwiss.fu-berlin.de/marbles/css/defaultPurposeStyle-ie6.css" rel="stylesheet" type="text/css" />
+				<![endif]--><script type="text/javascript" src="Marbles-Tetris_files/prototype.js"></script><script>
+         <!--
+						 var isOperaMobile = (navigator.userAgent.indexOf('Opera 8') != -1 && navigator.userAgent.indexOf('Windows CE') != -1);
+						 var isIPhone = (navigator.userAgent.indexOf('Mobile') != -1 && navigator.userAgent.indexOf('Safari') != -1);
+						 
+						 function init() {
+						 	setupDimensions();
+						 	if (isIPhone) {
+							    var headID = document.getElementsByTagName("head")[0];
+								var cssNode = document.createElement('link');
+								cssNode.type = 'text/css';
+								cssNode.rel = 'stylesheet';
+								cssNode.href = 'http://www5.wiwiss.fu-berlin.de/marbles/css/fresnelView-iPhone.css';
+								headID.appendChild(cssNode);
+						 	}
+						 }
+						 
+				    	 function setupDimensions() {
+				    	 	if (isOperaMobile) {
+								$('canvas').style.width = (document.viewport.getWidth() - 4) + 'px';
+								$('canvas').style.height = (document.viewport.getHeight() - 5) + 'px';
+				    	 	}
+				    	 }
+				    	 
+				    	 function clearURL(url) {
+				    	 	new Ajax.Updater('clear-'+url, '?do=clear&url='+url, { method: 'get' });
+				    	 }
+				    //--></script></head><body onload="init()" onresize="setupDimensions()">
+      <div id="canvas">
+         <div id="topnavigation"><a href="http://marbles.sourceforge.net/">
+               <div id="logo"><img src="Marbles-Tetris_files/marbles.png" alt="Marbles"></div></a><form action="http://www5.wiwiss.fu-berlin.de/marbles?lang=en" method="get"><input gtbfieldid="1" name="uri" value="http://dbpedia.org/resource/Tetris" id="uri" onfocus="select();" autocapitalize="off" autocorrect="off"><input id="submit" value="Open" type="submit"></form>
+         </div>
+         <div class="resource mainbox ">
+            <div class="title"><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris">Tetris</a></div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23type" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23Thing" title="http://www.w3.org/2002/07/owl#Thing">Thing</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/2.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvi9EhJwpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rvi9EhJwpEbGdrcN5Y29ycA">unversioned program</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/2.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2FSoftware" title="http://dbpedia.org/ontology/Software">http://dbpedia.org/ontology/Software</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2FWork" title="http://dbpedia.org/ontology/Work">http://dbpedia.org/ontology/Work</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FPlayStation2Games" title="http://dbpedia.org/class/yago/PlayStation2Games">http://dbpedia.org/class/yago/PlayStation2Games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2FVideoGame" title="http://dbpedia.org/ontology/VideoGame">http://dbpedia.org/ontology/VideoGame</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FMobilePhoneGames" title="http://dbpedia.org/class/yago/MobilePhoneGames">http://dbpedia.org/class/yago/MobilePhoneGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FHandheldElectronicGames" title="http://dbpedia.org/class/yago/HandheldElectronicGames">http://dbpedia.org/class/yago/HandheldElectronicGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FWonderSwanColorGames" title="http://dbpedia.org/class/yago/WonderSwanColorGames">http://dbpedia.org/class/yago/WonderSwanColorGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv6aXv5wpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rv6aXv5wpEbGdrcN5Y29ycA">puzzle computer game</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/2.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rwQHMdpwpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rwQHMdpwpEbGdrcN5Y29ycA">open source program</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FNECPC-9801Games" title="http://dbpedia.org/class/yago/NECPC-9801Games">http://dbpedia.org/class/yago/NECPC-9801Games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FGameBoyAdvanceGames" title="http://dbpedia.org/class/yago/GameBoyAdvanceGames">http://dbpedia.org/class/yago/GameBoyAdvanceGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FZXSpectrumGames" title="http://dbpedia.org/class/yago/ZXSpectrumGames">http://dbpedia.org/class/yago/ZXSpectrumGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FAlexeyPajitnovGames" title="http://dbpedia.org/class/yago/AlexeyPajitnovGames">http://dbpedia.org/class/yago/AlexeyPajitnovGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FCD-iGames" title="http://dbpedia.org/class/yago/CD-iGames">http://dbpedia.org/class/yago/CD-iGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FIPodGames" title="http://dbpedia.org/class/yago/IPodGames">http://dbpedia.org/class/yago/IPodGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvVjmuJwpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjmuJwpEbGdrcN5Y29ycA">computer game</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FNP-completeProblems" title="http://dbpedia.org/class/yago/NP-completeProblems">http://dbpedia.org/class/yago/NP-completeProblems</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FMacOSGames" title="http://dbpedia.org/class/yago/MacOSGames">http://dbpedia.org/class/yago/MacOSGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FAmigaGames" title="http://dbpedia.org/class/yago/AmigaGames">http://dbpedia.org/class/yago/AmigaGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2F1985VideoGames" title="http://dbpedia.org/class/yago/1985VideoGames">http://dbpedia.org/class/yago/1985VideoGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FNintendoEntertainmentSystemGames" title="http://dbpedia.org/class/yago/NintendoEntertainmentSystemGames">http://dbpedia.org/class/yago/NintendoEntertainmentSystemGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FMSXGames" title="http://dbpedia.org/class/yago/MSXGames">http://dbpedia.org/class/yago/MSXGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FAmstradCPCGames" title="http://dbpedia.org/class/yago/AmstradCPCGames">http://dbpedia.org/class/yago/AmstradCPCGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FAppleIIGSGames" title="http://dbpedia.org/class/yago/AppleIIGSGames">http://dbpedia.org/class/yago/AppleIIGSGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FGame%26WatchGames" title="http://dbpedia.org/class/yago/Game&amp;WatchGames">http://dbpedia.org/class/yago/Game&amp;WatchGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv51PzpwpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rv51PzpwpEbGdrcN5Y29ycA">freeware</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FNintendoVs.SeriesGames" title="http://dbpedia.org/class/yago/NintendoVs.SeriesGames">http://dbpedia.org/class/yago/NintendoVs.SeriesGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FGameBoyGames" title="http://dbpedia.org/class/yago/GameBoyGames">http://dbpedia.org/class/yago/GameBoyGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FArcadeGames" title="http://dbpedia.org/class/yago/ArcadeGames">http://dbpedia.org/class/yago/ArcadeGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2FXboxGames" title="http://dbpedia.org/class/yago/XboxGames">http://dbpedia.org/class/yago/XboxGames</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2Fpage" title="http://xmlns.com/foaf/0.1/page">page</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTetris" title="http://en.wikipedia.org/wiki/Tetris">http://en.wikipedia.org/wiki/Tetris</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label" title="http://www.w3.org/2000/01/rdf-schema#label">label</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>テトリス<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/2.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>俄羅斯方塊<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Тетрис<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>XTetris<a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs" title="http://www.w3.org/2002/07/owl#sameAs">sameAs</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris" title="http://dbpedia.org/resource/Tetris">Tetris</a>
+                           								(also at <a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA">sw.opencyc.org</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fmpii.de%2Fyago%2Fresource%2FTetris" title="http://mpii.de/yago/resource/Tetris">mpii.de</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Frdf.freebase.com%2Fns%2Fguid.9202a8c04000641f800000000003ba49" title="http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000003ba49">rdf.freebase.com</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA">sw.opencyc.org</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA">sw.opencyc.org</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.cyc.com%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA" title="http://sw.cyc.com/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA">sw.cyc.com</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.cyc.com%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA" title="http://sw.cyc.com/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA">sw.cyc.com</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA">sw.opencyc.org</a>)
+                           								<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label ">is&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs" title="http://www.w3.org/2002/07/owl#sameAs">sameAs</a>&nbsp;of
+               </div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA">Tetris</a>
+                           								(also at <a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fmpii.de%2Fyago%2Fresource%2FTetris" title="http://mpii.de/yago/resource/Tetris">mpii.de</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Frdf.freebase.com%2Fns%2Fguid.9202a8c04000641f800000000003ba49" title="http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000003ba49">rdf.freebase.com</a>,&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA" title="http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA">sw.opencyc.org</a>)
+                           								<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Mania" title="http://dbpedia.org/resource/Tetris_Mania">Tetris Mania</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Mania.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris_Mania.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fabstract" title="http://dbpedia.org/ontology/abstract">http://dbpedia.org/ontology/abstract</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>Tetris is een computerspel/puzzel ontworpen 
+door Alexey Pajitnov op 6 juni 1984. Het spel kreeg algemene bekendheid 
+doordat
+                           het meegeleverd werd bij het 
+spelletjesplatform "Game Boy" van Nintendo in 1989. De naam is afgeleid 
+van het Griekse woord
+                           voor vier: tetra, omdat ieder blokje uit vier
+ vierkantjes bestaat.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>テトリス（Tetris、露:Тетрис）は、1980年代末から1990年代初めにかけ、世界各国で大流行したコンピューターゲーム。落ち物パズルの元祖である。<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris ist ein Computerspiel des russischen 
+Programmierers Alexei Paschitnow, der die erste spielbare Version im 
+Juni 1984
+                           auf einem Elektronika-60-Rechner 
+fertigstellte. Einzeln vom oberen Rand des rechteckigen Spielfelds 
+herunterfallende, stets
+                           aus vier Quadraten zusammengesetzte Formen 
+müssen vom Spieler in 90-Grad-Schritten gedreht und so platziert werden,
+ dass sie
+                           am unteren Rand horizontale, möglichst 
+lückenlose Reihen bilden. Sobald eine Reihe von Quadraten komplett ist, 
+wird sie entfernt,
+                           und alle darüberliegenden Reihen rücken nach 
+unten und geben damit einen Teil des Spielfeldes wieder frei. Für das 
+gleichzeitige
+                           Tilgen mehrerer Reihen erhält der Spieler 
+eine höhere Punktzahl pro Reihe als für eine einzelne Reihe. Der Name 
+des Spiels
+                           rührt von dem griechischen Wort für vier, 
+tetra, und bezeichnet das gleichzeitige Tilgen von vier Reihen sowie die
+ Zahl der
+                           Quadrate pro Form. Die Steine verhalten sich 
+dabei nicht physikalisch korrekt. Die Formen bleiben in der Position 
+liegen,
+                           in der sie landen, statt eventuell 
+physikalisch korrekt zu kippen. Die nachrückenden Reihen füllen in 
+vielen Versionen keine
+                           vorher vorhandene Lücken auf. Auf diese Weise
+ können Steine das Vervollständigen darunterliegender Reihen erschweren.
+ Das
+                           Spiel endet, sobald sich die nicht abgebauten
+ Reihen bis zum oberen Spielfeldrand aufgetürmt haben. Wenn eine 
+bestimmte Gesamtzahl
+                           an Reihen entfernt worden ist, wird die 
+Fall-Geschwindigkeit der Formen erhöht. Das Spielprinzip lehnt sich an 
+das Spiel Pentomino
+                           an; im Unterschied zu diesem besitzt Tetris 
+jedoch nur fünf statt zwölf Formen. Diese Formen werden häufig mit den 
+lateinischen
+                           Buchstaben bezeichnet, denen sie ähneln. 
+Während „I“, „O“ und „T“ symmetrisch sind, gibt es bei den Formen „Z“ 
+und „L“ zwei
+                           spiegelbildliche Varianten („J“ / „L“ und „S“
+ / „Z“), woraus sich die abgebildete Gesamtzahl von sieben ergibt. 
+Tetris gilt
+                           inzwischen als Computerspiel-Klassiker und 
+ist wie kaum ein anderes Spiel in vielen Versionen und Variationen für 
+nahezu jedes
+                           System erschienen. Am bekanntesten ist 
+wahrscheinlich die (schwarz/weiße) Version für die tragbare 
+Spielekonsole Game Boy
+                           von Nintendo, da die ersten Game Boys nur mit
+ Tetris lieferbar waren. Unter anderem erschienen Tetris-Spiele auch von
+ den
+                           Herstellern Atari, THQ und Nintendo für 
+verschiedene stationäre Spielekonsolen. Von Electronic Arts erschienen 
+Versionen für
+                           diverse Mobiltelefone. Tetris war inklusive 
+Verweis auf Alexei Paschitnow und Wadim Gerasimow im ersten Microsoft 
+Windows
+                           Entertainment Pack enthalten. Die 
+Windowsversion selbst ist von Dave Edson. Auch Unix Desktop Environments
+ wie GNOME oder
+                           KDE enthalten Tetris-Klone. Sogar für 
+Editoren wie Emacs oder Vim gibt es entsprechende Nachahmungen. Tetris 
+zählt zu den
+                           von Fremdherstellern am meisten nachgeahmten 
+Computerspielen überhaupt. So gibt es selbst für Commodore 64 über 100 
+Varianten
+                           des Spiels, da viele Hobbyprogrammierer 
+selbst neue Versionen erstellen.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Те́трис (производное от «тетрамино» и 
+«теннис»), англ. Tetris&nbsp;— культовая компьютерная игра, изобретённая
+ Алексеем Пажитновым
+                           и представленная общественности 6 июня 1984 
+года. Идею «Тетриса» ему подсказала купленная им игра в пентамино.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris – gra komputerowa stworzona przez 
+Aleksieja Pażytnowa, 6 czerwca 1984 roku w Związku Radzieckim. 
+Oryginalna wersja
+                           powstała podczas pracy Pażytnowa w 
+Moskiewskiej Akademii Nauk dla komputera Elektronika 60. Jest to jedna z
+ najbardziej znanych
+                           gier komputerowych, posiadająca dużą ilość 
+różnorodnych wariacji i implementacji. Do powstania programu 
+zainspirowała Pażytnowa
+                           gra Pentomino.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>俄羅斯方塊（英文：Tetris、俄文：Тетрис）是1980年末期至1990年代初期風靡全世界的電腦遊戲，是落下型益智遊戲的始祖。<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris est un jeu vidéo de puzzle conçu en 
+1984 par Alexei Pajitnov. Bâti sur des règles simples et exigeant 
+intelligence
+                           et adresse, il est l'un des jeux vidéo les 
+plus populaires au monde. Ses versions sont innombrables, y compris en 
+3D, et cette
+                           multiplicité se décline sur tous les types 
+d'ordinateurs. Il est considéré comme un des grands classiques de 
+l'histoire des
+                           jeux vidéo aux côtés de Pong, Space Invaders 
+ou encore Pac-Man. Selon des chiffres de 2010, il a été vendu à plus de 
+170 millions
+                           d'exemplaires sur plus de 30 plateformes 
+depuis 1984. Sa version sur GameBoy a notamment été classé 4 jeu vidéo 
+le plus vendu
+                           de l'histoire des jeux vidéo avec 30 260 000 
+unités vendues dans le monde par le site spécialisé jeuxvideo. com. En 
+janvier
+                           2010, il a été annoncé que Tetris a atteint 
+plus de 100 millions de téléchargements payants sur téléphones 
+cellulaires depuis
+                           2005.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris on tietokonepeli, jonka on alun perin
+ tehnyt neuvostoliittolainen Aleksei Pažitnov kesäkuussa 1984 ja jonka 
+Vadim Gerasimov
+                           siirsi IBM PC:lle.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris es un videojuego de puzle inventado 
+por el ruso Alekséi Pázhitnov el 6 de junio de 1984 cuando estaba 
+trabajando en
+                           la Academia de Ciencias de Moscú. Es, 
+posiblemente, junto con Pac-Man de Namco y Space Invaders de Taito Co, 
+el videojuego
+                           más conocido de la década de los años 80 y 
+90.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris è un videogioco di logica e 
+ragionamento inventato da Aleksej Pažitnov (Алексей Пажитнов, talvolta 
+il cognome viene
+                           traslitterato erroneamente con Pajitnov, o 
+Pazhitnov) il 6 giugno 1984, mentre lavorava per l'Accademia Russa delle
+ Scienze
+                           di Mosca, Russia. Pažitnov ha affermato che i
+ pentamini sono stata la sua fonte d'ispirazione per questo gioco. Non 
+essendo
+                           stato brevettato, il gioco è diventato 
+disponibile praticamente per qualunque dispositivo. Il gioco e molte sue
+ varianti sono
+                           disponibili per qualunque console e sistema 
+operativo, addirittura per alcune calcolatrici grafiche, telefonini, 
+PDA, iPod,
+                           Set-top box e per l'editor di testo GNU 
+Emacs. Il gioco ha iniziato ad avere popolarità alla fine degli anni 
+ottanta, ulteriore
+                           popolarità derivò dall'essere venduto in 
+bundle con la prima versione del Game Boy. Inoltre è stato dichiarato 
+uno dei dieci
+                           videogiochi più importanti di sempre da Henry
+ Lowood della Stanford University, nel marzo 2007.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris er et av de mest populære 
+dataspillene noensinne. Spillet ble oppfunnet i 1985 av den russiske 
+matematikeren Aleksei
+                           Pazjitnov, som da arbeidet ved 
+Vitenskapsakademiet i Moskva. Spillet går ut på å stable «byggeklosser» 
+oppå hverandre slik
+                           at de danner fullstendige rekker. 
+«Byggeklossene» i Tetris er tetrominoer, dvs. geometriske figurer som er
+ satt sammen av
+                           fire kvadrater som henger sammen langs en 
+eller flere av sidene, derav navnet Tetris (avledet fra tetra-, som på 
+gresk betyr
+                           fire). Det finnes fem slike kombinasjoner, 
+men to av disse finnes også i speilvendte utgaver, hvilket gir syv ulike
+ tetrominoer.
+                           Pajitnov skal ha funnet inspirasjon i en eske
+ med pentominoer, som er et populær spill innen rekreasjonsmatematikk. 
+Det har
+                           vært en kaskade av spørsmål knyttet til 
+opphavsretten til dette spillet. Pajitnov lagde Tetris opprinnelig for 
+datamaskinen
+                           Elektronica 60, og i løpet av kort tid dukket
+ det opp Tetris-kloner for de fleste plattformer, blant annet for PC og 
+Game
+                           Boy. Rettighetene til spillet har vært solgt 
+og videresolgt flere ganger, uten at dette har vært avklart med skaperen
+ av spillet.
+                           Til tross for den enorme populariteten, har 
+Pajitnov selv tjent svært lite penger på salget av spillet.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris é um jogo electrónico muito popular, 
+desenvolvido em 1984 por Alexey Pajitnov, Dmitry Pavlovsky e Vadim 
+Gerasimov.
+                           Pajitnov e Pavlovsky eram engenheiros 
+informáticos no Centro de Computadores da Academia Russa das Ciências e 
+Vadim era um
+                           aluno com 16 anos. O objetivo do jogo é 
+encaixar tetraminós, que são peças de diversos formatos que descem do 
+topo de uma
+                           tela. Quando uma linha é completada, 
+desaparece e dá pontos extra ao jogador. O jogo termina quando as linhas
+ incompletas
+                           se empilham até o topo da tela do jogo. 
+Tetris alcançou os Estados Unidos em 1986 e, daí, o mundo. O game já 
+vendeu mais de
+                           125 milhões de cópias para 30 plataformas 
+diferentes, desde seu nascimento. O sucesso foi tão grande para um jogo 
+aparentemente
+                           simples, que pesquisadores começam a 
+investigar sua história, tentando descobrir qual o segredo de tanta 
+popularidade. “O
+                           desafio para nós é apenas continuar o 
+crescimento da franquia”, declarou Adam Sussman, vice-presidente da 
+divisão de aparelhos
+                           móveis da Electronic Arts, que detém os 
+direitos exclusivos do jogo para a plataforma móvel ao site Information 
+Week. “Nossa
+                           esperança é de que o negócio evolua para os 
+smartphones e para as lojas de aplicativos, e então as pessoas poderão 
+encontrá-lo
+                           e comprá-lo, e veremos uma grande audiência 
+consumi-lo”, completou. Pajitnov atribui o sucesso do jogo à sua 
+simplicidade
+                           e ao enorme contraste que possui em relação a
+ uma série de jogos que envolvem violência e outros comportamentos 
+ruins. Henk
+                           Rogers, o empresário da área de jogos que 
+introduziu o programa nos Estados Unidos em 1986, estaria trabalhando em
+ uma versão
+                           de Jogos Olímpicos de Tetris, que deve 
+acontecer na internet no ano que vem. De acordo com o site SF Gate, o 
+Tetris também
+                           entrou para o Guiness, o livro dos recordes, 
+ao se tornar o jogo mais portado e com o maior número de variantes 
+oficiais e
+                           não-oficiais. “O jogo tem um tipo de espírito
+ criativo ao invés da destruição que você encontra em jogos de tiro e na
+ maioria
+                           dos outros títulos. Nele você cria algo”, diz
+ Pajitnov. “Você pega o caos das peças caindo aleatoriamente e as coloca
+ juntas
+                           em um tipo de ordem. Isso dá às pessoas um 
+ótimo sentimento”, declara contente.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris is a puzzle video game originally 
+designed and programmed by Alexey Pazhitnov. It was created on June 6, 
+1984, while
+                           he was working for the Dorodnicyn Computing 
+Centre of the Academy of Science of the USSR in Moscow. He derived its 
+name from
+                           the Greek numerical prefix "tetra- (all of 
+the game's pieces, known as Tetrominoes, contain four segments) and 
+tennis, Pajitnov's
+                           favorite sport. The Tetris game is a popular 
+use of tetrominoes, the four element special case of polyominoes. 
+Polyominoes
+                           have been used in popular puzzles since at 
+least 1907, and the name is given by the mathematician Solomon W. Golomb
+ in 1953.
+                           However, even the enumeration of pentominoes 
+is dated to antiquity. The game (or one of its many variants) is 
+available for
+                           nearly every video game console and computer 
+operating system, as well as on devices such as graphing calculators, 
+mobile
+                           phones, portable media players, PDAs, Network
+ music players and even as an Easter egg on non-media products like 
+oscilloscopes.
+                           It has even inspired Tetris serving dishes 
+and been played on the sides of various buildings, with the record 
+holder for the
+                           world's largest fully functional game of 
+Tetris being an effort by Dutch students in 1995 that lit up all 15 
+floors of the
+                           Electrical Engineering department at Delft 
+University of Technology. While versions of Tetris were sold for a range
+ of 1980s
+                           home computer platforms, it was the hugely 
+successful handheld version for the Game Boy launched in 1989 that 
+established
+                           the reputation of the game as one of the most
+ popular ever. Electronic Gaming Monthly's 100th issue had Tetris in 
+first place
+                           as "Greatest Game of All Time". In 2007, 
+Tetris came in third place in IGN's "100 Greatest Video Games of All 
+Time". It has
+                           sold more than 70 million copies. In January 
+2010, it was announced that Tetris has sold more than 100 million copies
+ for
+                           cell phones alone since 2005.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris är ett dator- och TV-spel som går ut 
+på att ordna olika fallande figurer. Tetris uppfanns av den ryske 
+(sovjetiske)
+                           matematikern Aleksej Pazjitnov när han 
+arbetade på Vetenskapsakademin i Moskva. Originalet släpptes innan julen
+ 1984. Spelidén
+                           har implementerats många gånger för otaliga 
+plattformar och spelet gav upphov till en mängd uppföljare och 
+Tetris-varianter.
+                           Game Boy-versionen från 1989 är den mest 
+kända och spridda varianten av spelet, då Tetris var det spel som följde
+ med vid
+                           köp av maskinen. Det blev den största succén 
+sedan arkadspelet Space Invaders. Namnet "Tetris" kommer från det 
+grekiska ordet
+                           "Tetra" som betyder "fyra". Alla objekt i 
+Tetris är gjorda av fyra rutor.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23comment" title="http://www.w3.org/2000/01/rdf-schema#comment">comment</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>Tetris is een computerspel/puzzel ontworpen 
+door Alexey Pajitnov op 6 juni 1984. Het spel kreeg algemene bekendheid 
+doordat
+                           het meegeleverd werd bij het 
+spelletjesplatform "Game Boy" van Nintendo in 1989. De naam is afgeleid 
+van het Griekse woord
+                           voor vier: tetra, omdat ieder blokje uit vier
+ vierkantjes bestaat.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris is a puzzle video game originally 
+designed and programmed by Alexey Pazhitnov. It was created on June 6, 
+1984, while
+                           he was working for the Dorodnicyn Computing 
+Centre of the Academy of Science of the USSR in Moscow. He derived its 
+name from
+                           the Greek numerical prefix "tetra- (all of 
+the game's pieces, known as Tetrominoes, contain four segments) and 
+tennis, Pajitnov's
+                           favorite sport. The Tetris game is a popular 
+use of tetrominoes, the four element special case of polyominoes.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris è un videogioco di logica e 
+ragionamento inventato da Aleksej Pažitnov (Алексей Пажитнов, talvolta 
+il cognome viene
+                           traslitterato erroneamente con Pajitnov, o 
+Pazhitnov) il 6 giugno 1984, mentre lavorava per l'Accademia Russa delle
+ Scienze
+                           di Mosca, Russia. Pažitnov ha affermato che i
+ pentamini sono stata la sua fonte d'ispirazione per questo gioco. Non 
+essendo
+                           stato brevettato, il gioco è diventato 
+disponibile praticamente per qualunque dispositivo.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>テトリス（Tetris、露:Тетрис）は、1980年代末から1990年代初めにかけ、世界各国で大流行したコンピューターゲーム。落ち物パズルの元祖である。<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Те́трис (производное от «тетрамино» и 
+«теннис»), англ. Tetris&nbsp;— культовая компьютерная игра, изобретённая
+ Алексеем Пажитновым
+                           и представленная общественности 6 июня 1984 
+года. Идею «Тетриса» ему подсказала купленная им игра в пентамино.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris – gra komputerowa stworzona przez 
+Aleksieja Pażytnowa, 6 czerwca 1984 roku w Związku Radzieckim. 
+Oryginalna wersja
+                           powstała podczas pracy Pażytnowa w 
+Moskiewskiej Akademii Nauk dla komputera Elektronika 60. Jest to jedna z
+ najbardziej znanych
+                           gier komputerowych, posiadająca dużą ilość 
+różnorodnych wariacji i implementacji. Do powstania programu 
+zainspirowała Pażytnowa
+                           gra Pentomino.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>俄羅斯方塊（英文：Tetris、俄文：Тетрис）是1980年末期至1990年代初期風靡全世界的電腦遊戲，是落下型益智遊戲的始祖。<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris ist ein Computerspiel des russischen 
+Programmierers Alexei Paschitnow, der die erste spielbare Version im 
+Juni 1984
+                           auf einem Elektronika-60-Rechner 
+fertigstellte. Einzeln vom oberen Rand des rechteckigen Spielfelds 
+herunterfallende, stets
+                           aus vier Quadraten zusammengesetzte Formen 
+müssen vom Spieler in 90-Grad-Schritten gedreht und so platziert werden,
+ dass sie
+                           am unteren Rand horizontale, möglichst 
+lückenlose Reihen bilden.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris er et av de mest populære 
+dataspillene noensinne. Spillet ble oppfunnet i 1985 av den russiske 
+matematikeren Aleksei
+                           Pazjitnov, som da arbeidet ved 
+Vitenskapsakademiet i Moskva. Spillet går ut på å stable «byggeklosser» 
+oppå hverandre slik
+                           at de danner fullstendige rekker. 
+«Byggeklossene» i Tetris er tetrominoer, dvs.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris on tietokonepeli, jonka on alun perin
+ tehnyt neuvostoliittolainen Aleksei Pažitnov kesäkuussa 1984 ja jonka 
+Vadim Gerasimov
+                           siirsi IBM PC:lle.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris es un videojuego de puzle inventado 
+por el ruso Alekséi Pázhitnov el 6 de junio de 1984 cuando estaba 
+trabajando en
+                           la Academia de Ciencias de Moscú. Es, 
+posiblemente, junto con Pac-Man de Namco y Space Invaders de Taito Co, 
+el videojuego
+                           más conocido de la década de los años 80 y 
+90.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris är ett dator- och TV-spel som går ut 
+på att ordna olika fallande figurer. Tetris uppfanns av den ryske 
+(sovjetiske)
+                           matematikern Aleksej Pazjitnov när han 
+arbetade på Vetenskapsakademin i Moskva. Originalet släpptes innan julen
+ 1984. Spelidén
+                           har implementerats många gånger för otaliga 
+plattformar och spelet gav upphov till en mängd uppföljare och 
+Tetris-varianter.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris est un jeu vidéo de puzzle conçu en 
+1984 par Alexei Pajitnov. Bâti sur des règles simples et exigeant 
+intelligence
+                           et adresse, il est l'un des jeux vidéo les 
+plus populaires au monde. Ses versions sont innombrables, y compris en 
+3D, et cette
+                           multiplicité se décline sur tous les types 
+d'ordinateurs. Il est considéré comme un des grands classiques de 
+l'histoire des
+                           jeux vidéo aux côtés de Pong, Space Invaders 
+ou encore Pac-Man.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris é um jogo electrónico muito popular, 
+desenvolvido em 1984 por Alexey Pajitnov, Dmitry Pavlovsky e Vadim 
+Gerasimov.
+                           Pajitnov e Pavlovsky eram engenheiros 
+informáticos no Centro de Computadores da Academia Russa das Ciências e 
+Vadim era um
+                           aluno com 16 anos. O objetivo do jogo é 
+encaixar tetraminós, que são peças de diversos formatos que descem do 
+topo de uma
+                           tela. Quando uma linha é completada, 
+desaparece e dá pontos extra ao jogador.<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2FhasPhotoCollection" title="http://dbpedia.org/property/hasPhotoCollection">"http://dbpedia.org/property/hasPhotoCollection"</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris" title="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris">Photos for DBpedia.org resource Tetris</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox singleValueInAbstract abstractRightBox">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2Fdepiction" title="http://xmlns.com/foaf/0.1/depiction">depiction</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value "><a href="http://upload.wikimedia.org/wikipedia/commons/3/39/Tetrominoes_IJLO_STZ_Worlds.svg"><img src="Marbles-Tetris_files/Tetrominoes_IJLO_STZ_Worlds.svg"></a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></div>
+                     <div class="value "><a href="http://farm1.static.flickr.com/117/259838698_74e628954b_m.jpg"><img src="Marbles-Tetris_files/259838698_74e628954b_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm1.static.flickr.com/55/138409266_f445a14f66_m.jpg"><img src="Marbles-Tetris_files/138409266_f445a14f66_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm1.static.flickr.com/136/374137479_81c57a075d_m.jpg"><img src="Marbles-Tetris_files/374137479_81c57a075d_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3648/3435153743_e9e7d2cd20_m.jpg"><img src="Marbles-Tetris_files/3435153743_e9e7d2cd20_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm1.static.flickr.com/45/148617021_109b017b2d_m.jpg"><img src="Marbles-Tetris_files/148617021_109b017b2d_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3030/2706756647_50a29107a8_m.jpg"><img src="Marbles-Tetris_files/2706756647_50a29107a8_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3471/3371780040_a1d67e2b2b_m.jpg"><img src="Marbles-Tetris_files/3371780040_a1d67e2b2b_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3555/3420843635_233a371697_m.jpg"><img src="Marbles-Tetris_files/3420843635_233a371697_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3196/2405714702_74ecb3a00d_m.jpg"><img src="Marbles-Tetris_files/2405714702_74ecb3a00d_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm1.static.flickr.com/44/172629009_16242f978a_m.jpg"><img src="Marbles-Tetris_files/172629009_16242f978a_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm1.static.flickr.com/51/125059569_72fd9d8c36_m.jpg"><img src="Marbles-Tetris_files/125059569_72fd9d8c36_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm2.static.flickr.com/1256/1479165624_19accfc70f_m.jpg"><img src="Marbles-Tetris_files/1479165624_19accfc70f_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3379/3599399747_df87213143_m.jpg"><img src="Marbles-Tetris_files/3599399747_df87213143_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm3.static.flickr.com/2437/3670656890_eb08576e46_m.jpg"><img src="Marbles-Tetris_files/3670656890_eb08576e46_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm3.static.flickr.com/2066/2115732787_a901e09f9e_m.jpg"><img src="Marbles-Tetris_files/2115732787_a901e09f9e_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm3.static.flickr.com/2508/4089939603_98b9087051_m.jpg"><img src="Marbles-Tetris_files/4089939603_98b9087051_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm2.static.flickr.com/1144/615908618_961b2d625d_m.jpg"><img src="Marbles-Tetris_files/615908618_961b2d625d_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3608/3600906774_e8e0d3a915_m.jpg"><img src="Marbles-Tetris_files/3600906774_e8e0d3a915_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3610/3355015175_22cd44ae6a_m.jpg"><img src="Marbles-Tetris_files/3355015175_22cd44ae6a_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3062/2420041060_83baca1233_m.jpg"><img src="Marbles-Tetris_files/2420041060_83baca1233_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm3.static.flickr.com/2610/4047722702_51159ca712_m.jpg"><img src="Marbles-Tetris_files/4047722702_51159ca712_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3061/2595924100_a899e26125_m.jpg"><img src="Marbles-Tetris_files/2595924100_a899e26125_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3628/3530505294_40fc1f89bf_m.jpg"><img src="Marbles-Tetris_files/3530505294_40fc1f89bf_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm3.static.flickr.com/2018/1791854351_7460836e11_m.jpg"><img src="Marbles-Tetris_files/1791854351_7460836e11_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm1.static.flickr.com/66/166940673_91223e5e6c_m.jpg"><img src="Marbles-Tetris_files/166940673_91223e5e6c_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm3.static.flickr.com/2040/2041841012_df4a2843ff_m.jpg"><img src="Marbles-Tetris_files/2041841012_df4a2843ff_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3481/3205040342_d033ecdc51_m.jpg"><img src="Marbles-Tetris_files/3205040342_d033ecdc51_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm4.static.flickr.com/3559/3368031352_db70c2bac6_m.jpg"><img src="Marbles-Tetris_files/3368031352_db70c2bac6_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm5.static.flickr.com/4045/4266755851_0a3e5ac997_m.jpg"><img src="Marbles-Tetris_files/4266755851_0a3e5ac997_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                     <div class="value "><a href="http://farm5.static.flickr.com/4012/4266756001_efb181e076_m.jpg"><img src="Marbles-Tetris_files/4266756001_efb181e076_m.jpg"></a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Freference" title="http://dbpedia.org/property/reference">reference</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Ftheinspirationroom.com%2Fdaily%2F2008%2Fnz-army-tetris-test%2F" title="http://theinspirationroom.com/daily/2008/nz-army-tetris-test/">http://theinspirationroom.com/daily/2008/nz-army-tetris-test/</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.army.mil.nz%2Fcareers%2Fsolutions-hub%2Fprint%2Ftetris.htm" title="http://www.army.mil.nz/careers/solutions-hub/print/tetris.htm">http://www.army.mil.nz/careers/solutions-hub/print/tetris.htm</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fvadim.oversigma.com%2FTetris.htm" title="http://vadim.oversigma.com/Tetris.htm">http://vadim.oversigma.com/Tetris.htm</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.boston.com%2Fnews%2Fglobe%2Fmagazine%2Farticles%2F2007%2F08%2F19%2Fbizarro_world%2F" title="http://www.boston.com/news/globe/magazine/articles/2007/08/19/bizarro_world/">http://www.boston.com/news/globe/magazine/articles/2007/08/19/bizarro_world/</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.sciam.com%2Farticle.cfm%3FchanID%3Dsa003%26articleID%3D000EB124-AE08-1DBD-94E2809EC5880108" title="http://www.sciam.com/article.cfm?chanID=sa003&amp;articleID=000EB124-AE08-1DBD-94E2809EC5880108">http://www.sciam.com/article.cfm?chanID=sa003&amp;articleID=000EB124-AE08-1DBD-94E2809EC5880108</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fnews.softpedia.com%2Fnews%2FGoogle-Celebrates-Tetris-039-s-Birthday-113551.shtml" title="http://news.softpedia.com/news/Google-Celebrates-Tetris-039-s-Birthday-113551.shtml">http://news.softpedia.com/news/Google-Celebrates-Tetris-039-s-Birthday-113551.shtml</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.mrn.org%2Flatest%2Fbrain-imaging-shows-playing-tetris-leads-to-both-brain-efficiency-and-thicker-cortex" title="http://www.mrn.org/latest/brain-imaging-shows-playing-tetris-leads-to-both-brain-efficiency-and-thicker-cortex">http://www.mrn.org/latest/brain-imaging-shows-playing-tetris-leads-to-both-brain-efficiency-and-thicker-cortex</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DO0gAgQQHFcQ" title="http://www.youtube.com/watch?v=O0gAgQQHFcQ">http://www.youtube.com/watch?v=O0gAgQQHFcQ</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.nindb.net" title="http://www.nindb.net">http://www.nindb.net</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.nindb.net%2Ftetris_series.html" title="http://www.nindb.net/tetris_series.html">http://www.nindb.net/tetris_series.html</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.rockcookiebottom.com%2Fpost%2F84319612%2F66-the-history-of-tetris-in-song" title="http://www.rockcookiebottom.com/post/84319612/66-the-history-of-tetris-in-song">http://www.rockcookiebottom.com/post/84319612/66-the-history-of-tetris-in-song</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.tetris.com%2F" title="http://www.tetris.com/">http://www.tetris.com/</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property list singleValueInAbstract">
+               <div class="label showInAbstract"><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2Fhomepage" title="http://xmlns.com/foaf/0.1/homepage">Homepage</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value listelement"><a href="http://www.tetris.com/">http://www.tetris.com/</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fthumbnail" title="http://dbpedia.org/ontology/thumbnail">http://dbpedia.org/ontology/thumbnail</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F39%2FTetrominoes_IJLO_STZ_Worlds.svg%2F200px-Tetrominoes_IJLO_STZ_Worlds.svg.png" title="http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tetrominoes_IJLO_STZ_Worlds.svg/200px-Tetrominoes_IJLO_STZ_Worlds.svg.png">http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tetrominoes_IJLO_STZ_Worlds.svg/200px-Tetrominoes_IJLO_STZ_Worlds.svg.png</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23subject" title="http://www.w3.org/2004/02/skos/core#subject">has subject</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AIPod_games" title="http://dbpedia.org/resource/Category:IPod_games">IPod games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AMSX_games" title="http://dbpedia.org/resource/Category:MSX_games">MSX games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A1984_video_games" title="http://dbpedia.org/resource/Category:1984_video_games">1984 video games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A1984_in_the_Soviet_Union" title="http://dbpedia.org/resource/Category:1984_in_the_Soviet_Union">1984 in the Soviet Union</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AGame_Boy_Advance_games" title="http://dbpedia.org/resource/Category:Game_Boy_Advance_games">Game Boy Advance games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ANintendo_Vs._Series_games" title="http://dbpedia.org/resource/Category:Nintendo_Vs._Series_games">Nintendo Vs. Series games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ASoviet_inventions" title="http://dbpedia.org/resource/Category:Soviet_inventions">http://dbpedia.org/resource/Category:Soviet_inventions</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ASharp_X1_games" title="http://dbpedia.org/resource/Category:Sharp_X1_games">http://dbpedia.org/resource/Category:Sharp_X1_games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AMac_OS_games" title="http://dbpedia.org/resource/Category:Mac_OS_games">Mac OS games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ANP-complete_problems" title="http://dbpedia.org/resource/Category:NP-complete_problems">NP-complete problems</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AHandheld_electronic_games" title="http://dbpedia.org/resource/Category:Handheld_electronic_games">Handheld electronic games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AAmstrad_PCW_games" title="http://dbpedia.org/resource/Category:Amstrad_PCW_games">http://dbpedia.org/resource/Category:Amstrad_PCW_games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AAmiga_games" title="http://dbpedia.org/resource/Category:Amiga_games">Amiga games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AAmstrad_CPC_games" title="http://dbpedia.org/resource/Category:Amstrad_CPC_games">Amstrad CPC games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ABBC_Micro_and_Acorn_Electron_games" title="http://dbpedia.org/resource/Category:BBC_Micro_and_Acorn_Electron_games">BBC Micro and Acorn Electron games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ANintendo_Entertainment_System_games" title="http://dbpedia.org/resource/Category:Nintendo_Entertainment_System_games">Nintendo Entertainment System games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AZX_Spectrum_games" title="http://dbpedia.org/resource/Category:ZX_Spectrum_games">ZX Spectrum games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ATetris" title="http://dbpedia.org/resource/Category:Tetris">Tetris</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AN-Gage_service_games" title="http://dbpedia.org/resource/Category:N-Gage_service_games">http://dbpedia.org/resource/Category:N-Gage_service_games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ANEC_PC-9801_games" title="http://dbpedia.org/resource/Category:NEC_PC-9801_games">NEC PC-9801 games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ACD-i_games" title="http://dbpedia.org/resource/Category:CD-i_games">CD-i games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AIPhone_OS_games" title="http://dbpedia.org/resource/Category:IPhone_OS_games">http://dbpedia.org/resource/Category:IPhone_OS_games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AGame_Boy_games" title="http://dbpedia.org/resource/Category:Game_Boy_games">Game Boy games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AArcade_games" title="http://dbpedia.org/resource/Category:Arcade_games">Arcade games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ANEC_PC-8801_games" title="http://dbpedia.org/resource/Category:NEC_PC-8801_games">NEC PC-8801 games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AApple_IIGS_games" title="http://dbpedia.org/resource/Category:Apple_IIGS_games">Apple IIGS games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AMobile_phone_games" title="http://dbpedia.org/resource/Category:Mobile_phone_games">Mobile phone games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AMicrosoft_Entertainment_Pack" title="http://dbpedia.org/resource/Category:Microsoft_Entertainment_Pack">http://dbpedia.org/resource/Category:Microsoft_Entertainment_Pack</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AWonderSwan_Color_games" title="http://dbpedia.org/resource/Category:WonderSwan_Color_games">WonderSwan Color games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ASoviet_brands" title="http://dbpedia.org/resource/Category:Soviet_brands">Soviet brands</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ASoviet_games" title="http://dbpedia.org/resource/Category:Soviet_games">http://dbpedia.org/resource/Category:Soviet_games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AVideo_games_developed_in_Russia" title="http://dbpedia.org/resource/Category:Video_games_developed_in_Russia">http://dbpedia.org/resource/Category:Video_games_developed_in_Russia</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AGame_%2526_Watch_games" title="http://dbpedia.org/resource/Category:Game_%26_Watch_games">Game &amp; Watch games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3AAlexey_Pajitnov_games" title="http://dbpedia.org/resource/Category:Alexey_Pajitnov_games">Alexey Pajitnov games</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ARussian_inventions" title="http://dbpedia.org/resource/Category:Russian_inventions">http://dbpedia.org/resource/Category:Russian_inventions</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2FwikiPageUsesTemplate" title="http://dbpedia.org/property/wikiPageUsesTemplate">http://dbpedia.org/property/wikiPageUsesTemplate</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTemplate%3AInfobox_VG" title="http://dbpedia.org/resource/Template:Infobox_VG">http://dbpedia.org/resource/Template:Infobox_VG</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2FreleaseDate" title="http://dbpedia.org/ontology/releaseDate">http://dbpedia.org/ontology/releaseDate</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>1984-06-06<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fgenre" title="http://dbpedia.org/ontology/genre">http://dbpedia.org/ontology/genre</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FPuzzle_video_game" title="http://dbpedia.org/resource/Puzzle_video_game">http://dbpedia.org/resource/Puzzle_video_game</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fdeveloper" title="http://dbpedia.org/ontology/developer">http://dbpedia.org/ontology/developer</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FAlexey_Pazhitnov" title="http://dbpedia.org/resource/Alexey_Pazhitnov">http://dbpedia.org/resource/Alexey_Pazhitnov</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Freleased" title="http://dbpedia.org/property/released">http://dbpedia.org/property/released</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>--06-06<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Fgenre" title="http://dbpedia.org/property/genre">genre</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FPuzzle_video_game" title="http://dbpedia.org/resource/Puzzle_video_game">http://dbpedia.org/resource/Puzzle_video_game</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Fpublisher" title="http://dbpedia.org/property/publisher">http://dbpedia.org/property/publisher</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>Various<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.cyc.com%2FCycAnnotations_v1%23label" title="http://sw.cyc.com/CycAnnotations_v1#label">label</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>XTetris-TheGame<a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li>Tetris-TheGame<a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/2.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Fdeveloper" title="http://dbpedia.org/property/developer">developer</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>Alexey Pazhitnov , coder Vadim Gerasimov<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FwikipediaArticleURL" title="http://sw.opencyc.org/2008/06/10/concept/wikipediaArticleURL">http://sw.opencyc.org/2008/06/10/concept/wikipediaArticleURL</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>http://en.wikipedia.org/wiki/Tetris<a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a><a class="source" href="#source-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/2.png" title="Source: http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Fplatforms" title="http://dbpedia.org/property/platforms">http://dbpedia.org/property/platforms</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>Various<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Fmodes" title="http://dbpedia.org/property/modes">http://dbpedia.org/property/modes</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FMultiplayer_game" title="http://dbpedia.org/resource/Multiplayer_game">http://dbpedia.org/resource/Multiplayer_game</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FSingle-player" title="http://dbpedia.org/resource/Single-player">http://dbpedia.org/resource/Single-player</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label "><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Fdesigner" title="http://dbpedia.org/property/designer">http://dbpedia.org/property/designer</a></div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li>Alexey Pazhitnov<a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label ">is&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fproperty%2Fredirect" title="http://dbpedia.org/property/redirect">http://dbpedia.org/property/redirect</a>&nbsp;of
+               </div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_%25E2%2580%2593_From_Russia_With_Love" title="http://dbpedia.org/resource/Tetris_%E2%80%93_From_Russia_With_Love">http://dbpedia.org/resource/Tetris_%E2%80%93_From_Russia_With_Love</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FBastard_tetris" title="http://dbpedia.org/resource/Bastard_tetris">http://dbpedia.org/resource/Bastard_tetris</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2F%25D0%25A2%25D0%25B5%25D1%2582%25D1%2580%25D0%25B8%25D1%2581" title="http://dbpedia.org/resource/%D0%A2%D0%B5%D1%82%D1%80%D0%B8%D1%81">http://dbpedia.org/resource/%D0%A2%D0%B5%D1%82%D1%80%D0%B8%D1%81</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Gold" title="http://dbpedia.org/resource/Tetris_Gold">http://dbpedia.org/resource/Tetris_Gold</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris%3A_From_Russia_With_Love" title="http://dbpedia.org/resource/Tetris:_From_Russia_With_Love">http://dbpedia.org/resource/Tetris:_From_Russia_With_Love</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FL-BIock" title="http://dbpedia.org/resource/L-BIock">http://dbpedia.org/resource/L-BIock</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FL_Block" title="http://dbpedia.org/resource/L_Block">http://dbpedia.org/resource/L_Block</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTet%25D1%258Fis" title="http://dbpedia.org/resource/Tet%D1%8Fis">http://dbpedia.org/resource/Tet%D1%8Fis</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_%2528video_game%2529" title="http://dbpedia.org/resource/Tetris_%28video_game%29">http://dbpedia.org/resource/Tetris_%28video_game%29</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_for_Windows" title="http://dbpedia.org/resource/Tetris_for_Windows">http://dbpedia.org/resource/Tetris_for_Windows</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetiais" title="http://dbpedia.org/resource/Tetiais">http://dbpedia.org/resource/Tetiais</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTETIaIS" title="http://dbpedia.org/resource/TETIaIS">http://dbpedia.org/resource/TETIaIS</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Mania" title="http://dbpedia.org/resource/Tetris_Mania">Tetris Mania</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Mania.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris_Mania.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Classic" title="http://dbpedia.org/resource/Tetris_Classic">http://dbpedia.org/resource/Tetris_Classic</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FQuinn_%2528computer_game%2529" title="http://dbpedia.org/resource/Quinn_%28computer_game%29">http://dbpedia.org/resource/Quinn_%28computer_game%29</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FEmlith" title="http://dbpedia.org/resource/Emlith">http://dbpedia.org/resource/Emlith</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FBrick_Game" title="http://dbpedia.org/resource/Brick_Game">http://dbpedia.org/resource/Brick_Game</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FMicrosoft_Tetris" title="http://dbpedia.org/resource/Microsoft_Tetris">http://dbpedia.org/resource/Microsoft_Tetris</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_-_From_Russia_With_Love" title="http://dbpedia.org/resource/Tetris_-_From_Russia_With_Love">http://dbpedia.org/resource/Tetris_-_From_Russia_With_Love</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label ">is&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2FprimaryTopic" title="http://xmlns.com/foaf/0.1/primaryTopic">primary topic</a>&nbsp;of
+               </div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTetris" title="http://en.wikipedia.org/wiki/Tetris">http://en.wikipedia.org/wiki/Tetris</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris" title="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris">Photos for DBpedia.org resource Tetris</a><a class="source" href="#source-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris"><img src="Marbles-Tetris_files/flickr.png" title="Source: http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label ">is&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fseries" title="http://dbpedia.org/ontology/series">http://dbpedia.org/ontology/series</a>&nbsp;of
+               </div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Party" title="http://dbpedia.org/resource/Tetris_Party">http://dbpedia.org/resource/Tetris_Party</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_%2528iPhone_OS%2529" title="http://dbpedia.org/resource/Tetris_%28iPhone_OS%29">http://dbpedia.org/resource/Tetris_%28iPhone_OS%29</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris%3A_The_Soviet_Mind_Game" title="http://dbpedia.org/resource/Tetris:_The_Soviet_Mind_Game">http://dbpedia.org/resource/Tetris:_The_Soviet_Mind_Game</a><a class="source" href="#source-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml"><img src="Marbles-Tetris_files/dbpedia.png" title="Source: http://dbpedia.org/data/Tetris.xml"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="property ">
+               <div class="label ">is&nbsp;<a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fsindice.com%2Fvocab%2Fsearch%23link" title="http://sindice.com/vocab/search#link">http://sindice.com/vocab/search#link</a>&nbsp;of
+               </div>
+               <div class="values">
+                  <ul>
+                     <div class="value ">
+                        <li><a href="http://www5.wiwiss.fu-berlin.de/marbles?lang=en&amp;uri=http%3A%2F%2Fapi.sindice.com%2Fv2%2Fsearch%3Fqt%3Dterm%26page%3D1%26q%3Dhttp%253A%252F%252Fdbpedia.org%252Fresource%252FTetris%23result1" title="http://api.sindice.com/v2/search?qt=term&amp;page=1&amp;q=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris#result1">Tetris</a><a class="source" href="#source-http%3A%2F%2Fapi.sindice.com%2Fv2%2Fsearch%3Fqt%3Dterm%26page%3D1%26q%3Dhttp%253A%252F%252Fdbpedia.org%252Fresource%252FTetris"><img src="Marbles-Tetris_files/sindice.png" title="Source: http://api.sindice.com/v2/search?qt=term&amp;page=1&amp;q=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris"></a></li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div id="sources" class="mainbox">
+            <h1>Sources</h1>
+            <ul>
+               <li><a name="source-http://dbpedia.org/resource/Tetris_Zone"></a><a href="http://dbpedia.org/resource/Tetris_Zone"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/Tetris_Zone">http://dbpedia.org/resource/Tetris_Zone</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:51 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Zone')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Zone">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/Tetris%3A_The_Grand_Master_Ace.xml"></a><a href="http://dbpedia.org/data/Tetris%3A_The_Grand_Master_Ace.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/Tetris%3A_The_Grand_Master_Ace.xml">http://dbpedia.org/data/Tetris%3A_The_Grand_Master_Ace.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris%253A_The_Grand_Master_Ace.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris%253A_The_Grand_Master_Ace.xml">(clear)</span></span></li>
+               <li><a name="source-http://www.mpi-inf.mpg.de/yago/resource/Tetris"></a><a href="http://www.mpi-inf.mpg.de/yago/resource/Tetris"><img src="Marbles-Tetris_files/5.png"></a><a href="http://www.mpi-inf.mpg.de/yago/resource/Tetris">http://www.mpi-inf.mpg.de/yago/resource/Tetris</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:46 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fwww.mpi-inf.mpg.de%2Fyago%2Fresource%2FTetris')" id="clear-http%3A%2F%2Fwww.mpi-inf.mpg.de%2Fyago%2Fresource%2FTetris">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/resource/Tetris%3A_The_Grand_Master_Ace"></a><a href="http://dbpedia.org/resource/Tetris%3A_The_Grand_Master_Ace"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/Tetris%3A_The_Grand_Master_Ace">http://dbpedia.org/resource/Tetris%3A_The_Grand_Master_Ace</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris%253A_The_Grand_Master_Ace')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris%253A_The_Grand_Master_Ace">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/The_Next_Tetris.xml"></a><a href="http://dbpedia.org/data/The_Next_Tetris.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/The_Next_Tetris.xml">http://dbpedia.org/data/The_Next_Tetris.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2FThe_Next_Tetris.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2FThe_Next_Tetris.xml">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/resource/Tetris_Collection"></a><a href="http://dbpedia.org/resource/Tetris_Collection"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/Tetris_Collection">http://dbpedia.org/resource/Tetris_Collection</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:52 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Collection')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Collection">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/resource/tetris"></a><a href="http://dbpedia.org/resource/tetris"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/tetris">http://dbpedia.org/resource/tetris</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:50 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2Ftetris')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2Ftetris">(clear)</span></span></li>
+               <li><a name="source-http://yago.zitgist.com/Tetris"></a><a href="http://yago.zitgist.com/Tetris"><img src="Marbles-Tetris_files/6.png"></a><a href="http://yago.zitgist.com/Tetris">http://yago.zitgist.com/Tetris</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:50 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fyago.zitgist.com%2FTetris')" id="clear-http%3A%2F%2Fyago.zitgist.com%2FTetris">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/Tetris_Collection.xml"></a><a href="http://dbpedia.org/data/Tetris_Collection.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/Tetris_Collection.xml">http://dbpedia.org/data/Tetris_Collection.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Collection.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Collection.xml">(clear)</span></span></li>
+               <li><a name="source-http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"></a><a href="http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/1.png"></a><a href="http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA">http://sw.opencyc.org/2008/06/10/concept/Mx4rv9-ZUpwpEbGdrcN5Y29ycA</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:43 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA')" id="clear-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rv9-ZUpwpEbGdrcN5Y29ycA">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/resource/Tetris_Deluxe"></a><a href="http://dbpedia.org/resource/Tetris_Deluxe"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/Tetris_Deluxe">http://dbpedia.org/resource/Tetris_Deluxe</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:53 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Deluxe')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Deluxe">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/resource/The_Next_Tetris"></a><a href="http://dbpedia.org/resource/The_Next_Tetris"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/The_Next_Tetris">http://dbpedia.org/resource/The_Next_Tetris</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:48 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2FThe_Next_Tetris')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2FThe_Next_Tetris">(clear)</span></span></li>
+               <li><a name="source-http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA"></a><a href="http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA"><img src="Marbles-Tetris_files/2.png"></a><a href="http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA">http://sw.opencyc.org/2008/06/10/concept/Mx4rvWHuv5wpEbGdrcN5Y29ycA</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:44 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA')" id="clear-http%3A%2F%2Fsw.opencyc.org%2F2008%2F06%2F10%2Fconcept%2FMx4rvWHuv5wpEbGdrcN5Y29ycA">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/Tetris.xml"></a><a href="http://dbpedia.org/data/Tetris.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/Tetris.xml">http://dbpedia.org/data/Tetris.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:41 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris.xml">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/Tetris_clones.xml"></a><a href="http://dbpedia.org/data/Tetris_clones.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/Tetris_clones.xml">http://dbpedia.org/data/Tetris_clones.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_clones.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_clones.xml">(clear)</span></span></li>
+               <li><a name="source-http://iws.seu.edu.cn/services/falcons/api/whereis.jsp?uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris"></a><a href="http://iws.seu.edu.cn/services/falcons/api/whereis.jsp?uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris"><img src="Marbles-Tetris_files/falcons.png"></a><a href="http://iws.seu.edu.cn/services/falcons/api/whereis.jsp?uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris">http://iws.seu.edu.cn/services/falcons/api/whereis.jsp?uri=http%3A%2F%2Fdbp...</a><span class="sourcedetails">
+                     				&nbsp;failed,&nbsp;retrieved Wed, 20 Oct 2010 21:27:11 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fiws.seu.edu.cn%2Fservices%2Ffalcons%2Fapi%2Fwhereis.jsp%3Furi%3Dhttp%253A%252F%252Fdbpedia.org%252Fresource%252FTetris')" id="clear-http%3A%2F%2Fiws.seu.edu.cn%2Fservices%2Ffalcons%2Fapi%2Fwhereis.jsp%3Furi%3Dhttp%253A%252F%252Fdbpedia.org%252Fresource%252FTetris">(clear)</span></span></li>
+               <li><a name="source-http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"></a><a href="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris"><img src="Marbles-Tetris_files/flickr.png"></a><a href="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris">http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Tetris</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:46 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris')" id="clear-http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%2Fflickrwrappr%2Fphotos%2FTetris">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/Tetris_Deluxe.xml"></a><a href="http://dbpedia.org/data/Tetris_Deluxe.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/Tetris_Deluxe.xml">http://dbpedia.org/data/Tetris_Deluxe.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Deluxe.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Deluxe.xml">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/Tetris_Zone.xml"></a><a href="http://dbpedia.org/data/Tetris_Zone.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/Tetris_Zone.xml">http://dbpedia.org/data/Tetris_Zone.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Zone.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Zone.xml">(clear)</span></span></li>
+               <li><a name="source-http://mpii.de/yago/resource/Tetris"></a><a href="http://mpii.de/yago/resource/Tetris"><img src="Marbles-Tetris_files/4.png"></a><a href="http://mpii.de/yago/resource/Tetris">http://mpii.de/yago/resource/Tetris</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(301),&nbsp;retrieved Wed, 20 Oct 2010 21:26:42 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fmpii.de%2Fyago%2Fresource%2FTetris')" id="clear-http%3A%2F%2Fmpii.de%2Fyago%2Fresource%2FTetris">(clear)</span></span></li>
+               <li><a name="source-http://api.sindice.com/v2/search?qt=term&amp;page=1&amp;q=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris"></a><a href="http://api.sindice.com/v2/search?qt=term&amp;page=1&amp;q=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris"><img src="Marbles-Tetris_files/sindice.png"></a><a href="http://api.sindice.com/v2/search?qt=term&amp;page=1&amp;q=http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris">http://api.sindice.com/v2/search?qt=term&amp;page=1&amp;q=http%3A%2F%2Fdbpedia.org%...</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:45 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fapi.sindice.com%2Fv2%2Fsearch%3Fqt%3Dterm%26page%3D1%26q%3Dhttp%253A%252F%252Fdbpedia.org%252Fresource%252FTetris')" id="clear-http%3A%2F%2Fapi.sindice.com%2Fv2%2Fsearch%3Fqt%3Dterm%26page%3D1%26q%3Dhttp%253A%252F%252Fdbpedia.org%252Fresource%252FTetris">(clear)</span></span></li>
+               <li><a name="source-http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000003ba49"></a><a href="http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000003ba49"><img src="Marbles-Tetris_files/3.png"></a><a href="http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000003ba49">http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000003ba49</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:45 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Frdf.freebase.com%2Fns%2Fguid.9202a8c04000641f800000000003ba49')" id="clear-http%3A%2F%2Frdf.freebase.com%2Fns%2Fguid.9202a8c04000641f800000000003ba49">(clear)</span></span></li>
+               <li><a name="source-http://revyu.com/sparql?query=PREFIX+rev%3A+%3Chttp%3A%2F%2Fpurl.org%2Fstuff%2Frev%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0ACONSTRUCT+%7B+%3Frev+%3Fp+%3Fo+.+%3Fthing+%3Fq+%3Fr+%7D%0AWHERE+%7B%0A%09%3Fthing+owl%3AsameAs+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FTetris%3E+.%0A+%3Fthing+rev%3AhasReview+%3Frev+.%0A+%3Frev+%3Fp+%3Fo+.%0A+%3Fthing+%3Fq+%3Fr"></a><a href="http://revyu.com/sparql?query=PREFIX+rev%3A+%3Chttp%3A%2F%2Fpurl.org%2Fstuff%2Frev%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0ACONSTRUCT+%7B+%3Frev+%3Fp+%3Fo+.+%3Fthing+%3Fq+%3Fr+%7D%0AWHERE+%7B%0A%09%3Fthing+owl%3AsameAs+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FTetris%3E+.%0A+%3Fthing+rev%3AhasReview+%3Frev+.%0A+%3Frev+%3Fp+%3Fo+.%0A+%3Fthing+%3Fq+%3Fr"><img src="Marbles-Tetris_files/revyu.png"></a><a href="http://revyu.com/sparql?query=PREFIX+rev%3A+%3Chttp%3A%2F%2Fpurl.org%2Fstuff%2Frev%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0ACONSTRUCT+%7B+%3Frev+%3Fp+%3Fo+.+%3Fthing+%3Fq+%3Fr+%7D%0AWHERE+%7B%0A%09%3Fthing+owl%3AsameAs+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FTetris%3E+.%0A+%3Fthing+rev%3AhasReview+%3Frev+.%0A+%3Frev+%3Fp+%3Fo+.%0A+%3Fthing+%3Fq+%3Fr">http://revyu.com/sparql?query=PREFIX+rev%3A+%3Chttp%3A%2F%2Fpurl.org%2Fstuf...</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:41 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Frevyu.com%2Fsparql%3Fquery%3DPREFIX%2Brev%253A%2B%253Chttp%253A%252F%252Fpurl.org%252Fstuff%252Frev%2523%253E%250APREFIX%2Brdfs%253A%2B%253Chttp%253A%252F%252Fwww.w3.org%252F2000%252F01%252Frdf-schema%2523%253E%250APREFIX%2Bowl%253A%2B%253Chttp%253A%252F%252Fwww.w3.org%252F2002%252F07%252Fowl%2523%253E%250ACONSTRUCT%2B%257B%2B%253Frev%2B%253Fp%2B%253Fo%2B.%2B%253Fthing%2B%253Fq%2B%253Fr%2B%257D%250AWHERE%2B%257B%250A%2509%253Fthing%2Bowl%253AsameAs%2B%253Chttp%253A%252F%252Fdbpedia.org%252Fresource%252FTetris%253E%2B.%250A%2B%253Fthing%2Brev%253AhasReview%2B%253Frev%2B.%250A%2B%253Frev%2B%253Fp%2B%253Fo%2B.%250A%2B%253Fthing%2B%253Fq%2B%253Fr')" id="clear-http%3A%2F%2Frevyu.com%2Fsparql%3Fquery%3DPREFIX%2Brev%253A%2B%253Chttp%253A%252F%252Fpurl.org%252Fstuff%252Frev%2523%253E%250APREFIX%2Brdfs%253A%2B%253Chttp%253A%252F%252Fwww.w3.org%252F2000%252F01%252Frdf-schema%2523%253E%250APREFIX%2Bowl%253A%2B%253Chttp%253A%252F%252Fwww.w3.org%252F2002%252F07%252Fowl%2523%253E%250ACONSTRUCT%2B%257B%2B%253Frev%2B%253Fp%2B%253Fo%2B.%2B%253Fthing%2B%253Fq%2B%253Fr%2B%257D%250AWHERE%2B%257B%250A%2509%253Fthing%2Bowl%253AsameAs%2B%253Chttp%253A%252F%252Fdbpedia.org%252Fresource%252FTetris%253E%2B.%250A%2B%253Fthing%2Brev%253AhasReview%2B%253Frev%2B.%250A%2B%253Frev%2B%253Fp%2B%253Fo%2B.%250A%2B%253Fthing%2B%253Fq%2B%253Fr">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/resource/Tetris_Mania"></a><a href="http://dbpedia.org/resource/Tetris_Mania"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/Tetris_Mania">http://dbpedia.org/resource/Tetris_Mania</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:49 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Mania')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_Mania">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/Tetris_Mania.xml"></a><a href="http://dbpedia.org/data/Tetris_Mania.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/Tetris_Mania.xml">http://dbpedia.org/data/Tetris_Mania.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Mania.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2FTetris_Mania.xml">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/resource/Tetris_clones"></a><a href="http://dbpedia.org/resource/Tetris_clones"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/Tetris_clones">http://dbpedia.org/resource/Tetris_clones</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:47 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_clones')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris_clones">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/data/tetris.xml"></a><a href="http://dbpedia.org/data/tetris.xml"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/data/tetris.xml">http://dbpedia.org/data/tetris.xml</a><span class="sourcedetails">
+                     				&nbsp;success&nbsp;(200),&nbsp;retrieved Wed, 20 Oct 2010 21:26:54 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fdata%2Ftetris.xml')" id="clear-http%3A%2F%2Fdbpedia.org%2Fdata%2Ftetris.xml">(clear)</span></span></li>
+               <li><a name="source-http://dbpedia.org/resource/Tetris"></a><a href="http://dbpedia.org/resource/Tetris"><img src="Marbles-Tetris_files/dbpedia.png"></a><a href="http://dbpedia.org/resource/Tetris">http://dbpedia.org/resource/Tetris</a><span class="sourcedetails">
+                     				&nbsp;redirect&nbsp;(303),&nbsp;retrieved Wed, 20 Oct 2010 21:26:41 GMT&nbsp;<span class="clearLink" onclick="clearURL('http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris')" id="clear-http%3A%2F%2Fdbpedia.org%2Fresource%2FTetris">(clear)</span></span></li>
+            </ul>
+         </div>
+      </div>
+   </body></html>

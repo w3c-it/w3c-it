@@ -1,0 +1,37 @@
+/* -------------------------------------------------------------
+Nuovo stylesheet per home page.
+Usa indirizzi relativi e fa riferimento allo stylesheet weblabPages
+per le componenti standard della pagina (fullPage e footer) 
+--------------------------------------------------------------- */
+
+@import url("../tools/slideStyle.css");
+
+.piccoloBlu{
+  color: blue ;
+  font-size: 70%;
+  
+}
+
+.pocoContrasto{
+  color: #ccccff ;
+  background: #cccc00;
+}
+
+
+.corsivo{
+	font-style: italic; 
+}
+
+.maiuscolo{
+	font-case: upper;
+}
+
+
+.treColonne{ 
+         margin-right:0%;
+				 margin-left:0%;
+         float: left;
+				 width: 33%;
+}
+
+

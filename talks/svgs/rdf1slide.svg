@@ -1,0 +1,184 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+
+<?xml-stylesheet type="text/css" href="http://www.w3c.it/talks/svgs/slide.css" ?>
+
+<svg width="922" height="500">
+
+
+
+
+  <rect width="922" height="500" class="background" />
+
+  <g transform="scale(0.9)">
+    <g transform="translate(10,10)">
+      <rect style="fill:white;" width="90" height="30" />
+
+      <text x="10" y="20" style="color:black;">
+      &lt;html&gt;</text>
+    </g>
+
+    <g transform="translate(10,480)">
+      <rect style="fill:white;" width="90" height="30" />
+
+      <text x="10" y="20" style="color:black;">
+      &lt;/html&gt;</text>
+    </g>
+
+    <g transform="translate(60,50)">
+      <rect style="fill:yellow;" width="750" height="300" />
+
+      <g transform="translate(10,10)">
+        <rect style="fill:white;" width="100" height="30" />
+
+        <text x="10" y="20" style="color:black;">
+        &lt;head&gt;</text>
+      </g>
+
+      <g transform="translate(10,140)">
+        <rect style="fill:white;" width="100" height="30" />
+
+        <text x="10" y="20" style="color:red;">Metadata</text>
+      </g>
+
+      <g transform="translate(10,260)">
+        <rect style="fill:white;" width="100" height="30" />
+
+        <text x="10" y="20" style="color:black;">
+        &lt;/head&gt;</text>
+      </g>
+
+      <g transform="translate(120,10)">
+        <g transform="translate(10,10)">
+          <rect style="fill:white;" width="110" height="30" />
+
+          <text x="10" y="20" style="color:red">
+          &lt;meta&gt;</text>
+        </g>
+
+        <g transform="translate(30,35)">
+          <rect style="fill:white;" width="110" height="30" />
+
+          <text x="10" y="20" style="color:red;">
+          &lt;link&gt;</text>
+        </g>
+
+        <g transform="translate(50,60)">
+          <rect style="fill:white;" width="110" height="30" />
+
+          <text x="10" y="20" style="color:red;">
+          &lt;title&gt;</text>
+        </g>
+
+        <g transform="translate(70,85)">
+          <rect style="fill:white;" width="130" height="30" />
+
+          <text x="10" y="20" style="color:red;">PICS
+          labels</text>
+        </g>
+      </g>
+
+      <g transform="translate(290,10)">
+        <g transform="translate(10,10)">
+          <rect style="fill:white;" width="130" height="30" />
+
+          <text x="10" y="20" style="color:green;">P3P
+          Privacy</text>
+        </g>
+
+        <g transform="translate(30,38)">
+          <rect style="fill:white;" width="220" height="30" />
+
+          <text x="10" y="20" style="color:green;">XML Tag
+          Semantics</text>
+        </g>
+
+        <g transform="translate(50,66)">
+          <rect style="fill:white;" width="130" height="30" />
+
+          <text x="10" y="20" style="color:green;">Signed
+          XML</text>
+        </g>
+
+        <g transform="translate(70,94)">
+          <rect style="fill:white;" width="130" height="30" />
+
+          <text x="10" y="20" style="color:green;">WAI</text>
+        </g>
+
+        <g transform="translate(90,122)">
+          <rect style="fill:white;" width="130" height="30" />
+
+          <text x="10" y="20" style="color:green;">IPR</text>
+        </g>
+
+        <g transform="translate(110,150)">
+          <rect style="fill:white;" width="130" height="30" />
+
+          <text x="10" y="20" style="color:green;">Payment</text>
+        </g>
+
+        <g transform="translate(130,178)">
+          <rect style="fill:white;" width="120" height="30" />
+
+          <text x="10" y="20" style="color:green;">CC/PP</text>
+        </g>
+      </g>
+
+      <g transform="translate(540,10)">
+        <g transform="translate(10,10)">
+          <rect style="fill:white;" width="140" height="130" />
+
+          <text x="10" y="20" style="color:blue;">RDF</text>
+
+          <text x="10" y="50" style="color:blue;">Resource</text>
+
+          <text x="10" y="75" style="color:blue;">
+          Description</text>
+
+          <text x="10" y="100" style="color:blue;">
+          Framework</text>
+        </g>
+
+        <g transform="translate(10,150)">
+          <rect style="fill:white;" width="190" height="60" />
+
+          <text x="10" y="20" style="color:blue;">
+          Intelligent</text>
+
+          <text x="10" y="45" style="color:blue;">Agents</text>
+        </g>
+
+        <g transform="translate(10,220)">
+          <rect style="fill:white;" width="130" height="30" />
+
+          <text x="10" y="20" style="color:blue;">Trust</text>
+        </g>
+      </g>
+    </g>
+
+    <g transform="translate(60,370)">
+      <rect style="fill:green;" width="250" height="100" />
+
+      <g transform="translate(10,10)">
+        <rect style="fill:white;" width="100" height="30" />
+
+        <text x="10" y="20" style="color:black;">&lt;body
+        /&gt;</text>
+      </g>
+
+      <g transform="translate(130,10)">
+        <rect style="fill:white;" width="100" height="30" />
+
+        <text x="10" y="20" style="color:red;">Markup</text>
+      </g>
+    </g>
+
+    <text class="onBackground" x="350" y="400">RDF: A common
+    basis for</text>
+
+    <text class="onBackground" x="380" y="440">expressing
+    semantics</text>
+  </g>
+</svg>
+

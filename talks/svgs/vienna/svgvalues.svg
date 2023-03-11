@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 03December 1999//EN" "http://www.w3.org/Graphics/SVG/SVG-19991203.dtd" [
+ <!ENTITY leadText "font-family:Helvetica;font-size:14;font-weight:bolder;fill:#FFB54E;">
+ <!ENTITY valueText "font-family:Helvetica;font-size:13;font-weight:lighter">
+ ]>
+<!-- Generator: Andreas Neumann -->
+<svg xml:space="preserve" width="3cm" height="0.8cm" viewBox="0 0 300 80">
+<desc>Vienna City - Legend</desc>
+ 
+<g style="&leadText;">
+	<text x="0" y="20">District:</text>
+	<text x="0" y="40">Sub-District:</text>
+	<text x="0" y="60">Value:</text>
+</g>
+
+<text id="textDistrict" x="51" y="20">District</text>
+<text id="textSubdistrict" x="81" y="40">Subdistrict</text>
+<text id="textValue" x="44" y="60">Value</text>
+
+</svg>

@@ -1,0 +1,43 @@
+/*  permette di mascherare le navigation bar e il numero di slide 
+per la slide index da usare come segnaposto   */
+
+@import url("./slideStyle.css");
+
+
+
+/*  div per header    */
+
+
+.headerNavBar {
+							display: none;
+					font-size:80%;
+					margin-right:0%;
+				 margin-left:0%;
+         float: right;
+				 text-align: right;
+				 width: 40%;
+				 
+}
+
+/* div per footer   */
+
+.footerNumSlides {
+								 display: none;
+					font-size:70%;
+					margin-right:0%;
+				 margin-left:0%;
+         float: left;
+				 text-align: right;
+				 width: 20%;
+				
+}
+.footerNavBar {
+				 display: none;
+					font-size:50%;
+					margin-right:0%;
+				 margin-left:0%;
+         float: right;
+				 text-align: right;
+				 width: 20%;
+				 
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<title>Representing Knowledge in Semantic Cultural Web - slide "Some Advantages of Schemas"</title>
+<link rel="next" href="slide41-0.htm" title="Next">
+<link rel="previous" href="slide39-0.htm" title="Previous">
+<link rel="contents" href="overview.htm" title="Contents">
+<link href="../tools/w3ctalk-800-whitebackground.css" rel="stylesheet" type="text/css" title="W3C Talk">
+</head>
+<body>
+<table class="navbar" cellspacing="0" cellpadding="0" border="0" width="97%" summary="navigation buttons">
+<tr valign="top">
+<td align="left"><a href="http://www.minervaeurope.org/"><img src="./logoMinervaSmall.jpg" border="0" alt="WebLab Logo - Goes to Weblab Home Page"></a>&nbsp;
+<a href="http://www.w3c.it/"><img src="../../siteutilities/logos/itlogo-20010115.png" border="0" alt="W3C Office in Italy"></a></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide39-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;XML Schema Definition&#34;"></a><a rel="contents" href="overview.htm" accesskey="C"><img src="../icons/toc.png" border="0" width="32" height="32" alt=" contents" title="Table of Contents"></a><a rel="next" href="slide41-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Presenting information&#34;"></a></div>
+</td>
+</tr>
+</table>
+
+<h1 class="slide">Some Advantages of Schemas</h1>
+
+<hr class="top">
+
+<div class="slidebody">
+
+<ul>
+<li>Schemas are in XML (no special syntax, special editor,
+validation is possible,...)</li>
+<li>Element type hierarchies can be defined</li>
+<li>Advanced datatypes; one can: 
+<ul>
+<li>define constraints on the data types (eg, an attribute shall
+be a positive integer but smaller than 100)</li>
+<li>define hierarchies of data types (eg, a type is a subtype of
+another one by restriction)</li>
+<li>define your own datatypes (eg, phone numbers should include
+only numbers, first names only characters, zip codes follow
+national patterns,...)</li>
+</ul>
+</li>
+</ul>
+<p>For example, the type:</p>
+<pre class="exmpl">
+  &lt;simpleType name="Dutch_ZIP_Code"&gt;
+    &lt;restriction base="string"&gt;
+      &lt;xsd:pattern value="\d{4} {0,1}[A-Z]{2}"/&gt;
+    &lt;/restriction&gt;
+  &lt;/simpleType&gt;
+</pre>
+<p>defines the Dutch ZIP codes of the type "1183 NW" or
+"1183NW".</p>
+
+
+</div>
+
+<hr class="bottom">
+
+<table class="footer" cellspacing="0" cellpadding="0" border="0" width="97%" summary="footer">
+<tr valign="bottom">
+<td> <p class="author"><a href="mailto:oreste@w3.org">Oreste Signore, Manager of W3C Office in Italy</a></p> </td>
+<td align="left"><p class="index">40 of 97</p></td>
+<td valign="top" nowrap>
+<div align="right">
+<a rel="previous" href="slide39-0.htm" accesskey="P"><img src="../icons/left.gif" border="0" width="32" height="32" alt=" previous" title="Back to &#34;XML Schema Definition&#34;"></a><a rel="next" href="slide41-0.htm" accesskey="N"><img src="../icons/right.gif" border="0" width="32" height="32" alt=" next" title="On to &#34;Presenting information&#34;"></a></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

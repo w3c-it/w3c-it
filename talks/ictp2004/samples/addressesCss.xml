@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="addresses.css"?>
+<Addresses xmlns:xlink="http://www.w3.org/1999/xlink" xml:base="http://www.w3.org/">
+	<Person>
+		<Name>Herman, Iván</Name>
+		<Address>W3C at the W3C Dutch Office at CWI, Kruislaan 413</Address>
+		<City>Amsterdam</City>
+		<Zip>1098 SJ</Zip>
+		<Country>Netherlands</Country>
+		<Tel where="mobile">+33 6 0887 2517</Tel>
+		<Tel where="home">+31 20 647 8592</Tel>
+		<Tel where="office">+31 20 592 4163</Tel>
+		<Fax>+31-20-592 4312</Fax>
+		<Email>ivan@w3.org</Email>
+		<Picture width="281" height="266" src="pngs/ivan.png"/>
+		<Notes>Head of <a xlink:href="Consortium/Offices">Offices</a>
+		</Notes>
+	</Person>
+	<Person>
+		<Name>Daly, Janet</Name>
+		<Address>W3C at MIT, 545 Technology Square</Address>
+		<City>Cambridge, MA</City>
+		<Zip>02139</Zip>
+		<Country>United States of America</Country>
+		<Tel where="mobile">+1 206 228 1097</Tel>
+		<Tel where="home">+1-206 298 3399</Tel>
+		<Tel where="office">+1 617 253 5884</Tel>
+		<Email>janet@w3.org</Email>
+		<Picture height="182" width="200" src="pngs/janet2.png"/>
+		<Notes>Head of <a xlink:href="People/domain?domain=Communications">Communications</a>
+		</Notes>
+	</Person>
+	<Person>
+		<Name>Forgue, Marie-Claire</Name>
+		<Address>W3C at Inria, route des Lucioles</Address>
+		<City>Sophia Antipolis</City>
+		<Zip>06902</Zip>
+		<Country>France</Country>
+		<Tel where="mobile">+33 6 76 86 33 41</Tel>
+		<Tel where="office">+33 4 92 38 75 94</Tel>
+		<Email>mcf@w3.org</Email>
+		<Picture width="394" height="442" src="pngs/marie2.png"/>
+		<Notes>European Communications Officer</Notes>
+	</Person>
+	<Person>
+		<Name>Jacobs, Ian</Name>
+		<Address>W3C at MIT, 59 Second Place</Address>
+		<City>Brooklyn, NY</City>
+		<Zip>11231</Zip>
+		<Country>United States of America</Country>
+		<Tel where="mobile">+1 917 450 8783</Tel>
+		<Tel where="office">+1 718 260 9447</Tel>
+		<Email>ij@w3.org</Email>
+		<Picture width="393" height="452" src="pngs/ian2.png"/>
+	</Person>
+	<Person>
+		<Name>Lesch, Susan</Name>
+		<Address>W3C at MIT</Address>
+		<City>San Diego, CA</City>
+		<Country>United States of America</Country>
+		<Tel where="office">+1 858 483 4819</Tel>
+		<Email>lesch@w3.org</Email>
+		<Picture width="307" height="331" src="pngs/susan.png"/>
+	</Person>
+	<Person>
+		<Name>Kitakawa, Kazuhiro (北川 和裕)</Name>
+		<Address>W3C at Keio, Shonan-Fujisawa Kampus</Address>
+		<City>Fujisawa</City>
+		<Zip>5322 Endo</Zip>
+		<Country>Japan</Country>
+		<Tel where="office">+81 466 49 1170</Tel>
+		<Tel where="mobile">+81 90 1662 0507</Tel>
+		<Email>kaz@w3.org</Email>
+        <Picture width="400" height="450" src="pngs/kaz2.png"/>
+	</Person>
+	<Person>
+		<Name>Hirakawa, Yasuyuki (平川 泰之)</Name>
+		<Address>W3C at Keio, Shonan-Fujisawa Kampus</Address>
+		<City>Fujisawa</City>
+		<Zip>5322 Endo</Zip>
+		<Country>Japan</Country>
+		<Tel where="office">+81 466 49 1170</Tel>
+		<Email>yasuyuki@w3.org</Email>
+      <Picture width="290" height="375" src="pngs/yasuyuki.png"/>
+	</Person>
+	<Person>
+		<Name>Takeuchi, Saeko (竹内 佐衣子)</Name>
+		<Address>W3C at Keio, Shonan-Fujisawa Kampus</Address>
+		<City>Fujisawa</City>
+		<Zip>5322 Endo</Zip>
+		<Country>Japan</Country>
+		<Tel where="office">+81 466 49 1170</Tel>
+		<Email>saeko@w3.org</Email>
+		<Picture width="388" height="428" src="pngs/saeko.png"/>
+	</Person>
+</Addresses>

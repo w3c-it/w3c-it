@@ -1,0 +1,10 @@
+div.tocref {
+		width: 5em;
+		text-align: right;
+		float: left;
+}
+
+div.tocentry {
+		text-align: left;
+		margin-left: 5.7em; 
+}

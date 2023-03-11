@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+         xmlns:qh="http://www.weblab.isti.cnr.it/projects/QH/properties/"> 
+  ...
+	
+  <rdf:Description rdf:nodeID="a11132">
+      <qh:localName>publisher</qh:localName>
+      <qh:kind>element</qh:kind>
+			<qh:label xml:lang="en">publisher</qh:label>
+      <qh:label xml:lang="it">editore</qh:label>
+      <qh:longDescription xml:lang="en">Publisher</qh:longDescription >
+      <qh:longDescription xml:lang="it">Editore</qh:longDescription>
+      <qh:fullyQualifiedName>books/book/metadata/publicationInfo/publisher</qh:fullyQualifiedName>
+      <qh:controlledBy>
+        <rdf:Description>
+          <qh:mode>externalList</qh:mode>
+          <qh:serviceParms>http://www.weblab.isti.cnr.it/projects/QH/demo/services/publisherList.xml</qh:serviceParms>
+        </rdf:Description>
+      </qh:controlledBy>  
+  </rdf:Description> 
+	
+  ...
+	
+</rdf:RDF>

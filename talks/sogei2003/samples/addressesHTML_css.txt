@@ -1,0 +1,29 @@
+BODY {
+BORDER-TOP-WIDTH: 2em; BORDER-LEFT-WIDTH: 2em; BORDER-BOTTOM-WIDTH: 2em; FONT-FAMILY: Arial, Helvetica, sans-serif
+border: solid thick gray; BACKGROUND-COLOR: #fffbf0; BORDER-RIGHT-WIDTH: 2em
+}
+DIV.address {MARGIN-BOTTOM: 1em; MARGIN-LEFT: 5%
+}
+H1.title {
+	BORDER-TOP: medium none; COLOR: red; LINE-HEIGHT: 22pt; TEXT-ALIGN: center
+}
+A:hover {
+	BACKGROUND: #ffa
+}
+TABLE {
+	BORDER-RIGHT: 1pt outset; BORDER-TOP: 1pt outset; BORDER-LEFT: 1pt outset; BORDER-BOTTOM: 1pt outset; border-spacing: 2pt
+}
+TD.label {
+	BORDER-RIGHT: 1pt inset; BORDER-TOP: 1pt inset; FONT-SIZE: 10pt; BACKGROUND: #eeeeee; BORDER-LEFT: 1pt inset; BORDER-BOTTOM: 1pt inset; FONT-STYLE: italic
+}
+TD {
+	BORDER-RIGHT: 2pt inset; BORDER-TOP: 2pt inset; FONT-SIZE: 10pt; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-LEFT: 2pt inset; BORDER-BOTTOM: 2pt inset
+}
+TH {
+	FONT-WEIGHT: bold; BACKGROUND: #c0c0c4; TEXT-ALIGN: center
+}
+DT {
+	FONT-WEIGHT: bold; COLOR: #006699
+}
+
+

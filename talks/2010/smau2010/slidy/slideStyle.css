@@ -1,0 +1,403 @@
+
+div.slide h1 {
+  padding-left: 0.5em;
+  padding-right: 0;
+  padding-top: 0.1em;
+  margin-bottom: 0.8em;
+ /* margin-top: -0.05em; */
+ margin-top: 0.2em;
+ /*  per evitare i margini bianchi a destra e sinistra del titolo slide
+ margin-left: 2.5em;
+  margin-right: 4em; */
+	margin-left: 0em;
+  margin-right: 0em;
+ /* color: #000099;  */
+  height: 2.2em;
+  font-size: 160%;
+	font-family: "Arial";
+  line-height: 1.1em;
+ /* background: #ffff99;  */
+  /* border: solid; */
+	color: #0000ff;
+	background: #ffffff;
+	border-bottom: 0.1em solid blue;
+	
+	background-image:url('../images/sw-cube.png');
+	background-repeat:no-repeat;
+	background-position: top right;
+}
+
+
+em { 
+  /* color: #000000; */
+  /* color: red; */
+	color: blue;
+  font-style:italic; 
+	
+}
+q {
+	 color: #3300cc;
+	 font-style: italic;
+	 }
+	 
+blockquote {
+					 background: #ffffcc;
+					 }
+	
+div.slide a:visited { color: #990099; text-decoration: underline; }
+div.slide a:link { color: #990099; text-decoration: underline; }
+div.slide a:hover { color: red; text-decoration: underline; }
+div.slide a:active { color: red; text-decoration: underline; }
+					  
+
+.reddish { 
+	color: #cc3333;
+  font-style:italic; 
+	}
+
+.strike  {text-decoration: line-through; color: red;  }	
+
+.acronym {
+  color: red ;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+	line-height: 100%;
+	text-decoration: underline;
+	/* text-align: center;  */
+}
+	
+.bigEmphasis {
+  color: #330099 ;
+  font-size: 200%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+	line-height: 200%;
+	/* text-align: center;  */
+}
+
+.slidesAt{
+  color: #000099 ;
+	background: #ffffff;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+}
+
+.questions {
+  color: red ;
+  font-size: 300%;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif; 
+	text-align: center;
+	 margin-top: 1%;
+	 margin-bottom: 1%;
+}
+/* per rendere in grigio le altre voci. Richiede di cambiare l' effetto con hover  */
+.otherItems {
+	/* color: #f6f6f6 ; */
+}
+
+.currentItem {
+	/* background-color: #ffffcc ; */
+	 font-size: 150%;
+	 font-weight: bold;
+	 font-style: italic;
+	 color: #000000;
+}
+
+/* Classi per impaginazione div e paragrafi  */
+
+.floatright {
+   float: right;
+   }
+.floatleft {
+   float: left;
+   }
+.divright {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         float: right;
+}
+.divleft {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         float: left;
+}
+.divcenter {
+         background: inherit;
+         margin-right:1%;
+         margin-left:1%;
+         text-align: center;;
+}
+
+
+
+
+/*  div per impaginazione  */
+div.slidebody {
+	width: 100%;
+		margin-right:0%;
+				 margin-left:0%;
+         float: left;
+	background-color: #ffffff;
+	
+ /* height: 512px;  */
+	 /* height: 70%; */
+}
+/* Le colonne sono definite con una larghezza dell' 1% inferiore a quella dichiarata
+per evitare problemi di arrotondamento in IE con conseguente visualizzazione 
+in colonna invece che affiancata  */
+.column10 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 7%;
+}
+.column15 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 12%;
+}
+.column20 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 17%;
+}
+.column25 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 22%;
+}
+.column30 { 
+				 background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 27%;
+}
+.column35 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 32%;
+}
+.column40 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 37%;
+}
+.column45 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 42%;
+}
+.column50 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 47%;
+}
+.column55 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 52%;
+}
+.column60 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 57%;
+}
+.column65 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 62%;
+}
+.column70 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 67%;
+}
+.column75 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 72%;
+}
+.column80 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 77%;
+}
+.column85 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 82%;
+}
+.column90 { 
+         background: inherit;
+				 margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 87%;
+}
+
+.fullPage { 
+         margin-right:0%;
+				 margin-left:0%;
+         float: left;
+				 width: 100%;
+				 background-color: #ffffff;
+}
+
+/*  div per header    */
+.headerSection { 
+         margin-right:0%;
+				 margin-left:0%;
+				 margin-top:0%;
+         float: left;
+				 width: 100%;
+				 background-color: #ffffff;
+}
+.headerLogo {
+					font-size:80%;
+					font-style: italic;
+					margin-right:0%;
+				 margin-left:0%;
+         float: left;
+				 width: 60%;
+				 
+}
+.headerTitle {
+				/*	font-size:80%;    */
+					margin-right:0%;
+				 margin-left:0%;
+         float: left;
+				 text-align: center;
+				 width: 100%;
+				 background-color: #ffffff;
+}
+.headerNavBar {
+					font-size:80%;
+					margin-right:0%;
+				 margin-left:0%;
+         float: right;
+				 text-align: right;
+				 width: 40%;
+				 
+}
+/*  div per loghi prima pagina  */
+.logoFirstPage {
+    float: left;
+		width: 20%;
+		max-width: 200px:
+}
+
+
+/* div per footer   */
+.footerSection { 
+         margin-right:0%;
+				 margin-left:0%;
+				 margin-top:1%;
+         float: left;
+				 width: 100%;
+				 background-color: #ffffff;
+}
+.footerAuthor {
+					font-size:50%;
+					font-style: italic;
+					margin-right:0%;
+				 margin-left:0%;
+         float: left;
+				 width: 50%;
+				 
+}
+.footerLogo {
+					font-size:50%;
+					font-style: italic;
+					margin-right:0%;
+				 margin-left:0%;
+         float: left;
+				 width: 40%;
+				 
+}
+.footerNumSlides {
+					font-size:70%;
+					margin-right:0%;
+				 margin-left:0%;
+         float: left;
+				 text-align: right;
+				 width: 20%;
+				
+}
+.footerNavBar {
+					font-size:50%;
+					margin-right:0%;
+				 margin-left:0%;
+         float: right;
+				 text-align: right;
+				 width: 20%;
+				 
+}
+
+/* copiato dal css online */
+div.slide pre { 
+     color: purple;
+     line-height: 110%;
+   /*  margin: 1em;  */
+     padding-bottom: 0em;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     padding-left: 1em;
+     background-color: #dbdcde;
+     font-size: 80%;
+     border: solid thin black;
+  }
+.emph2 {
+   background-color: #ffffff;
+   }
+   .photo {
+       float: right;
+       margin-left: 1em;
+       text-align: center;
+       font-size: smaller;
+       }
+    .photo img {
+       border: thin black solid;
+       padding: 0;
+       }
+div.slide code {
+   color: #ff0099;
+   font-size: 100%;
+   font-weight: bold;
+   }
+	 
+	 /* fine ex css online   */

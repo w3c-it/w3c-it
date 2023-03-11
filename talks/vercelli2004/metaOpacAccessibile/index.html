@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it"
+lang="it">
+  <head>
+    <title>
+      MetaopacPisano
+    </title>
+    <meta name="Author" content=" Isis System" />
+    <link rel="stylesheet" type="text/css"
+    href="./metaOpacLayout.css" />
+  </head>
+  <body>
+    <!-- <noscript>mmmm</noscript><script type="text/javascript" language=
+                                                                                                                                                                                                                        "javascript">
+                                                                                                                                                                                                                        //<![CDATA[
+                                                                                                                                                                                                                        function WindowOpen(address,name) { thisWin=window.open(address,name, 'toolbar=no,scrollbars=yes,location=no,status=no,menubar=yes,resizable=yes,width=500,height=600');thisWin.focus();void(0);}function WindowHelp(address,name) { thisWin=window.open(address,name, 'toolbar=yes,scrollbars=yes,location=no,status=no,menubar=yes,resizable=yes,width=500,height=600');thisWin.focus();void(0);}
+                                                                                                                                                                                                                        /*
+                                                                                                                                                                                                                          Local javascript functions
+                                                                                                                                                                                                                        */
+                                                                                                                                                                                                                        function urlencode(strText) {
+                                                                                                                                                                                                                                    var isObj;
+                                                                                                                                                                                                                              var trimReg;
+                                                                                                                                                                                                                              if( typeof(strText) == "string" ) {
+                                                                                                                                                                                                                                  if( strText != null ) {
+                                                                                                                                                                                                                                            trimReg = /(^\s+)|(\s+$)/g;
+                                                                                                                                                                                                                                            strText = strText.replace( trimReg, '');
+                                                                                                                                                                                                                                                                                                                                                for(i=128;i<256;i++){strText=strText.replace(String.fromCharCode(i),escape(String.fromCharCode(i)));}}}returnstrText;}functionAutoWindowOpen(address,name){address=urlencode(address);if(window.name=="Doc")name="Doc1";elseif(window.name=="Doc1")name="Doc2";elseif(window.name=="Doc2")name="Doc1";thisWin=window.open(address,name,'toolbar=no,scrollbars=yes,location=no,status=no,menubar=yes,resizable=yes,width=500,height=600');thisWin.focus();void(0);}functiondoCheckAll0(){with(document.Boxes0){for(vari=0;i<elements.length;i++){if(elements[i].type=='checkbox'&&elements[i].name=='Checker')elements[i].checked=true;}}}functiondoCheckAll1(){with(document.Boxes1){for(vari=0;i<elements.length;i++){if(elements[i].type=='checkbox'&&elements[i].name=='Checker')elements[i].checked=true;}}}functiondoCheckAll2(){with(document.Boxes2){for(vari=0;i<elements.length;i++){if(elements[i].type=='checkbox'&&elements[i].name=='Checker')elements[i].checked=true;}}}functiondoCheckAll3(){with(document.Boxes3){for(vari=0;i<elements.length;i++){if(elements[i].type=='checkbox'&&elements[i].name=='Checker')elements[i].checked=true;}}}functiondoCheckAll(){with(document.Boxes){for(vari=0;i<elements.length;i++){if(elements[i].type=='checkbox'&&elements[i].name=='Checker')elements[i].checked=true;}}}functionGetFromBoxes0(){varundefined="undefined";vartempstring="";varnewurl="/Isis/servlet/Isis?Conf=/home/admin/unipi/unipiConf/unipi.sys.file";varpft0="&Obj=@unipiRTF.pft";varpft1="&Obj=@unipiRTFbox.pft";varoti="&Opt=get&Type=Doc&Id=";vark=0;if(document.Boxes0.Checker.length==undefined){newurl=newurl+pft0+oti+document.Boxes0.Checker.value;}else{for(i=0;i<document.Boxes0.Checker.length;i++){if(document.Boxes0.Checker[i].checked){k++;tempstring=tempstring+document.Boxes0.Checker[i].value+",";}}//Nextstatementcommentedbecauseinerror....!//if(tempstring=="")tempstring=document.Boxes0.Checker[0].value+",";if(tempstring=="")tempstring=document.Boxes0.Checker.value+",";if(k<=1)newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);elsenewurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);}AutoWindowOpen(newurl,"Doc");}functionGetFromBoxes1(){varundefined="undefined";vartempstring="";varnewurl="/Isis/servlet/Isis?Conf=/home/admin/unipi/unipiConf/sns.sys.file";varpft0="&Obj=@unipiRTF.pft";varpft1="&Obj=@unipiRTFbox.pft";varoti="&Opt=get&Type=Doc&Id=";vark=0;if(document.Boxes1.Checker.length==undefined){newurl=newurl+pft0+oti+document.Boxes1.Checker.value;}else{for(i=0;i<document.Boxes1.Checker.length;i++){if(document.Boxes1.Checker[i].checked){k++;tempstring=tempstring+document.Boxes1.Checker[i].value+",";}}//Nextstatementcommentedbecauseinerror....!//if(tempstring=="")tempstring=document.Boxes1.Checker[0].value+",";if(tempstring=="")tempstring=document.Boxes1.Checker.value+",";if(k<=1)newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);elsenewurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);}AutoWindowOpen(newurl,"Doc");}functionGetFromBoxes2(){varundefined="undefined";vartempstring="";varnewurl="/Isis/servlet/Isis?Conf=/home/admin/unipi/unipiConf/sssup.sys.file";varpft0="&Obj=@unipiRTF.pft";varpft1="&Obj=@unipiRTFbox.pft";varoti="&Opt=get&Type=Doc&Id=";vark=0;if(document.Boxes2.Checker.length==undefined){newurl=newurl+pft0+oti+document.Boxes2.Checker.value;}else{for(i=0;i<document.Boxes2.Checker.length;i++){if(document.Boxes2.Checker[i].checked){k++;tempstring=tempstring+document.Boxes2.Checker[i].value+",";}}//Nextstatementcommentedbecauseinerror....!//if(tempstring=="")tempstring=document.Boxes2.Checker[0].value+",";if(tempstring=="")tempstring=document.Boxes2.Checker.value+",";if(k<=1)newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);elsenewurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);}AutoWindowOpen(newurl,"Doc");}functionGetFromBoxes3(){varundefined="undefined";vartempstring="";varnewurl="/Isis/servlet/Isis?Conf=/home/admin/unipi/unipiConf/cnr.sys.file";varpft0="&Obj=@unipiRTF.pft";varpft1="&Obj=@unipiRTFbox.pft";varoti="&Opt=get&Type=Doc&Id=";vark=0;if(document.Boxes3.Checker.length==undefined){newurl=newurl+pft0+oti+document.Boxes3.Checker.value;}else{for(i=0;i<document.Boxes3.Checker.length;i++){if(document.Boxes3.Checker[i].checked){k++;tempstring=tempstring+document.Boxes3.Checker[i].value+",";}}//Nextstatementcommentedbecauseinerror....!//if(tempstring=="")tempstring=document.Boxes3.Checker[0].value+",";if(tempstring=="")tempstring=document.Boxes3.Checker.value+",";if(k<=1)newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);elsenewurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);}AutoWindowOpen(newurl,"Doc");}functionGetFromBoxes(){varundefined="undefined";vartempstring="";varnewurl="/Isis/servlet/Isis?Conf=./Conf/AIXnotlogic0.pisa.recovery.sys.file";varpft0="&Obj=@unipiRTF.pft";varpft1="&Obj=@unipiRTFbox.pft";varoti="&Opt=get&Type=Doc&Id=";vark=0;if(document.Boxes.Checker.length==undefined){newurl=newurl+pft0+oti+document.Boxes.Checker.value;}else{for(i=0;i<document.Boxes.Checker.length;i++){if(document.Boxes.Checker[i].checked){k++;tempstring=tempstring+document.Boxes.Checker[i].value+",";}}//Nextstatementcommentedbecauseinerror....!//if(tempstring=="")tempstring=document.Boxes.Checker[0].value+",";if(tempstring=="")tempstring=document.Boxes.Checker.value+",";if(k<=1)newurl=newurl+pft0+oti+tempstring.substring(0,tempstring.length-1);elsenewurl=newurl+pft1+oti+tempstring.substring(0,tempstring.length-1);}AutoWindowOpen(newurl,"Doc");}functionGetFromAixBoxes(){varundefined="undefined";vartempstring="";/*sotoaccessthelocalservervarnewurl="/Isis/servlet/Isis?Conf=./Conf/AIXnotlogic0.pisa.recovery.sys.file";*///sotoaccessacrossreferencedservervarnewurl="http://193.205.80.141:8080/metaopac/servlet/Isis?Conf=/home/metaopac/Conf/AIXnotlogic0.pisa.sys.file";varpft="&Obj=@unipilTiL.countpft,SortedBy:@Sti.pft";varoti="&Opt=search&Field0=&Field1=&Field2=";varAUoti="&Opt=search&Field0=&Field1=&Field2=";varSUoti="&Opt=search&Field0=&Field1=&Field2=&Field3=";vark=0;varMaxElement=16;if(document.Boxes.AixType.value=="AU")oti=AUoti;elseif(document.Boxes.AixType.value=="SU")oti=SUoti;if(document.Boxes.Checker.length==undefined){newurl=newurl+pft+oti+document.Boxes.Checker.value;}else{for(i=0;i<document.Boxes.Checker.length&&k
+                                                                                                                                                                                                                        </script><noscript>mmmm</noscript>  -->
+    <div class="apriPagina">
+      <h1>
+        MetaOpac Pisano (MOP)
+      </h1>
+    </div>
+    <div class="navigationBar">
+      <h4>
+        <a accesskey="H" tabindex="7" title="Clicca sull'help"
+        href="./help.html">Help</a>
+      </h4>
+    </div>
+    <div class="pienaPagina">
+      <div class="queryArea">
+        <h2>
+          Query Area
+        </h2>
+        <h3>
+          Impostazione dei parametri di ricerca
+        </h3>
+        <h4>
+          Campi
+        </h4>
+        <span class="c2"><input type="hidden" name="Opt"
+        value="search" />Tutti i campi<br />
+         <input tabindex="5" name="Field0" /><a accesskey="r"
+        id="iniziaricerca" name="iniziaricerca"></a><br />
+         Titolo<br />
+         <input tabindex="5" name="Field1" /><br />
+         Autore<br />
+         <input tabindex="5" name="Field2" /><br />
+         Soggetto<br />
+         <input tabindex="5" name="Field3" /><br />
+         Luogo/Editore/Anno di pubblicazione<br />
+         <input tabindex="5" name="Field4" /><br />
+         Serie, Collana<br />
+         <input tabindex="5" name="Field5" /></span><input
+        type="hidden" name="Conf"
+        value="./Conf/AIXnotlogic0.pisa.recovery.sys.file" /><input
+         type="hidden" name="SrcWin" value="1" /><input
+        type="hidden" name="Dsfr" value="1" /><br />
+         <input tabindex="5" class="button" type="submit"
+        value="Inizia la ricerca" /> 
+        <hr />
+        <h4>
+          Operatori
+        </h4>
+        Operatore logico <select name="glOp">
+          <option selected="selected">
+            and
+          </option>
+          <option>
+            or
+          </option>
+          <option>
+            not
+          </option>
+        </select><br />
+         
+        <hr />
+        <h4>
+          Formati
+        </h4>
+        <input type="radio" name="Obj"
+        value="@unipilTiL.countpft,SortedBy:@Sti.pft"
+        checked="checked" />Lista ordinata dei titoli<br />
+         <input type="radio" name="Obj"
+        value="@unipilTiLns.countpft" />Lista dei titoli<br />
+         <input type="radio" name="Obj"
+        value="@unipiShproof.countpft" />Lista dei titoli proof
+        format 
+        <hr />
+        <h4>
+          Cataloghi
+        </h4>
+        <input type="checkbox" id="unipi" title="unipi" value="1"
+        checked="checked" /> <label for="unipi"><a
+        href="http://biblio.unipi.it:8080/TIsis/servlet/Isis?Conf=/home/admin/unipi/Conf/unipi.sys.file">
+        UNIPI</a></label> <input type="checkbox" id="sns"
+        title="sns" value="2" checked="checked" /> <label
+        for="sns"><a
+        href="http://opacbib.sns.it:8180/Isis/servlet/Isis?Conf=/home/beppe/snsConf/sns.sys.file">
+        SNS</a></label> <input type="checkbox" id="cnr"
+        title="cnr" value="3" checked="checked" /> <label
+        for="cnr"><a
+        href="http://leonardo.isti.cnr.it/Isis/servlet/Isis?Conf=./Conf/cnr.sys.file">
+        CNR</a></label> <input type="checkbox" id="sssa"
+        title="sssa" value="4" checked="checked" /> <label
+        for="sssa"><a
+        href="http://193.205.80.141:8080/metaopac/servlet/Isis?Conf=/home/metaopac/sssupConf/sssup.sys.file">
+        SSSA</a></label> <input type="checkbox" id="b.cAndp.p"
+        title="b.c &amp; p.p" value="5" checked="checked" />
+        <label for="b.cAndp.p"><a
+        href="http://biblio.unipi.it:8080/TIsis/servlet/Isis?Conf=/home/admin/unipi/ppi01Conf/ppi01.sys.file">
+        B.C &amp; P.P</a></label> <input type="checkbox"
+        id="domus" title="domus" value="6" checked="checked" />
+        <label for="domus"><a
+        href="http://www.domusgalilaeana.it:8080/metaopac/servlet/Isis?Conf=/home/metaopac/domusConf/domus.sys.file">
+        DOMUS</a></label> <input type="checkbox" id="bunip"
+        title="bunip" value="7" checked="checked" /> <label
+        for="bunip"><a
+        href="http://leonardo.isti.cnr.it/metaopac/servlet/Isis?Conf=/export/home/metaopac/mpisa/BunipConf/Bunip.sys.file">
+        BUNIP</a></label> <input type="checkbox"
+        id="bibliolandia" title="bibliolandia" value="8"
+        checked="checked" /> <label for="bibliolandia"><a
+        href="http://leonardo.isti.cnr.it/metaopac/servlet/IsisConf=/export/home/metaopac/mpisa/biblndConf/biblnd.sys.file">
+        BiblioLandia</a></label> <input type="checkbox"
+        id="bibcath" title="bibcath" value="9"
+        checked="checked" /> <label for="bibcath"><a
+        href="http://leonardo.isti.cnr.it/metaopac/servlet/Isis?Conf=/export/home/metaopac/mpisa/cathConf/cath.sys.file">
+        BibCATH</a></label> <input type="checkbox" id="bfs"
+        title="bfs" value="10" checked="checked" /> <label
+        for="bfs"><a
+        href="http://leonardo.isti.cnr.it/metaopac/servlet/Isis?Conf=/export/home/metaopac/mpisa/bfsConf/bfs.sys.file">
+        BFS</a></label> <input type="checkbox" id="bibcns"
+        title="bibcns" value="11" checked="checked" /> <label
+        for="bibcns"><a
+        href="http://leonardo.isti.cnr.it/metaopac/servlet/Isis?Conf=/export/home/metaopac/mpisa/cnsConf/cns.sys.file">
+        BibCNS</a></label> 
+        <hr />
+        <h4>
+          Numero record
+        </h4>
+        <form action="/Isis/servlet/Isis" id="IsisGasForm00"
+        method="get">
+          <p>
+            Massimo numero di record da selezionare: <select
+            name="Dsfor">
+              <option>
+                2000
+              </option>
+              <option>
+                1000
+              </option>
+              <option>
+                500
+              </option>
+              <option>
+                300
+              </option>
+              <option selected="selected">
+                100
+              </option>
+              <option>
+                50
+              </option>
+              <option>
+                10
+              </option>
+            </select>
+          </p>
+        </form>
+        <hr />
+        <h4>
+          Indici
+        </h4>
+        <form method="get" id="IsisGasForm01"
+        action="javascript:IsisGasLoadPrefix1();">
+          <p>
+            Accesso agli Indici da:<br />
+             <input name="Startname" value="" /><br />
+             <input type="radio" id="xtipo" name="xtipo"
+            checked="checked" />Autore<br />
+             <input type="radio" id="xtipo" name="xtipo" />
+            Soggetto<br />
+             <input type="radio" id="xtipo" name="xtipo" />
+            Titolo<br />
+             <input type="submit" value="Inizia la ricerca" />
+          </p>
+        </form>
+      </div>
+      <div class="displayArea">
+        <h2>
+          Info/Display Area
+        </h2>
+        <br />
+         Attenzione: questo messaggio viene inviato, solamente,
+        al momento della connessione al servizio. La ricerca
+        avviene sempre per parola o insiemi di parole connesse da
+        operatori logici. All'interno dello stesso campo sono
+        definiti operatori default Tra campi diversi l'operatore
+        default &egrave; "and" Di default, la richiesta &egrave;
+        eseguita su tutti i cataloghi:<br />
+         
+        <table summary="sigle e nomi biblioteche">
+          <tr>
+            <td>
+              <strong>UNIPI</strong>
+            </td>
+            <td>
+              Universit&agrave; di Pisa
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>SNS</strong>
+            </td>
+            <td>
+              Scuola Normale Superiore
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>CNR</strong>
+            </td>
+            <td>
+              Consiglio Nazionale delle Ricerche; Area della
+              Ricerca di Pisa
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>SSSA</strong>
+            </td>
+            <td>
+              Scuola Superiore Sant'Anna
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>B.C&amp;P.P</strong>
+            </td>
+            <td>
+              Biblioteca Comunale e Provinciale di Pisa
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>DOMUS</strong>
+            </td>
+            <td>
+              Domus Galil&aelig;ana
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Bunip</strong>
+            </td>
+            <td>
+              Biblioteca Universitaria: Polo SBN
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Bibliolandia</strong>
+            </td>
+            <td>
+              Biblioteche della Valdera, Basso Valdarno e Alta
+              Valdicecina
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>BibCATH</strong>
+            </td>
+            <td>
+              Biblioteca Cathariniana di Pisa
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>BFS</strong>
+            </td>
+            <td>
+              Biblioteca Franco Serantini - Pisa
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>BibCNS</strong>
+            </td>
+            <td>
+              Biblioteca Istituzione Centro Nord-Sud della
+              Provincia di Pisa
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="piedePagina">
+      <!--  Il software &egrave; a cura di <a
+                                href="mailto:romano@isti.cnr.it"><i>Beppe
+                                Romano</i></a> dell'Istituto ISTI/CNR  -->
+      <div class="logoChiusura">
+        <a href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3c.it/siteutilities/logos/valid-xhtml10.png"
+         alt="Valid XHTML 1.0!" height="31" width="88" /> 
+        <!-- <img
+                  src="http://www.w3.org/Icons/valid-xhtml10.png"
+                  alt="Valid XHTML 1.0!" height="31" width="88" /> --></a>
+        <a href="http://jigsaw.w3.org/css-validator/"><img
+        src="http://www.w3c.it/siteutilities/logos/valid-css.png"
+        alt="Valid CSS2!" height="31" width="88" /> <!-- <img
+                  style="border:0;width:88px;height:31px"
+                  src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" /> --></a>
+      </div>
+      <div class="testoChiusura">
+        Il software &egrave; a cura di <a
+        href="mailto:romano@isti.cnr.it"><i>Beppe Romano</i></a>
+        dell'Istituto ISTI/CNR<br />
+         L'interfaccia &egrave; stata modificata da <a
+        href="mailto:oreste@w3.org"><i>Oreste Signore</i></a>
+        Ufficio Italiano W3C presso il C.N.R. e <a
+        href="mailto:fcipressini@libero.it"><i>Francesca
+        Cipressini</i></a>
+      </div>
+    </div>
+  </body>
+</html>

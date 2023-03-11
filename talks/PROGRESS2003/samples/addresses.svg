@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 500">
+   <text x="512" y="40" class="title">W3C Communication Team</text>
+   <g transform="translate(10,100)">
+      <clipPath id="window" clipPathUnits="userSpaceOnUse">
+         <rect width="1010" height="230" y="-2" x="-2"/>
+      </clipPath>
+      <g clip-path="url(#window)">
+         <g id="addresses">
+            <g id="a1" visibility="visible">
+               <use xlink:href="#item"/>
+               <g transform="translate(785,5)">
+                  <svg width="210" height="210" viewBox="0 0 200 182">
+                     <image xlink:href="pngs/janet2.png" width="200" height="182">
+                        <desc>Picture of Daly, Janet</desc>
+                     </image>
+                  </svg>
+               </g>
+               <text>
+                  <tspan class="name" x="400" dy="30">Daly, Janet</tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Address:</tspan>
+                     <tspan class="content" x="120">W3C at MIT, 545 Technology Square, Cambridge, MA</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Country:</tspan>
+                     <tspan class="content" x="120">02139, United States of America</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Tel:</tspan>
+                     <tspan class="content" x="120">+1 617 253 5884 (office);+1 206 228 1097 (mobile);+1-206 298 3399 (home);</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Email:</tspan>
+                     <a xlink:href="mailto:janet@w3.org">
+                        <tspan class="content" x="120" style="fill:blue">janet@w3.org</tspan>
+                     </a>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Notes:</tspan>
+                     <tspan class="content" x="120">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		Head of <a xlink:href="http://www.w3.org/People/domain?domain=Communications">
+                           <tspan style="fill:blue">Communications</tspan>
+                        </a>
+		
+	
+                     </tspan>
+                  </tspan>
+               </text>
+               <use xlink:href="#arrow" transform="translate(10, 210) rotate(180) scale(0.5)">
+                  <set xlink:href="#a2" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a1" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+            </g>
+            <g id="a2" visibility="hidden">
+               <use xlink:href="#item"/>
+               <g transform="translate(785,5)">
+                  <svg width="210" height="210" viewBox="0 0 394 442">
+                     <image xlink:href="pngs/marie2.png" width="394" height="442">
+                        <desc>Picture of Forgue, Marie-Claire</desc>
+                     </image>
+                  </svg>
+               </g>
+               <text>
+                  <tspan class="name" x="400" dy="30">Forgue, Marie-Claire</tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Address:</tspan>
+                     <tspan class="content" x="120">W3C at Inria, route des Lucioles, Sophia Antipolis</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Country:</tspan>
+                     <tspan class="content" x="120">06902, France</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Tel:</tspan>
+                     <tspan class="content" x="120">+33 4 92 38 75 94 (office);+33 6 76 86 33 41 (mobile);</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Email:</tspan>
+                     <a xlink:href="mailto:mcf@w3.org">
+                        <tspan class="content" x="120" style="fill:blue">mcf@w3.org</tspan>
+                     </a>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Notes:</tspan>
+                     <tspan class="content" x="120">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		European Communications Officer
+	</tspan>
+                  </tspan>
+               </text>
+               <use xlink:href="#arrow" transform="translate(10, 10) scale(0.5)">
+                  <set xlink:href="#a1" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a2" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+               <use xlink:href="#arrow" transform="translate(10, 210) rotate(180) scale(0.5)">
+                  <set xlink:href="#a3" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a2" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+            </g>
+            <g id="a3" visibility="hidden">
+               <use xlink:href="#item"/>
+               <g transform="translate(785,5)">
+                  <svg width="210" height="210" viewBox="0 0 281 266">
+                     <image xlink:href="pngs/ivan.png" width="281" height="266">
+                        <desc>Picture of Herman, Iván</desc>
+                     </image>
+                  </svg>
+               </g>
+               <text>
+                  <tspan class="name" x="400" dy="30">Herman, Iván</tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Address:</tspan>
+                     <tspan class="content" x="120">W3C at the W3C Dutch Office at CWI, Kruislaan 413, Amsterdam</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Country:</tspan>
+                     <tspan class="content" x="120">1098 SJ, Netherlands</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Tel:</tspan>
+                     <tspan class="content" x="120">+31 20 592 4163 (office);+33 6 0887 2517 (mobile);+31 20 647 8592 (home);</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Email:</tspan>
+                     <a xlink:href="mailto:ivan@w3.org">
+                        <tspan class="content" x="120" style="fill:blue">ivan@w3.org</tspan>
+                     </a>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Notes:</tspan>
+                     <tspan class="content" x="120">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		Head of <a xlink:href="http://www.w3.org/Consortium/Offices">
+                           <tspan style="fill:blue">Offices</tspan>
+                        </a>
+		
+	
+                     </tspan>
+                  </tspan>
+               </text>
+               <use xlink:href="#arrow" transform="translate(10, 10) scale(0.5)">
+                  <set xlink:href="#a2" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a3" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+               <use xlink:href="#arrow" transform="translate(10, 210) rotate(180) scale(0.5)">
+                  <set xlink:href="#a4" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a3" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+            </g>
+            <g id="a4" visibility="hidden">
+               <use xlink:href="#item"/>
+               <g transform="translate(785,5)">
+                  <svg width="210" height="210" viewBox="0 0 290 375">
+                     <image xlink:href="pngs/yasuyuki.png" width="290" height="375">
+                        <desc>Picture of Hirakawa, Yasuyuki (平川 泰之)</desc>
+                     </image>
+                  </svg>
+               </g>
+               <text>
+                  <tspan class="name" x="400" dy="30">Hirakawa, Yasuyuki (平川 泰之)</tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Address:</tspan>
+                     <tspan class="content" x="120">W3C at Keio, Shonan-Fujisawa Kampus, Fujisawa</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Country:</tspan>
+                     <tspan class="content" x="120">5322 Endo, Japan</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Tel:</tspan>
+                     <tspan class="content" x="120">+81 466 49 1170 (office);</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Email:</tspan>
+                     <a xlink:href="mailto:yasuyuki@w3.org">
+                        <tspan class="content" x="120" style="fill:blue">yasuyuki@w3.org</tspan>
+                     </a>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Notes:</tspan>
+                     <tspan class="content" x="120">
+		
+		
+		
+		
+		
+		
+		
+      
+	
+                     </tspan>
+                  </tspan>
+               </text>
+               <use xlink:href="#arrow" transform="translate(10, 10) scale(0.5)">
+                  <set xlink:href="#a3" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a4" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+               <use xlink:href="#arrow" transform="translate(10, 210) rotate(180) scale(0.5)">
+                  <set xlink:href="#a5" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a4" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+            </g>
+            <g id="a5" visibility="hidden">
+               <use xlink:href="#item"/>
+               <g transform="translate(785,5)">
+                  <svg width="210" height="210" viewBox="0 0 393 452">
+                     <image xlink:href="pngs/ian2.png" width="393" height="452">
+                        <desc>Picture of Jacobs, Ian</desc>
+                     </image>
+                  </svg>
+               </g>
+               <text>
+                  <tspan class="name" x="400" dy="30">Jacobs, Ian</tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Address:</tspan>
+                     <tspan class="content" x="120">W3C at MIT, 59 Second Place, Brooklyn, NY</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Country:</tspan>
+                     <tspan class="content" x="120">11231, United States of America</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Tel:</tspan>
+                     <tspan class="content" x="120">+1 718 260 9447 (office);+1 917 450 8783 (mobile);</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Email:</tspan>
+                     <a xlink:href="mailto:ij@w3.org">
+                        <tspan class="content" x="120" style="fill:blue">ij@w3.org</tspan>
+                     </a>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Notes:</tspan>
+                     <tspan class="content" x="120">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+                     </tspan>
+                  </tspan>
+               </text>
+               <use xlink:href="#arrow" transform="translate(10, 10) scale(0.5)">
+                  <set xlink:href="#a4" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a5" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+               <use xlink:href="#arrow" transform="translate(10, 210) rotate(180) scale(0.5)">
+                  <set xlink:href="#a6" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a5" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+            </g>
+            <g id="a6" visibility="hidden">
+               <use xlink:href="#item"/>
+               <g transform="translate(785,5)">
+                  <svg width="210" height="210" viewBox="0 0 400 450">
+                     <image xlink:href="pngs/kaz2.png" width="400" height="450">
+                        <desc>Picture of Kitakawa, Kazuhiro (北川 和裕)</desc>
+                     </image>
+                  </svg>
+               </g>
+               <text>
+                  <tspan class="name" x="400" dy="30">Kitakawa, Kazuhiro (北川 和裕)</tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Address:</tspan>
+                     <tspan class="content" x="120">W3C at Keio, Shonan-Fujisawa Kampus, Fujisawa</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Country:</tspan>
+                     <tspan class="content" x="120">5322 Endo, Japan</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Tel:</tspan>
+                     <tspan class="content" x="120">+81 466 49 1170 (office);+81 90 1662 0507 (mobile);</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Email:</tspan>
+                     <a xlink:href="mailto:kaz@w3.org">
+                        <tspan class="content" x="120" style="fill:blue">kaz@w3.org</tspan>
+                     </a>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Notes:</tspan>
+                     <tspan class="content" x="120">
+		
+		
+		
+		
+		
+		
+		
+		
+        
+	
+                     </tspan>
+                  </tspan>
+               </text>
+               <use xlink:href="#arrow" transform="translate(10, 10) scale(0.5)">
+                  <set xlink:href="#a5" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a6" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+               <use xlink:href="#arrow" transform="translate(10, 210) rotate(180) scale(0.5)">
+                  <set xlink:href="#a7" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a6" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+            </g>
+            <g id="a7" visibility="hidden">
+               <use xlink:href="#item"/>
+               <g transform="translate(785,5)">
+                  <svg width="210" height="210" viewBox="0 0 307 331">
+                     <image xlink:href="pngs/susan.png" width="307" height="331">
+                        <desc>Picture of Lesch, Susan</desc>
+                     </image>
+                  </svg>
+               </g>
+               <text>
+                  <tspan class="name" x="400" dy="30">Lesch, Susan</tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Address:</tspan>
+                     <tspan class="content" x="120">W3C at MIT, San Diego, CA</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Country:</tspan>
+                     <tspan class="content" x="120">United States of America</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Tel:</tspan>
+                     <tspan class="content" x="120">+1 858 483 4819 (office);</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Email:</tspan>
+                     <a xlink:href="mailto:lesch@w3.org">
+                        <tspan class="content" x="120" style="fill:blue">lesch@w3.org</tspan>
+                     </a>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Notes:</tspan>
+                     <tspan class="content" x="120">
+		
+		
+		
+		
+		
+		
+		
+	
+                     </tspan>
+                  </tspan>
+               </text>
+               <use xlink:href="#arrow" transform="translate(10, 10) scale(0.5)">
+                  <set xlink:href="#a6" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a7" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+               <use xlink:href="#arrow" transform="translate(10, 210) rotate(180) scale(0.5)">
+                  <set xlink:href="#a8" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a7" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+            </g>
+            <g id="a8" visibility="hidden">
+               <use xlink:href="#item"/>
+               <g transform="translate(785,5)">
+                  <svg width="210" height="210" viewBox="0 0 388 428">
+                     <image xlink:href="pngs/saeko.png" width="388" height="428">
+                        <desc>Picture of Takeuchi, Saeko (竹内 佐衣子)</desc>
+                     </image>
+                  </svg>
+               </g>
+               <text>
+                  <tspan class="name" x="400" dy="30">Takeuchi, Saeko (竹内 佐衣子)</tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Address:</tspan>
+                     <tspan class="content" x="120">W3C at Keio, Shonan-Fujisawa Kampus, Fujisawa</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Country:</tspan>
+                     <tspan class="content" x="120">5322 Endo, Japan</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Tel:</tspan>
+                     <tspan class="content" x="120">+81 466 49 1170 (office);</tspan>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Email:</tspan>
+                     <a xlink:href="mailto:saeko@w3.org">
+                        <tspan class="content" x="120" style="fill:blue">saeko@w3.org</tspan>
+                     </a>
+                  </tspan>
+                  <tspan x="10" dy="30">
+                     <tspan class="label">Notes:</tspan>
+                     <tspan class="content" x="120">
+		
+		
+		
+		
+		
+		
+		
+		
+	
+                     </tspan>
+                  </tspan>
+               </text>
+               <use xlink:href="#arrow" transform="translate(10, 10) scale(0.5)">
+                  <set xlink:href="#a7" attributeType="XML" attributeName="visibility" to="visible" begin="click"/>
+                  <set xlink:href="#a8" attributeType="XML" attributeName="visibility" to="hidden" begin="click"/>
+               </use>
+            </g>
+         </g>
+      </g>
+   </g>
+   <g transform="translate(20,400)">
+      <g transform="translate(0,0)">
+         <use xlink:href="#menu"/>
+         <text class="name2">Daly, Janet</text>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a1" to="visible"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a2" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a3" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a4" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a5" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a6" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a7" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a8" to="hidden"/>
+      </g>
+      <g transform="translate(250,0)">
+         <use xlink:href="#menu"/>
+         <text class="name2">Forgue, Marie-Claire</text>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a1" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a2" to="visible"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a3" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a4" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a5" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a6" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a7" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a8" to="hidden"/>
+      </g>
+      <g transform="translate(500,0)">
+         <use xlink:href="#menu"/>
+         <text class="name2">Herman, Iván</text>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a1" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a2" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a3" to="visible"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a4" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a5" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a6" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a7" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a8" to="hidden"/>
+      </g>
+      <g transform="translate(750,0)">
+         <use xlink:href="#menu"/>
+         <text class="name2">Hirakawa, Yasuyuki (平川 泰之)</text>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a1" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a2" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a3" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a4" to="visible"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a5" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a6" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a7" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a8" to="hidden"/>
+      </g>
+      <g transform="translate(0,30)">
+         <use xlink:href="#menu"/>
+         <text class="name2">Jacobs, Ian</text>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a1" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a2" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a3" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a4" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a5" to="visible"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a6" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a7" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a8" to="hidden"/>
+      </g>
+      <g transform="translate(250,30)">
+         <use xlink:href="#menu"/>
+         <text class="name2">Kitakawa, Kazuhiro (北川 和裕)</text>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a1" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a2" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a3" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a4" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a5" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a6" to="visible"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a7" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a8" to="hidden"/>
+      </g>
+      <g transform="translate(500,30)">
+         <use xlink:href="#menu"/>
+         <text class="name2">Lesch, Susan</text>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a1" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a2" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a3" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a4" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a5" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a6" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a7" to="visible"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a8" to="hidden"/>
+      </g>
+      <g transform="translate(750,30)">
+         <use xlink:href="#menu"/>
+         <text class="name2">Takeuchi, Saeko (竹内 佐衣子)</text>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a1" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a2" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a3" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a4" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a5" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a6" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a7" to="hidden"/>
+         <set attributeType="XML" attributeName="visibility" begin="click" xlink:href="#a8" to="visible"/>
+      </g>
+   </g>
+   <defs>
+      <pattern id="Pattern" patternUnits="userSpaceOnUse" patternTransform="rotate(20)" patternContentUnits="userSpaceOnUse" x="0" y="0" width="100" height="80">
+         <g opacity="0.1">
+            <image x="0" y="0" width="72" height="48" xlink:href="pngs/w3chome.png"/>
+         </g>
+      </pattern>
+      <path id="arrow" class="arrow" transform="translate(-20,-13)" d="M 20 0 L 40 20, 30 20, 30 26, 10 26, 10 20, 0 20 z"/>
+      <g id="labelBackground">
+         <rect width="100" height="30" x="5" class="labelB"/>
+      </g>
+      <g id="item">
+         <rect width="1000" rx="3" ry="3" height="220" class="full"/>
+         <use xlink:href="#labelBackground" transform="translate(0,37)"/>
+         <use xlink:href="#labelBackground" transform="translate(0,67)"/>
+         <use xlink:href="#labelBackground" transform="translate(0,97)"/>
+         <use xlink:href="#labelBackground" transform="translate(0,127)"/>
+         <use xlink:href="#labelBackground" transform="translate(0,157)"/>
+      </g>
+      <rect id="menu" width="240" height="20" x="-3" y="-15" fill="lightGray" stroke="none"/>
+   </defs>
+   <style type="text/css"><![CDATA[
+			  .title      { text-anchor:middle; stroke:none; fill:red; font-size:32; font-weight:bold }
+			  .name       { font-size:24; fill:green; stroke:none; font-family:'MS-Gothic','LucidaSansUnicode'; text-anchor:middle; }
+			  .name2      { font-size:16; fill:blue; stroke:none; font-family:'MS-Gothic','LucidaSansUnicode' }
+			  .label      { stroke:none;  fill:black; font-size:18; font-weight:normal; font-style:italic;  }
+			  .content    { stroke:none;  fill:black; font-size:18; font-weight:normal;  }
+			  rect.labelB { fill: #eeeeee; stroke: white; } 
+			  rect.full   { fill: url(#Pattern);  stroke:black; }
+			  path.arrow  { fill: red; stroke: none }
+		  ]]></style>
+</svg>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Web Worker example: prime numbers</title>
+ </head>
+ <body>
+  <p>Highest prime number found: <output id="prime"></output></p>
+  <script>
+   var worker = new Worker('numeri_primi.js');
+   
+   worker.onmessage = function (event) {
+     document.getElementById('prime').textContent = event.data;
+   };
+   </script>
+ </body>
+</html>
