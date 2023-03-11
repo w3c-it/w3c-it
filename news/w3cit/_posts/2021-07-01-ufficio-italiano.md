@@ -1,5 +1,5 @@
 ---
-title: Chisura Ufficio Italiano del W3C
+title: Chiusura Ufficio Italiano del W3C
 layout: page
 ---
 Due due anni di gestione, nel 2019 FBK ha deciso di non proseguire la

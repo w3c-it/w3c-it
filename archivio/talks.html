@@ -5,7 +5,7 @@ layout: page
 <div class="w3c_events_talks">
     <div class="w3c_upcoming_talks">
         <ul class="vevent_list">
-            {% assign sorted = (site.data.talks | sort: 'date') | reverse %}
+            {% assign sorted = site.data.talks | sort: 'date' | reverse %}
             {% for talk in sorted %}
             <!-- EVENTO -->
             <li class="vevent">

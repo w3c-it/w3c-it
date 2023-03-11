@@ -5,7 +5,7 @@ layout: page
 <div class="w3c_events_talks">
     <div class="w3c_upcoming_events">
         <ul class="vevent_list">
-            {% assign sorted = (site.categories.w3c | sort: 'date') | reverse %}
+            {% assign sorted = site.categories.w3c | sort: 'date' | reverse %}
             {% for post in site.categories.w3c %}
             <li class="vevent">
                 <p class="date">
