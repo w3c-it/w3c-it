@@ -8,6 +8,7 @@ en_title: "Sir Tim Berners-Lee, Inventor of the World Wide Web, to receive the A
 en_url: https://www.w3.org/2017/04/pressrelease-tbl-turing-award.html.en
 date: 2017-04-04
 permalink: /:categories/:year/:title
+categories: pr
 layout: pr
 ---
 <p class="logo"><a href="http://amturing.acm.org/"><img src="https://www.w3.org/2017/04/acm-turing-award.png" alt="logo ACM" height="150"></a><a href="https://www.w3.org/People/Berners-Lee/"><img src="https://www.w3.org/2017/04/Timbl-medium.jpg" alt="picture of Tim Berners-Lee" height="150"></a></p>
