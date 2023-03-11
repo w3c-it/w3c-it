@@ -2,7 +2,7 @@
 title: "Apertura Ufficio W3C Italia"
 date: 2017-04-06
 layout: page
-categories: 
+categories: eventi 
 ---
 # Evento di Apertura Ufficio Italiano W3C
 
