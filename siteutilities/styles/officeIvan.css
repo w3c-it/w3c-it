@@ -1,0 +1,305 @@
+/* ******************************************************
+   A slighly modified version of the home style file,
+   adapted for the office pages
+   B. Hopgood & I. Herman
+		Last revised: $Date: 2002/06/18 07:27:38 $
+********************************************************* */
+@import url(/StyleSheets/officeFloats.css);
+
+/* ****************** Style for page body *************** */
+body {
+   /* margin: 2em 1em 2em 70px; */ /* Bob */
+   background: white;
+   color: black;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.mainNews { 
+		background: white;
+		margin-right: 2em;
+		padding-right: 1em;
+}
+@media all {
+   .mainNews { 
+	    float:left;
+	    width: 73%;
+	 }
+}
+
+@media all {
+  .floatRight {
+  	 float: right;
+  }
+  
+  .floatLeft {
+  	 float: left;
+  }
+  
+  .fullScreen {
+    clear: both;
+  }
+}
+img { border:0 }
+
+blockquote, q { 
+		color: #003366; 
+		font-style: italic;
+}
+
+.main p {
+   text-indent: 1em;
+}
+
+p.quote { 
+    color: #003366;
+    font-style: italic;
+    margin-left:3%;
+    margin-right: 3%;
+    text-indent: 0;
+	  text-align: justify;
+}    
+
+th, td, p, a, div { /* ns 4 */
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+ul p, ol p, dd p { margin-top: 0em; margin-bottom: 0em }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { 
+		color: #005A9C
+}
+
+h1.title { 
+   font-size: 300%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+
+h1 { 
+   font-size: 180%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+h2 { 
+   font-size: 140%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+h3 { 
+   font-size: 120%; 
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 0.2em;
+}
+
+h4 { 
+   font-size: 100%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold
+}
+h5 { 
+   font-size: 100%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-style: italic
+}
+h6 { 
+   font-size: 300%; 
+   font-family: Arial, Helvetica, sans-serif;
+   font-variant: small-caps
+}
+
+.eventLocation { 
+   text-align: center;
+		font-size: 180%
+}
+
+h3.navhead {
+   font-size: 100%;
+}
+
+
+:link {
+		color: #037;
+}
+
+:visited {
+		color: #551a8b;
+}
+
+:active {
+   color: #900;
+   text-decoration: none;
+}
+
+.center {
+   text-align: center;
+}
+
+.signature {
+   text-align: right
+}
+
+#logo, #OfficeName {
+   text-align: left;   
+}
+
+#slogan {
+   text-align: left;
+   margin-top: -5px;
+   font-family: Times, "Times New Roman", serif;
+   font-size: 120%;
+}
+
+.headline {
+   background: #fff;
+   color: #900;
+}
+
+.hide {
+   display: none;
+}
+
+/* ****************** Style for banner ************** */
+
+div.banner {
+   border: none;
+   margin-left: 1px;
+   margin-right: 1px;
+   padding: 0.1em 0.3em;
+   text-align: center;
+   font-weight: bold;
+}
+
+/* ****************** Style for menu coloumn ************** */
+
+.menuColList { 
+   padding: 1em;
+	  margin-bottom: 1em;
+	  background: #eeeeee;
+}
+
+.menuCol { 
+    margin-left: 1em;
+    padding: 1em;
+		 margin-bottom: 2em;
+		 background: white;
+}
+
+.menuSubtitle {
+   color: #005A9C;
+   font-size: 120%; 
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 0.2em;
+		 font-weight: bold;
+}
+
+/* ****************** Style for navigation bar ************** */
+
+td.navbar, div.navbar {
+   background: #eeeeee;
+   color: #000;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+td.navbar :link, div.navbar :link{
+   background: #eeeeee;
+   color: #037;
+}
+
+td.navbar :visited, div.navbar :visited {
+   background: #eeeeee;
+   color: #551a8b;
+}
+
+td.navbar :active, div.navbar :active {
+   background: #eeeeee;
+   color: #900;
+   text-decoration: none;
+}
+
+input {
+   font-size: 83%;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ****************** Style for footer  ************** */
+
+p.copyright {
+   margin: 0 0.5em;
+   font-size: small;
+}
+
+/* ****************** Tables used for office documents ************ */
+table.coloured, table.colored {
+   font-family: Arial, Helvetica, sans-serif
+}
+table.coloured td, td.coloured,
+table.colored td, td.colored  { 
+   background: #CCFFFF;
+   color: inherit;
+}
+
+table.coloured th,
+table.colored th  { 
+   background: #c0c0c4;
+		text-align: center;
+		font-weight: bold;
+}
+
+/* ****************** Coloured entries for DT-s ***************** */
+dl.coloured dt, dl.colored dt {
+   font-weight: bold; 
+		color:#006699; 
+} 
+
+/* ****************** Hide things from the screen (eg, URL-s) ********** */
+@media screen {
+	 span.noscreen { display:none }
+}
+
+@media print {
+   span.noscreen { 
+		   font-style:italic;
+				 color:#006699;
+		}
+}
+
+/* ****************** Style for printing  ************** */
+
+@media print {
+   .newPage       { page-break-before: always; }
+   h2, h3,
+   h4, h5, h6     { page-break-after: avoid; page-break-inside: avoid }
+   blockquote,
+   pre            { page-break-inside: avoid }
+   ul, ol, dl     { page-break-before: avoid }
+   .navbar        { background-color: #fff ; color: black; border-color: #000 ; border-width: 1px }
+   a.navlink      { font-weight: normal }
+   tr, th, td, p  { orphans: 2; widows: 2 }
+}
+
+/* ****************** style for speech  ************** */
+
+@media aural {
+   h1, h2, h3,
+   h4, h5, h6    { voice-family: paul, male; stress: 20; richness: 90 }
+   h1            { pitch: x-low; pitch-range: 90 }
+   h2            { pitch: x-low; pitch-range: 80 }
+   h3            { pitch: low; pitch-range: 70 }
+   h4            { pitch: medium; pitch-range: 60 }
+   h5            { pitch: medium; pitch-range: 50 }
+   h6            { pitch: medium; pitch-range: 40 }
+   li, dt, dd    { pitch: medium; richness: 60 }
+   dt            { stress: 80 }
+   pre, code, tt { pitch: medium; pitch-range: 0; stress: 0; richness: 80 }
+   em            { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }
+   strong        { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }
+   dfn           { pitch: high; pitch-range: 60; stress: 60 }
+   s, strike     { richness: 0 }
+   i             { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }
+   b             { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }
+   u             { richness: 0 }
+   a:link        { voice-family: harry, male }
+   a:visited     { voice-family: betty, female }
+   a:active      { voice-family: betty, female; pitch-range: 80; pitch: x-high }
+}
+

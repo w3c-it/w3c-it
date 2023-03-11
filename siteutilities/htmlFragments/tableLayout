@@ -1,0 +1,73 @@
+<hr/>
+<!-- =============================================================================== -->
+<!-- =============   Table per layout della pagina su due colonne      ============= -->
+<!-- =============================================================================== -->
+<table
+summary="Layout: The first cell contains page main info,       
+and the second a navigation bar of W3C office pages."
+border="0" width="99%" cellspacing="0" cellpadding="10">
+<tbody>
+    <tr>
+      
+<!-- =============================================================================== -->
+<!-- =====================             Main info    ================================ -->
+<!-- =============================================================================== -->
+        <td valign="top" class="main" width="59%">
+
+
+
+<hr/>
+
+
+
+
+</td>
+<!-- =============================================================================== -->
+<!-- =====================      right hand navigation links  ======================= -->
+<!-- =============================================================================== -->
+      <td valign="top" class="navbar" width="25%">
+<h3 class="navhead">Link
+        locali</h3>
+        <ul class="navlink">
+          <li><a href="/members/" class="navlink">I membri italiani</a></li>
+          <li><a href="/joining/" class="navlink">Come entrare a far parte
+            del W3C</a></li>
+          <li><a href="/traduzioni/" class="navlink">Le W3C Recommendation
+            in Italiano</a></li>
+          <li><a href="http://listserv.cnr.it/w3c-it.html" class="navlink">La
+            mailing list di W3C Italia</a></li>
+          <li><a href="/pr/" class="navlink">I comunicati stampa di W3C
+            Italia</a></li>
+          <li><a href="http://euroweb.w3c.it/" class="navlink">EuroWeb
+            2001</a></li>
+          <li><a href="/events/">Eventi e partecipazioni dell' Ufficio
+            Italiano W3C</a></li>
+          <li><a href="/papers/" class="navlink">Documenti</a></li>
+          <li><a href="/technical/" class="navlink">L' angolo
+          tecnico</a></li>
+        </ul>
+        <hr />
+
+        <form method="get" action="http://www.google.com/custom">
+          <p><img src="http://www.google.com/logos/Logo_25wht.gif" width="75"
+          height="32" alt="Google" /><br />
+          <input type="text" size="15" name="q" maxlength="255" value="" /> 
+          <input type="submit" value="Go" name="sa" /><br />
+          <input type="hidden" name="cof"
+          value="T:black;LW:279;ALC:#ff3300;L:http://www.w3c.it/images/itlogo-20010115.png;LC:#000099;LH:52;BGC:white;AH:left;VLC:#660066;GL:0;AWFID:0b9847e42caf283e;"
+          /><input type="radio" name="sitesearch" checked="checked"
+          value="w3c.it" />Cerca in w3c.it<br />
+          <input type="radio" name="sitesearch" value="w3.org" />Cerca in
+          w3.org<br />
+          <input type="hidden" name="domains" value="w3.org" /><input
+          type="radio" name="sitesearch" value="" />Cerca nel Web</p>
+        </form>
+        <hr />
+
+<!-- =============================================================================== -->
+<!-- =====================      End of two columns page      ======================= -->
+<!-- =============================================================================== -->
+      </td>
+    </tr>
+  </tbody>
+</table>

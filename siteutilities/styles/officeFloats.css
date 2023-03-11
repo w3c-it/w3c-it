@@ -1,0 +1,18 @@
+.mainNews { 
+	    float:left;
+	    width: 73%;
+}
+.floatRight {
+	 float: right;
+}
+  
+.floatLeft {
+	 float: left;
+}
+  
+.fullScreen {
+  clear: both;
+}
+
+html.OHome { border: solid thick gray; border-width: 5px }
+

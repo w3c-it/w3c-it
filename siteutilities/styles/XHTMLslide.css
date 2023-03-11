@@ -1,0 +1,57 @@
+rect.background {fill:blue; stroke: none}
+
+line {stroke:red;stroke-width:3}
+rect {stroke:black;fill:white;}
+rect.yellowish {stroke:black; fill:#FDFED3; }
+
+rect.table {stroke:black;fill:lemonchiffon}
+text {font-family:Arial;font-size:20; font-weight:bold; color:#0C469C}
+text.centre {text-anchor:middle; color:seagreen}
+text.right {text-anchor:end; color:navy}
+text.left {text-anchor:start; color:seagreen}
+text.list {text-anchor:start}
+
+text.note {text-anchor:middle; font-size:16; }
+
+
+text.major {font-family:Arial;font-size:32; font-weight:bold;}
+text.minor {font-family:Arial;font-size:24; font-weight:bold;}
+text.onBackground {font-family:Arial;font-size:32;font-weight:bold;
+                   color:yellow}
+text.onBackgroundMinor {font-family:Arial;font-size:24;font-weight:bold;
+                   color:yellow}
+text.normal { font-family:Arial;font-size:20; font-weight:bold;color:yellow }
+                   
+
+
+
+path.arrow {fill:red}
+line.arrow {stroke:red;stroke-width:4;}
+path.greenarrow {fill:green}
+line.greenarrow {stroke:green;stroke-width:4;}
+
+ellipse {fill:white;stroke:black;stroke-width:3}
+ellipse.basic {fill:lemonchiffon;stroke:black;stroke-width:3}
+ellipse.yellowish {stroke:black; fill:#FDFED3; }
+
+rect.title {fill:white;stroke:none}
+line.title {stroke:#0C469C;stroke-width:6}
+text.title {font-family:Arial;font-size:36; font-weight:bold; color:#0C469C}
+
+text.rec {text-anchor:middle;}
+text.recOnBackground{ color:#FDFED3; text-anchor:middle }
+text.cprec {text-anchor:middle;color:green}
+text.wd {text-anchor:middle;color:red}
+text.cm {text-anchor:middle;color:blue}
+
+text.signature {font-family:Arial;font-size:24; font-style:italic;font-weight:bold; color:#0C469C}
+
+rect.ac {stroke:none;fill:silver}
+rect.ui {stroke:none;fill:#FFC1C1}
+rect.ts {stroke:none; fill:#C1C1FF}
+rect.arc {stroke:none;fill:#FFFFC1}
+text.ac {text-anchor:middle;color:rgb(100, 149, 197)}
+text.ui {text-anchor:middle;color:lime}
+text.ts {text-anchor:middle;color:yellow}
+text.arc {text-anchor:middle;color:red}
+text.year { text-anchor:middle; color:lime }

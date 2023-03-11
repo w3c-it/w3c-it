@@ -1,0 +1,160 @@
+body {
+  margin-left: 2%;
+  margin-right: 2%;  
+  color: black; !important;
+  background: lightblue;
+  font-size:   11pt;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif;
+}
+div.slidebody {
+  margin: 0;
+  height: 512px;
+}
+
+img {
+  border: 0;
+}
+
+p.author  { 
+  font-size: 60%;
+  font-style: italic;
+}
+
+p.top { 
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+blockquote {
+  font-style: italic;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #eeffee;
+}
+
+blockquote span.attribution {
+  font-style: normal;
+  font-weight: bold;
+}
+
+em { 
+  color: red;
+  font-style:italic;
+}
+
+ul, ol { 
+  color: black;
+  margin-left: 18pt;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  font-size: 16pt;
+}
+
+dl p, ul p, ol p,
+dl ol, dl ul, dl dl,
+ol ol, ol dl, ol ul,
+ul dl, ul ol, ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+dt {color:#006699}
+
+tt { 
+  color: #FF9;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+
+
+hr { 
+  /*margin-top: 0.01em;*/
+  color: #666;
+  /* color: #666; */
+}
+
+hr.top {
+  margin-bottom: 0.4em;
+}
+
+hr.bottom {
+  margin-top: 0.4em;
+}
+
+h1, .posterH1 {
+  color: yellow ;
+  font-size: 18pt;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif;
+
+}
+
+h2 {
+  color: yellow;
+  font-size: 14pt;
+  font-family: arial, helvetica, sans-serif;
+}
+
+h3 {
+  color: black;
+  font-size: 12pt;
+  font-family: arial, helvetica, sans-serif;
+}  
+
+h4 {
+  color: black;
+  font-size: 11pt;
+  font-family: arial, helvetica, sans-serif;
+}
+
+table {
+  color: black ;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif;
+
+}
+
+thead {
+  color:blue;
+}
+
+
+a:link { 
+  color: yellow; 
+  text-decoration:underline;   
+  /*font-weight:bold;*/}
+a:visited { 
+  color: navy; 
+  text-decoration:underline; 
+  /*font-weight:bold;*/}
+a:offsite { color: blue;
+  text-decoration:underline;
+  /*font-weight:bold;/*}
+a:active { 
+  color: red;
+  text-decoration:underline;
+  /*font-weight:bold;*/}
+
+span.link { 
+  color: #002040;
+  text-decoration:underline;
+  font-size:14pt; 
+  /*font-weight:bold;*/}
+
+p.index { font-size: 10pt; }
+
+div.object { 
+  text-align: center;
+  /* font-size: 80%; */
+}
+
+
+.emph1 { color:blue; /*font-weight: bold */}
+.emph2 { color:green; /*font-weight: bold */}
+.emph3 { color:navy; /*font-weight: bold */}
+.emph4 { color:orange; /*font-weight: bold*/}
+.emph5 { color:red; /*font-weight: bold */}
