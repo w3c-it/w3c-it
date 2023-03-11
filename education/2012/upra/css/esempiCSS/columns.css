@@ -1,0 +1,16 @@
+body {
+		 font-size:150%;
+		 color:#ffffff;
+		 font-weight:bold;
+}
+.column1 {float:left;
+          background-color:#ff0000; width:20%;
+}
+.column2 {float:left;
+ 				 background-color:#00ff00; width:50%;
+}
+.column3 {float:left; 
+			background-color:#0000ff; width:30%;
+}
+
+

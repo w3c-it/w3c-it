@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <title>
+      Aiuto per Slide Show
+    </title>
+<style type="text/css">
+/*<![CDATA[*/
+     body {
+        font-family: sans-serif;
+        margin: 10%;
+     }
+     .copyright { font-size: smaller }
+/*]]>*/
+</style>
+<script type="text/javascript">
+//<![CDATA[
+    window.onload = load;
+    function load()
+    {
+      var back = document.getElementById("back");
+      back.focus();
+    }
+//]]>
+</script>
+  </head>
+  <body>
+    <h1>
+      Aiuto per la presentazione
+    </h1>
+    <p>
+      Questa presentazione pu&ograve; essere gestita come in
+      Power Point.<br />
+      Per passare alla diapositiva successiva si pu&ograve; fare
+      click con il mouse in un punto qualunque della pagina, o
+      premere la barra spaziatrice.<br />
+      &Egrave; possibile passare alla diapositiva successiva o
+      precedente utilizzando la freccia per spostare il cursore
+      (destra/sinistra) o i tasti Pag su/Pag gi&ugrave;.<br />
+      La dimensione dei caratteri si modifica automaticamente in
+      base alla larghezza della pagina, ma &egrave; possibile
+      modificarla anche manualmente, utilizzando il tasto "S"
+      (smaller) o il tasto "B" (bigger) rispettivamente per
+      rimpicciolirla o ingrandirla. &Egrave; anche possibile
+      utilizzare i tasti "&lt;" e "&gt;".<br />
+      Prima di stampare, usare il tasto "A" per commutare tra la
+      visione della sola diapositiva corrente e quella di tutte
+      le diapositive.<br />
+      Con il tasto "F" si pu&ograve; far scomparire o ricomparire
+      la barra di stato in basso.<br />
+      Il tasto "K" inibisce l' uso del mouse per passare alla
+      diapositiva successiva (o lo abilita se
+      disabilitato).<br />
+      Il tasto "C" mostra l' indice delle diapositive (contenuto
+      della presentazione), la pressione di un qualunque altro
+      tasto fa scomparire la finestra contenente l' indice.<br />
+      Il tasto "F11" fa passare il browser in modalit&agrave;
+      schermo intero ("full screen") o ritornare nella
+      modalit&agrave; abituale.<br />
+      Non tutti i comandi funzionano con qualunque browser,
+      perch&eacute; alcuni di essi riservano l' uso di alcuni
+      tasti per loro funzioni, in maniera differente tra i vari
+      browser.
+    </p>
+    <p>
+      Gli utilizzatori di Firefox potrebbero aver bisogno della
+      extension <a href=
+      "http://extensionroom.mozdev.org/more-info/autohide" title=
+      "Firefox extension">autohide</a> per nascondere la barra
+      degli strumenti quando passano nella modalit&agrave; di
+      visualizzazione a schermo intero, utilizzando il tasto F11.
+      Le versionoi pi&ugrave; recenti di Firefox hanno il
+      supporto nativo per SVG, mentre per le versioni precedenti
+      in ambiente Microsoft Windows potrebbe essere necessario
+      installare <a href=
+      "http://plugindoc.mozdev.org/windows.html" title=
+      "SVG plugin">Adobe SVG Viewer 6.0</a>.
+    </p>
+    <p>
+      Per vedere come funziona Slidy, si pu&ograve; visualizzare
+      il codice sorgente per vedere il markup XHTML, o consultare
+      sul sito del W3C questa <a href=
+      "http://www.w3.org/Talks/Tools/Slidy/" title="Slidy - descrizione">descrizione
+      pi&ugrave; ampia</a>, che illustra anche altre
+      funzionalit&agrave;.<br />
+      Ogni diapositiva &egrave; individuata come elemento
+      <code>&lt;div&gt;</code> con attributo
+      <code>class="slide"</code>. &Egrave; possibile utilizzare
+      il posizionamento mediante CSS e larghezze espresse in
+      percentuale per le immagini, in modo da essere sicuri che
+      le presentazioni contenenti immagini si adeguino alle
+      dimensioni della finestra.<br />
+      Il contenuto che deve essere visualizzato in modo
+      incrementale pu&ograve; essere marcato con l' attributo
+      <code>class="incremental"</code>.<br />
+      I fogli di stile e gli script utilizzati sono stati
+      sviluppati per fornire una alternativa Web-based agli
+      strumenti di presentazione proprietari, e sono stati
+      provati con vari browser recenti. &Egrave; in fase di
+      sviluppo un ambiente integrato di editing.<br />
+      Siete pregati di inviare eventuali commenti a <a href=
+      "http://www.w3.org/People/Raggett/" title=
+      "Dave Raggett - home page">Dave Raggett</a> &lt;<a href=
+      "mailto:dsr@w3.org" title=
+      "Dave Raggett - mail">dsr@w3.org</a>&gt;.
+    </p>
+    <p>
+      <em>Vi invitiamo a utilizzare questo strumento, gli style
+      sheets e gli script nel rispetto dele regole del W3C per l'
+      <a href=
+      "http://www.w3.org/Consortium/Legal/copyright-documents" title="copyright-documenti">utilizzo
+      dei documenti</a> e delle<a href=
+      "http://www.w3.org/Consortium/Legal/copyright-software" title="copyright-software"> licenze software</a>.</em>
+    </p>
+    <p>
+      <button id="back" onclick="history.go(-1)">Torna alla
+      presentazione</button>
+    </p>
+    <hr />
+    <p>
+      Traduzione a cura dell' <a href="http://www.w3c.it/" title=
+      "W3C Italia">Ufficio Italiano W3C</a>
+    </p>
+    <p class="copyright">
+      <a rel="Copyright" href=
+      "http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      &copy; 2005 <a href="/" shape="rect"><acronym title=
+      "World Wide Web Consortium">W3C</acronym></a><sup>&reg;</sup>
+      (<a href="http://www.csail.mit.edu/"><acronym title=
+      "Massachusetts Institute of Technology">MIT</acronym></a>,
+      <a href="http://www.ercim.org/"><acronym title=
+      "European Research Consortium for Informatics and Mathematics">
+      ERCIM</acronym></a>, <a href=
+      "http://www.keio.ac.jp/">Keio</a>), All Rights Reserved.
+      W3C <a href=
+      "http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">
+      liability</a>, <a href=
+      "http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">
+      trademark</a>, <a rel="Copyright" href=
+      "http://www.w3.org/Consortium/Legal/copyright-documents">document
+      use</a> and <a rel="Copyright" href=
+      "http://www.w3.org/Consortium/Legal/copyright-software">software
+      licensing</a> rules apply.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,2499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta content="CSS" name="dc.title" />
+    <meta content="Oreste Signore, W3C Office in Italy" name=
+    "dc.author" />
+    <meta content="Oreste Signore, W3C Office in Italy" name=
+    "dc.creator" />
+    <meta content="Massimo Martinelli, W3C Office in Italy"
+    name="dc.author" />
+    <meta content="Massimo Martinelli, W3C Office in Italy"
+    name="dc.creator" />
+    <meta content="22 May 2012" name="dc.date" />
+    <meta content="W3C Office in Italy" name="dc.publisher" />
+    <meta content=
+    "http://www.w3.org/Consortium/Legal/copyright-documents"
+    name="dc.rights" />
+    <link href="http://www.weblab.isti.cnr.it/people/oreste/"
+    rel="Author" />
+    <title>
+      upra-CSS
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; 2012 - Oreste Signore and Massimo Martinelli - Creative Commons Attribution 3.0 License BY-NC-ND" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link rel="stylesheet" href="../slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="../slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="../slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<script src="../slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <div class="slide">
+      <h1>
+        Brevi cenni sui Cascading Style Sheets
+      </h1>
+      <p>
+        <img src="./images/css.jpg" width="45%" alt="logo CSS"
+        style="max-width: 800px; float:right;" /> <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3.org">oreste@w3.org</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <a href=
+        "http://www.uprait.org/index.php?option=com_content&amp;view=category&amp;id=419&amp;Itemid=426&amp;lang=en">
+        Master in Comunicazione e New Media</a><br />
+        <a href="http://www.upra.org/">Ateneo Pontificio Regina
+        Apostolorum</a><br />
+        Corso: <a href=
+        "http://www.w3c.it/education/2012/upra/">Architettura del
+        Web</a>
+      </p>
+      <hr />
+      <p>
+        Presentazione: <a href="./index.html" hreflang="it"
+        title="la presentazione">http://www.w3c.it/education/2012/upra/css/</a><br />
+
+        Versione pdf: <a href=
+        "http://www.w3c.it/education/2012/upra/css.pdf" hreflang=
+        "it" title=
+        "css - pdf presentazione">http://www.w3c.it/education/2012/upra/css.pdf</a><br />
+        </p>
+      <p class="slidyNotice">
+        Formato XHTML realizzato usando il tool <a href=
+        "http://www.w3.org/Talks/Tools/Slidy">Slidy</a> di Dave
+        Raggett.<br />
+        <a href="http://www.w3.org/Talks/Tools/Slidy">Slidy</a>
+        dovrebbe funzionare in tutti i browser moderni con
+        Javascript abilitato. Usare freccia destra/sinistra per
+        muoversi da una slide all' altra.<br />
+        Vedi <a href="../slidy/help.it.html">la pagina di aiuto
+        di Slidy</a> per ulteriori informazioni.
+      </p>
+      <p>
+        <a href=
+        "http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../slidy/cc-by-nc-nd.png"
+        alt="" style="width:10%; max-width: 88px" /></a> <a href=
+        "http://www.w3c.it/"><img src=
+        "../slidy/itlogo-20010115.png" alt=
+        "Cover page W3C Office Logo" style=
+        "width:40%; max-width: 279px" /></a> <a href=
+        "http://www.weblab.isti.cnr.it/"><img src=
+        "../slidy/weblabWithText.jpg" alt=
+        "Cover page Weblab Logo" style=
+        "width:10%; max-width: 150px" /></a> <a href=
+        "http://validator.w3.org/check/referer"><img src=
+        "../slidy/valid-xhtml10-blue.png" alt="Valid XHTML 1.0!"
+        style="width:15%; max-width: 88px" /></a> <a href=
+        "http://jigsaw.w3.org/css-validator/"><img src=
+        "../slidy/valid-css-blue.png" alt="Valid CSS!" style=
+        "width:15%; max-width: 88px" /></a>
+      </p>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        CSS
+      </h1>
+      <dl>
+        <dt>
+          Cascading Style Sheets
+        </dt>
+        <dd>
+          Fogli di Stile in Cascata
+        </dd>
+      </dl>
+      <ul>
+        <li>Introdotti per aggiungere informazioni sulle
+        propriet&agrave; dello stile ai documenti (X)HTML (font,
+        borders,...)
+        </li>
+        <li>Utilizzabili anche con XML
+        </li>
+        <li>Un foglio di stile &egrave; un elenco di regole
+        </li>
+        <li>Regola &egrave; composta da un selettore (in genere
+        il nome dell'elemento a cui si applica) e una lista di
+        propriet&agrave; (stili) da applicare<br />
+          <pre>
+pre  { display: block; font-size: 16pt; font-weight: bold; }
+</pre>
+        </li>
+        <li>Il contenuto dell'elemento PRE deve essere mostrato
+          <ul>
+            <li>in un blocco (display: block) (scatola)
+            </li>
+            <li>con un font di a 16 punti (font-size: 16pt) (in
+            seguito vedremo di usare altre unit&agrave; di
+            misura...)
+            </li>
+            <li>in grassetto (font-weight:bold)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ==============================================================  -->
+    <div class="slide">
+      <h1>
+        Contenuto e stile
+      </h1>
+      <ul>
+        <li>Ogni documento ha tre componenti:
+          <dl>
+            <dt>
+              contenuto
+            </dt>
+            <dd>
+              l' informazione da presentare
+            </dd>
+            <dt>
+              struttura
+            </dt>
+            <dd>
+              la marcatura del linguaggio XHTML
+            </dd>
+            <dt>
+              stile
+            </dt>
+            <dd>
+              l'aspetto con cui viene rappresentata
+              l'informazione (CSS)
+            </dd>
+          </dl>
+        </li>
+        <li>HTML definisce il contenuto
+        </li>
+        <li>CSS definisce lo stile
+        </li>
+        <li>Una pagina XHTML viene rappresentata automaticamente
+        dal browser con una sua definizione degli stili
+        </li>
+        <li>CSS consente al progettista un maggior controllo
+        sulla presentazione del contenuto da parte di
+        <em>tutti</em> i browser
+        </li>
+        <li>Vantaggi anche per l' accessibilit&agrave;
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Versioni di CSS
+      </h1>
+      <ul>
+        <li>
+          <a href="http://www.w3.org/TR/CSS1">CSS 1</a> W3C
+          Recommendation 17 Dec 1996, revised 11 Apr 2008<br />
+          Non pi&ugrave; mantenuta
+        </li>
+        <li>
+          <a href="http://www.w3.org/TR/CSS2/">CSS 2.1</a> W3C
+          Recommendation 7 Jun 2011
+        </li>
+        <li>
+          <a href="http://www.w3.org/Style/CSS/current-work">CSS
+          3</a> vari moduli in versione &ldquo;Working
+          Draft&rdquo;, alcuni &ldquo;Candidate
+          Recommendation&rdquo; o &ldquo;Proposed
+          Recommendation&rdquo;, altri alla &ldquo;Last
+          call&rdquo;
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Le regole
+      </h1>
+      <ul>
+        <li>Ogni stile (style) &egrave; composto da un
+        <em>insieme di regole</em>
+        </li>
+        <li>Una <em>regola</em> ha due parti:
+          <dl>
+            <dt>
+              selettore (selector)
+            </dt>
+            <dd>
+              <ul>
+                <li>definisce l'elemento (o gli elementi) XHTML a
+                cui si applica
+                </li>
+                <li>pi&ugrave; definizioni sono separate da
+                "<code>,</code>"
+                </li>
+              </ul>
+            </dd>
+            <dt>
+              dichiarazione (declaration)
+            </dt>
+            <dd>
+              <ul>
+                <li>descrive l'effetto
+                </li>
+                <li>&egrave; definita tra parentesi graffe
+                "<code>{ }</code>" ed &egrave; costituita da
+                coppie <em>propriet&agrave;/valore</em>
+                (<em>property/value</em>)separate da
+                "<code>:</code>", che terminano ognuna con
+                "<code>;</code>"
+                </li>
+                <li>Il primo elemento della coppia definisce la
+                propriet&agrave; da modificare
+                </li>
+                <li>Il valore contiene il valore che deve
+                assumere la propriet&agrave;
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+      <pre>
+ elemento1, elemento2 { propriet&agrave;:valore; propriet&agrave;:valore; }
+</pre>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Le regole: alcuni esempi
+      </h1>
+      <dl>
+        <dt>
+          Esempio 1
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>p {color: red;}</code>
+            </li>
+            <li>il selettore <code>p</code> indica che la regola
+            va applicata a tutti gli elementi <code>p</code> del
+            documento
+            </li>
+            <li>la propriet&agrave; modificata &egrave;
+            <code>color</code>
+            </li>
+            <li>il valore che assume la propriet&agrave; &egrave;
+            <code>red</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Esempio 2
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>h1, h2 {color: #00ff00; font-size: 24px;
+              }</code>
+            </li>
+            <li>tutti gli elementi <code>h1</code> e
+            <code>h2</code> saranno in verde
+            </li>
+            <li>tutti gli elementi <code>h1</code> e
+            <code>h2</code> saranno con caratteri di dimensione
+            24px
+            </li>
+            <li>
+              <a href="./esempi/esempio10.html">esempio di pagina
+              con stile</a> <em>CSS internal</em>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ==================================================================  -->
+    <!--    <div class="slide">
+      <h1>
+        Per quali dispositivi?
+      </h1>
+      <ul>
+        <li>La regola <code>@media</code> specifica per quali
+        &ldquo; media types&rdquo; (separati da virgole) sono
+        valide un insieme di regole (racchiuse tra parentei
+        graffe)
+          <pre class="example">
+  @media print {
+    body { font-size: 10pt }
+  }
+  @media screen {
+    body { font-size: 13px }
+  }
+  @media screen, print {
+    body { line-height: 1.2 }
+  }
+</pre>
+        </li>
+        <li>I tipi di media supportati
+          <dl>
+            <dt>
+              all
+            </dt>
+            <dd>
+              Suitable for all devices.
+            </dd>
+            <dt>
+              braille
+            </dt>
+            <dd>
+              Intended for braille tactile feedback devices.
+            </dd>
+            <dt>
+              embossed
+            </dt>
+            <dd>
+              Intended for paged braille printers.
+            </dd>
+            <dt>
+              handheld
+            </dt>
+            <dd>
+              Intended for handheld devices (typically small
+              screen, limited bandwidth).
+            </dd>
+            <dt>
+              print
+            </dt>
+            <dd>
+              Intended for paged material and for documents
+              viewed on screen in print preview mode. Please
+              consult the section on <a href=
+              "http://www.w3.org/TR/CSS2/page.html">paged
+              media</a> for information about formatting issues
+              that are specific to paged media.
+            </dd>
+            <dt>
+              projection
+            </dt>
+            <dd>
+              Intended for projected presentations, for example
+              projectors. Please consult the section on <a href=
+              "http://www.w3.org/TR/CSS2/page.html">paged
+              media</a> for information about formatting issues
+              that are specific to paged media.
+            </dd>
+            <dt>
+              screen
+            </dt>
+            <dd>
+              Intended primarily for color computer screens.
+            </dd>
+            <dt>
+              speech
+            </dt>
+            <dd>
+              per sintetizzatori vocali (CSS2 aveva il media type
+              &ldquo;<code>aural</code>&rdquo;). Vedi <a href=
+              "http://www.w3.org/TR/CSS2/aural.html">aural style
+              sheets</a> per dettagli
+            </dd>
+            <dt>
+              tty
+            </dt>
+            <dd>
+              dispositivi con caratteri di dimensione fissa
+              (telescriventi, terminali, dispositivi mobili con
+              display dalle potenzialit&agrave; limitate)
+            </dd>
+            <dt>
+              tv
+            </dt>
+            <dd>
+              dispositivi di tipo televisivo (bassa risoluzione,
+              colore, scrolling limitato, suono disponibile)
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div> -->
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        &ldquo;One size fits all?&rdquo;
+      </h1>
+      <ul>
+        <li>La regola <code>@media</code> specifica per quali
+        &ldquo; media types&rdquo; (separati da virgole) sono
+        valide un insieme di regole (racchiuse tra parentesi
+        graffe)
+          <pre class="example">
+  @media <em>print</em> {
+    body { font-size: 10pt; }
+  }
+  @media <em>screen</em> {
+    body { font-size: 13px; }
+  }
+  @media <em>screen, print</em> {
+    body { line-height: 1.2; }
+  }
+</pre>
+        </li>
+        <li>I tipi di media supportati
+          <ul class="incremental">
+            <li>
+              <strong><code>all</code></strong>: adatto per tutti
+              i dispositivi
+            </li>
+            <li>
+              <strong><code>braille</code></strong>: per i
+              dispositivi con risposta braille tattile
+            </li>
+            <li>
+              <strong><code>embossed</code></strong>: per le
+              stampanti braille
+            </li>
+            <li>
+              <strong><code>handheld</code></strong>: per i
+              palmari (tipicamente schermi piccoli, larghezza di
+              banda limitata)
+            </li>
+            <li>
+              <strong><code>print</code></strong>: per materiale
+              presentato a pagine e per la visione su schermo in
+              modalit&agrave; &ldquo;print preview&rdquo;. Vedi
+              <a href="http://www.w3.org/TR/CSS2/page.html">paged
+              media</a> per le informazioni sulla formattazione
+              specifiche per i dispositivi paginati.
+            </li>
+            <li>
+              <strong><code>projection</code></strong>: per le
+              presentazioni mediante proiettore. Vedi <a href=
+              "http://www.w3.org/TR/CSS2/page.html">paged
+              media</a>.
+            </li>
+            <li>
+              <strong><code>screen</code></strong>:
+              essenzialmente per gli schermi a colori dei PC
+            </li>
+            <li>
+              <strong><code>speech</code></strong>: per
+              sintetizzatori vocali (CSS2 aveva il media type
+              &ldquo;<code>aural</code>&rdquo;). Vedi <a href=
+              "http://www.w3.org/TR/CSS2/aural.html">aural style
+              sheets</a> per dettagli
+            </li>
+            <li>
+              <strong><code>tty</code></strong>: per dispositivi
+              con caratteri di dimensione fissa (telescriventi,
+              terminali, dispositivi mobili con display dalle
+              potenzialit&agrave; limitate)
+            </li>
+            <li>
+              <strong><code>tv</code></strong>: per dispositivi
+              di tipo televisivo (bassa risoluzione, colore,
+              scrolling limitato, suono disponibile)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Definire sempre un CSS per la stampa!
+      </h1>
+      <pre>
+ <em>@media print </em>
+   {
+       body {
+       margin-left: <em>3cm</em>;
+       margin-right: <em>3cm</em>;
+       margin-top: <em>3cm</em>;
+       margin-bottom: <em>3cm</em>;
+       background-color: #ffffff;
+       color: #000000;
+       <em>font-size: 10.5pt;</em>
+       font-family: Arial, Helvetica, sans-serif;
+       }
+       h1, h2, h3 { 
+         color: #0000ff;
+       }
+       h1.title { 
+         <em>font-size: 18pt;</em> 
+         font-family: Arial, Helvetica, sans-serif; 
+         font-weight: bold
+       }
+       &hellip;
+       <em>.leftMenu {display: none;}</em>
+       &hellip;
+   }
+
+</pre>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Dove definire gli stili
+      </h1>
+      <dl>
+        <dt>
+          inline o embedded
+        </dt>
+        <dd>
+          All'interno del tag di riferimento
+        </dd>
+        <dt>
+          internal
+        </dt>
+        <dd>
+          All'interno del tag style
+        </dd>
+        <dt>
+          external
+        </dt>
+        <dd>
+          Importandolo con il tag style o indicandolo nel tag
+          link
+        </dd>
+      </dl>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Stile inline (o embedded)
+      </h1>
+      <ul>
+        <li>direttamente in un tag XHTML
+          <pre>
+&lt;h2 <em>style="color: red; text-transform:uppercase;"</em>&gt;Testo intestazione di livello 2&lt;/h2&gt;
+</pre>
+        </li>
+        <li>&egrave; <em>sconsigliabile</em> (<strong>Deprecato
+        in XHTML1.1 e 1.0 Strict</strong>)
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Stile internal
+      </h1>
+      <ul>
+        <li>si codifica inserendo uno <em>style block</em> nella
+        parte <code>head</code> di un documento HTML
+          <pre>
+           ...
+          &lt;head&gt;
+            &lt;title&gt;titolo della pagina&lt;/title&gt;
+            <em>&lt;style type="text/css"&gt;
+               h1 { color: red;  }
+            &lt;/style&gt;</em>
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Intestazione&lt;/h1&gt;
+            ...
+          
+</pre>
+        </li>
+        <li>metodo <em>molto usato</em>
+        </li>
+        <li>utilizzo <em>semplice</em>
+        </li>
+        <li>utile per <em>test</em>
+        </li>
+        <li>
+          <em>non garantisce</em> la coerenza dello stile
+        </li>
+      </ul>
+    </div>
+    <!--  ===============================================================  -->
+    <div class="slide">
+      <h1>
+        Stile external
+      </h1>
+      <ul>
+        <li>usando il tag <code>&lt;link&gt;</code> nella
+        componente <code>head</code> del documento HTML
+          <pre>
+           ...
+          &lt;head&gt;
+            &lt;title&gt;titolo della pagina&lt;/title&gt;
+            <em>&lt;link type="text/css" rel="stylesheet" href ="/stili/nomefile.css" /&gt;</em>
+          &lt;/head&gt;
+          ...
+          
+</pre>
+        </li>
+        <li>oppure con il tag <code>style</code>
+          <pre>
+           ...
+          &lt;head&gt;
+            &lt;title&gt;titolo della pagina&lt;/title&gt;
+            <em>&lt;style type="text/css"&gt;
+                  @import url(/stili/nomefile.css);
+            &lt;/style&gt;</em>
+          &lt;/head&gt;
+          ...
+          
+</pre>
+        </li>
+        <li>
+          <em>coerenza</em> e pi&ugrave; agevole
+          <em>manutenzione</em> dello stile
+        </li>
+        <li>i file css esterni vengono trattati dal browser come
+        file separati, quindi il caricamento della pagina
+        &egrave; <em>pi&ugrave; veloce</em> (non occorre
+        scaricare ogni volta il file css)
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Tipi di regole del css
+      </h1>
+      <ul>
+        <li>Su quali <em>propriet&agrave;</em> agiscono?
+          <ul class="incremental">
+            <li>praticamente su <em>tutte</em>
+            </li>
+          </ul>
+        </li>
+        <li>Su quali tipi di <em>elementi</em>?
+          <ul class="incremental">
+            <li>&egrave; possibile selezionare su quali
+            <em>particolari elementi</em>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Come individuare gli elementi su cui agisce il css
+      </h1>
+      <ul>
+        <li>
+          <em>Tutti</em> gli elementi di un certo tipo
+        </li>
+        <li>Tutti gli elementi di un certo tipo assegnati ad uno
+        <em>stesso gruppo o classe</em>
+        </li>
+        <li>Tutti gli elementi di un certo tipo <em>contenuti in
+        altri elementi</em> di un certo tipo
+        </li>
+        <li>Tutti gli elementi di un certo tipo
+        <em>contenuti</em> in altri elementi di un certo tipo
+        <em>e</em> assegnati ad uno <em>stesso gruppo o
+        classe</em>
+        </li>
+        <li>Tutti gli elementi di un certo tipo solo quando
+        compaiono <em>immediatamente dopo</em> elementi di
+        qualche altro tipo
+        </li>
+        <li>Solo uno specifico elemento di un determinato tipo al
+        quale viene assegnato un <em>ID univoco</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Le regole di inheritance (ereditariet&agrave;)
+      </h1><img alt="inheritanceTree (14K)" src=
+      "./images/inheritanceTree.png" style=
+      "float:right; border:0.05em solid red; width:30%; max-width:337;" />
+      <ul>
+        <li>Ogni elemento appartiene al <em>document inheritance
+        tree</em>
+        </li>
+        <li>L'elemento radice &egrave; sempre l'elemento
+        <code>html</code>
+        </li>
+        <li>I suoi discendenti diretti sono <code>head</code> e
+        <code>body</code>
+        </li>
+        <li>Molte propriet&agrave; (es. <code>font-family</code>)
+        prendono il valore specificato per l' elemento padre
+        </li>
+      </ul>
+    </div>
+    <!--  ==========================================================  -->
+    <div class="slide">
+      <h1>
+        Ereditariet&agrave;
+      </h1>
+      <ul>
+        <li>Con CSS non &egrave; necessario specificare le
+        propriet&agrave; di ogni elemento
+        </li>
+        <li>Ove non presenti regole specifiche, ogni elemento
+        erediter&agrave; lo stile dell'elemento padre
+        </li>
+        <li>Con questa regola
+          <pre>
+h1 { color: red; }
+</pre>e questa parte di codice xhtml
+          <pre>
+&lt;h1&gt;Un &lt;em&gt;titolo&lt;/em&gt;&lt;h1&gt;
+</pre>"<em style="color:red">titolo</em>" sar&agrave; rosso e
+corsivo (corsivo perch&eacute; <em>em</em> per definizione viene
+cosi rappresentato ma potrebbe non essere cos&igrave;)
+        </li>
+        <li>Ma se specificata anche la seguente regola
+          <pre>
+em { color: green; font-style: normal; }
+</pre>
+        </li>
+        <li>Allora questa sostituir&agrave; lo stile ereditato da
+        <code>&lt;h1&gt;</code> e "<em class="green" style=
+        "font-style: normal;">titolo</em>" sar&agrave; di colore
+        verde, non rosso, e non corsivo ma normale
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Valori ereditati
+      </h1>
+      <ul>
+        <li>Se non specificata una propriet&agrave;, CSS assume
+        un valore di default
+        </li>
+        <li>A parte pochi casi, questo &egrave; sempre ereditato,
+        ovvero la propriet&agrave; assume lo stesso valore che ha
+        nella scatola contenitore dell'elemento in questione
+        </li>
+        <li>Tra i valori non ereditati:
+          <ul>
+            <li>
+              <em>display</em> (per HTML &egrave; sempre il
+              valore naturale dell'elemento, block per
+              <code>p</code> o <code>h1</code>, inline per
+              <code>strong</code>, <code>em</code> o
+              <code>a</code>, mentre per XML &egrave; inline)
+            </li>
+            <li>
+              <em>background</em> (sempre transparent)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        La dichiarazione !important
+      </h1>
+      <ul>
+        <li>CSS permette sia agli autori che agli utenti di
+        esprimere preferenze sulle regole di presentazione
+        </li>
+        <li>Le regole degli autori sostituiscono le regole dei
+        lettori a meno che il lettore non usi una dichiarazione
+        !important. Per esempio la seguente regola diche che
+        l'elemento p deve essere colorato di blu anche se
+        l'autore del documento ha richiesto che sia in un colore
+        differente
+        </li>
+        <li>Daltra parte font-family deve essere serif solo se
+        l'autore non ha detto diversamente
+          <pre>
+   p { color: blue !important; font-family: serif;}
+</pre>
+        </li>
+        <li>Se per&ograve; la regola dell'autore &egrave; stata
+        dichiarata !important con CSS1 vinceva la regola
+        dell'autore. Con CSS2 &egrave; cambiato e vince la regola
+        del lettore
+        </li>
+        <li>E' possibile definire regole multiple per gli stessi
+        elementi, e adottare un <em>meccanismo a cascata</em> per
+        la loro applicazione:
+          <ul>
+            <li>User Agent: il browser definisce (o
+            esplicitamente o implicitamente codificandole nel
+            software) le regole di default per gli elementi dei
+            documenti
+            </li>
+            <li>User: l'utente pu&ograve; fornire un ulteriore
+            foglio di stile per indicare regole di proprio
+            piacimento. Tipicamente &egrave; una funzione del
+            browser
+            </li>
+            <li>Author: l'autore delle pagine fornisce, nei modi
+            visti in precedenza, i fogli di stile del documento
+            specifico
+            </li>
+            <li>Regole <em>!important</em> : Quando una regola
+            utente (tipicamente) &egrave; seguita dalla keyword
+            <em>!important</em>, essa sopravanza una analoga
+            regola di senso diverso dell'autore
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Ordine della cascata
+      </h1>
+      <ul>
+        <li>In generale le regole pi&ugrave; specifiche vincono.
+        Esempio:
+          <pre>
+&lt;p&gt; bla bla
+&lt;cite id="id1" class="particolare"&gt;
+    bla bla bla
+&lt;/cite&gt;
+&lt;/p&gt;
+</pre>
+        </li>
+        <li>Le regole pi&ugrave; specifiche sono preferite.
+        Pertanto quella che seleziona l'elemento
+        <code>cite</code> per il suo <code>id</code> sar&agrave;
+        preferita a quella che seleziona <code>cite</code> per il
+        suo <code>class</code>
+        </li>
+        <li>Una regola che seleziona <code>cite</code> per il suo
+        <code>class</code> sar&agrave; preferita a quella che
+        seleziona <code>cite</code> contenuto negli elementi
+        <code>p</code>
+        </li>
+        <li>Infine, se nessuna di queste regole &egrave;
+        applicata, sar&agrave; selezionata una regola generica
+        <code>cite</code>
+        </li>
+        <li>Se non c'&egrave; un selettore che si appaia, viene
+        ereditata la propriet&agrave; dall'elemento padre
+        </li>
+        <li>Se non c'&egrave; nessun valore ereditato dal padre
+        viene usato il valore di default
+        </li>
+        <li>A parit&agrave; di specificit&agrave; si applica
+        l'ultima in ordine di apparizione
+        </li>
+        <li>L'ordine di priorit&agrave; &egrave;
+          <ol>
+            <li>User defined style
+            </li>
+            <li>Embedded or inline style sheet
+            </li>
+            <li>Internal style sheet
+            </li>
+            <li>External style sheet
+            </li>
+            <li>Browser default style
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Valori di propriet&agrave; in CSS
+      </h1>
+      <p>
+        Le propriet&agrave; CSS possono essere nomi o valori - I
+        nomi sono tutte parole chiave CSS
+      </p>
+      <ul>
+        <li>Per quanto riguarda i valori esistono diverse
+        possibilit&agrave;:
+          <ul>
+            <li>
+              <em>Parole chiave</em> come "<code>display:
+              none;</code>" in display o come solid in
+              "<code>border-style: solid;</code>"
+            </li>
+            <li>
+              <em>Misure</em> espresse come
+              <ul>
+                <li>
+                  <em>Numeri interi</em>: valori numerici
+                  assoluti
+                </li>
+                <li>
+                  <em>Valori numerici</em>: espressi in
+                  unit&agrave; di misura: 0,5in
+                  (<code>margin-top: 0.5in</code>), 12pt
+                  (<code>font-size: 12pt</code>)
+                </li>
+                <li>
+                  <em>Percentuali</em>: espressi in relazione al
+                  contenitore padre
+                </li>
+              </ul>
+            </li>
+            <li>
+              <em>Altri valori</em> possono essere:
+              <ul>
+                <li>URL come in:
+                <code>{background-image:url(http://www.isti.cnr.it/immagini/carta.gif}</code>
+                </li>
+                <li>oppure colori RGB come #CC0033 <code>{color:
+                #CC0033}</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>Esistono quattro tipi di valori di propriet&agrave;:
+          <ol>
+            <li>length
+            </li>
+            <li>URL
+            </li>
+            <li>color
+            </li>
+            <li>keyword
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Esempi: nomi di propriet&agrave; e valori
+      </h1>
+      <table summary="nomi di propriet&agrave; CSS e valori"
+      style="width:100%">
+        <tr>
+          <th style="text-align:left">
+            Nome
+          </th>
+          <th style="text-align:left">
+            Valore
+          </th>
+        </tr>
+        <tr>
+          <td>
+            display
+          </td>
+          <td>
+            none
+          </td>
+        </tr>
+        <tr>
+          <td>
+            font-style
+          </td>
+          <td>
+            italic
+          </td>
+        </tr>
+        <tr>
+          <td>
+            margin-top
+          </td>
+          <td>
+            0.5in
+          </td>
+        </tr>
+        <tr>
+          <td>
+            font-size
+          </td>
+          <td>
+            12pt
+          </td>
+        </tr>
+        <tr>
+          <td>
+            border-style
+          </td>
+          <td>
+            solid
+          </td>
+        </tr>
+        <tr>
+          <td>
+            color
+          </td>
+          <td>
+            #CC0033
+          </td>
+        </tr>
+        <tr>
+          <td>
+            background-color
+          </td>
+          <td>
+            white
+          </td>
+        </tr>
+        <tr>
+          <td>
+            background-image
+          </td>
+          <td>
+            url(http://www.isti.cnr.it/immagini/sfondoblu.gif)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            list-style-image
+          </td>
+          <td>
+            url(/immagini/pallinorosso.png)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            line-height
+          </td>
+          <td>
+            120%
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Unit&agrave; di misura
+      </h1>
+      <ul>
+        <li>Usate per definire larghezza, altezza, dimensione di
+        parole e lettere, spazi, indentazione di testo, altezza
+        di linee, margini, padding, larghezze di bordi, &hellip;
+        </li>
+        <li>Le misure possono essere specificate in tre modi:
+          <ol>
+            <li>Unit&agrave; assolute: <em>in</em> (inches), <em>
+              cm, mm, pt</em> (points, 1 pt corrisponde a 1/72
+              pollice), <em>pc</em> (pica, corrispondente 12pt,
+              quindi ad 1/6 di pollice)
+            </li>
+            <li>Unit&agrave; relative: <em>bigger, +1</em>
+            </li>
+            <li>Percentuali<em>: 50%</em>
+            </li>
+          </ol>
+        </li>
+      </ul>
+      <p>
+        (vedi: <a href=
+        "http://www.w3.org/TR/CSS2/syndata.html#length-units">http://www.w3.org/TR/CSS2/syndata.html#length-units</a>)
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Unit&agrave; di misura relative
+      </h1>
+      <ul>
+        <li>CSS mette a disposizione tre metodi per specificare
+        le unit&agrave; relative di misure
+          <ol>
+            <li>
+              <code>em</code>: la larghezza della lettera m del
+              font corrente
+            </li>
+            <li>
+              <code>ex</code>: l'altezza della lettera x del font
+              corrente
+            </li>
+            <li>
+              <code>px</code>: la grandezza di un pixel (si
+              assume uguale a 0.75pt)
+            </li>
+          </ol>
+        </li>
+        <li>In questo esempio lo spessore dei bordi destro e
+        sinistro dell'elemento p corrisponderanno alla larghezza
+        della lettera m del font corrente, i bordi superiore e
+        inferiore alla met&agrave; dell'altezza della lettera x
+        del font corrente:
+          <pre>
+p  { border-right-width: 1em; border-left-width: 1em;
+     border-top-width: 0.5ex; border-bottom-width: 0.5ex; }
+</pre>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Unit&agrave; di misura in percentuale
+      </h1>
+      <ul>
+        <li>&Egrave; <em>sconsigliato</em> usare la misura di
+        lunghezza in pixel per vari motivi:
+          <ul>
+            <li>La grandezza dei pixel varia con la risoluzione
+            </li>
+            <li>Con il passare del tempo i monitor incrementano
+            la densit&agrave; di punti
+            </li>
+            <li>Con l'aumentare della risoluzione la specifica
+            del pixel pu&ograve; rendere illeggibile il testo
+            </li>
+          </ul>
+        </li>
+        <li>Le misure possono essere specificate in percentuale
+        rispetto al valore della grandezza dell'elemento padre
+          <pre>
+p:first-letter  { font-size: 300%; }
+em              { font-size: 120%; }
+</pre>
+        </li>
+      </ul>
+    </div>
+    <!--  ========================================================  -->
+    <div class="slide">
+      <h1>
+        Il testo
+      </h1>
+      <p>
+        Del testo &egrave; possibile controllare sia gli aspetti
+        relativi al font che quelli relativi all'organizzazione
+        del testo nella scatola di riferimento:
+      </p>
+      <ul>
+        <li>font-family: il/i nomi del/dei font
+        </li>
+        <li>font-style (<em>normal | italic | oblique</em>),
+        font-variant (<em>normal | small-caps</em>), font-weight
+        (<em>normal | bold | bolder | lighter | 100&lt;-&gt;
+        900</em>), font-stretch (<em>normal | wider | narrower |
+        ultra-condensed | extra-condensed | condensed |
+        semi-condensed | semi-expanded | expanded |
+        extra-expanded | ultra-expanded</em>): caratteristiche
+        del font
+        </li>
+        <li>text-indent, text-align (<em>left | right | center |
+        justify</em>), line-height: indentazione, allineamento e
+        interlinea delle righe della scatola
+        </li>
+        <li>text-decoration (<em>none | underline | overline |
+        line-through | blink</em>)
+        </li>
+        <li>text-shadow: ulteriori stili applicabili al testo
+        </li>
+        <li>letter-spacing e word-spacing: spaziatura tra lettere
+        e tra parole
+        </li>
+        <li>text-transform (<em>capitalize | uppercase |
+        lowercase | none</em>): trasformazione della forma delle
+        lettere
+        </li>
+        <li>white-space (<em>normal | pre | nowrap</em>):
+        specifica la gestione dei ritorni a capo e del
+        collassamento dei whitespace all'interno di un elemento
+        </li>
+      </ul>
+    </div>
+    <!--  ==========================================================  -->
+    <div class="slide">
+      <h1>
+        Modello di formattazione
+      </h1>
+      <ul>
+        <li>CSS definisce un modello di visualizzazione
+        bidimensionale
+        </li>
+        <li>Gli elementi da visualizzare sono inseriti in
+        rettangoli immaginari detti scatole (box)
+        </li>
+      </ul>
+      <div class="divcenter" style="width:80%;">
+        <img src="./images/modello_formattazione.svg" alt="" /> 
+        <!--  <object data="img/modello_formattazione.svg" type=
+        "image/svg+xml" title="css box">
+          </object> -->
+      </div>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Box
+      </h1>
+      <div class="column50" style="float:right;">
+        <img src="./images/box2.svg" alt="" style=
+        "float:right; width:100%" /> <img src="./images/box.svg"
+        alt="" style="float:right; width:100%" />
+      </div>
+      <p>
+        Le scatole hanno delle propriet&agrave; che permettono di
+        definire
+      </p>
+      <ul>
+        <li>altezza, larghezza, dimensione e posizione
+        </li>
+        <li>aree relative a margini, cuscinetti (margini interni
+        - padding), bordi (trasparenti per default)
+        </li>
+      </ul>
+      <p>
+        La larghezza della scatola &egrave; data dalla somma
+        della larghezza del contenuto (ovvero dell'elemento testo
+        o immagine) + quella delle aree dei padding, bordi e
+        margini.
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Box
+      </h1>
+      <ul>
+        <li>
+          <em>Margini</em>: la regione che separa una scatola
+          dall'altra, necessariamente trasparente
+          <ul>
+            <li>
+              <em>margin-top, margin-bottom, margin-left,
+              margin-right:</em> dimensioni del margine della
+              scatola
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Border</em>: la regione ove visualizzare un bordo
+          per la scatola (trasparente per default)
+          <ul>
+            <li>
+              <em>border-top, border-bottom, border-left,
+              border-right, border-width, border-color:</em>
+              dimensioni ed aspetto del bordo
+            </li>
+            <li>
+              <em>border-style:</em> pu&ograve; assumere come
+              valori <em>none, dotted, dashed, solid, double,
+              groove</em> (incavo), <em>ridge</em> (rilievo),
+              <em>inset, outset</em>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Padding</em>: la regione di respiro tra il bordo
+          della scatola ed il contenuto - Ha il colore dello
+          sfondo
+          <ul>
+            <li>
+              <em>padding-top, padding-bottom, padding-left,
+              padding-right:</em> dimensioni del padding della
+              scatola
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Content</em>: la regione dove sta il contenuto
+          dell'elemento
+          <ul>
+            <li>
+              <em>background-color, background-image,
+              background-repeat, background-attachment,
+              background-position:</em> colore, immagine e
+              meccanismo di ripetizione dell'immagine di sfondo
+              della scatola
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Tipi di elementi
+      </h1>
+      <ul>
+        <li>Elementi "<strong>Block"</strong>; (blocco) sono
+        elementi che sono mostrati in un blocco per conto proprio
+          <ul>
+            <li>
+              <em>p</em> (paragrafo), <em>div</em> (blocco
+              generico), <em>pre</em> (blocco preformattato),
+              <em>address</em> (autore della pagina),
+              <em>blockquote</em> (citazione lunga)
+            </li>
+          </ul>possono essere inclusi solo da altri elementi
+          blocco.
+        </li>
+        <li>Elementi "<strong>Inline</strong>" sono elementi che
+        non provocano un a capo e possono essere inclusi da
+        qualsiasi altro elemento
+          <ul>
+            <li>
+              <em>a</em> (ancora, collegamento), <em>em</em>
+              (enfasi), <em>strong</em> (maggiore enfasi)
+              <em>span</em> (generico elemento inline),
+              <em>dfn</em> (definizione), <em>code</em>
+              (frammento di programma), <em>samp</em> (output
+              d'esempio), <em>kdb</em> (testo inserito
+              dall'utente), <em>var</em> (variabile di
+              programma), <em>cite</em> (breve citazione),
+              <em>q</em> (citazione lunga), <em>abbr,
+              acronim</em> (abbreviazioni ed acronimi), <em>sup,
+              sub</em> (testo in apice e in pedice), <em>bdo</em>
+              (bidirectional override)
+            </li>
+          </ul>
+        </li>
+        <li>Elementi "<strong>List-item</strong>" sono elementi
+        con un marcatore (punto elenco, numero)
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide pagina95">
+      <h1>
+        &lt;div&gt; e &lt;span&gt;
+      </h1>
+      <ul>
+        <li>
+          <code>&lt;div&gt;</code> (<em>division</em>) &egrave;
+          un elemento <em>block-level</em>
+        </li>
+        <li>
+          <code>&lt;span&gt;</code> (<em>span of words</em>)
+          &egrave; un elemento <em>inline</em>
+        </li>
+        <li>molto utili se usati con l'attributo
+        <code>class</code>
+        </li>
+        <li>permettono, in pratica, di creare nuovi <em>HTML
+        element</em>
+        </li>
+      </ul>
+      <pre>
+&lt;div class="nomeclasse"&gt;
+&lt;p&gt;
+In una div possono comparire elementi inline, e anche
+&lt;span class="specificaSpan"&gt; parole che assumono le caratteristiche&lt;/span&gt;
+assegnate alla classe "specificaSpan".&lt;br /&gt;
+La div pu&ograve; avere caratteristiche di visualizzazione particolari.
+&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+      <p>
+        html5 introduce delle specializzazioni di div: nav,
+        footer, &hellip; sono elementi strutturali che potranno
+        essere usati per specificare parti strutturali della
+        pagina
+      </p><img src="./images/elementi-strutturali-html5.gif" alt=
+      "elementi strutturali in html5" />
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Posizionamento
+      </h1>
+      <p>
+        Come si inseriscono le scatole nello spazio di
+        visualizzazione:
+      </p>
+      <ul>
+        <li>
+          <em>Flusso normale di tipo blocco</em>: una sopra
+          l'altra in successione verticale (come paragrafi)
+        </li>
+        <li>
+          <em>Flusso normale di tipo inline</em>: una accanto
+          all'altra in successione orizzontale (come parole della
+          stessa riga)
+        </li>
+        <li>
+          <em>Flusso di tipo float</em>: all'interno del
+          contenitore e poi spostate all'estrema sinistra o
+          destra della scatola, lasciando che le altre scatole vi
+          girino intorno
+        </li>
+        <li>
+          <em>Posizionamento assoluto</em>: nella posizione
+          indicata indipendentemente dal flusso e da quel che la
+          zona gi&agrave; visualizza (eventualmente nascondendo
+          ci&ograve; che sta sotto)
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Modello visuale di CSS
+      </h1>
+      <p>
+        Propriet&agrave; che controllano il tipo di
+        posizionamento e quello di scatola:
+      </p>
+      <ul>
+        <li>
+          <strong>display</strong> <em>(inline | block |
+          list-item | ... | none)</em>: il tipo di scatola da
+          utilizzare per l'elemento: blocco, inline, lista, cella
+          di tabella, ...
+        </li>
+        <li>
+          <strong>position</strong> <em>(static | relative |
+          absolute | fixed)</em>: il posizionamento rispetto al
+          flusso del documento
+        </li>
+        <li>
+          <strong>float</strong> <em>(left | right | none)</em>:
+          un float &egrave; una scatola scivolata all'estrema
+          destra o sinistra dell'area disponibile all'interno del
+          contenitore
+        </li>
+        <li>
+          <strong>z-index</strong>: la posizione nello stack di
+          scatole potenzialmente sovrapposte. Il valore
+          pi&ugrave; alto &egrave; pi&ugrave; vicino al lettore,
+          e quindi nasconde gli altri - default background delle
+          scatole = trasparente
+        </li>
+        <li>
+          <strong>top, bottom, left, right</strong>: coordinate
+          della scatola
+        </li>
+        <li>
+          <strong>width, height</strong>: dimensioni usabili
+          invece di right e bottom
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Un esempio di posizionamento
+      </h1>
+      <div style="font-size: 160%;">
+        <div style=
+        "display:block;float:right;background:#ddffdd;border-style: solid; border-width: 1px;">
+        un blocco<br />
+          allineato<br />
+          a destra
+        </div>
+        <div style=
+        "display:block;float:left;background:#ffeeee;border-style: solid; border-width: 1px;">
+        un blocco<br />
+          allineato a sinistra
+        </div>
+        <p style=
+        "display:block;border-style: solid; border-width: 1px;">
+          un paragrafo che si estende su alcune <span style=
+          "display:inline; border-style: solid; border-width: 1px; font-size: 200%;">
+          righe</span>per mostrare come sono posizionati vari
+          elementi all'interno della pagina XHTML
+        </p>
+        <p style=
+        "display:block;border-style: solid; background:#00dddd; border-width: 1px;">
+        ancora un paragrafo con elementi inline <span style=
+        "display:inline; font-weight:bold; border-style: solid; border-width: 1px;">
+          grassetto</span> e <span style=
+          "display:inline; font-style:italic;border-style: solid; border-width: 1px;">
+          italic</span>
+        </p>
+        <div style=
+        "display:block; position:absolute; top:180px; left: 280px; width: 150px; background:#eeeeff;border-style: solid; border-width: 1px;">
+        div in posizione assoluta
+        </div>
+      </div>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Un esempio di posizionamento
+      </h1>&lt;div&gt;<br />
+      <span style="background:#ddffdd;">&lt;div
+      style="<em>display:block;
+      float:right;</em>background:#ffeeee;border-style: solid;
+      border-width: 1px;"&gt;un blocco &lt;br/&gt;
+      allineato&lt;br/&gt; a destra&lt;/div&gt;</span><br />
+      <span style="background:#ffeeee;">&lt;div
+      style="<em>display:block;
+      float:left</em>;background:#ffeeee;border-style: solid;
+      border-width: 1px;"&gt;un blocco &lt;br/&gt; allineato a
+      sinistra &lt;/div&gt;</span><br />
+      &lt;p style="display:block; border-style: solid;
+      border-width: 1px;"&gt;un paragrafo che si estende su
+      alcune &lt;span style="<em>display:inline;</em>
+      border-style: solid; border-width: 1px; font-size:
+      200%;"&gt;righe&lt;/span&gt;per mostrare come sono
+      posizionati vari elementi all'interno della pagina
+      XHTML&lt;/p&gt;<br />
+      <span style="background:#00dddd;">&lt;p
+      style="display:block; border-style: solid; border-width:
+      1px;"&gt;ancora un paragrafo con elementi inline &lt;span
+      style="<em>display:inline;</em> font-weight:bold;
+      border-style: solid; border-width:
+      1px;"&gt;grassetto&lt;/span&gt; e &lt;span
+      style="<em>display:inline;</em> font-style:italic;
+      border-style: solid; border-width:
+      1px;"&gt;italic&lt;/span&gt;</span><br />
+      <span style="background:#eeeeff;">&lt;div
+      style="<em>display:block; position:absolute; top:180px;
+      left: 280px; width: 150px;</em>
+      background:#eeeeff;border-style: solid; border-width:
+      1px;"&gt;div in posizione assoluta&lt;/div&gt;</span><br />
+      &lt;/p&gt;<br />
+      &lt;/div&gt;<br />
+    </div>
+    <!--  ==========================================================  -->
+    <div class="slide">
+      <h1>
+        Il layout &ldquo;fluido&rdquo;
+      </h1>
+      <ul>
+        <li>L'attributo <code>float</code> permette di
+        posizionare un elemento in modo &ldquo;fluido&rdquo;
+        </li>
+        <li>
+          <code>float:left;</code> o <code>float:right;</code>
+          posiziona l'elemento il pi&ugrave; a sinistra o il
+          pi&ugrave; a destra dello <em>spazio disponibile</em>
+        </li>
+        <li>Se non c'&egrave; spazio sufficiente, l'elemento
+        verr&agrave; posizionato secondo il flusso normale,
+        quindi <em>sotto</em> l'elemento corrente
+        </li>
+        <li>Tenere sempre conto dell'<em>ingombro totale</em> del
+        box (margini, padding)
+          <ul>
+            <li>i vari browser si comportano in modo diverso!
+            </li>
+          </ul>
+        </li>
+        <li>Vediamo un <a href=
+        "./esempiCSS/columns.html">esempio</a>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <!--  <div class="slide">
+      <h1>
+        Tipi di Selettori
+      </h1>
+      <dl>
+        <dt>
+          Semplici
+        </dt>
+        <dd>
+          I selettori possono specificare un elemento
+        </dd>
+        <dt>
+          Raggruppamenti
+        </dt>
+        <dd>
+          pi&ugrave; elementi
+        </dd>
+        <dt>
+          Classi
+        </dt>
+        <dd>
+          elementi con uno specifico attributo <code>class</code>
+          o <code>id</code>
+        </dd>
+        <dt>
+          Pseudo classi
+        </dt>
+        <dd>
+          elementi in uno specifico stato o posizione
+        </dd>
+        <dt>
+          Pseudo elementi
+        </dt>
+        <dd>
+          parte del contenuto di un elemento
+        </dd>
+        <dt>
+          Contestuali
+        </dt>
+        <dd>
+          elementi che appaiono in contesto relativo ad altri
+          elementi
+        </dd>
+      </dl>
+    </div> -->
+    <!--  ========================================================  -->
+    <!--   <div class="slide">
+      <h1>
+        Selettore Semplice
+      </h1>
+      <ul>
+        <li>Il selettore pi&ugrave; comune &egrave; il nome di un
+        elemento<br />
+          La regola si applica a tutti gli HTML elements del tipo
+          del selettore
+          <ul>
+            <li>Esempio: <code>h1</code>
+              <pre>
+h1 { text-align: center;}
+</pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div> -->
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Raggruppamento di Selettori
+      </h1>
+      <ul>
+        <li>Se abbiamo regole identiche che si applicano ad
+        elementi diversi
+          <pre>
+            p  { display: block; margin-bottom: 10px; }
+            h1 { display: block; margin-bottom: 10px; }
+            
+</pre>
+        </li>
+        <li>Possiamo raggruppare gli elementi separandoli con una
+        virgola
+          <pre>
+            p, h1 { display: block; margin-bottom: 10px; }
+            
+</pre>
+        </li>
+      </ul>
+    </div>
+    <!--  ===============================================================  -->
+    <div class="slide">
+      <h1>
+        I selettori (quadro sinottico)
+      </h1>
+      <table summary="tabella dei possibili selettori CSS"
+      border="1">
+        <thead>
+          <tr>
+            <th>
+              Tipo
+            </th>
+            <th>
+              Significato (la regola si applica a ...)
+            </th>
+            <th>
+              Esempio
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              selettore universale
+            </td>
+            <td>
+              tutti gli elementi nel documento
+            </td>
+            <td>
+              <code>*</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              element type
+            </td>
+            <td>
+              tutti gli HTML elements del tipo del selettore
+            </td>
+            <td>
+              <code>h1<br />
+              p</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              class selector
+            </td>
+            <td>
+              tutti gli elementi HTML che precedono il punto (o
+              tutti, se non &egrave; specificato nulla) la cui
+              definizione li rende elementi della classe il cui
+              nome segue il punto
+            </td>
+            <td>
+              <code>.articletitle h1.important</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              ID selector
+            </td>
+            <td>
+              l' unico elemento nel documento il cui attributo
+              coincide con la stringa che segue il simbolo #
+            </td>
+            <td>
+              <code>#special3<br />
+              p#special52</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              pseudo-element selector (CSS2)
+            </td>
+            <td>
+              le istanze dello pseudo-element
+            </td>
+            <td>
+              <code>p:first-letter<br />
+              p:first-line<br />
+              h1:first-child</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              pseudo-class selector (CSS2)
+            </td>
+            <td>
+              istanze della pseudo-classs, la cui presentazione
+              pu&ograve; variare a seguito dell' interazione
+              dell' utente con la pagina
+            </td>
+            <td>
+              <code>a:hover<br />
+              a:active<br />
+              a:focus<br />
+              a:link<br />
+              a:visited<br />
+              body:lang(d)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              descendant selector
+            </td>
+            <td>
+              tutti gli elementi del tipo pi&ugrave; a destra di
+              una lista (separata da spazi), solo quando l'
+              element type discende dal tipo alla sua sinistra
+            </td>
+            <td>
+              <code>p em<br />
+              p.wide em</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              parent-child selector (CSS2)
+            </td>
+            <td>
+              tutti gli elementi del tipo specificato a destra
+              del simbolo "&gt;", che sono figli degli elementi a
+              sinistra del simbolo "&gt;" (&egrave; una forma
+              pi&ugrave; specifica del descendant selector)
+            </td>
+            <td>
+              <code>body &gt; p</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              adjacent selectors (CSS2)
+            </td>
+            <td>
+              tutti gli elementi del tipo specificato a destra
+              del segno "+", adiacenti (nel codice HTML) agli
+              elementi a sinistra del segno "+"
+            </td>
+            <td>
+              <code>h1+h2<br />
+              p+h3</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              attribute selectors (CSS2)
+            </td>
+            <td>
+              attributi che corrispondono al profilo specificato
+              nelle parentesi quadre
+            </td>
+            <td>
+              <code>p[align]<br />
+              input[type="text"]<br />
+              img[alt~="none"]<br />
+              body[lang|="en"]</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--  ===============================================================  -->
+    <div class="slide">
+      <h1>
+        Universal Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>tutti gli elementi nel documento</em>
+      </p>
+      <pre>
+        * { 
+            color: red;
+            font-style: ; 
+          }
+</pre><br />
+      <br />
+      <p>
+        <a href="./esempi/universalSelector.html">Esempio</a>
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Element Type Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>tutti gli HTML elements del tipo del selettore</em>
+      </p>
+      <pre>
+body {
+      color: white;
+      background-color: black;
+     }
+</pre>
+      <p>
+        <a href="./esempi/elementTypeSelector.html">Esempio</a>
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Class Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>tutti gli elementi HTML che precedono il punto (o
+        tutti, se non &egrave; specificato nulla) la cui
+        definizione li rende elementi della classe il cui nome
+        segue il punto</em>
+      </p>
+      <pre>
+.blue {
+       font-family: verdana, arial, sans-serif;
+       color: #0000ff;
+       }
+</pre>
+      <p>
+        Saranno in blu tutti gli elementi per i quali si
+        specifica<br />
+        <code>class="blue"</code> (<a href=
+        "./esempi/classSelector1.html">esempio</a>)
+      </p>
+      <p>
+        Si possono definire gli elementi che possono appartenere
+        a una classe (<a href=
+        "./esempi/classSelector2.html">esempio</a>):
+      </p>
+      <pre>
+h1,h2.blue { 
+            font-family: verdana, arial, sans-serif; 
+            color:#0000ff; 
+           }
+</pre>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        ID Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>l' unico elemento nel documento il cui attributo
+        coincide con la stringa che segue il simbolo #</em>
+      </p>
+      <p>
+        <a href="./esempi/idSelector.html">esempio</a>
+      </p>
+    </div>
+    <!--  ===============================================================  -->
+    <div class="slide">
+      <h1>
+        Pseudo-Element Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>le istanze dello pseudo-element</em><br />
+        (&egrave; una propriet&agrave; CSS2)
+      </p>
+      <dl>
+        <dt>
+          Pseudo-elementi
+        </dt>
+        <dd>
+          <ul>
+            <li>La prima lettera di un paragrafo
+              <pre>
+          p:first-letter { font-size: 300%; }
+          
+</pre>
+            </li>
+            <li>La prima linea di un paragrafo
+              <pre>
+           p:first-line { font-variant: small-caps; }
+           
+</pre>
+            </li>
+            <li>before, after: si applica prima / dopo il
+            contenuto dell'elemento.
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p>
+        <a href="./esempi/pseudoElementSelector.html">esempio</a>
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Pseudo Class Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>istanze della pseudo-class, la cui presentazione
+        pu&ograve; <strong>variare a seguito dell'
+        interazione</strong> dell' utente con la
+        pagina</em><br />
+        (&egrave; una propriet&agrave; CSS2)
+      </p>
+      <ul>
+        <li>
+          <code>a:link</code> non visitato, link non attivo
+        </li>
+        <li>
+          <code>a:hover</code> mouse sopra
+        </li>
+        <li>
+          <code>a:active</code> attivato (cliccato col mouse o
+          attivato con altro dispositivo)
+        </li>
+        <li>
+          <code>a:visited</code> visitato
+        </li>
+        <li>
+          <code>:focus</code> "l'oggetto a fuoco" (l'oggetto
+          selezionato)
+        </li>
+        <li>
+          <code>:first-child</code> il primo figlio dell'elemento
+        </li>
+        <li>
+          <code>:left</code> le pagine a sinistra di un documento
+          (generalmente per la stampa)
+        </li>
+        <li>
+          <code>:right</code> le pagine a destra
+        </li>
+      </ul>
+      <p>
+        <a href="./esempi/pseudoClassSelector.html">esempio</a>
+      </p>
+    </div>
+    <!--  =============================================================  -->
+    <div class="slide">
+      <h1>
+        Selettori Contestuali
+      </h1>
+      <ul>
+        <li>Se la formattazione dipende dalla posizione
+        all'interno di altri elementi (per esempio se dipende
+        dall'elemento padre) &egrave; possibile scrivere regole
+        che si applicano agli elementi contenuti all'interno di
+        altri specifici elementi
+        </li>
+        <li>Anteporre il nome dell'elemento avo (e padre) a
+        quello dell'elemento al quale vogliamo applicare la
+        propriet&agrave; di stile specifica.
+          <pre>
+            <code>p cite { color: red; }</code>
+        
+            <code>&lt;p&gt;paragrafo con <em>&lt;cite&gt;citazione&lt;/cite&gt;</em> interna&lt;/p&gt;</code>
+          
+</pre>
+        </li>
+        <li>Risultato:
+          <p>
+            paragrafo con <cite class="red">citazione</cite>
+            interna
+          </p>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Altri selettori
+      </h1>
+      <ul>
+        <li>Selettore universale (<code>*</code>):
+          <pre>
+  <code class=
+"red">*:</code>   La regola si applica a tutti gli elementi nel documento
+       
+</pre>
+        </li>
+        <li>Selettori contestuali (A D P&gt;F F + PF):<br />
+          Basati sugli elementi figli, fratelli, genitori
+          <pre>
+  <code class=
+"red">Avo Discendente</code>    D discendente di A  
+  <code class="red">Padre&gt;Figlio</code>      F figlio di P
+  <code class=
+"red">Fratello+PrimoFratello</code> PF primo fratello di F    
+
+  <code class="red">H2+P { color: red; }</code>
+         
+</pre>
+        </li>
+        <li>Selettori di attributi (E[attr] E[attr="valore"]):
+          <pre>
+  <code class=
+"red">E[attr]</code>           elementi E che hanno un attributo attr
+  <code class=
+"red">E[attr="valore"]</code>   elementi E che hanno un attributo attr il cui valore &egrave; "valore"
+
+  <code class="red">A[NAME] { color: green; }</code>
+         
+</pre>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Descendant Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>tutti gli elementi del tipo pi&ugrave; a destra di
+        una lista (separata da spazi), solo quando l' element
+        type discende dal tipo alla sua sinistra</em>
+      </p>
+      <p>
+        <a href="./esempi/descendantSelector.html">esempio</a>
+      </p>
+      <!--  ==================================================================  -->
+    </div>
+    <div class="slide">
+      <h1>
+        Parent-Child Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>tutti gli elementi del tipo specificato a destra del
+        simbolo "&gt;", che sono figli degli elementi a sinistra
+        del simbolo "&gt;" (&egrave; una forma pi&ugrave;
+        specifica del descendant selector)</em><br />
+        (&egrave; una propriet&agrave; CSS2)
+      </p>
+      <p>
+        <a href="./esempi/parentChildSelector.html">esempio</a>
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Adjacent Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>tutti gli elementi del tipo specificato a destra del
+        segno "+", adiacenti (nel codice HTML) agli elementi a
+        sinistra del segno "+"</em><br />
+        (&egrave; una propriet&agrave; CSS2)
+      </p>
+      <p>
+        <a href="./esempi/adjacentSelector.html">esempio</a>
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Attribute Selector
+      </h1>
+      <p>
+        La regola si applica a:<br />
+        <em>attributi che corrispondono al profilo specificato
+        nelle parentesi quadre</em><br />
+        (&egrave; una propriet&agrave; CSS2)
+      </p>
+      <p>
+        <a href="./esempi/attributeSelector.html">esempio</a>
+      </p>
+      <ul>
+        <li>
+          <code>[attribute]</code> &ndash; matches if the
+          attribute is defined at all for the element(s)
+        </li>
+        <li>
+          <code>[attribute="setting"]</code> &ndash; matches only
+          if the attribute is defined as having the value of
+          setting
+        </li>
+        <li>
+          <code>[attribute~="setting"]</code> &ndash; matches
+          only if the attribute is defined with a space-separated
+          list of values, one of which exactly matches "setting"
+        </li>
+        <li>
+          <code>[attribute|="setting"]</code> &ndash; matches
+          only if the attribute is defined with a hyphen-
+          separated list of "words" and the first of these words
+          begins with setting
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Liste e sottoliste numerate (CSS2)
+      </h1>
+      <pre>
+<code>   ul, ol { counter-reset: item }
+   li { display: block; }
+   li:before { content: counters(item, "."); counter-increment: item }
+   </code>
+</pre>
+      <p>
+        numera liste e sottoliste nel formato<br />
+        1<br />
+        1.1<br />
+        1.1.1<br />
+        ...
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Cambio dinamico dello stile CSS
+      </h1>
+      <p>
+        Tecniche di accessibilit&agrave; WCAG 2.0
+      </p>
+      <p>
+        <a href=
+        "./esempi/cambiacoloriviajavascript/javascript/index.html">
+        Esempio modifica dinamica di parti del documento</a>
+      </p>
+      <p>
+        <a href=
+        "./esempi/cambiacoloriviajavascript/client-side/index.html">
+        Esempio cambio del file CSS</a>
+      </p>
+    </div><!-- ======================================= -->
+    <div class="slide">
+      <h1>
+        Gli standard non limitano la creativit&agrave;
+      </h1>
+      <ul>
+        <li>Un esempio tra tanti, <a href=
+        "./subaqueo/indexDiver.html">il subacqueo</a>, 
+        <!-- (<a href="http://kiwiwebhost.phage.net.nz/~bluefins/index.php?fuseaction=spearfishing.display_Vinz">subaqueo non pi&ugrave standard</a>) -->
+           e una sua <a href=
+          "http://www.askthecssguy.com/2006/11/props_to_the_css_zen_ocean_div.html">
+          spiegazione</a>
+        </li>
+        <li>e un sito come riferimento: <a href=
+        "http://www.csszengarden.com/tr/italiano/">CSS Zen
+        Garden</a>
+        </li>
+        <li>vi sono poi altri standard grafici come SVG, Webgl e
+        il nuovo elemento canvas di HTML5
+        </li>
+        <li>Per rendersi conto degli effetti grafici possibili
+        (notizia del 6/4/2010): <a href=
+        "http://code.google.com/p/quake2-gwt-port/">porting di
+        DOOM2</a> in HTML5
+        </li>
+      </ul>
+    </div><!-- ======================================= -->
+    <div class="slide">
+      <h1>
+        Inoltre: alcuni cenni di CSS3
+      </h1>
+      <p>
+        molte sono le nuove funzionalit&agrave; che aggiunge
+        CSS3, alcuni esempi di effetti che in genere troviamo in
+        programmi di grafica professionali (provati solo con
+        firefox 3.5):
+      </p>
+      <ul>
+        <li style="text-shadow: 0.5em 0.5em 0.5em #DDCCB5">testo
+        ombreggiato<br />
+        </li>
+        <li style=
+        "border: 5px solid #ff0000; -moz-border-radius: 15px; -webkit-border-radius: 15px; padding: 15px 25px; width: 10em; -moz-transform:rotate(-10deg) skew(15deg, 15deg); -webkit-transform: rotate(-10deg) skew(15deg, 15deg); -moz-border-radius-bottomleft: 1em; -webkit-border-bottom-left-radius: 0.5em; -moz-border-radius-bottomright: 1em; -webkit-border-bottom-right-radius: 0.5em; -moz-box-shadow:8px 8px 4px #888888; margin:24px 0; padding:4px 4px 4px 12px;">
+        angoli arrotondati, box ruotato stirato e ombreggiato,
+        effetto 3d sfumato
+        </li>
+        <li>riflessi
+        </li>
+      </ul>
+      <div class="reflected">
+        <img src="../common/itlogo-20010115.png" alt=
+        "logo ufficio italiano w3c" />
+      </div>
+      <ul>
+        <li>...
+        </li>
+        <!--         <li>se poi <a href="css3html5.html">aggiungiamo html5</a> abbiamo anche il <a href="esempi-HTML5/drag-and-drop/index.html">drag &amp; drop</a></li> -->
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Strumenti e stato implementazione
+      </h1>
+      <ul>
+        <li>
+          <a href=
+          "http://jigsaw.w3.org/css-validator/">validatore CSS
+          (W3C)</a>
+        </li>
+        <li>
+          <a href="http://www.totalvalidator.com/">Total
+          validator</a>
+        </li>
+        <li>
+          <a href="http://wave.webaim.org/">WAVE - Web
+          accessibility evaluation tool</a>
+        </li>
+        <li>
+          <a href=
+          "http://juicystudio.com/services/luminositycontrastratio.php">
+          Juicystudio -Analizzatore di contrasto</a>
+        </li>
+        <li>..
+        </li>
+        <li>
+          <a href=
+          "http://www.findmebyip.com/litmus/#target-selector">Stato
+          di implementazione HTML5 e CSS3</a>
+        </li>
+      </ul>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        Alcune buone prassi
+      </h1>
+      <p>
+        (rif. cap. 3 Wium Lee &amp; Boss)
+      </p>
+      <ul>
+        <li>Usare le unit&agrave; <code>em</code> per creare
+        style sheet scalabili
+        </li>
+        <li>Usare sempre le unit&agrave; <code>em</code> per
+        impostare il font-size
+        </li>
+        <li>Usare unit&agrave; relative per le lunghezze
+        </li>
+        <li>Usare unit&agrave; assolute di lunghezza solo quando
+        sono note le caratteristiche fisiche del dispositivo di
+        output
+        </li>
+        <li>Usare elementi <em>floating</em> invece delle tabelle
+        </li>
+        <li>Disporre il contenuto in ordine logico
+        </li>
+        <li>Assicurarsi che il documento sia leggibile anche
+        senza style sheets
+        </li>
+        <li>Provare il documento con diversi browser
+        </li>
+        <li>Specificare sempre un font generico come alternativa
+        </li>
+        <li>Fermarsi in tempo (evitare troppi effetti sulla
+        stessa pagina)
+        </li>
+      </ul>
+    </div>
+    <!--  ==========================================================  -->
+    <div class="slide">
+      <h1>
+        <span class="red">Esercizi</span>
+      </h1>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        <span class="red">Esercizio</span>
+      </h1>
+      <p>
+        Realizzare una pagina XHTML 1.1 con tre blocchi di
+        testo<br />
+        senza tabelle (a meno che non contengano dati e siano
+        all'interno di un blocco)<br />
+        senza posizionamenti assoluti
+      </p>
+      <!-- <p>Non importa che le colonne siano della stessa dimensione ne in altezza ne in larghezza</p> -->
+      <img class="center" src="./images/3colonne.png" alt=
+      "3 blocchi di testo senza tabelle" />
+      <p>
+        Una <a href="./esercizi/no-table.html">soluzione</a>
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        <span class="red">Esercizio</span>
+      </h1>
+      <p>
+        Collegarsi al sito <a href=
+        "http://jigsaw.w3.org/css-validator/">http://jigsaw.w3.org/css-validator/</a>
+        e validare lo stile di una pagina del proprio ente
+      </p>
+      <p>
+        Eliminare tutti gli elementi e gli attributi di
+        presentazione della pagina e realizzare un foglio di
+        stile
+      </p>
+      <p>
+        validare il foglio di stile (<a href=
+        "http://validator.w3.org">http://validator.w3.org</a>)
+      </p>
+      <p>
+        Trasformare la pagina (con un editor testi) in XHTML1 1.1
+      </p>
+      <p>
+        Avvalersi di <a href=
+        "http://tidy.sourceforge.net/">Tidy</a> per correggere il
+        codice
+      </p>
+    </div>
+    <!--  ==================================================================  -->
+    <div class="slide">
+      <h1>
+        <span class="red">Esercizio</span>
+      </h1>
+      <p>
+        Realizzare una pagina XHTML 1.1 con un form impaginato
+        senza tabelle
+      </p>
+      <p>
+        Una <a href=
+        "./esercizi/formaccessibile.html">soluzione</a>
+        realizzata utilizzando varie tecniche WCAG 2.0
+      </p>
+    </div>
+    <!--  ==========================================================  -->
+    <div class="slide">
+      <h1>
+        <span class="red">Esercizio (svolto)</span>
+      </h1>
+      <ul>
+        <li>Codificare una pagina web come in <a href=
+        "./esempiCSS/sitoSnapshot.pdf">figura</a>
+        </li>
+        <li>La pagina dovr&agrave;:
+          <ol>
+            <li>essere valida rispetto alla grammatica formale
+            <em>XHTML Strict</em>
+            </li>
+            <li>utilizzare un <em>layout
+            &ldquo;fluido&rdquo;</em> che occupi il 100% delle
+            dimensioni orizzontali dello schermo
+            </li>
+            <li>essere <em>ridimensionabile</em> per dimensione
+            della finestra e dei caratteri
+            </li>
+            <li>contenere immagini (in particolare il logo in
+            alto a destra e quello in basso a sinistra)
+            <em>scalabili</em> al ridimensionamento della
+            finestra
+            </li>
+            <li>utilizzare gli pseudo-elementi
+            <code>&lt;div&gt;</code> per la l'impaginazione (
+            <em>non sono ammesse</em> tabelle di layout)
+            </li>
+            <li>implementare il men&ugrave; di sinistra
+            utilizzando elementi <code>&lt;h1&gt;</code> e <code>
+              &lt;h2&gt;</code>
+            </li>
+            <li>
+              <em>rispettare le regole di
+              accessibilit&agrave;</em> dei siti Web, come
+              definite dal W3C
+            </li>
+            <li>avere un <em>CSS di print</em> per evitare la
+            stampa del men&ugrave; e di altri elementi accessori
+            e decorativi (vedi l' <a href="./esempiCSS/sito.pdf">
+              esempio</a>)
+            </li>
+          </ol>
+        </li>
+        <li>il <a href="./esempiCSS/sito.html">sito in HTML</a>
+        </li>
+        <li>il <a href="./esempiCSS/stile.css">CSS</a>, anche in
+        una forma <a href="./esempiCSS/stile.pdf">stampabile</a>
+        </li>
+      </ul>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        <span class="red">Esercizio</span> per "casa"
+        (mandatemelo via email o ne discutiamo la prossima volta)
+      </h1>
+      <p>
+        Preparare un mini sito Web costituito da tre documenti
+        XHTML1.1 collegati tra loro:
+      </p>
+      <ul>
+        <li>una prima pagina in cui si descrivono le
+        finalit&agrave; del sito, una sezione contenente i
+        collegamenti alle altre pagine, dei link che consentono
+        di saltare blocchi di testo e di collegamenti, un help,
+        ...
+        </li>
+        <li>una seconda pagina che raccoglie le notizie ed eventi
+        del mese
+        </li>
+        <li>una terza pagina con un form per richiesta
+        informazioni
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p>
+      <p>
+        ... e <a href="../slidy/answer.mp3">risposte</a>
+      </p>
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/education/2012/upra/css">http://www.w3c.it/education/2012/upra/css</a>)
+      </p>
+      <p>
+        Queste slide fanno parte del materiale predisposto per il
+        corso <a href=
+        "http://www.w3c.it/education/2012/upra">Architettura del
+        Web</a>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,378 @@
+/* ******************************************************
+           Uno Style Sheet di esempio (per corso UPRA)
+********************************************************* */
+/* ------------------------------------------------------	
+                 Stile per body   
+  -------------------------------------------------------  */	
+body {
+   margin: 0em;
+   background: white;
+   color: #000000;
+	 text-align:left;
+   font-family: Arial, Helvetica, sans-serif;
+}
+/* ------------------------------------------------------		
+                 Stile per notice, news e lastnews    
+  -------------------------------------------------------  */					
+.notice {
+      font-size: 110%;
+			border: 0.1em solid red;
+			padding: 0.2em;
+			font-weight: bold;
+      }
+.news {margin-bottom: 0.8em;
+       border-top: solid #e8e8e8; 0.2em;
+       }		
+.lastNews {
+         background-color: #ffff00;  
+					 border-leftt: solid #ffff00 1em;
+					 padding-left: 0.2em;
+       }
+/* ------------------------------------------------------		
+            Stili per vari elementi standard HTML  
+  -------------------------------------------------------  */						
+p			{ padding-top: 0em;
+        padding-bottom: 0.3ex;
+				margin-top: 0%; 
+				margin-bottom: 0%; }
+		
+ul p, ol p, dd p { margin-top: 0em; margin-bottom: 0em }
+ul,ol { padding-top: 0%;
+        padding-bottom: 0%;
+				margin-top: 0%; 
+				margin-bottom: 0%; }						
+td			{
+				text-align: left;
+				font-size: 100%;
+				vertical-align: top;
+}
+img { border:0; display:inline; }
+blockquote, q { color: purple; font-style: italic}
+pre {color:purple; font-family: courier; font-size:90%;
+     margin-top: 0ex; margin-bottom: 0ex;}
+/* ------------------------------------------------------	
+                 Stili per heading 
+  -------------------------------------------------------  */				
+h1, h2, h3, h4, h5, h6 { margin-left: 0% } 
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2 { color: blue; }
+h3 { color: #000000; }
+h1 { 
+   font-size: 150%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+   }
+h2 { 
+   font-size: 120%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+   }
+h3 { 
+   font-size: 100%; 
+   font-family: Arial, Helvetica, sans-serif;
+   padding-top: 0.5em;
+	 padding-bottom: 0.5 em;
+   }
+h4 { 
+   font-size: 100%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+	 color: #000000;
+   }
+h5 { 
+   font-size: 100%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-style: italic
+   }
+h6 { 
+   font-size: 100%; 
+   font-family: Arial, Helvetica, sans-serif;
+   font-variant: small-caps
+    }
+/* - Evita di sommare le spaziature tra h3 e il primo paragrafo - */		
+p+h3 {
+		 padding-top: 0em;
+		 padding-bottom: 0em;
+     }
+/* ------------------------------------------------------		
+                 Stili per le pseudoclassi 
+  -------------------------------------------------------  */			
+:link {
+   color: #037;
+   }
+:visited {
+   color: #551a8b;
+   }
+/* ------------------------------------------------------		
+            Stili generici per effetti particolari
+  -------------------------------------------------------  */	
+.center {text-align: center;}
+.signature {text-align: right }
+.hide {display: none;}
+.highlight {background-color: #ffff99;}
+.mainParagraph{
+   text-indent: 3em;
+	 }		
+p.special:first-letter {
+							 font-family: Gothic, serif;
+		/*					 color: #0000ff;   */
+							 font-size: 250%;
+							 font-weight: bold;
+							 float: left;
+							 }
+.logo {
+				margin-left:0%;
+        margin-right:0%;
+				padding-top: 0.5%; 
+				padding-bottom: 0.5%;
+				padding-left: 1%;
+				padding-right: 1%;                     
+        float: left;
+        width: 10%;
+				background: #ffffff;
+			}
+/* ------------------------------------------------------	 		
+                 Stili per footer 
+   -------------------------------------------------------  */	
+span.copyright {
+               margin: 0 0.5em;
+               font-size: small;
+               }
+span.address {
+            margin: 0 ;
+            font-size: 90%;
+	          font-family: Arial, Helvetica, sans-serif;
+           }
+.date {
+      margin: 0 ;
+      font-size: 80%;
+	    font-family: Arial, Helvetica, sans-serif; 
+      font-style: italic
+      }
+/* ------------------------------------------------------		
+                 Stili per impaginazione 
+  -------------------------------------------------------  */	
+.header{ margin-left:0%;
+					margin-right:0%;           
+        	float: left;
+					width: 100%;
+					padding-right: 1%;
+					padding-left: 1%;
+         }
+/* ---              navbar crea una riga blu             --- */	
+.navbar { margin-right:0%;
+        	margin-left:0%;
+        	float: left;
+					width: 100%;
+					padding-right: 1%;
+					padding-left: 1%;
+					padding-top: 0.5%;
+					padding-bottom: 0.5%;
+					background: #000080;
+					color: #ffffff;
+					font-size: 80%;
+					font-weight: bold;
+					border-bottom: 0.2em;
+					margin-top: 0.5em;
+          }
+.fullPage { margin-right:0%;
+        	margin-left:0%;
+					padding-right: 0%;
+					padding-left: 0%;
+        	float: left;
+					width: 100%;
+					background: #ffffff;
+          }
+.leftMenu { margin-right:0%;
+        	margin-left:0%;
+					padding-right: 1%;
+					padding-left: 1%;
+					border-right: 0%;
+        	float: left;
+					width: 18%;
+					background: #e8e8e8;
+					text-align: left;
+          }
+.contextMenu { margin-right:0%;
+        	margin-left:0.5%;
+					padding-right: 1%;
+					padding-left: 0.1em;
+					padding-top: 1%;
+					padding-bottom: 1%;
+        	float: right;
+					width: 20%;
+					background: #e8e8e8;
+					text-align: left;
+          }
+.comment { margin-right:0%;
+	        margin-top: 0.5em;
+        	margin-left:0.5em;
+					padding-right: 1%;
+					padding-left: 1%;
+					padding-top: 1%;
+					padding-bottom: 1%;
+        	float: right;
+					width: 25%;
+					background-color: #ffffcc;
+				  color: #cc6633; 
+					text-align: left;
+					border-bottom: #0066ff 0.1em solid;
+					border-left: #0066ff 0.1em solid;
+					border-top: #0066ff 0.1em solid;
+					font-size: 80%;
+					font-style: italic;
+          }
+.textColumn { margin-right:0%;
+						margin-left:0em;
+						border-right: 0em;
+						border-left: 0em;
+						padding-left: 1%;
+						padding-right: 0%;
+  					float: left;
+						width: 79%;
+						background: white;
+						text-align: justify;
+          }
+.footer{ margin-left:0%;
+        margin-right:0%;
+				padding-top: 0.5%;                      
+        float: left;
+        width: 100%;
+				background: #ffffff;
+        }
+
+
+/* ------------------------------------------------------			
+            Stili per gli elementi all'interno delle <div> 
+  -------------------------------------------------------  */				
+div.header h1  {
+				font-size: 140%;
+				margin-top: 0ex; 
+				margin-bottom: 0ex;
+				margin-left: 0em;
+				color: blue; 
+        }
+div.leftMenu h1  {
+				font-size: 100%;
+				margin-top: 0em; 
+				margin-bottom: 0em;
+				margin-left: 0em;
+				color: #000000; 
+        }
+div.leftMenu h2  {
+				font-size: 90%; 
+				margin-top: 0em; 
+				margin-bottom: 0em;
+				margin-left: 1em;
+				color: #272727; 
+       }
+div.leftMenu p,form,input  {
+				font-size: 90%; 
+				margin-top: 0em; 
+				margin-bottom: 0em;
+				margin-left: 0em;
+				color: #272727; 
+        }
+div.contextMenu h1  {
+				font-size: 100%;
+				margin-top: 0em; 
+				margin-bottom: 0em;
+				margin-left: 0em;
+				color: #000000; 
+        }
+div.contextMenu h2  {
+				font-size: 90%; 
+				margin-top: 0em; 
+				margin-bottom: 0em;
+				margin-left: 1em;
+				color: #272727; 
+        }
+div.navbar p  {
+				margin-top: 0em; 
+				margin-bottom: 0em;
+				padding-top: 0em;
+        padding-bottom: 0em;
+        }
+div.footer p,img {
+				padding-top: 0%;
+        }
+/* ------------------------------------------------------	
+            Stili per la stampa 
+  -------------------------------------------------------  */	
+@media print {
+   body {
+   margin-left: 1cm;
+   margin-right: 1cm;
+   margin-top: 1cm;
+   margin-bottom: 1cm;
+   background-color: #ffffff;
+   color: #000000;
+   font-size: 10.5pt;
+   font-family: Arial, Helvetica, sans-serif;
+   }
+ 	 h1, h2, h3 { 
+		color: #0000ff;
+   }
+div.header h1  {
+				font-size: 12pt;
+				margin-top: 0em; 
+				margin-bottom: 0em;
+				margin-left: 0em;
+		/*		color: #000000;  */
+       }
+.img {width: 3cm; border: 0.1cm;}
+.newPage       { page-break-before: always; }
+h2,h3,h4,h5,h6     { page-break-after: avoid; page-break-inside: avoid }
+blockquote,pre { page-break-inside: avoid }
+ul, ol, dl     { page-break-before: avoid }
+.navbar        { background-color: #fff ; color: black; border-color: #000 ; border-width: 1px }
+a.navlink      { font-weight: normal }
+tr, th, td, p  { orphans: 2; widows: 2 } 
+.comment { margin-right:0%;
+	        margin-top: 0.2ex;
+        	margin-left:0.2ex;
+					padding-right: 1%;
+					padding-left: 1%;
+					padding-top: 1%;
+					padding-bottom: 1%;
+        	float: right;
+					width: 20%;
+					background-color: #ffffff;
+				  color: #000080; 
+					text-align: left;
+					border-bottom: #0066ff 0.1em solid;
+					border-left: #0066ff 0.1em solid;
+					border-top: #0066ff 0.1em solid;
+					font-size: 80%;
+					font-style: italic;
+					font-family: "Comic Sans", "Comic Sans MS", cursive;
+         }
+.leftMenu {display: none;}
+.contextMenu {display: none;}
+.textColumn {width:100%;}
+.footer{ margin-left:0%;
+        margin-right:0%;
+				padding-top: 0.5%;                      
+        float: left;
+        width: 100%;
+				background: #ffffff;
+				border-top: solid grey 0.05ex;
+				align: bottom;
+        }
+.logo {
+				margin-left:0%;
+        margin-right:0%;
+				padding-top: 0.5%; 
+				padding-bottom: 0.5%;
+				padding-left: 1%;
+				padding-right: 1%;                     
+        float: left;
+        width: 15%;
+				background: #ffffff;
+			}
+}
+
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Using a client-side JavaScript to change a CSS property</title>
+
+<script type="text/javascript">
+function changeColor(evidenziaColore)
+{
+  // collects table data cells into an array
+ 
+ var els = document.getElementsByTagName('td');
+
+  // for each item in the array, look for a class name starting with "evidenzia"
+  // if found, change the class value to the current selection
+  // note that this script assumes the  'td' class attribute is only used for highlighting
+
+  for (var i=0; i<els.length; i++)
+  {
+    if (els[i].className.indexOf("evidenzia") == 0) { els[i].className = evidenziaColore; }
+  }
+}
+</script>
+
+<style type="text/css">
+body { color:#000000; background-color:#FFFFFF; }
+
+.evidenziaGialloChiaro { color: #000000; background-color: #FFFF99; font-style:oblique; }
+.evidenziaGialloBrillante { color: #000000; background-color: #FFFF00; font-style:oblique; }
+.evidenziaBluChiaro { color: #000000; background-color: #33FFFF; font-style:oblique; }
+.evidenziaBluBrillante { color: #FFFFFF; background-color: #0000FF; font-style:oblique; }
+.evidenziaRossoChiaro { color: #000000; background-color: #FF6266; font-style:oblique; }
+.evidenziaRossoScuro { color: #FFFFFF; background-color: #993300; font-style:oblique; }
+
+.inlinePara {display:inline; }
+.inline {display: inline; margin-left:0px; padding-left:0px; line-height:3em; }
+.inline li { display:inline; }
+.inline li a {padding: 0.5em 1em; border: 2px solid #000000; }
+</style>
+
+</head>
+
+<body>
+
+<h1>Confronto prodotti</h1>
+<p>I prodotti selezionati sono elencati sotto. 
+Ogni differenza tra i prodotti &egrave; evidenziata e scritta in corsivo.</p>
+<p class="inlinePara">Cambia colore di evidenziazione: </p>
+<ul class="inline">
+  <li><a href="#" onClick="changeColor('evidenziaGialloChiaro');return false;" class="evidenziaGialloChiaro">giallo chiaro</a></li>
+  <li><a href="#" onClick="changeColor('evidenziaGialloBrillante');return false;" class="evidenziaGialloBrillante">giallo brillante</a></li>
+  <li><a href="#" onClick="changeColor('evidenziaBluChiaro');return false;" class="evidenziaBluChiaro">blu chiaro</a></li>
+  <li><a href="#" onClick="changeColor('evidenziaBluBrillante');return false;" class="evidenziaBluBrillante">blu brillante</a></li>
+  <li><a href="#" onClick="changeColor('evidenziaRossoChiaro');return false;" class="evidenziaRossoChiaro">rosso chiaro</a></li>
+  <li><a href="#" onClick="changeColor('evidenziaRossoScuro');return false;" class="evidenziaRossoScuro">rosso scuro</a></li>
+</ul>
+<table width="400" border="1">
+  <tr>
+    <td>&nbsp;</td>
+    <th scope="col">Prodotto 1</th>
+    <th scope="col">Prodotto 2</th>
+
+  </tr>
+  <tr>
+    <th scope="row">Caratteristica 1</th>
+    <td>Si</td>
+    <td>Si</td>
+  </tr>
+  <tr>
+
+    <th scope="row">Caratteristica 2</th>
+    <td class="evidenziaGialloChiaro">Si</td>
+    <td class="evidenziaGialloChiaro">No</td>
+  </tr>
+  <tr>
+    <th scope="row">Caratteristica 3</th>
+    <td>Si</td>
+    <td>Si</td>
+  </tr>
+</table>
+
+</body>
+</html>
+

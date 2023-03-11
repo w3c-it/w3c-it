@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <title>
+      upra-futuroWeb
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; 2012 - Oreste Signore - Creative Commons Attribution 3.0 License BY-NC-ND" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link href="http://creativecommons.org/licenses/by/3.0/" rel=
+    "Copyright" title="CC Copyrights" />
+    <link rel="stylesheet" href="../slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="../slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="../slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<script src="../slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <!--  ========================================================== -->
+    <div class="slide">
+      <h1>
+        Sviluppo e futuro del World Wide Web
+      </h1>
+      <p>
+        <img src="images/openWebPlatform.png" width="45%" alt=
+        "la Open web Platform" style=
+        "max-width: 1029px; float:right;" /> <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3.org">oreste@w3.org</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <a href=
+        "http://www.uprait.org/index.php?option=com_content&amp;view=category&amp;id=419&amp;Itemid=426&amp;lang=en">
+        Master in Comunicazione e New Media</a><br />
+        <a href="http://www.upra.org/">Ateneo Pontificio Regina
+        Apostolorum</a><br />
+        Corso: <a href=
+        "http://www.w3c.it/education/2012/upra/">Architettura del
+        Web</a>
+      </p>
+      <hr />
+      <p>
+        Presentazione: <a href="./index.html" hreflang="it"
+        title="la presentazione">http://www.w3c.it/education/2012/upra/futuroWeb/</a><br />
+
+        Versione pdf: <a href=
+        "http://www.w3c.it/education/2012/upra/futuroWeb.pdf"
+        hreflang="it" title=
+        "futuroweb - pdf presentazione">http://www.w3c.it/education/2012/upra/futuroWeb.pdf</a><br />
+        </p>
+      <p class="slidyNotice">
+        Formato XHTML realizzato usando il tool <a href=
+        "http://www.w3.org/Talks/Tools/Slidy">Slidy</a> di Dave
+        Raggett.<br />
+        <a href="http://www.w3.org/Talks/Tools/Slidy">Slidy</a>
+        dovrebbe funzionare in tutti i browser moderni con
+        Javascript abilitato. Usare freccia destra/sinistra per
+        muoversi da una slide all' altra.<br />
+        Vedi <a href="../slidy/help.it.html">la pagina di aiuto di
+        Slidy</a> per ulteriori informazioni.
+      </p>
+      <p>
+        <a href=
+        "http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../slidy/cc-by-nc-nd.png"
+        alt="" style="width:10%; max-width: 88px" /></a> <a href=
+        "http://www.w3c.it/"><img src=
+        "../slidy/itlogo-20010115.png" alt=
+        "Cover page W3C Office Logo" style=
+        "width:40%; max-width: 279px" /></a> <a href=
+        "http://www.weblab.isti.cnr.it/"><img src=
+        "../slidy/weblabWithText.jpg" alt=
+        "Cover page Weblab Logo" style=
+        "width:10%; max-width: 150px" /></a> <a href=
+        "http://validator.w3.org/check/referer"><img src=
+        "../slidy/valid-xhtml10-blue.png" alt="Valid XHTML 1.0!"
+        style="width:15%; max-width: 88px" /></a> <a href=
+        "http://jigsaw.w3.org/css-validator/"><img src=
+        "../slidy/valid-css-blue.png" alt="Valid CSS!" style=
+        "width:15%; max-width: 88px" /></a>
+      </p>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Ringraziamenti
+      </h1>
+      <ul>
+        <li>Questa presentazione utilizza anche materiale
+        proveniente da:
+          <ul>
+            <li>presentazioni tenute da Steve Brattt
+            </li>
+            <li>presentazioni tenute da Jeff Jaffe
+            </li>
+            <li>presentazioni tenute da Bernard Gidon
+            </li>
+            <li>presentazioni e articoli di Tim Berners-Lee
+            </li>
+          </ul>
+        </li>
+        <li>Il materiale di questa presentazione pu&ograve;
+        essere riutilizzato nel rispetto delle leggi sul
+        copyright e delle regole del W3C
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>One Web
+        </li>
+        <li>Gli aspetti sociali
+          <ul>
+            <li>W3F
+            </li>
+            <li>WAI
+            </li>
+            <li>Web 2.0 e Web 3.0
+            </li>
+          </ul>
+        </li>
+        <li>La visione del W3C: Open Web Platform
+        </li>
+        <li>Long Live the Web&hellip;
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        L'evoluzione del Web
+      </h1>
+      <div class="column40">
+        <img alt=
+        "Il Web connette persone, applicazioni, dispositivi"
+        title=
+        "Il Web connette persone, applicazioni, dispositivi"
+        width="100%" style="max-width: 439px" src=
+        "./images/worldWeb.png" />
+      </div>
+      <div class="column60">
+        <ul>
+          <li>Da un Web di:
+            <ul>
+              <li>linked documents
+              </li>
+              <li>creatori &amp; consumatori
+              </li>
+            </ul>
+          </li>
+          <li>&hellip;a <em>One Web</em>
+            <ul>
+              <li>of Linked Data
+              </li>
+              <li>on Everything
+              </li>
+              <li>for Everyone
+              </li>
+            </ul>
+            <p>
+              Le stesse informazioni devono essere disponibili
+              per tutti gli utenti, indipendentemente da
+              <em>chi</em> siano, <em>dove</em> si trovino, quale
+              <em>sistema</em> usino, o da quale modalit&agrave;
+              di <em>connessione</em> usino
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        One Web is&hellip;
+      </h1>
+      <p class="bigEmphasis">
+        The same information is available to all users,
+        regardless of who they are, where they are, what system
+        they use, or how they are connected
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        One Web of Linked Data
+      </h1>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Semantic Web
+      </h1><img class="floatright" alt=
+      "immagine dei livelli del semantic web" src=
+      "images/layerCake.png" width="45%" style=
+      "max-width: 600px" />
+      <dl>
+        <dt>
+          Il Semantic Web ...
+        </dt>
+        <dd>
+          <ul>
+            <li>&egrave; un' infrastruttura basata su metadati
+            per poter svolgere <em>ragionamenti</em> sul Web
+            </li>
+            <li>
+              <em>estende</em>, non sostituisce il web attuale
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          I metadati sono:
+        </dt>
+        <dd>
+          <ul>
+            <li>Informazioni, elaborabili automaticamente
+            (<em>machine understandable</em>), relative a una
+            risorsa web o a qualche altra cosa
+            </li>
+            <li>... <em>data about data</em>
+            </li>
+            <li>... informazioni che possono essere utilizzate da
+            <em>intelligent software agents</em> per fare un uso
+            appropriato delle risorse
+            </li>
+            <li>... <em>dati</em> ...
+            </li>
+            <li>... che possono essere <em>descritti da altri
+            metadati</em> ...
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p>
+        <a href="../sw/">Ne parleremo poi meglio&hellip;</a>
+      </p>
+    </div>
+    <!-- ======================================================== =-->
+    <div class="slide">
+      <h1>
+        One Web: On Everything
+      </h1>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;on every surface
+      </h1>
+      <div class="divcenter">
+        <img src="images/onEverySurface.png" alt="" width="70%"
+        style="max-width: 1346px" />
+      </div>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;on every device
+      </h1>
+      <div class="divcenter">
+        <img src="./images/onEveryDevice.png" alt=
+        "web on every device - missing image" width="70%" style=
+        "max-width: 1354px" />
+      </div>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;working seamlessly across and between all devices
+      </h1>
+      <div class="divcenter">
+        <img src="images/iphone-776924.jpg" alt="" width="60%"
+        style="max-width: 1280px" />
+        <p>
+          <a href=
+          "http://www.efront.com.au/web-design-melbourne/uploaded_images/iphone-776924.jpg">
+          http://www.efront.com.au/web-design-melbourne/uploaded_images/iphone-776924.jpg</a>
+        </p>
+      </div>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        &hellip;accessible via a range of interactions
+      </h1>
+      <div class="divcenter">
+        <img src="images/interactions.jpg" alt="" width="100%"
+        style="max-width: 602px;" />
+        <p>
+          Tom Cruise in Minority Report Spielberg (2002)
+        </p>
+      </div>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        One Web: For Everyone, Connecting &amp; Empowering All
+        People
+      </h1><img src="images/worldHumanity.png" alt=
+      "humanity connected" width="10%" style=
+      "float:right; max-width:459px" />
+      <p class="bigEmphasis">
+        The social <em>value of the Web</em> is that it enables
+        human communication, commerce, and opportunities to share
+        knowledge [and] to make these <em>benefits available to
+        all people</em>, whatever their hardware, software,
+        network infrastructure, native language, culture,
+        geographical location, or physical or mental ability
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <!--  <div class="slide">
+      <h1>
+        Il valore sociale del Web
+      </h1>
+      <p class="bigEmphasis">
+        The social <em>value of the Web</em> is that it enables
+        human communication, commerce, and opportunities to share
+        knowledge [and] to make these <em>benefits available to
+        all people</em>, whatever their hardware, software,
+        network infrastructure, native language, culture,
+        geographical location, or physical or mental ability
+      </p>
+    </div> -->
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Cosa pu&ograve; fare il Web per l'umanit&agrave;?
+      </h1>
+      <dl>
+        <dt>
+          Qualche numero
+        </dt>
+        <dd>
+          <ul>
+            <li>Non usano il Web: ~5,000,000,000
+            </li>
+            <li>Vivono con un reddito di $1.25/giorno o meno:
+            ~1,400,000,000
+            </li>
+            <li>Denutriti: ~920,000,000
+            </li>
+            <li>Analfabeti: ~900,000,000
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Molti altri ostacoli
+        </dt>
+        <dd>
+          <ul>
+            <li>Assenza di supporto per lingue e caratteri
+            </li>
+            <li>Mancanza di supporto per i disabili
+            </li>
+            <li>Soluzioni proprietarie vs open standards
+            </li>
+            <li>Censura, disciminazione nell'accesso
+            </li>
+            <li>Comprendere il funzionamento del Web
+            </li>
+            <li>Comprendere come il web pu&ograve; dare maggior
+            potere alle persone
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p>
+        <em>(dati 2007/2008)</em>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        La World Wide Web Foundation
+      </h1><img src="images/w3f.jpg" alt="w3f logo" />
+      <ul>
+        <li>
+          <a href=
+          "http://www.webfoundation.org/">http://www.webfoundation.org/</a>
+        </li>
+        <li>Advance the Web
+        </li>
+        <li>Connect humanity
+        </li>
+        <li>Empower people
+        </li>
+        <li>&ldquo;The Web Foundation will <em>break-down the
+        barriers</em> that now prevent billions of people from
+        being connected and empowered by the Web, while
+        <em>advancing future technologies</em> leading toward a
+        <em>more capable, useful and usable Web for all people on
+        the planet</em>.&rdquo;
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Il Web e i suoi aspetti sociali
+      </h1>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Web &egrave; uno strumento sociale
+      </h1>
+      <blockquote lang="en" xml:lang="en">
+        <p>
+          &ldquo;The Web is more a <em>social</em> creation than
+          a technical one. I designed it for a social effect - to
+          <em>help people work together</em> - and not as a
+          technical toy. The ultimate goal of the Web is to
+          <em>support and improve our weblike existence</em> in
+          the world.&rdquo;<br />
+          (Tim Berners-Lee - Weaving the Web, p. 123)
+        </p>
+      </blockquote>
+      <ul class="incremental">
+        <li>
+          <em>Valore sociale del Web</em>: comunicazione
+          interpersonale, commercio, <em>condivisione di
+          conoscenza</em>
+        </li>
+        <li>Rendere questi benefici <em>disponibili a tutti</em>,
+        indipendentemente da hardware, software, infrastruttura
+        di rete, lingua madre, cultura, posizione geografica,
+        capacit&agrave; fisiche o mentali
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        La Web Accessibility
+      </h1>
+      <ul>
+        <li>Fra i tanti, due principi di base:
+          <ul>
+            <li>l'<em>interazione</em> deve essere sempre
+            possibile con una interfaccia di &ldquo;<em>tipo
+            tastiera</em>&rdquo;<br />
+              (<em><strong>non</strong> significa</em> che vada
+              utilizzata una tastiera)
+            </li>
+            <li>l'<em>informazione</em> deve essere sempre
+            presentabile mediante un'<em>alternativa
+            testuale</em><br />
+              (<em><strong>non</strong> significa</em> che vada
+              preparato un sito testuale parallelo)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href=
+          "http://www.w3c.it/education/2012/upra/wai/">http://www.w3c.it/education/2012/upra/wai/</a>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Web 2.0
+      </h1>
+      <div class="right50" style=
+      "border-left:0.2em solid blue; border-bottom:0.2em solid blue;">
+      <img src="images/walls.png" alt="" width="100%" style=
+      "max-width: 804px" />
+        <p>
+          David Simonds, The Economist
+        </p>
+      </div>
+      <dl>
+        <dt>
+          Pro
+        </dt>
+        <dd>
+          <ul>
+            <li>Social networking
+            </li>
+            <li>User Generated Content (UGC)
+            </li>
+            <li>Social tagging e folksonomy
+              <ul>
+                <li>Emerge automaticamente il vocabolario
+                preferito dagli utenti
+                </li>
+                <li>Basso costo e rapidit&agrave; di modifica
+                delle folksonomy
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Contro
+        </dt>
+        <dd>
+          <ul>
+            <li>Mantenere viva l'attenzione utente:
+              <ul>
+                <li>&rdquo;Telecommunications bandwidth is not a
+                problem; human bandwidth is&ldquo;
+                </li>
+              </ul>
+            </li>
+            <li>Limiti intrinseci delle folksonomy
+              <ul>
+                <li>sinonimie, polisemie, term-oriented, &hellip;
+                </li>
+              </ul>
+            </li>
+            <li>Utente &ldquo;dipendente&ldquo; dal sito
+              <ul>
+                <li>problemi di migrazione, duplicazione del
+                lavoro
+                </li>
+              </ul>
+            </li>
+            <li>Frazionamento su pi&ugrave; reti
+              <ul>
+                <li>Legge di Metcalfe: il valore di una rete
+                &egrave; proporzionale al quadrato del numero di
+                nodi presenti
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Web 2.0 o Web Semantico?
+      </h1>
+      <dl>
+        <dt>
+          Web 2.0
+        </dt>
+        <dd>
+          <ul>
+            <li>livello d'ingresso meno costoso
+            </li>
+            <li>orizzonti limitati
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Web Semantico
+        </dt>
+        <dd>
+          <ul>
+            <li>investimenti iniziali rilevanti
+            </li>
+            <li>potenziale superiore
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        La visione del W3C: the Open Web Platform
+      </h1>
+      <div class="divcenter">
+        <img src="images/openWebPlatformWithText.png" alt=
+        "openWebPlatform" style=
+        "width:60%; max-width: 1619px; max-height: 1119px;" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        La Open Web Platform &egrave;&hellip;
+      </h1><img src="images/openWebPlatform-business.png" alt=
+      "openWebPlatform-business" style=
+      "float:right; max-width:218px" />
+      <ul>
+        <li>una piattaforma per l'innovazione, il consolidamento
+        e la riduzione dei costi
+        </li>
+        <li>le tecnologie del W3C modellano il futuro della
+        trasformazione globale del mondo business
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Open Web Platform significa&hellip;
+      </h1>
+      <ul>
+        <li>Le pagine Web diventano pi&ugrave; <em>attraenti,
+        interattive, intelligenti</em>
+        </li>
+        <li>
+          <em>HTML5</em> consente l'<em>interoperabilit&agrave;
+          cross-browser</em>, e tutti i maggiori produttori di
+          browser lo supportano
+        </li>
+        <li>I <em>contenuti video</em> hanno pieno diritto di
+        cittadinanza (&ldquo;first-class citizen&rdquo;)
+        </li>
+        <li>La <em>data integration</em> diventa pi&ugrave;
+        semplice
+        </li>
+        <li>I vari dispositivi possono <em>interagire</em> e
+        diventano <em>interoperabili</em>
+        </li>
+        <li>Il <em>social networking</em> &egrave; l'asse
+        portante
+        </li>
+        <li>Privacy, security, identity contribuiscono ad
+        aumentare la <em>fiducia</em> (trust)
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Le propriet&agrave; della Open Web Platform
+      </h1>
+      <ul>
+        <li>Ubiquit&agrave; (computer, smartphone, elettronica di
+        consumo, TV, automobili&hellip;)
+        </li>
+        <li>Accessibilit&agrave; and Internazionalizzazione<br />
+
+          <em>Attenzione!</em>, l'internazionalizzazione non
+          &egrave; un semplice problema di traduzione, ma un
+          problema di <em>multiculturalit&agrave;</em>, e deve
+          considerare vari <a href=
+          "http://www.w3c.it/talks/2011/mww/slides.html#%2818%29">
+          aspetti:</a>
+          <ul>
+            <li>tecnici: differenze di codifica e di orientamento
+            del testo
+            </li>
+            <li>culturali: diversa percezione di colori, termini,
+            etc.
+            </li>
+          </ul>
+        </li>
+        <li>Interoperabilit&agrave;: funziona nello stesso modo
+        su tutti i dispositivi
+        </li>
+        <li>Controlla le risorse giuste
+        </li>
+        <li>Fornisce aglli sviluppatori tecnologie Multi-purpose
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <!--  <div class="slide">
+      <h1>
+        slide
+      </h1><img src="images/openWebPlatform-technology.png" alt=
+      "openWebPlatform-technology" />
+    </div> -->
+    <!--  ============================================================= -->
+    <!--  <div class="slide">
+      <h1>
+        Beware of&hellip;
+      </h1>
+     <p>The Web is critical not merely to the digital revolution but to our continued prosperity &dash; and even our
+liberty. Like democracy itself, it needs defending</p>
+    </div> -->
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Long Live the Web&hellip;
+      </h1><img src="images/tbl-longLiveWeb.png" width="100%"
+      style="max-width: 1458px;" alt="tbl-longLiveWeb" />
+      <p>
+        Tim Berners-Lee: &ldquo; <a href=
+        "http://www.scientificamerican.com/article.cfm?id=long-live-the-web">
+        Long Live the Web: A Call for Continued Open Standards
+        and Neutrality: Scientific American</a>&rdquo;,
+        Scientific American Magazine, December 2010 [<a href=
+        "tbl-LongLiveWeb-ScAm.pdf">local version</a>]
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Long Live the Web: i principi
+      </h1>
+      <ul class="incremental">
+        <li>Universality Is the Foundation
+        </li>
+        <li>Open Standards Drive Innovation
+        </li>
+        <li>Keep the Web separate from Internet
+        </li>
+        <li>Electronic Human Rights
+        </li>
+        <li>No Snooping
+        </li>
+        <li>Linking to the Future
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Universality Is the Foundation
+      </h1>
+      <ul>
+        <li>
+          <em>You can link anything</em>
+        </li>
+        <li>The web should be usable by people with
+        <em>disabilities</em>
+        </li>
+        <li>Decentralization: you <em>do not</em> have to get
+        approved from <em>any central authority</em>, just:
+          <ol>
+            <li>write a page in HTML
+            </li>
+            <li>name with URI
+            </li>
+            <li>serve using HTTP
+            </li>
+          </ol>
+        </li>
+        <li>URI is the key to universality
+        </li>
+        <li>
+          <em>Social networking</em> issues
+          <ul>
+            <li>
+              <em>capture</em> information from users
+            </li>
+            <li>organize it and provide value-added-service but
+            <em>only within their sites</em>
+            </li>
+            <li>
+              <em>each site is a silo</em>
+            </li>
+          </ul>
+        </li>
+        <li>The <em>isolation</em> occurs because each piece of
+        information <em>does not have a URI</em>
+        </li>
+        <li>A related <em>danger</em> is that one
+        social-networking site &mdash;or one search engine or one
+        browser&mdash; gets so big that it becomes a
+        <em>monopoly</em>, which tends to limit innovation
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Open Standards Drive Innovation
+      </h1>
+      <ul>
+        <li>The basic Web technologies that individuals and
+        companies need to develop powerful services must be
+        available for <em>free</em>, with <em>no royalties</em>
+        </li>
+        <li>
+          <em>Open standards</em>
+        </li>
+        <li>You can build your own Web site or company
+        <em>without anyone&rsquo;s approval</em>
+        </li>
+        <li>Open, royalty-free standards <em>do not mean</em>
+        that a company or individual <em>cannot</em> devise a
+        blog or photo-sharing program and <em>charge you to use
+        it</em>
+        </li>
+        <li>Not using open standards creates <em>closed
+        worlds</em>
+          <ul>
+            <li>Apple&rsquo;s iTunes system, for example,
+            identifies songs and videos using <em>URI</em>s that
+            are <em>open</em>
+            </li>
+            <li>But instead of &ldquo;<em>http:</em>&rdquo; the
+            addresses begin with &ldquo;<em>itunes:</em>&rdquo;
+            which is proprietary
+            </li>
+            <li>You can access an &ldquo;itunes:&rdquo; link <em>
+              only</em> using Apple&rsquo;s proprietary iTunes
+              program
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Keep the Web separate from Internet
+      </h1>
+      <ul>
+        <li>The <em>separation of layers</em>, partitions the
+        design of the Web from that of the Internet.
+        </li>
+        <li>The <em>Web is an application that runs on the
+        Internet</em>, which is an electronic network that
+        transmits packets of information among millions of
+        computers according to a few open protocols
+        </li>
+        <li>The two layers of technology work together but can
+        <em>advance independently</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Electronic Human Rights
+      </h1>
+      <ul>
+        <li>A Web user is also an Internet user and therefore
+        relies on an Internet that is <em>free from
+        interference</em>
+        </li>
+        <li>
+          <em>Net neutrality</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        No Snooping
+      </h1>
+      <ul>
+        <li>Accessing the information within an Internet packet
+        is equivalent to wiretapping a phone or <em>opening
+        postal mail</em>
+        </li>
+        <li>Free speech should be protected, too.<br />
+          The Web should be like a white sheet of paper: ready to
+          be written on, <em>with no control over what is
+          written</em>
+        </li>
+        <li>
+          <em>Totalitarian governments aren&rsquo;t the only
+          ones</em> violating the network rights of their
+          citizens
+        </li>
+        <li>When your network rights are violated, <em>public
+        outcry is crucial</em>
+        </li>
+        <li>In October 2010, Finland made <em>broadband
+        access</em>, at 1 Mbps, a <em>legal right</em> for all
+        its citizens.
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Linking to the Future
+      </h1>
+      <ul>
+        <li>As long as the web's <em>basic principles are
+        upheld</em>, its ongoing evolution is <em>not</em> in the
+        hands of any one person or organization.<br />
+          If we can preserve the principles, the Web promises
+          some fantastic future capabilities
+        </li>
+        <li>
+          <em>HTML5</em> is not just a markup language but a
+          <em>computing platform</em> that will make Web apps
+          even more powerful than they are now
+        </li>
+        <li>
+          <em>Wireless access</em> will be a particular boon to
+          developing countries, where many people do not have
+          connectivity by wire or cable but do have it wirelessly
+        </li>
+        <li>Linked Data (vedi: <a href=
+        "http://www.w3c.it/talks/2010/smau2010/">http://www.w3c.it/talks/2010/smau2010/</a>)
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Conclusioni
+      </h1>
+      <ul class="incremental">
+        <li>Il <em>World Wide Web</em> ha ancora molti margini di
+        evoluzione (<em>leading the Web to its full
+        potential</em>)
+        </li>
+        <li>Motivazioni tecniche e <em>ideali</em>
+        </li>
+        <li>Il <em>W3C</em> guida l' evoluzione del Web, grazie
+        al contributo dei suoi <em>membri</em>
+        </li>
+        <li>
+          <img src="images/worldHumanity.png" alt=
+          "humanity connected" style=
+          "float:right; width: 30%; max-width:459px" />Il Web non
+          &egrave; solo tecnologia, ma&hellip;
+          <ul>
+            <li>
+              <em>Humanity Connected by Technology</em>&hellip;
+            </li>
+            <li>&hellip;e cosa possono fare la tecnologia e i
+            collegamenti per dare maggior potere a tutti
+            </li>
+          </ul>
+        </li>
+        <li>La <em>Open Web Platform</em> &egrave; la visione del W3C
+          <ul>
+            <li><em>html5</em> &egrave; un componente fondamentale
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>Difendiamo i princ&igrave;pi del Web</em>, per
+          assicurarne lo sviluppo e la sopravvivenza!!!
+        </li>
+      </ul>
+    </div>
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p>
+      <p>
+        ... e <a href="../slidy/answer.mp3">risposte</a>
+      </p>
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> &hellip;
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/education/2012/upra/futuroWeb/">http://www.w3c.it/education/2012/upra/futuroWeb/</a>)
+      </p>
+      <p>
+        Queste slide fanno parte del materiale predisposto per il
+        corso <a href=
+        "http://www.w3c.it/education/2012/upra">Architettura del
+        Web</a>
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>

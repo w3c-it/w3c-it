@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang=
+"en">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=us-ascii" />
+    <title>
+      Example tag cloud - with full styling
+    </title>
+<style type="text/css">
+/*<![CDATA[*/
+        /* display the individual items next to each other, not one-per-line */
+        .tag-cloud LI { display: inline; }
+        /* hide the extra context from CSS-enabled browsers, but not screenreaders */
+        .tag-cloud SPAN { position: absolute; left: -999px; width: 990px; }
+        /* size is purely presentational, based upon the class */
+        .tag-cloud .not-popular { font-size: 1em; }
+        .tag-cloud .not-very-popular { font-size: 1.3em; }
+        .tag-cloud .somewhat-popular { font-size: 1.6em; }
+        .tag-cloud .popular { font-size: 1.9em; }
+        .tag-cloud .very-popular { font-size: 2.2em; }
+        .tag-cloud .ultra-popular { font-size: 2.5em; }
+        /* 
+        Added by Oreste for better showing in the slides 
+        (return to presentation) 
+        */
+        .bigParagraph {
+             margin-top: 2em;
+          
+/*]]>*/
+</style>
+  </head>
+  <body>
+    <h1>
+      An example tag cloud, using some of my favourite tags on
+      Flickr.
+    </h1>
+    <ol class="tag-cloud">
+      <li class="somewhat-popular">
+        <span>44 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/125shaftesburyavenue/"
+        class="tag">125 Shaftesbury Avenue</a>
+      </li>
+      <li class="not-popular">
+        <span>2 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/airlinefood/"
+        class="tag">airline food</a>
+      </li>
+      <li class="ultra-popular">
+        <span>344 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/austin/" class=
+        "tag">austin</a>
+      </li>
+      <li class="not-very-popular">
+        <span>12 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/badjoke/"
+        class="tag">bad joke</a>
+      </li>
+      <li class="somewhat-popular">
+        <span>52 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/brighton/"
+        class="tag">brighton</a>
+      </li>
+      <li class="not-very-popular">
+        <span>12 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/cowboyhat/"
+        class="tag">cowboy hat</a>
+      </li>
+      <li class="somewhat-popular">
+        <span>67 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/fireworks/"
+        class="tag">fireworks</a>
+      </li>
+      <li class="not-popular">
+        <span>2 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/fozziebear/"
+        class="tag">fozziebear</a>
+      </li>
+      <li class="somewhat-popular">
+        <span>85 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/ironbridge/"
+        class="tag">ironbridge</a>
+      </li>
+      <li class="not-very-popular">
+        <span>12 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/jukebox/"
+        class="tag">jukebox</a>
+      </li>
+      <li class="somewhat-popular">
+        <span>72 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/leaveamessage/"
+        class="tag">leave a message</a>
+      </li>
+      <li class="not-very-popular">
+        <span>26 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/lego/" class=
+        "tag">lego</a>
+      </li>
+      <li class="very-popular">
+        <span>151 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/london/" class=
+        "tag">London</a>
+      </li>
+      <li class="not-very-popular">
+        <span>25 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/microformats/"
+        class="tag">microformats</a>
+      </li>
+      <li class="popular">
+        <span>107 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/pubstandards/"
+        class="tag">Pub Standards</a>
+      </li>
+      <li class="ultra-popular">
+        <span>355 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/sanfrancisco/"
+        class="tag">San Francisco</a>
+      </li>
+      <li class="very-popular">
+        <span>194 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/sxsw/" class=
+        "tag">sxsw</a>
+      </li>
+      <li class="not-very-popular">
+        <span>13 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/thehairofchristianheilmann/"
+        class="tag">The hair of Christian Heilmann</a>
+      </li>
+      <li class="not-popular">
+        <span>1 photo is tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/thereflectionofthehairofchristianheilmann/"
+        class="tag">The reflection of the hair of Christian
+        Heilmann</a>
+      </li>
+      <li class="not-popular">
+        <span>2 photos are tagged with</span> <a href=
+        "http://flickr.com/photos/mn_francis/tags/yaarrrrrrrrrrrrrrrrr/"
+        class="tag">yaarrrrrrrrrrrrrrrrr</a>
+      </li>
+    </ol>
+    <p class="bigParagraph">
+      <button id="back" onclick="history.go(-1)" style=
+      "font-weight: bold; background-color: #ffff66; font-size: 110%;">
+      Torna alla presentazione</button>
+    </p>
+  </body>
+</html>

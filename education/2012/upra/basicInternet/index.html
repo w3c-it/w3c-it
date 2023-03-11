@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <title>
+      upra-basicInternet
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; 2012 - Oreste Signore &amp; Angelo Mario Del Grosso - Creative Commons Attribution 3.0 License BY-NC-ND" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link href="http://creativecommons.org/licenses/by/3.0/" rel=
+    "Copyright" title="CC Copyrights" />
+    <link rel="stylesheet" href="../slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="../slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="../slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<script src="../slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <!--  ========================================================== -->
+    <div class="slide">
+      <h1>
+        Internet: nozioni di base
+      </h1>
+      <p>
+        <img src="images/backbone.jpg" width="45%" alt=
+        "tasti W 3 C" style="max-width: 576px; float:right;" />
+        <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3.org">oreste@w3.org</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <a href=
+        "http://www.uprait.org/index.php?option=com_content&amp;view=category&amp;id=419&amp;Itemid=426&amp;lang=en">
+        Master in Comunicazione e New Media</a><br />
+        <a href="http://www.upra.org/">Ateneo Pontificio Regina
+        Apostolorum</a><br />
+        Corso: <a href=
+        "http://www.w3c.it/education/2012/upra/">Architettura del
+        Web</a>
+      </p>
+      <hr />
+      <p>
+        Presentazione: <a href="./index.html" hreflang="it"
+        title="la presentazione">http://www.w3c.it/education/2012/upra/basicInternet/</a><br />
+
+        Versione pdf: <a href=
+        "http://www.w3c.it/education/2012/upra/basicInternet.pdf"
+        hreflang="it" title=
+        "storia - pdf presentazione">http://www.w3c.it/education/2012/upra/basicInternet.pdf</a><br />
+        </p>
+      <p class="slidyNotice">
+        Formato XHTML realizzato usando il tool <a href=
+        "http://www.w3.org/Talks/Tools/Slidy">Slidy</a> di Dave
+        Raggett.<br />
+        <a href="http://www.w3.org/Talks/Tools/Slidy">Slidy</a>
+        dovrebbe funzionare in tutti i browser moderni con
+        Javascript abilitato. Usare freccia destra/sinistra per
+        muoversi da una slide all' altra.<br />
+        Vedi <a href="../slidy/help.it.html">la pagina di aiuto di
+        Slidy</a> per ulteriori informazioni.
+      </p>
+      <p>
+        <a href=
+        "http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../slidy/cc-by-nc-nd.png"
+        alt="" style="width:10%; max-width: 88px" /></a> <a href=
+        "http://www.w3c.it/"><img src=
+        "../slidy/itlogo-20010115.png" alt=
+        "Cover page W3C Office Logo" style=
+        "width:40%; max-width: 279px" /></a> <a href=
+        "http://www.weblab.isti.cnr.it/"><img src=
+        "../slidy/weblabWithText.jpg" alt=
+        "Cover page Weblab Logo" style=
+        "width:10%; max-width: 150px" /></a> <a href=
+        "http://validator.w3.org/check/referer"><img src=
+        "../slidy/valid-xhtml10-blue.png" alt="Valid XHTML 1.0!"
+        style="width:15%; max-width: 88px" /></a> <a href=
+        "http://jigsaw.w3.org/css-validator/"><img src=
+        "../slidy/valid-css-blue.png" alt="Valid CSS!" style=
+        "width:15%; max-width: 88px" /></a>
+      </p>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Ringraziamenti
+      </h1>
+      <ul>
+        <li>Questa presentazione &egrave; una riduzione di due
+        presentazioni tenute da Angelo Mario Del Grosso
+        </li>
+        <li>Il materiale di questa presentazione pu&ograve;
+        essere riutilizzato nel rispetto delle leggi sul
+        copyright e delle regole del W3C
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <!-- <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>Come e perch&eacute; nasce: dall'idea ad HTML
+        </li>
+        <li>Il W3C: i principi guida e le Recommendation
+        </li>
+        <li>Gli aspetti sociali: W3F e WAI
+        </li>
+        <li>Web 2.0 e Web 3.0
+        </li>
+        <li>One Web
+        </li>
+      </ul>
+    </div> -->
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Internet non &egrave; il Web e il Web non &egrave;
+        Internet
+      </h1>
+      <dl>
+        <dt>
+          Internet <img src="./images/internet.jpg" alt=
+          "missing internet.jpg" title="internet"  style="float: right;" width=
+          "40%" />
+        </dt>
+        <dd>
+          Infrastruttura telematica mondiale, una rete di reti,
+          tramite la quale sono connessi diversi centinaia di
+          milioni di calcolatori distribuiti in tutto il pianeta
+        </dd>
+        <dt>
+          Web
+        </dt>
+        <dd>
+          World Wide Web, &egrave; un servizio (il pi&ugrave;
+          conosciuto e il pi&ugrave; diffuso) che sfrutta
+          Internet e consente la pubblicazione, la condivisione e
+          la fruizione di contenuti digitali.<img src=
+          "./images/web.jpg" alt="missing web.jpg" title="il web" style=
+          "float: left;" width="45%" />
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Internet &egrave; una rete di reti
+      </h1><img src="./images/backbone.jpg" alt=
+      "missing backbone.jpg" />
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Indirizzamento degli elaboratori
+      </h1>
+      <dl>
+        <dt>
+          Host
+        </dt>
+        <dd>
+          <ul>
+            <li>computer (dispositivo) che si collega a internet
+            per scambiare dati, risorse e servizi
+            </li>
+            <li>a ogni host viene assegnato un <em>numero</em>
+            (indirizzo IP) e un <em>nome</em> (di dominio) che
+            sono univoci per tutta la rete Internet
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Indirizzo IP
+        </dt>
+        <dd>
+          <ul>
+            <li>numero di 32 cifre binarie (32 bit)
+            </li>
+            <li>utilizzato per identificare il destinatario di un
+            messaggio
+            </li>
+            <li>per comodit&agrave;  si rappresenta l'IP
+            suddiviso in quattro gruppi da otto bit mediante
+            numeri decimali
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <center>
+        <img src="./images/ip_address_structure.gif" alt=
+        "missing ip_address_structure.gif" />
+      </center>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Domini e nomi di domini
+      </h1>
+      <dl>
+        <dt>
+          Indirizzo Simbolico
+        </dt>
+        <dd>
+          <ul>
+            <li>ricordare le varie sequenze numeriche
+            corrispondenti agli indirizzi dei computer a cui ci
+            si intende connettere pu&ograve; essere molto scomodo
+            </li>
+            <li>quindi ad ogni host di Internet pu&ograve; essere
+            associato un nome simbolico (domain name), composto
+            da stringhe di caratteri
+              <pre>
+weblab.isti.cnr.it
+</pre>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Dominio
+        </dt>
+        <dd>
+          <ul>
+            <li>Settori di suddivisione dell'intera rete.
+            </li>
+            <li>A loro volta divisi in sottodomini, e cos&igrave;
+            via per vari livelli; ogni sottodominio fa parte del
+            dominio gerarchicamente superiore.
+            </li>
+            <li>Alla base della piramide ci sono i singoli host.
+            </li>
+            <li>La parte di indirizzo pi&ugrave; a destra nella
+            stringa indica il dominio pi&ugrave; alto della
+            gerarchia, nel nostro caso 'it'.
+            </li>
+            <li>In genere, il livello pi&ugrave; alto identifica
+            il paese o il tipo di ente che possiede il computer
+            in questione
+            </li>
+            <li>Gli altri livelli della gerarchia, muovendosi da
+            destra a sinistra, scendono per i vari sottodomini
+            fino ad identificare uno specifico host
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        DNS - Domain Name System
+      </h1>
+      <ul>
+        <li>Dal punto di vista tecnico il <em>Domain Name
+        Service</em> &egrave; costituito da un sistema di
+        <strong>database distribuiti</strong> nella rete chiamati
+        <em>name server</em>, che sono collegati tra loro
+        </li>
+        <li>Ogni dominio e ogni sottodominio ha almeno un name
+        server di riferimento
+        </li>
+        <li>Quest'ultimo svolge la funzione di <strong>tradurre i
+        nomi in indirizzi numerici</strong> per conto degli host
+        o di altri name server
+        </li>
+        <li>La comunicazione effettiva tra gli host avviene
+        sempre attraverso gli indirizzi numerici
+        </li>
+        <li>La traduzione viene chiamata tecnicamente
+        <strong>risoluzione</strong>
+        </li>
+      </ul>
+      <center>
+        <img src="./images/DNS_Classic2.jpg" alt=
+        "missing DNS_Classic2.jpg" />
+      </center>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Comunicazione In Internet
+      </h1>
+      <dl>
+        <dt>
+          Client/Server
+        </dt>
+        <dd>
+          La comunicazione sulla rete &egrave; di tipo gerarchico
+          ed &egrave; basata sul modello client-server
+        </dd>
+        <dt>
+          Protocollo di comunicazione
+        </dt>
+        <dd>
+          Regole che permettono di disciplinare lo scambio dei
+          messaggi
+        </dd>
+      </dl>
+      <center>
+        <img src="./images/modello_internet.jpg" alt=
+        "missing modello_internet.jpg" />
+      </center>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Client/Server
+      </h1>
+      <dl>
+        <dt>
+          Client
+        </dt>
+        <dd>
+          <ul>
+            <li>Un client &egrave; un programma che si connette
+            ad un altro programma (server), fa una richiesta ed
+            aspetta una risposta
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Server
+        </dt>
+        <dd>
+          <ul>
+            <li>Un server &egrave; un programma &rdquo;in
+            ascolto&ldquo; su un dispositivo
+            </li>
+            <li>Quando arriva una richiesta dal client, il server
+            analizza questa richiesta elabora una risposta e la
+            invia al client
+            </li>
+            <li>Un server, generalmente, pu&ograve; servire
+            pi&ugrave; client contemporaneamente
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <center>
+        <img src="./images/foto_internet_04.jpg" alt=
+        "missing foto_internet_04.jpg" />
+      </center>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Servizio Web
+      </h1>
+      <ul>
+        <li>Al di sopra della rete basata su TCP/IP &egrave;
+        possibile costruire delle applicazioni.<br />
+          <strong>E' possibile sfruttare la rete per offrire
+          servizi agli utenti</strong>
+        </li>
+        <li>Il World Wide Web &egrave; un servizio applicativo di
+        Internet
+        </li>
+      </ul>
+      <center>
+        <img src="./images/WorldWideWeb.jpg" alt=
+        "missing WorldWideWeb.jpg" />
+      </center>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        HTTP
+      </h1>
+      <ul>
+        <li>Un <strong>Web Server</strong> (un server che
+        fornisce servizi sul Web) &egrave; sostanzialmente un
+        HTTP Server (un server che comunica mediante il
+        protocollo HTTP) e gestisce 2 flussi di informazioni:
+          <ul>
+            <li>
+              <strong>HTTP request:</strong> le richieste in
+              arrivo dai client (HTTP client)
+            </li>
+            <li>
+              <strong>HTTP response:</strong> le risposte del
+              server, inviate ai client (HTTP client)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Un Web browser</strong> &egrave; un HTTP
+          client, cio&egrave; un programma che interagisce con un
+          HTTP server, richiedendone i servizi.<br />
+          E'dotato di un interprete HTML e di un'interfaccia
+          grafica per visualizzare le pagine Web
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il Protocollo HTTP
+      </h1>
+      <ul>
+        <li>HTTP (<em>HyperText Transfer Protocol</em>) &egrave;
+        stato creato per il trasferimento di documenti
+        strutturati in formato HTML (<em>HyperText Marked
+        Language</em>).
+        </li>
+        <li>L'HTTP &egrave; un protocollo "stateless" (senza
+        memoria) che permette di individuare una risorsa (i.e:
+        documento HTML, ma non solo) in maniera veloce.
+        </li>
+        <li>La scelta di un protocollo che non "conserva memoria"
+        della connessione fatta &egrave; stata necessaria
+        affinch&eacute; fosse possibile saltare velocemente da un
+        server ad un altro attraverso i <strong>link
+        ipertestuali</strong>.
+        </li>
+        <li>&Egrave; gestito da un software (<strong>server
+        HTTP</strong>) residente sugli host che intendono essere
+        fornitori di informazioni. Chi vuole accedere alle
+        informazioni fornite dal server HTTP deve utilizzare un
+        software client (<strong>browser</strong>) in grado di
+        interpretare le informazioni inviate dal server.
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Fasi di una connessione e comunicazione HTTP
+      </h1>
+      <p>
+        L'acquisizione e eventuale visualizzazione di una risorsa
+        da parte del client pu&ograve; essere schematizzata in
+        <strong>quattro fasi</strong>:
+      </p>
+      <dl>
+        <dt>
+          CONNESSIONE:
+        </dt>
+        <dd>
+          Il client crea una connessione TCP-IP con il server
+          usando il suo nome di dominio (o il numero IP) ed il
+          numero della porta di trasmissione; se non viene
+          fornito il numero di porta, il protocollo assume per
+          default che il numero sia 80.
+        </dd>
+        <dt>
+          RICHIESTA DOCUMENTO:
+        </dt>
+        <dd>
+          Il client invia la richiesta di un documento mediante
+          una riga di caratteri ASCII terminata da una coppia di
+          caratteri CR-LF (Carriage Return, Line Feed).
+        </dd>
+        <dt>
+          RISPOSTA:
+        </dt>
+        <dd>
+          La risposta inviata dal server &egrave; un messaggio in
+          linguaggio HTML nel quale &egrave; contenuto il
+          documento richiesto (o un messaggio d'errore).
+        </dd>
+        <dt>
+          DISCONNESSIONE:
+        </dt>
+        <dd>
+          Il server subito dopo aver spedito il documento si
+          disconnette. Comunque anche il client pu&ograve;
+          interrompere la connessione in ogni momento, in questo
+          caso il server non registrer&agrave;  nessuna
+          condizione d'errore.
+        </dd>
+      </dl>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Esemplificazione di HTTP
+      </h1>
+      <div class="column50">
+        <center>
+          <img src="./images/http.png" alt="missing http.png"
+          style="width:95%;" />
+        </center>
+      </div>
+      <div class="column50">
+        <center>
+          <img src="./images/preshttp.gif" alt=
+          "missing preshttp.gif" style="width:95%;" />
+        </center>
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Esercizio
+      </h1>
+      <ul>
+        <li>Installare un server web (Apache) sulla propria
+        macchina
+        </li>
+        <li>Configurarlo in modo da utilizzare un DNS locale
+        (file C:\Windows\System32\drivers\etc\hosts nei sistemi
+        Windows)
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p>
+      <p>
+        ... e <a href="../slidy/answer.mp3">risposte</a>
+      </p>
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/education/2012/upra/basicInternet">http://www.w3c.it/education/2012/upra/basicInternet</a>)
+      </p>
+      <p>
+        Queste slide fanno parte del materiale predisposto per il
+        corso <a href=
+        "http://www.w3c.it/education/2012/upra">Architettura del
+        Web</a>
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>

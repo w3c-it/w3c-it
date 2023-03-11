@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<title>HTML5 (Cenni)</title>
+  <meta charset="utf-8" />
+  <meta name="Description" content="Cenni di HTML5 - Corso CNR sulle Tecnologie Web" />
+  <meta name="Keywords" content= "Cenni di HTML5" />
+  <meta name="Author" content= "massimo at w3c dot it" />
+  <meta name="Author" content= "Massimo dot Martinelli at isti dot cnr dot it" />
+  <meta name="copyright" content="Copyright &#169; 2012 Massimo Martinelli - Creative Commons Attribution 3.0 License" />
+ <!-- <meta name="Language" content="it" /> -->
+  <!-- <meta name="font-size-adjustment" content="-2" /> -->
+  <link rel="stylesheet" href="../slidy/slidy.css" type="text/css" media="screen, projection, print" />
+  <link rel="stylesheet" href="../slidy/w3c-blue2.css" type="text/css" media="screen, projection, print" />
+  <link rel="stylesheet" href="../slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+	<link rel="stylesheet" href="../common/massimo.css" type="text/css" media="screen, projection, print" />
+  <script src="../slidy/slidy.js" charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<!-- <div  class="slide ">
+
+  <h1>HTML5 (Cenni)</h1>
+  <div class="left50">
+    <p><a href="http://www.w3c.it/"><img src="../common/itlogo-20010115.png" alt="Logo Ufficio Italiano W3C" /></a></p>
+    <p><a href="http://www1.isti.cnr.it/~Martinelli/">Massimo Martinelli</a> &lt;<a href="mailto:massimo@w3c.it">massimo@w3c.it</a>&gt;</p> 
+    <p>Ufficio Italiano W3C</p>
+    <p>Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa</p>
+    <p><img src="../common/logoUPRA.png" alt="logo Ateneo Pontificio Regina Apostolorum" /> Master in Comunicazione e New Media</p>
+    <p>Ateneo Pontificio Regina Apostolorum</p>
+    <p>Corso: Architettura del Web, 10 Maggio 2012</p>
+    <p>&nbsp;<a href="http://validator.w3.org/check/referer">
+     <img src="../common/valid-xhtml11.gif" alt="Valid XHTML 1.1!" /></a> 
+     <a href="http://jigsaw.w3.org/css-validator/">
+     <img src="../common/valid-CSS.png" alt="Valid CSS!" /></a></p>
+  </div>
+
+  <div class="right50">
+    <p><img src="img/html5_logo.png" alt="logo HTML5" title="logo HTML5" /></p>
+    
+    <hr />
+    <p>&nbsp;</p>
+    <p class="slidy">Presentazione in formato <a href="http://www.w3.org/Talks/Tools/Slidy2/Overview.html#%281%29">Slidy2</a> modificato per favorire utenti che utilizzano jaws e altre tecnologie assistive</p>
+  </div> 
+
+
+</div> -->
+<div class="slide">
+      <h1>HTML5 (Cenni)</h1>
+      <p>
+        <img src="./img/html5_logo.png" alt="logo HTML5"
+        style="max-width: 450px; float:right;" /> 
+<a href="http://www1.isti.cnr.it/~Martinelli/">Massimo Martinelli</a> &lt;<a href="mailto:massimo@w3c.it">massimo@w3c.it</a>&gt;<br />Ufficio Italiano W3C<br />Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa</p>
+      <hr />
+      <p>
+        <a href=
+        "http://www.uprait.org/index.php?option=com_content&amp;view=category&amp;id=419&amp;Itemid=426&amp;lang=en">
+        Master in Comunicazione e New Media</a><br />
+        <a href="http://www.upra.org/">Ateneo Pontificio Regina
+        Apostolorum</a><br />
+        Corso: <a href=
+        "http://www.w3c.it/education/2012/upra/">Architettura del
+        Web</a>
+      </p>
+      <hr />
+      <p>
+        Presentazione: <a href="./index.html" hreflang="it"
+        title="la presentazione">http://www.w3c.it/education/2012/upra/html5/</a><br />
+
+        Versione pdf: <a href=
+        "http://www.w3c.it/education/2012/upra/html5.pdf" hreflang=
+        "it" title=
+        "html5 - pdf presentazione">http://www.w3c.it/education/2012/upra/html5.pdf</a><br />
+        </p>
+      <p class="slidyNotice">
+        Formato XHTML realizzato usando il tool <a href=
+        "http://www.w3.org/Talks/Tools/Slidy">Slidy</a> di Dave
+        Raggett.<br />
+        <a href="http://www.w3.org/Talks/Tools/Slidy">Slidy</a>
+        dovrebbe funzionare in tutti i browser moderni con
+        Javascript abilitato.<br />
+ <em>Usare freccia destra/sinistra per
+        muoversi da una slide all' altra.</em><br />
+        Vedi <a href="../slidy/help.it.html">la pagina di aiuto
+        di Slidy</a> per ulteriori informazioni.
+      </p>
+      <p>
+        <a href=
+        "http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../slidy/cc-by-nc-nd.png"
+        alt="" style="width:10%; max-width: 88px" /></a> <a href=
+        "http://www.w3c.it/"><img src=
+        "../slidy/itlogo-20010115.png" alt=
+        "Cover page W3C Office Logo" style=
+        "width:40%; max-width: 279px" /></a> <a href=
+        "http://www.weblab.isti.cnr.it/"><img src=
+        "../slidy/weblabWithText.jpg" alt=
+        "Cover page Weblab Logo" style=
+        "width:10%; max-width: 150px" /></a><!--  <a href=
+        "http://validator.w3.org/check/referer"><img src=
+        "../slidy/valid-xhtml10-blue.png" alt="Valid XHTML 1.0!"
+        style="width:15%; max-width: 88px" /></a> <a href=
+        "http://jigsaw.w3.org/css-validator/"><img src=
+        "../slidy/valid-css-blue.png" alt="Valid CSS!" style=
+        "width:15%; max-width: 88px" /></a> -->
+      </p>
+    </div>
+    <!--  ================================================================ -->    
+    <div class="slide">
+  <h1>Premessa</h1>
+  <div class="right">
+    <img src="img/parcheggioOdivietoDiSosta.png" alt="segnale stradale che indica al tempo stesso parcheggio e divieto di sosta" />
+    <img src="img/Contre-indication.jpg" alt="segnale stradale che indica direzione " />
+  </div>
+
+  <ul>
+   <li>Maggior parte pagine Web non compatibili al 100% con recommendation W3C</li>
+   <li>Come se leggendo un libro trovassimo frasi come <br />&quot;va a; teca p u, bro leg?&quot;</li>
+   <li>User-agent devono prevedere eccezioni, codice in pi&ugrave; per interpretare errori e visualizzare il visualizzabile</li>
+
+   <li>Pi&ugrave; della met&agrave; degli utenti pu&ograve; avere problemi a consultare il Web <br />(senza considerare sistemi automatici)</li>
+   
+   <li>Consiglio: scrivere sempre in XHTML(1...5...n)!</li>
+   <li>Vediamo alcune novit&agrave; di (X)HTML5...</li>
+  </ul>
+
+</div>
+
+
+    <!-- ===================================================================== -->
+		<div class="slide">
+  <h1>HTML 5: Principali novit&agrave;</h1>
+  <ul>
+   <li>nuovi elementi per strutturare il testo in sezioni</li>
+   <li>nuovi controlli e nuovi elementi di input per i moduli (form)</li>
+   <li>memorizzazione locale di dati (applicazioni offline)</li>
+   <li>estensione a tutti i tag di attributi per l'accessibilit&agrave;</li>
+   <li>grafica: nuovo elemento canvas che supporta javascript per le animazioni e migliore supporto per SVG</li>
+   <li>semplificazione e potenziamento audio e video</li>
+   <li>accesso ai sensori del computer/palmare</li>
+   <li>cache applicazione e database</li>
+   <li>canali di comunicazione bi-direzionale full-duplex (Web Sockets)</li>
+   <li>web workers (script in background e in parallelo)</li>
+  </ul>
+</div>
+
+
+<!--  ================================================================ -->
+
+    <div class="slide">
+      <h1>Nuovi elementi strutturali</h1>
+      <p class="center"><img src="img/nuovi_elementi_strutturali.png" alt="" /></p>
+    </div>
+
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>Esempio di documento HTML5</h1>
+<pre>
+<em>&lt;!DOCTYPE html&gt;</em>  &lt;!-- Dichiarazione semplificata --&gt;
+&lt;html <em>lang=&quot;it&quot;</em>&gt;  &lt;!-- dichiarazione lingua --&gt;
+  &lt;head&gt;
+    &lt;title>HTML5&lt;/title&gt;
+    <em>&lt;meta charset=&quot;utf-8&quot; /&gt;</em>  &lt;!-- set di caratteri unicode --&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+  &lt;p>ciao!&lt;/p&gt;
+&lt;/body&gt;
+&lt;html&gt;
+</pre>
+  
+</div>
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+  <h1>canvas</h1>
+  <pre>
+<code>&lt;canvas id="myCanvas" width="300" height="200"&gt; &lt;/canvas&gt;
+&lt;script&gt;var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = "rgb(255,0,0)";
+ctx.fillRect(200,100,50,50);
+ctx.fillStyle = "rgba(0, 0, 200, 0.3)";
+ctx.fillRect (230, 40, 55, 50);
+ctx.arc(75, 150, 20, 0, Math.PI*2, true); 
+ctx.arc(175, 150, 20, 0, Math.PI, true);
+ctx.fill();&lt;/script&gt;</code></pre>
+  <!-- <p>nessuna interazione con il mouse ( SVG la prevede )</p> -->
+
+<canvas id="myCanvas" width="300" height="100"></canvas>
+
+<ul>
+  <li><a href="http://www.gnuplot.info/demo_canvas/">Esempi di plot</a></li>
+  <li><a href="http://www.benjoffe.com/code/demos/canvascape/">Grafica 3D (Canvas), base per creare giochi</a></li>
+</ul>
+ 
+<script>
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = "rgb(255,0,0)";
+ctx.fillRect(200,10,60,40);
+ctx.fillStyle = "rgba(0, 0, 200, 0.3)";
+ctx.fillRect (230, 10, 55, 50);
+ctx.fillStyle='#00FF00';
+ctx.arc(75, 80, 20, 0, Math.PI*2, true); 
+ctx.arc(175, 80, 20, 0, Math.PI, true);
+ctx.fill();
+</script>
+
+</div>
+
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+      <h1>WebGL</h1>
+			<p><em>Funziona solo con browser che supportano WebGL</em></p>
+        <p class="center"><iframe width="800" height="480" src="http://helloracer.com/webgl/"  ></iframe></p>
+<ul>
+  <li><a href="http://helloracer.com/webgl/">Grafica 3D (WebGL)</a></li>
+</ul>
+</div>
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+  <h1>Video</h1>
+  <p>Video Incluso (embedded)</p>
+  <pre>
+<code>&lt;video src="video.ogg" controls&gt;Il tuo browser non supporta il tag video&lt;/video&gt;.
+ puoi scaricare il video al seguente indirizzo &hellip;</code></pre>
+<p>Video e scripting</p>
+<pre><code>&lt;video controls&gt;
+   &lt;source src="filmato1.ogg" type="video/ogg" /&gt;
+   &lt;source src="filmato2.mp4" type='video/mp4; codecs="mp4v.20.240, mp4a.40.2"' /&gt; 
+ Il tuo browser non supporta l'elemento video
+&lt;/video&gt;
+var v = document.getElementsByTagName("video")[0];
+v.play();</code></pre>
+
+<video src="video/video.ogg" controls="controls">
+Il tuo browser non supporta il tag video. Puoi scaricare il video al seguente indirizzo <a href="/video/video.ogg">.</a></video>
+  <p>semplificazione e potenziamento rispetto alle precedenti recommendation</p>
+</div>
+ <!-- ===================================================================== -->
+    
+    <div class="slide">
+  <h1>audio</h1>
+<p>audio</p>
+<pre><code>&lt;audio controls='controls'&gt;
+  &lt;source src='audio.ogg' type='audio/ogg; codecs=vorbis' /&gt;
+  &lt;source src='audio.mp3' type='audio/mpeg' /&gt;
+  Il tuo browser non supporta il tag audio
+&lt;/audio&gt;</code></pre>
+   </div>
+
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+  <h1>Memorizzazione locale</h1>
+
+<pre><code>&lt;script&gt;
+localStorage.setItem('nome', 'Ciao mondo!'); //salva nel db locale, chiave/valore
+document.write(localStorage.getItem('nome')); //Ciao Mondo
+localStorage.removeItem('nome'); // cancella la voce corrispondente nel db locale
+&lt;/script&gt;
+</code></pre>
+<script>
+localStorage.setItem("nome", "Ciao mondo!");
+document.write(localStorage.getItem("nome"));
+localStorage.removeItem("nome");
+</script>
+   </div>
+
+
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+  <h1>Web SQL</h1>
+<pre><code>var db = openDatabase('dbanagrafe', '1.0', 'database anagrafico', 2 * 1024 * 1024);
+db.transaction(function (tx) {
+  tx.executeSql('CREATE TABLE IF NOT EXISTS utenti (id unique, nominativo)');
+  tx.executeSql('INSERT INTO utenti (id, nominativo) VALUES (1, "Giuseppe Verdi")');
+  tx.executeSql('INSERT INTO utenti (id, nominativo) VALUES (2, "Anna Bianchi")');
+  tx.executeSql('INSERT INTO utenti (id, nominativo) VALUES (3, "Mario Rossi")');
+});</code></pre>
+   </div>
+
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+  <h1>Geolocalizzazione</h1>
+<p id="location"></p>
+  <pre><code>&lt;script&gt;
+function ottieniPosizione(posizione){
+  var lat = position.coords.latitude;
+  var long = position.coords.longitude;
+  var altezza = position.coords.altitude;
+}
+</code></pre>
+    <p><a href="http://www1.isti.cnr.it/~Martinelli/XML/HTML5/geomap.html">Esempio</a></p>
+</div>
+
+    <!-- ===================================================================== -->
+    
+<div class="slide">
+  <h1>form</h1>
+  <pre><code>&lt;form&gt;
+  &lt;p&gt;&lt;label&gt;url:&lt;input type="url" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;email:&lt;input type="email" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;number:&lt;input type="number" min="0" max="10" step="2" value="6" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;range:&lt;input type="range" min="0" max="10" step="2" value="6" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;date:&lt;input type="date" /&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;month:&lt;input type="month"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;week:&lt;input type="week"&gt;&lt;/label&gt;&lt;/p&gt; 
+  &lt;p&gt;&lt;label&gt;time:&lt;input type="time"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;datetime:&lt;input type="datetime"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;color:&lt;input type="color"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;required:&lt;input required name="req"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;progress:&lt;input type="progress"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;minlenght e maxlength: &lt;input minlength="3" maxlength="5"&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Go"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+      <h1>Visualizzazione del form (Opera)</h1>
+      <p><img src="img/esempihtml5opera.png" alt="esempi form html5 con Opera" /></p>
+    </div>
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+      <h1>Mobile</h1>
+      <p>Personal Device Assistant (PDA): forte impulso allo sviluppo di HTML5</p>
+      <p>Esempio applicazioni: sensori PDA</p>
+      <p><img src="img/bussola.png" alt="Applicazione bussola mobile" /></p>
+    </div>
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+      <h1>Esempi</h1>
+      <ul>
+        <li><a href="esempi-HTML5/drag-and-drop/index.html">drag and drop 1</a></li>
+        <li><a href="esempi/draganddrop.html">drag and drop 2</a></li>
+ <li><a href="esempi/offlineonlinedetection.html">percezione offline online</a></li>
+ <li><a href="http://html5demos.com/">vari</a></li>
+        <li><a href="http://apprtc.appspot.com/html/face.html">Riconoscimento del volto</a> (<em>Funziona solo con browser compatibili con
+WebRTC</em>)</li>
+ <li><a href="http://neave.com/webcam/html5/">Elaborazione video</a></li>
+        <li><a href="http://www.findmebyip.com/litmus/#target-selector">Stato di implementazione HTML5 e CSS3</a></li>
+      </ul>
+    </div>
+
+    <!-- ===================================================================== -->
+    
+    <div class="slide">
+      <h1>Applicazioni Web: il futuro prossimo <img src="img/enterprisepic.png" alt="star trek enterprise" /></h1>
+     <ul>
+ <li>Realizzazione sistemi operativi basati quasi interamente sulla tecnologia Web<br />(componenti nativi ancora utilizzati per gli strati inferiori)</li>
+      <li><ul>
+<li><a href="http://www.ubuntu.com/tour/">Ubuntu tour</a> interamente realizzato in HTML5 pu&ograve; dare un'idea</li>
+</ul></li>    
+      <li><strong>Situazione</strong>: due progetti guidano standardizzazione W3C:
+			<ul>
+<li><a href="https://wiki.mozilla.org/B2G">Boot To Gecko</a> (B2G) di Mozilla </li>
+<li><a href="https://www.tizen.org/">Tizen</a> di Intel e Samsung</li>
+</ul>
+<li>Una demo di B2G: <iframe width="560" height="315" src="http://www.youtube.com/embed/Erd_oEdHc58"  ></iframe></li>
+<li>Alcune immagini di Tizen <img src="img/tizen.jpg" alt=""/></li>
+</ul>
+    </div>
+
+    <!--  ================================================================ -->
+
+ <div class="slide">
+   <h1>Grazie per l'attenzione</h1>
+
+   <p class="questions">Domande?</p>
+   <hr />
+   <p><em>Se non &egrave; sul Web non esiste</em> ...</p>
+   <p>...troverete <a href="http://www.w3c.it/education/2012/upra/html5/">le slide all'indirizzo http://www.w3c.it/education/2012/upra/html5/</a>
+	 </p>
+	  <p>
+        Queste slide fanno parte del materiale predisposto per il
+        corso <a href=
+        "http://www.w3c.it/education/2012/upra">Architettura del
+        Web</a>
+      </p>
+ </div>    
+
+    <!--  ================================================================ -->    
+  </body>
+</html>
+

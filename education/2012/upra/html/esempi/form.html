@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Form XHTML</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="validaform.js"></script>
+  </head>
+  <body>
+    <form action="http://www.regione.toscana.it:8080/servlet/Controllore" method="post" enctype="multipart/form-data" >
+      <p><input type="hidden" name="nascosto" value="v" />
+      <label for="nome">Text</label> <input type="text" id="nome" name="nome" /></p>
+      <p><label>Password <input type="password" name="password" /></label></p>
+      <p><label>Checkbox <input type="checkbox" name="check" value="c1" /> 
+			                <input type="checkbox" name="check" value="c2" /></label></p>
+      <p><label for="rad">Radio</label>
+			             <input type="radio" name="rad" value="r1" />
+                   <input type="radio" id="rad" name="rad" value="r2" /></p>
+      <p><label>File <input type="file" name="file" /></label></p>
+      <p><label>Select <select name="select1">
+        <option value="1">s1</option>
+        <option value="2">s2</option>
+      </select></label><br />
+      <label>Textarea <textarea rows="3" cols="20" name="area"></textarea></label></p>
+      <p><input type="submit" /> <input type="reset" /></p>
+    </form>
+  </body>
+</html>
+

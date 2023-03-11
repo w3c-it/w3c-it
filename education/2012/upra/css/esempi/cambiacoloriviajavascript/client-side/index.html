@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uso di Javascript per applicare diversi file CSS esterni</title>
+   
+  <script type="text/javascript" src="./colorswitcher.js"></script>
+
+  <link href="./main.css" rel="stylesheet" type="text/css">
+  <link id="currentCSS" href="./defaultColors.css" rel="stylesheet" type="text/css">
+</head><body>
+
+<div id="colorswitch">
+<p>Cambio colori:</p>
+  <ul class="inline">
+    <li><a href="#" onclick="javascript:cambiaColori('altColors1.css');return false;" id="altColors1">blu scuro su bianco</a></li>
+    <li><a href="#" onclick="javascript:cambiaColori('altColors2.css');return false;" id="altColors2">giallo su nero</a></li>
+    <li><a href="#" onclick="javascript:cambiaColori('altColors3.css');return false;" id="altColors3">nero su giallo chiaro</a></li>
+    <li><a href="#" onclick="javascript:cambiaColori('altColors4.css');return false;" id="altColors4">nero su bianco</a></li>
+    <li><a href="#" onclick="javascript:cambiaColori('defaultColors.css');return false;" id="default">Reset (default)</a></li>
+  </ul>
+</div>
+<div id="mainbody">
+  <h1>Report della conferenza</h1>
+  <p>Nella conferenza della scorsa settimana ci sono stati interventi molto interessanti...</p>
+</div>
+</body></html>

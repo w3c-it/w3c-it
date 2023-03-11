@@ -1,0 +1,95 @@
+/* massimo.css
+   (c) by Massimo AT w3c.it 2010
+*/
+
+em { color: blue; }
+
+code { color: purple; font-weight: bold;		 }
+
+pre > code {  color: #00428C; }
+
+dt { color:#006699; font-weight: bold; }
+
+pre > code > em, pre > em { color: green; }
+
+cite { margin-left: 1em; }
+
+
+div.primapagina { border-style: solid; border-width: 2px; padding: 1em; background: rgb(240, 240, 240) none repeat scroll 0%; overflow: auto; position: absolute; z-index: 300; width: 60%; max-width: 30em; height: 30em; top: auto; right: auto; left: 4em; bottom: 4em; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-size: 60%; visibility: hidden; display: none; }
+
+div.mezzosfondobianco { background-color: rgb(255, 255, 255); margin-right:0%; margin-left:-5%; float: left; width: 30%; height: 100% }
+
+div.mezzaprimapagina { background: inherit; float: right; width:67%; }
+
+div.pagina60 { font-size: 60%; }  
+
+div.pagina65 { font-size: 65%; }  
+
+div.pagina70 { font-size: 70%; }  
+
+div.pagina75 { font-size: 75%; }  
+
+div.pagina80 { font-size: 80%; }  
+
+div.pagina85 { font-size: 85%; }  
+
+div.pagina95 { font-size: 95%; }  
+
+div.right { float: right; margin-right:1em }
+
+div.left50 { float:left; width: 50%; }
+
+div.right50 { float:right; width: 50%; }
+
+.red { color: red; }
+
+.green { color:green; }
+
+.darkgreen { color:darkgreen; }
+
+.purple { color:purple; }
+
+.blue { color: blue; }
+
+.magenta { color:magenta; }
+
+.underline { text-decoration:underline; }
+
+.italic { font-style: italic; }
+
+div.mezzaprimapagina > h1 { color: #ff0000 !important;
+                            font-size: 200% !important;
+                             text-shadow: 0.1em 0.1em 0.1em #ffffaa !important; }
+
+
+
+div.mezzaprimapagina > h2 { font-size: 140% !important; }
+
+
+.reflected {  
+background: #fff url(../common/itlogo-20010115.png) no-repeat;
+padding-top: 2em;
+height: 1em;
+overflow: hidden;
+float: left;
+position: relative;
+} 
+
+.reflected img{  
+-webkit-transform: rotate(180deg);  
+-moz-transform: rotate(180deg);
+opacity:0.3;
+}  
+
+
+pre {
+ background-color: #EEFAFA; 
+ font-family:'Droid Sans Mono',Courier;
+ text-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
+ -moz-border-radius: 1em;
+ -webkit-border-radius: 0.5em;
+ -moz-box-shadow: 0.8em 0.4em 0.4em #cccccc;
+}
+
+
+/* div.slide h1 { background:-moz-linear-gradient(left top , #2222FF, #5555FF) repeat scroll 0 0 transparent; } */

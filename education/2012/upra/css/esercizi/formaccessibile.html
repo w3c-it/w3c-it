@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>esempio di form accessibile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <style type="text/css">
+<!--
+
+form { width: 30em; }
+
+form fieldset {
+  border-color: black;
+  border-width: 0.2ex;
+  border-style: solid;
+  padding: 1em;
+  margin: 0;
+}
+
+form fieldset legend { font-size:1.1em; }
+
+form label { 
+	display: block;
+	float: left;
+	width: 15em;
+	padding: 0; 
+	margin: 1ex 0 0; 
+	text-align: right; 
+}
+
+form fieldset label:first-letter { text-decoration:underline; }
+
+form input, form textarea { margin:1ex 0 0 1em; }
+
+textarea { overflow: auto; }
+
+form .obbligatorio{font-weight:bold;}
+
+form .sottolinea {text-decoration:underline}
+
+
+
+input.text:focus {
+   background-color: #7FFF00; color: #000;
+}
+ 
+
+textarea.textarea:focus {
+   background-color: #7FFF00; color: #000;
+}  
+
+
+/* funziona con opera */
+label + input[type=checkbox]:focus {
+   background-color: #FF6; color: #000; 
+}
+
+
+/* per farlo funzionare con firefox e chrome andrebbe spostata la label dopo il campo 
+input[type=checkbox]:focus + label, input[type=radio]:focus + label {
+   background-color: #FF6; color: #000; 
+}
+*/
+-->
+</style>
+
+  </head>
+  <body>
+
+    <p>I campi evidenziati in <strong>grassetto</strong> le cui descrizioni hanno un asterisco finale sono obbligatori. Le lettere <span class="sottolinea">sottolineate</span> sono accesskey</p>
+
+    <form action="#" method="post" name="informazioni_personali">
+      <fieldset>
+        <legend>Informazioni personali</legend>
+	  <label for="nome" accesskey="n">Nome: </label>
+	    <input class="text" type="text" id="nome" name="nome" tabindex="1" value="" title="nome" /><br />
+	  <label for="cognome" accesskey="c">Cognome: </label>
+	    <input class="text" type="text" id="cognome" tabindex="2" value="" title="cognome" /><br />
+	  <label for="email" class="obbligatorio" accesskey="e" />Email *: </label>
+	    <input class="text" type="text" id="email" tabindex="3" title="email" /><br />
+
+          <label for="trattamentodati1">Dati (acconsente al trattamento)</label>
+            <input tabindex="4" accesskey="d" type="checkbox" name="trattamentodati1" value="acconsente1" id="trattamentodati1" /><br />
+
+
+      </fieldset>
+      <fieldset>
+        <legend>Commenti</legend>
+          <label for="comments" >Altre informazioni:</label>
+	     <textarea accesskey="a" class="textarea" name="altreinfo" rows="3" cols="23" id="altreinfo" tabindex="5" title="altre informazioni"></textarea><br />
+	     <input type="submit" value="Invia" id="invia" tabindex="5" />&nbsp;<input type="reset" id="reset" tabindex="6" />
+      </fieldset>
+    </form>
+
+<p><em>Esempio tratto da <a href="http://www.websiteoptimization.com/speed/tweak/forms/">http://www.websiteoptimization.com/speed/tweak/forms/</a> e rivisto</em></p>
+
+
+
+  <body>
+</html>

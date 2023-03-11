@@ -1,0 +1,75 @@
+/* basic elements */
+html {position: relative; margin: 0; padding: 0; background: #00008B url(../images/bg_fadedblue.gif);}
+body {position: absolute; margin: 0;  padding:0; width: 100%; font: 100.01% verdana;  color: #fff;  background: url(../images/bg_bottom.jpg) repeat-x bottom left;}
+p {margin-top: 0;  text-align: justify;}
+h3 {font: normal 1.8em Impact, sans-serif; margin: 0; color: #F15205;}	
+a:link {font-weight: bold; text-decoration: none; color: #A6CDDF;}
+a:visited {font-weight: bold; text-decoration: none; color: #A3B1BE;}
+a:hover, a:active {text-decoration: underline; color: #FA7534;}
+
+/* Bex declared classes */
+.FloatLeft{float:left;}
+.FloatRight{float:right;}
+.ClearBoth{clear:both;}
+.FullSize{width:100%;}
+.MinimizeHeight{font-size:0; line-height:0; height:1px; padding:0; margin:0;}
+
+
+/* specific divs */
+#container {position: relative; background: url(../images/bg_top.jpg) repeat-x top left; font-size: 0.7em; line-height: 150%; padding: 0; padding-bottom: 150px;	margin: 0 auto; min-width: 750px; z-index: 20;}
+* html #container {position: static;}
+#intro { min-width: 450px; margin-left: 170px; margin-right: 170px;}
+#supportingText {padding-bottom: 30px; margin: 0 170px;}
+#preamble, #pageHeader {width: 750px;	padding: 0 20px 30px 10px; margin: 0 auto;}
+#pageHeader {margin-bottom: 10px;}
+
+/* nice bubbles made by Andrea Ertel */
+#preamble:hover {background: url(../images/bubbles.gif) no-repeat 150px 0;}	
+
+#footer {position: absolute; bottom: 22px; left: 0px; height: 126px; width: 130px; background: url(../images/chest_both.gif); padding: 50px 0 0 30px; z-index: 100;}
+/*doesnt work on ie */
+#footer:hover {background-position: 0 176px;	z-index:49;}
+* html #footer {background: url(../images/chest_auf.gif); height: 96px; width: 115px; padding: 80px 0 0 45px;}
+#footer a {color: #FEFF71; visibility: hidden;}
+* html #footer a {visibility: visible;}
+#footer:hover a {visibility: visible;}	
+
+/* ccs3 selectors - at this time gecko only */
+#footer a[title*="XHTML"] {display:block; position: absolute; bottom: 90px; left: 89px;}
+#footer a[title*="CSS"] {display:block; position: absolute; bottom: 79px; left: 99px;}
+#footer a[title*="WAI"] {display:block;	position: absolute; bottom: 75px; left: 71px;}
+#footer a[title*="Commons"] {display:block; position: absolute; bottom: 75px; left: 52px;}
+#footer a[title*="508"] {display:block; position: absolute; bottom: 62px; left: 63px;}	
+	
+/* using an image to replace text in an h1. This trick courtesy Douglas Bowman, http://www.stopdesign.com/articles/css/replace-text/ */
+#pageHeader h1 {position: relative; margin: 0 0 10px -130px; padding: 79px 0 5px 0; width: 750px; height: 30px; color: Navy; letter-spacing: 1px; background: url(../images/bluefinlogo.gif) no-repeat bottom left;}
+#pageHeader h1 span{display: none;}
+	
+#linkList {position: absolute; top: 212px; padding-top: 109px; left: 2%; width: 170px; font-size: 1em; line-height: 150%; background: url(../images/tropicalfish.jpg) no-repeat 10px 0;}
+#linkList ul {margin: 0px; padding: 0px;}
+#linkList li {list-style-type: none; margin: 4px 0; display: block;}
+#linkList li a:link {color: #fff;}
+#linkList li a:visited {color: #fff;}
+#linkList li a:hover {color: #ccc;text-decoration:none;}
+
+/* spinning starfishes */
+#lselect li {padding-left: 19px; background: url(../images/starfish.gif) no-repeat -2px 0px;}
+#lselect li:hover {background: url(../images/starfish_ani.gif) no-repeat -2px 0px;}	
+
+/* if you dont know what this does you have to scroll down the webpage and be patient */
+#extraDiv1 {position: absolute; width: 140px; height: 120px; left: 392px; bottom: 0; background: url(../images/crab_ani.gif) no-repeat bottom;}
+* html #extraDiv1 {display: none;}
+/* this one is the diver without his light */
+#extraDiv2 {position: fixed; top: 230px; right: 8%; width: 100px; height: 175px; background: url(../images/diver.png) no-repeat top; z-index:10;}
+* html #extraDiv2 {display: none;}
+/* dont dive without a good light  (dont forget to charge the batteries as well) */
+#extraDiv3 {position: fixed; top: 230px; right: 8%; width: 100px; height: 175px; background: url(../images/licht.png) no-repeat top; z-index:8;}
+* html #extraDiv3 {display: none;}
+#extraDiv3:empty {display: none;}
+/* a png gradient is placed between the diver and his light  - works in gecko and opera 7 */
+#extraDiv4 {position: absolute; top: 210px; right: 8%; width: 100px; height:1000px; background: url(../images/bluegradient.png) repeat-x top; z-index:9;}
+* html #extraDiv4 {display: none;}
+/* because of a safai png bug I disabled the above */
+#extraDiv4:empty {display: none;}
+#extraDiv5 {position: absolute; bottom: 22px; left: 0px; height: 62px; width: 130px; background: url(../images/chest_ani.gif) no-repeat top left; padding: 50px 0 0 30px; z-index:19;}
+#extraDiv6 {position: absolute; bottom: 290px; left: 10px; height: 73px; width: 204px; background: url(../images/shark.jpg) no-repeat top left;}

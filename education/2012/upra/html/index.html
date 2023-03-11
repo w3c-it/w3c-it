@@ -1,0 +1,2852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang=
+"it">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <!--    <meta http-equiv="Content-Type"
+                                                                                                                                                                                                                                        content="text/html; charset=iso-8859-1" /> -->
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta content="HTML" name="dc.title" />
+    <meta content="Oreste Signore, W3C Office in Italy" name=
+    "dc.author" />
+    <meta content="Oreste Signore, W3C Office in Italy" name=
+    "dc.creator" />
+    <meta content="3 May 2012" name="dc.date" />
+    <meta content="W3C Office in Italy" name="dc.publisher" />
+    <meta content=
+    "http://www.w3.org/Consortium/Legal/copyright-documents"
+    name="dc.rights" />
+    <link href="http://www.weblab.isti.cnr.it/people/oreste/"
+    rel="Author" />
+    <title>
+      upra-HTML
+    </title>
+    <meta content="application/xhtml+xml;" http-equiv=
+    "Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright" content=
+    "Copyright &copy; 2012 - Oreste Signore and Massimo Martinelli - Creative Commons Attribution 3.0 License BY-NC-ND" />
+    <meta name="font-size-adjustment" content="-2" />
+    <link rel="stylesheet" href="../slidy/slidy.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="../slidy/w3c-blue.css" type=
+    "text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="../slidy/slideStyle.css" type=
+    "text/css" media="screen, projection, print" />
+<script src="../slidy/slidy.js" type="text/javascript">
+</script>
+  </head>
+  <body>
+    <div class="slide">
+      <h1>
+        (X)HTML
+      </h1>
+      <p>
+        <img src="./images/html.png" width="45%" alt=
+        "logo XHTML del W3C" title="logo XHTML del W3C" style=
+        "max-width: 1920px; float:right;" /> <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3.org">oreste@w3.org</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <a href=
+        "http://www.uprait.org/index.php?option=com_content&amp;view=category&amp;id=419&amp;Itemid=426&amp;lang=en">
+        Master in Comunicazione e New Media</a><br />
+        <a href="http://www.upra.org/">Ateneo Pontificio Regina
+        Apostolorum</a><br />
+        Corso: <a href=
+        "http://www.w3c.it/education/2012/upra/">Architettura del
+        Web</a>
+      </p>
+      <hr />
+      <p>
+        Presentazione: <a href="./index.html" hreflang="it"
+        title="la presentazione">http://www.w3c.it/education/2012/upra/html/</a><br />
+
+        Versione pdf: <a href=
+        "http://www.w3c.it/education/2012/upra/html.pdf"
+        hreflang="it" title=
+        "html - pdf presentazione">http://www.w3c.it/education/2012/upra/html.pdf</a><br />
+        </p>
+      <p class="slidyNotice">
+        Formato XHTML realizzato usando il tool <a href=
+        "http://www.w3.org/Talks/Tools/Slidy">Slidy</a> di Dave
+        Raggett.<br />
+        <a href="http://www.w3.org/Talks/Tools/Slidy">Slidy</a>
+        dovrebbe funzionare in tutti i browser moderni con
+        Javascript abilitato. Usare freccia destra/sinistra per
+        muoversi da una slide all' altra.<br />
+        Vedi <a href="../slidy/help.it.html">la pagina di aiuto
+        di Slidy</a> per ulteriori informazioni.
+      </p>
+      <p>
+        <a href=
+        "http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../slidy/cc-by-nc-nd.png"
+        alt="" style="width:10%; max-width: 88px" /></a> <a href=
+        "http://www.w3c.it/"><img src=
+        "../slidy/itlogo-20010115.png" alt=
+        "Cover page W3C Office Logo" style=
+        "width:40%; max-width: 279px" /></a> <a href=
+        "http://www.weblab.isti.cnr.it/"><img src=
+        "../slidy/weblabWithText.jpg" alt=
+        "Cover page Weblab Logo" style=
+        "width:10%; max-width: 150px" /></a> <a href=
+        "http://validator.w3.org/check/referer"><img src=
+        "../slidy/valid-xhtml10-blue.png" alt="Valid XHTML 1.0!"
+        style="width:15%; max-width: 88px" /></a> <a href=
+        "http://jigsaw.w3.org/css-validator/"><img src=
+        "../slidy/valid-css-blue.png" alt="Valid CSS!" style=
+        "width:15%; max-width: 88px" /></a>
+      </p>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro"><span id="intro" class=
+          "currentItem">Introduzione</span></a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        Domande!!!
+      </h1>
+      <p>
+        alzi la mano chi sa:
+      </p>
+      <ul class="incremental">
+        <li>cosa significa:
+          <pre>
+<code>&lt;ol&gt;
+  &lt;li&gt;primo
+  &lt;li&gt;secondo
+&lt;ol&gt;
+</code>
+</pre>
+        </li>
+        <li>se il codice scritto sopra &egrave; errato
+        </li>
+        <li>spiegarmi perch&eacute;
+        </li>
+        <li>
+          <img src="images/happface.gif" alt="faccina felice"
+          title="faccina felice - animata" />
+        </li>
+        <li>prime domande per sciogliere il ghiaccio, iniziamo
+        </li>
+        <li>questa &egrave; la versione compressa di un corso
+        compresso...
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Tecnologie assistive
+      </h1>
+      <ul>
+        <li>Possono aiutare molte persone, non solo quelle
+        considerate disabili (o, meglio, <em>persone con
+        funzionalit&agrave; ridotte</em>)<br />
+          <span class="red">TUTTI</span> gli utenti hanno dei
+          <em>benefici</em> se i documenti sono <span class=
+          "green">accessibili</span>
+        </li>
+        <li>nuovi studi di ricerca mostrano che il 57 percendo
+        degli utenti adulti di computer possono avere benefici
+        dalla tecnologia accessibile
+        </li>
+      </ul><cite>(Forrester Data)</cite>
+      <div class="center">
+        <img src="img/macchina_incastrata.jpg" alt=
+        "macchina incastrata in una strada stretta" title=
+        "macchina incastrata in una strada stretta" /> <img src=
+        "img/rifugio.jpg" alt=
+        "rifugio montano in parete di difficile accesso" title=
+        "rifugio montano in parete di difficile accesso" />
+        <img src="img/bridge-pic.jpg" alt=
+        "uomo che costruisce un ponte" title=
+        "uomo che costruisce un ponte" />
+      </div>
+    </div><!-- ======================================= -->
+    <div class="slide">
+      <h1>
+        Le varie versioni di HTML
+      </h1>
+      <ul>
+        <li>HTML: Hyper Text Markup Language
+          <ul>
+            <li>HTML 2.0
+            </li>
+            <li>HTML 3.2 (1996, prima W3C Rec)
+            </li>
+            <li>HTML 4.0
+            </li>
+            <li>HTML 4.01
+            </li>
+          </ul>
+        </li>
+        <li>XHTML: eXtensible Hyper Text Markup Language
+          <ul>
+            <li>XHTML 1.0 (riformulazione di HTML in XML, 2000,
+            update nel 2002)
+            </li>
+            <li>XHTML 1.1 (modularizzazione di XHTML 1.0,
+            individuazione dei costrutti "deprecated"), 2001
+            </li>
+            <li>XHTML-Print, (stampa da dispositivi mobili e su
+            stampanti a basso costo), 2006
+            </li>
+            <li>XHTML 1.1 Basic (versione minima per dispositivi
+            mobili e PDA), 2008
+            </li>
+            <li>XHTML 2.0 (Working Draft) al contrario di XHTML
+            1.x non pensato per essere compatibile con le
+            versioni precedenti (HTML 4.01, XHTML 1.x)<br />
+              dichiarato <span class="red">chiuso</span>,
+              confluito (in parte) in HTML5
+            </li>
+          </ul>
+        </li>
+        <li>HTML5
+        </li>
+      </ul>
+    </div><!-- ============ basic   ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic"><span id="basic" class=
+          "currentItem">Struttura di base</span></a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        Elementi e attributi
+      </h1>
+      <ul>
+        <li>L' informazione viene completata con un
+        <em>markup</em>
+        </li>
+        <li>Il markup descrive la <em>struttura</em>
+        </li>
+        <li>L' informazione marcata &egrave; costituita da
+        <em>elementi</em>
+        </li>
+      </ul>
+      <dl>
+        <dt>
+          elemento
+        </dt>
+        <dd>
+          <pre>
+&lt;tagname&gt;contenuto dell' elemento&lt;/tagname&gt;
+</pre>
+        </dd>
+        <dd>
+          start tag: <code>&lt;tagname&gt;</code>
+        </dd>
+        <dd>
+          end tag: <code>&lt;/tagname&gt;</code>
+        </dd>
+        <dd>
+          pu&ograve; contenere altri elementi:<br />
+          <code>&lt;elemento&gt;questo elemento contiene un
+          altro<br />
+          &lt;elementoInterno&gt;elemento&lt;/elementoInterno&gt;<br />
+
+          che deve essere codificato in modo
+          corretto&lt;/elemento&gt;</code>
+        </dd>
+        <dd>
+          pu&ograve; avere degli <em>attributi</em>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          attributi
+        </dt>
+        <dd>
+          codificati nello <em>start tag</em> (attributeName =
+          attributeValue)
+        </dd>
+        <dd>
+          valore dell' attributo racchiuso tra apici (semplici o
+          doppi)<br />
+          <code>&lt;elemento attr1="valAtt1"
+          attr2='valAtt2'&gt;elemento con
+          attributi&lt;/elemento&gt;</code>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Come &egrave; fatto un documento HTML
+      </h1>
+      <div class="column60" style="float:right">
+        <pre>
+  &lt;!DOCTYPE  ....Dichiarazione del <em>tipo di documento</em> (DTD).... &gt;
+  &lt;html&gt;
+    &lt;head&gt; 
+      &lt;title&gt; <em>titolo del documento</em> &lt;/title&gt;
+      ... metainformazioni sul documento ...
+      ... stili ...
+    &lt;/head&gt;
+    &lt;body&gt;
+      &hellip;<em>contenuto del documento</em>&hellip;
+    &lt;/body&gt;
+  &lt;/html&gt; 
+</pre>
+      </div>
+      <ul>
+        <li>Dichiarazione del <em>tipo di documento</em> (XML,
+        DTD)
+        </li>
+        <li>
+          <em>head</em>
+          <ul>
+            <li>metainformazioni sul documento
+            </li>
+            <li>titolo
+            </li>
+            <li>stili
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>body</em>
+          <ul>
+            <li>contenuto del documento
+            </li>
+          </ul>
+        </li>
+        <li>memorizzato con estensione <code>.html</code> (o
+        <code>.htm</code>)
+        </li>
+        <li>
+          <em>Dichiarazione DOCTYPE non &egrave; un elemento
+          XHTML, e non dovrebbe avere un tag di chiusura</em>
+        </li>
+        <li>un <a href="examples/prototype.html">esempio</a>
+        </li>
+      </ul>
+      <dl>
+        <dt>
+          Nota per l'accessibilit&agrave;
+        </dt>
+        <dd>
+          <em><strong>importante</strong> fornire un titolo
+          (title) descrittivo per tutte le pagine Web</em>
+        </dd>
+        <!-- Ogni pagina dovrebbe indicare in che posizione del sito ci troviamo, il titolo  -->
+        <dd>
+          pu&ograve; essere utile anche per indicare in che
+          posizione del sito ci troviamo:
+          <pre>
+<code>&lt;title&gt;Home :: Descrizione Livello 1 :: Livello 2 :: Descrizione pagina  &lt;/title&gt;</code>
+</pre>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Differenze principali tra HTML e XHTML
+      </h1>
+      <ul>
+        <li>I documenti XHTML devono essere ben formati
+        </li>
+        <li>Gli elementi del documento XHTML devono essere
+        annidati correttamente
+        </li>
+        <li>Minuscole e maiuscole sono interpretate in modo
+        differente
+        </li>
+        <!--    <li>I nomi dei tag devono essere scritti con lettere minuscole</li> -->
+        <li>Tutti gli elementi di XHTML devono essere chiusi
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        I documenti devono essere ben-formati
+      </h1>
+      <p>
+        <em>rivedremo meglio con XML</em>
+      </p>
+      <ul>
+        <li>Tutti gli elementi di XHTML devono essere annidati
+        all'interno dell'elemento radice <em>&lt;html&gt;</em>
+        </li>
+        <li>Tutti gli elementi devono essere chiusi
+        </li>
+        <li>Tutti gli altri elementi possono avere elementi
+        sotto-elementi (figli)
+        </li>
+        <li>I sotto-elementi devono essere annidati correttamente
+        all'interno del loro elemento genitore
+        </li>
+        <li>Tutti i documenti di XHTML devono avere una
+        dichiarazione di DOCTYPE. Gli elementi html, head, body
+        devono essere presenti, title deve essere presente
+        all'interno dell'elemento head
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Corretto annidamento degli elementi
+      </h1>
+      <p class="red">
+        <strong>Errato:</strong>
+      </p>
+      <p>
+        <strong>&lt;strong&gt;</strong><em>&lt;em&gt;</em>testo
+        <strong>&lt;/strong&gt;</strong><em>&lt;/em&gt;</em>
+      </p>
+      <p class="green">
+        <strong>Corretto:</strong>
+      </p>
+      <p>
+        <strong>&lt;strong&gt;</strong><em>&lt;em&gt;</em>testo
+        <em>&lt;/em&gt;</em><strong>&lt;/strong&gt;</strong>
+      </p>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Interpretazione minuscole e maiuscole
+      </h1>
+      <!--  <p>Questo perch&eacute; i documenti XHTML sono applicazioni di XML e queste hanno i tag scritti con lettere minuscole</p> -->
+      <ul>
+        <li>XML &egrave; case-sensitive (le lettere minuscole
+        vengono interpretate differentemente dalle maiuscole)
+        </li>
+        <li>I tag come &lt;p&gt; e &lt;P&gt; sono interpretati in
+        modo differente
+        </li>
+      </ul>
+      <p class="red">
+        Errato:
+      </p>
+      <pre>
+  &lt;BODY&gt;
+    &lt;P&gt;Questo &egrave; un paragrafo&lt;/P&gt;
+  &lt;/BODY&gt;
+</pre>
+      <p class="green">
+        Corretto:
+      </p>
+      <pre>
+  &lt;body&gt;
+    &lt;p&gt;Questo &egrave; un paragrafo&lt;/p&gt;
+  &lt;/body&gt;
+</pre>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Tutti gli elementi XHTML devono essere chiusi
+      </h1>
+      <p>
+        Gli elementi devono avere un tag di chiusura
+      </p>
+      <p>
+        Errato:
+      </p>
+      <pre>
+  <span class="red">&lt;p&gt;</span>Questo &egrave; un paragrafo
+  <span class=
+"red">&lt;p&gt;</span>Questo &egrave; un altro paragrafo 
+</pre>
+      <p>
+        Corretto:
+      </p>
+      <pre>
+  <span class=
+"green">&lt;p&gt;</span>Questo &egrave; un paragrafo<span class=
+"green">&lt;/p&gt;</span>
+  <span class=
+"green">&lt;p&gt;</span>Questo &egrave; un altro paragrafo<span class="green">&lt;/p&gt;</span>
+</pre>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Anche gli elementi vuoti devono essere chiusi
+      </h1>
+      <p>
+        Anche gli elementi vuoti devono avere un tag di chiusura
+        oppure il tag di apertura deve finire con "/&gt;"
+      </p>
+      <p class="red">
+        Errato:
+      </p>
+      <pre>
+Questa &egrave; una interruzione <span class=
+"red">&lt;br&gt;</span>
+Questa &egrave; una linea orizzontale <span class=
+"red">&lt;hr&gt;</span>
+Questa &egrave; una immagine <span class=
+"red">&lt;img src="felice.gif" alt="faccia felice"&gt;</span>
+</pre>
+      <p class="green">
+        Corretto:
+      </p>
+      <pre>
+Questa &egrave; una interruzione <span class=
+"green">&lt;br /&gt;</span>
+Questa &egrave; una linea orizzontale <span class=
+"green">&lt;hr /&gt;</span>
+Questa &egrave; una immagine <span class=
+"green">&lt;img src="felice.gif" alt="faccia felice" /&gt;</span>
+</pre>
+      <p>
+        Per compatibilit&agrave; con tutti i browser, aggiungere
+        uno spazio supplementare prima del simbolo "<span class=
+        "red">/</span>"<br />
+        come &lt;br /&gt; e &lt;hr /&gt;
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Elementi inline e block-level
+      </h1>
+      <dl>
+        <dt>
+          inline
+        </dt>
+        <dd>
+          <ul class="incremental">
+            <li>possono contenere solo testo o altri elementi di
+            tipo inline
+            </li>
+            <li>
+              <code>&lt;em&gt;</code> e
+              <code>&lt;strong&gt;</code> sono esempi di elementi
+              inline
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          block-level
+        </dt>
+        <dd>
+          <ul class="incremental">
+            <li>elementi pi&ugrave; importanti, possono definire
+            lo spazio occupato, e possono contenere altri
+            elementi di tipo inline
+            </li>
+            <li>
+              <code>&lt;p&gt;</code> e <code>&lt;h1&gt;</code>
+              sono esempi di elementi block-level
+            </li>
+            <li>alcuni elementi block-level possono contenere
+            altri elementi block-level
+            </li>
+            <li>in genere gli elementi block-level iniziano su
+            una nuova linea
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        <span class="red">Esercizio</span>
+      </h1>
+      <p>
+        Con un editore testi (notepad, gedit, vi, ...) scrivere
+        un documento XHTML 1.1
+      </p>
+      <p>
+        Il corpo del documento deve essere misto, oltre a del
+        testo deve contenere i seguenti elementi:
+      </p>
+      <ul>
+        <li>p (paragrafo)
+        </li>
+        <li>em (enfasi)
+        </li>
+        <li>strong (enfasi forte)
+        </li>
+        <li>br (<span xml:lang="en" lang="en">break line</span>,
+        a capo)
+        </li>
+        <li>hr (<span xml:lang="en" lang="en">horizontal
+        row</span>, linea orizzontale)
+        </li>
+      </ul>
+      <p>
+        Ricordarsi di dichiarare il DTD
+      </p>
+      <pre>
+<code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</code>
+</pre>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        Commenti
+      </h1>
+      <p>
+        Possono apparire dovunque in un documento HTML
+      </p>
+      <p>
+        Esempio:
+      </p>
+      <pre>
+&lt;!-- Questo &egrave; un commento --&gt;
+</pre>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Header e paragrafi
+      </h1>
+      <dl>
+        <dt>
+          Header
+        </dt>
+        <dd>
+          <ul>
+            <li>sei livelli di intestazione (da <code>h1</code> a
+            <code>h6</code>)
+            </li>
+            <li>di importanza decrescente
+            </li>
+            <li>normalmente visualizzati con dimensioni del
+            carattere decrescenti e altri accorgimenti
+            tipografici
+            </li>
+            <li>&egrave; opportuno utilizzarli in sequenza
+            </li>
+            <li>devono corrispondere a una struttura logica del
+            documento
+            </li>
+            <li>non sono un mero accorgimento tipografico
+            </li>
+            <li>un <a href="examples/headersAndParagraphs.html">
+              esempio</a>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Paragrafo
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>&lt;p&gt;Contenuto del
+              paragrafo&lt;/p&gt;</code>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Alcuni attributi comuni a quasi tutti gli elementi
+      </h1>
+      <dl>
+        <dt>
+          Identificazione e stile
+        </dt>
+        <dd>
+          <ul class="incremental">
+            <li>
+              <code>id=</code> identificatore univoco
+            </li>
+            <li>
+              <code>class=</code> una o pi&ugrave; classi
+            </li>
+            <li>
+              <code>style=</code> in genere lo stile viene
+              definito a livello globale, ma talvolta pu&ograve;
+              essere utile definirlo per una singola istanza
+              (<em>non &egrave; in generale una buona
+              prassi</em>)
+            </li>
+            <li>
+              <code>title=</code> informazione aggiuntiva sull'
+              elemento. Normalmente i browser utilizzano questa
+              informazione (&egrave; anche un elemento importante
+              per l' accessibilit&agrave;)
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Lingua
+        </dt>
+        <dd>
+          <ul class="incremental">
+            <li>
+              <code>lang=</code>
+            </li>
+            <li>
+              <code>xml:lang=</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Interazione
+        </dt>
+        <dd>
+          <ul class="incremental">
+            <li>
+              <code>onfocus</code> (onactivate) (evitare
+              interazioni dipendenti da dispositivi come
+              onmouseover, onmouseout, and ondblclick)
+            </li>
+            <li>
+              <code>onblur</code> (opposto di onfocus)
+            </li>
+            <li>
+              <code>onclick</code> caso particolare: se non usato
+              con link controlli di form, &egrave; dipendente dal
+              dispositivo ed &egrave; pertanto evitare o
+              associare anche altre interazioni dipendenti da
+              dispositivi (onKeyPress)
+            </li>
+            <li>
+              <code>onmousedown=</code>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        L'attributo xml:lang
+      </h1>
+      <ul>
+        <li>Si applica a quasi tutti gli elementi XHTML
+        </li>
+        <li>Specifica il linguaggio del contenuto di un elemento
+        </li>
+      </ul>
+      <pre>
+  &lt;div xml:lang="en"&gt;Hello!&lt;/div&gt;
+</pre>
+      <p>
+        Accessibilit&agrave;: specificare ogni cambiamento di
+        lingua (...se si tratta di una sola parola di uso comune
+        evitare, considerare che gli screen reader ci mettono del
+        tempo a caricare i fonemi di un'altra lingua)
+      </p>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide pagina80">
+      <h1>
+        Riferimenti a Entit&agrave;
+      </h1>
+      <ul>
+        <li>Possibile utilizzare un riferimento ad un valore
+        esadecimale, per esempio per i caratteri diacritici o per
+        specificare i colori
+        </li>
+        <li>Quando esistono, si possono utilizzare le parole
+        chiave
+        </li>
+        <li>Altro metodo consente di utilizzare il codice
+        esadecimale, usando &amp;xnumero; (x e nn in
+        minuscolo)<br />
+          Esempio &amp;xffffff; (bianco)
+        </li>
+        <li>HTML definisce un certo numero di entit&agrave; per
+        quei caratteri che sono:
+          <ul>
+            <li>proibiti perch&eacute; usati in HTML (&lt;, &gt;,
+            &amp;, ", ecc.)
+            </li>
+            <li>non presenti nell'ASCII a 7 bit
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <em>Il browser sa come rappresentarle</em>
+      </p>
+      <div class="column50">
+        <ul>
+          <li>&amp;amp; &amp;
+          </li>
+          <li>&amp;lt; (less than) &lt;
+          </li>
+          <li>&amp;reg; &reg;
+          </li>
+          <li>&amp;Agrave; &Agrave;
+          </li>
+          <li>&amp;aelig; &aelig;
+          </li>
+          <li>&amp;agrave; &Agrave;
+          </li>
+          <li>&amp;ccedil; &ccedil;
+          </li>
+          <li>&amp;ntilde; &ntilde;
+          </li>
+        </ul>
+      </div>
+      <div class="column50">
+        <ul>
+          <li>&amp;quot; "
+          </li>
+          <li>&amp;gt; (greater than) &gt;
+          </li>
+          <li>&amp;nbsp; (non-breaking space)
+          </li>
+          <li>&amp;Aacute; &Aacute;
+          </li>
+          <li>&amp;Auml; &Auml;
+          </li>
+          <li>&amp;aacute; &aacute;
+          </li>
+          <li>&amp;auml; &auml;
+          </li>
+          <li>...
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Enfasi
+      </h1>
+      <dl>
+        <dt>
+          em
+        </dt>
+        <dd>
+          <ul>
+            <li>normalmente visualizzato in <em>corsivo</em>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          strong
+        </dt>
+        <dd>
+          <ul>
+            <li>normalmente visualizzato in
+            <strong>grassetto</strong>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p>
+        L' unica assunzione ragionevole &egrave; che il browser
+        visualizzi con diversi livelli di importanza
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Il break
+      </h1>
+      <ul>
+        <li>Gli elementi block-level ignorano gli spazi
+        addizionali e la formattazione originale del testo
+        </li>
+        <li>Se in un paragrafo si vuole forzare il salto a nuova
+        riga, si pu&ograve; usare l' elemento inline <code>&lt;br
+        /&gt;</code>
+        </li>
+        <li>Si noti la codifica (<em>empty element</em>)
+        </li>
+      </ul>
+    </div><!-- ============ liste   ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists"><span id="lists" class=
+          "currentItem">Liste</span></a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        Liste ordinate e non ordinate
+      </h1>
+      <div class="example">
+        <p>
+          <a href="examples/lists.html">Un esempio</a>
+        </p>
+      </div>
+      <dl>
+        <dt>
+          Liste non numerate (<em>unordered list</em>)
+        </dt>
+        <dd>
+          <ul>
+            <li>sequenza di punti aventi la stessa importanza
+            </li>
+            <li>
+              <code>&lt;ul&gt;</code> inizio lista
+            </li>
+            <li>
+              <code>&lt;/ul&gt;</code> fine lista
+            </li>
+            <li>all' interno di un elemento
+            <code>&lt;ul&gt;</code> <em>sono ammessi solo</em>
+            elementi <code>&lt;li&gt;</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Liste numerate (<em>ordered list</em>)
+        </dt>
+        <dd>
+          <ul>
+            <li>sequenza di punti di cui si ritiene importante l'
+            ordine, o in cui comunque risulti utile identificare
+            i singoli elementi
+            </li>
+            <li>
+              <code>&lt;ol&gt;</code> inizio lista
+            </li>
+            <li>
+              <code>&lt;/ol&gt;</code> fine lista
+            </li>
+            <li>all' interno di un elemento
+            <code>&lt;ol&gt;</code> <em>sono ammessi solo</em>
+            elementi <code>&lt;li&gt;</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          L' elemento di lista (<em>list item</em>)
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>&lt;li&gt;</code>punto della
+              lista<code>&lt;/li&gt;</code>
+            </li>
+            <li>pu&ograve; contenere <em>qualunque elemento
+            block-level</em> (quindi anche
+            <code>&lt;hn&gt;</code> o <code>&lt;p&gt;</code>)
+            </li>
+            <li>per inserire una lista in un' altra lista:
+              <pre>
+&lt;li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+<em>&lt;/li&gt;</em>
+</pre>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Liste di definizione
+      </h1>
+      <div class="example">
+        <pre>
+    &lt;dl&gt;
+      &lt;dt&gt;v&amp;egrave;nto&lt;/dt&gt;
+         &lt;dd&gt;movimento di masse d'aria&lt;/dd&gt;
+      &lt;dt&gt;tappo&lt;/dt&gt;
+         &lt;dd&gt;accessorio impiegato per la chiusura di contenitori&lt;/dd&gt;
+         &lt;dd&gt;persona di bassa/breve statura&lt;/dd&gt;
+    &lt;/dl&gt;
+     
+</pre>
+        <hr />
+        <dl>
+          <dt>
+            v&egrave;nto
+          </dt>
+          <dd>
+            movimento di masse d'aria
+          </dd>
+          <dt>
+            tappo
+          </dt>
+          <dd>
+            accessorio impiegato per la chiusura di contenitori
+          </dd>
+          <dd>
+            persona di bassa/breve statura
+          </dd>
+        </dl>
+      </div>
+      <dl>
+        <dt>
+          I tag
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>&lt;dl&gt;</code> e <code>&lt;/dl&gt;</code>:
+              racchiudono la &ldquo;definition list&rdquo;
+            </li>
+            <li>
+              <code>&lt;dt&gt;</code> e <code>&lt;/dt&gt;</code>:
+              identificano il termine da definire
+            </li>
+            <li>
+              <code>&lt;dd&gt;</code> e <code>&lt;/dd&gt;</code>:
+              racchiudono la definizione del termine.
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Le regole
+        </dt>
+        <dd>
+          <ul>
+            <li>Si possono avere elementi <code>&lt;dt&gt;</code>
+            senza elementi <code>&lt;dd&gt;</code> e viceversa,
+            ma non elementi privi di contenuto
+            </li>
+            <li>Si possono avere pi&ugrave; elementi
+            <code>&lt;dd&gt;</code> per un elemento
+            <code>&lt;dt&gt;</code>, se un termine ha pi&ugrave;
+            definizioni
+            </li>
+            <li>Un elemento <code>&lt;dd&gt;</code> pu&ograve;
+            contenere qualunque combinazione di elementi inline e
+            block-level
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p>
+        <a href="examples/definitionLists.html">Un esempio</a>
+      </p>
+    </div><!-- ============ Link  ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking"><span id="linking" class=
+          "currentItem">Link</span></a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div>
+    <!-- ============                        ============ -->
+    <div class="slide">
+      <h1>
+        Link
+      </h1>
+      <dl>
+        <dt>
+          Cosa sono
+        </dt>
+        <dd>
+          <ul>
+            <li>Sono l' essenza del web e la ragione del suo
+            successo
+            </li>
+            <li>Un link permette di collegare un documento ad un
+            altro, o anche ad una sua parte specifica, o anche ad
+            un altro servizio
+            </li>
+            <li>I link possono rinviare ad un altro documento
+            sullo stesso server o su qualunque altro server nel
+            mondo
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Come appaiono
+        </dt>
+        <dd>
+          <ul>
+            <li>Normalmente rappresentati dal browser con un
+            <a href="./" title="dummy link - solo per demo">testo
+            sottolineato</a>
+            </li>
+            <li>Il loro aspetto pu&ograve; essere determinato
+            tramite CSS
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          I tag
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>&lt;a href="destinazioneLink"&gt;</code>:
+              definisce la destinazione del link
+            </li>
+            <li>attributo <code>id</code>: identifica il punto
+            del documento a cui salta il link, e che verr&agrave;
+            reso visibile (opzione molto utile quando si salta ad
+            un documento lungo). Es.: <code>&lt;h1
+            id="capitolo3"&gt;</code>
+            </li>
+            <li>
+              <code>&lt;a
+              hreflang="&lt;en|it|&hellip;&gt;"&gt;</code>:
+              identifica la lingua della risorsa destinazione del
+              link. Importante per l'accessibili&agrave;
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ============                        ============ -->
+    <div class="slide">
+      <h1>
+        Uniform Resource Identificator (URI)
+      </h1>
+      <ul>
+        <li>Il valore dell' attributo <code>href</code> deve
+        essere un <em>Uniform Resource Locator</em> o, meglio, un
+        <em>Uniform Resource Identifier</em> (URI)
+        </li>
+        <li>Definisce un <em>indirizzo</em> Internet, il
+        <em>protocollo</em> da utilizzare e la <em>posizione</em>
+        del documento
+        </li>
+        <li>&Egrave; costituito da:
+          <ul>
+            <li>protocollo (http, ftp, news...)
+            </li>
+            <li>host (macchina.dominio.paese)
+            </li>
+            <li>port (normalmente non necessario)
+            </li>
+            <li>path
+            </li>
+            <li>filename
+            </li>
+          </ul>
+        </li>
+        <li>Un URI definisce l'<em>identit&agrave;</em> di
+        risorse sul Web
+        </li>
+      </ul>
+      <p>
+        Esempi:<br />
+        <code>protocollo://server:porta/percorso/nomedelfile</code><br />
+
+        <code>http://orario.isti.cnr.it:18080/Orario/jsp/index.jsp</code>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        URI, URL, URN
+      </h1>
+      <ul>
+        <li>
+          <em>URL</em>(Uniform Resource Locator) e <em>URN</em>
+          (Uniform Resource Name) sono <em>URI</em>
+        </li>
+        <li>
+          <em>URN</em>: definisce un nome, non fornisce dettagli
+          su come ottenere la risorsa su una rete
+        </li>
+        <li>
+          <em>URL</em>: definisce come recuperare la risorsa sul
+          Web
+        </li>
+      </ul>
+      <p class="incremental headline">
+        Cool URI don't change!
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        URL relativi
+      </h1>
+      <ul>
+        <li>Non contengono il protocollo o le informazioni sull'
+        host
+        </li>
+        <li>In genere fanno riferimento a documenti residenti
+        sullo stesso host su cui risiede il documento origine del
+        link
+        </li>
+        <li>
+          <code>xyz.html</code> definisce un file nella stessa
+          directory della pagina corrente
+        </li>
+        <li>".." indica la directory padre della directory
+        corrente<br />
+        </li>
+        <li>Supponendo che la pagina corrente sia nella directory
+        <em>path</em><br />
+          <code>../path2/filename</code><br />
+          <em>path2</em> e <em>path</em> sono directory allo
+          stesso livello
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Esempi di link
+      </h1>
+      <pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+    &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it"&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML-Linking&lt;/title&gt;
+    [&hellip;]
+  &lt;/head&gt; 
+  &lt;body&gt; 
+    &lt;h1 <em>id="indice"</em>&gt;Indice&lt;/h1&gt;
+      &lt;ol &gt;
+        &lt;li&gt;&lt;a <em>href="#id1</em>"&gt;Primo paragrafo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a <em>href="#id2</em>"&gt;Secondo paragrafo&lt;/a&gt;&lt;/li&gt;
+        [&hellip;]
+       &lt;/ol&gt;
+    &lt;h1 <em>id="id1</em>"&gt;Primo paragrafo&lt;/h1&gt;
+      &lt;p&gt;Questo &egrave; un paragrafo che [&hellip;]&lt;/p&gt;
+      &lt;p&gt;&Egrave; utile poter avere sempre la possibilit&agrave; di
+        tornare all' &lt;a <em>href="#indice"</em>&gt;indice&lt;/a&gt;&lt;/p&gt;
+    &lt;h1 <em>id="id2"</em>&gt;Secondo paragrafo&lt;/h1&gt;
+      [&hellip;]
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      <p>
+        <a href="examples/linking.html">Vai all' esempio
+        completo</a>
+      </p>
+    </div>
+    <!-- ============                        ============ -->
+    <div class="slide">
+      <h1>
+        Accessibilit&agrave; dei link (1)
+      </h1>
+      <div class="column15" style=
+      "float:right; padding:0.2em; border:0.1em solid red;">
+        <p>
+          <img class="floatright" style=
+          "width:100%; max-width:200px;" src="img/pigia_vi.jpg"
+          alt="bidone spazzatura con scritta spray 'pigia vi'"
+          title=
+          "bidone spazzatura con scritta spray 'pigia vi'" />
+        </p>
+        <p>
+          <img class="floatright" style=
+          "width:100%; max-width:61px;" src="img/la_linea.png"
+          title=
+          "la linea di Cavandoli, personaggio arrabbiato che fa un gestaccio"
+          alt="la linea di Cavandoli, personaggio arrabbiato" />
+        </p>
+      </div>
+      <div class="column85">
+        <dl>
+          <dt>
+            title
+          </dt>
+          <dd>
+            l'attributo <code>title</code> &egrave; utile per
+            chiarire lo scopo del collegamento
+            <pre>
+<code>
+&lt;a href="./riferimento.html"&gt;<span class=
+"red">clicca qui</span>&lt;/a&gt;</code><br />
+ // <span class=
+"red">doppiamente errato</span>: dipendente da dispositivo, non descrittivo
+</pre>
+          </dd>
+          <dt>
+            aiuto
+          </dt>
+          <dd>
+            Utile un collegamento ad una pagina di aiuto in ogni
+            pagina, (in cui elencare le accesskey...)
+            <pre>
+<code>&lt;a href="aiuto.html"&gt;Help&lt;/a&gt;</code>
+</pre>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <!-- ============                        ============ -->
+    <div class="slide">
+      <h1>
+        Accessibilit&agrave; dei link (2)
+      </h1>
+      <dl>
+        <dt>
+          per disabili visivi
+        </dt>
+        <dd>
+          Utile un link ad inizio pagina per saltare direttamente
+          al contenuto "reale"<br />
+          (esigenze di stile? con il CSS il collegamento
+          pu&ograve; essere spostato in una zona non
+          visibile...)<br />
+          <pre>
+<code>&lt;div id="salta_al_contenuto"&gt;&lt;a href="#contenuto"&gt;Salta al contenuto principale&lt;/a&gt;&lt;/div&gt; 
+  .... intestazione
+  ...  navigazione
+ &lt;div id="contenuto"&gt;
+ &lt;/div&gt;
+</code>
+</pre>
+        </dd>
+        <dt>
+          per gli screen reader
+        </dt>
+        <dd>
+          lingua della pagina riferita scritta differente da
+          quella della pagina corrente
+          <pre>
+&lt;a <em>hreflang="en"</em> href="..."&gt;....&lt;/a&gt; 
+</pre>
+        </dd>
+        <dt>
+          per disabili motori
+        </dt>
+        <dd>
+          separare link adiacenti (strutturalmente, ad es. con
+          liste 
+          <!-- , e spaziare graficamente con elementi tipografici tipo &quot;-&quot; -->)
+          per facilitare la selezione del link voluto
+          <pre>
+<code>&lt;h2&gt;Argomenti&lt;/h2&gt;
+&lt;ul class="navigazione"&gt;
+    &lt;li&gt;&lt;a href="romanzi.html"&gt;Romanzi&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="fanstascienza.html"&gt;Fantascienza&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="gialli.html"&gt;Gialli&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt; </code>
+</pre>
+        </dd>
+      </dl>
+    </div>
+    <!-- ============ Altri elementi block-level   ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements"><span id=
+          "blockLevelElements" class="currentItem">Altri elementi
+          block-level</span></a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        Testo preformattato
+      </h1>
+      <dl>
+        <dt>
+          Tag
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>&lt;pre&gt;</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Effetto
+        </dt>
+        <dd>
+          <ul>
+            <li>Il testo viene formattato esattamente come nella
+            codifica originale, preservando spazi, ritorni a
+            capo, etc.
+            </li>
+            <li>Usato spesso per includere nelle pagine web
+            codice sorgente
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Address
+      </h1>
+      <dl>
+        <dt>
+          Tag
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>&lt;address&gt;</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Effetto
+        </dt>
+        <dd>
+          <ul>
+            <li>Eredit&agrave; dei primi browser
+            </li>
+            <li>Il suo effetto potrebbe essere ottenuto con un
+            <code>&lt;p class="address"&gt;</code>
+            </li>
+            <li>Normalmente reso dal browser con testo in
+            corsivo: es.
+              <pre>
+&lt;address&gt;
+  Oreste Signore&lt;br /&gt;
+  CNR-ISTI
+&lt;/address&gt;
+</pre>Viene reso come:
+              <address class="sample">
+                Oreste Signore<br />
+                CNR-ISTI
+              </address>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Citazioni
+      </h1>
+      <dl>
+        <dt>
+          Motivazioni
+        </dt>
+        <dd>
+          Evidenziare testo proveniente da altre fonti
+          (importanza del copyright nel web, dove &egrave; facile
+          integrare contenuti prodotti da altri)
+        </dd>
+        <dt>
+          Tag
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>&lt;blockquote cite=" "&gt;</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Esempio
+        </dt>
+        <dd>
+          <pre>
+&lt;p&gt;Il ruolo del W3C &egrave;:&lt;/p&gt;
+<em>&lt;blockquote cite="http://www.w3.org"&gt;</em>
+&lt;p&gt;The World Wide Web Consortium (<span class=
+"emph1">&lt;acronym title="World Wide Web Consortium"&gt;W3C&lt;/acronym&gt;</span>)
+develops interoperable technologies (specifications, guidelines, software, 
+and tools) to lead the Web to its full potential. 
+W3C is a forum for information, commerce, communication, and collective
+understanding. On this page, you'll find [&hellip;]&lt;/p&gt;
+<em>&lt;/blockquote&gt;</em>
+</pre>
+        </dd>
+        <dt>
+          Effetto
+        </dt>
+        <dd>
+          <p>
+            Il ruolo del W3C &egrave;:
+          </p>
+          <blockquote cite="http://www.w3.org">
+            <p>
+              The World Wide Web Consortium (<acronym title=
+              "World Wide Web Consortium">W3C</acronym>) develops
+              interoperable technologies (specifications,
+              guidelines, software, and tools) to lead the Web to
+              its full potential. W3C is a forum for information,
+              commerce, communication, and collective
+              understanding. On this page, you'll find [&hellip;]
+            </p>
+          </blockquote>
+        </dd>
+        <dt>
+          Nota
+        </dt>
+        <dd>
+          Non esiste un meccanismo per vedere il valore dell'
+          attributo <code>cite</code>, se non l' esame diretto
+          del codice sorgente della pagina
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Riga orizzontale
+      </h1>
+      <dl>
+        <dt>
+          Motivazioni
+        </dt>
+        <dd>
+          Evidenziare e separare contenuti nella pagina
+        </dd>
+        <dt>
+          Tag
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>&lt;hr /&gt;</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Esempio
+        </dt>
+        <dd>
+          <pre>
+&lt;p&gt;Prima notizia&lt;/p&gt;
+<em>&lt;hr /&gt;</em>
+&lt;p&gt;Seconda notizia&lt;/p&gt;
+</pre>
+        </dd>
+        <dt>
+          Effetto
+        </dt>
+        <dd class="sample">
+          <p>
+            Prima notizia
+          </p>
+          <hr />
+          <p>
+            Seconda notizia
+          </p>
+        </dd>
+        <dt>
+          Nota
+        </dt>
+        <dd>
+          &Egrave; pi&ugrave; un elemento stilistico che di
+          contenuto
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        L' elemento generico &lt;div&gt;
+      </h1>
+      <dl>
+        <dt>
+          Motivazioni
+        </dt>
+        <dd>
+          Serve a raggruppare un insieme di elementi
+        </dd>
+        <dt>
+          Tag
+        </dt>
+        <dd>
+          <code>&lt;div&gt;</code>
+        </dd><!-- <dt>
+          Esempio
+        </dt>
+        <dt>
+          Effetto
+        </dt> -->
+        <dt>
+          Note
+        </dt>
+        <dd>
+          <ul>
+            <li>&Egrave; un generico elemento block-level
+            </li>
+            <li>Pu&ograve; contenere elementi block-level e
+            inline
+            </li>
+            <li>Pu&ograve; avere un attributo <code>class</code>
+            </li>
+            <li>Pu&ograve; avere un attributo <code>id</code>
+            </li>
+            <li>Molto potente per l' impaginazione e lo stile
+            della pagina (ampiamente usato nei CSS)
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ============ Altri elementi inline   ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements"><span id="inlineElements"
+          class="currentItem">Altri elementi inline</span></a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        Elementi importanti della frase
+      </h1>
+      <ul>
+        <li>Sono elementi inline che definiscono la semantica del
+        testo racchiuso tra i tag.
+        </li>
+        <li>Possono essere utilizzati dal browser (che li
+        presenter&agrave; in maniera diversa), ma anche da
+        spell-checker o motori di ricerca e indicizzazione
+        </li>
+        <li>
+          <code>cite</code> citazione o riferimento ad altro
+          documento
+        </li>
+        <li>
+          <code>dfn</code> punto di definizione del termine
+        </li>
+        <li>
+          <code>code</code> frammento di codice
+        </li>
+        <li>
+          <code>samp</code> esempio di output di programmi,
+          script, etc.
+        </li>
+        <li>
+          <code>var</code> argomento o variabile di un programma
+        </li>
+        <li>
+          <code>abbr</code> abbreviazione (usa l' attributo title
+          per definire l' abbreviazione)
+        </li>
+        <li>
+          <code>acronym</code> acronimo (usa l' attributo title
+          per definire l' acronimo)
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Matematica
+      </h1>
+      <ul>
+        <li>Non &egrave; particolarmente sviluppato
+        </li>
+        <li>Esiste MathML, un apposito linguaggio di markup
+        </li>
+        <li>&Egrave; possibile codificare <em>apici</em>
+        (elemento &lt;sup&gt;) e <em>pedici</em> (elemento
+        &lt;sub&gt;)<br />
+          <pre>
+a&lt;sub&gt;i,j&lt;/sub&gt;=k*x&lt;sup&gt;i&lt;/sup&gt;*y&lt;sup&gt;j&lt;/sup&gt;
+</pre>
+          <pre class="sample">
+a<sub>i,j</sub>=k*x<sup>i</sup>*y<sup>j</sup>
+</pre>
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Citazioni
+      </h1>
+      <dl>
+        <dt>
+          Motivazioni
+        </dt>
+        <dd>
+          Ha la stessa funzione dell' elemento
+          <code>blockquote</code>, ma consente di codificare
+          citazioni come elementi <em>inline</em> (nel paragrafo
+          corrente)
+        </dd>
+        <dt>
+          Tag
+        </dt>
+        <dd>
+          <code>&lt;q cite=""&gt;</code>
+        </dd>
+        <dt>
+          Esempio
+        </dt>
+        <dd>
+          <pre>
+&lt;p&gt;Oreste disse <em>&lt;q cite="http://www.weblab.isti.cnr.it/people/oreste"&gt;</em>
+Mi sembra che Dante abbia detto 
+<em>&lt;q cite="http://it.wikipedia.org/wiki/Dante_Alighieri"&gt;</em>Non ti curar di loro, ma guarda e passa<em>&lt;/q&gt;</em> 
+e che questa sia un' ottima massima<em>&lt;/q&gt;</em>.&lt;/p&gt;
+</pre>
+        </dd>
+        <dt>
+          Effetto
+        </dt>
+        <dd class="sample">
+          <p>
+            Oreste disse <q cite=
+            "http://www.weblab.isti.cnr.it/people/oreste">Mi
+            sembra che Dante abbia detto <q cite=
+            "http://it.wikipedia.org/wiki/Dante_Alighieri">Non ti
+            curar di loro, ma guarda e passa</q> e che questa sia
+            un' ottima massima</q>.
+          </p>
+        </dd>
+        <dt>
+          Note
+        </dt>
+        <dd>
+          <ul>
+            <li>Il browser dovrebbe introdurre livelli diversi di
+            apici
+            </li>
+            <li>Poco supportato:
+              <ul>
+                <li>IE non introduce virgolette
+                </li>
+                <li>Opera usa lo stesso tipo di virgolette
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        L' elemento generico &lt;span&gt;
+      </h1>
+      <dl>
+        <dt>
+          Motivazioni
+        </dt>
+        <dd>
+          Serve a raggruppare del testo ed elementi inline in
+          modo da attribuirgli un comportamento globale
+        </dd>
+        <dt>
+          Tag
+        </dt>
+        <dd>
+          <code>&lt;span&gt;</code>
+        </dd><!-- <dt>
+          Esempio
+        </dt>
+        <dt>
+          Effetto
+        </dt> -->
+        <dt>
+          Note
+        </dt>
+        <dd>
+          <ul>
+            <li>&Egrave; un generico elemento <em>inline</em>
+            </li>
+            <li>Pu&ograve; contenere qualunque elemento inline
+            </li>
+            <li>Pu&ograve; avere un attributo <code>class</code>
+            </li>
+            <li>Pu&ograve; avere un attributo <code>id</code>
+            </li>
+            <li>Molto potente per l' impaginazione e lo stile
+            della pagina (ampiamente usato nei CSS)
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <!-- ============ Immagini   ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images"><span id="images" class=
+          "currentItem">Immagini</span></a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div>
+    <!-- ============================================================ -->
+    <div class="slide">
+      <h1>
+        &lt;img&gt; e &lt;object&gt;
+      </h1>
+      <dl>
+        <dt>
+          <code>&lt;img&gt;</code>
+        </dt>
+        <dd>
+          <ul>
+            <li>&Egrave; il meccanismo pi&ugrave; semplice
+            </li>
+            <li>Non fornisce molte alternative se l' immagine non
+            &egrave; disponibile
+            </li>
+            <li>Era previsto l' abbandono di questo tag
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <code>&lt;object&gt;</code>
+        </dt>
+        <dd>
+          <ul>
+            <li>Consente di utilizzare alternative
+            </li>
+            <li>Molto utile quando sono richieste particolari
+            funzionalit&agrave; al browser
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Immagini inline
+      </h1>
+      <ul>
+        <li>Il tag <code>&lt;img&gt;</code> &egrave; un
+        &ldquo;<em>empty element</em>&rdquo;
+        </li>
+        <li>Le immagini possono essere posizionate con uno
+        <em>style sheet</em>
+        </li>
+      </ul>
+      <p>
+        Gli attributi
+      </p>
+      <dl>
+        <dt>
+          src
+        </dt>
+        <dd>
+          <ul>
+            <li>Specifica un URL per l' immagine da mostrare
+            </li>
+            <li>l' URL pu&ograve; essere assoluto o relativo
+            </li>
+            <li>Attributo obbligatorio per ogni elemento
+            <code>&lt;img&gt;</code>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          alt
+        </dt>
+        <dd>
+          <ul>
+            <li>Descrizione testuale dell' immagine
+            </li>
+            <li>Testo che compare se l' immagine non &egrave;
+            disponibile
+            </li>
+            <li>I browser puramente testuali (o i browser vocali)
+            restituiscono il contenuto di questo attributo
+            </li>
+            <li>&Egrave; un attributo obbligatorio
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          title
+        </dt>
+        <dd>
+          <ul>
+            <li>quando il mouse passa sull'immagine, viene
+            restituito il contenuto di questo attributo
+            </li>
+            <li>i vari browser si comportano in maniera diversa
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide">
+      <h1>
+        Specifica delle dimensioni dell' immagine
+      </h1>
+      <dl>
+        <dt>
+          height
+        </dt>
+        <dd>
+          <ul>
+            <li>Specifica l' <em>altezza</em> desiderata dell'
+            immagine in pixel (pu&ograve; essere indicata anche
+            in percentuale)
+            </li>
+            <li>Meglio specificarlo, quando &egrave; noto
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          width
+        </dt>
+        <dd>
+          <ul>
+            <li>Specifica la <em>larghezza</em> desiderata dell'
+            immagine in pixel (pu&ograve; essere indicata anche
+            in percentuale)
+            </li>
+            <li>Meglio specificarlo, quando &egrave; noto
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          max-width (o max-height)
+        </dt>
+        <dd>
+          <ul>
+            <li>Specifica la <em>larghezza</em> (o l'
+            <em>altezza</em>) <em>massima</em> dell' immagine in
+            pixel (pu&ograve; essere indicata anche in
+            percentuale)
+            </li>
+            <li>Meglio specificarlo, per evitare la sgranatura
+            del' immagine o cattive impaginazioni.
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Nota
+        </dt>
+        <dd>
+          <ul>
+            <li>Se vengono fornite altezza e larghezza, il
+            browser riserva lo spazio necessario per l' immagine
+            prima che venga scaricata dalla rete
+            </li>
+            <li>Rende pi&ugrave; rapida la presentazione dei
+            contenuti
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide">
+      <h1>
+        Un esempio: &lt;img&gt; inline con dimensioni esatte
+      </h1>
+      <pre>
+&lt;p&gt;<br />
+       The following image is of a happy face image defined in
+      the gif image format:
+       <em>&lt;img src="happface.gif" alt="emoticon: faccina ridente" title="faccina ridente" width="48" height="48" /&gt;</em>
+       . The image element is a character-level or inline element
+      which means
+       that it appears like a rather large letter or word
+       in the middle of the paragraph. Character-level
+      elements
+       form part of the text flow within the paragraph.
+       Control of the image's position is usually
+       done with a style sheet.
+       &lt;p&gt;
+</pre>
+      <p class="sample">
+        The following image is of a happy face image defined in
+        the gif image format: <img src="./images/happface.gif"
+        alt="emoticon: faccina ridente" title="faccina ridente"
+        width="48" height="48" />. The image element is a
+        character-level or inline element which means that it
+        appears like a rather large letter or word in the middle
+        of the paragraph. Character-level elements form part of
+        the text flow within the paragraph. Control of the
+        image's position is usually done with a style sheet.
+      </p>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide">
+      <h1>
+        Un esempio: &lt;img&gt; inline con dimensioni ingrandite
+      </h1>
+      <pre>
+&lt;p&gt;<br />
+       The following image is of a happy face image defined in
+      the gif image format:
+       <em>&lt;img src="happface.gif" alt="emoticon: faccina ridente non controllata" title="faccina ridente" width="192" height="192" /&gt;</em>.
+      The image element is a character-level or inline element
+      which means
+       that it appears like a rather large letter or word
+       in the middle of the paragraph. Character-level
+      elements
+       form part of the text flow within the paragraph.
+       Control of the image's position is usually
+       done with a style sheet.
+       &lt;p&gt;
+</pre>
+      <p class="sample">
+        The following image is of a happy face image defined in
+        the gif image format: <img src="./images/happface.gif"
+        alt="emoticon: faccina ridente" title=
+        "faccina ridente non controllata" width="192" height=
+        "192" />. The image element is a character-level or
+        inline element which means that it appears like a rather
+        large letter or word in the middle of the paragraph.
+        Character-level elements form part of the text flow
+        within the paragraph. Control of the image's position is
+        usually done with a style sheet.
+      </p>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide">
+      <h1>
+        Object
+      </h1>
+      <dl>
+        <dt>
+          Motivazioni
+        </dt>
+        <dd>
+          <ul>
+            <li>Permette di specificare varie alternative
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Tag e (alcuni) attributi
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <code>object</code> definisce uno di un insieme di
+              elementi
+            </li>
+            <li>
+              <code>data=</code> specifica l' URL
+            </li>
+            <li>
+              <code>type=</code> specifica il MIME-type
+            </li>
+            <li>
+              <code>standby=</code> specifica un messaggio da
+              presentare mentre viene scaricata l' immagine
+            </li>
+            <li>
+              <code>height=</code>, <code>width=</code>,
+              <code>max-width=</code>, <code>alt=</code>, etc.
+              come al solito
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Esempio
+        </dt>
+        <dd>
+          <pre>
+&lt;object width="349" height="91" data="bobbin.jpg" type="image/jpg"
+standby="JPEG image downloading"&gt;
+&lt;object width="349" height="91" data="bobbin.png" type="image/png"
+standby="PNG image downloading" /&gt;
+&lt;img width="349" height="91" src="bobbin.gif" alt="bobbin photo" /&gt;
+No image available
+&lt;/object&gt;
+</pre>
+        </dd>
+        <dt>
+          Effetto
+        </dt>
+        <dd>
+          <ul>
+            <li>Se il primo tipo di object non &egrave;
+            disponibile, prova con il secondo, e cos&igrave; via
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================ -->
+    <!-- ============ Tabelle  ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables"><span id="tables" class=
+          "currentItem">Tabelle</span></a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        Tabelle
+      </h1>
+      <p>
+        <em>Questo argomento non viene trattato in dettaglio</em>
+      </p>
+      <ul>
+        <li>
+          <em>Utilizzare per rappresentare tabelle di dati, NON
+          per impaginare</em>
+        </li>
+        <li>Le celle possono contenere testo, immagini,
+        collegamenti o <em>altre tabelle</em>
+        </li>
+      </ul>
+      <p>
+        Formato di base:
+      </p>
+      <pre>
+<code class="exmpl">&lt;table <span class=
+"emph1">summary</span>="Questa &egrave; una tabella a due colonne, con una intestazione. Leggere le righe da sinistra a destra"&gt;
+  &lt;caption&gt;Titolo tabella&lt;/caption&gt;
+    <span class="green">&lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Prima intestazione&lt;/th&gt;&lt;th&gt;Seconda intestazione&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;</span>
+    <span class="magenta">&lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Prima riga prima colonna&lt;/td&gt;&lt;td&gt;prima riga seconda colonna&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Seconda riga prima colonna&lt;/td&gt;&lt;td&gt;Seconda riga seconda colonna&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;</span>
+&lt;/table&gt;</code>
+</pre>
+      <dl>
+        <dt>
+          attributo <em>summary</em>
+        </dt>
+        <dd>
+          Fornire un sommario relativo allo scopo e alla
+          struttura per i browser che rappresentano media non
+          visuali
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          elemento <em>caption</em>
+        </dt>
+        <dd>
+          Fornire un titolo
+        </dd>
+      </dl>
+    </div><!-- ============ Forms   ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms"><span id="forms" class=
+          "currentItem">Moduli (forms)</span></a>
+        </li>
+        <li>
+          <a href="#head">Head del documento</a>
+        </li>
+      </ul>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        Moduli (forms)
+      </h1>
+      <ul>
+        <li>Utilizzati per far inserire informazioni e valori da
+        spedire al server per elaborazioni
+        </li>
+        <li>Il browser:
+          <ul>
+            <li>raccoglie i dati inseriti dall'utente
+            </li>
+            <li>crea una connessione HTTP e invia le informazioni
+            al destinatario specificato nell'attributo ACTION del
+            form
+            </li>
+          </ul>
+        </li>
+        <li>Il destinatario:
+          <ul>
+            <li>riceve i dati
+            </li>
+            <li>li elabora e genera un documento di risposta, che
+            viene spedito, tramite il server HTTP, al browser
+            </li>
+          </ul>
+        </li>
+        <li>Un form pu&ograve; prevedere: campi di inserimento
+        dati, pulsanti, bottoni radio, checkbox, liste a
+        scomparsa, ecc.
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Un esempio di form
+      </h1>
+      <ul class="incremental">
+        <li>Il <a href="esempi/form.html">form</a>&hellip;
+        </li>
+        <li>&hellip;e il codice
+          <pre>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Form XHTML&lt;/title&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+    &lt;script type="text/javascript" src="validaform.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form action="http://www.regione.toscana.it:8080/servlet/Controllore" method="post"
+          enctype="multipart/form-data" &gt;
+      &lt;p&gt;&lt;input type="hidden" name="nascosto" value="v" /&gt;
+      &lt;label for="nome"&gt;Text&lt;/label&gt; &lt;input type="text" id="nome" name="nome" /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;label&gt;Password &lt;input type="password" name="password" /&gt;&lt;/label&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;label&gt;Checkbox &lt;input type="checkbox" name="check" value="c1" /&gt; 
+       &lt;input type="checkbox" name="check" value="c2" /&gt;&lt;/label&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;label for="rad"&gt;Radio&lt;/label&gt;
+                   &lt;input type="radio" name="rad" value="r1" /&gt;
+                   &lt;input type="radio" name="rad" value="r2" /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;label&gt;File &lt;input type="file" name="file" /&gt;&lt;/label&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;label&gt;Select &lt;select name="select1"&gt;
+                          &lt;option value="1"&gt;s1&lt;/option&gt;
+                          &lt;option value="2"&gt;s2&lt;/option&gt;
+                       &lt;/select&gt;&lt;/label&gt;&lt;br /&gt;
+      &lt;label&gt;Textarea &lt;textarea rows="3" cols="20" name="area"&gt;&lt;/textarea&gt;&lt;/label&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;input type="submit" /&gt; &lt;input type="reset" /&gt;&lt;/p&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  
+</pre>
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Attributi di form
+      </h1>
+      <p>
+        Raggruppa tutti i controlli che debbono raccogliere dati
+        per un destinatario.<br />
+        Attributi:
+      </p>
+      <ul>
+        <li>
+          <em>action</em>: l'URI dell'applicazione server-side
+          che ricever&agrave; i dati
+        </li>
+        <li>
+          <em>method</em>: il metodo HTTP che deve essere usato
+          per i dati
+          <dl>
+            <dt>
+              GET
+            </dt>
+            <dd>
+              i dati vengono trasferiti <em>in chiaro</em> nella
+              stringa dell'URI (con un punto interrogativo
+              (&ldquo;<code>?</code>&rdquo;) come separatore) e
+              quindi sono <em>visibili</em>
+            </dd>
+            <dt>
+              POST
+            </dt>
+            <dd>
+              i dati sono codificati nel corpo del form (metodo
+              <em>consigliato</em>)
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <em>id</em>: un identificatore univoco per il form
+        </li>
+        <li>
+          <em>enctype</em>: il metodo di codifica dei dati da
+          usare
+          <ul>
+            <li>default 'application/x-www-form-urlencoded': i
+            codici non alfanumerici sono sostituiti da '%HH' (HH:
+            codice esadecimale del carattere), gli spazi sono
+            sostituiti da '+', i nomi dei controlli sono separati
+            da '&amp;', e il valore &egrave; separato dal nome da
+            '=')
+            </li>
+            <li>'multipart/form-data' per inviare anche file
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Elementi di form: input
+      </h1>
+      <p>
+        Raccoglie la maggior parte dei tipi di controllo
+        disponibili in un form. Attributi:
+      </p>
+      <ul>
+        <li>
+          <em>type</em>: rappresenta il tipo di controllo da
+          istanziare: text, password, checkbox, radio, submit,
+          reset, file, hidden, image, button
+        </li>
+        <!--   <li>NAME: il nome che verr&agrave; inviato all'applicazione server-side insieme al valore inserito</li> -->
+        <li>
+          <em>id</em>: l'identificativo del campo
+        </li>
+        <li>
+          <em>value</em>: il valore di default (per i controlli
+          di testo) o selezionato (per i controlli di tipo
+          bottone) che viene presentato all'utente e passato
+          all'applicazione server-side
+        </li>
+        <li>
+          <em>size</em> e <em>maxlength</em>: dimensione prevista
+          e lunghezza massima
+        </li>
+        <li>
+          <em>disabled</em>, <em>checked</em>: per i bottoni,
+          radio e checkbox
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Altri elementi di form: textarea, select, optgroup,
+        option
+      </h1>
+      <ul>
+        <li>
+          <em>textarea</em><br />
+          Area di inserimento testo. Attributi (oltre a NAME):
+          <ul>
+            <li>
+              <em>rows</em>: il numero di righe previste
+            </li>
+            <li>
+              <em>cols</em>: il numero di colonne previste
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>select</em>, <em>optgroup</em><br />
+          Una lista di opzioni e sotto-opzioni. Attributi (oltre
+          a NAME):
+          <ul>
+            <li>
+              <em>size</em>: il numero di opzioni visibili
+            </li>
+            <li>
+              <em>multiple</em>: Vero se la lista permette
+              selezioni multiple
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>option</em><br />
+          Una opzione in un <em>select</em> o in un
+          <em>optgroup</em>
+          <ul>
+            <li>
+              <em>selected</em>: vero se l'elemento &egrave;
+              selezionato all'avvio
+            </li>
+            <li>
+              <em>label</em>: scritta visibile all'utente
+            </li>
+            <li>
+              <em>value</em>: valore passato all'applicazione
+              server-side
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        tabindex
+      </h1>
+      <p>
+        Il normale ordine di scorrimento con il tasto tabulatore
+        pu&ograve; essere modificato sulla base dell'importanza
+        dei vari componenti della pagina web:
+      </p>
+      <pre>
+<code>
+&lt;a href="" tabindex="2"&gt;two&lt;/a&gt;
+&hellip;
+&lt;input type="text" name="nome" 
+      title="indica il nome" tabindex="3"&gt;
+&lt;a href="" tabindex="1"&gt;one&lt;/a&gt;</code>
+</pre>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        JavaScript: validare form client-side
+      </h1>
+      <p>
+        un <a href="./esempi/validazioneform.html">esempio</a>
+      </p>
+      <p>
+        In caso di informazioni che richiedono un formato
+        particolare, come le date, fornire un esempio:
+      </p>
+      <pre>
+<code>&lt;label for="data"&gt;Data (gg-mm-aaaa)&lt;/label&gt;
+&lt;input type="text" name="data" id="data" /&gt;</code>
+</pre>
+      <p>
+        <em>dalle Tecniche di Scripting per le Linee guida per
+        l'accessibilit&agrave; dei contenuti Web (WCAG) 2.0</em>
+      </p>
+      <p>
+        Nel corso CSS vedremo form pi&ugrave; efficaci e
+        ulteriori tecniche di accessibilit&agrave;
+      </p>
+    </div><!-- ============      ============ -->
+    <div class="slide">
+      <h1>
+        <span class="red">Esercizio</span>
+      </h1>
+      <p>
+        Scrivere (aggiungere al documento dell'esercizio
+        precedente)<br />
+        un documento XHTML1.1 che contenga elementi meta,
+        paragrafi, intestazioni, attributi, liste e un form
+      </p>
+      <p>
+        Utilizzate Quanta plus
+      </p>
+    </div><!-- ============ liste   ============ -->
+    <div class="slide">
+      <h1>
+        Contenuto
+      </h1>
+      <ul>
+        <li>
+          <a href="#intro">Introduzione</a>
+        </li>
+        <li>
+          <a href="#basic">Struttura di base</a>
+        </li>
+        <li>
+          <a href="#lists">Liste</a>
+        </li>
+        <li>
+          <a href="#linking">Link</a>
+        </li>
+        <li>
+          <a href="#blockLevelElements">Altri elementi
+          block-level</a>
+        </li>
+        <li>
+          <a href="#inlineElements">Altri elementi inline</a>
+        </li>
+        <li>
+          <a href="#images">Immagini</a>
+        </li>
+        <li>
+          <a href="#tables">Tabelle</a>
+        </li>
+        <li>
+          <a href="#forms">Moduli (forms)</a>
+        </li>
+        <li>
+          <a href="#head"><span id="head" class=
+          "currentItem">Head del documento</span></a>
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Sezione Meta
+      </h1>
+      <pre>
+<code>&lt;?xml version="1.0" <em>encoding="utf-8"</em>?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:doap="http://usefulinc.com/ns/doap#"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      <span class="red">xml:lang="it"</span>&gt;
+  &lt;head&gt;
+    &lt;meta name="<span class=
+"green">Description</span>" content="Home page Persona" /&gt;
+    &lt;meta name="<span class=
+"green">Keywords</span>" content="Semantic Web, Sistemi di Supporto alle Decisioni, Tecnologie Web, Multimedia, 
+                                   Web Services, Java Enterprise, W3C, OWL, RDF, XML, XSL, AIDA, CITEL, DTT, CIE" /&gt;
+    &lt;meta name="<span class=
+"green">Author</span>" content="email1@server.di.posta" /&gt;
+    &lt;meta name="<span class=
+"green">Author</span>" content="email2@server.di.posta" /&gt;
+    <span class=
+"red">&lt;meta http-equiv="Content-Type" content="text/html; <em>charset=utf-8</em>" /&gt;
+    &lt;meta name="Language" content="it" /&gt;</span>
+    <span class=
+"red">&lt;title&gt;</span>Persona :: Home Page<span class=
+"red">&lt;/title&gt;</span>
+    <span class=
+"green">&lt;link href="stile.css" rel="stylesheet" type="text/css" /&gt;</span>
+    &lt;link href="stile_spec.css" rel="stylesheet" type="text/css" /&gt;
+    <span class=
+"green">&lt;link rel="meta" type="application/rdf+xml" title="FOAF" href="</span>./persona.rdf" /&gt;
+    <span class=
+"green">&lt;script type="text/javascript" src="script.js"&gt;&lt;/script&gt;</span>
+    &lt;script type="text/javascript" src="twitter-html/script.js"&gt;&lt;/script&gt;
+    <span class="green">&lt;style type="text/css"&gt;
+      .red { color:red; }
+    &lt;/style&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Alcuni strumenti
+      </h1>
+      <ul>
+        <li>
+          <a href="http://validator.w3.org/">W3C validator</a>
+        </li>
+        <li>
+          <a href="http://tidy.sourceforge.net/">Tidy</a>
+        </li>
+        <li>
+          <a href="http://valet.htmlhelp.com/tidy/">Online
+          Tidy</a>
+        </li>
+        <li>Quanta plus
+        </li>
+        <li>Firefox plugin: <a href=
+        "http://getfirebug.com/">Firebug</a> , <a href=
+        "https://addons.mozilla.org/en-US/firefox/addon/60">WebDeveloper</a>
+        </li>
+        <li>
+          <a href="http://www.htmlkit.com/">HTML Kit</a>
+        </li>
+        <li>...
+        </li>
+        <li>Aptana
+        </li>
+        <li>Bluefish
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p>
+      <p>
+        ... e <a href="../slidy/answer.mp3">risposte</a>
+      </p>
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> (<a href=
+        "http://www.w3c.it/education/2012/upra/html/">http://www.w3c.it/education/2012/upra/html/</a>)
+      </p>
+      <p>
+        Queste slide fanno parte del materiale predisposto per il
+        corso <a href=
+        "http://www.w3c.it/education/2012/upra">Architettura del
+        Web</a>
+      </p>
+    </div>
+    <!-- ===================================================================== -->
+  </body>
+</html>

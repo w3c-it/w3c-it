@@ -1,0 +1,44 @@
+#contenitore3 {
+    float:left;
+    width:100%;
+    background:green;
+    overflow:hidden;
+    position:relative;
+}
+#contenitore2 {
+    float:left;
+    width:100%;
+    background:yellow;
+    position:relative;
+    right:30%;
+}
+#contenitore1 {
+    float:left;
+    width:100%;
+    background:red;
+    position:relative;
+    right:40%;
+}
+#colonna1 {
+    float:left;
+    width:26%;
+    position:relative;
+    left:72%;
+    overflow:hidden;
+}
+#colonna2 {
+    float:left;
+    width:36%;
+    position:relative;
+    left:76%;
+    overflow:hidden;
+}
+#colonna3 {
+    float:left;
+    width:26%;
+    position:relative;
+    left:80%;
+    overflow:hidden;
+}
+
+
