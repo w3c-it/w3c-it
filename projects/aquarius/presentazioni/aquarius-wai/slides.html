@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="it"
+      lang="it">
+  <head>
+    <meta name="generator"
+          content=
+          "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+    <title>
+      aquarius-wai
+    </title>
+    <meta content="application/xhtml+xml;"
+          http-equiv="Content-Type" />
+    <meta content="charset=utf-8" />
+    <meta name="copyright"
+          content="Copyright &copy; Oreste Signore" />
+    <meta name="font-size-adjustment"
+          content="-2" />
+    <link rel="stylesheet"
+          href="./slidy/slidy.css"
+          type="text/css"
+          media="screen, projection, print" />
+    <link rel="stylesheet"
+          href="./slidy/w3c-blue.css"
+          type="text/css"
+          media="screen, projection, print" />
+    <link rel="stylesheet"
+          href="./slidy/slideStyle.css"
+          type="text/css"
+          media="screen, projection, print" />
+<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+div.slide pre { 
+     color: purple;
+     line-height: 110%;
+   /*  margin: 1em;  */
+     padding-bottom: 0em;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     padding-left: 1em;
+     background-color: #dbdcde;
+     font-size: 80%;
+     border: solid thin black;
+  }
+.emph2 {
+   background-color: #ffffff;
+   }
+   .photo {
+       float: right;
+       margin-left: 1em;
+       text-align: center;
+       font-size: smaller;
+       }
+    .photo img {
+       border: thin black solid;
+       padding: 0;
+       }
+div.slide code {
+   color: #ff0099;
+   font-size: 100%;
+   font-weight: bold;
+   }
+-->
+/*]]>*/
+</style>
+<script src="./slidy/slidy.js"
+      type="text/javascript">
+</script>
+  </head>
+  <body>
+    <!--  ========================================================== -->
+    <div class="slide">
+      <h1>
+        W3C e accessibilit&agrave;
+      </h1>
+      <p>
+        <a href=
+        "http://www.weblab.isti.cnr.it/people/oreste/">Oreste
+        Signore</a>, &lt;<a href=
+        "mailto:oreste@w3c.it">oreste@w3c.it</a>&gt;<br />
+        Responsabile Ufficio Italiano W3C<br />
+        Area della Ricerca CNR - via Moruzzi, 1 - 56124 Pisa
+      </p>
+      <hr />
+      <p>
+        <em><a href=
+        "http://www.w3c.it/projects/aquarius/moduloA.html">Convegno
+        Aquarius</a></em>
+      </p>
+      <p>
+        Pisa, 4 ottobre 2010
+      </p>
+      <hr />
+      <!-- <p><em>Presentazione e abstract saranno disponibili a breve</em></p> -->
+      <p>
+        Presentazione: <a href="./slides.html"
+           hreflang="it"
+           title=
+           "aquarius-wai - presentazione">http://www.w3c.it/projects/aquarius/presentazioni/aquarius-wai/slides.html</a><br />
+
+        Versione pdf: <a href=
+        "http://www.w3c.it/projects/aquarius/presentazioni/aquarius-wai/aquarius-wai.pdf"
+           hreflang="it"
+           title=
+           "aquarius-wai - pdf presentazione">http://www.w3c.it/projects/aquarius/presentazioni/aquarius-wai/aquarius-wai.pdf</a>
+        <!--  Abstract: <a href="./abstract.pdf" hreflang="it" title=
+        "wsb08 - abstract">http://www.w3c.it/talks/2010/wsb08/abstract.pdf</a> -->
+      </p><a href="http://www.w3c.it/"><img src=
+      "./slidy/itlogo-20010115.png"
+           alt="Cover page W3C Office Logo"
+           style="width:40%; max-width: 279px" /></a> <a href=
+           "http://www.weblab.isti.cnr.it/"><img src=
+           "./slidy/weblabWithText.jpg"
+           alt="Cover page Weblab Logo"
+           style="width:10%; max-width: 150px" /></a> <a href=
+           "http://www.w3c.it/projects/aquarius/"><img src=
+           "./images/logoCoesa200.png"
+           alt="Cover page Aquarius Logo"
+           style="width:10%; max-width: 200px" /></a> <a href=
+           "http://validator.w3.org/check/referer"><img src=
+           "./slidy/valid-xhtml10.png"
+           alt="Valid XHTML 1.0!"
+           style="width:15%; max-width: 88px" /></a> <a href=
+           "http://jigsaw.w3.org/css-validator/"><img src=
+           "./slidy/valid-css.png"
+           alt="Valid CSS!"
+           style="width:15%; max-width: 88px" /></a>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Ringraziamenti
+      </h1>
+      <ul>
+        <li>Questa presentazione utilizza anche materiale
+        proveniente da:
+          <ul>
+            <li>presentazioni tenute da <a href=
+            "http://www.w3.org/People/all#ivan">Ivan Herman</a>,
+            W3C Semantic Web Activity Lead
+            </li>
+            <li>presentazioni di <a href=
+            "http://www.w3.org/People/all#steve">Steve Bratt</a>
+            Chief Executive Officer del W3C
+            </li>
+            <li>presentazioni di <a href=
+            "http://www.w3.org/People/Shawn/">Shawn Lawton
+            Henry</a> (<em>W3C - Web Accessibility
+            Initiative</em>)
+            </li>
+            <li>presentazioni di <a href=
+            "http://www.w3.org/People/all#jalonso">Jos&eacute;
+            Manuel Alonso</a> (<em>W3C - eGovernment Lead</em>)
+            </li>
+          </ul>
+        </li>
+        <li>Il materiale di questa presentazione pu&ograve;
+        essere riutilizzato nel <em>rispetto</em> dei diritti di
+        propriet&agrave; intellettuale, secondo la normale prassi
+        scientifica, e delle regole del W3C
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Una riflessione
+      </h1>
+      <blockquote lang="en"
+                  xml:lang="en">
+        <p>
+          &ldquo; The people who built the Internet and Web have
+          a real appreciation of the <em>value of
+          individuals</em> and the value of systems in which
+          individuals play their role, with both a firm sense of
+          their own identity and a firm sense of some common
+          good.<br />
+          [&hellip;]<br />
+          I was very lucky, in working at CERN, to be in an
+          environment that <a href=
+          "http://www.uua.org/">Unitarian Universalists</a> and
+          physicists would equally appreciate: one of <em>mutual
+          respect</em>, and of building something very great
+          through <em>collective effort</em> that was well beyond
+          the means of any one person - <em>without a huge
+          bureaucratic regime</em>.<br />
+          [&hellip;]<br />
+          The system produced a weird and wonderful machine,
+          which needed care to maintain, but could take advantage
+          of the <em>ingenuity</em>, <em>inspiration</em>, and
+          <em>intuition</em> of individuals in a special way.
+          <em>That, from the start, has been my goal for the
+          World Wide Web</em>. &rdquo;
+        </p>
+      </blockquote>
+      <p>
+        (Tim Berners-Lee - Weaving the Web, p. 208-209)
+      </p>
+    </div>
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        Sono orgoglioso di ...
+      </h1>
+      <div class="column50">
+        <p>
+          <img src="images/w3cBirthday.jpg"
+             alt=
+             "La torta per il decennale del W3C - dicembre 2004"
+             title=
+             "La torta per il decennale del W3C - dicembre 2004"
+             width="100%"
+             style="max-width: 1280px" />
+        </p>
+        <p>
+          Happy birthday, W3C
+        </p>
+      </div>
+      <div class="column50">
+        <p>
+          <img src="images/timAndOreste.jpg"
+             alt=
+             "Tim Berners-Lee e Oreste Signore al decennale del W3C - dicembre 2004"
+             title=
+             "Tim Berners-Lee e Oreste Signore al decennale del W3C - dicembre 2004"
+             width="100%"
+             style="max-width: 1280px" />
+        </p>
+        <p>
+          Tim Berners-Lee e Oreste Signore
+        </p>
+      </div>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        W3C e accessibilit&agrave;
+      </h1>
+      <p>
+        <span class="bigEmphasis">W3C e Web</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        World Wide Web Consortium (W3C)
+      </h1><img src="./images/tbl-so.jpeg"
+           style="float:right"
+           height="267"
+           width="180"
+           alt="Foto di TBL"
+           title="Tim Berners-Lee"
+           class="withBorder" />
+      <blockquote>
+        <p>
+          &ldquo;To lead the World Wide Web to its full potential
+          by developing protocols and guidelines that ensure
+          long-term growth for the Web&rdquo;
+        </p>
+      </blockquote>
+      <ul>
+        <li>Fondato da Tim Berners-Lee nel <a href=
+        "http://www.w3.org/Consortium/history.html"
+              title="The history pages of W3C">1994</a>
+        </li>
+        <li>Meccanismo di funzionamento piano ed efficace
+        </li>
+        <li>Visione globale
+        </li>
+        <li>Definisce <em>Recommendation</em> aperte (Web
+        Standards)
+          <ul>
+            <li>
+              <a href="http://www.w3.org/TR/"
+                  title="Link to the W3C Publications">ad oggi,
+                  pi&ugrave; di 110&hellip;</a>
+            </li>
+          </ul>
+        </li>
+        <li>Svolge attivit&agrave; di formazione, sviluppa linee
+        guida&hellip;
+        </li>
+        <li>
+          <em>&Egrave; un forum neutrale per creare consenso
+          sugli standard web</em>
+        </li>
+        <li>Gli standard proposti <em>non derivano da posizioni
+        dominanti sul mercato</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Nascita di una Recommendation
+      </h1>
+      <p class="floatright">
+        (<a href="./images/documentProcess.html"
+           title="longdesc-documentProcess">Descrizione dell'
+           immagine</a>)
+      </p>
+      <div style="text-align:center">
+        <img src="./images/documentProcess.png"
+             alt="processo di definizione di una Recommendation"
+             title=
+             "processo di definizione di una Recommendation"
+             width="100%"
+             style="max-width: 803px"
+             longdesc="./images/documentProcess.html" />
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Qualche riferimento
+      </h1>
+      <ul>
+        <li>
+          <a href="http://www.w3.org/"
+              hreflang="en">Il sito W3C</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/Consortium/Overview.html"
+              hreflang="en">Overview</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/Consortium/future"
+              hreflang="en">Future</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/Consortium/activities"
+              hreflang="en">W3C Activities</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/2005/Incubator/"
+              hreflang="en">Incubator Activity</a>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Alcuni principi guida del W3C
+      </h1>
+      <ul>
+        <li>Le tecnologie Web dovrebbero essere interoperabili
+          <ul>
+            <li>il Web &egrave; basato su un ampio spettro di
+            tecnologie
+            </li>
+            <li>nessuna tecnologia pu&ograve; pretendere di
+            coprire <em>tutte</em> le esigenze del Web
+            </li>
+            <li>l' <em>interoperabilit&agrave;</em> delle
+            tecnologie &egrave; assolutamente necessaria
+            </li>
+          </ul>
+        </li>
+        <li>Gli Standard Web dovrebbero essere degli &ldquo; <em>
+          open standard</em>&rdquo;, quindi
+          <em>non-proprietari</em>
+        </li>
+        <li>Il Web deve essere accessibile a <em>tutti</em>
+        </li>
+      </ul>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        Il W3C &egrave; internazionale&hellip;
+      </h1><img src="images/WorldMapW3C.png"
+           alt="W3C World Map"
+           title=
+           "mappa del mondo con indicazione dei luoghi in cui si trovano host (in rosso) e uffici (in blu) del W3C" />
+      <ul>
+        <li>3 <span style="color:red;">host</span> 
+        <!-- : Cambridge, Massachusetts, USA, nel <a href=
+        "http://www.csail.mit.edu/"><acronym title=
+        "Massachusetts Institute of Technology">MIT</acronym></a>
+        <a href="http://www.csail.mit.edu">Computer Science and
+        Artificial Intelligence Laboratory</a>; Sophia and
+        Grenoble, France, nell'<a href=
+        "http://www.ercim.org/"><acronym title=
+        "European Research Consortium for Informatics and Mathematics">
+          ERCIM</acronym></a>; Fujisawa, Japan, alla <a href=
+          "http://www.keio.ac.jp/">Keio University</a> Shonan
+          Fujisawa Campus. -->
+        </li>
+        <li>18 <span style="color:blue;">Offices</span>
+        </li>
+      </ul>
+    </div>
+    <!-- =============================================================== -->
+    <div class="slide">
+      <h1>
+        Lo stack delle tecnologie W3C
+      </h1>
+      <div style="text-align:center">
+        <img src="./images/RecsFigure.png"
+             width="100%"
+             style="max-width: 693px"
+             alt="Technology stack"
+             title=
+             "Technology stack, vedi http://www.w3.org/Consortium/techstack-desc.html for ulteriori dettagli" />
+        </div>
+    </div>
+    <!-- =============================================================== -->
+    <div class="slide">
+      <h1>
+        Vision: il futuro del Web
+      </h1>
+      <div class="column40">
+        <img alt=
+        "Il Web connette persone, applicazioni, dispositivi"
+             title=
+             "Il Web connette persone, applicazioni, dispositivi"
+             width="100%"
+             style="max-width: 439px"
+             src="./images/worldWeb.png" />
+      </div>
+      <div class="column60">
+        <ul>
+          <li>Dal Web di
+            <ul>
+              <li>linked documents
+              </li>
+              <li>creators &amp; consumers
+              </li>
+            </ul>
+          </li>
+          <li>... verso <em>One Web</em>
+            <ul>
+              <li>of Linked Data
+              </li>
+              <li>on Everything
+              </li>
+              <li>for Everyone
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        One Web is&hellip;
+      </h1>
+      <p class="bigEmphasis">
+        The same information is available to all users,
+        regardless of who they are, where they are, what system
+        they use, or how they are connected
+      </p>
+    </div>
+    <!--  ============================================================= -->
+    <div class="slide">
+      <h1>
+        One Web of Linked Data
+      </h1>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        L' architettura del Semantic Web
+      </h1><img class="floatleft"
+           alt="immagine dei livelli del semantic web"
+           title="L'architettura a strati del Semantic Web"
+           src="images/layerCake.png"
+           width="45%"
+           style="max-width: 600px; margin: 0.5em;" />
+      <dl>
+        <dt>
+          Il Semantic Web ...
+        </dt>
+        <dd>
+          <ul>
+            <li>&egrave; un' infrastruttura basata su metadati
+            per poter svolgere <em>ragionamenti</em> sul Web
+            </li>
+            <li>
+              <em>estende</em>, non sostituisce il web attuale
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          I metadati sono:
+        </dt>
+        <dd>
+          <ul>
+            <li>Informazioni, elaborabili automaticamente
+            (<em>machine understandable</em>), relative a una
+            risorsa web o a qualche altra cosa
+            </li>
+            <li>... <em>data about data</em>
+            </li>
+            <li>... informazioni che possono essere utilizzate da
+            <em>intelligent software agents</em> per fare un uso
+            appropriato delle risorse
+            </li>
+            <li>... <em>dati</em> ...
+            </li>
+            <li>... che possono essere <em>descritti da altri
+            metadati</em> ...
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- ======================================================== =-->
+    <div class="slide">
+      <h1>
+        L' integrazione dei dati: il ruolo delle tecnologie
+      </h1><img src="images/rdfInTheMiddle.png"
+           style="width: 100%; max-width:946px;"
+           alt=
+           "esportazione dei dati con indicazione delle tecnologie"
+           title=
+           "Le varie tecnologie consentono l'esportazione dei dati dal livello grezzo alla rappresentazione come grafi, per poter poi essere utilizzati dalle applicazioni" />
+      </div>
+      <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        One Web: On Everything
+      </h1>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        One Web on every surface
+      </h1>
+      <!-- <img src="images/onEverySurface.png" alt="" width=
+      "100%" style="max-width: 1346px" /> -->
+      <img src="images/onEverySurface.png"
+           alt="il web su varie superfici"
+           title=
+           "Il Web pu&ograve; essere disponibile su schermi, integrati per esempio in un tavolino, o su una facciata di un palazzo"
+           width="100%"
+           style="max-width: 1000px; margin-left: 2em;" />
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        One Web on every device
+      </h1><!-- <img src="images/onEveryDevice.png" alt="" width=
+      "100%" style="max-width: 1354px" /> -->
+      <img src="images/onEveryDevice.png"
+           alt="immagine di utilizzo del web su vari dispositivi"
+           title=
+           "L'accesso al Web da cellulari, schermi TV in un aereo, plancia di un'autovettura, etc."
+           width="100%"
+           style="max-width: 1000px; margin-left: 2em;" />
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        One Web that works seamlessly across and between all
+        devices
+      </h1><!-- <img src="images/iphone-776924.jpg" alt="" width=
+      "100%" style="max-width: 1280px" /> -->
+      <img src="images/iphone-776924.jpg"
+           alt="Accesso ubiquo da smartphone o PC"
+           title=
+           "Possibilit&agrave; di passare da un PC ad uno smartphone snza soluzione di continuit&agrave;"
+           width="100%"
+           style="max-width: 750px; margin-left: 6em;" />
+      <p>
+        <a href=
+        "http://www.efront.com.au/web-design-melbourne/uploaded_images/iphone-776924.jpg">
+        http://www.efront.com.au/web-design-melbourne/uploaded_images/iphone-776924.jpg</a>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        One Web, accessible via a range of interactions
+      </h1>
+      <div class="divcenter">
+        <img src="images/interactions.jpg"
+             alt="interazione gestuale"
+             title="interazione gestuale"
+             width="100%"
+             style="max-width: 602px;" />
+        <p>
+          Tom Cruise in Minority Report Spielberg (2002)
+        </p>
+      </div>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        One Web: For Everyone, Connecting &amp; Empowering All
+        People
+      </h1>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Il valore sociale del Web
+      </h1>
+      <p class="bigEmphasis">
+        The social <em>value of the Web</em> is that it enables
+        human communication, commerce, and opportunities to share
+        knowledge [and] to make these <em>benefits available to
+        all people</em>, whatever their hardware, software,
+        network infrastructure, native language, culture,
+        geographical location, or physical or mental ability
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Il Web 2.0: &egrave; un ambiente sociale?
+      </h1><img src="images/walls.png"
+           alt="vari ambienti di social web"
+           title=
+           "I vari ambienti di social network potrebbero non essere in grado di comunicare tra di loro"
+           width="100%"
+           style="max-width:804px; margin-left:1em;" />
+      <p>
+        David Simonds, The Economist
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        W3C e accessibilit&agrave;
+      </h1>
+      <p>
+        <span class="bigEmphasis">Digital Divide</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Lo sviluppo sociale: punto d' incontro tra eGov e Mobile
+        Web
+      </h1>
+      <ul>
+        <li>Alta penetrazione della telefonia cellulare&hellip;
+          <ul>
+            <li>
+              <em>Haiti</em>: popolazione 9 milioni, il paese
+              pi&ugrave; povero dell' America Latina,
+              penetrazione dei telefoni cellulari circa 50% della
+              popolazione
+            </li>
+            <li>
+              <em>India</em>: <a href=
+              "http://www.ibnlive.com/news/villagers-walk-20-kms-to-charge-mobile-phones/54685-3.html"
+                  hreflang="en">da alcuni villaggi percorrono
+                  anche 20 Km al giorno per ricaricare i
+                  cellulari</a>
+            </li>
+          </ul>
+        </li>
+        <li>&hellip;e anche i governi cercano di utilizzare al
+        meglio la tecnologia dei cellulari
+          <ul>
+            <li>
+              <a href=
+              "http://www.cellular-news.com/story/28359.php"
+                  hreflang="en">in Liberia il governo fornisce
+                  gratuitamente cellulari ai villaggi,
+                  perch&eacute; possano denunciare i crimini alla
+                  polizia locale</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Come fornire accesso all' ICT?
+      </h1>
+      <ul>
+        <li>Con PC economici: <a href=
+        "http://www.laptop.org/">One Laptop Per Child?</a>
+        </li>
+        <li>Con telefoni speciali?
+        </li>
+        <li>
+          <strong>Con il Mobile Web</strong>:
+          <ul>
+            <li>Vantaggio dell' esistenza di oltre 2,7 miliardi
+            di cellulari
+            </li>
+            <li>Vantaggio della copertura GSM (&gt;80% della
+            popolazione mondiale)
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <em>&Egrave; il telefono cellulare, non il PC che
+        pu&ograve; colmare il &ldquo;digital divide&rdquo;</em>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Le sfide e il W3C
+      </h1>
+      <div class="column50">
+        <ul>
+          <li>Come rendere usabile il Mobile Web?
+            <ul>
+              <li>
+                <em>accessibilit&agrave; dei browser</em> per
+                dispositivi mobili: configurazione, interfaccia e
+                interazione&hellip;
+              </li>
+              <li>
+                <em>accessibilit&agrave; dei contenuti web</em>:
+                interfacce &rdquo;naturali&ldquo; e interazione
+              </li>
+            </ul>
+          </li>
+          <li>Obiettivo W3C: <em>rendere il Web accessibile,
+          importante, usabile e utile per le popolazioni
+          svantaggiate e le comunit&agrave; rurali</em>
+          </li>
+          <li>Mobile Web, eGovernment, etc.
+          </li>
+        </ul>
+      </div>
+      <div class="column50">
+        <p>
+          <img alt=
+          "Al largo della costa di Kerala (India): utilizzo di un cellulare da un' imbarcazione"
+             title=
+             "Al largo della costa di Kerala (India): utilizzo di un cellulare da un' imbarcazione"
+             src="./images/india_boat_phone.jpg"
+             style="max-width:600px;"
+             width="100%" /><br />
+          <span style="font-size: x-small;">(Fonte: <a href=
+          "http://www.flickr.com/photos/sdawara/244299040/">NY
+          Times</a> )</span>
+        </p>
+      </div>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Cosa pu&ograve; fare il Web per l'umanit&agrave;?
+      </h1>
+      <dl>
+        <dt>
+          Qualche numero
+        </dt>
+        <dd>
+          <ul>
+            <li>Non usano il Web: ~5,000,000,000
+            </li>
+            <li>Vivono con un reddito di $1.25/giorno o meno:
+            ~1,400,000,000
+            </li>
+            <li>Denutriti: ~920,000,000
+            </li>
+            <li>Analfabeti: ~900,000,000
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          Molti altri ostacoli
+        </dt>
+        <dd>
+          <ul>
+            <li>Assenza di supporto per lingue e caratteri
+            </li>
+            <li>Mancanza di supporto per i disabili
+            </li>
+            <li>Soluzioni proprietarie vs open standard
+            </li>
+            <li>Censura, discriminazione nell'accesso
+            </li>
+            <li>Comprendere il funzionamento del Web
+            </li>
+            <li>Comprendere come il web pu&ograve; dare maggior
+            potere alle persone
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p>
+        <em>(dati 2007/2008)</em>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        La World Wide Web Foundation
+      </h1><img src="images/w3f.jpg"
+           title="Loogo della World Wide Web Foundation"
+           alt="w3f logo" />
+      <ul>
+        <li>
+          <a href=
+          "http://www.webfoundation.org/">http://www.webfoundation.org/</a>
+        </li>
+        <li>Advance the Web
+        </li>
+        <li>Connect humanity
+        </li>
+        <li>Empower people
+        </li>
+        <li>&ldquo;The Web Foundation will <em>break-down the
+        barriers</em> that now prevent billions of people from
+        being connected and empowered by the Web, while
+        <em>advancing future technologies</em> leading toward a
+        <em>more capable, useful and usable Web for all people on
+        the planet</em>.&rdquo;
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        W3C e accessibilit&agrave;
+      </h1>
+      <p>
+        <span class="bigEmphasis">Web Accessibility
+        Initiative</span>
+      </p>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        Web for Everyone
+      </h1>
+      <blockquote lang="en"
+                  xml:lang="en">
+        <p>
+          &ldquo;The Web is more a <em>social</em> creation than
+          a technical one. I designed it for a social effect - to
+          <em>help people work together</em> - and not as a
+          technical toy. The ultimate goal of the Web is to
+          <em>support and improve our weblike existence</em> in
+          the world.&rdquo;<br />
+          (Tim Berners-Lee - Weaving the Web, p. 123)
+        </p>
+      </blockquote>
+      <ul class="incremental">
+        <li>
+          <em>Valore sociale del Web</em>: comunicazione
+          interpersonale, commercio, condivisione di conoscenza
+        </li>
+        <li>Rendere questi benefici <em>disponibili a tutti</em>,
+        indipendentemente da hardware, software, infrastruttura
+        di rete, lingua madre, cultura, posizione geografica,
+        capacit&agrave; fisiche o mentali
+        </li>
+        <li>W3C investe per supportare l' estensione delle
+        tecnologie web e dei relativi benefici.<a href=
+        "http://www.w3.org/WAI/"
+              shape="rect">Web accessibility</a>, <a href=
+              "http://www.w3.org/International/"
+              shape="rect">internazionalizzazione</a>, <a href=
+              "http://www.w3.org/2001/di/"
+              shape="rect">device independence</a> sono
+              particolarmente importanti.
+        </li>
+      </ul>
+    </div>
+    <!--  ================================================================ -->
+    <div class="slide">
+      <h1>
+        Perch&eacute; accessibile?
+      </h1>
+      <ul class="incremental">
+        <li>Norma di legge?
+          <ul>
+            <li>
+              <em>&egrave; un obbligo, spesso visto come fine a
+              se stesso</em>
+            </li>
+          </ul>
+        </li>
+        <li>Professionalit&agrave;?
+          <ul>
+            <li>comprensibilit&agrave;, usabilit&agrave;,
+            qualit&agrave;, &hellip;
+            </li>
+            <li>
+              <em>&egrave; un buon motivo</em>
+            </li>
+          </ul>
+        </li>
+        <li>Cultura?
+          <ul>
+            <li>principi di base della <em>convivenza civile</em>
+            e del <em>Web</em>
+            </li>
+            <li>&egrave; la <em>vera ragione</em>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================= -->
+    <div class="slide">
+      <h1>
+        O.M.S.: cosa era la disabilit&agrave; (1980)
+      </h1>
+      <p>
+        <em>International Classification of Impairments,
+        Disabilities and Handicaps (<a href=
+        "../../../documents/handicap.pdf">ICIDH</a>), 1980</em>
+      </p>
+      <dl class="incremental">
+        <dt>
+          Menomazione (Impairment)
+        </dt>
+        <dd>
+          Qualsiasi perdita o anormalit&agrave; a carico di una
+          struttura o una funzione psicologica, fisiologica,
+          anatomica
+        </dd>
+        <dt>
+          Disabilit&agrave;
+        </dt>
+        <dd>
+          Limitazione o perdita (conseguente a menomazione) della
+          capacit&agrave; di compiere una attivit&agrave; nel
+          modo e nell&rsquo;ampiezza considerati normali
+        </dd>
+        <dt>
+          Handicap
+        </dt>
+        <dd>
+          Condizione di svantaggio conseguente a una menomazione
+          o a una disabilit&agrave; che limita o impedisce
+          l&rsquo;adempimento del ruolo normale per tale
+          soggetto, in relazione all&rsquo;et&agrave;, al sesso,
+          ai fattori socioculturali
+        </dd>
+      </dl>
+    </div>
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        O.M.S.: cosa &egrave; la disabilit&agrave; (2001)
+      </h1>
+      <p>
+        <em>International Classification of Functioning,
+        Disability and Health (ICF), 2001</em>
+      </p>
+      <ul class="incremental">
+        <li>Copre tutti gli aspetti della salute umana,
+        raggruppandoli in:
+          <ul>
+            <li>
+              <em>health domain</em> (vedere, udire, camminare,
+              imparare e ricordare)
+            </li>
+            <li>
+              <em>healt related domains</em> (mobilit&agrave;,
+              istruzione, partecipazione alla vita sociale, etc.)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>integra aspetti medici e sociali</em>: per ciascuna
+          delle voci classificate, a ciascun individuo vengono
+          associati uno o pi&ugrave; qualificatori che
+          quantificano il suo "<em>funzionamento</em>"
+        </li>
+        <li>"<em>funzionamento umano</em>" in generale: modello
+        universale, copre l'<em>intero arco della vita</em>
+        (bambini e anziani)
+        </li>
+        <li>
+          <em>attivit&agrave;</em> invece di
+          <em>disabilit&agrave;</em>
+        </li>
+        <li>
+          <em>partecipazione</em> invece di <em>handicap</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        I vari tipi di disabilit&agrave; e i problemi
+      </h1>
+      <dl class="incremental">
+        <dt>
+          visiva
+        </dt>
+        <dd>
+          grafici o video senza spiegazioni,tabelle o frame con
+          cattivo linguaggio di marcatura e non ben
+          linearizzabili,assenza del supporto della
+          tastiera,incompatibilit&agrave; con gli screen reader
+        </dd>
+        <dt>
+          uditiva
+        </dt>
+        <dd>
+          assenza di sottotitoli, testo senza indicazione degli
+          elementi strutturali (<em>signposts</em>)
+        </dd>
+        <dt>
+          fisica
+        </dt>
+        <dd>
+          assenza del supporto della tastiera o di men&ugrave;
+          azionabili con un solo tasto (<em>single-switch</em>)
+        </dd>
+        <dt>
+          cognitiva o neurologica
+        </dt>
+        <dd>
+          navigazione poco coerente, presentazione o linguaggio
+          difficili, assenza di materiale illustrativo non
+          testuale, scritte lampeggianti o in movimento
+        </dd>
+      </dl>
+    </div>
+    <!-- ================================================================== -->
+    <div class="slide">
+      <h1>
+        Componenti della Web Accessibility
+      </h1>
+      <div class="divright"
+           style="width:50%; max-width:30em;">
+        <p>
+          <img src="images/specs.png"
+             alt="componenti della Web Accessibility"
+             title=
+             "La Web Accessibility &egrave; un concetto che coinvolge utilizzatori, contenuti e sciluppatori "
+             style="float:right; width:100%; max-width:484px;" />
+        </p>
+        <p style="float:right">
+          <a href="images/imageCredit.html">Crediti e
+          descrizione</a>
+        </p>
+      </div>
+      <dl>
+        <dt>
+          Contenuto
+        </dt>
+        <dd>
+          Testi, immagini, moduli, multimedia, applicazioni, etc.
+        </dd>
+        <dt>
+          Sviluppatori
+        </dt>
+        <dd>
+          Usano authoring tool, editor, strumenti di valutazione,
+          CMS (Content Management Systems).<br />
+          Dovrebbero <em>essere accessibili</em> e <em>produrre
+          contenuti accessibili</em>
+        </dd>
+        <dt>
+          Utenti
+        </dt>
+        <dd>
+          Usano <em>User Agent</em> (browser, media player, etc.)
+          per accedere al contenuto.<br />
+          Se giocano bene il loro ruolo, servono meno
+          accorgimenti per rendere accessibili i contenuti
+        </dd>
+      </dl>
+      <ul>
+        <li>W3C sviluppa:
+          <ul>
+            <li>
+              <em>linee guida</em> per l' accessibilit&agrave;
+              (per Authoring Tools, Web Content, User Agents)
+            </li>
+            <li>
+              <em>specifiche tecniche</em> (HTML, XML, CSS, SVG,
+              SMIL, etc.)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================ -->
+    <div class="slide">
+      <h1>
+        WAI: Web Accessibility Initiative
+      </h1>
+      <p>
+        <a href="http://www.w3.org/WAI/"
+           title="WAI-W3C"><img src="./images/wai.gif"
+             alt="Web Accessibility Initiative (WAI) logo" /></a>
+             Le tre linee guida:
+      </p>
+      <ul>
+        <li>
+          <em>Web Content</em> Accessibility Guidelines<br />
+          come creare <em>contenuti</em> Web accessibili<br />
+          <span style="color: red">WCAG 1.0</span> (1999,
+          <a href="http://www.w3.org/TR/WAI-WEBCONTENT/">Recommendation</a>)
+          e <span style="color: red">WCAG 2.0</span> (<a href=
+          "http://www.w3.org/TR/WCAG20/">W3C Recommendation - 11
+          dicembre 2008</a>) [vedi il <a href=
+          "http://www.w3c.it/pr/2008/wcag20-pressrelease-it.html"
+              title="comunicato stampa WCAG 2.0">comunicato
+              stampa</a>]
+        </li>
+        <li>
+          <em>Authoring Tool</em> Accessibility Guidelines<br />
+          come progettare strumenti di <em>authoring</em>
+          utilizzabili da autori disabili, e che producono
+          contenuti Web accessibili<br />
+          <span style="color: red">ATAG 1.0</span> (2000,
+          <a href="http://www.w3.org/TR/ATAG10">Recommendation</a>)
+          e <span style="color: red">ATAG 2.0</span> (<a href=
+          "http://www.w3.org/TR/2010/WD-ATAG20-20100708/">Working
+          Draft - 8 luglio 2010</a>)
+        </li>
+        <li>
+          <em>User Agent</em> Accessibility Guidelines<br />
+          cosa devono fare gli sviluppatori di software per
+          migliorare l' accessibilit&agrave; dei mainstream
+          <em>browser</em> a dei <em>multimedia player</em> per
+          consentire un migliore accesso alle risorse Web per le
+          persone affette da deficit uditivi, cognitivi, visivi,
+          fisici<br />
+          (Browser, <span style="color: red">UAAG 1.0</span>,
+          2002, <a href=
+          "http://www.w3.org/TR/UAAG10/">Recommendation</a>) e
+          <span style="color: red">UAAG 2.0</span> (<a href=
+          "http://www.w3.org/TR/2010/WD-UAAG20-20100617/">Working
+          Draft - 17 giugno 2010</a>)
+        </li>
+        <li>&hellip; e anche altre specifiche&hellip;
+        </li>
+        <li>&hellip; e anche altre iniziative (formazione,
+        valutazione, etc.)&hellip;
+        </li>
+      </ul>
+    </div>
+    <!-- ================================================================== -->
+    <div class="slide">
+      <h1>
+        Prossimamente parleremo di &hellip;
+      </h1>
+      <div class="divcenter">
+        <img src="images/wcag20.png"
+             alt="le wcag20 su un vassoio d'argento"
+             title="le wcag20 su un vassoio d'argento"
+             style="width:100%; max-width:631px" />
+      </div>
+      <div class="divright">
+        <p style="float:right">
+          <a href="images/imageCreditWCAG2.html">Crediti e
+          descrizione</a>
+        </p>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <div class="slide">
+      <h1>
+        Conclusioni
+      </h1>
+      <ul class="incremental">
+        <li>Il <em>World Wide Web</em>
+          <ul>
+            <li>Ancora molti margini di evoluzione (<em>leading
+            the Web to its full potential</em>)
+            </li>
+          </ul>
+        </li>
+        <li>Il <em>W3C</em> guida l' evoluzione del Web, grazie
+        al contributo dei suoi <em>membri</em>
+        </li>
+        <li>Il Web &egrave; nato con una forte carica
+        <em>ideale</em>
+        </li>
+        <li>
+          <img src="images/worldHumanity.png"
+              alt="humanity connected"
+              title=
+              "Persone di tutte le culture, razze, religioni sono collegate dal Web"
+              style=
+              "float:right; width:50%; max-width: 459px;" /> Il
+              Web non &egrave; solo tecnologia, ma&hellip;
+          <ul>
+            <li>
+              <em>Humanity Connected by Technology</em>&hellip;
+            </li>
+            <li>&hellip;e cosa possono fare la tecnologia e i
+            collegamenti per dare maggior potere a tutti
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>L' accessibilit&agrave; &egrave; connaturata nel
+          Web</em> ed &egrave; il risultato di un <em>approccio
+          culturale</em>
+        </li>
+        <li>Accessibilit&agrave; significa anche superare le <em>
+          differenze culturali</em> e <em>tecnologiche</em>
+        </li>
+        <li>
+          <em>Tutte</em> le normative fanno <em>riferimento a
+          WCAG</em>
+        </li>
+      </ul>
+    </div>
+    <!-- ===================================================================== -->
+    <div class="slide">
+      <h1>
+        Grazie per l' attenzione
+      </h1>
+      <p class="questions">
+        Domande?
+      </p>
+      <p>
+        ... e <a href="./slidy/answer.mp3">risposte</a>
+      </p>
+      <hr />
+      <p>
+        <em>Se non &egrave; sul Web non esiste</em> ...
+      </p>
+      <p>
+        ... troverete sul sito dell' Ufficio (<a href=
+        "http://www.w3c.it/">http://www.w3c.it/</a>)<br />
+        le <em>slide</em> ( <a href=
+        "http://www.w3c.it/projects/aquarius/presentazioni/aquarius-wai/">
+        http://www.w3c.it/projects/aquarius/presentazioni/aquarius-wai/</a>)<br />
+
+        <!--     e il <em>documento</em> (<a href=
+        "http://www.w3c.it/papers/km11.pdf" hreflang="it" title=
+        "documento - km11">http://www.w3c.it/papers/km11.pdf</a>) -->
+      </p>
+    </div>
+    <!--  ============================================================= -->
+  </body>
+</html>
