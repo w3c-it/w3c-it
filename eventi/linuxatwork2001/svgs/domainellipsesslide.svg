@@ -1,0 +1,448 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<!-- <?xml-stylesheet type="text/css" href="../../svgs/slide.css" ?> -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20000303 Stylable//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg  width="807" height="570" >
+  <title>Visual overview of the various w3c domains and activities</title>
+  <desc>A rough visual overview of the various activities, as a set of recursive ellipses.
+	      Ellipses are used to separate domains, included ellipses for activities, etc.</desc>
+  <!-- There are too many specialized styles here to burden the 'central' style file
+	     The slide looks o.k. on light background, too, provided the text.centre style is 
+	     correctly set in the included style sheet.
+  -->
+  <style type="text/css"><![CDATA[
+    rect {stroke:black;fill:white;}
+    line {stroke:red;stroke-width:2}
+    rect.box {stroke:none;fill:rgb(140, 189, 237)}
+    text {font-family:Arial; font-size:20; font-weight:bold; color:#0C469C}
+
+		text.centre {text-anchor:middle; color:seagreen}
+    
+    .domain {stroke:black;fill:#FDFEE0;}
+    .act {stroke:black;fill:cyan;} 			 		 					/* Activity */
+    .ig {stroke:black;fill:silver;}										/* Interest Group */
+    .wg {stroke:black;fill:lavender;}									/* Working Group */
+    .actwg {stroke:black;fill:lightseagreen;}					/* Activity and Working Group */
+    .actwgig {stroke:black;fill:gold;}								/* Activity and Working and Interest Group */
+    .wgig {stroke:black;fill:fuchsia;}								/* Working and Interest Group */		
+    .coo {stroke:none;fill:red;fill-opacity:0.15}     /* Coordination Group */
+
+    text.s1 {font-size:16;text-anchor:middle}
+    text.s2 {font-size:12;text-anchor:middle}
+    text.s3 {font-size:10;text-anchor:middle}
+    text.coo { color: white; fill-opacity: 1}
+    path.s5 {fill:blue;fill-opacity:0.15}
+		
+    ]]>
+  </style>
+  <rect width="807" height="570" class="background" /> 
+  <!-- For some reasons, the animation does not work. Maybe a plugin problem? Has to be tested
+	     again with the final version of the plugin -->
+  <defs>
+	  <set xlink:href="#CoordinationGroups" attributeType="CSS" attributeName="visibility" to="visible"
+       begin="Legend.click" fill="freeze" />
+	  <set xlink:href="#CoordinationGroups" attributeType="CSS" attributeName="visibility" to="visible"
+       begin="Title.click" fill="freeze" />
+	  <set xlink:href="#CoordinationGroups" attributeType="CSS" attributeName="visibility" to="hidden"
+       begin="CoordinationGroups.click" fill="freeze" />
+  </defs>
+
+  <g transform="scale(0.79)" id="Main">
+    <text id="Title" x="440" y="360" style="font-size:48;color:#86D7FD;text-anchor:middle">W3C</text>
+
+    <!-- ************** Architecture ****************-->
+    <g class="arch" transform="translate(210,190)">
+		  <desc>Architecture domain</desc>
+      <ellipse class="domain" rx="200" ry="160" />
+      <text class="s1" y="75" x="-120">Architecture</text>
+			<a xlink:href="../Jigsaw/slide1-0.htm">    
+        <g transform="translate(-135,-40)">
+          <ellipse class="act" rx="30" ry="20"/>
+          <text class="s2">Jigsaw</text>
+        </g>
+			</a>
+      <g transform="translate(40,0)">
+        <ellipse class="act"   rx="150" ry="75"/>
+        <text class="s2">XML</text>
+				<a xlink:href="../XML1.0/slide1-0.htm">
+          <g transform="translate(-20,-40)">
+            <ellipse class="wg"   rx="30" ry="20"/>
+            <text class="s3">Core</text>
+          </g>
+				</a>
+				<a xlink:href="../XLink/slide1-0.htm">
+          <g transform="translate(60,-40)">
+            <ellipse class="wgig"   rx="30" ry="20"/>
+            <text class="s3">Linking</text>
+          </g>
+				</a>
+        <g transform="translate(-0,40)">
+          <ellipse class="ig"   rx="30" ry="20"/>
+          <text class="s3">Plenary</text>
+        </g>
+				<a xlink:href="../Schemas/slide1-0.htm">
+          <g transform="translate(-100,0)">
+            <ellipse class="wgig"   rx="30" ry="20"/>
+            <text class="s3">Schema</text>
+          </g>
+				</a>
+				<a xlink:href="../XQL/slide1-0.htm">
+          <g transform="translate(80,10)">
+            <ellipse class="wg"   rx="30" ry="20"/>
+            <text class="s3">Query</text>
+          </g>    
+				</a>
+				<a xlink:href="../DOM/slide1-0.htm">
+          <g transform="translate(10,120)">
+            <ellipse class="actwgig" rx="30" ry="20"/>
+            <text class="s2">DOM</text>
+          </g>    
+				</a>
+				<a xlink:href="../XML_Protocol/slide1-0.htm">
+          <g transform="translate(-90,110)">
+            <ellipse class="wg" rx="50" ry="20"/>
+            <text class="s3">XML Protocol</text>
+          </g>
+				</a>
+        <g transform="translate(-80,-100)">
+          <ellipse class="ig" rx="30" ry="15"/>
+          <text class="s3" y="3">URI</text>
+        </g>
+      </g>
+    </g>
+    <!-- **************T and S ****************-->
+    <g class="ts" transform="translate(690,540)">
+		  <desc>Technology &amp; Society domain</desc>
+      <ellipse class="domain" rx="260" ry="180" />
+      <text  class="s1" x="0"  y="-10">Technology &amp; Society</text>
+			
+      <g transform="translate(-45,-100)">
+        <ellipse class="act"   rx="120" ry="70"/>
+        <text  class="s2" x="-10" y="10">Electronic Commerce</text>
+        <g transform="translate(-50,-25)">
+          <ellipse class="ig" rx="35" ry="20"/>
+          <text  class="s3" >ECommerce</text>
+        </g>
+				<a xlink:href="../Posters/micropayments.html">
+          <g transform="translate(-5,40)">
+            <ellipse class="wg" rx="65" ry="20"/>
+            <text  class="s3" y="3" >Micropayments Markup</text>
+          </g>
+          <g transform="translate(40,-35)">
+            <ellipse class="wg"   rx="50" ry="20"/>
+            <text  class="s3" y="3" >Micropayments API</text>
+          </g>
+				</a>
+      </g>
+
+      <g transform="translate(-168,10)">
+        <ellipse class="act"   rx="90" ry="60"/>
+        <text   class="s2"  x="30" y="-6">Metadata</text>
+				<a xlink:href="../Pics/slide1-0.htm">   
+          <g transform="translate(-25,-35)">
+            <ellipse class="ig"   rx="25" ry="15"/>
+            <text  class="s3" y="3">PICS</text>
+          </g>
+				</a>   
+        <g transform="translate(-45,0)">
+          <ellipse class="wg" rx="40" ry="15"/>
+          <text  class="s3" y="2" >RDF Schema</text>   
+        </g>
+				<a xlink:href="../RDF/slide1-0.htm">   
+          <g transform="translate(28,25)">
+            <ellipse class="wg" rx="40" ry="22"/>
+            <text class="s3"  y="-8">RDF</text>
+            <text  class="s3" y="8">Model&amp;Syntax</text>    
+          </g>
+				</a>
+				<a xlink:href="../RDF/slide1-0.htm">   
+          <g transform="translate(30,-35)">
+            <ellipse class="ig" rx="25" ry="15"/>
+            <text class="s3" y="3">RDF</text>
+          </g>
+				</a>				    
+      </g>  
+			
+      <g transform="translate(155,-50)">
+        <ellipse class="act"   rx="90" ry="48"/>
+        <text   class="s2"  x="0" y="-15">Digital Signature Initiative</text>
+          <g transform="translate(-40,10)">
+            <ellipse class="ig" rx="25" ry="15"/>
+            <text  class="s3" y ="3" >DSig</text>
+          </g>
+				<a xlink:href="../XML_Signatures/slide1-0.htm">   
+          <g transform="translate(30,15)">
+            <ellipse class="wg" rx="40" ry="25"/>
+            <text class="s3"  y="-8">XML</text>
+            <text  class="s3" y="8">Signature</text>    
+          </g>
+				</a>
+      </g>  
+			
+      <g transform="translate(-130,100)">
+        <ellipse class="wg"  rx="40" ry="22"/>
+        <text  class="s2" y="-8">Patent</text>
+        <text  class="s2" y="8">Policy</text>
+      </g>
+      
+			<a xlink:href="../P3P/slide1-0.htm">
+        <g transform="translate(60,80)">
+          <ellipse class="act"  rx="140" ry="80"/>
+          <text  class="s2" x="0" y="4">Privacy</text>
+          <g transform="translate(-55,-50)">
+            <ellipse class="ig"   rx="30" ry="15"/>
+            <text  class="s3" y="3">P3P</text>
+          </g>
+          <g transform="translate(40,-35)">
+            <ellipse class="wg"   rx="65" ry="25"/>
+            <text y="-4"  class="s3" >P3P Implementation &amp;</text>
+            <text y="10"  class="s3" >Deployment</text>
+          </g>
+          <g transform="translate(70,25)">
+            <ellipse class="wg"   rx="50" ry="20"/>
+            <text y="-4"  class="s3" >P3P Policy &amp;</text>
+            <text y="10"  class="s3" > Outreach</text>
+          </g>
+          <g transform="translate(-20,50)">
+            <ellipse class="wg"   rx="40" ry="25"/>
+            <text y="-8"  class="s3" >P3P</text>
+            <text y="8"  class="s3" >Specification</text>
+          </g>
+          <g transform="translate(-85,-5)">
+            <ellipse class="wg"   rx="40" ry="25"/>
+            <text y="-8"  class="s3" >P3P</text>
+            <text y="8"  class="s3" >Preferences</text>
+          </g>
+        </g>
+  		</a>
+    </g>
+    <!-- ************** WAI****************-->
+		<a xlink:href="../WAI/slide1-0.htm">
+      <g class="wai" transform="translate(210,540)">
+  		  <desc>WAI</desc>
+        <ellipse class="domain" rx="200" ry="180" />
+        <text x="-125" y="-5"  class="s1" >Web Accessibility</text>
+        <text x="-130" y="15"   class="s1" >Initiative</text>
+              
+        <g transform="translate(0,90)">
+          <ellipse class="act"  rx="120" ry="50"/>
+          <text  class="s2" y="-15" >WAI International Program Office</text>
+          <a xlink:href="http://www.w3.org/WAI/Resources/">
+            <g transform="translate(-45,10)">
+              <ellipse class="wg"   rx="55" ry="20"/>
+              <text  class="s3" y="3" >Education&amp;Outreach</text>
+            </g>
+  				</a>          
+          <g transform="translate(50,10)">
+            <ellipse class="ig" rx="30" ry="15"/>
+            <text  class="s3" >Interest</text>
+          </g>
+        </g>
+        <g transform="translate(0,-85)">
+          <ellipse class="act"  rx="160" ry="70"/>
+          <text class="s2" y="3" >WAI Technical</text>    
+          <g transform="translate(45,-40)">
+            <ellipse class="wg"   rx="50" ry="20"/>
+            <text class="s3" >Authoring Tools</text>    
+          </g>
+          
+          <g transform="translate(115,-5)">
+            <ellipse class="wg"   rx="40" ry="20"/>
+            <text class="s3" >User Agent</text>
+          </g>
+          
+          <g transform="translate(40,43)">
+            <ellipse class="wg"   rx="40" ry="20"/>
+            <text  class="s3" >Web Content</text>    
+          </g>
+          
+          <g transform="translate(-70,30)">
+            <ellipse class="wgig"   rx="55" ry="20"/>
+            <text class="s3" y="3">Evaluation&amp;Repair</text>
+          </g>
+          <g transform="translate(-70,-30)">
+            <ellipse class="wg"   rx="60" ry="20"/>
+            <text  class="s3" >Protocols&amp;Formats</text>
+          </g>    
+        </g>
+      </g>
+		</a>	    
+
+    <!-- ************** User Interface ****************-->
+    <g class="ui" transform="translate(690,180)">
+		  <desc>User Interface</desc>
+      <ellipse class="domain" rx="260" ry="160" />
+      <text x="-5" y="30" class="s1" >User Interface</text>
+			<a xlink:href="../SVG/slide1-0.htm">
+        <g transform="translate(-120,-105)">
+          <ellipse class="actwg"  rx="55" ry="20"/>
+          <text class="s2" y="3" >Graphics (SVG)</text>
+        </g>
+			</a>
+
+      <g transform="translate(55,-95)">
+        <ellipse class="act"  rx="110" ry="43"/>
+        <text class="s2" y="-23" >Device Independence</text>
+        <g transform="translate(-80,0)">
+          <ellipse class="wg" rx="23" ry="10"/>
+          <text class="s3" y="4">DI</text>
+        </g>
+        <g transform="translate(60,4)">
+          <ellipse class="ig"   rx="42" ry="22"/>
+          <text class="s3">Mobile Access</text>
+        </g>
+        <a xlink:href="../../CCPP/slide1-0.htm">
+          <g transform="translate(-20,15)">
+            <ellipse class="wg"   rx="30" ry="15"/>
+            <text class="s3" y="3">CC/PP</text>
+          </g>
+				</a>
+      </g>
+
+      <g transform="translate(-140,-45)">
+        <ellipse class="act"  rx="85" ry="35"/>
+        <text class="s2" x="5" y="-20" >HTML</text>
+  			<a xlink:href="../XHTML/slide1-0.htm">
+          <g transform="translate(-40,0)">
+            <ellipse class="wg"  rx="40" ry="15"/>
+            <text class="s2" y="3" >XHTML</text>
+          </g>
+  			</a>
+        <g transform="translate(50,0)">
+          <ellipse class="wg"   rx="30" ry="15"/>
+          <text class="s3" y="3">XForms</text>
+        </g>    
+      </g>
+			
+			<a xlink:href="../i18n/slide1-0.htm">
+        <g transform="translate(80,-15)">
+          <ellipse class="actwgig"  rx="65" ry="25"/>
+          <text class="s2" >Internationalisation</text>
+        </g>
+			</a>
+			
+			<a xlink:href="../MathML/slide1-0.htm">    
+        <g transform="translate(190,-50)">
+          <ellipse class="actwg"  rx="30" ry="20"/>
+          <text class="s2" >Math</text>
+        </g>
+			</a>
+			
+      <g transform="translate(135,100)">
+        <ellipse class="act"  rx="30" ry="15"/>
+        <text class="s2" y="3">Amaya</text>
+      </g>
+			
+      <g transform="translate(-70,90)">
+        <ellipse class="act"  rx="100" ry="40"/>
+        <text class="s2" y="-20" >Style Sheets</text>
+        <a xlink:href="../XSLT_XPATH/slide1-0.htm">
+          <g transform="translate(-50,0)">
+            <ellipse class="wg"   rx="30" ry="15"/>
+            <text class="s3" y="3">XSL</text>
+          </g>
+				</a>
+				<a xlink:href="../CSS/slide1-0.htm">
+          <g transform="translate(50,0)">
+            <ellipse class="wg"   rx="30" ry="15"/>
+            <text class="s3" y="3">CSS</text>
+          </g>
+				</a>    
+      </g>
+      
+			<a xlink:href="../SMIL/slide1-0.htm">
+        <g transform="translate(-155,20)">
+          <ellipse class="actwg"  rx="85" ry="20"/>
+          <text  class="s2" y="3">Synchronised Multimedia</text>
+        </g>
+			</a>
+			<a xlink:href="../Posters/voice.html">
+        <g transform="translate(105,40)">
+          <ellipse class="actwg"  rx="50" ry="20"/>
+          <text class="s2" >Voice Browser</text>
+        </g>
+			</a>
+			<g transform="translate(205,0)">
+  			<a xlink:href="../TV/slide1-0.htm">
+            <ellipse class="ig" rx="50" ry="20"/>
+            <text class="s2" y="3">TV &amp; the Web</text>
+  			</a>    
+      </g>
+    </g>
+    <g id="Legend" transform="translate(410,390)">
+      <g transform="scale(0.1)">
+        <rect x="-10" y="-10" style="fill:yellow" height="230" width="520"/>      
+        <g transform="translate(0,0)">
+          <rect class="act" width="30" height="30"/>
+          <text x="35" y="25" style="font-size:24">Activity</text>
+        </g>
+        <g transform="translate(0,35)">
+          <rect class="ig"  width="30" height="30"/>
+          <text x="35" y="25" style="font-size:24">Interest Group</text>
+        </g>
+        <g transform="translate(0,70)">
+          <rect class="wg"  width="30" height="30"/>
+          <text x="35" y="25" style="font-size:24">Working Group</text>
+        </g>
+        <g transform="translate(0,105)">
+          <rect class="actwg"  width="30" height="30"/>
+          <text x="35" y="25" style="font-size:24">Activity and Working Group</text>
+        </g>
+        <g transform="translate(0,140)">
+          <rect class="actwgig"  width="30" height="30"/>
+          <text x="35" y="25" style="font-size:24">Activity, Working and and Interest Group</text>
+        </g>
+        <g transform="translate(0,175)">
+          <rect class="wgig"  width="30" height="30"/>
+          <text x="35" y="25" style="font-size:24">Working and Interest Group</text>
+        </g>
+      </g>
+    </g>     
+  </g>
+  <g>
+	  <desc>Two coordination groups as separate, overlapping ellipses</desc>
+    <g id="CoordinationGroups" style="visibility:hidden" transform="scale(0.79)">
+      <g transform="translate(420,170)">
+  		  <desc>XML Coordination group</desc>
+        <ellipse class="coo"  rx="230" ry="170"/>
+        <text y="-145" class="centre coo">XML</text>
+        <text y="-115" class="centre coo">Coordination Group</text>
+      </g>     
+      <g transform="translate(620,240)">
+			  <desc>Hypertext Coordination Group</desc>
+        <g transform="rotate(-15)">
+          <ellipse class="coo"  rx="340" ry="140"/>
+          <text x= "-50" y="-90" class="centre coo">Hypertext Coordination Group</text>
+        </g>
+      </g>
+      <g transform="translate(220,270)">
+			  <desc>WAI Coordination Group</desc>
+        <g transform="rotate(-30)">
+				  <g transform="translate(100,200)">
+            <ellipse class="coo"  rx="340" ry="140"/>
+            <text x= "-50" y="-90" class="centre coo">WAI Coordination Group</text>
+					</g>
+        </g>
+      </g>
+      <g transform="translate(420,270)">
+			  <desc>Metadata Coordination Group</desc>
+        <g transform="rotate(30)">
+				  <g transform="translate(250,0)">
+            <ellipse class="coo"  rx="340" ry="140"/>
+            <text x= "-50" y="-10" class="centre coo">Metadata Coordination Group</text>
+					</g>
+        </g>
+      </g>
+      <g transform="translate(420,270)">
+			  <desc>P3P Coordination Group</desc>
+        <g transform="rotate(50)">
+				  <g transform="translate(250,0)">
+            <ellipse class="coo"  rx="340" ry="140"/>
+            <text x= "-50" y="-10" class="centre coo">P3P Coordination Group</text>
+					</g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg> 

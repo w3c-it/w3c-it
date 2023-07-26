@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>lod2014</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./style.css">    
+    <meta name="author" content="Massimo Martinelli" />
+    <meta name="author" content="Oreste Signore" />
+    <meta name="author" content="Barbara Leporini" />
+    <meta name="author" content="w3c.it" /> 
+    <meta name="keywords" content="Ufficio Italiano W3C; W3C; Phil Archer; W3C Italy; LOD;">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="./jquery.countdown.js"></script>
+<script type="text/javascript">
+$(function () {
+  var austDay = new Date();
+  austDay = new Date(austDay.getFullYear(), 2 - 1, 20);
+austDay = new Date($.countdown.UTCDate(120, 2014, 2-1, 20, 9, 30, 0, 0));
+  $('#defaultCountdown').countdown({until: austDay});
+  $('#year').text(austDay.getFullYear());
+});
+</script>
+  </head>
+  <body onload="countdown()">
+    <header class="apriPagina">
+      <section class="logo">
+        <p>
+          <a href="http://www.w3c.it/"><img src="./img/w3cItLogo.png"
+               style="width:95%; max-width:279px"
+               alt="W3C Italy" /></a>
+        </p>
+        <p><a href="http://www.w3.org/standards/semanticweb/data"><img alt="Linked Open Data" style="width:95%; max-width:306px" src="./img/logoLOD.png"></a></p>
+      </section>
+      <section class="titoloGiornata">
+        <h1 id="title">LOD2014</h1>
+				<h2>Linked Open Data: where are we?</h2>
+				<p>Follow the event on twitter <a href="https://twitter.com/search?q=lod2014">#lod2014</a></p>
+        <!-- <h3 class="news">Deadlines extended</h3>  -->
+        <hr />
+        <h3>Roma, <time datetime="2014-02-20T08:30:00+01:00">20<sup>th</sup></time> - <time datetime="2014-02-21T08:30:00+01:00">21<sup>st</sup> Feb 2014</time></h3>
+        <p>immediately before the <a href="http://opendataday.it/">Open Data Day</a> (as agreed with the organizers)</p>
+        <div class="screenonly" id="defaultCountdown"></div>
+<!--	<p>Number of participants: 240</p> -->
+        <h4>
+          <a href="http://www.acs.beniculturali.it/">Archivio Centrale dello Stato, Roma</a>
+        </h4>
+        <hr />
+        <p>
+          Organized by <a href="http://www.w3c.it/">W3C Italy</a>
+        </p>
+       <!-- <p>Slides are linked from the program<br /> 
+       <a href="./photos/">Photos of the event</a></p> -->
+      </section>
+    </header>
+	 
+    <section class="pienaPagina">
+
+<!--		<h1>UNDER CONSTRUCTION!!!</h1> -->
+
+		<aside class="right screenonly">
+                     <nav>
+			<h2>Table of Contents</h2>
+			<menu type="toolbar">
+				<li><a href="#about">About the event</a></li>
+				<li><a href="#call">Call for Contributions</a></li>
+				<li><a href="#submission">Submission guidelines</a></li>
+				<li><a href="#language">Language</a></li>
+				<li><a href="#deadlines">Deadlines</a></li>
+				<li><a href="#program">Program</a></li>
+				<li><a href="#committees">Committees</a></li>
+				<li><a href="#info">Useful information</a></li>
+			</menu>
+                     </nav>
+					
+		</aside>
+		
+					
+		<h2 id="about">About the event</h2>
+		
+		<blockquote><p>“The Semantic Web isn't just about putting data on the web. It is about making links, so that a person or machine can explore the web of data.  With <strong>linked data</strong>, when you have some of it, you can find other, related, data.” (<cite><a href="http://www.w3.org/DesignIssues/LinkedData.html">Tim Berners Lee</a></cite>)</p></blockquote>
+		
+		<blockquote><p>“We are surrounded by data – data about the performance of our locals schools, the fuel efficiency of our cars, a multitude of products from different vendors, or the way our taxes are spent. By helping us make better decisions, this data is playing an increasingly central role in our lives and driving the emergence of a <strong>data economy</strong>” (<cite><a href="http://linkeddatabook.com/editions/1.0/#htoc1">Tom Heath & Chris Bizer</a></cite>)</p></blockquote>
+		
+		<p>The W3C Office in Italy is organizing the Linked Open Data (LOD) event that will be held in Rome on 20<sup>th</sup>, 21<sup>st</sup> February 2014 <!-- and hosted by … --></p>
+		<!-- <p><strong>Meet W3C to know more about LOD!</strong></p> -->
+		<p>The &#8220;<strong><em>LOD2014</em></strong>&#8221; event is centred around a keynote presentations from 
+		<a href="http://www.w3.org/People/#phila"><strong>Phil Archer</strong></a>, 
+			a key W3C team member for the Semantic Web and LOD effort, leader of W3C Data Activity. The event will be an opportunity to learn about the latest developments in LOD and related
+			technologies, and on the current thinking about Next Web Technologies. 
+			The event will give you the opportunity to know what is going on in the &#8220;LOD world&#8221;.</p>
+		<p>In these two days we would also want	</p>
+		<ul>
+			<li>to share our <strong>Italian experiences</strong> regarding the use of Linked Open Data</li>
+			<li>to provide information on Best Practices</li>
+			<li>to describe the developments and the working groups in the W3C</li>
+		</ul>
+
+		<p>This event is aimed at experts, public organizations, developers, decision makers and the general public.</p>
+		<aside class="relatedEvents screenonly">
+		<h1>You may be interested in&hellip;</h1>
+		<ul>
+		<li><a href="http://opendataday.it/">International Open Data Day Italia 2014</a></li>
+		<li> <a href="http://www.w3.org/2014/03/lgd/" title="Joint W3C and OGC Workshop on &quot;Linking Geospatial Data&quot;"><span>Joint W3C and OGC Workshop on "Linking Geospatial Data"</span></a></li>
+		<li><a href="https://joinup.ec.europa.eu/community/semic/event/semic-2014-semantic-interoperability-conference">SEMIC 2014 - Semantic Interoperability Conference</a></li>
+		<li><a href="http://ec.europa.eu/isa/events/upcoming-events_en.htm">&hellip;and other events</a></li>
+		</ul>
+		</aside>
+	
+
+		<h2 id="call">Call for Contributions</h2>
+	<p>Talks should describe standards and best practices relevant to the linked open data ideally within the Italian context, such as:</p>
+	<ul>
+		<li>Best practices</li>
+		<li>Applications</li>
+		<li>Business models</li>
+		<li>Relevant Standards</li>
+		<li>Datasets</li>
+	</ul>
+	<p>Contributions are solicited in all areas pertinent to the LOD area including:</p>
+	<ul>
+		<li>LOD Publishing of existing repositories
+		<li>Quality of data
+		<li>Data Cleaning and Integration in LOD
+		<li>Open Data Mashups
+		<li>Linked data applications
+		<li>Privacy and sensitive data
+		<li>LOD Licences
+		<li>Cultural Heritage and LOD
+		<li>Gender Open Data
+		<li>Geographical LOD
+		<li>Graph Database		
+	</ul>
+	<p>Speakers are asked to focus on describing practical ways of enabling people to deal with LOD successfully, rather than to focus on technical details or specific products. Given the wide range of topics at the workshop, speakers should also pitch their talk at a level that will be understood by attendees who are unfamiliar with the topic.</p>
+
+	<h2 id="submission">Submission guidelines</h2>
+        <p>We will use EasyChair to manage the submission and review process. <a href="https://www.easychair.org/account/signup.cgi?conf=lod2014">Get an EasyChair account</a> if you don't have one.</p>
+	<p>The abstract of your experience should be no longer than 1000 words. A URL related to linked open data or to the application using this data, or a submission of a multimedia document showing its usage is strongly encouraged. 
+	Selected contributions will be published on the event site.</p>
+
+	<h2 id="language">Language</h2>
+	<p>The language of this event is Italian, foreign guests will speak English, abstracts and slides can be in Italian or English, for the publication on this Web site English is adviced.</p>
+
+
+	<h2 id="deadlines">Deadlines</h2>
+       <!-- <p class="news">Submission is closed</p>  -->
+	<ul class="news">
+		<!-- <li><strong>Speakers have to submit their's <a href="https://www.easychair.org/conferences/?conf=lod2014">short abstract</a> 
+		 within 15 of January 23:59 Italian time</strong>.</li>  -->
+		<!-- <a href="http://www.w3c.it:8080/Registrazione/">short abstract</a> -->
+		<!-- <li>Sumbission is closed</li> -->
+		<!-- <li class="news">Notification on 3<sup>rd</sup> of February</li>  -->
+		<!-- <strong>A submission form will be soon available</strong>. <br /> -->
+		<li>Registered users MUST confirm the attendance by 16 February 23:59</li>
+	</ul>
+<!--				<p><em>Developers are also <strong>encouraged to submit an <a href="interest.html">expression of interest</a> </strong> within 13rd of May 08:00 Italian time</em>.
+	</p> -->
+  
+  <h2 class="separator" id="program">
+      Program at glance (see also the <a href="./program.html">detailed program</a>)
+    </h2>
+	<p></p>
+    <h3>
+      Thursday 20<sup>th</sup> February 2014
+    </h3>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="Registration">
+      <div class="orarioCompact">
+        8:30
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#registration">Registration</a></span><br />
+        </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="welcome">
+      <div class="orarioCompact">
+        9:00
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#welcome">Welcome</a></span><br />
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="keynote1">
+      <div class="orarioCompact">
+        9:20
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#keynote1">Keynote session</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="cb1">
+      <div class="orarioCompact">
+        10:35
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#cb1">Coffee break</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="bp1">
+      <div class="orarioCompact">
+        10:50
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#bp1">Best Practices-1</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="tools1">
+      <div class="orarioCompact">
+        11:55
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#tools1">Tools-1</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="l1">
+      <div class="orarioCompact">
+        13:15
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#l1">Lunch break</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="pa1">
+      <div class="orarioCompact">
+        14:45
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#pa1">Public Administration-1</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="poster">
+      <div class="orarioCompact">
+        16:05
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#poster">Poster flash
+        presentation</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="cb2">
+      <div class="orarioCompact">
+        16:35
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#cb2">Coffee break</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="ch1">
+      <div class="orarioCompact">
+        16:50
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#ch1">Cultural heritage-1</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="end1">
+      <div class="orarioCompact">
+        18:10
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#end1">End of first day</a></span>
+      </div>
+    </div>
+    <h3>
+      Friday 21<sup>tst</sup> February 2014
+    </h3>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="keynote2">
+      <div class="orarioCompact">
+        9:00
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#keynote2">Keynote session</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="pa2">
+      <div class="orarioCompact">
+        9:30
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#pa2">Public Administration-2</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="cb3">
+      <div class="orarioCompact">
+        10:45
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#cb3">Coffee break</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="sc">
+      <div class="orarioCompact">
+        11:00
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#sc">Smart cities</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="ld">
+      <div class="orarioCompact">
+        12:25
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#ld">Legal domain</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="l2">
+      <div class="orarioCompact">
+        13:00
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#l2">Lunch break</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="tools2">
+      <div class="orarioCompact">
+        14:15
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#tools2">Tools-2</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="ch2">
+      <div class="orarioCompact">
+        15:45
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#ch2">Cultural heritage-2</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="cb4">
+      <div class="orarioCompact">
+        16:35
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#cb3">Coffee break</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="bp2">
+      <div class="orarioCompact">
+        16:50
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#bp2">Best practices-2</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="conclusion">
+      <div class="orarioCompact">
+        17:55
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#conclusion">Conclusion</a></span>
+      </div>
+    </div>
+    <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="end2">
+      <div class="orarioCompact">
+        18:00
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#end2">End of conference</a></span>
+      </div>
+    </div>
+	 <!-- ===================================================== 
+                          Session         
+     ====================================================== -->
+    <div class="sessionCompact" id="oddparty">
+      <div class="orarioCompact">
+        21:00
+      </div>
+      <div class="sessionContent">
+        <span class="sessionTitleCompact"><a href=
+        "./program.html#oddparty">Open Data Day Party</a></span>
+      </div>
+    </div>
+		
+	
+<h2 id="committees">Steering Committee</h2> 
+<ul>
+<li>Oreste Signore, Massimo Martinelli - W3C-Italia - CNR ISTI</li>
+<li>M. Claudia Buzzi, Angelica Lo Duca, Andrea Marchetti, Maurizio Tesconi- W3C-Italia - CNR IIT</li>
+<li>Angelo Mario Del Grosso W3C-Italia - CNR ILC</li>
+<li>Gioacchino La Vecchia - W3C-Italia</li>
+<li>Francesca Di Donato - Linked Open Data Italia</li>
+<li>Flavia Marzano, Bruno Conte, Nello Iacono - Stati Generali dell’Innovazione</li>
+<li>Maurizio Napolitano - OKF Italy</li>
+<li>Mauro Draoli, Raffaele Montanaro -  Agenzia per l'Italia Digitale</li>
+</ul>
+
+<h2>Technical and Scientifical Committee</h2>
+<ul>
+<li>Frieda Brioschi - WikiMedia Italia</li>
+<li>Matteo Brunati - SpazioDati, Italian Correspondent for ePSI Platform</li>
+<li>Mario Giovanni C.A. Cimino - Università di Pisa</li>
+<li>M.Claudia Buzzi  - W3C-CNR</li>
+<li>Rossella Caffo - Istituto Centrale per il Catalogo Unico </li>
+<li>Diego Valerio Camarda - Regesta</li>
+<li>Vittore Casarosa - CNR ISTI</li>
+<li>Anna Cavallo - CSI Piemonte</li>
+<li>Bruno Conte - Stati Generali dell’Innovazione</li>
+<li>Luca Corsato - Comune di Venezia</li>
+<li>Angelo Del Grosso - W3C-CNR</li>
+<li>Francesca Di Donato - Linked Open Data Italia</li>
+<li>Mauro Draoli - Agenzia per l’Italia Digitale</li>
+<li>Enrico Francesconi - CNR ITTIG</li>
+<li>Aldo Gangemi - CNR</li>
+<li>Nicola Guarino - CNR</li>
+<li>Nello Iacono - Stati Generali dell’Innovazione</li>
+<li>Johannes Keizer - FAO</li>
+<li>Angelica Lo Duca  - W3C-CNR</li>
+<li>Caterina Lupo - Stati Generali dell’Innovazione</li>
+<li>Andrea Marchetti  - W3C-CNR</li>
+<li>Carlo Marchetti  - Senato della Repubblica</li>
+<li>Massimo Martinelli - W3C-CNR</li>
+<li>Flavia Marzano - Stati Generali dell’Innovazione</li>
+<li>Silvia Mazzini - Regesta.exe</li>
+<li>Carlo Meghini - CNR ISTI</li>
+<li>Monica Monachini - CNR ILC</li>
+<li>Raffaele Montanaro - Agenzia per l'Italia Digitale</li>
+<li>Christian Morbidoni - Università di Ancona</li>
+<li>Maurizio Napolitano - OKF Italy</li>
+<li>Monica Palmirani - Università di Bologna</li>
+<li>Vincenzo Patruno - ISTAT</li>
+<li>Oreste Signore - W3C-CNR</li>
+<li>Armando Stellato - Università Roma Tor Vergata</li>
+<li>Maurizio Tesconi  - W3C-CNR</li>
+<li>Francesco Tortorelli - Agenzia per l’Italia Digitale</li>
+<li>Fabio Valsecchi - CNR IIT</li>
+<li>Walter Volpi - Regione Toscana</li>
+</ul>
+
+<!--
+<h2>Organizing Committee</h2>
+<ul>
+<li>M.Claudia Buzzi, Beatrice Rapisarda, Adriana Lazzaroni, Raffaella Casarosa - W3C-Italia - CNR IIT</li>
+</ul>
+-->
+
+
+
+
+
+
+
+			<h2 id="info">Useful information</h2>
+			<h3>Event venue</h3>
+			<p>
+
+			  Archivio Centrale dello Stato <br />Piazzale degli Archivi, 27 - 00144 ROMA 
+			  <span class="noprint"> (<a href="http://www.acs.beniculturali.it/index.php?it/419/dove-siamo">Map</a>)</span><br />
+ 
+			  
+<!--			  <a href="">How to arrive</a><br />
+			  The event location is accessible to people with disabilities.
+ -->
+			</p>
+			<h3>Registration & Contacts</h3>
+			<p>
+				<!-- <strong>Registration is closed!</strong><br /> -->
+				The event is free, however anyone interested must register, <!-- the <strong>address for the registration will be provided soon</strong>.
+ -->
+				<a href="http://www.w3c.it:8080/RegistrazioneEventi/">go to registration page</a>.<br /> 
+				For any information, including those related to disabilities or special needs, please contact directly the  
+				<a href="mailto:lod2014-secretariat@w3c.it">secretariat</a>.
+			</p>
+			<h3>Accommodation</h3>
+			<p>
+			  Information about <a href="http://www.tripadvisor.it/Hotels-g187791-Rome_Lazio-Hotels.html">hotels, b/b, and other accommodation</a>
+			</p>
+</section>
+			
+				<hr />
+			
+
+	
+	<footer id="about-container">
+		<div class="wrapper"> 
+			<article id="docs">
+                                <p>
+				<a href="http://www.w3c.it/"><img alt="W3C.IT Logo" style="width:30%; max-width:279px; border:0" src="./img/w3cItLogo.png" /></a>
+				<a href="http://www.cnr.it/"><img alt="C.N.R. Logo" style="width:8%; max-width:65px; border:0" src="./img/logoCnrBlue.png" /></a> 
+				<a href= "http://www.isti.cnr.it/"><img src="./img/logoISTI.png" alt="logo-ISTI" style="width:8%; max-width:65px; border:0" /></a>
+				<a href= "http://www.iit.cnr.it/"><img src=".//img/logoIIT.png" alt="logo-IIT" style="width:11%;max-width:100px; border:0" /></a>        
+                                </p>
+                                <p class="spazia">
+				<a href="http://www.w3c.it/">W3C Italy</a> is a <a href="http://www.w3.org/Consortium/Offices/">W3C Office</a> hosted by <a href="http://www.cnr.it/sitocnr/Englishversion/Englishversion.html">
+				C.N.R.</a> and managed jointly by Istituto di Scienza e Tecnologie dell' Informazione "A. Faedo" (<a href= "http://www.isti.cnr.it/">ISTI</a>) 
+				and Istituto di Informatica e Telematica (<a href="http://www.iit.cnr.it/en">IIT</a>), both located in Pisa.
+                                </p>
+				<p>W3C Italy gratefully acknowledges for collaborating to this event: <br class="spazia2" /><a href="http://www.acs.beniculturali.it/"><img src="./img/logoACS.png" style="width:8%;max-width:130px;border:0" alt="Archivio Centrale dello Stato" title="Archivio Centrale dello Stato" /></a> <a href="http://www.statigeneralinnovazione.it/"><img src="./img/logoSGI.png" alt="Stati Generali dell&#39;Innovazione" title="Stati Generali dell&#39;Innovazione" style="width:8%;max-width:130px;border:0" /></a> <a href="http://www.linkedopendata.it/"><img src="./img/logoLKDI.png"  alt="Linked Open Data Italia" title="Linked Open Data Italia" style="width:10%; max-width:300px;border:0" /></a> <a href="http://www.digitpa.gov.it/"><img src="./img/logoAGID.png"  alt="Agenzia Digitale per l&#39;Italia" title="Agenzia Digitale per l&#39;Italia" style="width:14%;max-width:300px;border:0" /></a> <a href="http://it.okfn.org/"><img src="./img/logoOKFI.jpg" alt="Open Knowledge Foundation Italia" title="Open Knwoledge Foundation Italia" style="width:14%;max-width:110px;border:0" /></a> <a href="http://www.iwa.it/"><img src="./img/logoIWA.png" alt="International Webmasters Association" title="International Webmasters Association" style="width:14%;max-width:70px;border:0" /></a></p>
+<p>Media partners: <a href="http://www.datamanager.it/"><img src="./img/dmo2.png" alt="Data Manager" title="Data Manager" style="width:16%;max-width:110px;border:0" /></a> <a href="http://www.techvideo.tv/"><img src="./img/logo_techvideo.png" alt="Techvideo.tv" title="Techvideo.tv" style="width:16%;max-width:120px;border:0" /></a></p>
+				<hr />
+				<p><a href="mailto:webmaster@w3c.it">Webmaster</a> &#183; Last update: 18 February 2014 11:50</p>
+				<p class="noprint">
+					<a href="http://validator.w3.org/check/referer"><img src="./img/html5-logo.png" alt="HTML5 Valid" style="width: 10%; max-width:88px;" /></a> 
+					<a href="http://jigsaw.w3.org/css-validator/"><img src="./img/vcss.gif" alt="Valid CSS!" style="width: 10%; max-width:88px;" /></a>
+				</p>
+			</article>
+
+		</div>
+	</footer>
+<script src="./js/modernizr-2.0.6.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="front/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+<script type="text/javascript">
+function countdown(){
+    var_anno=2014;var_mese=2;var_giorno=20;var_ore=8;var_minuti=30;var_secondi=0;
+    data_scandenza= new Date(var_anno,var_mese-1,var_giorno,var_ore,var_minuti,var_secondi);
+    data_oggi= new Date();
+    differenza=(data_scandenza-data_oggi);
+    giorni=parseInt(differenza/86400000);
+    differenza=differenza-(giorni*86400000);
+    ore=parseInt(differenza/3600000);
+    differenza=differenza-(ore*3600000);
+    minuti=parseInt(differenza/60000);
+    differenza=differenza-(minuti*60000);
+    secondi=parseInt(differenza/1000);
+    differenza=differenza-(secondi*1000);
+    if (giorni <= "0" && ore <= "0" && minuti <= "0" && secondi <= "0"){$("#defaultCountdown").html("");}else{$("#defaultCountdown").html('in '+giorni +' days '+ore+' hours '+minuti+' min ');
+    setTimeout("countdown()",1000)}
+}
+</script>
+  </body>
+</html>
+

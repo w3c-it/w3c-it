@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      html5day
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          type="text/css"
+          href="./programPage.css">
+    <meta name="author"
+          content="Oreste Signore">
+    <meta name="keywords"
+          content=
+          "Ufficio Italiano W3C; HTML5; W3C; Mike Smith; W3C Italy; CSS3">
+    <!-- calendar -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="./jquery.countdown.css">
+<style type="text/css">
+@import "jquery.countdown.css";
+
+#defaultCountdown { width: 240px; height: 45px; }
+</style>
+<script type="text/javascript"
+      src=
+      "http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
+</script>
+<script type="text/javascript"
+      src="./jquery.countdown.js">
+</script>
+<script type="text/javascript">
+$(function () {
+  var austDay = new Date();
+  austDay = new Date(austDay.getFullYear(), 9 - 1, 20);
+austDay = new Date($.countdown.UTCDate(120, 2012, 9-1, 20, 9, 15, 0, 0));
+  $('#defaultCountdown').countdown({until: austDay});
+  $('#year').text(austDay.getFullYear());
+});
+</script>
+  </head>
+  <body>
+    <div class="apriPagina">
+      <div class="logo">
+        <p>
+          <a href="http://www.w3c.it/"><img src="./w3cItLogo.png"
+               style="width:95%; max-width:495px"
+               alt="W3C Italy"></a>
+        </p>
+        <p>
+        <!--   <a href="http://www.w3.org/html/logo/"><img alt=
+          "Logo HTML5"
+               style="width:90%; max-width:450px"
+               src="./html5_logo.png"></a> -->
+							 <a href="http://www.w3.org/html/logo/"><img alt=
+          "Logo HTML5"
+               style="width:100%; max-width:450px"
+               src="./html5-display.png"></a>
+        </p>
+      </div>
+      <div class="titoloGiornata">
+        <h1>
+          HTML5 Day
+        </h1>
+        <h2>
+          Meet W3C to know more about HTML5
+        </h2>
+        <hr />
+        <h3>
+          Rome, 20<sup>th</sup> September 2012
+        </h3>
+       <!-- <div id="defaultCountdown"></div> -->
+        <h4>
+          <a href=
+          "http://www.uprait.org/index.php?lang=en">Universit&#224;
+          Pontificia Regina Apostolorum</a>
+        </h4>
+        <hr />
+        <p>
+          Organized by <a href="http://www.w3c.it/">W3C Italy</a>
+        </p>
+				 <p>
+        This event is the last stop of the <a href=
+        "http://www.w3.org/2012/08/HTML5-EMEA-Tour.html">HTML5
+        Europe Tour</a> the World Wide Web Consortium (W3C) is
+        organizing across Europe from 10 to 20 September 2012.
+      </p>
+			<p><em>Slides are linked from the program</em><br />
+<a href="./photos/index.html">Photos of the event</a></p>
+      </div>
+    </div>
+    <div class="pienaPagina">
+      <hr />
+      <h1>
+        About the event
+      </h1>
+      <p>
+        HTML5 is changing the world and industries, from
+        automotive to publication, (mobile) communication, TV
+        etc.<br>
+				<a href="brochurea4-20120329.pdf">Are you ready for the transformation?</a><br>
+        The &#8220;<em>HTML5 Day</em>&#8221; event is centred
+        around a keynote presentation from <strong>Michael[tm]
+        Smith</strong>, a key W3C team member for the HTML5
+        effort. The event will be an opportunity to learn about
+        the latest developments in HTML5 and related
+        technologies, and about the current thinking about
+        <strong>HTML.next</strong>, the future to come after
+        HTML5. The event will give you the opportunity to know
+        what is going on in the &#8220;HTML5 world&#8221;.<br>
+        W3C will be glad to hear your opinions about what to do
+        and what not to do now and in the years to come.
+      </p>
+     
+      <h2>
+        Program
+      </h2>
+      <div class="presentazione">
+        <div class="orario">
+          9:15
+        </div>
+        <div class="dettaglio">
+          <span class="titolo">Registration</span>
+        </div>
+      </div>
+      <!-- ======================================================= -->
+      <div class="presentazione">
+        <div class="orario">
+          9:40
+        </div>
+        <div class="dettaglio">
+          <span class="titolo"><a href="./welcome/">Welcome</a></span><br>
+					<span class="speaker">P. Pedro Barrajon LC</span>
+          <span class="affiliation">(UPRA Rector)</span> -
+					<span class="speaker">Oreste Signore</span>
+          <span class="affiliation">(Head of W3C Office in
+          Italy)</span>
+  <a href="photos/images/welcome.avi">Welcome video</a>
+
+          
+        </div>
+      </div>
+      <div class="presentazione">
+        <div class="orario">
+          10:15
+        </div>
+        <div class="dettaglio">
+          <span class="titolo"><a href="./bernard/bernard.pdf">Transforming the Web
+          Together</a></span><br>
+          <span class="speaker"><a href=
+          "http://www.w3.org/People/all#bgidon">Bernard
+          Gidon</a></span> <span class="affiliation">(W3C - EMEA
+          Business Development Leader</span>) <a href=
+          "bernard.html"
+               title=
+               "Bernard Gidon: bio and presentation abstract">Details
+               &gt;&gt;&#8230;</a><br />
+  <a href="photos/images/bernardgidon.avi">Bernard video</a>
+        </div>
+      </div>
+      <!-- ======================================================= -->
+      <div class="presentazione">
+        <div class="orario">
+          11:00
+        </div>
+        <div class="dettaglio">
+          <span class="titolo"><a href="./mike/2012-09-eu.pdf">HTML5: The making of the modern
+          Web platform</a></span><br>
+          <span class="speaker">Michael[tm] Smith</span>
+          <span class="affiliation">(W3C HTML Activity
+          Lead)</span> <a href="mike.html"
+               title=
+               "Mike Smith: bio and and presentation abstract">Details
+               &gt;&gt;&#8230;</a><br />
+  <a href="photos/images/mike.avi">Mike video</a>
+        </div>
+      </div>
+      <!-- ================================================== -->
+      <div class="presentazione">
+        <div class="orario">
+          13:00
+        </div>
+        <div class="dettaglio">
+          <span class="titolo">Roundtable discussion: what's
+          needed for HTML.next?</span><br>
+          <span class="speaker">Michael[tm] Smith, Bernard
+          Gidon. Marco Pellegrinato, Roberto Scano</span>
+  <a href="photos/images/roundtable.avi">Roundtable video</a>
+        </div>
+      </div>
+      <!-- ================================================== -->
+      <div class="presentazione">
+        <div class="orario">
+          13:30
+        </div>
+        <div class="dettaglio">
+          <span class="titolo">End of public session</span>
+        </div>
+      </div>
+      <!-- ================================================== -->
+      <div class="presentazione">
+        <div class="orario">
+          14:45
+        </div>
+        <div class="dettaglio">
+          <span class="titolo">Restricted meeting with W3C
+          members, press and selected guests</span><br>
+          <span class="speaker">Bernard Gidon, Mike Smith</span>
+          <span class="affiliation">(W3C)</span>
+        </div>
+      </div>
+      <!-- ================================================== -->
+      <div class="presentazione">
+        <div class="orario">
+          17:30
+        </div>
+        <div class="dettaglio">
+          <span class="titolo">End of the day</span>
+        </div>
+      </div>
+      <!-- ================================================== -->
+      <h2>
+        Useful information
+      </h2>
+      <h3>
+        Event venue
+      </h3>
+      <p>
+			Via degli Aldobrandeschi, 190 - 00163 Roma
+(<a href="http://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=ateneo+pontificio+regina+via+degli+aldobrandeschi+roma&amp;sll=41.891672,12.438927&amp;sspn=0.082678,0.15398&amp;ie=UTF8&amp;hq=ateneo+pontificio+regina&amp;hnear=Via+degli+Aldobrandeschi,+00163+Roma&amp;ll=41.889883,12.429485&amp;spn=0.08268,0.15398&amp;z=13&amp;iwloc=A">Map</a>).
+<br>
+        <a href=
+        "http://www.uprait.org/index.php?option=com_content&amp;view=article&amp;id=58&amp;Itemid=76&amp;lang=en">
+        How to arrive</a>.<br />
+The event location is accessible to people with
+        disabilities.
+      </p>
+      <h3>
+        Registration
+      </h3>
+      <p>
+        The event is free, however anyone interested must
+        register. <a href=
+        "http://www.w3c.it:8080/RegistrazioneEventi/">Go to
+        registration page</a>.<br>
+        As the number of places is limited, registered users are
+        kindly requested to contact the secretariat in case they
+        will have to cancel the participation.<br>
+        People with disabilities or special needs are kindly
+        requested to contact directly the <a href=
+        "mailto:html5day@w3c.it">secretariat</a>.
+      </p>
+    </div>
+    <div class="pienaPagina">
+      <hr />
+      <div class="logoChiusura">
+        <a href="http://www.cnr.it/"><img alt="C.N.R. Logo"
+             style="width:50%; max-width:200px; border:0"
+             src="./logoCnrBlue.jpg"></a> <a href=
+             "http://www.istitutodonna.it/"><img src=
+             "logo-IstitutoStudiSuperioriSullaDonna.png"
+             alt="logo-IstitutoStudiSuperioriSullaDonna"
+             style="width:45%; max-width:100px; border:0"></a>
+      </div>
+      <div class="infoChiusura">
+        <p>
+          <a href="http://www.w3c.it/">W3C Italy</a> is a
+          <a href="http://www.w3.org/Consortium/Offices/">W3C
+          Office</a> hosted by <a href=
+          "http://www.cnr.it/sitocnr/Englishversion/Englishversion.html">
+          C.N.R.</a> and managed jointly by Istituto di Scienza e
+          Tecnologie dell' Informazione "A. Faedo" (<a href=
+          "http://www.isti.cnr.it/">ISTI</a>) and Istituto di
+          Informatica e Telematica (<a href=
+          "http://www.iit.cnr.it/en">IIT</a>), both located in
+          Pisa.
+        </p>
+        <p>
+          W3C Italy gratefully acknowledges <a href=
+          "http://www.istitutodonna.it/">Istituto di Studi
+          Superiori sulla Donna</a> for hosting this event.
+        </p>
+      </div>
+    </div>
+    <div class="chiudiPagina">
+      <hr />
+      <p>
+        <a href="mailto:webmaster@w3c.it">Webmaster</a> &#183;
+        Last update: 02/10/2012 12:43
+      </p>
+      <p>
+        <a href="http://validator.w3.org/check/referer"><img src=
+        "./html5-logo.png"
+             alt="HTML5 Valid"
+             style="width: 10%; max-width:88px;"></a> <a href=
+             "http://jigsaw.w3.org/css-validator/"><img src=
+             "./vcss.gif"
+             alt="Valid CSS!"
+             style="width: 10%; max-width:88px;"></a>
+      </p>
+    </div>
+  </body>
+</html>

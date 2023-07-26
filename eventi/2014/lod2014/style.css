@@ -1,0 +1,759 @@
+/* ******************************************************
+   A slighly modified version of the home style file,
+   adapted for the office pages
+   B. Hopgood & I. Herman
+********************************************************* */
+/* ****************** Style for page body *************** */
+
+@media all {
+
+
+body {
+   /* margin: 2em 1em 2em 70px; */ /* Bob */
+   margin-left:4em;
+   margin-right:4em;
+   background: white;
+   color: black;
+   font-family: Arial, Helvetica, sans-serif;
+	 text-align: left
+}
+
+img { border:0 }
+
+span.date { color: black; font-weight: bold }
+span.sessionTitle { color: blue; font-weight: bold;  }
+span.sessionChair { color: blue; font-weight: normal; font-style: italic; }
+span.sessionTitleCompact { color: black; font-weight: normal;  }
+span.titolo { color: black; font-weight: bold; font-size:90%; }
+span.paperTitle { color: black; font-weight: bold; font-size:90%; }
+span.speaker { color: black; font-weight: normal; font-style: italic; font-size:90%;}
+span.affiliation { color: black; font-weight: normal; font-size:90%; }
+span.break { color: blue; font-weight: bold;  }
+
+blockquote, q { color: #003366; font-style: italic }
+
+th, td, p, a, div { /* ns 4 */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul p, ol p, dd p { margin-top: 0em; margin-bottom: 0em }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #005A9C }
+h1.title { 
+   font-size: 300%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+
+h1 { 
+   font-size: 180%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+h2 { 
+   font-size: 140%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+h3 { 
+   font-size: 120%; 
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 0.2em;
+}
+h4 { 
+   font-size: 100%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold
+}
+h5 { 
+   font-size: 100%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-style: italic
+}
+h6 { 
+   font-size: 80%; 
+   font-family: Arial, Helvetica, sans-serif;
+   font-variant: small-caps
+}
+
+/*
+.eventLocation { text-align: center; font-size: 180% }
+*/
+h3.navhead {
+   font-size: 100%;
+}
+
+/* .main p {
+   text-indent: 17px;
+}
+*/
+:link {
+   color: #037;
+}
+
+:visited {
+   color: #551a8b;
+}
+/*
+:active {
+   background: #ffc;
+   color: #900;
+   text-decoration: none;
+}
+*/
+.center {text-align: center;}
+.signature {text-align: right }
+
+#logo, #OfficeName {
+   text-align: left;   
+}
+
+#slogan {
+   text-align: left;
+   margin-top: -5px;
+   font-family: Times, "Times New Roman", serif;
+   font-size: 120%;
+}
+
+.headline {
+   background: #fff;
+   color: #900;
+}
+
+.hide {
+   display: none;
+}
+
+/* ****************** Style for banner ************** */
+
+div.banner {
+   border: none;
+   margin-left: 1px;
+   margin-right: 1px;
+   padding: 0.1em 0.3em;
+   text-align: center;
+   font-weight: bold;
+}
+
+/* ****************** Style for navigation bar ************** */
+
+td.navbar {
+   background: #eeeeee;
+   color: #000;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+td.navbar :link {
+   background: #eeeeee;
+   color: #037;
+}
+
+td.navbar :visited {
+   background: #eeeeee;
+   color: #551a8b;
+}
+
+td.navbar :active {
+   background: #eeeeee;
+   color: #900;
+   text-decoration: none;
+}
+
+input {
+   font-size: 83%;
+   font-family: Geneva, Arial, sans-serif;
+}
+
+/* ****************** Style for footer  ************** */
+
+p.copyright {
+   margin: 0 0.5em;
+   font-size: small;
+}
+
+/* ****************** Tables used for office documents ************ */
+table.coloured, table.colored { font-family: Arial, Helvetica, sans-serif }
+table.coloured td, td.coloured,
+table.colored td, td.colored  { background: #CCFFFF }
+table.coloured th,
+table.colored th  { background: #c0c0c4; text-align: center; font-weight: bold }
+
+/* ****************** Coloured entries for DT-s ***************** */
+dl.coloured dt, dl.colored dt { font-weight: bold; color:#006699 } 
+
+
+/* -------------------------------------------------------------
+       vecchio programpage   
+--------------------------------------------------------------- */
+
+
+.apriPagina{ 
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 98%;
+}		
+	 
+.logo{ 
+         margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 26%;
+}
+
+.titoloGiornata{ 
+          margin-left:1%;
+          margin-right:1%;           
+          float: left;
+					width: 66%;
+}				
+
+
+.pienaPagina{ 
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 98%;
+}		 
+
+.session{ 
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 100%;
+				 margin-bottom: 1%;
+}	
+.sessionCompact{ 
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 100%;
+				 margin-bottom: 0%;
+}		
+
+/*
+.presentazione{ 
+
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 100%;
+				 margin-bottom: 1%;
+}		
+
+*/
+
+/*
+.break{ 
+
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 84%;
+				 margin-bottom: 1%;
+				 background: blue;
+}		  
+
+*/
+
+.orario{ 
+         margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 10%;
+				 font-weight: bold;
+				 text-align: right;
+}
+.orarioCompact{ 
+         margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 10%;
+				 font-weight: normal;
+				 text-align: right;
+}
+.sessionContent{ 
+          margin-left:1%;
+          margin-right:1%;           
+          float: left;
+					width: 84%;
+}
+/*
+.dettaglio{ 
+          margin-left:1%;
+          margin-right:1%;           
+          float: left;
+					width: 78%;
+}
+*/
+
+.chiudiPagina{ 
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 98%;			 
+}
+.logoChiusura{ 
+         margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 15%;
+}
+
+.infoChiusura{ 
+          margin-left:1%;
+          margin-right:1%;           
+          float: left;
+					width: 66%;
+}
+.right{float:right}
+/* added by massimo 30/11/2013 */
+/* updated by oreste 10/1/2014  */
+aside.right{
+	float:right;
+	width:18%;   /* resizable!! --- oreste  */
+	 max-width: 50em;  /* evitiamo che occupi troppo spazio! */
+	font-size: 80%;  /* le voci un po' più piccole del testo */
+	margin-left:1em;
+	margin-bottom:2em;
+	margin-right: 1em;  /* teniamo il margine destro un po' più ampio */
+	padding-left: 1em;
+        padding-right: 2em;
+	border-style:none;
+	background:#275ca8}
+menu{
+	list-style-type:none;
+        text-align: right;  /* voci TOC allineate a destra */
+	padding-left:0;   /* no padding! - oreste  */
+	  /* line-height:2ex;      */   
+}
+menu li   { margin-bottom: 3ex;} /* tiene più distanziate le voci di menù */
+aside.right a:link, aside.right a:visited, aside.right h2 
+          {color:white; 
+	text-decoration: none;   /* eliminiamo la sottolineatura delle voci del TOC */
+	}
+.news{color:red}
+footer * img {margin-left:.75em;margin-right:.75em}
+.spazia{margin-top:.75em;margin-bottom:.75em}
+.spazia2{margin-bottom:.75em}
+/*-----   About other events  ------------- */
+aside.relatedEvents{
+	float:right;
+	width:30%;   
+	 max-width: 50em;  /* evitiamo che occupi troppo spazio! */
+	font-size: 80%;  /* le voci un po' più piccole del testo */
+	margin-left:1em;
+	margin-bottom:2em;
+	margin-right: 1em;  /* teniamo il margine destro un po' più ampio */
+	padding-left: 1em;
+        padding-right: 2em;
+	border-style:none;
+	background:#ffff99}
+aside.relatedEvents h1 {color:black; font-size:100%;} 	
+aside.relatedEvents a:link, 
+aside.relatedEvents a:visited 
+             {text-decoration:none; color:black;} 	
+/* ----------------------------------------------------------------------- */
+
+
+
+/*-----   Hide/show things from the screen/print (eg, URL-s) ------------- */
+.noscreen { display:none } 
+.screenonly {display:inline} 
+.noprint {display:inline}
+/* ----------------------------------------------------------------------- */
+}
+/*  ---------------------------------------------------------------------- 
+                  end of media screen CSS   
+---------------------------------------------------------------------------*/
+
+
+/*  ---------------------------------------------------------------------- 
+                  style for printing
+---------------------------------------------------------------------------*/
+
+@media print {
+	body {
+   /* margin: 2em 1em 2em 70px; */ /* Bob */
+   margin-left:1.5cm;
+   margin-right:1.5cm;
+   background: white;
+   color: black;
+   font-family: Arial, Helvetica, sans-serif;
+	 font-size:10.5pt;
+	 text-align: left;
+}
+
+img { border:0 }
+/*-----   Hide/show things from the screen/print (eg, URL-s) ------------- */
+.noscreen { display:inline; font-style:italic; color:#006699 }
+.screenonly {display:none} 
+.noprint {display: none}
+/* ----------------------------------------------------------------------- */
+
+	 .newPage       { page-break-before: always; }
+   h2, h3,
+   h4, h5, h6     { page-break-after: avoid; page-break-inside: avoid }
+   blockquote,
+   pre            { page-break-inside: avoid }
+   ul, ol, dl     { page-break-before: avoid }
+   .navbar        { background-color: #fff ; border-color: #000 ; border-width: 1px }
+   a.navlink      { font-weight: normal }
+   tr, th, td, p, session  { orphans: 2; widows: 2 }
+
+
+span.date { color: black; font-weight: bold }
+span.sessionTitle { color: blue; font-weight: bold;  }
+span.sessionChair { color: blue; font-weight: normal; font-style: italic; } 
+span.sessionTitleCompact { color: black; font-weight: normal;  }
+span.titolo { color: black; font-weight: bold; font-size:90%; }
+span.paperTitle { color: black; font-weight: bold; font-size:90%; }
+span.speaker { color: black; font-weight: normal; font-style: italic; font-size:90%;}
+span.affiliation { color: black; font-weight: normal; font-size:90%; }
+span.break { color: blue; font-weight: bold;  }
+
+blockquote, q { color: #003366; font-style: italic }
+
+th, td, p, a, div { /* ns 4 */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul p, ol p, dd p { margin-top: 0em; margin-bottom: 0em }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #005A9C }
+h1.title { 
+   font-size: 300%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+
+h1 { 
+   font-size: 180%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+h2 { 
+   font-size: 140%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-weight: bold
+}
+h3 { 
+   font-size: 120%; 
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 0.2em;
+}
+h4 { 
+   font-size: 100%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold
+}
+h5 { 
+   font-size: 100%; 
+   font-family: Arial, Helvetica, sans-serif; 
+   font-style: italic
+}
+h6 { 
+   font-size: 80%; 
+   font-family: Arial, Helvetica, sans-serif;
+   font-variant: small-caps
+}
+
+/*
+.eventLocation { text-align: center; font-size: 180% }
+*/
+h3.navhead {
+   font-size: 100%;
+}
+
+/* .main p {
+   text-indent: 17px;
+}
+*/
+:link {
+   color: #037;
+}
+
+:visited {
+   color: #551a8b;
+}
+/*
+:active {
+   background: #ffc;
+   color: #900;
+   text-decoration: none;
+}
+*/
+.center {text-align: center;}
+.signature {text-align: right }
+
+#logo, #OfficeName {
+   text-align: left;   
+}
+
+#slogan {
+   text-align: left;
+   margin-top: -5px;
+   font-family: Times, "Times New Roman", serif;
+   font-size: 120%;
+}
+
+.headline {
+   background: #fff;
+   color: #900;
+}
+
+.hide {
+   display: none;
+}
+
+/* ****************** Style for banner ************** */
+
+div.banner {
+   border: none;
+   margin-left: 1px;
+   margin-right: 1px;
+   padding: 0.1em 0.3em;
+   text-align: center;
+   font-weight: bold;
+}
+
+/* ****************** Style for navigation bar ************** */
+
+td.navbar {
+   background: #eeeeee;
+   color: #000;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+td.navbar :link {
+   background: #eeeeee;
+   color: #037;
+}
+
+td.navbar :visited {
+   background: #eeeeee;
+   color: #551a8b;
+}
+
+td.navbar :active {
+   background: #eeeeee;
+   color: #900;
+   text-decoration: none;
+}
+
+input {
+   font-size: 83%;
+   font-family: Geneva, Arial, sans-serif;
+}
+
+/* ****************** Style for footer  ************** */
+
+p.copyright {
+   margin: 0 0.5em;
+   font-size: small;
+}
+
+/* ****************** Tables used for office documents ************ */
+table.coloured, table.colored { font-family: Arial, Helvetica, sans-serif }
+table.coloured td, td.coloured,
+table.colored td, td.colored  { background: #CCFFFF }
+table.coloured th,
+table.colored th  { background: #c0c0c4; text-align: center; font-weight: bold }
+
+/* ****************** Coloured entries for DT-s ***************** */
+dl.coloured dt, dl.colored dt { font-weight: bold; color:#006699 } 
+
+
+/* -------------------------------------------------------------
+       vecchio programpage   
+--------------------------------------------------------------- */
+
+
+.apriPagina{ 
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 98%;
+}		
+	 
+.logo{ 
+         margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 26%;
+}
+
+.titoloGiornata{ 
+          margin-left:1%;
+          margin-right:1%;           
+          float: left;
+					width: 66%;
+}				
+
+              
+.pienaPagina{ 
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 98%;
+}		 
+                         
+
+.session{ 
+
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 100%;
+				 margin-bottom: 1%;
+}	
+.sessionCompact{ 
+
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 100%;
+				 margin-bottom: 0%;
+}		
+
+/*
+.presentazione{ 
+
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 100%;
+				 margin-bottom: 1%;
+}		
+
+*/
+
+/*
+.break{ 
+
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 84%;
+				 margin-bottom: 1%;
+				 background: blue;
+}		  
+
+*/
+
+.orario{ 
+         margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 10%;
+				 font-weight: bold;
+				 text-align: right;
+}
+.orarioCompact{ 
+         margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 10%;
+				 font-weight: normal;
+				 text-align: right;
+}
+.sessionContent{ 
+          margin-left:1%;
+          margin-right:1%;           
+          float: left;
+					width: 78%;
+}
+/*
+.dettaglio{ 
+          margin-left:1%;
+          margin-right:1%;           
+          float: left;
+					width: 78%;
+}
+*/
+
+.chiudiPagina{ 
+         margin-left:1%;
+         margin-right:1%;                      
+         float: left;
+         width: 98%;			 
+}
+.logoChiusura{ 
+         margin-right:1%;
+				 margin-left:1%;
+         float: left;
+				 width: 15%;
+}
+
+.infoChiusura{ 
+          margin-left:1%;
+          margin-right:1%;           
+          float: left;
+					width: 66%;
+}
+.right{float:right}
+/* added by massimo 30/11/2013 */
+/* updated by oreste 10/1/2014  */
+aside.right{
+	float:right;
+	width:18%;   /* resizable!! --- oreste  */
+	 max-width: 50em;  /* evitiamo che occupi troppo spazio! */
+	font-size: 80%;  /* le voci un po' più piccole del testo */
+	margin-left:1em;
+	margin-bottom:2em;
+	margin-right: 1em;  /* teniamo il margine destro un po' più ampio */
+	padding-left: 1em;
+        padding-right: 2em;
+	border-style:none;
+	background:#275ca8}
+menu{
+	list-style-type:none;
+        text-align: right;  /* voci TOC allineate a destra */
+	padding-left:0;   /* no padding! - oreste  */
+	  /* line-height:2ex;      */   
+}
+menu li   { margin-bottom: 3ex;} /* tiene più distanziate le voci di menù */
+aside.right a:link, aside.right a:visited, aside.right h2 
+          {color:white; 
+	text-decoration: none;   /* eliminiamo la sottolineatura delle voci del TOC */
+	}
+.news{color:red}
+footer * img {margin-left:.75em;margin-right:.75em}
+.spazia{margin-top:.75em;margin-bottom:.75em}
+.spazia2{margin-bottom:.75em} 
+	 
+	 
+
+}
+
+
+
+/* ****************** style for speech  ************** */
+
+@media speech {
+   h1, h2, h3,
+   h4, h5, h6    { voice-family: paul, male; stress: 20; richness: 90 }
+   h1            { pitch: x-low; pitch-range: 90 }
+   h2            { pitch: x-low; pitch-range: 80 }
+   h3            { pitch: low; pitch-range: 70 }
+   h4            { pitch: medium; pitch-range: 60 }
+   h5            { pitch: medium; pitch-range: 50 }
+   h6            { pitch: medium; pitch-range: 40 }
+   li, dt, dd    { pitch: medium; richness: 60 }
+   dt            { stress: 80 }
+   pre, code, tt { pitch: medium; pitch-range: 0; stress: 0; richness: 80 }
+   em            { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }
+   strong        { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }
+   dfn           { pitch: high; pitch-range: 60; stress: 60 }
+   s, strike     { richness: 0 }
+   i             { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }
+   b             { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }
+   u             { richness: 0 }
+   a:link        { voice-family: harry, male }
+   a:visited     { voice-family: betty, female }
+   a:active      { voice-family: betty, female; pitch-range: 80; pitch: x-high }
+}
+
+
